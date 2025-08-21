@@ -1,6 +1,5 @@
 <div class="container my-5">
   <h1 class="text-center mb-5">Globetrotting Kirks Blog</h1>
-
   <div id="blog-container"></div>
 </div>
 
@@ -8,25 +7,23 @@
 <script>
   const posts = [
     "2015-08-29-hello-world-2.md"
+    // Add more markdown posts here
   ];
 
   const container = document.getElementById("blog-container");
 
   posts.forEach(post => {
     fetch(`blog-posts/${post}`)
-      .then(response => response.text())
+      .then(res => res.text())
       .then(text => {
         const html = marked.parse(text);
-
-        // Wrap each post in a Bootstrap card
         const postDiv = document.createElement("div");
         postDiv.classList.add("card", "shadow-lg", "mb-5");
-        postDiv.innerHTML = `
-          <div class="card-body">
-            ${html}
-          </div>
-        `;
+        postDiv.innerHTML = `<div class="card-body">${html}</div>`;
         container.appendChild(postDiv);
+      })
+      .catch(err => {
+        console.error(`Failed to load ${post}:`, err);
       });
   });
 </script>
