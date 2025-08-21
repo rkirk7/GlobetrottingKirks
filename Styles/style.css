@@ -60,7 +60,7 @@ h1, h2, h3 {
    ================================ */
 .hero {
   background: url('../Images/hero-image.jpeg') no-repeat center center/cover;
-  height: 80vh;
+  height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -81,6 +81,11 @@ h1, h2, h3 {
   z-index: 1;
   max-width: 700px;
   text-align: center;
+}
+
+.hero-title {
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7); /* optional: improves readability over images */
 }
 
 /* ================================
