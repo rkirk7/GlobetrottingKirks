@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Photo Albums</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="Styles/style.css">
+  <style>
+    .album-card img {
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .album-card:hover {
+      transform: scale(1.02);
+      transition: transform 0.3s;
+    }
+  </style>
+</head>
+<body>
+  <div class="container my-5">
+    <h1 class="text-center mb-4">Photo Albums</h1>
+    <div class="row g-4" id="albums-container"></div>
+  </div>
+
+  <script>
+    // List of albums (folder name & display title)
+    const albums = [
+      { folder: 'svalbard-2024', title: 'Svalbard 2024', cover: 'Images/Svalbard1.jpeg' },
+      { folder: 'churchill-2023', title: 'Churchill 2023', cover: 'Images/Churchill1.jpeg' },
+      // Add more albums here
+    ];
+
+    const container = document.getElementById('albums-container');
+
+    albums.forEach(album => {
+      const col = document.createElement('div');
+      col.className = 'col-sm-6 col-md-4 col-lg-3';
+      col.innerHTML = `
+        <div class="card album-card shadow-sm h-100">
+          <a href="album.html?album=${album.folder}">
+            <img src="${album.cover}" class="card-img-top" alt="${album.title}">
+            <div class="card-body text-center">
+              <h5 class="card-title">${album.title}</h5>
+            </div>
+          </a>
+        </div>
+      `;
+      container.appendChild(col);
+    });
+  </script>
+</body>
+</html>
