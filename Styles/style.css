@@ -209,7 +209,7 @@ footer {
 
 /* All blog images */
 #blog-container img {
-  max-width: 100%;      /* never overflow the container */
+  max-width: 90%;      /* never overflow the container */
   height: auto;         /* maintain aspect ratio */
   border-radius: 8px;   /* optional, matches your site style */
   display: block;       /* remove inline alignment quirks */
