@@ -41,16 +41,18 @@ h1, h2, h3 {
 }
 
 /* Social Icons */
-.navbar-dark .nav-link i,
+
 .navbar-dark .nav-link svg {
-  color: white !important;
-  font-size: 1.3rem;
+  color: white;
+  width: 24px;
+  height: 24px;
+  transition: 0.3s;
 }
 
-.navbar-dark .nav-link i:hover,
 .navbar-dark .nav-link svg:hover {
-  color: #ffcc00 !important;
+  color: #ffcc00;
 }
+
 
 /* ================================
    Hero Section
