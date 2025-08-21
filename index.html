@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Regan Kirk's Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Styles/style.css">
+
+
+  </head>
+
+  <header>
+      
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" onclick="loadPage('home.html')" href="#home.html">Regan's Portfolio</a> 
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a class="nav-link" onclick="loadPage('projects.html')" href="#projects.html">Overview of My Projects</a>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    View Individual Projects
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="https://regan-kirkbankingapplication.s3.amazonaws.com/BadBank/index.html">The Bad Bank Website</a></li>
+                    <li><a class="dropdown-item" href="https://github.com/rkirk7/SearchGutenberg.git">Search Project Gutenberg</a></li>
+                    <li><a class="dropdown-item" href="https://rkirk7.github.io/D.C.-Bus-Tracker/">Bus Tracker Website</a></li>
+                    <li><a class="dropdown-item" href="https://rkirk7.github.io/BouncingBallsDemo/bouncingballs.html">Bouncing Balls</a></li>
+                    <li><a class="dropdown-item" href="https://rkirk7.github.io/CreateGitHubWebsite/createwebpage.html">Creating a GitHub Website</a></li>
+                    <li><a class="dropdown-item" href="https://rkirk7.github.io/PacmanGame/index.html">Pacman Demo</a></li>
+                    <li><a class="dropdown-item" href="https://rkirk7.github.io/eyeexercise/index.html">Moving Eyes Demo</a></li>                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" onclick="loadPage('tournamentapp.html')" href="#tournamentapp.html">TaeKwonDo Tournament App for iOS and Android</a></li>
+                  </ul>
+                </li>
+              <li class="nav-item">
+                <a class="nav-link" onclick="loadPage('contact.html')" href="#contact.html">Contact Me</a>
+              </li>
+            </ul>
+          </div>
+      </nav>
+
+      </header>
+      <body>
+        
+        <div id="content" class="container"></div>
+    
+    <script src="Scripts/main.js"></script>
+    <script src="Scripts/loadpage.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+    </body>
+
+<script>
+     loadPage('home.html');
+</script>
+
+</html>

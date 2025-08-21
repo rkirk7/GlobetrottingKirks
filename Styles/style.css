@@ -1,0 +1,129 @@
+body {
+    margin: 0 auto;
+    padding: 60px 20px 20px 20px;
+    background-color: darkcyan;
+  }
+
+h1 {
+    margin: 0;
+    padding: 20px 0;
+    color: white;
+    text-shadow: 1px 1px 1px gray;
+    font-size: 60px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 40px;
+    text-align: center;
+    color: white;
+  }
+
+  h3 {
+    font-size: 30px;
+    text-align: center;
+    color: white;
+  }
+
+  p {
+    font-size: 24px;
+    text-align: left;
+    color: white;
+    padding: 5px;
+  }
+  
+  img {
+    display: block;
+    margin: 0 auto;
+    max-width: 300px;
+  }
+
+  button {
+   display: block;
+  }
+
+  html {
+    background-color: darkcyan;
+  }
+
+  .on{
+    background: orange;
+}
+
+a {
+  color:white;
+}
+a.link {
+  color: white;
+}
+
+a.visited {
+  color: yellow;
+}
+
+a.hover {
+ color: white;
+ text-decoration: none;
+}
+
+a.active {
+  color:red;
+}
+
+.content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 5px;
+    align-self: center;
+}
+
+.screenshots{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
+  align-self: center;
+}
+
+div{
+    padding: 5px;
+    text-align: center;
+    color: black;
+}
+
+.card-text {
+  color: black;
+  font-size: 1em;
+}
+
+.card-title {
+  font-size: 1.5em;
+}
+
+form {
+  align-items: center;
+  color: white;
+}
+
+.col-form-label-sm {
+height: 2em;
+}
+
+.card-text {
+  color: white;
+}
+
+.card-title {
+  color: white;
+}
+
+.navbar-nav {
+  border: none;
+}
+
+.about {
+  margin: 0 100px;
+}
+
+iframe {
+text-align: center;
+}
