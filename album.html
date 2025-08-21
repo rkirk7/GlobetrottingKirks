@@ -2,100 +2,75 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Album - Globetrotting Kirks</title>
-  
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="Styles/style.css">
-  
-  <!-- GLightbox CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Album</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    .album-photo {
-      border-radius: 8px;
+    .album-img {
+      width: 100%;
+      height: auto;
       margin-bottom: 15px;
-      transition: transform 0.3s, box-shadow 0.3s;
-      cursor: pointer;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
     }
-
-    .album-photo:hover {
-      transform: scale(1.03);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    .album-img:hover {
+      transform: scale(1.02);
     }
   </style>
 </head>
 <body>
   <div class="container my-5">
     <h1 id="album-title" class="text-center mb-4"></h1>
-    <div class="row g-3" id="photos-container"></div>
+    <div id="album-container" class="row"></div>
   </div>
 
-  <!-- Bootstrap JS Bundle -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- GLightbox JS -->
-  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-
   <script>
-    // Initialize GLightbox
-    const lightbox = GLightbox({
-      selector: '.glightbox'
-    });
-
-    // Get album from query string
+    // Get album parameter from URL
     const urlParams = new URLSearchParams(window.location.search);
-    const albumFolder = urlParams.get('album');
+    const albumParam = urlParams.get("album");
 
-    // Album data
-    const albumsData = {
-      'svalbard-2024': {
-        title: 'Svalbard 2024',
-        photos: [
-          'Images/Svalbard/Svalbard1.jpeg',
-          'Images/Svalbard/Svalbard2.jpeg',
-          'Images/Svalbard/Svalbard3.jpeg',
-          'Images/Svalbard/Svalbard4.jpeg',
-          'Images/Svalbard/Svalbard5.jpeg',
-          'Images/Svalbard/Svalbard6.jpeg'
-          // Add more photos here
-        ]
-      },
-      'churchill-2025': {
-        title: 'Churchill 2025',
-        photos: [
-          'Images/Churchill/Churchill1.jpeg',
-          'Images/Churchill/Churchill2.jpeg',
-          'Images/Churchill/Churchill3.jpeg',
-          'Images/Churchill/Churchill4.jpeg',
-          'Images/Churchill/Churchill5.jpeg',
-          'Images/Churchill/Churchill6.jpeg'
-          // Add more photos here
-        ]
-      }
-      // Add more albums as needed
+    // Map parameter to folder and title
+    const albums = {
+      "churchill-2025": { name: "Churchill 2025", folder: "Churchill" },
+      "svalbard-2024": { name: "Svalbard 2024", folder: "Svalbard" }
     };
 
-    const album = albumsData[albumFolder];
-    const container = document.getElementById('photos-container');
-    const title = document.getElementById('album-title');
-
-    if (!album) {
-      title.textContent = 'Album not found';
+    if (!albums[albumParam]) {
+      document.getElementById("album-title").innerText = "Album not found";
     } else {
-      title.textContent = album.title;
-      album.photos.forEach(photo => {
-        const col = document.createElement('div');
-        col.className = 'col-sm-6 col-md-4 col-lg-3';
-        col.innerHTML = `
-          <a href="${photo}" class="glightbox" data-gallery="${albumFolder}">
-            <img src="${photo}" class="img-fluid album-photo" alt="">
-          </a>
-        `;
-        container.appendChild(col);
-      });
+      const album = albums[albumParam];
+      document.getElementById("album-title").innerText = album.name;
+      const container = document.getElementById("album-container");
+
+      // Try loading images 1.jpeg, 2.jpeg, 3.jpeg, etc.
+      let index = 1;
+      function loadNextImage() {
+        const img = new Image();
+        img.src = `images/${album.folder}/${index}.jpeg`;
+        img.classList.add("album-img");
+
+        img.onload = () => {
+          // Add to page
+          const col = document.createElement("div");
+          col.classList.add("col-md-4", "mb-4");
+          col.appendChild(img);
+          container.appendChild(col);
+
+          // Try next
+          index++;
+          loadNextImage();
+        };
+
+        img.onerror = () => {
+          // Stop when no more images
+          if (index === 1) {
+            container.innerHTML = "<p class='text-center'>No images found.</p>";
+          }
+        };
+      }
+
+      loadNextImage();
     }
   </script>
 </body>
