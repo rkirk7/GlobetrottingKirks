@@ -4,26 +4,30 @@
 </div>
 
 <script>
-const albums = [
-  { name: "Churchill 2025", folder: "Churchill", param: "churchill-2025" },
-  { name: "Svalbard 2024", folder: "Svalbard", param: "svalbard-2024" }
-];
+  // Album list: name, folder, param
+  const albums = [
+    { name: "Churchill 2025", folder: "Churchill", param: "churchill-2025" },
+    { name: "Svalbard 2024", folder: "Svalbard", param: "svalbard-2024" }
+  ];
 
-const container = document.getElementById("albums-container");
+  const container = document.getElementById("albums-container");
 
-albums.forEach(album => {
-  const thumb = `images/${album.folder}/1.jpeg`;
-  const card = document.createElement("div");
-  card.classList.add("col-md-4", "mb-4");
-  card.innerHTML = `
-    <div class="card shadow-lg">
-      <img src="${thumb}" class="card-img-top" alt="${album.name}" onerror="this.src='placeholder.jpg'">
-      <div class="card-body text-center">
-        <h5 class="card-title">${album.name}</h5>
-        <a href="album.html?album=${album.param}" class="btn btn-primary">View Album</a>
+  albums.forEach(album => {
+    // Correct path to images relative to your main page
+    const thumb = `Images/${album.folder}/${album.folder}1.jpeg`;
+
+    // Build the album card
+    const card = document.createElement("div");
+    card.classList.add("col-md-4", "mb-4");
+    card.innerHTML = `
+      <div class="card shadow-lg h-100">
+        <img src="${thumb}" class="card-img-top" alt="${album.name}" onerror="this.src='placeholder.jpg'">
+        <div class="card-body text-center d-flex flex-column">
+          <h5 class="card-title">${album.name}</h5>
+          <a href="album.html?album=${album.param}" class="btn btn-primary mt-auto">View Album</a>
+        </div>
       </div>
-    </div>
-  `;
-  container.appendChild(card);
-});
+    `;
+    container.appendChild(card);
+  });
 </script>
