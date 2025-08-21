@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Album - Globetrotting Kirks</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="Styles/style.css">
+  
+  <!-- GLightbox CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+
+  <style>
+    .album-photo {
+      border-radius: 8px;
+      margin-bottom: 15px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .album-photo:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="container my-5">
+    <h1 id="album-title" class="text-center mb-4"></h1>
+    <div class="row g-3" id="photos-container"></div>
+  </div>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- GLightbox JS -->
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
+  <script>
+    // Initialize GLightbox
+    const lightbox = GLightbox({
+      selector: '.glightbox'
+    });
+
+    // Get album from query string
+    const urlParams = new URLSearchParams(window.location.search);
+    const albumFolder = urlParams.get('album');
+
+    // Album data
+    const albumsData = {
+      'svalbard-2024': {
+        title: 'Svalbard 2024',
+        photos: [
+          'Images/Svalbard1.jpeg',
+          'Images/Svalbard2.jpeg',
+          'Images/Svalbard3.jpeg',
+          'Images/Svalbard4.jpeg',
+          'Images/Svalbard5.jpeg',
+          'Images/Svalbard6.jpeg'
+          // Add more photos here
+        ]
+      },
+      'churchill-2023': {
+        title: 'Churchill 2023',
+        photos: [
+          'Images/Churchill1.jpeg',
+          'Images/Churchill2.jpeg',
+          'Images/Churchill3.jpeg',
+          'Images/Churchill4.jpeg',
+          'Images/Churchill5.jpeg',
+          'Images/Churchill6.jpeg'
+          // Add more photos here
+        ]
+      }
+      // Add more albums as needed
+    };
+
+    const album = albumsData[albumFolder];
+    const container = document.getElementById('photos-container');
+    const title = document.getElementById('album-title');
+
+    if (!album) {
+      title.textContent = 'Album not found';
+    } else {
+      title.textContent = album.title;
+      album.photos.forEach(photo => {
+        const col = document.createElement('div');
+        col.className = 'col-sm-6 col-md-4 col-lg-3';
+        col.innerHTML = `
+          <a href="${photo}" class="glightbox" data-gallery="${albumFolder}">
+            <img src="${photo}" class="img-fluid album-photo" alt="">
+          </a>
+        `;
+        container.appendChild(col);
+      });
+    }
+  </script>
+</body>
+</html>
