@@ -69,26 +69,10 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
   <script>
+    // Define your albums with folder name and title
     const albums = [
-      { folder: 'svalbard-2024', title: 'Svalbard 2024', photos: [
-          'Images/Svalbard/Svalbard1.jpeg',
-          'Images/Svalbard/Svalbard2.jpeg',
-          'Images/Svalbard/Svalbard3.jpeg',
-          'Images/Svalbard/Svalbard4.jpeg',
-          'Images/Svalbard/Svalbard5.jpeg',
-          'Images/Svalbard/Svalbard6.jpeg'
-        ] 
-      },
-      { folder: 'churchill-2025', title: 'Churchill 2025', photos: [
-          'Images/Churchill/Churchill1.jpeg',
-          'Images/Churchill/Churchill2.jpeg',
-          'Images/Churchill/Churchill3.jpeg',
-          'Images/Churchill/Churchill4.jpeg',
-          'Images/Churchill/Churchill5.jpeg',
-          'Images/Churchill/Churchill6.jpeg'
-        ]
-      }
-      // Add more albums here
+      { folder: 'Svalbard', title: 'Svalbard 2024', totalPhotos: 6 },
+      { folder: 'Churchill', title: 'Churchill 2025', totalPhotos: 6 }
     ];
 
     const container = document.getElementById('albums-container');
@@ -98,30 +82,36 @@
     albums.forEach(album => {
       const col = document.createElement('div');
       col.className = 'col-sm-6 col-md-4 col-lg-3';
-      
+
+      // Automatically generate photo paths
+      const photos = [];
+      for (let i = 1; i <= album.totalPhotos; i++) {
+        photos.push(`Images/${album.folder}/${album.folder}${i}.jpeg`);
+      }
+
       // Generate preview images (up to 4)
       let previewHTML = '<div class="preview-container">';
-      album.photos.slice(0, 4).forEach((photo, idx) => {
+      photos.slice(0, 4).forEach((photo, idx) => {
         previewHTML += `<img src="${photo}" class="preview-img" alt="" data-album="${album.folder}" data-index="${idx}">`;
       });
       previewHTML += '</div>';
-      
+
       col.innerHTML = `
         <div class="card album-card shadow-sm h-100">
-          <img src="${album.photos[0]}" class="card-img-top cover-img" alt="${album.title}">
+          <img src="${photos[0]}" class="card-img-top cover-img" alt="${album.title}">
           <div class="card-body text-center d-flex flex-column">
             <h5 class="card-title">${album.title}</h5>
             ${previewHTML}
-            <div class="photo-count">${album.photos.length} photos</div>
-            <a href="album.html?album=${album.folder}" class="btn btn-primary mt-auto">View Album</a>
+            <div class="photo-count">${photos.length} photos</div>
+            <a href="album.html?album=${album.folder.toLowerCase()}" class="btn btn-primary mt-auto">View Album</a>
           </div>
         </div>
       `;
-      
+
       container.appendChild(col);
     });
 
-    // Lightbox functionality
+    // Lightbox modal
     const modal = new bootstrap.Modal(document.getElementById('lightboxModal'));
     const lightboxImage = document.getElementById('lightboxImage');
     const prevBtn = document.getElementById('prevBtn');
@@ -131,7 +121,10 @@
       if (e.target.classList.contains('preview-img')) {
         const albumFolder = e.target.dataset.album;
         const album = albums.find(a => a.folder === albumFolder);
-        currentPhotos = album.photos;
+        currentPhotos = [];
+        for (let i = 1; i <= album.totalPhotos; i++) {
+          currentPhotos.push(`Images/${album.folder}/${album.folder}${i}.jpeg`);
+        }
         currentIndex = parseInt(e.target.dataset.index);
         showImage();
         modal.show();
