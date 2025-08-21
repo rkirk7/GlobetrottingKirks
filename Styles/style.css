@@ -135,3 +135,13 @@ text-align: center;
 .navbar .nav-link[href*="instagram"]:hover i {
   color: #E1306C; /* Instagram pink */
 }
+
+/* Force white icons in dark navbar */
+.navbar-dark .nav-link i {
+  color: white !important;
+  font-size: 1.2rem;
+}
+
+.navbar-dark .nav-link i:hover {
+  color: #f8f9fa; /* Slightly lighter white on hover */
+}
