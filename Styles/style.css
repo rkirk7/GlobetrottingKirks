@@ -198,11 +198,22 @@ footer {
 
 
 .profile-img {
-  max-width: 100%;       /* ensures image never overflows column */
+  max-width: 250px;       /* fixed width for desktop */
   height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  float: left;            /* text will wrap around on large screens */
+  margin-right: 20px;     /* space between image and text */
+  margin-bottom: 15px;    /* spacing for mobile stacked layout */
 }
 
+/* Ensure text clears properly on smaller screens */
+@media (max-width: 767px) {
+  .profile-img {
+    float: none;
+    display: block;
+    margin: 0 auto 15px auto;
+  }
+}
 
 
