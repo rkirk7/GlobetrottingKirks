@@ -13,27 +13,28 @@
   </div>
 
   <script>
-    // List of album names: folderName: "Display Name"
-    const albums = {
-      "svalbard-2024": "Svalbard 2024",
-      "Churchill": "Churchill Trip"
-    };
+    // Album list: each album needs name, folder for images, and param for URL
+    const albums = [
+      { name: "Churchill", folder: "Churchill", param: "churchill-2025" },
+      { name: "Svalbard 2024", folder: "Svalbard", param: "svalbard-2024" }
+    ];
 
     const container = document.getElementById("albums-container");
 
-    Object.entries(albums).forEach(([folder, title]) => {
-      // Point to first image in each folder for the thumbnail
-      const thumb = `images/${folder}/${folder}1.jpeg`;
+    // Loop through albums and create cards
+    albums.forEach(album => {
+      // Thumbnail: first image in the folder
+      const thumb = `images/${album.folder}/${album.folder}1.jpeg`;
 
       // Create album card
       const card = document.createElement("div");
       card.classList.add("col-md-4", "mb-4");
       card.innerHTML = `
         <div class="card shadow-lg">
-          <img src="${thumb}" class="card-img-top" alt="${title}">
+          <img src="${thumb}" class="card-img-top" alt="${album.name}">
           <div class="card-body text-center">
-            <h5 class="card-title">${title}</h5>
-            <a href="album.html?album=${folder}" class="btn btn-primary">View Album</a>
+            <h5 class="card-title">${album.name}</h5>
+            <a href="album.html?album=${album.param}" class="btn btn-primary">View Album</a>
           </div>
         </div>
       `;
