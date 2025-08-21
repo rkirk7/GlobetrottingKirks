@@ -127,3 +127,13 @@ height: 2em;
 iframe {
 text-align: center;
 }
+
+.navbar .nav-link i {
+  color: white;           /* default color for icons */
+  font-size: 1.2rem;       /* make them a bit bigger */
+  transition: color 0.3s;  /* smooth hover effect */
+}
+
+.navbar .nav-link:hover i {
+  color: #f0ad4e;          /* gold on hover or pick any color */
+}
