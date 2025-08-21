@@ -45,17 +45,14 @@ h1, h2, h3 {
 }
 
 /* Social Icons (SVG-based) */
-.navbar-dark .nav-link svg {
-  width: 24px;
-  height: 24px;
-  fill: white;
-  margin: 0 5px;
-  transition: fill 0.3s, transform 0.3s;
+.navbar-nav.ms-auto .nav-link i.fab {
+    font-size: 1.6rem; /* icon size */
+    margin: 0 5px;
+    transition: transform 0.3s;
 }
 
-.navbar-dark .nav-link svg:hover {
-  fill: #ffcc00;
-  transform: scale(1.2);
+.navbar-nav.ms-auto .nav-link i.fab:hover {
+    transform: scale(1.2);
 }
 
 /* ================================
