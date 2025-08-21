@@ -1,34 +1,22 @@
 async function loadPage(page) {
   try {
     const res = await fetch(page);
-    if (!res.ok) throw new Error(`Failed to load page: ${res.status}`);
-    
-    const content = await res.text();
+    const text = await res.text();
+
+    // Create a temporary DOM to parse the fetched page
+    const temp = document.createElement("div");
+    temp.innerHTML = text;
+
+    // Grab only the part we want (e.g., the container)
+    const content = temp.querySelector(".container"); // or #main, etc.
     const element = document.getElementById("content");
-    element.innerHTML = content;
 
-    // Execute scripts inside the loaded content
-    const scripts = element.querySelectorAll("script");
-    scripts.forEach(oldScript => {
-      const newScript = document.createElement("script");
-
-      // Copy inline code
-      if (oldScript.textContent) {
-        newScript.textContent = oldScript.textContent;
-      }
-
-      // Copy src for external scripts
-      if (oldScript.src) {
-        newScript.src = oldScript.src;
-        newScript.async = false; // preserve execution order
-      }
-
-      // Replace old script with new to trigger execution
-      oldScript.parentNode.replaceChild(newScript, oldScript);
-    });
-
+    if (content) {
+      element.innerHTML = content.outerHTML;
+    } else {
+      element.innerHTML = "<p>Content not found</p>";
+    }
   } catch (err) {
-    console.error(err);
-    document.getElementById("content").innerHTML = `<p class="text-danger">Error loading page.</p>`;
+    console.error("Error loading page:", err);
   }
 }
