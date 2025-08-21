@@ -44,16 +44,19 @@ h1, h2, h3 {
   text-decoration: underline;
 }
 
-/* Social Icons (SVG-based) */
-.navbar-nav.ms-auto .nav-link i.fab {
-    font-size: 1.6rem; /* icon size */
-    margin: 0 5px;
+/* Social SVG icons in their normal brand colors */
+.navbar-nav.ms-auto .nav-link svg {
+    width: 24px;
+    height: 24px;
+    fill: initial;           /* use the SVG's default color */
     transition: transform 0.3s;
 }
 
-.navbar-nav.ms-auto .nav-link i.fab:hover {
-    transform: scale(1.2);
+.navbar-nav.ms-auto .nav-link svg:hover {
+    transform: scale(1.2);   /* enlarge slightly on hover */
 }
+
+
 
 /* ================================
    Hero Section
