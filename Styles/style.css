@@ -1,13 +1,19 @@
 body {
-    margin: 0 auto;
-    padding: 60px 20px 20px 20px;
-    background-color: darkcyan;
-  }
+  margin: 0;
+  padding-top: 70px;
+  font-family: 'Roboto Slab', serif;
+  background: #f4f6f8;
+  color: #333;
+}
+
+
+h1, h2, h3 {
+  color: #222;
+}
 
 h1 {
     margin: 0;
     padding: 20px 0;
-    color: white;
     text-shadow: 1px 1px 1px gray;
     font-size: 60px;
     text-align: center;
@@ -16,13 +22,11 @@ h1 {
 h2 {
     font-size: 40px;
     text-align: center;
-    color: white;
   }
 
   h3 {
     font-size: 30px;
     text-align: center;
-    color: white;
   }
 
   p {
@@ -145,3 +149,62 @@ text-align: center;
 .navbar-dark .nav-link i:hover {
   color: #f8f9fa; /* Slightly lighter white on hover */
 }
+
+.navbar {
+  background: rgba(0, 0, 0, 0.85) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  font-family: 'Roboto Slab', serif;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f8f9fa !important;
+}
+
+.navbar .nav-link {
+  color: #f8f9fa !important;
+  margin: 0 5px;
+  transition: color 0.3s;
+}
+
+.navbar .nav-link:hover {
+  color: #ffcc00 !important;
+}
+
+.navbar-dark .nav-link i {
+  color: white !important;
+  font-size: 1.3rem;
+}
+
+.navbar-dark .nav-link i:hover {
+  color: #ffcc00 !important;
+}
+
+.hero {
+  background: url('Images/hero-image.jpg') no-repeat center center/cover;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: relative;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+}
+
+
