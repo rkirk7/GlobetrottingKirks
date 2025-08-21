@@ -206,3 +206,14 @@ footer {
   transform: scale(1.03);
   box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
+
+/* All blog images */
+#blog-container img {
+  max-width: 100%;      /* never overflow the container */
+  height: auto;         /* maintain aspect ratio */
+  border-radius: 8px;   /* optional, matches your site style */
+  display: block;       /* remove inline alignment quirks */
+  margin: 1rem auto;    /* center and give vertical spacing */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* optional shadow */
+}
+
