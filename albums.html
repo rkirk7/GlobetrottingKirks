@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Photo Albums - Globetrotting Kirks</title>
-  
+
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  
+
   <!-- Custom CSS -->
   <link rel="stylesheet" href="Styles/style.css">
 
@@ -49,51 +50,32 @@
     <div class="row g-4" id="albums-container"></div>
   </div>
 
-  <!-- Lightbox Modal -->
-  <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content bg-dark">
-        <div class="modal-body text-center">
-          <img id="lightboxImage" src="" class="img-fluid rounded" alt="">
-        </div>
-        <div class="modal-footer justify-content-between">
-          <button type="button" class="btn btn-secondary" id="prevBtn">&lt; Prev</button>
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-secondary" id="nextBtn">Next &gt;</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- Bootstrap JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
   <script>
-    // Define albums with folder names that match album.html keys
+    // Define albums with folder name and title
     const albums = [
-      { folder: 'svalbard-2024', title: 'Svalbard 2024', totalPhotos: 6 },
-      { folder: 'churchill-2025', title: 'Churchill 2025', totalPhotos: 6 }
+      { folder: 'Svalbard', title: 'Svalbard 2024', totalPhotos: 6 },
+      { folder: 'Churchill', title: 'Churchill 2025', totalPhotos: 6 }
     ];
 
     const container = document.getElementById('albums-container');
-    let currentPhotos = [];
-    let currentIndex = 0;
 
     albums.forEach(album => {
       const col = document.createElement('div');
       col.className = 'col-sm-6 col-md-4 col-lg-3';
 
-      // Generate photo paths dynamically
+      // Generate photo paths
       const photos = [];
-      const folderName = album.folder.split('-')[0].charAt(0).toUpperCase() + album.folder.split('-')[0].slice(1); // e.g., "Svalbard"
       for (let i = 1; i <= album.totalPhotos; i++) {
-        photos.push(`Images/${folderName}/${folderName}${i}.jpeg`);
+        photos.push(`Images/${album.folder}/${album.folder}${i}.jpeg`);
       }
 
       // Generate preview images (up to 4)
       let previewHTML = '<div class="preview-container">';
       photos.slice(0, 4).forEach((photo, idx) => {
-        previewHTML += `<img src="${photo}" class="preview-img" alt="" data-album="${album.folder}" data-index="${idx}">`;
+        previewHTML += `<img src="${photo}" class="preview-img" alt="${album.title} preview ${idx+1}">`;
       });
       previewHTML += '</div>';
 
@@ -104,47 +86,12 @@
             <h5 class="card-title">${album.title}</h5>
             ${previewHTML}
             <div class="photo-count">${photos.length} photos</div>
-            <a href="album.html?album=${album.folder}" class="btn btn-primary mt-auto">View Album</a>
+            <a href="album.html?album=${album.folder.toLowerCase()}" class="btn btn-primary mt-auto">View Album</a>
           </div>
         </div>
       `;
 
       container.appendChild(col);
-    });
-
-    // Lightbox functionality
-    const modal = new bootstrap.Modal(document.getElementById('lightboxModal'));
-    const lightboxImage = document.getElementById('lightboxImage');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-
-    container.addEventListener('click', (e) => {
-      if (e.target.classList.contains('preview-img')) {
-        const albumFolder = e.target.dataset.album;
-        const album = albums.find(a => a.folder === albumFolder);
-        currentPhotos = [];
-        const folderName = album.folder.split('-')[0].charAt(0).toUpperCase() + album.folder.split('-')[0].slice(1);
-        for (let i = 1; i <= album.totalPhotos; i++) {
-          currentPhotos.push(`Images/${folderName}/${folderName}${i}.jpeg`);
-        }
-        currentIndex = parseInt(e.target.dataset.index);
-        showImage();
-        modal.show();
-      }
-    });
-
-    function showImage() {
-      lightboxImage.src = currentPhotos[currentIndex];
-    }
-
-    prevBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex - 1 + currentPhotos.length) % currentPhotos.length;
-      showImage();
-    });
-
-    nextBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex + 1) % currentPhotos.length;
-      showImage();
     });
   </script>
 </body>
