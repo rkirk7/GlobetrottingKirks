@@ -160,3 +160,16 @@ footer {
   font-weight: bold;
   text-decoration: underline;
 }
+
+.album-photo {
+  border-radius: 8px;
+  margin-bottom: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.album-photo:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
