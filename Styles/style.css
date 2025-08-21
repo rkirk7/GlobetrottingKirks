@@ -173,3 +173,14 @@ footer {
   box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
+/* Force social media icons to be white in the dark navbar */
+.navbar-dark .nav-link i.fab {
+    color: white !important;
+    font-size: 1.4rem;
+}
+
+.navbar-dark .nav-link i.fab:hover {
+    color: #ffcc00 !important; /* Highlight on hover */
+}
+
+
