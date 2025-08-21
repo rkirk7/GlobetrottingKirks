@@ -173,14 +173,23 @@ footer {
   box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
-/* Force social media icons to be white in the dark navbar */
-.navbar-dark .nav-link i.fab {
+/* Social media icons styling */
+.navbar-nav.ms-auto .nav-link i.fab {
     color: white !important;
-    font-size: 1.4rem;
+    font-size: 1.6rem;       /* larger icons */
+    padding: 6px;            /* add space around the icon */
+    border-radius: 50%;      /* circular buttons */
+    background-color: #333;  /* dark background for contrast */
+    transition: all 0.3s;
 }
 
-.navbar-dark .nav-link i.fab:hover {
-    color: #ffcc00 !important; /* Highlight on hover */
+/* Hover effect */
+.navbar-nav.ms-auto .nav-link i.fab:hover {
+    color: #ffcc00 !important;      /* icon color change */
+    transform: scale(1.2);          /* slight grow effect */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    background-color: #555;          /* subtle background highlight */
 }
+
 
 
