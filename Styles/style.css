@@ -111,3 +111,22 @@ footer {
   font-size: 1rem;
 }
 
+/* Image styling for Top Places */
+img.img-fluid {
+  transition: transform 0.3s;
+}
+
+img.img-fluid:hover {
+  transform: scale(1.05);
+}
+
+h1, h2, h3 {
+  color: #222;
+}
+
+.row.g-3 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+
