@@ -128,12 +128,10 @@ iframe {
 text-align: center;
 }
 
-.navbar .nav-link i {
-  color: white;           /* default color for icons */
-  font-size: 1.2rem;       /* make them a bit bigger */
-  transition: color 0.3s;  /* smooth hover effect */
+.navbar .nav-link[href*="tiktok"]:hover i {
+  color: #69C9D0; /* TikTok teal */
 }
 
-.navbar .nav-link:hover i {
-  color: #f0ad4e;          /* gold on hover or pick any color */
+.navbar .nav-link[href*="instagram"]:hover i {
+  color: #E1306C; /* Instagram pink */
 }
