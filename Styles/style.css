@@ -154,3 +154,9 @@ footer {
   padding: 20px 0;
   text-align: center;
 }
+
+.navbar .nav-link.active {
+  color: #ffcc00 !important;  /* Matches your hover color */
+  font-weight: bold;
+  text-decoration: underline;
+}
