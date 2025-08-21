@@ -63,7 +63,7 @@ h1, h2, h3 {
    ================================ */
 .hero {
   background: url('../Images/hero-image.jpeg') no-repeat center center/cover;
-  height: 30vh; /* smaller than before */
+  height: 50vh; /* smaller than before */
   display: flex;
   align-items: center;
   justify-content: center;
