@@ -13,25 +13,24 @@
   </div>
 
   <script>
-    // Album list: each album needs name, folder for images, and param for URL
+    // Album list: Name, folder, and URL parameter
     const albums = [
-      { name: "Churchill", folder: "Churchill", param: "churchill-2025" },
+      { name: "Churchill 2025", folder: "Churchill", param: "churchill-2025" },
       { name: "Svalbard 2024", folder: "Svalbard", param: "svalbard-2024" }
     ];
 
     const container = document.getElementById("albums-container");
 
-    // Loop through albums and create cards
     albums.forEach(album => {
-      // Thumbnail: first image in the folder
-      const thumb = `images/${album.folder}/${album.folder}1.jpeg`;
+      // Try loading the first image in the folder as thumbnail
+      const thumb = `images/${album.folder}/1.jpeg`;
 
-      // Create album card
+      // Build card HTML
       const card = document.createElement("div");
       card.classList.add("col-md-4", "mb-4");
       card.innerHTML = `
         <div class="card shadow-lg">
-          <img src="${thumb}" class="card-img-top" alt="${album.name}">
+          <img src="${thumb}" class="card-img-top" alt="${album.name}" onerror="this.src='placeholder.jpg'">
           <div class="card-body text-center">
             <h5 class="card-title">${album.name}</h5>
             <a href="album.html?album=${album.param}" class="btn btn-primary">View Album</a>
