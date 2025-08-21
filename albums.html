@@ -3,95 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Photo Albums - Globetrotting Kirks</title>
-
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="Styles/style.css">
-
-  <style>
-    .album-card img {
-      object-fit: cover;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-    .album-card .cover-img {
-      height: 180px;
-      width: 100%;
-    }
-    .album-card .preview-img {
-      height: 60px;
-      width: 60px;
-      margin: 2px;
-    }
-    .album-card:hover {
-      transform: scale(1.02);
-      transition: transform 0.3s;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-    }
-    .preview-container {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 5px;
-    }
-    .photo-count {
-      font-size: 0.9rem;
-      color: #555;
-      margin-top: 5px;
-    }
-  </style>
+  <title>Photo Albums</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
   <div class="container my-5">
-    <h1 class="text-center mb-4">Photo Albums</h1>
-    <div class="row g-4" id="albums-container"></div>
+    <h1 class="text-center mb-5">Photo Albums</h1>
+    <div id="albums-container" class="row"></div>
   </div>
 
-  <!-- Bootstrap JS Bundle -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
   <script>
-    // Define albums with folder name and title
-    const albums = [
-      { folder: 'Svalbard', title: 'Svalbard 2024', totalPhotos: 6 },
-      { folder: 'Churchill', title: 'Churchill 2025', totalPhotos: 6 }
-    ];
+    // List of album names: folderName: "Display Name"
+    const albums = {
+      "svalbard-2024": "Svalbard 2024",
+      "Churchill": "Churchill Trip"
+    };
 
-    const container = document.getElementById('albums-container');
+    const container = document.getElementById("albums-container");
 
-    albums.forEach(album => {
-      const col = document.createElement('div');
-      col.className = 'col-sm-6 col-md-4 col-lg-3';
+    Object.entries(albums).forEach(([folder, title]) => {
+      // Point to first image in each folder for the thumbnail
+      const thumb = `images/${folder}/${folder}1.jpeg`;
 
-      // Generate photo paths
-      const photos = [];
-      for (let i = 1; i <= album.totalPhotos; i++) {
-        photos.push(`Images/${album.folder}/${album.folder}${i}.jpeg`);
-      }
-
-      // Generate preview images (up to 4)
-      let previewHTML = '<div class="preview-container">';
-      photos.slice(0, 4).forEach((photo, idx) => {
-        previewHTML += `<img src="${photo}" class="preview-img" alt="${album.title} preview ${idx+1}">`;
-      });
-      previewHTML += '</div>';
-
-      col.innerHTML = `
-        <div class="card album-card shadow-sm h-100">
-          <img src="${photos[0]}" class="card-img-top cover-img" alt="${album.title}">
-          <div class="card-body text-center d-flex flex-column">
-            <h5 class="card-title">${album.title}</h5>
-            ${previewHTML}
-            <div class="photo-count">${photos.length} photos</div>
-            <a href="album.html?album=${album.folder.toLowerCase()}" class="btn btn-primary mt-auto">View Album</a>
+      // Create album card
+      const card = document.createElement("div");
+      card.classList.add("col-md-4", "mb-4");
+      card.innerHTML = `
+        <div class="card shadow-lg">
+          <img src="${thumb}" class="card-img-top" alt="${title}">
+          <div class="card-body text-center">
+            <h5 class="card-title">${title}</h5>
+            <a href="album.html?album=${folder}" class="btn btn-primary">View Album</a>
           </div>
         </div>
       `;
-
-      container.appendChild(col);
+      container.appendChild(card);
     });
   </script>
 </body>
