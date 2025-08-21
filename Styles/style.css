@@ -30,6 +30,15 @@ h1, h2, h3 {
   color: #f8f9fa !important;
 }
 
+.navbar-dark .nav-link svg {
+  transition: fill 0.3s;
+}
+
+.navbar-dark .nav-link svg:hover {
+  fill: #ffcc00;
+}
+
+
 .navbar .nav-link {
   color: #f8f9fa !important;
   margin: 0 5px;
