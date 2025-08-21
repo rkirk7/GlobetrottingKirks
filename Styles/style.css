@@ -1,3 +1,4 @@
+/* General Styles */
 body {
   margin: 0;
   padding-top: 70px;
@@ -6,154 +7,16 @@ body {
   color: #333;
 }
 
-
+/* Headings */
 h1, h2, h3 {
   color: #222;
+  text-align: center;
 }
 
-h1 {
-    margin: 0;
-    padding: 20px 0;
-    text-shadow: 1px 1px 1px gray;
-    font-size: 60px;
-    text-align: center;
-}
-
-h2 {
-    font-size: 40px;
-    text-align: center;
-  }
-
-  h3 {
-    font-size: 30px;
-    text-align: center;
-  }
-
-  p {
-    font-size: 24px;
-    text-align: left;
-    color: white;
-    padding: 5px;
-  }
-  
-  img {
-    display: block;
-    margin: 0 auto;
-    max-width: 300px;
-  }
-
-  button {
-   display: block;
-  }
-
-  html {
-    background-color: darkcyan;
-  }
-
-  .on{
-    background: orange;
-}
-
-a {
-  color:white;
-}
-a.link {
-  color: white;
-}
-
-a.visited {
-  color: yellow;
-}
-
-a.hover {
- color: white;
- text-decoration: none;
-}
-
-a.active {
-  color:red;
-}
-
-.content{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 5px;
-    align-self: center;
-}
-
-.screenshots{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 5px;
-  align-self: center;
-}
-
-div{
-    padding: 5px;
-    text-align: center;
-    color: black;
-}
-
-.card-text {
-  color: black;
-  font-size: 1em;
-}
-
-.card-title {
-  font-size: 1.5em;
-}
-
-form {
-  align-items: center;
-  color: white;
-}
-
-.col-form-label-sm {
-height: 2em;
-}
-
-.card-text {
-  color: white;
-}
-
-.card-title {
-  color: white;
-}
-
-.navbar-nav {
-  border: none;
-}
-
-.about {
-  margin: 0 100px;
-}
-
-iframe {
-text-align: center;
-}
-
-.navbar .nav-link[href*="tiktok"]:hover i {
-  color: #69C9D0; /* TikTok teal */
-}
-
-.navbar .nav-link[href*="instagram"]:hover i {
-  color: #E1306C; /* Instagram pink */
-}
-
-/* Force white icons in dark navbar */
-.navbar-dark .nav-link i {
-  color: white !important;
-  font-size: 1.2rem;
-}
-
-.navbar-dark .nav-link i:hover {
-  color: #f8f9fa; /* Slightly lighter white on hover */
-}
-
+/* Navbar */
 .navbar {
   background: rgba(0, 0, 0, 0.85) !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  font-family: 'Roboto Slab', serif;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
 .navbar-brand {
@@ -172,6 +35,7 @@ text-align: center;
   color: #ffcc00 !important;
 }
 
+/* Social Icons */
 .navbar-dark .nav-link i {
   color: white !important;
   font-size: 1.3rem;
@@ -181,6 +45,7 @@ text-align: center;
   color: #ffcc00 !important;
 }
 
+/* Hero Section */
 .hero {
   background: url('Images/hero-image.jpg') no-repeat center center/cover;
   height: 80vh;
@@ -194,11 +59,9 @@ text-align: center;
 .hero::after {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4);
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.4);
 }
 
 .hero-content {
@@ -207,4 +70,25 @@ text-align: center;
   max-width: 700px;
 }
 
+/* Cards */
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
 
+.card-text {
+  color: #555;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: #f8f9fa;
+  font-size: 1rem;
+}
+
+/* Buttons */
+.btn-warning {
+  background-color: #ffcc00;
+  border: none;
+}
