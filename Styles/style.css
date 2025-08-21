@@ -30,38 +30,33 @@ h1, h2, h3 {
   color: #f8f9fa !important;
 }
 
-.navbar-dark .nav-link svg {
-  transition: fill 0.3s;
-}
-
-.navbar-dark .nav-link svg:hover {
-  fill: #ffcc00;
-}
-
-
+/* Text links */
 .navbar .nav-link {
   color: #f8f9fa !important;
   margin: 0 5px;
   transition: color 0.3s;
 }
 
-.navbar .nav-link:hover {
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
   color: #ffcc00 !important;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
-/* Social Icons */
-
+/* Social Icons (SVG-based) */
 .navbar-dark .nav-link svg {
-  color: white;
   width: 24px;
   height: 24px;
-  transition: 0.3s;
+  fill: white;
+  margin: 0 5px;
+  transition: fill 0.3s, transform 0.3s;
 }
 
 .navbar-dark .nav-link svg:hover {
-  color: #ffcc00;
+  fill: #ffcc00;
+  transform: scale(1.2);
 }
-
 
 /* ================================
    Hero Section
@@ -142,6 +137,25 @@ img.img-fluid:hover {
   transform: scale(1.05);
 }
 
+/* Profile images for About section */
+.profile-img {
+  max-width: 250px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 767px) {
+  .profile-img {
+    float: none;
+    display: block;
+    margin: 0 auto 15px auto;
+  }
+}
+
 /* ================================
    Grid Row Spacing
    ================================ */
@@ -168,12 +182,9 @@ footer {
   text-align: center;
 }
 
-.navbar .nav-link.active {
-  color: #ffcc00 !important;  /* Matches your hover color */
-  font-weight: bold;
-  text-decoration: underline;
-}
-
+/* ================================
+   Albums
+   ================================ */
 .album-photo {
   border-radius: 8px;
   margin-bottom: 15px;
@@ -185,48 +196,3 @@ footer {
   transform: scale(1.03);
   box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
-
-/* Individual social icons */
-.navbar-nav.ms-auto .nav-link i.fab {
-    color: white !important;
-    font-size: 1.6rem;       /* larger icon */
-    padding: 8px;             /* space inside the circle */
-    border-radius: 50%;       /* circular shape */
-    background-color: #333;   /* dark background for contrast */
-    transition: all 0.3s;
-}
-
-/* Hover effect */
-.navbar-nav.ms-auto .nav-link i.fab:hover {
-    color: #ffcc00 !important;      /* highlight icon */
-    transform: scale(1.2);          /* enlarge slightly */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-    background-color: #555;          /* subtle background change */
-}
-
-/* Ensure spacing from text links on navbar */
-.navbar .navbar-nav.me-auto .nav-item {
-    margin-right: 15px;
-}
-
-
-.profile-img {
-  max-width: 250px;       /* fixed width for desktop */
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  float: left;            /* text will wrap around on large screens */
-  margin-right: 20px;     /* space between image and text */
-  margin-bottom: 15px;    /* spacing for mobile stacked layout */
-}
-
-/* Ensure text clears properly on smaller screens */
-@media (max-width: 767px) {
-  .profile-img {
-    float: none;
-    display: block;
-    margin: 0 auto 15px auto;
-  }
-}
-
-
