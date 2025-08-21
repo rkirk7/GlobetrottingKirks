@@ -173,23 +173,29 @@ footer {
   box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
-/* Social media icons styling */
+/* Individual social icons */
 .navbar-nav.ms-auto .nav-link i.fab {
     color: white !important;
-    font-size: 1.6rem;       /* larger icons */
-    padding: 6px;            /* add space around the icon */
-    border-radius: 50%;      /* circular buttons */
-    background-color: #333;  /* dark background for contrast */
+    font-size: 1.6rem;       /* larger icon */
+    padding: 8px;             /* space inside the circle */
+    border-radius: 50%;       /* circular shape */
+    background-color: #333;   /* dark background for contrast */
     transition: all 0.3s;
 }
 
 /* Hover effect */
 .navbar-nav.ms-auto .nav-link i.fab:hover {
-    color: #ffcc00 !important;      /* icon color change */
-    transform: scale(1.2);          /* slight grow effect */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    background-color: #555;          /* subtle background highlight */
+    color: #ffcc00 !important;      /* highlight icon */
+    transform: scale(1.2);          /* enlarge slightly */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    background-color: #555;          /* subtle background change */
 }
+
+/* Ensure spacing from text links on navbar */
+.navbar .navbar-nav.me-auto .nav-item {
+    margin-right: 15px;
+}
+
 
 
 
