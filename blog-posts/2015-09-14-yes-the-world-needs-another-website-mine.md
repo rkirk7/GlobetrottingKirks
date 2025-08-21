@@ -11,7 +11,7 @@ What do I have that's different? Substantive content: columns I wrote as Preside
 
 So that led me to create a website: [Mei-Mei's Musings](http://meimeikirk.com). It features insights to amuse and inspire on topics I'm passionate about: leadership, travel, family, media.
 
-![Alt text](Images/Blog/11-13-iguazu-2-mmc-047.jpg "Iguazu Falls")  
+![Alt text](./Images/Blog/11-13-iguazu-2-mmc-047.jpg "Iguazu Falls")  
 *Iguazu Falls from the Argentina side*
 
 I used Wix, which is largely user-friendly, flexible and inexpensive. Which was a little unnerving since my career was built around telling people they needed expert marketers to help them with their digital outreach. (Helpful husband: "Yours doesn't look like the professional websites." Thanks dear.)
@@ -24,7 +24,7 @@ There are five sections around my passions:
 - Travel highlights and photo galleries
 - This blog, which will offer fresh content
 
-![Alt text](Images/Blog/hodges-graduation-6-5-11.jpg "Hodges Leadership")  
+![Alt text](./Images/Blog/hodges-graduation-6-5-11.jpg "Hodges Leadership")  
 *Hodges graduation leadership*
 
 I  spent hours when I should have been studying bridge with Randy working on this project, finding, editing, designing, packaging, reviewing, adjusting, linking, customizing.  Often it was entertaining as I relived moments in time or researched captions for travel photos.
