@@ -14,6 +14,7 @@
     .album-card img {
       object-fit: cover;
       border-radius: 6px;
+      cursor: pointer;
     }
     .album-card .cover-img {
       height: 180px;
@@ -48,11 +49,26 @@
     <div class="row g-4" id="albums-container"></div>
   </div>
 
+  <!-- Lightbox Modal -->
+  <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-dark">
+        <div class="modal-body text-center">
+          <img id="lightboxImage" src="" class="img-fluid rounded" alt="">
+        </div>
+        <div class="modal-footer justify-content-between">
+          <button type="button" class="btn btn-secondary" id="prevBtn">&lt; Prev</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary" id="nextBtn">Next &gt;</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Bootstrap JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
   <script>
-    // Album data
     const albums = [
       { folder: 'svalbard-2024', title: 'Svalbard 2024', photos: [
           'Images/Svalbard1.jpeg',
@@ -76,6 +92,8 @@
     ];
 
     const container = document.getElementById('albums-container');
+    let currentPhotos = [];
+    let currentIndex = 0;
 
     albums.forEach(album => {
       const col = document.createElement('div');
@@ -83,25 +101,55 @@
       
       // Generate preview images (up to 4)
       let previewHTML = '<div class="preview-container">';
-      album.photos.slice(0, 4).forEach(photo => {
-        previewHTML += `<img src="${photo}" class="preview-img" alt="">`;
+      album.photos.slice(0, 4).forEach((photo, idx) => {
+        previewHTML += `<img src="${photo}" class="preview-img" alt="" data-album="${album.folder}" data-index="${idx}">`;
       });
       previewHTML += '</div>';
       
       col.innerHTML = `
         <div class="card album-card shadow-sm h-100">
-          <a href="album.html?album=${album.folder}">
-            <img src="${album.photos[0]}" class="card-img-top cover-img" alt="${album.title}">
-            <div class="card-body text-center">
-              <h5 class="card-title">${album.title}</h5>
-              ${previewHTML}
-              <div class="photo-count">${album.photos.length} photos</div>
-            </div>
-          </a>
+          <img src="${album.photos[0]}" class="card-img-top cover-img" alt="${album.title}">
+          <div class="card-body text-center d-flex flex-column">
+            <h5 class="card-title">${album.title}</h5>
+            ${previewHTML}
+            <div class="photo-count">${album.photos.length} photos</div>
+            <a href="album.html?album=${album.folder}" class="btn btn-primary mt-auto">View Album</a>
+          </div>
         </div>
       `;
       
       container.appendChild(col);
+    });
+
+    // Lightbox functionality
+    const modal = new bootstrap.Modal(document.getElementById('lightboxModal'));
+    const lightboxImage = document.getElementById('lightboxImage');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    container.addEventListener('click', (e) => {
+      if (e.target.classList.contains('preview-img')) {
+        const albumFolder = e.target.dataset.album;
+        const album = albums.find(a => a.folder === albumFolder);
+        currentPhotos = album.photos;
+        currentIndex = parseInt(e.target.dataset.index);
+        showImage();
+        modal.show();
+      }
+    });
+
+    function showImage() {
+      lightboxImage.src = currentPhotos[currentIndex];
+    }
+
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + currentPhotos.length) % currentPhotos.length;
+      showImage();
+    });
+
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % currentPhotos.length;
+      showImage();
     });
   </script>
 </body>
