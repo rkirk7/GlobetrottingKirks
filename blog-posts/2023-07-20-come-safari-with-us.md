@@ -1,7 +1,7 @@
 # Come safari with us!
 *2023-07-20*
 
-### Highlights from three weeks in Botswana, Zimbabwe, Zambia and Namibia
+**Highlights from three weeks in Botswana, Zimbabwe, Zambia and Namibia**
 
 We once worried that a second African safari would be redundant, even disappointing.
 

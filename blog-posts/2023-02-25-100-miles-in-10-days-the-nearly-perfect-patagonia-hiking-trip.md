@@ -14,7 +14,7 @@ In 2021, we had hiked 108 miles over 20 days in [six U.S. western parks.](http:/
 In Patagonia, we hiked all day long nearly every day. We did 59.5 miles in seven days in Torres Del Paine in Chile and 39 miles in three days at Glaciares National Park in Argentina, with a total elevation change of 26,869 feet--Everest is 29,035 feet. This was the most we've ever done in one swoop, and we loved it, even though we caught colds right at the start. Here are details of how our (nearly) perfect plan unfolded.
 
 
-### Table of Contents
+<!-- ### Table of Contents
 1. [Hotel Las Torres to Mirador base de Las Torres (twice)](#hotel-las-torres-to-mirador-base-de-las-torres-twice)
 2. [Chileno to Cuernos](#chileno-to-cuernos)
 3. [Cuernos to Frances Valley and Paine Grande](#cuernos-to-frances-valley-and-paine-grande)
@@ -23,7 +23,7 @@ In Patagonia, we hiked all day long nearly every day. We did 59.5 miles in seven
 6. [Christmas Day "rest" to Miradores Condor y Alguila and Salto Waterfall](#christmas-day-rest-to-miradores-condor-y-alguila-and-salto-waterfall)
 7. [Laguna de Los Tres aka Fitz Roy](#laguna-de-los-tres-aka-fitz-roy)
 8. [Laguna Torres: finishing 100 miles in 10 days!](#laguna-torres-finishing-100-miles-in-10-days)
-9. [Bonus: How did Fitz Roy compare with Torres Del Paine?](#bonus-how-did-fitz-roy-compare-with-torres-del-paine)
+9. [Bonus: How did Fitz Roy compare with Torres Del Paine?](#bonus-how-did-fitz-roy-compare-with-torres-del-paine) -->
 
 
 Days 1-3: Travel to Santiago, Chile, hiking 11.8 miles around Cerro San Cristobal on our "rest" day (not included in the 100 miles! Nor are our five miles at Iguazu Falls at the end).
