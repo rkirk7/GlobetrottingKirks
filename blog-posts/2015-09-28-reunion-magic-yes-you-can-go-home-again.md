@@ -32,8 +32,6 @@ All these years later, Sue and Bill were still sweet and gentle; Bernice quiet w
 ![Wedding Picture](../Images/Blog/gang-at-sue-and-bill-wedding-2.jpg)
 *August 1981: U of I alum celebrate Sue and Bill's wedding.*
 
-![Wedding Picture](../Images/Blog/chicago-9-15-434-2.jpg)
-*September 2015: Sue tries to recall who all her guests were and what they're doing now.*
 
 Because of those bonds, we noticeably granted each other more respect, more patience, more acceptance than we typically would with strangers (and sometimes loved ones). Even if we didn’t quite see eye to eye, we had no desire to go toe to toe.
 
