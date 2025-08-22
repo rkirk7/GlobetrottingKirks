@@ -12,6 +12,13 @@ function initBlog() {
   const container = document.getElementById("blog-container");
   if (!container) return;
 
+posts.sort((a, b) => {
+  const dateA = new Date(a.slice(0, 10));
+  const dateB = new Date(b.slice(0, 10));
+  return dateB - dateA; // descending: newest first
+});
+
+  
   posts.forEach(post => {
     fetch(`blog-posts/${post}`)
       .then(res => {
