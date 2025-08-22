@@ -65,12 +65,7 @@ Lane was large and intimidating then, and still is today. It was among the prem
 
 ![Chicago 9.15 160](./Images/Blog/chicago-9-15-160.jpg)
 
-![Chicago 9.15 174](./Images/Blog/chicago-9-15-174.jpg)
-
 The largest high school in the city with 4,200 students, it now includes 7th and 8th graders. It’s officially called Lane Tech College Prep, which of course makes you wonder what the other high schools do.
-
-![Chicago Lane library](./Images/Blog/chicago-9-15-195.jpg) 
-*Lane's impressive library*
 
 While I finished my childhood circuit of Foster Beach and Margate Park, nine of my classmates started their Lane tour with lunch in the cafeteria. We then wandered the halls, peeking into music class, graphic design class, the innovation lab and its numerous 3-D printers, the beautiful library with oodles of Macs. We were disappointed to learn there were no longer shop classes like drafting, welding, woodwork or auto as we felt we had learned something useful. It wasn’t how to weld (or catch fire, as I did, before being quickly saved by classmate Fred Rhine) but how to coordinate mind, eyes and hands, to be precise, to create. STEM (or STEAM) is great, but for many, manufacturing skills are even better.
 
