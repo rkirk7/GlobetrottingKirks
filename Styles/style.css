@@ -198,6 +198,7 @@ img.img-fluid:hover {
   
   .card-header .post-title {
     margin-left: 0.5rem;
+    transform: rotate(0deg);
     flex: 1;
     text-align: left;
   }
