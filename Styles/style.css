@@ -177,65 +177,99 @@ img.img-fluid:hover {
 /* ================================
    Blog Specific
    ================================ */
-#blog-container .card {
-  border: none;
-}
-
-/* Blog post content */
-.blog-post-content h1,
-.blog-post-content h2,
-.blog-post-content h3 {
-  color: #222;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-.blog-post-content ul,
-.blog-post-content ol {
-    margin-left: 1.5rem;   /* indent properly */
-    padding-left: 1.2rem;  /* extra spacing */
+   #blog-container .card {
+    border: none;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+  
+  /* Card header (title + caret) */
+  .card-header {
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    padding: 0.75rem 1rem;
+  }
+  
+  .card-header .post-title {
+    margin-left: 0.5rem;
+    flex: 1;
+    text-align: left;
+  }
+  
+  .card-header .caret {
+    display: inline-block;
+    transform: rotate(0deg);
+    transition: transform 0.25s ease-in-out;
+  }
+  
+  /* Rotate only caret when collapse is shown */
+  .card-header[aria-expanded="true"] .caret {
+    transform: rotate(90deg);
+  }
+  
+  /* Blog post content */
+  .blog-post-content {
+    padding: 1rem 1.25rem;
+    line-height: 1.6;
+  }
+  
+  .blog-post-content h1,
+  .blog-post-content h2,
+  .blog-post-content h3 {
+    color: #222;
+    text-align: center;
+    margin: 1rem 0;
+  }
+  
+  .blog-post-content p {
+    margin-bottom: 1rem;
+  }
+  
+  .blog-post-content ul,
+  .blog-post-content ol {
+    margin-left: 1.5rem;
+    padding-left: 1.2rem;
     list-style-position: outside;
-    font-weight: normal;    /* override any bold from card styles */
-}
-
-.blog-post-content li {
-    margin-bottom: 0.5rem; /* spacing between bullets */
-    font-weight: normal;
-}
-
-.blog-post-content p {
-  line-height: 1.6;
-  margin-bottom: 1rem;
-}
-
+  }
+  
+  .blog-post-content li {
+    margin-bottom: 0.5rem;
+  }
+  
 /* Blog images */
 .blog-post-content img {
-  max-width: 50%;       /* never wider than 50% of page width */
-  height: auto;         /* maintain aspect ratio */
-  display: block;       /* remove inline quirks */
-  margin: 1rem auto;    /* center horizontally with vertical spacing */
-  border-radius: 8px;   /* optional, matches site style */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* optional shadow */
+  max-width: 90%;          /* images can be large but not full width */
+  max-height: 200px;       /* prevent images from being too tall */
+  width: auto;
+  height: auto;            /* maintain aspect ratio */
+  display: block;
+  margin: 1rem auto 0.25rem auto; /* small margin between image and caption */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 /* Figures and captions */
 .blog-post-content figure {
   text-align: center;
-  margin: 1.5rem 0;
+  margin: 1rem 0;
 }
 
 .blog-post-content figcaption {
   font-size: 0.9rem;
   color: #555;
-  margin-top: 0.3rem;
+  margin-top: 0.25rem;  /* small gap to keep caption close to image */
   text-align: center;
+  line-height: 1.3;
+  word-wrap: break-word;
 }
 
-.blog-post-content ul,
-.blog-post-content ol {
-  margin-left: 1.5rem;
-}
+  
 
 /* ================================
    Footer
