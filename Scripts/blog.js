@@ -4,7 +4,8 @@ async function initBlog() {
     "2025-06-03-exploring-antarctica-and-the-arctic-how-did-two-floridians-end-up-at-both-polar-regions-in-one-year-and-what-did-they-discover.md",
     "2025-01-29-antarctica-calls-and-we-must-go.md",
     "2024-09-12-in-search-of-polar-bears-in-the-arctic.md",
-    "2023-07-20-come-safari-with-us.md"
+    "2023-07-20-come-safari-with-us.md",
+    "2023-02-25-100-miles-in-10-days-the-nearly-perfect-patagonia-hiking-trip"
   ];
 
   const container = document.getElementById("blog-container");

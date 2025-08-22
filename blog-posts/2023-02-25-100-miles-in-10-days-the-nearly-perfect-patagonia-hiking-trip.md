@@ -1,24 +1,5 @@
----
-title: "100 miles in 10 days: the (nearly) perfect Patagonia hiking trip"
-date: 2023-02-25
-categories: 
-  - "patagonia"
-tags: 
-  - "torresdelpaine"
-  - "wtrek"
-  - "adventure-travel"
-  - "el-chalten"
-  - "fitz-roy"
-  - "frances-valley"
-  - "glaciares-national-park"
-  - "grey-glacier"
-  - "hiking-in-patagonia"
-  - "laguna-de-los-tres"
-  - "refugios"
-  - "torres-del-paine"
-  - "w-trek"
-coverImage: "2022-patagonia-tdp-towers-mm-best.-3000-feet-elevation-in-6-miles.-img_0783.jpg"
----
+# 100 miles in 10 days: the (nearly) perfect Patagonia hiking trip
+*2023-02-25*
 
 My adult daughter and I are active, independent travelers who love the great outdoors.
 
@@ -32,36 +13,40 @@ In 2021, we had hiked 108 miles over 20 days in [six U.S. western parks.](http:/
 
 In Patagonia, we hiked all day long nearly every day. We did 59.5 miles in seven days in Torres Del Paine in Chile and 39 miles in three days at Glaciares National Park in Argentina, with a total elevation change of 26,869 feet--Everest is 29,035 feet. This was the most we've ever done in one swoop, and we loved it, even though we caught colds right at the start. Here are details of how our (nearly) perfect plan unfolded.
 
-1. [Hotel Las Torres to Mirador base de Las Torres (twice)](https://meimeichan.com/2023/02/25/100-miles-in-10-days-the-nearly-perfect-patagonia-hiking-trip/#hotel-las-torres-to-mirador-base-de-las-torres-twice)
-2. [Chileno to Cuernos](https://meimeichan.com/2023/02/25/100-miles-in-10-days-the-nearly-perfect-patagonia-hiking-trip/#chileno-to-cuernos)
-3. [Cuernos to Frances Valley and Paine Grande](https://meimeichan.com/2023/02/25/100-miles-in-10-days-the-nearly-perfect-patagonia-hiking-trip/#cuernos-to-frances-valley-and-paine-grande)
-4. [Paine Grande to Grey](https://meimeichan.com/2023/02/25/100-miles-in-10-days-the-nearly-perfect-patagonia-hiking-trip/#paine-grande-to-grey)
-5. [Grey Glacier hike, wrapping up our W Trek](https://meimeichan.com/2023/02/25/100-miles-in-10-days-the-nearly-perfect-patagonia-hiking-trip/#grey-glacier-hike-wrapping-up-our-w-trek)
-6. [Christmas Day "rest" to Miradores Condor y Alguila and Salto Waterfall](https://meimeichan.com/2023/02/25/100-miles-in-10-days-the-nearly-perfect-patagonia-hiking-trip/#christmas-day-rest-to-miradores-condor-y-alguila-and-salto-waterfall)
-7. [Laguna de Los Tres aka Fitz Roy](https://meimeichan.com/2023/02/25/100-miles-in-10-days-the-nearly-perfect-patagonia-hiking-trip/#laguna-de-los-tres-aka-fitz-roy)
-8. [Laguna Torres: finishing 100 miles in 10 days!](https://meimeichan.com/2023/02/25/100-miles-in-10-days-the-nearly-perfect-patagonia-hiking-trip/#laguna-torres-finishing-100-miles-in-10-days)
-9. [Bonus: How did Fitz Roy compare with Torres Del Paine?](https://meimeichan.com/2023/02/25/100-miles-in-10-days-the-nearly-perfect-patagonia-hiking-trip/#bonus-how-did-fitz-roy-compare-with-torres-del-paine)
+
+### Table of Contents
+1. [Hotel Las Torres to Mirador base de Las Torres (twice)](#hotel-las-torres-to-mirador-base-de-las-torres-twice)
+2. [Chileno to Cuernos](#chileno-to-cuernos)
+3. [Cuernos to Frances Valley and Paine Grande](#cuernos-to-frances-valley-and-paine-grande)
+4. [Paine Grande to Grey](#paine-grande-to-grey)
+5. [Grey Glacier hike, wrapping up our W Trek](#grey-glacier-hike-wrapping-up-our-w-trek)
+6. [Christmas Day "rest" to Miradores Condor y Alguila and Salto Waterfall](#christmas-day-rest-to-miradores-condor-y-alguila-and-salto-waterfall)
+7. [Laguna de Los Tres aka Fitz Roy](#laguna-de-los-tres-aka-fitz-roy)
+8. [Laguna Torres: finishing 100 miles in 10 days!](#laguna-torres-finishing-100-miles-in-10-days)
+9. [Bonus: How did Fitz Roy compare with Torres Del Paine?](#bonus-how-did-fitz-roy-compare-with-torres-del-paine)
+
 
 Days 1-3: Travel to Santiago, Chile, hiking 11.8 miles around Cerro San Cristobal on our "rest" day (not included in the 100 miles! Nor are our five miles at Iguazu Falls at the end).
 
-**Days 4-10: Torres Del Paine (pronounced Piney), Chile: _59.5 miles and 16,435 feet elevation change_**
+Days 4-10: Torres Del Paine (pronounced Piney), Chile: _59.5 miles and 16,435 feet elevation change_**
 
-![#torresdelpaine #patagonia #TDP](images/2022-patagonia-tdp-mm-at-the-towers-img_0733.jpg)
-![#torresdelpaine #patagonia #TDP](images/2022-patagonia-tdp-towers-girls-img_0773.jpg)
+![Torres del Paine](./Images/Patagonia/Patagonia1.jpeg)
 
-![#torresdelpaine #patagonia #TDP #Francesvalley](images/2022-patagonia-tdp-italiano-to-french-valley-mirador-frances-img_0475.jpg)
+![Torres del Paine](./Images/Patagonia/Patagonia2.jpeg)
 
-![#torresdelpaine #patagonia #TDP #britanico #francesvalley](images/2022-patagonia-tdp-french-valley-mirador-britanico-regan-best-img_1324.jpg)
+![Frances Valley](./Images/Patagonia/Patagonia3.jpeg)
 
-![#torresdelpaine #patagonia #TDP #Greyglacier #bigfoot](images/2022-patagonia-tdp-grey-glacier-hike-best-girls-frgh0643.jpg)
+![Britanico](./Images/Patagonia/Patagonia4.jpeg)
 
-![#torresdelpaine #patagonia #TDP #Wtrek](images/img_6800.jpg)
+![Grey Glacier](./Images/Patagonia/Patagonia5.jpeg)
+
+![The W Trek](./Images/Patagonia/Patagonia6.jpeg)
 
 Filled with gorgeous peaks, glaciers and lakes, this national park is set up with refugios (aka dorms) for multi-day routes: the "O" trek circles the park in 7-10 days, while the "W" hits the southern highlights in 3-5 days. We did an expanded W trek, east to west, with 2 nights at the beginning and the end. The times noted are hiking only and do not include breaks.
 
-#### Hotel Las Torres to Mirador base de Las Torres (twice)
+## Hotel Las Torres to Mirador base de Las Torres (twice)
 
-**24.54 miles, 8,876 feet elevation change, 14 hours 30** (Regan's stats; I did half this)
+*24.54 miles, 8,876 feet elevation change, 14 hours 30* (Regan's stats; I did half this)
 
 - Arrived from Santiago via Puerto Natales. Hotel was OK, with tight motel-style rooms, good food and service. It commands a ridiculous price due to its location. We did a short hike to the lake.
     - The next day, I didn't feel well, so Regan headed up to the Mirador base de las Torres, one of the park's highlights with three granite towers soaring over a glacial lake. It took her 7 hours 15 minutes to go 11.81 miles with 4,537 feet elevation change. The hardest part was having to come all the way back down to the hotel, she said as she collapsed onto the floor.
@@ -76,9 +61,9 @@ Filled with gorgeous peaks, glaciers and lakes, this national park is set up wit
         
         - Dining tip: they'll ask for food preferences (and passports) when you check-in. If you say "no red meat," you'll hopefully get chicken, which was the best thing we ate. Or you may get vegetarian, which I found mostly inedible. Better still, treat yourself to pizzas frequently.
 
-#### Chileno to Cuernos
+## Chileno to Cuernos
 
-**8.5 miles, 1,732 feet elevation change, 6 hours 15**
+*8.5 miles, 1,732 feet elevation change, 6 hours 15*
 
 - Regan planned to return to the towers for sunrise, her third time in three days--but the muted alarm, set to vibrate to avoid waking others, wasn't enough to rouse her at 3 a.m.!
 
@@ -86,9 +71,9 @@ Filled with gorgeous peaks, glaciers and lakes, this national park is set up wit
 
 - At Cuernos, we stayed in one of the eight cosy perched cabins, with two beds, a stove, little porch, and a beautiful sunset view of the lake.
 
-#### Cuernos to Frances Valley and Paine Grande
+## Cuernos to Frances Valley and Paine Grande
 
-**16.73 miles, 3,762 feet elevation change, 11 hours** (Regan stats; I did four miles less)
+*16.73 miles, 3,762 feet elevation change, 11 hours* (Regan stats; I did four miles less)
 
 - Oof, this was a beautiful but very long day. About 2h30 (3.4 miles) down to Camp Italiano, a staging area for the trail up Frances Valley, with bathrooms, water, bag storage and picnic tables. Then an hour (1.25 miles) to Mirador Frances, where most people congregate to admire the glacier, waiting for calving avalanches while surrounded by gorgeous scenery all around.
 
@@ -104,9 +89,9 @@ Filled with gorgeous peaks, glaciers and lakes, this national park is set up wit
 
 - Paine Grande is the largest of the refugios (hosting many day hikers who come by ferry), with a large dining area, a bar above, and multiple dorms and bathrooms. We had a tiny two-bunk room near the back.
 
-#### Paine Grande to Grey
+## Paine Grande to Grey
 
-**7.05 miles, 1,581 feet elevation change, 5 hours**
+*7.05 miles, 1,581 feet elevation change, 5 hours*
 
 - Our easiest hike day, mostly flat and down. It rained on us for the first time, but only for less than an hour. I think this was highly unusual from what I had researched.
 
@@ -116,37 +101,37 @@ Filled with gorgeous peaks, glaciers and lakes, this national park is set up wit
 
 - We finally wised up and order a pizza. After five days of bland mystery meat and trail mix, it seemed the most delicious thing we've ever eaten. (We also bought wifi for the first time, and found we hadn't miss a thing.)
 
-#### Grey Glacier hike, wrapping up our W Trek
+##Grey Glacier hike, wrapping up our W Trek
 
-**2.63 miles (half on crampons), 483 feet elevation change, 3 hours**
+*2.63 miles (half on crampons), 483 feet elevation change, 3 hours*
 
 - This fun ice hike with Big Foot wrapped up our TDP adventures as our kayak was again canceled due to high winds (gusts up to 48 mph). We regretted not having time to hike up to the second bridge beyond the refuge as planned.
 
 Days 11-12: Instead of hiking back to Paine Grande to depart by ferry, we took the Grey Navigation boat for more great views of the glacier in ferocious winds. We had a private transfer to Calafate, Argentina, for one night at sweet Mirador Del Lago. We were giddy over having our own room and bathroom and real food at a real restaurant! After an OK kayak at Perito Moreno glacier, we bussed to El Chalten for three nights at comfortable El Chalten Suites.
 
-**Days 13-15: El Chalten, the heart of Glaciares National Park, Argentina. _39 miles, 8000 feet elevation change_**
+Days 13-15: El Chalten, the heart of Glaciares National Park, Argentina. _39 miles, 8000 feet elevation change_
 
-![#elchalten #glaciaresnationalpark #patagonia](images/2022-patagonia-chalten-fitz-roy-best-regan-img_0904.jpg)
-![#lagunatorres #elchalten #glaciaresnationalpark #patagonia](images/2022-patagonia-chalten-laguna-torre-hike-glacial-ice-img_2613.jpg)
+![Glaciares National Park](./Images/Patagonia/Patagonia7.jpeg)
 
-![#lagunadelostres #elchalten #glaciaresnationalpark #patagonia](images/2022-patagonia-chalten-los-tres-hike-back-down-to-the-valley-img_2396.jpg)
+![Laguna Torres](./Images/Patagonia/Patagonia8.jpeg)
 
-![#fitzroy #elchalten #glaciaresnationalpark #patagonia](images/2022-patagonia-chalten-los-tres-hike-2-lakes-fitz-roy-w-trek-team-best-img_2371.jpg)
+![Laguna De Los Tres](./Images/Patagonia/Patagonia9.jpeg)
 
-![#elchalten #glaciaresnationalpark #patagonia](images/2022-patagonia-chalten-laguna-torre-hike-best-girls-last-day-img_2665.jpg)
-![#fitzroy #lagunadelostres #elchalten #glaciaresnationalpark #patagonia](images/2022-patagonia-chalten-los-tres-hike-best-regan-and-lake-img_0985.jpg)
+![Mt. Fitzroy](./Images/Patagonia/Patagonia10.jpeg)
 
-#### Christmas Day "rest" to Miradores Condor y Alguila and Salto Waterfall
+![Glaciares National Park](./Images/Patagonia/Patagonia11.jpeg)
 
-**10.8 miles, 1,928 feet elevation change, 5 hours**
+## Christmas Day "rest" to Miradores Condor y Alguila and Salto Waterfall
+
+*10.8 miles, 1,928 feet elevation change, 5 hours*
 
 - It was a spectacular Christmas day and, if not for our health issues, we would have done the famed Fitz Roy hike. Instead, we did two short hikes: Miradores Cóndor y Alguila (condor and eagle), which offered sparkling mountain views with Fitz Roy standing tall at 11,171 feet, and Salto Waterfall, which was OK.
 
 - Note on Fitz Roy: Did you know it's named after the captain of Darwin's Beagle ship? He had charted much of the region and provided that info to explorer Francisco Moreno (yes, of the glacier). In exchange, Moreno was to find something cool to name (or, rename in this case) after Fitzroy.
 
-#### Laguna de Los Tres aka Fitz Roy
+## Laguna de Los Tres aka Fitz Roy
 
-15.03 miles, 3,535 feet elevation change, 9 hours 18
+*15.03 miles, 3,535 feet elevation change, 9 hours 18*
 
 - - This is arguably the best day hike in Patagonia, especially on a clear day (like yesterday!) It was cold, windy and grey when we set out with friends we made on the W Trek. It would rain and snow on us on and off with a hint of sun.
     
@@ -160,42 +145,20 @@ Days 11-12: Instead of hiking back to Paine Grande to depart by ferry, we took t
     
     - Note: today's elevation change was almost identical to going up to Mirador base de las Torres and Frances Valley!
 
-#### Laguna Torres: finishing 100 miles in 10 days!
+## Laguna Torres: finishing 100 miles in 10 days!
 
-**13.2 miles, 2,326 feet elevation change, 6 hours**
+*13.2 miles, 2,326 feet elevation change, 6 hours*
 
 - We were catching an afternoon ride back to Calafate, so we moved at a good clip on a beautiful day. After our previous hikes, this was a breeze. Lunching at the glacial lake was the perfect way to bid Patagonia farewell as we completed 100 miles in 10 days!
 
 **Hope you enjoyed hiking with us! [For our complete photo album, click here](https://photos.app.goo.gl/cwKraiey855GdaUa8).**
 
-#### Bonus: **How did Fitz Roy compare with Torres Del Paine**?
+## Bonus: **How did Fitz Roy compare with Torres Del Paine**?
 
 To me, the view at Laguna de Los Tres was more spectacular (even on a cloudy day) with many rugged, jagged peaks, powerful glaciers and two glistening lakes. What do you think?
 
-<figure>
+![Laguna de Los Tresy](./Images/Patagonia/Patagonia12.jpeg)
+*Laguna de Los Tres (and Laguna Sucia on left)*
 
-<figure>
-
-[![#patagona #elchalten #fitzroy #lagunadelostres](images/2022-patagonia-chalten-los-tres-hike-best-pano-of-two-lakes-img_7153-2404395567-e1677332090917.jpg)](https://meimeichan.com/wp-content/uploads/2023/02/2022-patagonia-chalten-los-tres-hike-best-pano-of-two-lakes-img_7153-2404395567-e1677332090917.jpg)
-
-<figcaption>
-
-Laguna de Los Tres (and Laguna Sucia on left)
-
-</figcaption>
-
-</figure>
-
-<figure>
-
-[![#torresdelpaine #patagonia #TDP](images/img_0267.jpg)](https://meimeichan.com/wp-content/uploads/2023/02/img_0267.jpg)
-
-<figcaption>
-
-Mirador base de las Torres
-
-</figcaption>
-
-</figure>
-
-</figure>
+![Torres Del Paine](./Images/Patagonia/Patagonia13.jpeg)
+*Mirador base de las Torres*
