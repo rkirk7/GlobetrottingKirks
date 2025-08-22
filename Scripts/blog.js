@@ -4,7 +4,13 @@ function initBlog() {
     "2015-08-29-hello-world-2.md",
     "2015-09-14-yes-the-world-needs-another-website-mine.md",
     "2015-09-16-retirement-milestone-3-months-and-counting.md",
-    "2015-09-28-reunion-magic-yes-you-can-go-home-again.md"
+    "2015-09-28-reunion-magic-yes-you-can-go-home-again.md",
+    "2015-10-03-reunion-magic-returning-to-goudy-and-lane.md",
+    "2015-10-13-reunion-magic-family-intersections-and-crossroads.md",
+    "2015-10-23-4-keys-to-leadership-success.md",
+    "2015-10-28-what-do-2015-graduates-want-to-hear.md",
+    "2015-11-30-mystical-angkor-temples.md",
+    "2015-12-14-exhilarating-graduates-anthem.md"
     // Add more markdown posts here
   ];
 
