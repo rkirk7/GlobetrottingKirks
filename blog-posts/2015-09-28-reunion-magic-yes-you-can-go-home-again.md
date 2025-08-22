@@ -29,10 +29,10 @@ Yes. And yes. Because our roots are indelibly intertwined. We nurtured each oth
 
 All these years later, Sue and Bill were still sweet and gentle; Bernice quiet with a bite; Linda, Eileen and Bill, all no-nonsense; Tak mature before his time; and David, always the questioner. Our dwarf nicknames turned out omniscient for some--Sleepy turned out to have sleep apnea; Sneezy had health issues; and Doc became a doctor--and ironic for others--Happy is grappling with tough issues. (If you must know, I was Dopey, because as the leader, I knew no one else would want to be.)
 
-![Wedding Picture](..Images/Blog/gang-at-sue-and-bill-wedding-2.jpg)
+![Wedding Picture](../Images/Blog/gang-at-sue-and-bill-wedding-2.jpg)
 *August 1981: U of I alum celebrate Sue and Bill's wedding.*
 
-![Wedding Picture](..Images/Blog/chicago-9-15-434-2.jpg)
+![Wedding Picture](../Images/Blog/chicago-9-15-434-2.jpg)
 *September 2015: Sue tries to recall who all her guests were and what they're doing now.*
 
 Because of those bonds, we noticeably granted each other more respect, more patience, more acceptance than we typically would with strangers (and sometimes loved ones). Even if we didn’t quite see eye to eye, we had no desire to go toe to toe.
@@ -43,7 +43,7 @@ But we shared painful moments, too, of feeling uncertain and alienated as youngs
 
 Today, as 60 looms, we’re all in transition: some are thinking of retirement, cutting back to enjoy life more—or are already doing so; others just became empty nesters and are pondering the next phase. What does the future hold? Stay tuned, we said to each other.
 
-![U of I Graduates and Spouses](..Images/Blog/img_3544.jpg) 
+![U of I Graduates and Spouses](../Images/Blog/img_3544.jpg) 
 *U of I graduates and spouses reunite in September for the first time since 1981 (not all are pictured).*
 
 We talked about the next reunion, without resolution. (Burning Man! Champaign! San Francisco! A cruise!) We left each other joyfully, knowing that part of us lives on, in other hearts.
