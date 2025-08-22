@@ -280,3 +280,19 @@ footer {
 .card-header[aria-expanded="true"] span {
   transform: rotate(90deg);
 }
+
+
+/* Rotate caret when open */
+.card-header[aria-expanded="true"] span {
+  transform: rotate(90deg);
+  transition: transform 0.3s;
+}
+
+/* TOC scrolling for desktop */
+#toc {
+  font-size: 0.95rem;
+}
+
+#toc .nav-link, #toc-list-mobile .nav-link {
+  padding-left: 0.5rem;
+}

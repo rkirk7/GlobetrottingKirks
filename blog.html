@@ -1,10 +1,28 @@
 <div class="container-fluid my-5">
   <div class="row">
-    <!-- Sidebar TOC -->
+    <!-- Sidebar TOC (desktop) -->
     <nav id="toc" class="col-md-3 d-none d-md-block bg-light position-sticky" style="top: 80px; max-height: 90vh; overflow-y:auto;">
       <h5 class="p-3">Table of Contents</h5>
       <ul class="nav flex-column" id="toc-list"></ul>
     </nav>
+
+    <!-- Mobile TOC button -->
+    <div class="d-md-none mb-3">
+      <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasToc" aria-controls="offcanvasToc">
+        Table of Contents
+      </button>
+    </div>
+
+    <!-- Offcanvas TOC (mobile) -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasToc" aria-labelledby="offcanvasTocLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasTocLabel">Table of Contents</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="nav flex-column" id="toc-list-mobile"></ul>
+      </div>
+    </div>
 
     <!-- Blog posts -->
     <div id="blog-container" class="col-md-9"></div>
