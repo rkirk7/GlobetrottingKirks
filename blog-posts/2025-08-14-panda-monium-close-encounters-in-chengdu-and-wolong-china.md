@@ -23,21 +23,21 @@ The Wolong Shenshuping Panda Base is about 2 hours from Chengdu, located in the 
   
 We were giddy with delight watching some 15 adorable fuzzy panda cubs trotting, climbing, falling, somersaulting, wrestling, perched in trees, hanging with mom, learning to eat bamboo, interacting with panda keepers, and loafing. Pandas have poor vision, so their sense of perspective, along with their growing bodies, result in entertaining antics.
 
-![](./Images/Blog/2025-chengdu-panda-cub-snuggle-img_2769.jpg)
+![Panda Cubs Snuggling](./Images/Pandas/Pandas1.jpeg)
 
-![](./Images/Blog/2025-chengdu-panda-cub-best-img_2998.jpg)
+![Panda Cub](./Images/Pandas/Pandas2.jpeg)
 
-![](./Images/Blog/2025-chengdu-panda-tree-climber-img_2598.jpg)
+![Tree Climbing Cub](./Images/Pandas/Pandas3.jpeg)
 
-![](./Images/Blog/2025-chengdu-panda-mom-dining-img_2407.jpg)
+![Panda Mom Dining](./Images/Pandas/Pandas4.jpeg)
 
-![](./Images/Blog/2025-chengdu-panda-best-mom-grabs-cub-frame-mvi_2727-frame-at-0m36s.jpg)
+![Mom and Cub](./Images/Pandas/Pandas5.jpeg)
 
-![](./Images/Blog/2025-chengdu-panda-cub-being-handled-img_2786.jpg)
+![Mom and Cub](./Images/Pandas/Pandas6.jpeg)
 
-![](./Images/Blog/2025-chengdu-panda-testing-feet-and-hands-img_2853.jpg)
+[!Cute Panda](./Images/Pandas/Pandas7.jpeg)
 
-The star in Chengdu is Hua Hua, an unusual midget panda; the star at Wolong is Fu Bao, the first giant panda born in South Korea. "Princess Fu," a beloved media sensation, was transferred to Wolong in 2024, when she was 4. 
+The star in Chengdu is Hua Hua, an unusual dwarf panda; the star at Wolong is Fu Bao, the first giant panda born in South Korea. "Princess Fu," a beloved media sensation, was transferred to Wolong in 2024, when she was 4. 
   
 That was per China's panda arrangements: bears are loaned out for about $1 million a year for 10 years. Any babies born overseas are to be brought to China by the age of 4. 
   
@@ -52,6 +52,5 @@ Key tips:
 -Chengdu park is humongous and best with a guide. To catch the young pandas, take the shuttle to the far end where the sub-adult enclosures feature youngsters 1 to 5 years old. (Opens at 7:30; 8 from November-February.)  
 -Wolong is at 5,600 feet so prepare for a cold morning. It's compact enough to do by yourself. (Opens at 9.)
 
-[![](./Images/Blog/pandas-best-with-wu-wen-2016-07-02-058.jpg)]
-
+![Mei-Mei and Regan Panda Keepers](./Images/Pandas/Pandas8.jpeg)
 *2016 panda keepers with Wu Wen at the Dujiangyan Panda Base*

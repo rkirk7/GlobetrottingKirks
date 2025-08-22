@@ -2,6 +2,7 @@
 function initAlbums() {
   const albums = [
     { name: "Churchill 2025", folder: "Churchill", param: "churchill-2025", total: 6 },
+    { name: "Pandas 2025", folder: "Pandas", param: "pandas-2025", total: 8 },
     { name: "Svalbard 2024", folder: "Svalbard", param: "svalbard-2024", total: 6 }
   ];
 
