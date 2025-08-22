@@ -13,7 +13,7 @@ After a two-year delay, my husband and I enjoyed 11 days in paradise August, 202
 2. [French Polynesia is very French!](#french-polynesia-is-very-french)
 3. [Living overwater](#living-overwater)
 4. [Dining](#dining)
-5. [Paradise found (and how to swim with whales)]#paradise-found-and-how-to-swim-with-whales)
+5. [Paradise found (and how to swim with whales)](#paradise-found-and-how-to-swim-with-whales)
 
 ## Travel
 
