@@ -10,10 +10,10 @@ async function initBlog() {
     "2022-06-13-enchanting-galapagos-a-wildlife-wonderland.md",
     "2021-08-26-my-heritage-journey-to-hong-kong-and-china.md",
     "2021-08-22-western-parks-adventure-top-highlights.md",
-"2015-10-03-reunion-magic-returning-to-goudy-and-lane.md",
+    "2015-10-03-reunion-magic-returning-to-goudy-and-lane.md",
     "2015-09-28-reunion-part-one.md",
-"2015-09-16-retirement-milestone-3-months-and-counting.md",
-"2015-09-14-yes-the-world-needs-another-website-mine.md",
+    "2015-09-16-retirement-milestone-3-months-and-counting.md",
+    "2015-09-14-yes-the-world-needs-another-website-mine.md",
     "2015-08-29-hello-world-2.md"
   ];
 
@@ -40,6 +40,7 @@ async function initBlog() {
     })
   );
 
+  // Sort newest first
   postsData.sort((a, b) => new Date(b.filename.slice(0, 10)) - new Date(a.filename.slice(0, 10)));
 
   postsData.forEach((postData, index) => {
@@ -57,13 +58,14 @@ async function initBlog() {
 
       li.querySelector("a").addEventListener("click", e => {
         e.preventDefault();
-        const collapseEl = document.getElementById(collapseId);
-        bootstrap.Collapse.getOrCreateInstance(collapseEl, { toggle: true }).show();
-        document.getElementById(postId).scrollIntoView({ behavior: "smooth" });
 
+        // Close mobile TOC if open
         const offcanvasEl = document.getElementById("offcanvasToc");
         if (offcanvasEl.classList.contains("show")) {
           bootstrap.Offcanvas.getInstance(offcanvasEl).hide();
+          setTimeout(() => document.getElementById(postId).scrollIntoView({ behavior: "smooth", block: "start" }), 300);
+        } else {
+          document.getElementById(postId).scrollIntoView({ behavior: "smooth", block: "start" });
         }
       });
     };
