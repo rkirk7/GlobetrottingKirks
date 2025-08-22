@@ -14,21 +14,30 @@ function initBlog() {
 
   posts.forEach(post => {
     fetch(`blog-posts/${post}`)
-      .then(res => res.text())
+      .then(res => {
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        return res.text();
+      })
       .then(text => {
+        // Convert Markdown to HTML
         const html = marked.parse(text);
 
+        // Wrap content in a scoped container
         const postDiv = document.createElement("div");
         postDiv.classList.add("card", "shadow-lg", "mb-5");
 
-        // Optional: style images consistently
+        // Add Bootstrap styling for images inside the blog post
         const htmlWithStyledImages = html.replace(/<img /g, '<img class="img-fluid mb-3" ');
 
-        postDiv.innerHTML = `<div class="card-body">${htmlWithStyledImages}</div>`;
+        postDiv.innerHTML = `<div class="card-body blog-post-content">${htmlWithStyledImages}</div>`;
         container.appendChild(postDiv);
       })
       .catch(err => {
         console.error(`Failed to load ${post}:`, err);
+        const errorDiv = document.createElement("div");
+        errorDiv.classList.add("alert", "alert-danger");
+        errorDiv.textContent = `Failed to load ${post}: ${err.message}`;
+        container.appendChild(errorDiv);
       });
   });
 }
