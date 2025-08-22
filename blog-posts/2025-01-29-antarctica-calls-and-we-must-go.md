@@ -55,32 +55,38 @@ In all, we went ashore once in the Falklands, once in South Georgia, and four ti
 
 We got to admire the world’s largest iceberg, A23A, for hours, on Christmas; rammed the ship into sea/fast ice twice; were the first to kayak in a glacial lake that had been frozen until now; threaded icebergs in kayaks to get closer to whales; learned about Viking’s commitment to research and conservation; and, of course, WALKED ON THE CONTINENT at Recess Cove.
 
-Is Antarctica calling to you? [As a Fora travel advisor, I would love to help you make it happen. Click here to connect!](https://www.foratravel.com/advisor/mei-mei-kirk)
+# Is Antarctica calling you? Here’s everything you need to know.
+[As a Fora travel advisor, I would love to help you make it happen. Click here to connect!](https://www.foratravel.com/advisor/mei-mei-kirk)
 
 Here are answers to your most pressing questions:
 
-1. [What was the weather like?](https://meimeichan.com/2025/01/29/antarctica-calls-and-we-must-go/#what-was-the-weather-like)
-2. [How bad was the Drake passage?](https://meimeichan.com/2025/01/29/antarctica-calls-and-we-must-go/#how-bad-was-the-drake-passage)
-3. [Where exactly is Antarctica?](https://meimeichan.com/2025/01/29/antarctica-calls-and-we-must-go/#where-exactly-is-antarctica)
-4. [What's the difference between Antarctica and the Arctic?](https://meimeichan.com/2025/01/29/antarctica-calls-and-we-must-go/#what-s-the-difference-between-antarctica-and-the-arctic)
-5. [What about South Georgia, the Falklands and the Shetlands?](https://meimeichan.com/2025/01/29/antarctica-calls-and-we-must-go/#what-s-the-difference-between-antarctica-and-the-arctic)
-6. [Where can I see Emperor penguins?](https://meimeichan.com/2025/01/29/antarctica-calls-and-we-must-go/#so-which-itinerary-should-i-pick)
-7. [When should I go?](https://meimeichan.com/2025/01/29/antarctica-calls-and-we-must-go/#so-which-itinerary-should-i-pick)
-8. [Which itinerary and ship should I pick?](https://meimeichan.com/2025/01/29/antarctica-calls-and-we-must-go/#which-itinerary-and-ship-should-i-pick)
-9. [Should I be concerned about bird flu?](https://meimeichan.com/2025/01/29/antarctica-calls-and-we-must-go/#when-should-i-go)
-10. [How fit do I need to be?](https://meimeichan.com/2025/01/29/antarctica-calls-and-we-must-go/#when-should-i-go)
-11. [What should I expect?](https://meimeichan.com/2025/01/29/antarctica-calls-and-we-must-go/#when-should-i-go)
-12. [Where do I sign up?](https://meimeichan.com/2025/01/29/antarctica-calls-and-we-must-go/#how-fit-do-i-need-to-be)
+1. [What was the weather like?](#what-was-the-weather-like)
+2. [How bad was the Drake passage?](#how-bad-was-the-drake-passage)
+3. [Where exactly is Antarctica?](#where-exactly-is-antarctica)
+4. [What's the difference between Antarctica and the Arctic?](#whats-the-difference-between-antarctica-and-the-arctic)
+5. [What about South Georgia, the Falklands and the Shetlands?](#what-about-south-georgia-the-falklands-and-the-shetlands)
+6. [Where can I see Emperor penguins?](#where-can-i-see-emperor-penguins)
+7. [When should I go?](#when-should-i-go)
+8. [Which itinerary and ship should I pick?](#which-itinerary-and-ship-should-i-pick)
+9. [Should I be concerned about bird flu?](#should-i-be-concerned-about-bird-flu)
+10. [How fit do I need to be?](#how-fit-do-i-need-to-be)
+11. [What should I expect?](#what-should-i-expect)
+12. [Where do I sign up?](#where-do-i-sign-up)
 
-#### What was the weather like?
+
+## What was the weather like?
 
 The temperature was mostly around 33 degrees, with frequent ferocious, frigid winds. We had a variety of conditions, often on the same day, ranging from deep fog to gray overcast to crystal clear skies and sea. Most polar expedition cruises will include complimentary jackets that you get to keep.
 
-#### How bad was the Drake passage?
+[Back to top](#is-antarctica-calling-you-heres-everything-you-need-to-know)
+
+## How bad was the Drake passage?
 
 This 600-mile swath between Argentina and Antarctica is where the Atlantic, Pacific and Southern seas collide. It can be a violent two days for ships, with waves up to 40 feet. But that only happens about 20-30% of the time; average waves are about 15 feet. We got lucky with the Drake Lake vs. the Drake Shake.
 
-#### Where exactly is Antarctica?
+[Back to top](#is-antarctica-calling-you-heres-everything-you-need-to-know)
+
+## Where exactly is Antarctica?
 
 The continent lies below South America, Africa and New Zealand. Antarctica generally refers to everything south of the line of latitude at 60° south. That's the area covered by the 1959 Antarctic treaty in which 12 countries pledged to make "a natural reserve, devoted to peace and science." Today, more than 20 countries operate research stations there; the U.S. has three, including the Amundsen-Scott station at the South Pole.
 
@@ -88,11 +94,15 @@ Antarctica is massive, about the size of the U.S. and Mexico combined. It's actu
 
 Most tourists will go to the more accessible, less exposed western side of the Antarctic peninsula, which juts up about 800 miles from Ushuaia, Argentina.
 
-#### What's the difference between Antarctica and the Arctic?
+[Back to top](#is-antarctica-calling-you-heres-everything-you-need-to-know)
+
+## What's the difference between Antarctica and the Arctic?
 
 Simplistically, the Arctic is by the north pole and has polar bears. The Antarctic ("opposite" Arctic) is by the south pole and has penguins. The Arctic is an ocean surrounded by continents while Antarctica is an ice-covered continent.
 
-#### What about South Georgia, the Falklands and the Shetlands?
+[Back to top](#is-antarctica-calling-you-heres-everything-you-need-to-know)
+
+## What about South Georgia, the Falklands and the Shetlands?
 
 These are less frequented British Overseas Territories somewhat near the Antarctic peninsula that boast incredible densities of wildlife: millions of penguins, seals and birds. The Falklands and South Shetlands are archipelagos while South Georgia is a narrow island. During the height of the breeding season in November/December, South Georgia is said to have more wildlife per square foot than any other place on the planet. Nearly 5 million seals and 1 million King penguins, half of the world's population, are in South Georgia--not in Antarctica. The small king penguin colony at Port Stanley in the Falklands and the enormous one in South Georgia were two of the most remarkable experiences we've ever had.
 
@@ -102,17 +112,23 @@ These are less frequented British Overseas Territories somewhat near the Antarct
 ![Astonishing Salisbury Plain in South Georgia, with 100,000 king penguins](./Images/Antarctica/Antarctica4.jpeg)
 *Astonishing Salisbury Plain in South Georgia, with 100,000 king penguins*
 
-#### Where can I see Emperor penguins?
+[Back to top](#is-antarctica-calling-you-heres-everything-you-need-to-know)
+
+## Where can I see Emperor penguins?
 
 That's the holy grail for Antarctic wildlife fans. Emperors are the largest penguins, nearly four feet tall, with the cutest fluffy chicks. They flourish on sea-ice in the south, breeding in the frigid winter so their chicks can fledge in summer.
 
 Snow Hill island is the northernmost and most accessible of the emperor colonies in Antarctica, hosting about 10,000 of the continent's 400,000 penguins. But it's on the east side of the peninsula, in the treacherous Weddell sea (where Ernest Shackleton's _Endurance_ was ice-bound and lost). Only a few companies offer trips there, usually once in October or November. And there's no guarantee you will actually land via helicopter or ship and hike successfully to the colony. Only eight landings were made in the 2023-24 season. Yes, of course that's where I want to go next.
 
-#### When should I go?
+[Back to top](#is-antarctica-calling-you-heres-everything-you-need-to-know)
+
+## When should I go?
 
 The season runs October-March, during the "temperate" summer when the sun is out nearly 20 hours and the ice has begun melting. Usually, earlier is more ice, nesting penguins and seal pups; later is more chicks and whales. (But we had amazing humpback whale encounters in December!)
 
-#### Which itinerary and ship should I pick?
+[Back to top](#is-antarctica-calling-you-heres-everything-you-need-to-know)
+
+## Which itinerary and ship should I pick?
 
 The most common journeys are 9-12 day cruises from Argentina or Chile to the Antarctic peninsula, going through the Gerlache strait and its icebergs and whales. These include two days in the Drake going and two days coming back with prices start at about $1000 per person per night. (There are fly-the-Drake options!) Pay attention to the ratio of sea days vs. Antarctica days and consider what might happen if weather severely hampers one or two days.
 
@@ -127,7 +143,9 @@ Larger cruise ships also go to Antarctica but are not allowed to do any landings
 
 After our research, we did not feel it was worth the trip without including the Falklands and South Georgia and their vast numbers of wildlife, including king and macaroni penguins and seals. This itinerary is offered less frequently, takes longer and costs more--but it also goes through the Drake just once. If you choose this option, it will greatly narrow down your choices. We highly recommend it!
 
-#### Should I be concerned about bird flu?
+[Back to top](#is-antarctica-calling-you-heres-everything-you-need-to-know)
+
+## Should I be concerned about bird flu?
 
 You may be aware there is a strain of Avian Influenza or bird flu dubbed H5N1 that has killed not only birds but also mammals in 84 countries and territories since 2021. The U.S. has lost millions of poultry (thus impacting the price of eggs), and thousands of cattle. While the risk to humans is low, one death was reported in Jan. 6, 2025, in Louisiana.
 
@@ -141,7 +159,9 @@ Tourists cannot take anything from Antarctica or bring anything in. Expect strin
 
 During our December trip, a gentoo colony was roped off at Volunteer Point in Port Stanley in the Falklands; and we were told that planned stops at South Georgia's Stromness and Fortuna Bay were scrubbed when other ships reported potential bird flu deaths ashore.
 
-#### How fit do I need to be?
+[Back to top](#is-antarctica-calling-you-heres-everything-you-need-to-know)
+
+## How fit do I need to be?
 
 You are going to one of the most remote places on Earth. So you need to be healthy enough not to worry about access to a hospital or sophisticated emergency care. Before embarking, you will have to fill out a medical screening questionnaire and get a doctor's sign-off.
 
@@ -149,7 +169,9 @@ To go cruising or ashore, you'll need to get in and out of rubbery rafts floatin
 
 Like any cruise, you can enjoy yourself just staying aboard. But better to enhance your fitness enough to fully experience this unique adventure.
 
-#### What should I expect?
+[Back to top](#is-antarctica-calling-you-heres-everything-you-need-to-know)
+
+## What should I expect?
 
 Your journey will include sea days to travel the hundreds of miles to Antarctica, Zodiac cruising, Zodiac landings, some walks or hikes, and perhaps kayaking or submarine diving or even camping and snorkeling! Your expedition team will include experts in mammals, birds, geology, history and more, providing daily lectures and insights.
 
@@ -157,7 +179,9 @@ It's an expedition cruise so expect the unexpected. Weather will trump all else.
 
 Our second expedition day, in Grytviken, South Georgia, was a great example of going with the flow. We awoke to see that the first kayak of the day (ours!) was canceled due to weather, and that ice blocked entry into the small town. Saddened, we were just about to board a 2 p.m. cruise when that was canceled. The reason: conditions had improved enough that everyone could go ashore instead. As we headed out to stroll Grytviken, we were thrilled to learn we were rebooked for a 4 p.m. kayak!
 
-#### Where do I sign up?
+[Back to top](#is-antarctica-calling-you-heres-everything-you-need-to-know)
+
+## Where do I sign up?
 
 Ready to go?! Once you've decided on your preferred itinerary, dates and ships, sign up for those companies' email alerts. They often offer discounts closer to sailing or for early-bird bookings. Other resources include leveraging a travel advisor, Facebook groups devoted to Antarctica, Cruisecritic or travel companies specializing in the polar region. Then start counting down to your adventure!
 
