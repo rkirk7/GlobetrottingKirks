@@ -17,14 +17,14 @@ In other news, I was 13, graduated from Goudy Grammar School and entered Lane Te
 
 My parents and I had emigrated from Hong Kong’s New Territories to Chicago’s Uptown six years previous, in 1967.
 
-![Chicago Uptown ](./Images/Blog/chicago-9-15-137.jpg "Chicago Uptown") 
+![Chicago Uptown ](./Images/Blog/chicago-9-15-137.jpg) 
 *Childhood pals David and Bill Lai and I used to play in this alley between the "El" tracks and our apartments in Chicago's Uptown.*
 
 Like goldfish plucked from a tiny bowl and tossed into the ocean, we moved into 5030 Winthrop, an apartment complex that housed a hodgepodge of immigrants and ethnic minorities. It was next to the “El” tracks and the rumble of trains became our lullaby, the alley our playground, the fire escape our porch.<!--more-->
 
 I entered second grade at Goudy Grammar School, two blocks down the street. (See my column on "[Coming to the Golden Mountain](http://www.meimeikirk.com/#!personal-tales/bkr35)".) When I was a sophomore at Lane, we moved into our own two-flat near Devon and Western—it took me two buses and nearly an hour to get to school.
 
-![Chicago Goudy graduation 1973](./Images/Blog/mm-fam-grammar-school-graduate1.jpg "Graduation") 
+![Chicago Goudy graduation 1973](./Images/Blog/mm-fam-grammar-school-graduate1.jpg) 
 *Mei-Mei and parents at Goudy graduation in 1973.*
 
 I returned to Goudy and Lane with friends for the first time since graduation earlier this month, during our magnificent reunion weekend Sept. 18. Like a goldfish, yet again.
@@ -41,9 +41,9 @@ Three of us got an inspiring tour of Goudy with assistant principal Bill Yeh sho
 
 We saw bright hallways decorated by artwork (including students’ tweets about their hopes and dreams), munchkins in computer class (fifth to eighth graders get iPads), a marshmallow building contest in the vibrant library, and happy crowds running amok in the play area out front, which was a through street in our day.
 
-![IMG_7729](./Images/Blog/img_77291.jpg "Image")
+![IMG_7729](./Images/Blog/img_77291.jpg)
 
-![Chicago 9.15 132](./Images/Blog/chicago-9-15-132.jpg "Image")
+![Chicago 9.15 132](./Images/Blog/chicago-9-15-132.jpg)
 
 Goudy still draws a significant minority population with some 30 languages spoken among its 800 students. Bill Yeh’s biggest challenge? Losing students to magnet schools, which means losing per-pupil funding. Goudy got $400,000 less than last year, which means one less kindergarten class. Another familiar dilemma in education.
 
@@ -51,7 +51,7 @@ Bill had embraced my offer to speak and arranged for us to meet with the 8th gra
 
 I gave my usual key points to youngsters: in America, all things are possible; each of us is unique in the universe; and each should seek and give positive energy.
 
-![goudy class 2015](./Images/Blog/goudy-class-2015.jpg "Goudy Class 2015")
+![goudy class 2015](./Images/Blog/goudy-class-2015.jpg)
 
 We invited questions, which came tentatively than enthusiastically. Finally, one student asked, “What if the American dream doesn’t come true for you?”
 
@@ -63,18 +63,18 @@ The American dream is different for everyone, I responded. For example, college 
 
 Lane was large and intimidating then, and still is today. It was among the premiere high schools in our day, and this year was ranked 6th best in the state by U.S. News and World Report. But to us, it seemed to have faded both physically and in stature.
 
-![Chicago 9.15 160](./Images/Blog/chicago-9-15-160.jpg "Chicago")
+![Chicago 9.15 160](./Images/Blog/chicago-9-15-160.jpg)
 
-![Chicago 9.15 174](./Images/Blog/chicago-9-15-174.jpg "Chicago")
+![Chicago 9.15 174](./Images/Blog/chicago-9-15-174.jpg)
 
 The largest high school in the city with 4,200 students, it now includes 7th and 8th graders. It’s officially called Lane Tech College Prep, which of course makes you wonder what the other high schools do.
 
-![Chicago Lane library](./Images/Blog/chicago-9-15-195.jpg "Lane Library") 
+![Chicago Lane library](./Images/Blog/chicago-9-15-195.jpg) 
 *Lane's impressive library*
 
 While I finished my childhood circuit of Foster Beach and Margate Park, nine of my classmates started their Lane tour with lunch in the cafeteria. We then wandered the halls, peeking into music class, graphic design class, the innovation lab and its numerous 3-D printers, the beautiful library with oodles of Macs. We were disappointed to learn there were no longer shop classes like drafting, welding, woodwork or auto as we felt we had learned something useful. It wasn’t how to weld (or catch fire, as I did, before being quickly saved by classmate Fred Rhine) but how to coordinate mind, eyes and hands, to be precise, to create. STEM (or STEAM) is great, but for many, manufacturing skills are even better.
 
-![Chicago Lane alum](./Images/Blog/chicago-9-15-186.jpg "Lane Alum") 
+![Chicago Lane alum](./Images/Blog/chicago-9-15-186.jpg) 
 *Lane alum show off our moves in the dance studio.*
 
 We admired the famed refurbished murals (much of the school is under renovation), brazenly went into the off-limits memorial garden with its quiet statues and plants, shivered in the gyms as we recalled the hideous uniforms we girls had to wear, and got a glimpse of the infamous swimming pool.
@@ -85,7 +85,7 @@ As ever, no one is immune from youthful angst.
 
 For three of us, the best part of high school was Mrs. Jean Biddulph’s pre-calculus class. She was and still is the best teacher we ever had. She created a double period to fast track juniors into calculus, which had never been offered before. But more important than the classroom knowledge imparted was the respectful, loving manner that helped instill self-esteem, confidence and hope. (See my "Ode to Special Teachers" column.)
 
-![Chicago Lane Biddulph](.Images/Blog/fullsizerender-1.jpg "Mrs. Biddulph") 
+![Mrs. Biddulph](./Images/Blog/fullsizerender-1.jpg) 
 *Awesome teacher Mrs. Biddulph with three of her first Lane pre-calculus "Biddulphites."*
 
 We were the first Biddulphites and of course the best. Eighteen more classes followed, and Mrs. Biddulph remained connected with many, including myself, who courageously started calling her Jean about 20 years ago.
