@@ -12,14 +12,11 @@ async function initBlog() {
   const tocListMobile = document.getElementById("toc-list-mobile");
   if (!container || !tocList || !tocListMobile) return;
 
-  // Helper to extract first H1 as title
   function extractTitle(mdContent) {
     const lines = mdContent.split("\n");
     for (let line of lines) {
       line = line.trim();
-      if (line.startsWith("# ")) {
-        return line.replace(/^# /, "").trim();
-      }
+      if (line.startsWith("# ")) return line.replace(/^# /, "").trim();
     }
     return null;
   }
@@ -39,7 +36,7 @@ async function initBlog() {
     const postId = `post${index}`;
     const postTitle = extractTitle(postData.content) || postData.filename;
 
-    // Populate TOC
+    // Add TOC links
     const addTocLink = (ul) => {
       const li = document.createElement("li");
       li.classList.add("nav-item");
@@ -53,7 +50,6 @@ async function initBlog() {
         bsCollapse.show();
         document.getElementById(postId).scrollIntoView({ behavior: "smooth" });
 
-        // Close mobile TOC if open
         const offcanvasEl = document.getElementById("offcanvasToc");
         if (offcanvasEl.classList.contains("show")) {
           bootstrap.Offcanvas.getInstance(offcanvasEl).hide();
@@ -70,38 +66,36 @@ async function initBlog() {
       '<img class="img-fluid mb-3" style="max-width:50%;display:block;margin:0.5rem auto;" '
     );
 
-    // Create post card
     const postDiv = document.createElement("div");
     postDiv.classList.add("card", "shadow-lg", "mb-3");
     postDiv.id = postId;
 
+    // Start with collapse shown
     postDiv.innerHTML = `
       <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center" 
            style="cursor:pointer;" 
            data-bs-toggle="collapse" 
            data-bs-target="#${collapseId}" 
-           aria-expanded="false">
-        <span class="caret">&#9654;</span>
+           aria-expanded="true">
+        <span class="caret" style="display:inline-block; transform: rotate(90deg); transition: transform 0.2s;">&#9654;</span>
         <span class="ms-2">${postTitle}</span>
       </div>
-      <div id="${collapseId}" class="collapse">
+      <div id="${collapseId}" class="collapse show">
         <div class="card-body">${htmlWithStyledImages}</div>
       </div>
     `;
 
     container.appendChild(postDiv);
 
-    // Rotate caret on collapse show/hide
     const collapseEl = postDiv.querySelector(`#${collapseId}`);
     const caretEl = postDiv.querySelector(".caret");
 
+    // Rotate caret only
     collapseEl.addEventListener("show.bs.collapse", () => {
       caretEl.style.transform = "rotate(90deg)";
-      caretEl.style.transition = "transform 0.2s";
     });
     collapseEl.addEventListener("hide.bs.collapse", () => {
       caretEl.style.transform = "rotate(0deg)";
-      caretEl.style.transition = "transform 0.2s";
     });
   });
 }
