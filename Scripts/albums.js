@@ -1,23 +1,44 @@
-// Centralized album data
-const albums = {
+// ---------- albums.js ----------
+
+// Centralized album data (single source of truth)
+const ALBUMS = {
   "churchill-2025": { name: "Churchill 2025", folder: "Churchill", total: 6 },
-  "pandas-2025": { name: "Pandas 2025", folder: "Pandas", total: 8 },
-  "antarctica-2024": { name: "Antarctica 2024", folder: "Antarctica", total: 14 },
-  "svalbard-2024": { name: "Svalbard 2024", folder: "Svalbard", total: 16 }
+  "pandas-2025":    { name: "Pandas 2025",    folder: "Pandas",     total: 8 },
+  "antarctica-2024":{ name: "Antarctica 2024", folder: "Antarctica", total: 14 },
+  "svalbard-2024":  { name: "Svalbard 2024",  folder: "Svalbard",   total: 16 }
 };
 
-// Initialize album cards on albums.html
+// Keep a single GLightbox instance around
+window.albumLightbox = null;
+
+function ensureLightbox(selector) {
+  if (typeof GLightbox !== "function") return;
+
+  // Destroy the previous instance and any stray markup
+  if (window.albumLightbox && typeof window.albumLightbox.destroy === "function") {
+    window.albumLightbox.destroy();
+  }
+  document.querySelectorAll(".glightbox-container, .glightbox-overlay").forEach(el => el.remove());
+
+  window.albumLightbox = GLightbox({
+    selector,
+    touchNavigation: true,
+    closeButton: true,
+    loop: false
+  });
+}
+
+// Build the album cards on albums.html (list page)
 function initAlbums() {
   const container = document.getElementById("albums-container");
   if (!container) return;
 
-  Object.keys(albums).forEach(key => {
-    const album = albums[key];
+  container.innerHTML = ""; // avoid duplicating cards if user revisits
 
-    // First image as album cover
+  Object.entries(ALBUMS).forEach(([key, album]) => {
     const cover = `Images/${album.folder}/${album.folder}1.jpeg`;
 
-    // Generate previews (up to 4 images)
+    // small previews below card title
     let previewsHTML = '<div class="d-flex justify-content-center flex-wrap mt-2">';
     for (let i = 1; i <= Math.min(album.total, 4); i++) {
       const src = `Images/${album.folder}/${album.folder}${i}.jpeg`;
@@ -25,49 +46,80 @@ function initAlbums() {
     }
     previewsHTML += "</div>";
 
-    // Build the card
-    const card = document.createElement("div");
-    card.classList.add("col-md-4", "mb-4");
-    card.innerHTML = `
+    const col = document.createElement("div");
+    col.className = "col-md-4 mb-4";
+    col.innerHTML = `
       <div class="card shadow-lg h-100">
         <img src="${cover}" class="card-img-top" alt="${album.name}" style="object-fit:cover;height:180px;">
         <div class="card-body text-center d-flex flex-column">
-          <h5 class="card-title">${album.name}</h5>
+          <h5 class="card-title mb-2">${album.name}</h5>
           ${previewsHTML}
-          <a href="#" class="btn btn-primary" onclick="loadAlbum('${key}')">View Album</a>
+          <button class="btn btn-primary mt-auto" data-album="${key}">View Album</button>
         </div>
       </div>
     `;
-    container.appendChild(card);
+    container.appendChild(col);
   });
+
+  // Delegate click for all "View Album" buttons
+  container.addEventListener("click", (e) => {
+    const btn = e.target.closest("button[data-album]");
+    if (!btn) return;
+    const albumKey = btn.getAttribute("data-album");
+    loadAlbum(albumKey);
+  }, { once: true }); // attach once; cards are rebuilt when page reloads
 }
 
-// Load images for a specific album into #content
+// Render a single album grid into #content
 function loadAlbum(albumKey) {
-  const album = albums[albumKey];
+  const album = ALBUMS[albumKey];
   if (!album) return;
 
-  const container = document.getElementById("content");
-  container.innerHTML = ""; // clear old content
+  const content = document.getElementById("content");
+  if (!content) return;
 
-  // Build album title and images
-  let html = `<h2 class="text-center mb-4">${album.name}</h2><div class="d-flex flex-wrap justify-content-center">`;
+  // Clear previous content
+  content.innerHTML = "";
+
+  // Title + grid
+  const title = document.createElement("h2");
+  title.className = "text-center mb-4";
+  title.textContent = album.name;
+
+  const grid = document.createElement("div");
+  grid.className = "d-flex flex-wrap justify-content-center";
 
   for (let i = 1; i <= album.total; i++) {
     const src = `Images/${album.folder}/${album.folder}${i}.jpeg`;
-    html += `<a href="${src}" class="m-1 glightbox" data-gallery="${albumKey}">
-               <img src="${src}" class="img-thumbnail" style="height:120px;width:120px;object-fit:cover;">
-             </a>`;
+    const a = document.createElement("a");
+    a.href = src;
+    a.className = "m-1 glightbox";
+    a.setAttribute("data-gallery", albumKey);
+
+    const img = document.createElement("img");
+    img.src = src;
+    img.className = "img-thumbnail";
+    img.style.height = "120px";
+    img.style.width = "120px";
+    img.style.objectFit = "cover";
+
+    a.appendChild(img);
+    grid.appendChild(a);
   }
 
-  html += "</div>";
-  container.innerHTML = html;
+  content.appendChild(title);
+  content.appendChild(grid);
 
-  // Re-init GLightbox after content is added
-  if (typeof GLightbox === "function") {
-    GLightbox({ selector: `.glightbox[data-gallery="${albumKey}"]` });
-  }
+  // Initialize (or re-init) GLightbox JUST for this album
+  ensureLightbox(`.glightbox[data-gallery="${albumKey}"]`);
+
+  // Optional: scroll to top of content so user sees the grid
+  content.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
-// Run initAlbums when page loads
-document.addEventListener("DOMContentLoaded", initAlbums);
+// If albums.html is the initial page content (SSR), you could call initAlbums on DOM ready.
+// In SPA flow we call it from loadPage after injecting albums.html.
+document.addEventListener("DOMContentLoaded", () => {
+  const maybeList = document.getElementById("albums-container");
+  if (maybeList) initAlbums();
+});
