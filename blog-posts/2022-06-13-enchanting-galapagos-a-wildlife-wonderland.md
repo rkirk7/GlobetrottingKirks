@@ -1,28 +1,5 @@
----
-title: "Enchanting Galapagos: a wildlife wonderland"
-date: 2022-06-13
-categories: 
-  - "galapagos"
-tags: 
-  - "albatrosses"
-  - "boobies"
-  - "cabo-rosa"
-  - "concha-de-perla"
-  - "cotopaxi"
-  - "ecuador"
-  - "espanola"
-  - "guiding-galapagos"
-  - "isabela"
-  - "la-pinta"
-  - "meine-steffi"
-  - "pinzon"
-  - "san-cristobal"
-  - "santa-cruz"
-  - "sharks"
-  - "tintoreras"
-  - "tuneles"
-coverImage: "2021-ecuador-galapagos-underwater-sharks-aglow-tuneles-dji_0648.jpg"
----
+# Enchanting Galapagos: a wildlife wonderland
+*2022-06-13*
 
 I confess. I had thought the Galapagos would be kind of boring: big turtles and lots of birds on barren rock. Yawn.
 
@@ -30,17 +7,8 @@ I was thrilled to be utterly wrong wrong wrong.
 
 Just a four-hour flight from Miami is a pristine, unique wildlife wonderland. The abundance of unusual, endemic (i.e. exists only here) critters--unafraid of humans--makes you gawk and smile. But I offer this caveat: you can enjoy a lot on land. But it's underwater where the magic happens.
 
-<figure>
-
-[![](images/gptempdownload-16.jpg)](https://meimeichan.com/wp-content/uploads/2022/06/gptempdownload-16.jpg)
-
-<figcaption>
-
-This is our favorite shot of one of many playful sea lions boldly swimming around us.
-
-</figcaption>
-
-</figure>
+![](./Images/Galapagos/Galapagos1.jpeg)
+*This is our favorite shot of one of many playful sea lions boldly swimming around us.*
 
 My daughter and I are active, independent travelers, and spent 19 wonderous nights in December: 7 in the Quito area (Mindo, Cotopaxi, Quilotoa), 3 on Isabela, 4 on Santa Cruz, and 4 on a La Pinta cruise.
 
@@ -56,43 +24,25 @@ Here are our highlights and suggestions.
 
 3.        ISABELA: Tintoreras kayak and snorkel with Carlos of Kayaking Isabela (the hut on the beach of Concha de Perla). He was incredibly nice, fun and engaged. While waiting for three young men to join us, he took many Christmas portraits of us with sea lions and in our kayak. When one of the three, going bare-chested, froze and got tired in the water, Carlos towed him to see sights including three huge lobsters he spotted under a cave; and a number of sharks (Tintoreras=species of shark!). We saw five penguins together on this trip.
 
-<figure>
-
-[![](images/2021-ecuador-galapagos-underwater-best-mm-and-jaws-pinzon-gh015229_moment.jpg)](https://meimeichan.com/wp-content/uploads/2022/06/2021-ecuador-galapagos-underwater-best-mm-and-jaws-pinzon-gh015229_moment.jpg)
-
-<figcaption>
-
-Me, with one of many sharks! Fortunately, they're pretty sleepy during the day and just want to be left alone.
-
-</figcaption>
-
-</figure>
+![](./Images/Galapagos/Galapagos2.jpeg)
+*Me, with one of many sharks! Fortunately, they're pretty sleepy during the day and just want to be left alone.*
 
 4.        FROM SANTA CRUZ: Meine Steffi yacht day trips with Guiding Galapagos: We went to Floreana and Pinzon on this beautiful boat, guided by enthusiastic, knowledgeable co-owner Yazmany on the second trip. Floreana included amazing sea lions frolicking all about and a beach where many turtles had recently laid eggs and were getting ready to go back to sea. At Pinzon, we had perfect weather and clear water for phenomenal photos. (We were tickled by Yazmany’s rapture as we tracked a marine iguana dining underwater.)
 
-<figure>
-
-[![](images/g3825380.jpg)](https://meimeichan.com/wp-content/uploads/2022/06/g3825380.jpg)
-
-<figcaption>
-
-My daughter with a sea turtle beauty: they were much larger than the "giant" tortoises!
-
-</figcaption>
-
-</figure>
+![](./Images/Galapagos/Galapagos3.jpeg)
+*My daughter with a sea turtle beauty: they were much larger than the "giant" tortoises!*
 
 5.        ABOARD LA PINTA: Many nice stops but the standouts were gorgeous Cerro Brujo beach at San Cristobal with lots of turtles and sea lions (but snorkeling not allowed); and Punta Suárez at Espanola with sea lions, cliffs, oodles of waved albatrosses; boobies with eggs and infants; hawks and, of course, iguanas.
 
-![](images/img_e4824.jpg)
+![](./Images/Galapagos/Galapagos4.jpeg)
 
-![](images/2021-ecuador-galapagos-la-pinta-punta-suarez-espanola-waved-albatrosses-courting-img_0708.jpg)
+![](./Images/Galapagos/Galapagos5.jpeg)
 
-![](images/2021-ecuador-galapagos-la-pinta-cerro-brujo-san-cristobal-best-girls-img_0348.jpg)
+![](./Images/Galapagos/Galapagos6.jpeg)
 
-![](images/2021-ecuador-galapagos-la-pinta-punta-pitt-san-cristobal-img_0161.jpg)
+![](./Images/Galapagos/Galapagos7.jpeg)
 
-![](images/2021-ecuador-galapagos-la-pinta-santa-fe-baby-lionsimg_4689_moment2.jpg)
+![](./Images/Galapagos/Galapagos8.jpeg)
 
 6.        ABOARD LA PINTA: Astonishing last night of the cruise around Gardner Bay at Espanola: After a mediocre kayak, five of us were in a panga back to the boat when someone spotted splashing way in distance: a ton of bottle-nosed dolphins. We spent nearly an hour surrounded by leaping playful dolphins as the sun set!!!
 
@@ -104,17 +54,8 @@ My daughter with a sea turtle beauty: they were much larger than the "giant" tor
 
 - It was tricky to pack for two different trips: cold hiking at Cotopaxi and Quilotoa plus water adventures in Galapagos. Tip: arrange to store unneeded gear at your airport hotel before going to the Galapagos, then retrieve before flying home.
 
-<figure>
-
-[![](images/2021-ecuador-cotopaxi-peeks-out-with-refuge-1.39pm.jpg)](https://meimeichan.com/wp-content/uploads/2022/06/2021-ecuador-cotopaxi-peeks-out-with-refuge-1.39pm.jpg)
-
-<figcaption>
-
-The mountain peeked out as we left. You can see the refuge we climbed beyond in the middle.
-
-</figcaption>
-
-</figure>
+![](./Images/Galapagos/Galapagos9.jpeg)
+*The mountain peeked out as we left. You can see the refuge we climbed beyond in the middle.*
 
 **RAVE PEOPLE/LODGINGS/MEALS**
 

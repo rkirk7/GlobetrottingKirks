@@ -6,7 +6,8 @@ async function initBlog() {
     "2024-09-12-in-search-of-polar-bears-in-the-arctic.md",
     "2023-07-20-come-safari-with-us.md",
     "2023-02-25-100-miles-in-10-days-the-nearly-perfect-patagonia-hiking-trip",
-    "2022-10-20-paradise-found-french-polynesia"
+    "2022-10-20-paradise-found-french-polynesia",
+    "blog-posts/2022-06-13-enchanting-galapagos-a-wildlife-wonderland.md"
   ];
 
   const container = document.getElementById("blog-container");
