@@ -35,7 +35,7 @@ We were giddy with delight watching some 15 adorable fuzzy panda cubs trotting, 
 
 ![Mom and Cub](./Images/Pandas/Pandas6.jpeg)
 
-[!Cute Panda](./Images/Pandas/Pandas7.jpeg)
+![Cute Panda](./Images/Pandas/Pandas7.jpeg)
 
 The star in Chengdu is Hua Hua, an unusual dwarf panda; the star at Wolong is Fu Bao, the first giant panda born in South Korea. "Princess Fu," a beloved media sensation, was transferred to Wolong in 2024, when she was 4. 
   
