@@ -4,6 +4,10 @@ async function loadPage(page) {
   const element = document.getElementById("content");
   element.innerHTML = content;
 
-  if (page === 'albums.html') initAlbums();
+// inside the loadPage(page) success handler, AFTER content.innerHTML = html
+if (page === 'albums.html' && typeof initAlbums === 'function') {
+  initAlbums();
+}
+
   if (page === 'blog.html') initBlog();
 }
