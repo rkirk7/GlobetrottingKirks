@@ -281,11 +281,15 @@ footer {
   transform: rotate(90deg);
 }
 
-
-/* Rotate caret when open */
-.card-header[aria-expanded="true"] span {
-  transform: rotate(90deg);
+.card-header .caret {
+  display: inline-block;
+  transform: rotate(0deg);
   transition: transform 0.3s;
+}
+
+/* Rotate only the caret when expanded */
+.card-header[aria-expanded="true"] .caret {
+  transform: rotate(90deg);
 }
 
 /* TOC scrolling for desktop */
