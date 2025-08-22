@@ -8,7 +8,6 @@ async function initBlog() {
     "2023-02-25-100-miles-in-10-days-the-nearly-perfect-patagonia-hiking-trip",
     "2022-10-20-paradise-found-french-polynesia",
     "2022-06-13-enchanting-galapagos-a-wildlife-wonderland.md"
-
   ];
 
   const container = document.getElementById("blog-container");
@@ -28,13 +27,10 @@ async function initBlog() {
   const postsData = await Promise.all(
     posts.map(async post => {
       let text = await fetch(`blog-posts/${post}`).then(res => res.text());
-
-      // Strip YAML frontmatter if present
+      // Remove YAML frontmatter
       text = text.replace(/^---[\s\S]*?---/, '').trim();
-
-      // Strip any injected <link> or <h1> at top
+      // Remove injected <link> or <h1> at top
       text = text.replace(/^(<link[\s\S]*?>|<h1[\s\S]*?>[\s\S]*?<\/h1>)/i, '').trim();
-
       return { filename: post, content: text };
     })
   );
@@ -43,18 +39,7 @@ async function initBlog() {
   postsData.sort((a, b) => new Date(b.filename.slice(0, 10)) - new Date(a.filename.slice(0, 10)));
 
   postsData.forEach((postData, index) => {
-    let html = marked.parse(postData.content);
-
-    // Add IDs to headings
-    const tempDiv = document.createElement("div");
-    tempDiv.innerHTML = html;
-    tempDiv.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(h => {
-      const id = h.textContent.trim().toLowerCase()
-        .replace(/[^\w]+/g, "-")
-        .replace(/^-+|-+$/g, "");
-      h.id = id;
-    });
-    html = tempDiv.innerHTML;
+    const html = marked.parse(postData.content);
 
     const collapseId = `postCollapse${index}`;
     const postId = `post${index}`;
@@ -87,13 +72,12 @@ async function initBlog() {
     postDiv.id = postId;
 
     postDiv.innerHTML = `
-      <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center" 
+      <div class="card-header bg-primary text-white" 
            style="cursor:pointer;" 
            data-bs-toggle="collapse" 
            data-bs-target="#${collapseId}" 
            aria-expanded="true">
-        <span class="caret">&#9654;</span>
-        <span class="ms-2 post-title">${postTitle}</span>
+        <span class="post-title">${postTitle}</span>
       </div>
       <div id="${collapseId}" class="collapse show">
         <div class="card-body blog-post-content">${html}</div>
@@ -103,13 +87,13 @@ async function initBlog() {
     container.appendChild(postDiv);
 
     const collapseEl = postDiv.querySelector(`#${collapseId}`);
-    const caretEl = postDiv.querySelector(".caret");
+    const titleEl = postDiv.querySelector(".post-title");
 
     collapseEl.addEventListener("show.bs.collapse", () => {
-      caretEl.style.transform = "rotate(90deg)";
+      titleEl.textContent = ""; // blank when expanded
     });
     collapseEl.addEventListener("hide.bs.collapse", () => {
-      caretEl.style.transform = "rotate(0deg)";
+      titleEl.textContent = postTitle; // show title when collapsed
     });
   });
 }
