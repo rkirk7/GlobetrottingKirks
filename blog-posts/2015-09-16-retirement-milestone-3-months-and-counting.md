@@ -10,7 +10,7 @@ Three months into retirement and I’m either excelling or failing, depending o
 - Read seven books: Leaving Time, A Spool of Blue Thread, The Nightingale, The Swimmer, The Revolutions, Unbroken, Old Man's War, Grey (really?)
 - Hosted a tennis dress collection party to benefit PACE as my first post-retirement project, mustering 228 garments and $1085 thanks to generous friends and an awesome planning team.
     
-![Alt text](./Images/Blog/best-pace-planners.jpg "Pace Party Planners")
+![Pace Party Planners](./Images/Blog/best-pace-planners.jpg)
 *Love that tennis dress party planners to support PACE center for girls*
 
 - Instigated brainstorming to support Courtney Vernon, coach of the FGCU women's tennis team.
