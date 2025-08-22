@@ -1,17 +1,5 @@
----
-title: "Panda-monium: close encounters in Chengdu and Wolong, China"
-date: 2025-08-14
-categories: 
-  - "travel"
-  - "wildlife"
-tags: 
-  - "asia"
-  - "china"
-  - "giant-pandas"
-  - "nature"
-  - "panda"
-  - "pandas"
----
+# Panda-monium: close encounters in Chengdu and Wolong, China
+*2025-08-14*
 
 If you are going to China, and you're as smitten as we are by adorable giant pandas, you must go to Chengdu in the western Sichuan province.
 
@@ -35,17 +23,19 @@ The Wolong Shenshuping Panda Base is about 2 hours from Chengdu, located in the 
   
 We were giddy with delight watching some 15 adorable fuzzy panda cubs trotting, climbing, falling, somersaulting, wrestling, perched in trees, hanging with mom, learning to eat bamboo, interacting with panda keepers, and loafing. Pandas have poor vision, so their sense of perspective, along with their growing bodies, result in entertaining antics.
 
-![](images/2025-chengdu-panda-cub-snuggle-img_2769.jpg)
-![](images/2025-chengdu-panda-cub-best-img_2998.jpg)
+![](./Images/Blog/2025-chengdu-panda-cub-snuggle-img_2769.jpg)
 
-![](images/2025-chengdu-panda-tree-climber-img_2598.jpg)
+![](./Images/Blog/2025-chengdu-panda-cub-best-img_2998.jpg)
 
-![](images/2025-chengdu-panda-mom-dining-img_2407.jpg)
+![](./Images/Blog/2025-chengdu-panda-tree-climber-img_2598.jpg)
 
-![](images/2025-chengdu-panda-best-mom-grabs-cub-frame-mvi_2727-frame-at-0m36s.jpg)
-![](images/2025-chengdu-panda-cub-being-handled-img_2786.jpg)
+![](./Images/Blog/2025-chengdu-panda-mom-dining-img_2407.jpg)
 
-![](images/2025-chengdu-panda-testing-feet-and-hands-img_2853.jpg)
+![](./Images/Blog/2025-chengdu-panda-best-mom-grabs-cub-frame-mvi_2727-frame-at-0m36s.jpg)
+
+![](./Images/Blog/2025-chengdu-panda-cub-being-handled-img_2786.jpg)
+
+![](./Images/Blog/2025-chengdu-panda-testing-feet-and-hands-img_2853.jpg)
 
 The star in Chengdu is Hua Hua, an unusual midget panda; the star at Wolong is Fu Bao, the first giant panda born in South Korea. "Princess Fu," a beloved media sensation, was transferred to Wolong in 2024, when she was 4. 
   
@@ -58,18 +48,10 @@ After about three hours at each base, we reluctantly left when the bear activity
 Soon after our return to the U.S., we were delighted to learn a cub had been born in Wolong on June 21!  
   
 Key tips:  
-\--During the summer, pandas are most active in the cool morning. Arrive as close to opening time as you can (while also beating the uninformed crowds), or come in the late afternoon.  
-\--Chengdu park is humongous and best with a guide. To catch the young pandas, take the shuttle to the far end where the sub-adult enclosures feature youngsters 1 to 5 years old. (Opens at 7:30; 8 from November-February.)  
-\--Wolong is at 5,600 feet so prepare for a cold morning. It's compact enough to do by yourself. (Opens at 9.)
+-During the summer, pandas are most active in the cool morning. Arrive as close to opening time as you can (while also beating the uninformed crowds), or come in the late afternoon.  
+-Chengdu park is humongous and best with a guide. To catch the young pandas, take the shuttle to the far end where the sub-adult enclosures feature youngsters 1 to 5 years old. (Opens at 7:30; 8 from November-February.)  
+-Wolong is at 5,600 feet so prepare for a cold morning. It's compact enough to do by yourself. (Opens at 9.)
 
-<figure>
+[![](./Images/Blog/pandas-best-with-wu-wen-2016-07-02-058.jpg)]
 
-[![](images/pandas-best-with-wu-wen-2016-07-02-058.jpg)](https://meimeikirk.wordpress.com/wp-content/uploads/2016/07/pandas-best-with-wu-wen-2016-07-02-058.jpg)
-
-<figcaption>
-
-2016 panda keepers with Wu Wen at the Dujiangyan Panda Base
-
-</figcaption>
-
-</figure>
+*2016 panda keepers with Wu Wen at the Dujiangyan Panda Base*
