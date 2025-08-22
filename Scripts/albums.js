@@ -9,7 +9,8 @@ const ALBUMS = {
   "safari-2023":  { name: "Safari to Botswana, Zimbabwe, Zambia and Namibia 2023",  folder: "23Safari",   total: 43 },
   "patagonia-2023":  { name: "Patagonia 2023",  folder: "Patagonia",   total: 13 },
   "french-polynesia-2023":  { name: "French Polynesia 2023",  folder: "FrenchPolynesia",   total: 17 },
-  "galapagos-2022":  { name: "Galapagos 2023",  folder: "Galapagos",   total: 9 }
+  "galapagos-2022":  { name: "Galapagos 2023",  folder: "Galapagos",   total: 9 },
+  "western-parks-2021":  { name: "Western Parks 2021",  folder: "Western Parks",   total: 22 }
 };
 
 // Keep a single GLightbox instance around

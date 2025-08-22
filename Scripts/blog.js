@@ -8,7 +8,8 @@ async function initBlog() {
     "2023-02-25-100-miles-in-10-days-the-nearly-perfect-patagonia-hiking-trip",
     "2022-10-20-paradise-found-french-polynesia",
     "2022-06-13-enchanting-galapagos-a-wildlife-wonderland.md",
-    "2021-08-26-my-heritage-journey-to-hong-kong-and-china.md"
+    "2021-08-26-my-heritage-journey-to-hong-kong-and-china.md",
+    "2021-08-22-western-parks-adventure-top-highlights.md"
   ];
 
   const container = document.getElementById("blog-container");

@@ -1,24 +1,5 @@
----
-title: "Western Parks adventure: top highlights"
-date: 2021-08-22
-categories: 
-  - "national-parks"
-  - "road-trips"
-  - "travel"
-tags: 
-  - "angelslanding"
-  - "brightangel"
-  - "bryce"
-  - "death-valley"
-  - "escalante"
-  - "grand-canyon"
-  - "misttrail"
-  - "peekaboo"
-  - "rocky-mountain"
-  - "yosemite"
-  - "zion"
-coverImage: "2021-parks-yosemite-crocker-pt-img_5302.jpg"
----
+# Western Parks adventure: top highlights
+*2021-08-22*
 
 My daughter and I enjoyed three fabulous weeks at six national parks, hiking 108 miles with 24,000 feet elevation gain (Everest is 29,000 feet!). We flew into Denver June 22, 2021, then drove 3,200 miles to Rocky Mountain NP, Grand Canyon South, Grand Canyon North, Escalante, Bryce, Cedar Breaks, Zion, Death Valley and Yosemite. We flew out of Los Angeles after a dolphin cruise at Newport Beach.
 
@@ -30,15 +11,22 @@ Here are our highlights and tips.
 - **Bright Angel, Grand Canyon.** I went to 3-mile house while my daughter continued onto Indian Springs. She confirmed the grueling return up would have done me in. 2,166 feet elevation for me; 3,048 for her
 - **Angel’s Landing, Zion.** We stayed at Zion Lodge for an easy 5:30 a.m. start, and were atop around 7:30. The fast hikers from the first shuttles soon arrived. Beautiful scenery, challenging rocks and chains, 2,090 feet elevation including a jaunt to the Rim Trail afterward. (In hindsight, we should have started at 5 or 5:15.)
 
-![](images/2021-parks-rmnp-chasm-lake-girls-best-img_6945.jpg)
+![Chasm Lake](./Images/WesternParks/WesternParks1.jpeg)
+*Chasm Lake*
 
-![](images/2021-parks-rmnp-chasm-lake-mm-on-snow-img_6922.jpg)
-![](images/2021-parks-grand-canyon-bright-angel-trail-best-mm-img_8545.jpg)
+![Chasm Lake](./Images/WesternParks/WesternParks2.jpeg)
 
-![](images/2021-parks-grand-canyon-bright-angel-view-of-indian-garden-img_3782.jpg)
-![](images/2021-parks-zion-angels-landing-from-rim-trail-best-img_4999.jpg)
+![Bright Angel](./Images/WesternParks/WesternParks3.jpeg)
+*Bright Angel Trail*
 
-![](images/2021-parks-zion-angels-landing-crowds-at-10-img_5003.jpg)
+![Bright Angel](./Images/WesternParks/WesternParks4.jpeg)
+*Bright Angel view of Indian Garden*
+
+![Angel's Landing](./Images/WesternParks/WesternParks5.jpeg)
+*Angel's Landing seen from the Rim Trail*
+
+![Ange's Landing](./Images/WesternParks/WesternParks6.jpeg)
+*Angel's Landing crowds at 10 a.m.*
 
 **Top of the world**
 
@@ -46,10 +34,13 @@ Here are our highlights and tips.
 - **Via Ferrata, near Estes Park, CO, Cathedral peak at Deville rock, 9,000 feet**. We love via ferratas and started our adventure with a great one installed by Kent Mountain Adventures just outside of town. We were disappointed and surprised the via ferrata was relatively short while the hike to and from was quite long and tough.
 - **Sentinel Dome, Yosemite, 8,123 feet**. Beautiful views, surpassing Taft Point.
 
-![](images/2021-parks-yosemite-mt-hoffmann-best-girls-img_8864.jpg)
+![Mt. Hoffman](./Images/WesternParks/WesternParks7.jpeg)
+*Mount Hoffman*
 
-![](images/2021-parks-via-ferrata-deville-rock-best-girls-cathedral-summit-img_8289.jpg)
-![](images/img_8939.jpg)
+![Via Ferrata Cathedral Summit](./Images/WesternParks/WesternParks8.jpeg)
+*Via Ferrata, Cathedral Summit*
+
+![](./Images/WesternParks/WesternParks9.jpeg)
 
 **Gorgeous viewpoints without much effort:**
 
@@ -59,9 +50,11 @@ Here are our highlights and tips.
 - Canyon Overlook, Zion
 - Kolob Canyon overlook, Zion
 
-![](images/2021-parks-grand-canyon-north-rim-cape-royal-best-mm-img_8588.jpg)
+![North Rim Cape Royal](./Images/WesternParks/WesternParks10.jpeg)
+*North Rim Cape Royal*
 
-![](images/2021-parks-grand-canyon-north-rim-cape-royal-img_4188.jpg)
+![North Rim Cape Royal](./Images/WesternParks/WesternParks11.jpeg)
+*North Rim Cape Royal*
 
 **Best critters:**
 
@@ -69,22 +62,17 @@ Here are our highlights and tips.
 - Intimate views of a young moose and mom, interrupted by another moose who came right by us, Coyote Valley, Rocky Mountain NP
 - Young bear frolicking in the creek at McGurk Meadow as we finished our longest hike, Yosemite NP (we saw two bears over four days).
 
-![](images/2021-parks-yosemite-dewey-pt-mcgurk-meadow-bear-best-img_8215-e1629568464777.jpg)
+![Dewey Point](./Images/WesternParks/WesternParks12.jpeg)
+*Dewey Point*
 
-![](images/2021-parks-rmnp-trail-ridge-rd-coyote-valley-elk-img_3542.jpg)
-![](images/2021-parks-rmnp-trail-ridge-rd-coyote-valley-moose-img_3558.jpg)
+![Coyote Valley](./Images/WesternParks/WesternParks13.jpeg)
+*Elk in Coyote Valley*
 
-<figure>
+![Coyote Valley](./Images/WesternParks/WesternParks14.jpeg)
+*Moose in Coyote Valley*
 
-![](images/2021-parks-grand-canyon-north-rim-double-rainbow-best-img_4127.jpg)
-
-<figcaption>
-
-Gorgeous double rainbow at North Rim
-
-</figcaption>
-
-</figure>
+![](./Images/WesternParks/WesternParks15.jpeg)
+*Gorgeous double rainbow at North Rim*
 
 **Surprised by:**
 
@@ -102,14 +90,20 @@ Gorgeous double rainbow at North Rim
 - **Mist Trail to Nevada Falls, Yosemite.** Waterfalls were not at their full power on our trip but we enjoyed getting close to Vernal and Nevada Falls. My daughter loved scrambling on the boulders in the mist of beautiful Nevada.
 - **Nymph, Dream and Haiyaha lakes, Rocky Mountain (after the fact).** We were prepared to get caught in rain but did not expect hail/sleet in June. We got soaked and were freezing as the temperature dropped to 54, and had to forego Mills Lake. In hindsight, it was a lot of unplanned fun.
 
-![](images/2021-parks-zion-ebikes-parus-trail-img_5852-e1629570331139.jpg)
+![Ebikes on the Parus Trail](./Images/WesternParks/WesternParks16.jpeg)
+*Ebikes on the Parus Trail*
 
-![](images/2021-parks-rmnp-haiyaha-lake-sleeting-best-girls-img_7037-e1629569990365.jpg)
-![](images/2021-parks-yosemite-mist-trail-nevada-falls-regan-img_9039-e1629570452596.jpg)
+![Haiyaha Lake](./Images/WesternParks/WesternParks17.jpeg)
+*Haiyaha Lake in the sleet*
 
-![](images/2021-parks-yosemite-vernal-and-nevada-falls-img_5438-e1629570121840.jpg)
+![Mist Trail, Nevada Falls](./Images/WesternParks/WesternParks18.jpeg)
+*Mist Trail, Nevada Falls*
 
-![](images/2021-parks-escalante-peekaboo-canyon-start-mm-up-gh010379_moment3.jpg)
+![Vernal and Nevada Falls](./Images/WesternParks/WesternParks19.jpeg)
+*Vernal and Nevada Falls*
+
+![Peekaboo Canyon](./Images/WesternParks/WesternParks20.jpeg)
+*Peekaboo Canyon, Grand Escalante Staircase*
 
 **Harrowing moments:**  
 
@@ -125,7 +119,7 @@ Gorgeous double rainbow at North Rim
 - 113 at Escalante during our Peekaboo/Spooky hike
 - 110 around 4 p.m. after the Narrows hike, Zion
 - 46 at Grand Canyon North Rim
-- ![](images/2021-parks-death-valley-125-degrees-img_e8021.jpg)
+- ![](./Images/WesternParks/WesternParks21.jpeg)
 
 **Top tips:**
 
@@ -151,16 +145,7 @@ Gorgeous double rainbow at North Rim
 - Entrada Escalante Lodge, Escalante, UT. Extremely guest and eco-friendly.
 - Sonnenhof Lakewood Manor; Estes Park, CO. Spacious Twin Sisters apartment with great views.
 
-<figure>
+![El Tovar](./Images/WesternParks/WesternParks22.jpeg)
+*The amazing terrace of the Fred Harvey suite at El Tovar.*
 
-![](images/2021-parks-grand-canyon-el-tovar-fred-harvey-suite-terrace-img_3832-e1629568115285.jpg)
-
-<figcaption>
-
-The amazing terrace of the Fred Harvey suite at El Tovar.
-
-</figcaption>
-
-</figure>
-
-C[lick here to see our top 100 images.](https://photos.app.goo.gl/H4tpuPCYYMhKwj1z6)
+[Click here to see our top 100 images.](https://photos.app.goo.gl/H4tpuPCYYMhKwj1z6)
