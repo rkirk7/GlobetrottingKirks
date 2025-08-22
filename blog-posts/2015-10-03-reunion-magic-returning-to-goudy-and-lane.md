@@ -41,8 +41,6 @@ Three of us got an inspiring tour of Goudy with assistant principal Bill Yeh sho
 
 We saw bright hallways decorated by artwork (including students’ tweets about their hopes and dreams), munchkins in computer class (fifth to eighth graders get iPads), a marshmallow building contest in the vibrant library, and happy crowds running amok in the play area out front, which was a through street in our day.
 
-![IMG_7729](./Images/Blog/img_77291.jpg)
-
 ![Chicago 9.15 132](./Images/Blog/chicago-9-15-132.jpg)
 
 Goudy still draws a significant minority population with some 30 languages spoken among its 800 students. Bill Yeh’s biggest challenge? Losing students to magnet schools, which means losing per-pupil funding. Goudy got $400,000 less than last year, which means one less kindergarten class. Another familiar dilemma in education.
