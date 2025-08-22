@@ -1,8 +1,6 @@
 ---
-# Reunion magic: Yes, you can go home again
+# Reunion magic: Yes, you can go home again (1/3)
 *2015-09-28*
-
-**Chapter one of three**
 
 It wasn't The Big Chill, but there were deaths and revelations.
 
