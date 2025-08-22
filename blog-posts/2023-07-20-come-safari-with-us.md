@@ -1,29 +1,5 @@
----
-title: "Come safari with us!"
-date: 2023-07-20
-categories: 
-  - "africa"
-  - "safari"
-tags: 
-  - "andbeyond"
-  - "khwaileadwood"
-  - "pangolin"
-  - "sausagecamp"
-  - "somalisa"
-  - "big-daddy"
-  - "cheetahs"
-  - "hwange"
-  - "namib-naukluft"
-  - "namibia"
-  - "pelican-point"
-  - "sandwich-harbour"
-  - "sitatunga"
-  - "sossusvlei"
-  - "walvis-bay"
-  - "wild-dogs"
-  - "zambia"
-  - "zimbabwe"
----
+# Come safari with us!
+*2023-07-20*
 
 ### Highlights from three weeks in Botswana, Zimbabwe, Zambia and Namibia
 
@@ -51,11 +27,13 @@ We tracked a cheetah mom and her young son (Junior) for 2 ½ hours our last morn
 
 Yes, there was a cheetah--actually two! We enjoyed a failed lechwe chase, hearing Junior mewing for mom when he got separated, and watching Mom cautiously study the river situation for 45 minutes before she finally crossed over. Banda said he had never cheetahs in the water before.
 
-![](images/2023-africa-botswana-khwai-cheetahs-img_2629-1.jpg)
+![](./Images/23Safari/23Safari1.jpeg)
 
-![](images/2023-africa-botswana-khwai-cheetahs-img_1866-1.jpg)
-![](images/2023-africa-botswana-khwai-cheetahs-into-water-mvi_2745-frame-at-0m24s-1.jpg)
-![](images/2023-africa-botswana-khwai-cheetahs-in-water-mvi_1878-frame-at-2m25s-1.jpg)
+![](./Images/23Safari/23Safari2.jpeg)
+
+![](./Images/23Safari/23Safari3.jpeg)
+
+![](./Images/23Safari/23Safari4.jpeg)
 
 #### **Wild dogs galore**
 
@@ -65,15 +43,15 @@ We returned in the late afternoon and, after seven hours of resting, the alpha m
 
 Finally, they were off to find supper, following the leader in near single file. All too soon, we lost them in the brush and dusk and they were not sighted again during our stay.
 
-![](images/2023-africa-zambia-sausage-camp-wild-dogs-img_3923-1.jpg)
+![](./Images/23Safari/23Safari5.jpeg)
 
-![](images/2023-africa-zambia-sausage-camp-wild-dogs-img_4151-1.jpg)
+![](./Images/23Safari/23Safari6.jpeg)
 
-![](images/2023-africa-zambia-sausage-camp-wild-dogs-img_3173-1.jpg)
+![](./Images/23Safari/23Safari7.jpeg)
 
-![](images/2023-africa-zambia-sausage-camp-wild-dogs-img_4144-1.jpg)
+![](./Images/23Safari/23Safari8.jpeg)
 
-![](images/2023-africa-zambia-sausage-camp-wild-dogs-george-best-img_4143.jpg)
+![](./Images/23Safari/23Safari9.jpeg)
 
 #### **Artemis the pangolin**
 
@@ -83,79 +61,64 @@ We started our evening, hopefully, around 6 p.m. and were ready to give up at 8:
 
 Two members of our party of who pooh poohed the actual existence of pangolins had to eat their words.
 
-<figure>
+![Artemis the Pangolin](./Images/23Safari/23Safari10.jpeg)
+*Artemis the pangolin: the red tint is from our headlamps*
 
-<figure>
 
-[![](images/2023-africa-okonjima-pangolin-best-img_0114-1.jpg)](https://meimeichan.com/wp-content/uploads/2023/07/2023-africa-okonjima-pangolin-best-img_0114-1.jpg)
-
-<figcaption>
-
-Artemis the pangolin: the red tint is from our headlamps
-
-</figcaption>
-
-</figure>
-
-<figure>
-
-[![](images/2023-africa-okonjima-pangolin-best-img_7784-1.jpg)](https://meimeichan.com/wp-content/uploads/2023/07/2023-africa-okonjima-pangolin-best-img_7784-1.jpg)
-
-<figcaption>
-
-Artemis the pangolin: the red tint is from our headlamps
-
-</figcaption>
-
-</figure>
-
-</figure>
+![Artemis the Pangolin](./Images/23Safari/23Safari11.jpeg)
+*Artemis the pangolin: the red tint is from our headlamps*
 
 #### **Feasting predators**
 
 We still haven’t seen a kill but did see three significant dining experiences, all at Khwai: Lions at a huge water buffalo, which was very stinky; three wild dogs with a young kudu; and a large herd that had just gotten sated by a dead elephant.
 
-[![](images/2023-africa-botswana-khwai-lion-feast-img_1034-1.jpg)](https://meimeichan.com/wp-content/uploads/2023/07/2023-africa-botswana-khwai-lion-feast-img_1034-1.jpg)
+![](./Images/23Safari/23Safari12.jpeg)
+*Lions feasting*
 
-[![](images/2023-africa-botswana-khwai-wild-dog-trio-feasting-on-young-kudu-img_0621-1.jpg)](https://meimeichan.com/wp-content/uploads/2023/07/2023-africa-botswana-khwai-wild-dog-trio-feasting-on-young-kudu-img_0621-1.jpg)
+![](./Images/23Safari/23Safari3.jpeg)
+*Wild dogs feasting on  a kudu*
 
-[![](images/2023-africa-botswana-khwai-lions-sated-from-ellie-img_1473-1.jpg)](https://meimeichan.com/wp-content/uploads/2023/07/2023-africa-botswana-khwai-lions-sated-from-ellie-img_1473-1.jpg)
+![](./Images/23Safari/23Safari14.jpeg)
+*Lions sated after eating an elephant*
 
 #### **Young lions at play**
 
 At Khwai, we peered through a thicket where mom had deposited two cubs about 10 days old! We never saw them emerge but caught their precious little faces and blue eyes. We also saw young cubs following mom, climbing on her, tussling with each other and mewing at her for some milk. At Ongava, we parked about 10 feet from a tree where four lion cubs were playing king of the branch--this was the closest we've ever been to active young cubs.
 
-[![](images/2023-africa-botswana-khwai-baby-lions-in-thicket-img_1207-1.jpg)](https://meimeichan.com/wp-content/uploads/2023/07/2023-africa-botswana-khwai-baby-lions-in-thicket-img_1207-1.jpg)
+![](./Images/23Safari/23Safari15.jpeg)
+*Baby lions*
 
-[![](images/2023-africa-botswana-khwai-lion-cubs-tussling-img_1873-1.jpg)](https://meimeichan.com/wp-content/uploads/2023/07/2023-africa-botswana-khwai-lion-cubs-tussling-img_1873-1.jpg)
+![](./Images/23Safari/23Safari16.jpeg)
 
-[![](images/2023-africa-ongava-lion-cubs-img_0304-1.jpg)](https://meimeichan.com/wp-content/uploads/2023/07/2023-africa-ongava-lion-cubs-img_0304-1.jpg)
+![](./Images/23Safari/23Safari17.jpeg)
 
 #### **Ellies galore**
 
 At every stop before Namibia, but especially at Somalisa, we joined many elephant herds as they drank, had mud baths and dirt showers, played, blared, and lumbered along. We loved the little ellies, still figuring out their trunks, boldly confronting us humans. Of note: a little ellie was stuck in a hole for 46 seconds, frantically trying to wrap his trunk around mom’s to get out; another was completely submerged in water like a submarine, then rared on his hind legs like a dog; and the wounded ellie with no tail and a limp leg broke our hearts.
 
-![](images/2023-africa-zimbabwe-somalisa-ellies-img_3297-1.jpg)
+![](./Images/23Safari/23Safari18.jpeg)
 
-![](images/2023-africa-zimbabwe-somalisa-ellie-stuck-in-hole-img_9431-1-2074649114-e1689873471132.jpg)
+![](./Images/23Safari/23Safari19.jpeg)
 
-![](images/2023-africa-zimbabwe-somalisa-wounded-ellie-babe-img_2342-1.jpg)
+![](./Images/23Safari/23Safari20.jpeg)
 
-![](images/2023-africa-zimbabwe-somalisa-ellie-praying-img_2397-1.jpg)
+![](./Images/23Safari/23Safari21.jpeg)
 
-![](images/2023-africa-zimbabwe-somalisa-ellie-herd-to-water-hole-mvi_3366-frame-at-1m32s-1.jpg)
+![](./Images/23Safari/23Safari22.jpeg)
 
-![](images/2023-africa-zimbabwe-somalisa-ellie-mud-img_3504-1.jpg)
+![](./Images/23Safari/23Safari23.jpeg)
 
 #### **Rhinos galore**
 
 We’ve never seen so many rhinos together as in Namibia, both black and white. There was a number at Okonjima, including crossing the road as we left; and a whole bunch at Ongava, where they had been relocated from Etosha Park. It's the first time we saw one practically jogging, and heard a mom blaring at male who was too close to her cub; he backed away as she advanced.
 
-[![](images/2023-africa-ongava-water-puddle-rhinos-mg_4727-1.jpg)](https://meimeichan.com/wp-content/uploads/2023/07/2023-africa-ongava-water-puddle-rhinos-mg_4727-1.jpg)
+![Rhinos at the watering hole](./Images/23Safari/23Safari24.jpeg)
+*Rhinos at the watering hole*
 
-[![](images/2023-africa-okonjima-rhino-crossing-road-mvi_4626-frame-at-0m9s-1.jpg)](https://meimeichan.com/wp-content/uploads/2023/07/2023-africa-okonjima-rhino-crossing-road-mvi_4626-frame-at-0m9s-1.jpg)
+![](./Images/23Safari/23Safari25.jpeg)
 
-[![](images/2023-africa-ongava-rhinos-at-watering-puddle-img_8192-1.jpg)](https://meimeichan.com/wp-content/uploads/2023/07/2023-africa-ongava-rhinos-at-watering-puddle-img_8192-1.jpg)
+![Rhinos at a watering hole at night](./Images/23Safari/23Safari26.jpeg)
+*Rhinos at the watering hole at night*
 
 #### **Night tracking**
 
@@ -169,53 +132,22 @@ As the sun sets, spotlights are used on night drives, helping catch glimpses of 
 
 - At Okonjima, we were excited to see two porcupines and a hyena at our front lawn at night…until we learned the staff threw out slop to attract them!
 
-[![](images/2023-africa-zimbabwe-somalisa-leopard-best-img_7172-frame-at-0m12s-1.jpg)](https://meimeichan.com/wp-content/uploads/2023/07/2023-africa-zimbabwe-somalisa-leopard-best-img_7172-frame-at-0m12s-1.jpg)
+![](./Images/23Safari/23Safari27.jpeg)
 
-[![](images/2023-africa-ongava-lions-img_0335-frame-at-0m6s-1.jpg)](https://meimeichan.com/wp-content/uploads/2023/07/2023-africa-ongava-lions-img_0335-frame-at-0m6s-1.jpg)
+![](./Images/23Safari/23Safari28.jpeg)
 
 #### **Walvis Bay seals**
 
 Our day tour with Mola Mola Tours started out gray and very cold: we were in a small ship filled with too many passengers. But then we got to Pelican Point and delighted in the antics of the 50,000-80,000 Cape fur seals, barking and shuffling and swimming and leaping as opportunistic jackals hovered.
 
-<figure>
+![Pelican Point Seals](./Images/23Safari/23Safari29.jpeg)
+*Pelican Point seals*
 
-<figure>
+![Baby Seal](./Images/23Safari/23Safari30.jpeg)
+*Darling baby waddled to mom*
 
-[![](images/2023-africa-walvis-bay-pelican-point-seals-video-mvi_5188-frame-at-0m11s-1.jpg)](https://meimeichan.com/wp-content/uploads/2023/07/2023-africa-walvis-bay-pelican-point-seals-video-mvi_5188-frame-at-0m11s-1.jpg)
-
-<figcaption>
-
-Pelican Point seals
-
-</figcaption>
-
-</figure>
-
-<figure>
-
-[![](images/2023-africa-walvis-bay-pelican-point-baby-seal-best-video-mvi_3786-frame-at-0m4s-2.jpg)](https://meimeichan.com/wp-content/uploads/2023/07/2023-africa-walvis-bay-pelican-point-baby-seal-best-video-mvi_3786-frame-at-0m4s-2.jpg)
-
-<figcaption>
-
-Darling baby waddled to mom
-
-</figcaption>
-
-</figure>
-
-<figure>
-
-[![](images/2023-africa-walvis-bay-pelican-point-jackal-img_3767.jpg)](https://meimeichan.com/wp-content/uploads/2023/07/2023-africa-walvis-bay-pelican-point-jackal-img_3767.jpg)
-
-<figcaption>
-
-Jackals feast on dead seals
-
-</figcaption>
-
-</figure>
-
-</figure>
+![Jackals Feasting](./Images/23Safari/23Safari31.jpeg)
+*Jackals feast on dead seals*
 
 #### **Oldest desert in the world**
 
@@ -223,103 +155,32 @@ In Namibia, Namib-Naukluft National Park comprises the oldest desert in the worl
 
 From Walvis Bay, we took a jouncy 4x4 tour that snaked between the sparkling dunes and the Atlantic ocean to arrive at gorgeous Sandwich Harbour, which was once a settlement. From the amazing Sossusvlei Desert Lodge, we took a helicopter tour over Namib’s fascinating undulating red dunes and white salt flats. Finally, we drove through the park to admire the dunes up close, including hiking up one of the tallest in the world: Big Daddy, at 1,000 feet. It was our first real desert experience and we were mesmerized by the colors, scope and timelessness.
 
-<figure>
+![Big Daddy](./Images/23Safari/23Safari32.jpeg)
+*Going down Big Daddy, one of the tallest dunes in the world*
 
-<figure>
+![Big Daddy](./Images/23Safari/23Safari33.jpeg)
+*Climbing up Big Daddy, one of the tallest dunes in the world*
 
-![](images/2023-africa-sossusvlei-best-regan-img_5859-1.jpg)
+![](./Images/23Safari/23Safari34.jpeg)
+*Big Daddy route clockwise*
 
-<figcaption>
-
-Going down Big Daddy, one of the tallest dunes in the world
-
-</figcaption>
-
-</figure>
-
-<figure>
-
-![](images/2023-africa-sossusvlei-mm-headed-up-big-daddy-img_8611-1.jpg)
-
-<figcaption>
-
-Climbing up Big Daddy, one of the tallest dunes in the world
-
-</figcaption>
-
-</figure>
-
-<figure>
-
-![](images/2023-africa-sossusvlei-big-daddy-route-img_0957.jpg)
-
-<figcaption>
-
-Big Daddy route clockwise
-
-</figcaption>
-
-</figure>
-
-<figure>
-
-![](images/2023-africa-walvis-bay-sandwich-harbour-namib-desert-img_0433.jpg)
-
-<figcaption>
-
-Sandwich Harbour
-
-</figcaption>
-
-</figure>
-
-</figure>
+![Sanwich Harbour](./Images/23Safari/23Safari35.jpeg)
+*Sandwich Harbour*
 
 #### **Aerial views**
 
 We had three helicopter rides, including over Namib, providing wonderful new perspectives.
 
-<figure>
+![Elephant Shaking a Tree](./Images/23Safari/23Safari36.jpeg)
 
-[![](images/2023-africa-botswana-khwai-from-the-air-ellie-shakes-tree-img_1267-1.jpg)](https://meimeichan.com/wp-content/uploads/2023/07/2023-africa-botswana-khwai-from-the-air-ellie-shakes-tree-img_1267-1.jpg)
+![](./Images/23Safari/23Safari37.jpeg)
+*Hidden in the Okavango Delta was an elusive sitatunga antelope*
 
-<figure>
+![](./Images/23Safari/23Safari38.jpeg)
+*Elusive sitatunga antelope, hidden in the Okavango Delta*
 
-[![](images/2023-africa-botswana-khwai-sitatunga-from-air-img_2163-1.jpg)](https://meimeichan.com/wp-content/uploads/2023/07/2023-africa-botswana-khwai-sitatunga-from-air-img_2163-1.jpg)
-
-<figcaption>
-
-Hidden in the Okavango Delta was an elusive sitatunga antelope
-
-</figcaption>
-
-</figure>
-
-<figure>
-
-[![](images/2023-africa-botswana-khwai-sitatunga-from-air-img_1281-1.jpg)](https://meimeichan.com/wp-content/uploads/2023/07/2023-africa-botswana-khwai-sitatunga-from-air-img_1281-1.jpg)
-
-<figcaption>
-
-Elusive sitatunga antelope, hidden in the Okavango Delta
-
-</figcaption>
-
-</figure>
-
-<figure>
-
-[![](images/2023-africa-victoria-falls-img_2825-649024331-e1689874202732.jpg)](https://meimeichan.com/wp-content/uploads/2023/07/2023-africa-victoria-falls-img_2825.jpg)
-
-<figcaption>
-
-Victoria Falls overview
-
-</figcaption>
-
-</figure>
-
-</figure>
+![](./Images/23Safari/23Safari39.jpeg)
+*Victoria Falls overview*
 
 #### **Bonus highlight: Flat tires**
 
@@ -327,13 +188,13 @@ Namibia has many gravel roads and we learned flat tires are not only common but 
 
 The first time, it took 30 minutes to figure out how to lower the spare (hung by a chain under the trunk). We were slowly working on the flat when three cars stopped, filled with locals. One had a family of strapping young boys who took over under their mom's direction. We were on the road in 50 minutes. The second time, Regan released the spare in five minutes! A goatherd stopped to help and 30 minutes later, we were off to our next adventure.
 
-![](images/2023-africa-windhoek-hertz-tire-changing-instructor-img_e0031-1.jpg)
+![](./Images/23Safari/23Safari40.jpeg)
 
-![](images/2023-africa-nambia-flat-tire-no.-1.-burly-boys-got-to-work-directed-by-their-mom.-img_0557-1.jpg)
+![](./Images/23Safari/23Safari41.jpeg)
 
-![](images/2023-africa-nambia-flat-tire-no.-2-regan-orchestrates-img_0986-1.jpg)
+![](./Images/23Safari/23Safari42.jpeg)
 
-![](images/2023-africa-nambia-flat-tire-no.-2-img_0994-2.jpg)
+![](./Images/23Safari/23Safari43.jpeg)
 
 #### _We hope you enjoyed your comfortable, air-conditioned safari with us_.
 
