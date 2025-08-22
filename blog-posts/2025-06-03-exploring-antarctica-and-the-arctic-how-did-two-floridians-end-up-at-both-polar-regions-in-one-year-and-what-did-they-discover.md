@@ -95,7 +95,7 @@ We got to admire the world’s largest iceberg, A23A, for hours; rammed the ship
 *We're on the White Continent!*
 
 ![South Georgia penguins](./Images/Antarctica/Antarctica4.jpeg)
-*Thousands of penguins at Salsibury Point in South Georgia*
+*Thousands of penguins at Salisbury Plain in South Georgia*
 
 ![The Octantis in Reeses Cove](./Images/Antarctica/Antarctica5.jpeg)
 *The majestic Viking Octantis*
