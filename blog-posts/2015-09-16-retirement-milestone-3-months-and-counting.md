@@ -1,7 +1,7 @@
 # Retirement milestone: 3 months and counting
 *2015-09-16*
 
-Three months into retirement and I’m either excelling or failing, depending on your perspective. <!--more-->Since June 12, I've:
+Three months into retirement and I’m either excelling or failing, depending on your perspective. Since June 12, I've:
 
 - Seen nine countries in 24 days on a cruise to the Baltic and highlands, wrapping up with three days in New York City to see our daughter Regan and check out the new World Trade Center and Observatory
 - Taken six tennis lessons and played nearly daily, plus gotten a terrific new racquet: The Wilson Envy 110
