@@ -4,7 +4,7 @@ function initBlog() {
     "2015-08-29-hello-world-2.md",
     "2015-09-14-yes-the-world-needs-another-website-mine.md",
     "2015-09-16-retirement-milestone-3-months-and-counting.md",
-    "2015-09-28-reunion-magic.md",
+    "2015-09-28-reunion-part-one.md",
     "2015-10-03-reunion-magic-returning-to-goudy-and-lane.md"
     // Add more markdown posts here
   ];
