@@ -10,6 +10,7 @@
 <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 
 <script>
+function initAlbums() {
   // Album list
   const albums = [
     { name: "Churchill 2025", folder: "Churchill", param: "churchill-2025", total: 6 },
@@ -17,6 +18,7 @@
   ];
 
   const container = document.getElementById("albums-container");
+  container.innerHTML = ""; // clear any previous content
 
   albums.forEach(album => {
     // Generate preview images (first 4 photos)
@@ -45,8 +47,10 @@
     container.appendChild(card);
   });
 
-  // Initialize GLightbox for links that will be dynamically loaded
-  document.addEventListener("DOMContentLoaded", () => {
-    GLightbox({ selector: 'a.glightbox' });
-  });
+  // Re-initialize GLightbox in case dynamic content was added
+  GLightbox({ selector: 'a.glightbox' });
+}
+
+// If this page loads standalone
+document.addEventListener("DOMContentLoaded", initAlbums);
 </script>
