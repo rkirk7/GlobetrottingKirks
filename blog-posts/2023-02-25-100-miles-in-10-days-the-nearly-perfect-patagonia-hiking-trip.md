@@ -151,9 +151,9 @@ Days 13-15: El Chalten, the heart of Glaciares National Park, Argentina. _39 mil
 
 - We were catching an afternoon ride back to Calafate, so we moved at a good clip on a beautiful day. After our previous hikes, this was a breeze. Lunching at the glacial lake was the perfect way to bid Patagonia farewell as we completed 100 miles in 10 days!
 
-**Hope you enjoyed hiking with us! [For our complete photo album, click here](https://photos.app.goo.gl/cwKraiey855GdaUa8).**
+*Hope you enjoyed hiking with us! [For our complete photo album, click here](https://photos.app.goo.gl/cwKraiey855GdaUa8).*
 
-## Bonus: **How did Fitz Roy compare with Torres Del Paine**?
+## Bonus: *How did Fitz Roy compare with Torres Del Paine*?
 
 To me, the view at Laguna de Los Tres was more spectacular (even on a cloudy day) with many rugged, jagged peaks, powerful glaciers and two glistening lakes. What do you think?
 
