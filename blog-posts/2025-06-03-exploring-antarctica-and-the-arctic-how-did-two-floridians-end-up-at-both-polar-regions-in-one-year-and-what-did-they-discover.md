@@ -1,31 +1,5 @@
----
-title: "Exploring Antarctica and the Arctic: How did two Floridians end up at both polar regions in one year, and what did they discover?"
-date: 2025-06-03
-categories: 
-  - "antarctica"
-  - "arctic"
-  - "arctic-cruise"
-  - "cruise"
-  - "polar-bears"
-  - "quark"
-  - "svalbard"
-tags: 
-  - "myvikingjourney"
-  - "7th-continent"
-  - "adventure-travel"
-  - "expedition"
-  - "falkland-islands"
-  - "humpback-whales"
-  - "octantis"
-  - "penguins"
-  - "south-america"
-  - "south-georgia"
-  - "south-america"
-  - "spitsbergen"
-  - "travel"
-  - "ultramarine"
-  - "viking"
----
+# Exploring Antarctica and the Arctic: How did two Floridians end up at both polar regions in one year, and what did they discover?
+*2025-06-03*
 
 My adult daughter and I have had the good fortune to travel extensively over the past decade since my retirement.
 
@@ -45,35 +19,13 @@ Around midnight on May 15, 2024, under the bright midnight sun, [the Ultramarine
 
 On Dec. 30, 2024, we were 12,000 miles away on the opposite end of the world, at 64 degrees south. Greeted by gentoo penguins, shimmering blue icebergs and snowy mountains at Recess Cove, Charlotte Bay, Antarctica, we gleefully strolled on the 7th continent, becoming members of an exclusive club. Only 79,000 tourists landed on Antarctica last season—and Charlotte Bay is not among the top 20 landed sites. Later the same day, our last day, we were ecstatic as humpback whales surrounded us while we were kayaking and riding in one of [Octantis](https://www.vikingcruises.com/expeditions/ships/viking-octantis.html)' special operations boats.
 
-<figure>
+![Arctic at 80 degrees north](./Images/Svalbard/Svalbard7.jpeg)
+*Quark Ultramarine at 80 degrees north, 635 miles from the North Pole*
 
-<figure>
+![Explorers on the white continent at Recess Cove, Antarctica](./Images/Antarctica/Antarctica1.jpeg)
+*Viking Octantis explorers on the 7th continent, 64 degrees south, Recess Cove, Antarctica*
 
-![Arctic at 80 degrees north](images/2024-norway-day-8-ultramarine-arctic-ice-80-degrees-48-minutes-northe28094about-550-nautical-miles-from-the-north-pole-at-midnight-68-northern-pack-ice-midnight-sun-bow-of-ship-best.jpg)
-
-<figcaption>
-
-Quark Ultramarine at 80 degrees north, 635 miles from the North Pole
-
-</figcaption>
-
-</figure>
-
-<figure>
-
-![Explorers on the white continent at Recess Cove, Antarctica](images/2024-octantis-recess-cove-explorers-on-the-continent-recess-cove-best-best-img_1371.jpg)
-
-<figcaption>
-
-Viking Octantis explorers on the 7th continent, 64 degrees south, Recess Cove, Antarctica
-
-</figcaption>
-
-</figure>
-
-</figure>
-
-[![](images/globe-with-both-poles.jpg)](https://meimeikirk.wordpress.com/wp-content/uploads/2025/02/globe-with-both-poles.jpg)
+![](./Images/Blog/globe-with-both-poles.jpg)
 
 For perspective, we were about 1,000 miles north of the Arctic Circle and 635 miles south of the North Pole, and about 200 miles north of the Antarctic Circle and 2,000 miles north of the South Pole.
 
@@ -91,16 +43,22 @@ After unexpected hiccups too complicated to recount here, we boarded the beautif
 
 Over 12 days, we saw seven polar bears, oodles of walruses, four Arctic foxes, some seals, a large pod of beluga whales, herds of reindeer, and seabirds galore including puffins. We walked on frozen sea ice (called “fast ice” because it is still “fastened” to shore) in front of an ancient glacier and sailed north until we hit the Arctic pack ice.
 
-![Polar bear in Svalbard](images/2024-norway-day-8-ultramarine-polar-bear-2-best-further-out-bear-1-looking-down-2936111230-e1726144769804.jpg)
+![Polar bear in Svalbard](./Images/Svalbard/Svalbard8.jpeg)
 
-![](images/2024-norway-day-4-16-quark-ultramarine-polar-bears-img_4083.jpg)
-![Quark Ultramarine at Camp Zoe, the Arctic](images/2024-norway-day-6-ultramarine-camp-zoe-flag-and-ship-tight.jpg)
+![Seven Polar Bears in Svalbard](./Images/Svalbard/Svalbard9.jpeg)
+*Seven bears seen over 12 days*
 
-![Standing on Arctic ice that soon will melt](images/2024-norway-day-5-ultramarine-best-girls-on-ice.jpeg)
+![Quark Ultramarine at Camp Zoe, the Arctic](./Images/Svalbard/Svalbard10.jpeg)
+*Quark Ultramarine at Camp Zoe, the Arctic*
 
-![Arctic fox](images/2024-norway-day-10-ultramarine-hornsund-41-fox-face-tight.jpg)
+![Standing on Arctic ice that soon will melt](./Images/Svalbard/Svalbard11.jpeg)
+*Standing on Arctic ice that soon will melt*
 
-![Walruses in the Arctic](images/2024-norway-day-13-ultramarine-walruses-walrus-colony.jpg)
+![Arctic Fox](./Images/Svalbard/Svalbard6.jpeg)
+*Arctic Fox*
+
+![Walruses in the Arctic](./Images/Svalbard/Svalbard12.jpeg)
+*Walruses in the Arctic*
 
 We came home glowing, not just from the cold, and wondering (now that we have all this winter garb): how and when can we get to Antarctica?
 
@@ -130,18 +88,26 @@ In all, we saw six types of penguins (king, gentoos, macaroni, chinstrap, Adelie
 
 We got to admire the world’s largest iceberg, A23A, for hours; rammed the ship into sea/fast ice not once, but twice; and kayaked five glorious times, including being the first to do so in a glacial lake that had been frozen until now. On our last and best day, we strolled on the white continent at Recess Cove.
 
-![Volunteer Point king penguins](images/2024-octantis-volunteer-pt-best-best-girls-img_0116.jpg)
+![Volunteer Point king penguins](./Images/Antarctica/Antarctica2.jpeg)
+*Volunteer Point King Penguins*
 
-![We're on the white continent!](images/2024-octantis-recess-cove-best-best-girls-on-continent-recess-cove-img_8038-2.jpeg)
-![South Georgia penguins](images/2024-octantis-salisbury-plain-kings-best-best-img_8868.jpg)
+![We're on the white continent!](./Images/Antarctica/Antarctica3.jpeg)
+*We're on the White Continent!*
 
-![](images/2024-octantis-recess-cove-best-best-ship-tight-recess-cove-img_1148.jpg)
+![South Georgia penguins](./Images/Antarctica/Antarctica4.jpeg)
+*Thousands of penguins at Salsibury Point in South Georgia*
 
-![Kayak in Antarctica](images/2024-octantis-recess-cove-best-best-girls-kayak-img_1707.jpg)
+![The Octantis in Reeses Cove](./Images/Antarctica/Antarctica5.jpeg)
+*The majestic Viking Octantis*
 
-![Humpback whale snout](images/2024-octantis-recess-cove-amazing-whale-head-best-best-img_1945.jpg)
+![Kayak in Antarctica](./Images/Antarctica/Antarctica6.jpeg)
+*Kayaking adventures in Antarctica*
 
-![We saw six penguin species in Antarctica](images/2024-octantis-penguin-collage-best-best.jpg)
+![Humpback whale snout](./Images/Antarctica/Antarctica7.jpeg)
+*Humpback Whale*
+
+![We saw six penguin species in Antarctica](./Images/Antarctica/Antarctica8.jpeg)
+*Collage of the six penguin species we saw*
 
 I have been reliving our journey every day since our return, with appreciation, and longing.
 
@@ -193,33 +159,11 @@ Antarctica is almost entirely covered in ice; it has uniquely humongous ice shel
 
 Most of the ice in the Arctic is frozen sea, both seasonal and multi-year (however, Greenland's ice cap is the second largest in the world after Antarctica). The Arctic has more diversity with tundra, fjords and rolling hills, as well as more plant life and signs of history and civilization. It also had numerous ice sheets during our May journey.
 
-<figure>
+![](./Images/Svalbard/Svalbard13.jpeg)
+*Wijdefjorden fjord, Svalbard, Norway, aboard Quark Ultramarine*
 
-<figure>
-
-[![](images/2024-norway-day-7-ultramarine-wijdefjorden-76-miles-long-mountains-with-reflection.jpg)](https://meimeikirk.wordpress.com/wp-content/uploads/2025/02/2024-norway-day-7-ultramarine-wijdefjorden-76-miles-long-mountains-with-reflection.jpg)
-
-<figcaption>
-
-Wijdefjorden fjord, Svalbard, Norway, aboard Quark Ultramarine
-
-</figcaption>
-
-</figure>
-
-<figure>
-
-[![](images/2024-octantis-iceberg-and-zodiac-best-img_0046-2.jpg)](https://meimeikirk.wordpress.com/wp-content/uploads/2025/02/2024-octantis-iceberg-and-zodiac-best-img_0046-2.jpg)
-
-<figcaption>
-
-Greenwich Island, Antarctica, aboard Viking Octantis
-
-</figcaption>
-
-</figure>
-
-</figure>
+![](./Images/Antarctica/Antarctica9.jpeg)
+*Greenwich Island, Antarctica, aboard Viking Octantis*
 
 _Edge goes to: Antarctica_
 
@@ -247,33 +191,11 @@ Antarctica has about 5.8 million breeding pairs of penguins, the most anywhere. 
 
 And, Antarctica is a whale magnet: the Southern Ocean is the earth’s largest feeding ground for marine mammals, says the Antarctic and Southern Ocean Coalition.
 
-<figure>
+![Reindeer cautiously eye the polar bear](./Images/Svalbard/Svalbard14.jpeg)
+*Reindeer cautiously eyeing a polar bear*
 
-<figure>
-
-[![Reindeer cautiously eye the polar bear](images/2024-norway-day-14-ultramarine-polar-bear-6-27-reindeer-run-from-bear-3007446087-e1739019307177.jpg)](https://meimeikirk.wordpress.com/wp-content/uploads/2025/02/2024-norway-day-14-ultramarine-polar-bear-6-27-reindeer-run-from-bear-3007446087-e1739019307177.jpg)
-
-<figcaption>
-
-Reindeer cautiously eye a polar bear, Svalbard, Norway
-
-</figcaption>
-
-</figure>
-
-<figure>
-
-[![Gentoo penguins and whale](images/2024-octantis-wilhelmina-fast-ice-whale-at-shore-with-gentoos-wilhelmina-best-best-img_0844-1.jpg)](https://meimeikirk.wordpress.com/wp-content/uploads/2025/02/2024-octantis-wilhelmina-fast-ice-whale-at-shore-with-gentoos-wilhelmina-best-best-img_0844-1.jpg)
-
-<figcaption>
-
-Gentoo penguins admire a passing whale, Wilhelmina Bay, Antarctica
-
-</figcaption>
-
-</figure>
-
-</figure>
+![Gentoo penguins and whale](./Images/Antarctica/Antarctica10.jpeg)
+*Gentoo penguins admire a passing whale, Wilhelmina Bay, Antarctica*
 
 My husband, the homebody, often asks: why not just go to the zoo? My response: zoos are not natural habitats. In a zoo, you would not see a polar bear sliding down snowy hills, hovering for hours by a hole in the ice awaiting a seal to emerge, or catching a reindeer for a snack (a recent change in behavior due to shrinking ice and access to seals). In a zoo, you would not have penguins waddling past you (even as you attempt to back away the prerequisite 5-meters), hopping on and off icebergs, or stealing nesting rocks. And you would never see humpback whales. Period. (A few zoo/aquariums have belugas or orcas.)
 
@@ -317,33 +239,11 @@ But Amundsen continued to be drawn north, and attempted by ship and plane to rea
 
 While Peary was just miles from the North Pole in 1909, Amundsen was actually closer, though above it. That gives Amundsen the distinction of being the first to reach both the South and North Poles.
 
-<figure>
+![](./Images/Svalbard/Svalbard15.jpeg)
+*May 1926: Amundsen's dirigible prepares for its historic flight over the North Pole*
 
-<figure>
-
-[![](images/2024-norway-day-5-ultramarine-amundsen-dirigible-old-pix-with-mooring-mast.jpg)](https://meimeikirk.wordpress.com/wp-content/uploads/2025/02/2024-norway-day-5-ultramarine-amundsen-dirigible-old-pix-with-mooring-mast.jpg)
-
-<figcaption>
-
-May 1926: Amundsen's dirigible prepares for its historic flight over the North Pole
-
-</figcaption>
-
-</figure>
-
-<figure>
-
-[![](images/2024-norway-day-5-ultramarine-amundsen-mooring-mast-still-there-from-1926.jpg)](https://meimeikirk.wordpress.com/wp-content/uploads/2025/02/2024-norway-day-5-ultramarine-amundsen-mooring-mast-still-there-from-1926.jpg)
-
-<figcaption>
-
-May 2024: Amundsen's legacy still stands
-
-</figcaption>
-
-</figure>
-
-</figure>
+![](./Images/Svalbard/Svalbard16.jpeg)
+*May 2024: Amundsen's legacy still stands*
 
 _Edge goes to: the Arctic_
 
@@ -355,7 +255,7 @@ When you go to the Antarctic, you can sightsee in Buenos Aires and Ushuaia (with
 
 When you go to Svalbard, you can enjoy adventure activities such as dogsledding and snowmobiling earlier in the season (which was so much fun!); and easily visit Norway’s spectacular northern areas of Tromso, Senja and the Lofoten islands, which we also loved.
 
-For both, you’ll have the midnight sun nearly 24 hours a day in the summer, so 1) You will not see the northern lights and 2) You likely will have a hard time sleeping!
+For both, you’ll have the midnight sun nearly 24 hours a day in the summer, so 1. You will not see the northern lights and 2. You likely will have a hard time sleeping!
 
 _Edge goes to: the Arctic_
 
