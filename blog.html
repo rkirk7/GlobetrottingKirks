@@ -1,20 +1,12 @@
-<!-- blog.html -->
-<div class="container my-5">
-  <h1 class="text-center mb-5">Mei-Mei's Travel Blog</h1>
+<div class="container-fluid my-5">
   <div class="row">
-    <!-- Table of Contents -->
-    <div class="col-md-3 mb-4">
-      <div class="card shadow-sm">
-        <div class="card-body">
-          <h5 class="card-title">Table of Contents</h5>
-          <ul id="toc" class="list-unstyled"></ul>
-        </div>
-      </div>
-    </div>
+    <!-- Sidebar TOC -->
+    <nav id="toc" class="col-md-3 d-none d-md-block bg-light position-sticky" style="top: 80px; max-height: 90vh; overflow-y:auto;">
+      <h5 class="p-3">Table of Contents</h5>
+      <ul class="nav flex-column" id="toc-list"></ul>
+    </nav>
 
-    <!-- Blog Content -->
-    <div class="col-md-9">
-      <div id="blog-container"></div>
-    </div>
+    <!-- Blog posts -->
+    <div id="blog-container" class="col-md-9"></div>
   </div>
 </div>

@@ -262,3 +262,21 @@ footer {
   transform: scale(1.03);
   box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
+
+
+#toc .nav-link {
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+#toc .nav-link span {
+  margin-right: 0.5rem;
+  transition: transform 0.3s;
+}
+
+/* Rotate caret when open */
+.collapse.show ~ .card-header span,
+.card-header[aria-expanded="true"] span {
+  transform: rotate(90deg);
+}
