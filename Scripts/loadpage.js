@@ -4,10 +4,6 @@ async function loadPage(page) {
   const element = document.getElementById("content");
   element.innerHTML = content;
 
-  // Page-specific initialization
-  if (page === "albums.html") {
-    initAlbums();
-  } else if (page === "blog.html") {
-    initBlog();
-  }
+  if (page === 'albums.html') initAlbums();
+  if (page === 'blog.html') initBlog();
 }
