@@ -191,6 +191,19 @@ img.img-fluid:hover {
   text-align: center;
 }
 
+.blog-post-content ul,
+.blog-post-content ol {
+    margin-left: 1.5rem;   /* indent properly */
+    padding-left: 1.2rem;  /* extra spacing */
+    list-style-position: outside;
+    font-weight: normal;    /* override any bold from card styles */
+}
+
+.blog-post-content li {
+    margin-bottom: 0.5rem; /* spacing between bullets */
+    font-weight: normal;
+}
+
 .blog-post-content p {
   line-height: 1.6;
   margin-bottom: 1rem;
