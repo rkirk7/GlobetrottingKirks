@@ -1,28 +1,5 @@
----
-title: "Is Antarctica calling you? Here's everything you need to know."
-date: 2025-01-29
-categories: 
-  - "antarctica"
-  - "cruise"
-tags: 
-  - "a23a"
-  - "adventure-travel"
-  - "avian-flu"
-  - "drake-passage"
-  - "expedition"
-  - "falkland-islands"
-  - "gentoo-penguins"
-  - "humpback-whales"
-  - "king-penguins"
-  - "macaroni-penguins"
-  - "octantis"
-  - "penguins"
-  - "south-georgia"
-  - "south-america"
-  - "travel"
-  - "viking"
-coverImage: "2024-octantis-recess-cove-explorers-on-the-continent-recess-cove-best-best-img_1371.jpg"
----
+# Is Antarctica calling you? Here's everything you need to know.
+*2025-01-29*
 
 I must confess. Not that long ago, I was not all that interested in visiting Antarctica.
 
@@ -38,15 +15,23 @@ It's hard to grasp the immensity of what's in front of you. The white continent'
 
 But what really bedazzled me was the exuberant wildlife, fearless and thriving here at the end of the world. Playful penguins swimming, porpoising (leaping) and hopping on and off tiny icebergs in the middle of nowhere; fur seal pups tussling while adults tangle; and humpbacks spouting in the distance or feasting on krill nearby. I was giddy with delight over each startling juxtaposition; such amazing vitality in this harsh and unforgiving environment.
 
-![](images/2024-octantis-recess-cove-best-best-gentoo-welcome-to-continent-recess-cove-img_1281.jpg)
+![Gentoo penguins](./Images/Antarctica/Antarctica11.jpeg)
+*Gentoo penguins welcoming us to Reeses Cove*
 
-![Fur seal pups at Grytviken, South Georgia](images/2024-octantis-grytviken-seal-babies-best-best-img_9165-2230097834-e1738151174605-edited.jpg)
-![Macaroni penguins, South Georgia](images/2024-octantis-royal-bay-macaronis-best-best-untitled-video-frame-at-1m9s.jpg)
+![Fur seal pups at Grytviken, South Georgia](./Images/Antarctica/Antarctica12.jpeg)
+*Fur seal pups at Grytviken, South Georgia*
 
-![Gentoo penguins and whale](images/2024-octantis-wilhelmina-fast-ice-whale-at-shore-with-gentoos-wilhelmina-best-best-img_0844-1.jpg)
-![We're on the white continent!](images/2024-octantis-recess-cove-best-best-girls-on-continent-recess-cove-img_8038-2.jpeg)
+![Macaroni penguins, South Georgia](./Images/Antarctica/Antarctica13.jpeg)
+*Maraconi penguins in South Georgia*
 
-![Explorers on the white continent at Recess Cove, Antarctica](images/2024-octantis-recess-cove-explorers-on-the-continent-recess-cove-best-best-img_1371.jpg)
+![Gentoo penguins and whale](./Images/Antarctica/Antarctica14.jpeg)
+*Gentoo penguins watch a humpback whale go by*
+
+![We're on the white continent!](./Images/Antarctica/Antarctica3.jpeg)
+*We're on the White Continent!*
+
+![Explorers on the white continent at Recess Cove, Antarctica](./Images/Antarctica/Antarctica1.jpeg)
+*Explorers on the White Continent at Recess Cove, Antarctica*
 
 **[Check out our photo highlights!](https://photos.app.goo.gl/CzyikJgCZ2AZp8YFA)**
 
@@ -111,9 +96,11 @@ Simplistically, the Arctic is by the north pole and has polar bears. The Antarct
 
 These are less frequented British Overseas Territories somewhat near the Antarctic peninsula that boast incredible densities of wildlife: millions of penguins, seals and birds. The Falklands and South Shetlands are archipelagos while South Georgia is a narrow island. During the height of the breeding season in November/December, South Georgia is said to have more wildlife per square foot than any other place on the planet. Nearly 5 million seals and 1 million King penguins, half of the world's population, are in South Georgia--not in Antarctica. The small king penguin colony at Port Stanley in the Falklands and the enormous one in South Georgia were two of the most remarkable experiences we've ever had.
 
-![Volunteer Point king penguins](images/2024-octantis-volunteer-pt-best-best-girls-img_0116.jpg)
+![Volunteer Point king penguins](./Images/Antarctica/Antarctica2.jpeg)
+*King Penguins at Volunteer Point, Falkland Islands*
 
-![Astonishing Salisbury Plain in South Georgia, with 100,000 king penguins](images/2024-octantis-salisbury-plain-kings-best-best-img_8868.jpg)
+![Astonishing Salisbury Plain in South Georgia, with 100,000 king penguins](./Images/Antarctica/Antarctica4.jpeg)
+*Astonishing Salisbury Plain in South Georgia, with 100,000 king penguins*
 
 #### Where can I see Emperor penguins?
 
@@ -135,7 +122,8 @@ There are 61 polar vessels listed as members by IAATO, carrying from 13 to 500 p
 
 Larger cruise ships also go to Antarctica but are not allowed to do any landings if they hold 501 passengers or more. These would be the most economical but really, what's the point?
 
-[![](images/2024-octantis-recess-cove-best-best-ship-tight-recess-cove-img_1148.jpg)](https://meimeikirk.wordpress.com/wp-content/uploads/2025/01/2024-octantis-recess-cove-best-best-ship-tight-recess-cove-img_1148.jpg)
+![The Octantis in Antarctica](./Images/Antarctica/Antarctica5.jpeg)
+*The majestic Viking Octantis*
 
 After our research, we did not feel it was worth the trip without including the Falklands and South Georgia and their vast numbers of wildlife, including king and macaroni penguins and seals. This itinerary is offered less frequently, takes longer and costs more--but it also goes through the Drake just once. If you choose this option, it will greatly narrow down your choices. We highly recommend it!
 
