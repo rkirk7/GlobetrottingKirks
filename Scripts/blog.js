@@ -31,12 +31,23 @@ async function initBlog() {
   postsData.sort((a, b) => new Date(b.filename.slice(0, 10)) - new Date(a.filename.slice(0, 10)));
 
   postsData.forEach((postData, index) => {
-    const html = marked.parse(postData.content);
+    let html = marked.parse(postData.content);
+
+    // Generate ids for headings so in-page links work
+    const tempDiv = document.createElement("div");
+    tempDiv.innerHTML = html;
+    tempDiv.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(h => {
+      const id = h.textContent.trim().toLowerCase()
+        .replace(/[^\w]+/g, "-")
+        .replace(/^-+|-+$/g, "");
+      h.id = id;
+    });
+    html = tempDiv.innerHTML;
+
     const collapseId = `postCollapse${index}`;
     const postId = `post${index}`;
     const postTitle = extractTitle(postData.content) || postData.filename;
 
-    // Add TOC links
     const addTocLink = (ul) => {
       const li = document.createElement("li");
       li.classList.add("nav-item");
@@ -48,6 +59,7 @@ async function initBlog() {
         const collapseEl = document.getElementById(collapseId);
         const bsCollapse = bootstrap.Collapse.getOrCreateInstance(collapseEl, { toggle: true });
         bsCollapse.show();
+
         document.getElementById(postId).scrollIntoView({ behavior: "smooth" });
 
         const offcanvasEl = document.getElementById("offcanvasToc");
@@ -60,7 +72,6 @@ async function initBlog() {
     addTocLink(tocList);
     addTocLink(tocListMobile);
 
-    // Style images
     const htmlWithStyledImages = html.replace(
       /<img /g,
       '<img class="img-fluid mb-3" style="max-width:50%;display:block;margin:0.5rem auto;" '
@@ -70,7 +81,6 @@ async function initBlog() {
     postDiv.classList.add("card", "shadow-lg", "mb-3");
     postDiv.id = postId;
 
-    // Start with collapse shown
     postDiv.innerHTML = `
       <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center" 
            style="cursor:pointer;" 
@@ -90,7 +100,6 @@ async function initBlog() {
     const collapseEl = postDiv.querySelector(`#${collapseId}`);
     const caretEl = postDiv.querySelector(".caret");
 
-    // Rotate caret only
     collapseEl.addEventListener("show.bs.collapse", () => {
       caretEl.style.transform = "rotate(90deg)";
     });
