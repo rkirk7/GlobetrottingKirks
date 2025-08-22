@@ -11,7 +11,7 @@ Three months into retirement and I’m either excelling or failing, depending o
 - Hosted a tennis dress collection party to benefit PACE as my first post-retirement project, mustering 228 garments and $1085 thanks to generous friends and an awesome planning team.
     
 ![Alt text](../Images/Blog/best-pace-planners.jpg "Pace Party Planners")
-*Awesome love that tennis dress party planners to support PACE center for girls*
+*Love that tennis dress party planners to support PACE center for girls*
 
 - Instigated brainstorming to support Courtney Vernon, coach of the FGCU women's tennis team.
 - Established my local Perkins as my consulting office
@@ -24,7 +24,10 @@ Three months into retirement and I’m either excelling or failing, depending o
 
 The best part of retirement is not grappling with hundreds of emails daily, mostly complaints/concerns/problems of various types. It's still astonishing to go hours without a single new email. Where is everyone?
 
-The worst![Alt text](..Images/Blog/ceo-of-retirement.jpg "CEO of Retirement") part is having to deal with technology myself--I still haven’t gotten the calendars and contacts to completely sync across the laptop, outlook, Microsoft mail and my Iphone.
+![Alt text](..Images/Blog/ceo-of-retirement.jpg "CEO of Retirement")
+*CEO of Retirement*
+
+The worst part of being the CEO of retirement is having to deal with technology myself--I still haven’t gotten the calendars and contacts to completely sync across the laptop, outlook, Microsoft mail and my Iphone.
 
 So I often don't know what day it is, or what I've got going on, much to Randy's dismay. My calendar isn't syncing, I complain. _My_ calendar works just fine, he says--referring to his meticulous word document. (This is also the man who despises smart phones because he thinks they make people stupid. Maybe he's right.)
 
