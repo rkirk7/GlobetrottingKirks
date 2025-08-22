@@ -7,7 +7,8 @@ async function initBlog() {
     "2023-07-20-come-safari-with-us.md",
     "2023-02-25-100-miles-in-10-days-the-nearly-perfect-patagonia-hiking-trip",
     "2022-10-20-paradise-found-french-polynesia",
-    "blog-posts/2022-06-13-enchanting-galapagos-a-wildlife-wonderland.md"
+    "2022-06-13-enchanting-galapagos-a-wildlife-wonderland.md"
+
   ];
 
   const container = document.getElementById("blog-container");
