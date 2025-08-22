@@ -15,67 +15,67 @@ Dad had passed two years earlier; mom wasn't inclined to tackle such a big trip;
 
 What a fascinating journey of discovery.
     
-![](images/taishan-bai-san-prep-best-2016-06-26-009.jpg)
+![](./Images/Heritage/taishan-bai-san-prep-best-2016-06-26-009.jpg)
 *"Bai San" ritual to pay respects to our ancestors in Taishan*
     
-![](images/taishan-villages-mom-front-door-best-2016-06-25-160.jpg)
+![](./Images/Heritage/taishan-villages-mom-front-door-best-2016-06-25-160.jpg)
 *The house in Taishan where my mother grew up, built by my great-grandfather around 1935*
 
-![](images/taishan-villlages-mom-overview-best-e1629978829409.jpg)
+![](./Images/Heritage/taishan-villlages-mom-overview-best-e1629978829409.jpg)
 *The Taishan village where my mom grew up. On the right is the community center built by many of us former villagers.*
 
-![](images/taishan-villages-mom-family-best-2016-06-26-050.jpg)
+![](./Images/Heritage/taishan-villages-mom-family-best-2016-06-26-050.jpg)
 *Family heritage new-union with mom's cousin (bottom left) and family in Taishan*
     
-![](images/taishan-bai-san-tommy-lews-parents-best.jpg)
+![](./Images/Heritage/taishan-bai-san-tommy-lews-parents-best.jpg)
 *Grave of my great-grandparents in the hills of Taishan*
     
-![](images/taishan-villages-mom-house-serenade-2016-06-26-138.jpg)
+![](./Images/Heritage/taishan-villages-mom-house-serenade-2016-06-26-138.jpg)
 *Seeing my daughter sing in the house where my mother grew up was surreal*
     
-![](images/taishan-villages-dad-best-best.jpg)
+![](./Images/Heritage/taishan-villages-dad-best-best.jpg)
 *The village where my dad grew up.*
     
-![](images/taishan-villages-mom-cousin-gum-picked-peanuts-best-2016-06-26-005.jpg)
+![](./Images/Heritage/taishan-villages-mom-cousin-gum-picked-peanuts-best-2016-06-26-005.jpg)
 *This is how peanuts look when harvested, just the way it's been done for a thousand years in the village*
     
-![](images/taishan-bai-san-2016-06-26-085.jpg)
+![](./Images/Heritage/taishan-bai-san-2016-06-26-085.jpg)
  *Tradition requires a feast at the gravesites, now located in the midst of woods.*
     
-![](images/taishan-bai-san-firecrackers-img_2191.jpg)
+![](./Images/Heritage/taishan-bai-san-firecrackers-img_2191.jpg)
  *Tradition requires a feast and firecrackers at the gravesites, now located in the midst of woods.*
     
-![](images/taishan-bai-san-moms-older-brother-1933-1940-jeen-hong-2016-06-26-069.jpg)
+![](./Images/Heritage/taishan-bai-san-moms-older-brother-1933-1940-jeen-hong-2016-06-26-069.jpg)
 *Paying our respects at the grave of my mother's older brother, who died as a youth.*
     
-![](images/taishan-bai-san-tommy-lews-parents-2016-06-26-066.jpg)
+![](./Images/Heritage/taishan-bai-san-tommy-lews-parents-2016-06-26-066.jpg)
 *Paying our respects to my great-grandparents' grave.*
     
-![](images/hong-kong-heritage-walk-nam-hang-best-where-we-lived-in-new-territories-img_1712.jpg)
+![](./Images/Heritage/hong-kong-heritage-walk-nam-hang-best-where-we-lived-in-new-territories-img_1712.jpg)
 *The New Territories village we lived in when I was a child in Hong Kong*
     
-![](images/1965-chan-fam-hk-1965-with-uncle-jul-new-territories.jpg)
+![](./Images/Heritage/1965-chan-fam-hk-1965-with-uncle-jul-new-territories.jpg)
  *Dining with Uncle Jul 1965 at our home in New Territories in Hong Kong, 2 years before we left for America. Note my dog below.*
     
-![](images/chan-fam-coming-to-america-feb-25-1967.jpg)
+![](./Images/Heritage/chan-fam-coming-to-america-feb-25-1967.jpg)
 *Coming to America: Our family in 1967, ready to emigrate from Hong Kong to Chicago.*
 
-![](images/hong-kong-heritage-138-shaukiwan-rd.-5th-floor-where-we-rented-1963-65-img_5200.jpg)
+![](./Images/Heritage/hong-kong-heritage-138-shaukiwan-rd.-5th-floor-where-we-rented-1963-65-img_5200.jpg)
  *We lived at the location when I was a child; there is now an English school inside.*
   
-![](images/taishan-villages-dad-rice-mill-for-nephews-2016-06-25-085.jpg)
+![](./Images/Heritage/taishan-villages-dad-rice-mill-for-nephews-2016-06-25-085.jpg)
 *My parents had paid for a rice mill for dad's nephews to make a living. It's now deserted.*
 
-![](images/gramps-in-china-1987-q.jpg)
+![](./Images/Heritage/gramps-in-china-1987-q.jpg)
 *Dad visiting his nephews and the rice mill he invested in for them, 1987.*
 
-![](images/fook-loui-1915.png)
+![](./Images/Heritage/fook-loui-1915.png)
 *My paternal great-grandfather, Fook Loui, 1915: he actually became a U.S. citizen in 1913 having claimed to have been born in San Francisco.*
  
-![](images/chan-fam-mak-fung-ho-lee-fung-cheung-tommys-mom-soo-circa-1957.jpg)
+![](./Images/Heritage/chan-fam-mak-fung-ho-lee-fung-cheung-tommys-mom-soo-circa-1957.jpg)
 *From left, my maternal grandmother, paternal great-grandmother and my mom: three women of extraordinary courage.*
     
-![](images/tommy-paper-son-cid-pix-1923.png)
+![](./Images/Heritage/tommy-paper-son-cid-pix-1923.png)
 *My maternal grandfather, Tommy Lew, when he came to America in 1923 as a paper son. He was held at Angel Island for weeks.*
 
 ​In Hong Kong, where I lived from age 2 to 7, we went to:
@@ -121,5 +121,5 @@ I have long wanted to write our family story, especially focusing on the courage
 
 It's a story that deserves telling. And I will.
 
-[![](images/best-fung-ho-with-family-1930ish-mm-family-story.jpg)](https://meimeichan.com/wp-content/uploads/2021/08/best-fung-ho-with-family-1930ish-mm-family-story.jpg)
+![](./Images/Heritage/best-fung-ho-with-family-1930ish-mm-family-story.jpg)
 *My grandmother, far right, holding her eldest child, with members of our extended family. Circa 1930s.*
