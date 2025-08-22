@@ -1,14 +1,6 @@
 ---
-title: "Reunion magic: Yes, you can go home again"
-date: 2015-09-28
-tags: 
-  - "champaign"
-  - "chicago"
-  - "going-home-again"
-  - "goudy"
-  - "lane-tech"
-  - "reunion"
----
+# Reunion magic: Yes, you can go home again
+*2015-09-28*
 
 **Chapter one of three**
 
@@ -24,9 +16,10 @@ After I retired June 12, one of my first projects was to rally the gang to reuni
 
 The typical school reunions did not appeal to us because our cohorts were too large (1,000 at Lane Tech High School, where we graduated in 1977) and truly, there were only a few who mattered. Since graduating from the University of Illinois (Champaign/Urbana) in 1981, our interactions were rare and often only through Facebook and holiday cards.
 
-\[caption id="attachment\_86" align="alignright" width="300"\]![](images/img_7851-2.jpg) 1977 graduates of Lane Tech High School attempt to spell out LANE.\[/caption\]
+![Alt text](../Images/Blog/img_7851-2.jpg)
+*1977 graduates of Lane Tech High School attempt to spell out LANE.*
 
-And thus, the weekend of Sept. 18 became the magnificent reunion as 11 of us from grammar school, high school and college came together, with six flying in from around the country. Another 12 came to a festive dinner in Chinatown (which has sprawled nicely). And to top it off, our favorite teacher, from high school, dropped in.<!--more-->
+And thus, the weekend of Sept. 18 became the magnificent reunion as 11 of us from grammar school, high school and college came together, with six flying in from around the country. Another 12 came to a festive dinner in Chinatown (which has sprawled nicely). And to top it off, our favorite teacher, from high school, dropped in.
 
 So many emotions surged and swirled as we shrieked, hugged, laughed, cried, reminisced, shared, interrogated, gawked and gushed. What happened with you; what are you doing; how many kids do you have; what are they doing; how about so and so; what’s important to you; _how are you, really_. So much to learn in a short time.
 
@@ -36,9 +29,11 @@ Yes. And yes. Because our roots are indelibly intertwined. We nurtured each oth
 
 All these years later, Sue and Bill were still sweet and gentle; Bernice quiet with a bite; Linda, Eileen and Bill, all no-nonsense; Tak mature before his time; and David, always the questioner. Our dwarf nicknames turned out omniscient for some--Sleepy turned out to have sleep apnea; Sneezy had health issues; and Doc became a doctor--and ironic for others--Happy is grappling with tough issues. (If you must know, I was Dopey, because as the leader, I knew no one else would want to be.)
 
-[![Gang at Sue and Bill wedding (2)](images/gang-at-sue-and-bill-wedding-2.jpg)](https://meimeichan.com/wp-content/uploads/2015/09/gang-at-sue-and-bill-wedding-2.jpg) [![Chicago 9.15 434 (2)](images/chicago-9-15-434-2.jpg)](https://meimeichan.com/wp-content/uploads/2015/09/chicago-9-15-434-2.jpg)
+![Wedding Picture](..Images/Blog/gang-at-sue-and-bill-wedding-2.jpg)]
+*August 1981: U of I alum celebrate Sue and Bill's wedding.*
 
-_(Left) August 1981: U of I alum celebrate Sue and Bill's wedding. (Right) September 2015: Sue tries to recall who all her guests were and what they're doing now._   
+![Wedding Picture](..Images/Blog/chicago-9-15-434-2.jpg)]
+*September 2015: Sue tries to recall who all her guests were and what they're doing now.*
 
 Because of those bonds, we noticeably granted each other more respect, more patience, more acceptance than we typically would with strangers (and sometimes loved ones). Even if we didn’t quite see eye to eye, we had no desire to go toe to toe.
 
@@ -48,7 +43,8 @@ But we shared painful moments, too, of feeling uncertain and alienated as youngs
 
 Today, as 60 looms, we’re all in transition: some are thinking of retirement, cutting back to enjoy life more—or are already doing so; others just became empty nesters and are pondering the next phase. What does the future hold? Stay tuned, we said to each other.
 
-\[caption id="attachment\_79" align="alignright" width="300"\]![IMG_3544](images/img_3544.jpg) U of I graduates and spouses reunite in September for the first time since 1981 (not all are pictured).\[/caption\]
+![U of I Graduates and Spouses](..Images/Blog/img_3544.jpg) 
+*U of I graduates and spouses reunite in September for the first time since 1981 (not all are pictured).*
 
 We talked about the next reunion, without resolution. (Burning Man! Champaign! San Francisco! A cruise!) We left each other joyfully, knowing that part of us lives on, in other hearts.
 
@@ -60,8 +56,6 @@ And I choked up as I thanked them for shaping me into who I am.
 
 We all have people like these in our lives—even if you don’t think you do. No need to wait 30 years or travel long distances. Reach out today.
 
-**_Reunion Magic_**
+**Chapter Two: Returning to the old haunts of grammar and high schools**
 
-_**Chapter Two: [Returning to the old haunts of grammar and high schools](https://meimeikirk.wordpress.com/2015/10/03/reunion-magic-returning-to-goudy-and-lane/)**_
-
-_**Chapter Three: [Family intersections and crossroads](https://meimeikirk.wordpress.com/2015/10/13/reunion-magic-family-intersections-and-crossroads/)**_
+**Chapter Three: Family intersections and crossroads**
