@@ -27,28 +27,25 @@ async function initBlog() {
   const postsData = await Promise.all(
     posts.map(async post => {
       let text = await fetch(`blog-posts/${post}`).then(res => res.text());
-      // Remove YAML frontmatter
       text = text.replace(/^---[\s\S]*?---/, '').trim();
-      // Remove injected <link> or <h1> at top
       text = text.replace(/^(<link[\s\S]*?>|<h1[\s\S]*?>[\s\S]*?<\/h1>)/i, '').trim();
       return { filename: post, content: text };
     })
   );
 
-  // Sort posts by date descending
   postsData.sort((a, b) => new Date(b.filename.slice(0, 10)) - new Date(a.filename.slice(0, 10)));
 
   postsData.forEach((postData, index) => {
     const html = marked.parse(postData.content);
-
     const collapseId = `postCollapse${index}`;
     const postId = `post${index}`;
     const postTitle = extractTitle(postData.content) || postData.filename;
 
+    // TOC links for desktop & mobile
     const addTocLink = (ul) => {
       const li = document.createElement("li");
       li.classList.add("nav-item");
-      li.innerHTML = `<a class="nav-link" href="#${postId}">&#9654; ${postTitle}</a>`;
+      li.innerHTML = `<a class="nav-link" href="#${postId}">${postTitle}</a>`;
       ul.appendChild(li);
 
       li.querySelector("a").addEventListener("click", e => {
@@ -67,17 +64,18 @@ async function initBlog() {
     addTocLink(tocList);
     addTocLink(tocListMobile);
 
+    // Create post card
     const postDiv = document.createElement("div");
     postDiv.classList.add("card", "shadow-lg", "mb-3");
     postDiv.id = postId;
 
     postDiv.innerHTML = `
-      <div class="card-header bg-primary text-white" 
-           style="cursor:pointer;" 
-           data-bs-toggle="collapse" 
-           data-bs-target="#${collapseId}" 
+      <div class="card-header bg-primary text-white"
+           style="cursor:pointer;"
+           data-bs-toggle="collapse"
+           data-bs-target="#${collapseId}"
            aria-expanded="true">
-        <span class="post-title">${postTitle}</span>
+        <span class="post-title d-none">${postTitle}</span>
       </div>
       <div id="${collapseId}" class="collapse show">
         <div class="card-body blog-post-content">${html}</div>
@@ -89,12 +87,9 @@ async function initBlog() {
     const collapseEl = postDiv.querySelector(`#${collapseId}`);
     const titleEl = postDiv.querySelector(".post-title");
 
-    collapseEl.addEventListener("show.bs.collapse", () => {
-      titleEl.textContent = ""; // blank when expanded
-    });
-    collapseEl.addEventListener("hide.bs.collapse", () => {
-      titleEl.textContent = postTitle; // show title when collapsed
-    });
+    // Show title when collapsed, hide when expanded
+    collapseEl.addEventListener("show.bs.collapse", () => titleEl.classList.add("d-none"));
+    collapseEl.addEventListener("hide.bs.collapse", () => titleEl.classList.remove("d-none"));
   });
 }
 
