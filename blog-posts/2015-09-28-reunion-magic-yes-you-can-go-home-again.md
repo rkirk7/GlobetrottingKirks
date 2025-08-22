@@ -55,7 +55,3 @@ I was moved to express my pride in their accomplishments, especially those who w
 And I choked up as I thanked them for shaping me into who I am.
 
 We all have people like these in our lives—even if you don’t think you do. No need to wait 30 years or travel long distances. Reach out today.
-
-**Chapter Two: Returning to the old haunts of grammar and high schools**
-
-**Chapter Three: Family intersections and crossroads**
