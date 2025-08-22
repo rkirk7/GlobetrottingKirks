@@ -16,7 +16,7 @@ After I retired June 12, one of my first projects was to rally the gang to reuni
 
 The typical school reunions did not appeal to us because our cohorts were too large (1,000 at Lane Tech High School, where we graduated in 1977) and truly, there were only a few who mattered. Since graduating from the University of Illinois (Champaign/Urbana) in 1981, our interactions were rare and often only through Facebook and holiday cards.
 
-![Alt text](../Images/Blog/img_7851-2.jpg)
+![Lane Graduates](../Images/Blog/img_7851-2.jpg)
 *1977 graduates of Lane Tech High School attempt to spell out LANE.*
 
 And thus, the weekend of Sept. 18 became the magnificent reunion as 11 of us from grammar school, high school and college came together, with six flying in from around the country. Another 12 came to a festive dinner in Chinatown (which has sprawled nicely). And to top it off, our favorite teacher, from high school, dropped in.
@@ -29,10 +29,10 @@ Yes. And yes. Because our roots are indelibly intertwined. We nurtured each oth
 
 All these years later, Sue and Bill were still sweet and gentle; Bernice quiet with a bite; Linda, Eileen and Bill, all no-nonsense; Tak mature before his time; and David, always the questioner. Our dwarf nicknames turned out omniscient for some--Sleepy turned out to have sleep apnea; Sneezy had health issues; and Doc became a doctor--and ironic for others--Happy is grappling with tough issues. (If you must know, I was Dopey, because as the leader, I knew no one else would want to be.)
 
-![Wedding Picture](..Images/Blog/gang-at-sue-and-bill-wedding-2.jpg)]
+![Wedding Picture](..Images/Blog/gang-at-sue-and-bill-wedding-2.jpg)
 *August 1981: U of I alum celebrate Sue and Bill's wedding.*
 
-![Wedding Picture](..Images/Blog/chicago-9-15-434-2.jpg)]
+![Wedding Picture](..Images/Blog/chicago-9-15-434-2.jpg)
 *September 2015: Sue tries to recall who all her guests were and what they're doing now.*
 
 Because of those bonds, we noticeably granted each other more respect, more patience, more acceptance than we typically would with strangers (and sometimes loved ones). Even if we didn’t quite see eye to eye, we had no desire to go toe to toe.
