@@ -14,7 +14,7 @@ In 2021, we had hiked 108 miles over 20 days in [six U.S. western parks.](http:/
 In Patagonia, we hiked all day long nearly every day. We did 59.5 miles in seven days in Torres Del Paine in Chile and 39 miles in three days at Glaciares National Park in Argentina, with a total elevation change of 26,869 feet--Everest is 29,035 feet. This was the most we've ever done in one swoop, and we loved it, even though we caught colds right at the start. Here are details of how our (nearly) perfect plan unfolded.
 
 
-<!-- ### Table of Contents
+### Table of Contents
 1. [Hotel Las Torres to Mirador base de Las Torres (twice)](#hotel-las-torres-to-mirador-base-de-las-torres-twice)
 2. [Chileno to Cuernos](#chileno-to-cuernos)
 3. [Cuernos to Frances Valley and Paine Grande](#cuernos-to-frances-valley-and-paine-grande)
@@ -23,7 +23,7 @@ In Patagonia, we hiked all day long nearly every day. We did 59.5 miles in seven
 6. [Christmas Day "rest" to Miradores Condor y Alguila and Salto Waterfall](#christmas-day-rest-to-miradores-condor-y-alguila-and-salto-waterfall)
 7. [Laguna de Los Tres aka Fitz Roy](#laguna-de-los-tres-aka-fitz-roy)
 8. [Laguna Torres: finishing 100 miles in 10 days!](#laguna-torres-finishing-100-miles-in-10-days)
-9. [Bonus: How did Fitz Roy compare with Torres Del Paine?](#bonus-how-did-fitz-roy-compare-with-torres-del-paine) -->
+9. [Bonus: How did Fitz Roy compare with Torres Del Paine?](#bonus-how-did-fitz-roy-compare-with-torres-del-paine)
 
 
 Days 1-3: Travel to Santiago, Chile, hiking 11.8 miles around Cerro San Cristobal on our "rest" day (not included in the 100 miles! Nor are our five miles at Iguazu Falls at the end).
@@ -49,17 +49,20 @@ Filled with gorgeous peaks, glaciers and lakes, this national park is set up wit
 *24.54 miles, 8,876 feet elevation change, 14 hours 30* (Regan's stats; I did half this)
 
 - Arrived from Santiago via Puerto Natales. Hotel was OK, with tight motel-style rooms, good food and service. It commands a ridiculous price due to its location. We did a short hike to the lake.
-    - The next day, I didn't feel well, so Regan headed up to the Mirador base de las Torres, one of the park's highlights with three granite towers soaring over a glacial lake. It took her 7 hours 15 minutes to go 11.81 miles with 4,537 feet elevation change. The hardest part was having to come all the way back down to the hotel, she said as she collapsed onto the floor.
-        - FYI you can do the same day hike without doing the full W trek.
-    
-    - On our checkout day: We pondered briefly backing off due to my cold but, really, do you know me? It took two hours to go 3.5 miles to the small Chileno refuge, where we would spend the night. Since there was nowhere to relax and hours before our check-in, we continued up.
-        - It took three hours (2.5 miles) to the mirador, going slowly through the last .8 miles filled with a steep boulder field. And then, you're rewarded with your first glimpse of the towers. Over the lip, and there's the iconic image of the towers above glacial lake Torres. We had fabulous weather, even clearer than when Regan went up the day before.
-        
-        - Two hours back down to Chileno. Total was 9 miles, 3,723 feet elevation change in 7 hours 15--the same amount of time Regan took yesterday to go up and ALL the way back down!
-        
-        - At Chileno, we were in a tight six-bunk room with three others that had mattresses and sleeping bags rather than blankets. This would be the most primitive refugio we used, though we would discover all were similar: segregated bathrooms with cold basins and hot showers, kiosks to buy wifi, available outlets, communal dining areas, and bland, unappetizing meals including watery soup, mystery meat, messy mashed potatoes and scrambled eggs every day.
-        
-        - Dining tip: they'll ask for food preferences (and passports) when you check-in. If you say "no red meat," you'll hopefully get chicken, which was the best thing we ate. Or you may get vegetarian, which I found mostly inedible. Better still, treat yourself to pizzas frequently.
+
+- The next day, I didn't feel well, so Regan headed up to the Mirador base de las Torres, one of the park's highlights with three granite towers soaring over a glacial lake. It took her 7 hours 15 minutes to go 11.81 miles with 4,537 feet elevation change. The hardest part was having to come all the way back down to the hotel, she said as she collapsed onto the floor.
+
+- FYI you can do the same day hike without doing the full W trek.   
+
+- On our checkout day: We pondered briefly backing off due to my cold but, really, do you know me? It took two hours to go 3.5 miles to the small Chileno refuge, where we would spend the night. Since there was nowhere to relax and hours before our check-in, we continued up.
+
+ - It took three hours (2.5 miles) to the mirador, going slowly through the last .8 miles filled with a steep boulder field. And then, you're rewarded with your first glimpse of the towers. Over the lip, and there's the iconic image of the towers above glacial lake Torres. We had fabulous weather, even clearer than when Regan went up the day before.
+
+- Two hours back down to Chileno. Total was 9 miles, 3,723 feet elevation change in 7 hours 15--the same amount of time Regan took yesterday to go up and ALL the way back down!
+
+- At Chileno, we were in a tight six-bunk room with three others that had mattresses and sleeping bags rather than blankets. This would be the most primitive refugio we used, though we would discover all were similar: segregated bathrooms with cold basins and hot showers, kiosks to buy wifi, available outlets, communal dining areas, and bland, unappetizing meals including watery soup, mystery meat, messy mashed potatoes and scrambled eggs every day.
+
+- Dining tip: they'll ask for food preferences (and passports) when you check-in. If you say "no red meat," you'll hopefully get chicken, which was the best thing we ate. Or you may get vegetarian, which I found mostly inedible. Better still, treat yourself to pizzas frequently.
 
 ## Chileno to Cuernos
 
@@ -101,7 +104,7 @@ Filled with gorgeous peaks, glaciers and lakes, this national park is set up wit
 
 - We finally wised up and order a pizza. After five days of bland mystery meat and trail mix, it seemed the most delicious thing we've ever eaten. (We also bought wifi for the first time, and found we hadn't miss a thing.)
 
-##Grey Glacier hike, wrapping up our W Trek
+## Grey Glacier hike, wrapping up our W Trek
 
 *2.63 miles (half on crampons), 483 feet elevation change, 3 hours*
 
@@ -109,7 +112,7 @@ Filled with gorgeous peaks, glaciers and lakes, this national park is set up wit
 
 Days 11-12: Instead of hiking back to Paine Grande to depart by ferry, we took the Grey Navigation boat for more great views of the glacier in ferocious winds. We had a private transfer to Calafate, Argentina, for one night at sweet Mirador Del Lago. We were giddy over having our own room and bathroom and real food at a real restaurant! After an OK kayak at Perito Moreno glacier, we bussed to El Chalten for three nights at comfortable El Chalten Suites.
 
-Days 13-15: El Chalten, the heart of Glaciares National Park, Argentina. _39 miles, 8000 feet elevation change_
+Days 13-15: El Chalten, the heart of Glaciares National Park, Argentina. *39 miles, 8000 feet elevation change*
 
 ![Glaciares National Park](./Images/Patagonia/Patagonia7.jpeg)
 
@@ -133,17 +136,17 @@ Days 13-15: El Chalten, the heart of Glaciares National Park, Argentina. _39 mil
 
 *15.03 miles, 3,535 feet elevation change, 9 hours 18*
 
-- - This is arguably the best day hike in Patagonia, especially on a clear day (like yesterday!) It was cold, windy and grey when we set out with friends we made on the W Trek. It would rain and snow on us on and off with a hint of sun.
+- This is arguably the best day hike in Patagonia, especially on a clear day (like yesterday!) It was cold, windy and grey when we set out with friends we made on the W Trek. It would rain and snow on us on and off with a hint of sun.
     
-    - We got a transfer to the El Pilar trailhead so we could hike one way rather than in and out. It was long but relatively easy until the end, with lovely scenery through the Las Vueltas river valley, by the Piedras Blancas Glacier, and over the Blanco river.
+- We got a transfer to the El Pilar trailhead so we could hike one way rather than in and out. It was long but relatively easy until the end, with lovely scenery through the Las Vueltas river valley, by the Piedras Blancas Glacier, and over the Blanco river.
     
-    - The last .6 miles were brutal, with 1,312 feet elevation change (think nearly vertical) through jumbled boulder fields with groups or less experienced hikers gumming up the works. There was a sign about a mile out, warning of tough conditions, and saying it would take an hour. A tough half hour later, there was a similar sign, also saying the top was an hour away! I almost lost it.
+- The last .6 miles were brutal, with 1,312 feet elevation change (think nearly vertical) through jumbled boulder fields with groups or less experienced hikers gumming up the works. There was a sign about a mile out, warning of tough conditions, and saying it would take an hour. A tough half hour later, there was a similar sign, also saying the top was an hour away! I almost lost it.
     
-    - We summited around 12:40 (3 hours, 6.3 miles) to shrouded mountains and howling winds. We stayed for about 90 minutes, sometimes huddling behind rocks for a respite, hoping, unsuccessfully, that it would clear. We went down to the lake, then scampered to the left for views of lovely Laguna Sucia and Laguna de Los Tres, and a hint of Fitz Roy.
+ - We summited around 12:40 (3 hours, 6.3 miles) to shrouded mountains and howling winds. We stayed for about 90 minutes, sometimes huddling behind rocks for a respite, hoping, unsuccessfully, that it would clear. We went down to the lake, then scampered to the left for views of lovely Laguna Sucia and Laguna de Los Tres, and a hint of Fitz Roy.
     
-    - I was very tired going back (4h30, 6.7 miles), and marched robotically the last mile through town to our hotel. I was sure I would hike no more...until the next morning.
+ - I was very tired going back (4h30, 6.7 miles), and marched robotically the last mile through town to our hotel. I was sure I would hike no more...until the next morning.
     
-    - Note: today's elevation change was almost identical to going up to Mirador base de las Torres and Frances Valley!
+ - Note: today's elevation change was almost identical to going up to Mirador base de las Torres and Frances Valley!
 
 ## Laguna Torres: finishing 100 miles in 10 days!
 
@@ -157,7 +160,7 @@ Days 13-15: El Chalten, the heart of Glaciares National Park, Argentina. _39 mil
 
 To me, the view at Laguna de Los Tres was more spectacular (even on a cloudy day) with many rugged, jagged peaks, powerful glaciers and two glistening lakes. What do you think?
 
-![Laguna de Los Tresy](./Images/Patagonia/Patagonia12.jpeg)
+![Laguna de Los Tres](./Images/Patagonia/Patagonia12.jpeg)
 *Laguna de Los Tres (and Laguna Sucia on left)*
 
 ![Torres Del Paine](./Images/Patagonia/Patagonia13.jpeg)
