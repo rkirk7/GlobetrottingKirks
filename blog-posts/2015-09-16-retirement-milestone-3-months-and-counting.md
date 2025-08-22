@@ -4,10 +4,6 @@
 Three months into retirement and I’m either excelling or failing, depending on your perspective. <!--more-->Since June 12, I've:
 
 - Seen nine countries in 24 days on a cruise to the Baltic and highlands, wrapping up with three days in New York City to see our daughter Regan and check out the new World Trade Center and Observatory
-
-![Alt text](../Images/Blog/2015-ny-9-11-memorial-7-20-towers-last-407.jpg "9-11 Memorial")  
-*9-11 Memorial*
-
 - Taken six tennis lessons and played nearly daily, plus gotten a terrific new racquet: The Wilson Envy 110
 - Taken up bridge again with Randy after a seven year hiatus, earning 12.57 master points at the Bonita Bridge Club, adding to the 110 or so we had before.
 - Went on our first retirement road trip, to Gasparilla Island, and saw our first Goliath groupers in person.
