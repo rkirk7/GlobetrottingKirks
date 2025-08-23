@@ -48,7 +48,7 @@ async function initBlog() {
     })
   );
 
-  // Sort newest first
+  // Sort newest first using the YYYY-MM-DD at the start of filename
   postsData.sort((a, b) => new Date(b.filename.slice(0, 10)) - new Date(a.filename.slice(0, 10)));
 
   postsData.forEach((postData, index) => {
@@ -56,13 +56,11 @@ async function initBlog() {
     const postTitle = extractTitle(postData.content) || postData.filename;
 
     // Convert markdown to HTML with postId-prefixed heading IDs
+    // (Use headerPrefix here—not a custom "headerId" option)
     const html = marked.parse(postData.content, {
-      headerId: headingText => {
-        return `${postId}-` + headingText
-          .toLowerCase()
-          .replace(/[^\w]+/g, '-')
-          .replace(/^-+|-+$/g, '');
-      }
+      headerIds: true,
+      mangle: false,
+      headerPrefix: `${postId}-`
     });
 
     // Create post card
@@ -88,11 +86,11 @@ async function initBlog() {
     const collapseEl = postDiv.querySelector(`#collapse${index}`);
     const titleEl = postDiv.querySelector(".post-title");
 
-    // Show title when collapsed, hide when expanded
+    // Show title when expanded, reveal when collapsed
     collapseEl.addEventListener("show.bs.collapse", () => titleEl.classList.add("d-none"));
     collapseEl.addEventListener("hide.bs.collapse", () => titleEl.classList.remove("d-none"));
 
-    // Add TOC link to main TOC
+    // Add TOC links (desktop + mobile)
     const addTocLink = (ul) => {
       const li = document.createElement("li");
       li.classList.add("nav-item");
@@ -102,11 +100,14 @@ async function initBlog() {
       li.querySelector("a").addEventListener("click", e => {
         e.preventDefault();
         const offcanvasEl = document.getElementById("offcanvasToc");
+        const scrollToPost = () =>
+          document.getElementById(postId).scrollIntoView({ behavior: "smooth", block: "start" });
+
         if (offcanvasEl && offcanvasEl.classList.contains("show")) {
           bootstrap.Offcanvas.getInstance(offcanvasEl).hide();
-          setTimeout(() => document.getElementById(postId).scrollIntoView({ behavior: "smooth", block: "start" }), 300);
+          setTimeout(scrollToPost, 300);
         } else {
-          document.getElementById(postId).scrollIntoView({ behavior: "smooth", block: "start" });
+          scrollToPost();
         }
       });
     };
@@ -118,26 +119,36 @@ async function initBlog() {
     // Internal anchors inside this post
     // ================================
     const postContent = postDiv.querySelector('.blog-post-content');
+
+    // Helper: ensure an id has this post's prefix once (no double-prefix)
+    const ensurePrefixed = (rawId) => rawId.startsWith(`${postId}-`) ? rawId : `${postId}-${rawId}`;
+
+    // 1) Rewrite hrefs so copy/paste links include the correct prefix
+    postContent.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      const rawId = decodeURIComponent(anchor.getAttribute('href').substring(1));
+      anchor.setAttribute('href', `#${ensurePrefixed(rawId)}`);
+    });
+
+    // 2) Click behavior: open card if needed, then smooth scroll + update hash
     postContent.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', e => {
         e.preventDefault();
-        const targetId = anchor.getAttribute('href').substring(1);
-        const fullTargetId = `${postId}-${targetId}`;
-        const targetEl = document.getElementById(fullTargetId);
+        const targetId = anchor.getAttribute('href').substring(1); // already prefixed by step 1
+        const targetEl = document.getElementById(targetId);
         if (!targetEl) return;
 
         const collapseParent = targetEl.closest('.collapse');
         if (collapseParent && !collapseParent.classList.contains('show')) {
           const bsCollapse = bootstrap.Collapse.getOrCreateInstance(collapseParent);
-          bsCollapse.show();
           collapseParent.addEventListener('shown.bs.collapse', () => {
             targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
           }, { once: true });
+          bsCollapse.show();
         } else {
           targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
-        history.pushState(null, '', `#${fullTargetId}`);
+        history.pushState(null, '', `#${targetId}`);
       });
     });
   });
@@ -146,16 +157,23 @@ async function initBlog() {
   // Scroll to hash on page load
   // ================================
   if (window.location.hash) {
-    const hash = window.location.hash.substring(1);
-    const targetEl = document.getElementById(hash);
+    const rawHash = decodeURIComponent(window.location.hash.substring(1));
+    // Try exact id first (works if the link already includes postX- prefix)
+    let targetEl = document.getElementById(rawHash);
+
+    // Fallback: if someone linked to an unprefixed slug, find the first matching prefixed id
+    if (!targetEl && rawHash && !/^post\d+-/.test(rawHash)) {
+      targetEl = document.querySelector(`[id$="-${CSS && CSS.escape ? CSS.escape(rawHash) : rawHash}"]`);
+    }
+
     if (targetEl) {
       const collapseParent = targetEl.closest('.collapse');
       if (collapseParent && !collapseParent.classList.contains('show')) {
         const bsCollapse = bootstrap.Collapse.getOrCreateInstance(collapseParent);
-        bsCollapse.show();
         collapseParent.addEventListener('shown.bs.collapse', () => {
           targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }, { once: true });
+        bsCollapse.show();
       } else {
         targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
