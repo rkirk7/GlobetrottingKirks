@@ -1,85 +1,138 @@
-// blog.js
-
-// Configure marked with custom renderer for heading IDs
-const renderer = new marked.Renderer();
-renderer.heading = function (text, level) {
-  const escapedText = text.toLowerCase().replace(/[^\w]+/g, '-');
-  return `<h${level} id="${escapedText}">${text}</h${level}>`;
-};
-
+// Configure marked
 marked.setOptions({
-  renderer,
   headerIds: true,
-  mangle: false,
-  headerPrefix: ''
+  mangle: false,  // prevents encoding special characters
+  headerPrefix: '' // optional prefix for IDs
 });
 
-// Fetch and render blog posts
 async function initBlog() {
-  try {
-    const response = await fetch('blog-posts.json');
-    const posts = await response.json();
-    const blogContainer = document.getElementById('blog');
+  // List of markdown files (newest first at bottom, we'll sort later)
+  const posts = [
+    "2025-08-14-panda-monium-close-encounters-in-chengdu-and-wolong-china.md",
+    "2025-06-03-exploring-antarctica-and-the-arctic-how-did-two-floridians-end-up-at-both-polar-regions-in-one-year-and-what-did-they-discover.md",
+    "2025-01-29-antarctica-calls-and-we-must-go.md",
+    "2024-09-12-in-search-of-polar-bears-in-the-arctic.md",
+    "2023-07-20-come-safari-with-us.md",
+    "2023-02-25-100-miles-in-10-days-the-nearly-perfect-patagonia-hiking-trip.md",
+    "2022-10-20-paradise-found-french-polynesia.md",
+    "2022-06-13-enchanting-galapagos-a-wildlife-wonderland.md",
+    "2021-08-26-my-heritage-journey-to-hong-kong-and-china.md",
+    "2021-08-22-western-parks-adventure-top-highlights.md",
+    "2020-02-21-new-zealand-adrenaline-rush-2-death-defying-weeks.md",
+    "2019-11-05-which-alp-is-the-coolest.md",
+    "2015-10-03-reunion-magic-returning-to-goudy-and-lane.md",
+    "2015-09-28-reunion-part-one.md",
+    "2015-09-16-retirement-milestone-3-months-and-counting.md",
+    "2015-09-14-yes-the-world-needs-another-website-mine.md",
+    "2015-08-29-hello-world-2.md"
+  ];
 
-    posts.forEach((post, index) => {
-      const postDiv = document.createElement('div');
-      postDiv.className = 'card mb-3';
+  const container = document.getElementById("blog-container");
+  const tocList = document.getElementById("toc-list");
+  const tocListMobile = document.getElementById("toc-list-mobile");
+  if (!container || !tocList || !tocListMobile) return;
 
-      // Build card header
-      postDiv.innerHTML = `
-        <div class="card-header" id="heading${index}">
-          <h2 class="mb-0">
-            <button class="btn btn-link" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapse${index}" aria-expanded="true"
-                    aria-controls="collapse${index}">
-              ${post.title}
-            </button>
-          </h2>
-        </div>
-        <div id="collapse${index}" class="collapse" aria-labelledby="heading${index}"
-             data-bs-parent="#blog">
-          <div class="card-body"></div>
-        </div>
-      `;
-
-      blogContainer.appendChild(postDiv);
-
-      // Load markdown content
-      fetch(post.file)
-        .then(res => res.text())
-        .then(content => {
-          const html = marked.parse(content);
-          const blogBody = postDiv.querySelector('.card-body');
-          blogBody.innerHTML = html;
-
-          // Build TOC
-          const headings = blogBody.querySelectorAll('h2, h3');
-          if (headings.length > 0) {
-            const tocContainer = document.createElement('div');
-            tocContainer.className = 'post-toc-container';
-            const tocList = document.createElement('ul');
-            tocList.className = 'post-toc';
-
-            headings.forEach(h => {
-              const li = document.createElement('li');
-              const a = document.createElement('a');
-              a.href = `#${h.id}`;
-              a.textContent = h.textContent;
-              li.appendChild(a);
-              tocList.appendChild(li);
-            });
-
-            tocContainer.appendChild(tocList);
-
-            // Insert TOC at top of collapse section, above body
-            postDiv.querySelector(`#collapse${index}`).prepend(tocContainer);
-          }
-        });
-    });
-  } catch (error) {
-    console.error('Error loading blog posts:', error);
+  // Extract H1 title from markdown
+  function extractTitle(mdContent) {
+    const lines = mdContent.split("\n");
+    for (let line of lines) {
+      line = line.trim();
+      if (line.startsWith("# ")) return line.replace(/^# /, "").trim();
+    }
+    return null;
   }
+
+  // Fetch posts
+  const postsData = await Promise.all(
+    posts.map(async post => {
+      let text = await fetch(`blog-posts/${post}`).then(res => res.text());
+      text = text.replace(/^---[\s\S]*?---/, '').trim(); // remove YAML frontmatter if any
+      return { filename: post, content: text };
+    })
+  );
+
+  // Sort newest first by date in filename
+  postsData.sort((a, b) => new Date(b.filename.slice(0, 10)) - new Date(a.filename.slice(0, 10)));
+
+  // Render posts
+  postsData.forEach((postData, index) => {
+    const postId = `post${index}`;
+    const postTitle = extractTitle(postData.content) || postData.filename;
+
+    // Convert markdown to HTML
+    const html = marked.parse(postData.content);
+
+    // Create post card
+    const postDiv = document.createElement("div");
+    postDiv.classList.add("card", "shadow-lg", "mb-3");
+    postDiv.id = postId;
+    postDiv.innerHTML = `
+      <div class="card-header bg-primary text-white" style="cursor:pointer;" 
+           data-bs-toggle="collapse" data-bs-target="#collapse${index}" aria-expanded="true">
+        <span class="post-title d-none">${postTitle}</span>
+      </div>
+      <div id="collapse${index}" class="collapse show">
+        <div class="card-body blog-post-content">${html}</div>
+      </div>
+    `;
+    container.appendChild(postDiv);
+
+    const collapseEl = postDiv.querySelector(`#collapse${index}`);
+    const titleEl = postDiv.querySelector(".post-title");
+
+    // Show title when collapsed, hide when expanded
+    collapseEl.addEventListener("show.bs.collapse", () => titleEl.classList.add("d-none"));
+    collapseEl.addEventListener("hide.bs.collapse", () => titleEl.classList.remove("d-none"));
+
+    // Add TOC link (desktop & mobile)
+    const addTocLink = (ul) => {
+      const li = document.createElement("li");
+      li.classList.add("nav-item");
+      li.innerHTML = `<a class="nav-link" href="#${postId}">${postTitle}</a>`;
+      ul.appendChild(li);
+      li.querySelector("a").addEventListener("click", e => {
+        e.preventDefault();
+        const offcanvasEl = document.getElementById("offcanvasToc");
+        if (offcanvasEl && offcanvasEl.classList.contains("show")) {
+          bootstrap.Offcanvas.getInstance(offcanvasEl).hide();
+          setTimeout(() => document.getElementById(postId).scrollIntoView({ behavior: "smooth", block: "start" }), 300);
+        } else {
+          document.getElementById(postId).scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      });
+    };
+    addTocLink(tocList);
+    addTocLink(tocListMobile);
+
+    // Internal TOC for each post (H2/H3 only)
+    const blogBody = postDiv.querySelector(".blog-post-content");
+    const headings = blogBody.querySelectorAll("h2, h3");
+    if (headings.length > 0) {
+      const tocContainer = document.createElement("div");
+      tocContainer.classList.add("post-toc-container", "mb-3", "p-2", "border", "rounded", "bg-light");
+      const tocTitle = document.createElement("strong");
+      tocTitle.textContent = "Contents";
+      tocTitle.classList.add("d-block", "mb-2");
+      tocContainer.appendChild(tocTitle);
+
+      const postToc = document.createElement("ul");
+      postToc.classList.add("list-unstyled", "mb-0");
+      headings.forEach(h => {
+        if (!h.id) return;
+        const li = document.createElement("li");
+        li.style.marginLeft = h.tagName === "H3" ? "1rem" : "0";
+        li.innerHTML = `<a href="#${h.id}" class="text-decoration-none">${h.textContent}</a>`;
+        li.querySelector("a").addEventListener("click", e => {
+          e.preventDefault();
+          document.getElementById(h.id).scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+        postToc.appendChild(li);
+      });
+
+      tocContainer.appendChild(postToc);
+      blogBody.prepend(tocContainer);
+    }
+  });
 }
 
-// Call the function when page loads
-document.addEventListener('DOMContentLoaded', initBlog);
+document.addEventListener("DOMContentLoaded", initBlog);
