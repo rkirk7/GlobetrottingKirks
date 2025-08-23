@@ -5,33 +5,6 @@ marked.setOptions({
   slugger: new marked.Slugger() // ensures consistent, predictable IDs
 });
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', e => {
-    const targetId = anchor.getAttribute('href').substring(1);
-    const targetEl = document.getElementById(targetId);
-    if (!targetEl) return;
-
-    e.preventDefault();
-
-    // Open parent collapse if hidden
-    const collapseParent = targetEl.closest('.collapse');
-    if (collapseParent && !collapseParent.classList.contains('show')) {
-      const bsCollapse = bootstrap.Collapse.getOrCreateInstance(collapseParent);
-      bsCollapse.show();
-
-      collapseParent.addEventListener('shown.bs.collapse', () => {
-        targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, { once: true });
-    } else {
-      targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-
-    // Update URL hash without jumping
-    history.pushState(null, '', `#${targetId}`);
-  });
-});
-
-
 async function initBlog() {
   const posts = [
     "2025-08-14-panda-monium-close-encounters-in-chengdu-and-wolong-china.md",
@@ -133,8 +106,52 @@ async function initBlog() {
 
     addTocLink(tocList);
     addTocLink(tocListMobile);
-
   });
+
+  // ================================
+  // Internal anchors inside posts
+  // ================================
+  container.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', e => {
+      const targetId = anchor.getAttribute('href').substring(1);
+      const targetEl = document.getElementById(targetId);
+      if (!targetEl) return;
+
+      e.preventDefault();
+
+      const collapseParent = targetEl.closest('.collapse');
+      if (collapseParent && !collapseParent.classList.contains('show')) {
+        const bsCollapse = bootstrap.Collapse.getOrCreateInstance(collapseParent);
+        bsCollapse.show();
+        collapseParent.addEventListener('shown.bs.collapse', () => {
+          targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, { once: true });
+      } else {
+        targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      history.pushState(null, '', `#${targetId}`);
+    });
+  });
+
+  // ================================
+  // Scroll to hash on page load
+  // ================================
+  if (window.location.hash) {
+    const targetEl = document.getElementById(window.location.hash.substring(1));
+    if (targetEl) {
+      const collapseParent = targetEl.closest('.collapse');
+      if (collapseParent && !collapseParent.classList.contains('show')) {
+        const bsCollapse = bootstrap.Collapse.getOrCreateInstance(collapseParent);
+        bsCollapse.show();
+        collapseParent.addEventListener('shown.bs.collapse', () => {
+          targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, { once: true });
+      } else {
+        targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  }
 }
 
 document.addEventListener("DOMContentLoaded", initBlog);
