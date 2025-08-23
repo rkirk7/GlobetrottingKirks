@@ -40,14 +40,24 @@ function ensureLightbox(selector) {
 // Build the album cards on albums.html (list page)
 function initAlbums() {
   const container = document.getElementById("albums-container");
-  if (!container) return;
+  const toc = document.getElementById("albums-toc");
+  if (!container || !toc) return;
 
-  container.innerHTML = ""; // avoid duplicating cards if user revisits
+  container.innerHTML = ""; // clear previous cards
+  toc.innerHTML = "";       // clear previous TOC
 
-  Object.entries(ALBUMS).forEach(([key, album]) => {
+  Object.entries(ALBUMS).forEach(([key, album], index) => {
     const cover = `Images/${album.folder}/${album.folder}1.jpeg`;
+    const albumId = `album-${key}`; // unique anchor ID
 
-    // small previews below card title
+    // 1. Add TOC link
+    const tocLink = document.createElement("a");
+    tocLink.href = `#${albumId}`;
+    tocLink.className = "btn btn-outline-primary btn-sm m-1";
+    tocLink.textContent = album.name;
+    toc.appendChild(tocLink);
+
+    // 2. Small previews below card title
     let previewsHTML = '<div class="d-flex justify-content-center flex-wrap mt-2">';
     for (let i = 1; i <= Math.min(album.total, 4); i++) {
       const src = `Images/${album.folder}/${album.folder}${i}.jpeg`;
@@ -55,8 +65,10 @@ function initAlbums() {
     }
     previewsHTML += "</div>";
 
+    // 3. Album card
     const col = document.createElement("div");
     col.className = "col-md-4 mb-4";
+    col.id = albumId; // assign anchor ID for scrolling
     col.innerHTML = `
       <div class="card shadow-lg h-100">
         <img src="${cover}" class="card-img-top" alt="${album.name}" style="object-fit:cover;height:180px;">
@@ -76,55 +88,20 @@ function initAlbums() {
     if (!btn) return;
     const albumKey = btn.getAttribute("data-album");
     loadAlbum(albumKey);
-  }, { once: true }); // attach once; cards are rebuilt when page reloads
+  });
+
+  // Smooth scrolling for TOC links
+  toc.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", e => {
+      e.preventDefault();
+      const targetId = link.getAttribute("href").substring(1);
+      const targetEl = document.getElementById(targetId);
+      if (!targetEl) return;
+      targetEl.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
 }
 
-// Render a single album grid into #content
-function loadAlbum(albumKey) {
-  const album = ALBUMS[albumKey];
-  if (!album) return;
-
-  const content = document.getElementById("content");
-  if (!content) return;
-
-  // Clear previous content
-  content.innerHTML = "";
-
-  // Title + grid
-  const title = document.createElement("h2");
-  title.className = "text-center mb-4";
-  title.textContent = album.name;
-
-  const grid = document.createElement("div");
-  grid.className = "d-flex flex-wrap justify-content-center";
-
-  for (let i = 1; i <= album.total; i++) {
-    const src = `Images/${album.folder}/${album.folder}${i}.jpeg`;
-    const a = document.createElement("a");
-    a.href = src;
-    a.className = "m-1 glightbox";
-    a.setAttribute("data-gallery", albumKey);
-
-    const img = document.createElement("img");
-    img.src = src;
-    img.className = "img-thumbnail";
-    img.style.height = "120px";
-    img.style.width = "120px";
-    img.style.objectFit = "cover";
-
-    a.appendChild(img);
-    grid.appendChild(a);
-  }
-
-  content.appendChild(title);
-  content.appendChild(grid);
-
-  // Initialize (or re-init) GLightbox JUST for this album
-  ensureLightbox(`.glightbox[data-gallery="${albumKey}"]`);
-
-  // Optional: scroll to top of content so user sees the grid
-  content.scrollIntoView({ behavior: "smooth", block: "start" });
-}
 
 // If albums.html is the initial page content (SSR), you could call initAlbums on DOM ready.
 // In SPA flow we call it from loadPage after injecting albums.html.
