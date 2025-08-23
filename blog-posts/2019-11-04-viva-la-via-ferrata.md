@@ -1,13 +1,5 @@
----
-title: "Viva La Via Ferrata!"
-date: 2019-11-04
-categories: 
-  - "switzerland"
-tags: 
-  - "gimmelwald"
-  - "murren"
-  - "via-ferrata"
----
+#  Viva La Via Ferrata!
+*2019-11-04*
 
 In researching our Switzerland trip, I came across the Via Ferrata hike/climb from Murren. While intrigued, I feared it was too daunting.
 
@@ -20,37 +12,16 @@ The 1-mile route from Murren down to Gimmelwald includes a zip line, tightrope, 
 When we started, I couldn't believe what we were doing: rungs jutting out into space, the mountains above, and the town of Stechelberg far below. I stopped repeatedly to take pictures, prompting a scolding from the guide (who does not take pictures but did once when I begged).
 
 The tightrope was relatively short, but there was no netting beneath! The zipline, configured with pulleys and rocks, didn't zip so much as dragged slowly. The ladders were completely vertical. The Nepal suspension bridge didn't seem tough in the moment, but it was over a 1,310 feet ravine!
-
-<figure>
-
-- ![](images/2019-murren-via-ferrata-nepal-suspension-bridge-over-a-1310-feet-ravine-img_9348.jpg)
     
-- <figure>
+![](./Images/ViaFerrata/ViaFerrata1.jpeg)
+*Hanging out in Switzerland on a Via Ferrata*
     
-    ![Active adventures with Mei-Mei](images/2019-murren-via-ferrata-mm-best-img_9300.jpg)
+![](./Images/ViaFerrata/ViaFerrata2.jpeg)
     
-    <figcaption>
+![](./Images/ViaFerrata/ViaFerrata3.jpeg)
     
-    Hanging out in Switzerland on a Via Ferrata
-    
-    </figcaption>
-    
-    </figure>
-    
-- ![](images/2019-murren-another-via-ferrata-group-doing-the-nepal-suspension-bridge-dsc02442.jpg)
-    
-- ![](images/2019-murren-via-ferrata-img_9275.jpg)
-    
-- ![](images/2019-murren-via-ferrata-best-img_9259.jpg)
-    
-
-<figcaption>
-
-Adrenalin rush anyone? Via Ferrata Murren to Gimmelwald, Switzerland
-
-</figcaption>
-
-</figure>
+![](./Images/ViaFerrata/ViaFerrata4.jpeg)
+*Adrenaline rush anyone? Via Ferrata Murren to Gimmelwald, Switzerland*
 
 For someone who loves hiking and beautiful views, this was a paradigm shift: Via Ferratas are so much more fun than just trudging one step after another, yet without the complexity or accouterments of serious climbing. The biggest challenges for me, a fit, active 59-year-old, were the occasional high steps or drops where my short legs struggled to find purchase.
 
