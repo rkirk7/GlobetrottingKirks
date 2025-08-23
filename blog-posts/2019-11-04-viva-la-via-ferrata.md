@@ -15,17 +15,17 @@ The tightrope was relatively short, but there was no netting beneath! The ziplin
     
 <div class="gallery">
   <figure>
-    ![](./Images/ViaFerrata/ViaFerrata1.jpeg)
+    <img src="./Images/ViaFerrata/ViaFerrata1.jpeg" alt="Hanging out in Switzerland on a Via Ferrata">
     <figcaption>Hanging out in Switzerland on a Via Ferrata</figcaption>
   </figure>
   <figure>
-    ![](./Images/ViaFerrata/ViaFerrata2.jpeg)
+    <img src="./Images/ViaFerrata/ViaFerrata2.jpeg" alt="Via Ferrata Switzerland">
   </figure>
   <figure>
-    ![](./Images/ViaFerrata/ViaFerrata3.jpeg)
+    <img src="./Images/ViaFerrata/ViaFerrata3.jpeg" alt="Via Ferrata Switzerland">
   </figure>
   <figure>
-    ![](./Images/ViaFerrata/ViaFerrata4.jpeg)
+    <img src="./Images/ViaFerrata/ViaFerrata4.jpeg" alt="Adrenaline rush anyone? Via Ferrata Murren to Gimmelwald, Switzerland">
     <figcaption>Adrenaline rush anyone? Via Ferrata Murren to Gimmelwald, Switzerland</figcaption>
   </figure>
 </div>
