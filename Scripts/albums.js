@@ -19,38 +19,39 @@ const ALBUMS = {
 };
 
 // Build the album cards on albums.html (list page)
+// in albums.js
 function initAlbums() {
   const container = document.getElementById("albums-container");
   const toc = document.getElementById("albums-toc");
   if (!container || !toc) return;
 
-  container.innerHTML = ""; // clear previous cards
-  toc.innerHTML = "";       // clear previous TOC
+  container.innerHTML = "";
+  toc.innerHTML = "";
 
   Object.entries(ALBUMS).forEach(([key, album]) => {
     const cover = `Images/${album.folder}/${album.folder}1.jpeg`;
-    const albumId = `album-${key}`; // unique anchor ID
-    const albumHref = `album.html?album=${encodeURIComponent(key)}`; // adjust filename if needed
+    const albumId = `album-${key}`;
+    const albumHref = `album.html?album=${encodeURIComponent(key)}`;
 
-    // 1. Add TOC link
+    // TOC link
     const tocLink = document.createElement("a");
     tocLink.href = `#${albumId}`;
     tocLink.className = "btn btn-outline-primary btn-sm m-1";
     tocLink.textContent = album.name;
     toc.appendChild(tocLink);
 
-    // 2. Small previews below card title
+    // Previews
     let previewsHTML = '<div class="d-flex justify-content-center flex-wrap mt-2">';
     for (let i = 1; i <= Math.min(album.total, 4); i++) {
-      const src = `Images/${album.folder}/${album.folder}${i}.jpeg`;
-      previewsHTML += `<img src="${src}" class="img-thumbnail m-1" style="height:60px;width:60px;object-fit:cover;" alt="${album.name}">`;
+      previewsHTML += `<img src="Images/${album.folder}/${album.folder}${i}.jpeg" 
+                        class="img-thumbnail m-1" style="height:60px;width:60px;object-fit:cover;">`;
     }
     previewsHTML += "</div>";
 
-    // 3. Album card
+    // Card
     const col = document.createElement("div");
     col.className = "col-md-4 mb-4";
-    col.id = albumId; // assign anchor ID for scrolling
+    col.id = albumId;
     col.innerHTML = `
       <div class="card shadow-lg h-100">
         <a href="${albumHref}">
@@ -66,17 +67,20 @@ function initAlbums() {
     container.appendChild(col);
   });
 
-  // Smooth scrolling for TOC links
+  // Smooth scroll
   toc.querySelectorAll("a[href^='#']").forEach(link => {
     link.addEventListener("click", e => {
       e.preventDefault();
-      const targetId = link.getAttribute("href").substring(1);
-      const targetEl = document.getElementById(targetId);
-      if (!targetEl) return;
-      targetEl.scrollIntoView({ behavior: "smooth", block: "start" });
+      const target = document.getElementById(link.getAttribute("href").substring(1));
+      if (target) target.scrollIntoView({ behavior: "smooth" });
     });
   });
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  if (document.getElementById("albums-container")) initAlbums();
+});
+
 
 // If albums.html is the initial page content (SSR), you could call initAlbums on DOM ready.
 // In SPA flow we call it from loadPage after injecting albums.html.
