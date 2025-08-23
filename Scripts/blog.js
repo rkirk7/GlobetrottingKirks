@@ -1,8 +1,36 @@
 marked.setOptions({
   headerIds: true,
-  mangle: false,  // prevents encoding special characters
-  headerPrefix: '' // optional prefix for IDs
+  mangle: false,
+  headerPrefix: '', // no extra prefix
+  slugger: new marked.Slugger() // ensures consistent, predictable IDs
 });
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', e => {
+    const targetId = anchor.getAttribute('href').substring(1);
+    const targetEl = document.getElementById(targetId);
+    if (!targetEl) return;
+
+    e.preventDefault();
+
+    // Open parent collapse if hidden
+    const collapseParent = targetEl.closest('.collapse');
+    if (collapseParent && !collapseParent.classList.contains('show')) {
+      const bsCollapse = bootstrap.Collapse.getOrCreateInstance(collapseParent);
+      bsCollapse.show();
+
+      collapseParent.addEventListener('shown.bs.collapse', () => {
+        targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, { once: true });
+    } else {
+      targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    // Update URL hash without jumping
+    history.pushState(null, '', `#${targetId}`);
+  });
+});
+
 
 async function initBlog() {
   const posts = [
