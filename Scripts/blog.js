@@ -19,6 +19,7 @@ async function initBlog() {
     "2020-02-21-new-zealand-adrenaline-rush-2-death-defying-weeks.md",
     "2019-11-05-which-alp-is-the-coolest.md",
     "2019-11-04-viva-la-via-ferrata.md",
+    "2019-11-04-around-iceland-in-10-days-top-highlights.md",
     "2015-10-03-reunion-magic-returning-to-goudy-and-lane.md",
     "2015-09-28-reunion-part-one.md",
     "2015-09-16-retirement-milestone-3-months-and-counting.md",
