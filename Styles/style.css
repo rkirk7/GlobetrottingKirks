@@ -236,18 +236,6 @@ img.img-fluid:hover {
   .blog-post-content li {
     margin-bottom: 0.5rem;
   }
-  
-/* Blog images */
-.blog-post-content img {
-  max-width: 90%;          /* images can be large but not full width */
-  max-height: 200px;       /* prevent images from being too tall */
-  width: auto;
-  height: auto;            /* maintain aspect ratio */
-  display: block;
-  margin: 1rem auto 0.25rem auto; /* small margin between image and caption */
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
 
 /* Figures and captions */
 .blog-post-content figure {
@@ -359,16 +347,32 @@ footer {
   }
 }
 
+/* ================================
+   Blog Post Images & Gallery
+   ================================ */
 
-/* Gallery container */
-.blog-post-content .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem; /* space between images */
-  margin: 1rem 0;
+/* Make blog-post-content full width and stack normally */
+.blog-post-content {
+  display: block;
+  width: 100%;
 }
 
-/* Ensure images inside gallery fill their cell */
+.blog-post-content img:not(.gallery img) {
+  max-height: 600px; /* optional: keep tall single images under control */
+  object-fit: cover; /* keeps the aspect ratio neat */
+}
+
+
+/* Responsive gallery grid for consecutive images */
+.blog-post-content .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* bigger min width */
+  gap: 1rem;
+  margin: 1rem 0;
+  width: 100%;
+}
+
+/* Images inside gallery: fill their cell completely */
 .blog-post-content .gallery img {
   width: 100%;
   height: auto;
@@ -381,7 +385,7 @@ footer {
   transform: scale(1.05);
 }
 
-/* Optional: style figures and captions in gallery */
+/* Figures and captions */
 .blog-post-content .gallery figure {
   margin: 0;
 }
@@ -393,12 +397,12 @@ footer {
   margin-top: 0.25rem;
 }
 
-/* Automatic image gallery for consecutive images in posts */
+/* Single images outside a gallery */
 .blog-post-content img {
-  display: inline-block;   /* keep them inline for wrapping */
-  width: 100%;
+  display: block;
   max-width: 100%;
-  margin-bottom: 0.75rem;
+  height: auto;
+  margin: 1rem auto;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   transition: transform 0.3s;
@@ -406,38 +410,4 @@ footer {
 
 .blog-post-content img:hover {
   transform: scale(1.05);
-}
-
-/* Wrap consecutive images in a responsive flex grid */
-.blog-post-content img + img {
-  margin-left: 1rem;
-}
-
-.blog-post-content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem; /* spacing between images */
-}
-
-.blog-post-content img {
-  flex: 1 1 220px; /* grow, shrink, min width 220px */
-  max-width: calc(50% - 0.5rem); /* for two images per row roughly */
-}
-
-@media (max-width: 768px) {
-  .blog-post-content img {
-    max-width: 100%; /* stack on mobile */
-  }
-}
-
-.blog-post-content figure {
-  margin: 0;
-  flex: 1 1 220px; /* same as image */
-}
-
-.blog-post-content figcaption {
-  text-align: center;
-  font-size: 0.9rem;
-  color: #555;
-  margin-top: 0.25rem;
 }
