@@ -1,3 +1,9 @@
+marked.setOptions({
+  headerIds: true,
+  mangle: false,  // prevents encoding special characters
+  headerPrefix: '' // optional prefix for IDs
+});
+
 async function initBlog() {
   const posts = [
     "2025-08-14-panda-monium-close-encounters-in-chengdu-and-wolong-china.md",
@@ -11,9 +17,7 @@ async function initBlog() {
     "2021-08-26-my-heritage-journey-to-hong-kong-and-china.md",
     "2021-08-22-western-parks-adventure-top-highlights.md",
     "2020-02-21-new-zealand-adrenaline-rush-2-death-defying-weeks.md",
-"2019-11-05-which-alp-is-the-coolest.md",
-
-
+    "2019-11-05-which-alp-is-the-coolest.md",
     "2015-10-03-reunion-magic-returning-to-goudy-and-lane.md",
     "2015-09-28-reunion-part-one.md",
     "2015-09-16-retirement-milestone-3-months-and-counting.md",
@@ -38,8 +42,7 @@ async function initBlog() {
   const postsData = await Promise.all(
     posts.map(async post => {
       let text = await fetch(`blog-posts/${post}`).then(res => res.text());
-      text = text.replace(/^---[\s\S]*?---/, '').trim();
-      text = text.replace(/^(<link[\s\S]*?>|<h1[\s\S]*?>[\s\S]*?<\/h1>)/i, '').trim();
+      text = text.replace(/^---[\s\S]*?---/, '').trim(); // remove YAML frontmatter
       return { filename: post, content: text };
     })
   );
@@ -48,12 +51,40 @@ async function initBlog() {
   postsData.sort((a, b) => new Date(b.filename.slice(0, 10)) - new Date(a.filename.slice(0, 10)));
 
   postsData.forEach((postData, index) => {
-    const html = marked.parse(postData.content);
-    const collapseId = `postCollapse${index}`;
     const postId = `post${index}`;
     const postTitle = extractTitle(postData.content) || postData.filename;
 
-    // TOC links for desktop & mobile
+    // Convert markdown to HTML
+    const html = marked.parse(postData.content);
+
+    // Create post card
+    const postDiv = document.createElement("div");
+    postDiv.classList.add("card", "shadow-lg", "mb-3");
+    postDiv.id = postId;
+
+    postDiv.innerHTML = `
+      <div class="card-header bg-primary text-white"
+           style="cursor:pointer;"
+           data-bs-toggle="collapse"
+           data-bs-target="#collapse${index}"
+           aria-expanded="true">
+        <span class="post-title d-none">${postTitle}</span>
+      </div>
+      <div id="collapse${index}" class="collapse show">
+        <div class="card-body blog-post-content">${html}</div>
+      </div>
+    `;
+
+    container.appendChild(postDiv);
+
+    const collapseEl = postDiv.querySelector(`#collapse${index}`);
+    const titleEl = postDiv.querySelector(".post-title");
+
+    // Show title when collapsed, hide when expanded
+    collapseEl.addEventListener("show.bs.collapse", () => titleEl.classList.add("d-none"));
+    collapseEl.addEventListener("hide.bs.collapse", () => titleEl.classList.remove("d-none"));
+
+    // Add TOC link to main TOC
     const addTocLink = (ul) => {
       const li = document.createElement("li");
       li.classList.add("nav-item");
@@ -62,10 +93,8 @@ async function initBlog() {
 
       li.querySelector("a").addEventListener("click", e => {
         e.preventDefault();
-
-        // Close mobile TOC if open
         const offcanvasEl = document.getElementById("offcanvasToc");
-        if (offcanvasEl.classList.contains("show")) {
+        if (offcanvasEl && offcanvasEl.classList.contains("show")) {
           bootstrap.Offcanvas.getInstance(offcanvasEl).hide();
           setTimeout(() => document.getElementById(postId).scrollIntoView({ behavior: "smooth", block: "start" }), 300);
         } else {
@@ -77,32 +106,26 @@ async function initBlog() {
     addTocLink(tocList);
     addTocLink(tocListMobile);
 
-    // Create post card
-    const postDiv = document.createElement("div");
-    postDiv.classList.add("card", "shadow-lg", "mb-3");
-    postDiv.id = postId;
+    // --- Generate internal TOC for this post ---
+    const blogBody = postDiv.querySelector(".blog-post-content");
+    const headings = blogBody.querySelectorAll("h1, h2, h3");
+    if (headings.length > 0) {
+      const postToc = document.createElement("ul");
+      postToc.classList.add("post-toc", "mb-3");
 
-    postDiv.innerHTML = `
-      <div class="card-header bg-primary text-white"
-           style="cursor:pointer;"
-           data-bs-toggle="collapse"
-           data-bs-target="#${collapseId}"
-           aria-expanded="true">
-        <span class="post-title d-none">${postTitle}</span>
-      </div>
-      <div id="${collapseId}" class="collapse show">
-        <div class="card-body blog-post-content">${html}</div>
-      </div>
-    `;
+      headings.forEach(h => {
+        if (!h.id) return; // skip if no ID
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="#${h.id}">${h.textContent}</a>`;
+        li.querySelector("a").addEventListener("click", e => {
+          e.preventDefault();
+          document.getElementById(h.id).scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+        postToc.appendChild(li);
+      });
 
-    container.appendChild(postDiv);
-
-    const collapseEl = postDiv.querySelector(`#${collapseId}`);
-    const titleEl = postDiv.querySelector(".post-title");
-
-    // Show title when collapsed, hide when expanded
-    collapseEl.addEventListener("show.bs.collapse", () => titleEl.classList.add("d-none"));
-    collapseEl.addEventListener("hide.bs.collapse", () => titleEl.classList.remove("d-none"));
+      blogBody.prepend(postToc); // insert TOC at the top of the post
+    }
   });
 }
 
