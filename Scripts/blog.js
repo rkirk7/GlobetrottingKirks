@@ -1,8 +1,13 @@
 marked.setOptions({
   headerIds: true,
   mangle: false,
-  headerPrefix: '', // no extra prefix
-  slugger: new marked.Slugger() // ensures consistent, predictable IDs
+  headerPrefix: '',
+  headerId: (headingText) => {
+    return headingText
+      .toLowerCase()
+      .replace(/[^\w]+/g, '-')  // spaces and punctuation -> dash
+      .replace(/^-+|-+$/g, ''); // remove leading/trailing dash
+  }
 });
 
 async function initBlog() {
