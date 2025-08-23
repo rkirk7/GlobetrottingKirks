@@ -1,22 +1,9 @@
----
-title: "New Zealand adrenaline rush: 2 death-defying weeks"
-date: 2020-02-21
-categories: 
-  - "new-zealand"
-  - "travel"
-tags: 
-  - "fox-glacier-guides"
-  - "kaituna-cascades"
-  - "kepler-great-walk"
-  - "skydive-southern-alps"
-  - "white-water-rafting"
-  - "wildwire"
-coverImage: "2019-skydiving-glenorchy-new-zealand-mm-a-second-outta-the-plane-g0026444.jpg"
----
+# New Zealand adrenaline rush: Two death-defying weeks
+*2020-02-21*
 
 Adrenaline junkie? Me?
 
-My daughter made me do it, your honor.
+My daughter made me do it, Your Honor.
 
 Regan wanted to go all out during our two weeks in New Zealand; I turned 60 in October and wanted to wrap the year in style, so she didn't have to twist my arm, much. Except for the whole jumping out of a perfectly fine airplane thing.
 
@@ -38,45 +25,14 @@ After safety briefings and practice runs (what to do should the raft overturn at
 
 Suddenly Tutea Falls was ahead of us. Regan and I were in the front. As rehearsed, we crouched, heads down, holding onto the rope in front. But the water ripped my hand away and I was sucked up, then tossed under. I bobbed up quickly, still holding the oar. Regan was nearby, as was a third passenger. Only two in our raft clung on through the falls.
 
-<figure>
+![That's us in the front](./Images/NewZealand/NewZealand1.jpeg)
+*That's us in the front*
 
-<figure>
+![The falls chewed us up](./Images/NewZealand/NewZealand2.jpeg)
+*The falls chewed us up*
 
-![That's us in the front](images/2019-rafting-kaituna-7-metre-tutea-falls-the-highest-commercially-rafted-waterfall-in-the-world-new-zealand-best-dsc_8016.jpg)
-
-<figcaption>
-
-That's us in the front
-
-</figcaption>
-
-</figure>
-
-<figure>
-
-![The falls chewed us up](images/2019-rafting-kaituna-7-metre-tutea-falls-the-highest-commercially-rafted-waterfall-in-the-world-new-zealand-dsc_8017.jpg)
-
-<figcaption>
-
-The falls chewed us up
-
-</figcaption>
-
-</figure>
-
-<figure>
-
-![](images/2019-rafting-kaituna-7-metre-tutea-falls-the-highest-commercially-rafted-waterfall-in-the-world-new-zealand-dsc_8025.jpg)
-
-<figcaption>
-
-Regan and I in the river
-
-</figcaption>
-
-</figure>
-
-</figure>
+![In the river](./Images/NewZealand/NewZealand3.jpeg)
+*Regan and me in the river*
 
 I don't recall hitting anything as I fell out, but some people do get damaged ankles or noses being pummeled by the water. 
 
@@ -106,11 +62,11 @@ There's no electricity or heat; everything is communal; wooden furnishings are d
 
 Day 2, Highlight of the trip: 9.5 miles over 7 hours. A stunningly perfect day with glorious "Lord of the Rings" type ridge views for some three hours including at Luxmore Summit.
 
-![](images/2019-kepler-track-day-2-new-zealand-img_2343.jpg)
+![](./Images/NewZealand/NewZealand4.jpeg)
 
-![](images/2019-kepler-track-day-2-new-zealand-img_3537.jpg)
+![](./Images/NewZealand/NewZealand5.jpeg)
 
-![](images/2019-kepler-track-day-2-new-zealand-best-mm-img_2394.jpg)
+![](./Images/NewZealand/NewZealand6.jpeg)
 
 Low light: Leaving the ridge, it's a grueling, steep half mile down with many switchbacks. I was fatigued; the backpack was heavy; my legs were rubbery. I broke into tears at one point. (Walking sticks would have helped.) It took us more than 3 hours to reach the Iris Burn hut, which was not as nice as Luxmore.
 
@@ -132,15 +88,15 @@ Wildwire opened in 2015 and claims to be “the world’s highest waterfall via 
 
 It was an exhilarating 3 hours and 17 minutes climbing right next to the thundering waterfalls or its pools, which pumps up your adrenaline. Especially if you are wobbling while making water crossings as I was. (Demise of camera No. 2.)
 
-![](images/2019-via-ferrata-wanaka-wild-wire-new-zealand-20191229_16154129629.jpg)
+![](./Images/NewZealand/NewZealand7.jpeg)
 
-![](images/2019-via-ferrata-wanaka-wild-wire-new-zealand-best-girls-on-tightropeimg_0786.jpg)
+![](./Images/NewZealand/NewZealand8.jpeg)
 
-![](images/2019-via-ferrata-wanaka-wild-wire-new-zealand-steps-img_5141.jpg)
+![](./Images/NewZealand/NewZealand9.jpeg)
 
-![](images/2019-via-ferrata-wanaka-wild-wire-new-zealand-mm-best-freefall-img_5129.jpg)
+![](./Images/NewZealand/NewZealand10.jpeg)
 
-![](images/2019-via-ferrata-wanaka-wild-wire-new-zealand-best-regan-tightrope-waterfall-img_5197-1.jpg)
+![](./Images/NewZealand/NewZealand11.jpeg)
 
 Our guide demonstrated how you can hang off the cable, hands free, trusting only in your clip. My heart was pounding but I did it! (An unexpected bonus: the guides will carry your stuff up for you, and also bring snacks.)
 
@@ -162,27 +118,14 @@ There’s a safety video and briefing, weighing of everyone and gear, then we’
 
 We had a blast over the next four hours on this sea of ice! We got to use our ice picks and became very good friends with our crampons and harnesses as we navigated delicate ridges of ice lining treacherous crevasses. We were the first to discover a gorgeous blue cave that would be gone after a few weeks.
 
-<figure>
+![](./Images/NewZealand/NewZealand12.jpeg)
 
-![](images/2019-fox-glacier-new-zealand-ice-cave-girls-img_2376.jpg)
+![](./Images/NewZealand/NewZealand13.jpeg)
 
-![](images/2019-fox-glacier-new-zealand-best-girls-img_2171.jpg)
+![](./Images/NewZealand/NewZealand14.jpeg)
+*That's me looking so graceful*
 
-<figure>
-
-![](images/2019-fox-glacier-new-zealand-img_4465.jpg)
-
-<figcaption>
-
-That's me looking so graceful
-
-</figcaption>
-
-</figure>
-
-![](images/2019-fox-glacier-new-zealand-regan-img_2280.jpg)
-
-</figure>
+![](./Images/NewZealand/NewZealand15.jpeg)
 
 The glacier changes daily, so our guides would look for promising routes, hammering in ice screws and threading rope for our harnesses. While they confidently scampered on the ice, we slowly picked our way across what seemed to be gaping crevasses beckoning our sacrifice.
 
@@ -216,15 +159,15 @@ We repeated those motions--I sat at the edge of the plane with my legs dangling 
 
 We were in free fall for about 45 seconds, whooshing downward. I was distracted by how badly my ears had plugged up and how dry my mouth was--I may or may not have been shrieking; it was a blur.
 
-![](images/2019-skydiving-glenorchy-new-zealand-airborne-on-the-plane-g0016416.jpg)
+![](./Images/NewZealand/NewZealand16.jpeg)
 
-![](images/2019-skydiving-glenorchy-new-zealand-regan-a-second-outta-the-plane-best-regan-61.jpg)
+![](./Images/NewZealand/NewZealand17.jpeg)
 
-![](images/2019-skydiving-glenorchy-new-zealand-mm-g0026520.jpg)
+![](./Images/NewZealand/NewZealand18.jpeg)
 
-![](images/2019-skydiving-glenorchy-new-zealand-regan-regan-70.jpg)
+![](./Images/NewZealand/NewZealand19.jpeg)
 
-![](images/2019-skydiving-glenorchy-new-zealand-mm-g0026478.jpg)
+![](./Images/NewZealand/NewZealand20.jpeg)
 
 When Reuben released the parachute, we were jerked up slightly before settling into a peaceful float with dazzling scenery all around. I had recently gone paragliding and the feeling is comparable. This portion lasted about 3 1/2 minutes.
 

@@ -10,6 +10,8 @@ async function initBlog() {
     "2022-06-13-enchanting-galapagos-a-wildlife-wonderland.md",
     "2021-08-26-my-heritage-journey-to-hong-kong-and-china.md",
     "2021-08-22-western-parks-adventure-top-highlights.md",
+    "2020-02-21-new-zealand-adrenaline-rush-2-death-defying-weeks.md",
+
     "2015-10-03-reunion-magic-returning-to-goudy-and-lane.md",
     "2015-09-28-reunion-part-one.md",
     "2015-09-16-retirement-milestone-3-months-and-counting.md",
