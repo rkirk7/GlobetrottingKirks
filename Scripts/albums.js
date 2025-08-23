@@ -38,6 +38,37 @@ function ensureLightbox(selector) {
   });
 }
 
+function loadAlbum(key) {
+  const album = ALBUMS[key];
+  if (!album) return;
+
+  // Build gallery items for this album
+  let galleryHTML = "";
+  for (let i = 1; i <= album.total; i++) {
+    const src = `Images/${album.folder}/${album.folder}${i}.jpeg`;
+    galleryHTML += `<a href="${src}" class="glightbox" data-gallery="${key}"></a>`;
+  }
+
+  // Inject hidden gallery container into body
+  let hiddenDiv = document.getElementById(`hidden-gallery-${key}`);
+  if (!hiddenDiv) {
+    hiddenDiv = document.createElement("div");
+    hiddenDiv.id = `hidden-gallery-${key}`;
+    hiddenDiv.style.display = "none";
+    hiddenDiv.innerHTML = galleryHTML;
+    document.body.appendChild(hiddenDiv);
+  }
+
+  // Initialize lightbox for this gallery
+  ensureLightbox(`#hidden-gallery-${key} .glightbox`);
+
+  // Open the first image in the album
+  const firstLink = hiddenDiv.querySelector(".glightbox");
+  if (firstLink) firstLink.click();
+}
+
+
+
 // Build the album cards on albums.html (list page)
 function initAlbums() {
   const container = document.getElementById("albums-container");
