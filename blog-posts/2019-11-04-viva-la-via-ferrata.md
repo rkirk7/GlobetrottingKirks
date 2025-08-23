@@ -13,15 +13,23 @@ When we started, I couldn't believe what we were doing: rungs jutting out into s
 
 The tightrope was relatively short, but there was no netting beneath! The zipline, configured with pulleys and rocks, didn't zip so much as dragged slowly. The ladders were completely vertical. The Nepal suspension bridge didn't seem tough in the moment, but it was over a 1,310 feet ravine!
     
-![](./Images/ViaFerrata/ViaFerrata1.jpeg)
-*Hanging out in Switzerland on a Via Ferrata*
-    
-![](./Images/ViaFerrata/ViaFerrata2.jpeg)
-    
-![](./Images/ViaFerrata/ViaFerrata3.jpeg)
-    
-![](./Images/ViaFerrata/ViaFerrata4.jpeg)
-*Adrenaline rush anyone? Via Ferrata Murren to Gimmelwald, Switzerland*
+<div class="gallery">
+  <figure>
+    ![](./Images/ViaFerrata/ViaFerrata1.jpeg)
+    <figcaption>Hanging out in Switzerland on a Via Ferrata</figcaption>
+  </figure>
+  <figure>
+    ![](./Images/ViaFerrata/ViaFerrata2.jpeg)
+  </figure>
+  <figure>
+    ![](./Images/ViaFerrata/ViaFerrata3.jpeg)
+  </figure>
+  <figure>
+    ![](./Images/ViaFerrata/ViaFerrata4.jpeg)
+    <figcaption>Adrenaline rush anyone? Via Ferrata Murren to Gimmelwald, Switzerland</figcaption>
+  </figure>
+</div>
+
 
 For someone who loves hiking and beautiful views, this was a paradigm shift: Via Ferratas are so much more fun than just trudging one step after another, yet without the complexity or accouterments of serious climbing. The biggest challenges for me, a fit, active 59-year-old, were the occasional high steps or drops where my short legs struggled to find purchase.
 
