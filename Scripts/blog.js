@@ -106,38 +106,6 @@ async function initBlog() {
     addTocLink(tocList);
     addTocLink(tocListMobile);
 
-    // --- Generate internal TOC for this post ---
-// --- Generate internal TOC for this post ---
-const blogBody = postDiv.querySelector(".blog-post-content");
-const headings = blogBody.querySelectorAll("h2, h3"); // exclude h1 for main title
-if (headings.length > 0) {
-  const tocContainer = document.createElement("div");
-  tocContainer.classList.add("post-toc-container", "mb-3", "p-2", "border", "rounded", "bg-light");
-
-  const tocTitle = document.createElement("strong");
-  tocTitle.textContent = "Contents";
-  tocTitle.classList.add("d-block", "mb-2");
-  tocContainer.appendChild(tocTitle);
-
-  const postToc = document.createElement("ul");
-  postToc.classList.add("list-unstyled", "mb-0");
-
-  headings.forEach(h => {
-    if (!h.id) return; // skip if no ID
-    const li = document.createElement("li");
-    li.style.marginLeft = h.tagName === "H3" ? "1rem" : "0"; // indent H3
-    li.innerHTML = `<a href="#${h.id}" class="text-decoration-none">${h.textContent}</a>`;
-    li.querySelector("a").addEventListener("click", e => {
-      e.preventDefault();
-      document.getElementById(h.id).scrollIntoView({ behavior: "smooth", block: "start" });
-    });
-    postToc.appendChild(li);
-  });
-
-  tocContainer.appendChild(postToc);
-  blogBody.prepend(tocContainer); // insert TOC at the top of the post
-}
-
   });
 }
 
