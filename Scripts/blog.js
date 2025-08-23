@@ -1,13 +1,7 @@
 marked.setOptions({
   headerIds: true,
   mangle: false,
-  headerPrefix: '',
-  headerId: (headingText) => {
-    return headingText
-      .toLowerCase()
-      .replace(/[^\w]+/g, '-')  // spaces and punctuation -> dash
-      .replace(/^-+|-+$/g, ''); // remove leading/trailing dash
-  }
+  headerPrefix: ''
 });
 
 async function initBlog() {
@@ -61,8 +55,15 @@ async function initBlog() {
     const postId = `post${index}`;
     const postTitle = extractTitle(postData.content) || postData.filename;
 
-    // Convert markdown to HTML
-    const html = marked.parse(postData.content);
+    // Convert markdown to HTML with postId-prefixed heading IDs
+    const html = marked.parse(postData.content, {
+      headerId: headingText => {
+        return `${postId}-` + headingText
+          .toLowerCase()
+          .replace(/[^\w]+/g, '-')
+          .replace(/^-+|-+$/g, '');
+      }
+    });
 
     // Create post card
     const postDiv = document.createElement("div");
@@ -112,31 +113,32 @@ async function initBlog() {
 
     addTocLink(tocList);
     addTocLink(tocListMobile);
-  });
 
-  // ================================
-  // Internal anchors inside posts
-  // ================================
-  container.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', e => {
-      const targetId = anchor.getAttribute('href').substring(1);
-      const targetEl = document.getElementById(targetId);
-      if (!targetEl) return;
+    // ================================
+    // Internal anchors inside this post
+    // ================================
+    const postContent = postDiv.querySelector('.blog-post-content');
+    postContent.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', e => {
+        e.preventDefault();
+        const targetId = anchor.getAttribute('href').substring(1);
+        const fullTargetId = `${postId}-${targetId}`;
+        const targetEl = document.getElementById(fullTargetId);
+        if (!targetEl) return;
 
-      e.preventDefault();
-
-      const collapseParent = targetEl.closest('.collapse');
-      if (collapseParent && !collapseParent.classList.contains('show')) {
-        const bsCollapse = bootstrap.Collapse.getOrCreateInstance(collapseParent);
-        bsCollapse.show();
-        collapseParent.addEventListener('shown.bs.collapse', () => {
+        const collapseParent = targetEl.closest('.collapse');
+        if (collapseParent && !collapseParent.classList.contains('show')) {
+          const bsCollapse = bootstrap.Collapse.getOrCreateInstance(collapseParent);
+          bsCollapse.show();
+          collapseParent.addEventListener('shown.bs.collapse', () => {
+            targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }, { once: true });
+        } else {
           targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }, { once: true });
-      } else {
-        targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+        }
 
-      history.pushState(null, '', `#${targetId}`);
+        history.pushState(null, '', `#${fullTargetId}`);
+      });
     });
   });
 
@@ -144,7 +146,8 @@ async function initBlog() {
   // Scroll to hash on page load
   // ================================
   if (window.location.hash) {
-    const targetEl = document.getElementById(window.location.hash.substring(1));
+    const hash = window.location.hash.substring(1);
+    const targetEl = document.getElementById(hash);
     if (targetEl) {
       const collapseParent = targetEl.closest('.collapse');
       if (collapseParent && !collapseParent.classList.contains('show')) {
