@@ -9,7 +9,13 @@ Regan wanted to go all out during our two weeks in New Zealand; I turned 60 in O
 
 Not everything we did required helmets, but it sure seemed like it. Here are highlights and low lights of our top 5 once(?)-in-a-lifetime adventures:
 
-**Adrenalin rush No. 5: White water rafting**
+1. [Adrenaline rush No. 5: White water rafting](#adrenaline-rush-no-5-white-water-rafting)
+2. [Adrenaline rush No. 4: 3-day Kepler Track](#adrenaline-rush-no-4-3-day-kepler-track)
+3. [Adrenaline rush No. 3: Via Ferrata](#adrenaline-rush-no-3-via-ferrata)
+4. [Adrenaline rush No. 2: Extreme hiking on Fox Glacier](#adrenaline-rush-no-2-extreme-hiking-on-fox-glacier)
+5. [No. 1 adrenaline rush: Skydiving](#and-the-no-1-adrenaline-rush-skydiving)
+
+## Adrenaline rush No. 5: White water rafting
 
 - Where/who: Kaituna Cascades, Rotorua
 
@@ -42,7 +48,7 @@ The adventure was less than an hour but was physically tough, partly due to the 
 
 _**Do it again? Maybe.**_
 
-**Adrenalin rush No. 4: 3-day Kepler Track**
+# Adrenaline rush No. 4: 3-day Kepler Track
 
 - Where/who: One of New Zealand's "Great Walks," a 37-mile circuit from Te Anau
 
@@ -74,7 +80,7 @@ Day 3: 14 miles over 7 hours. We decided two huts was enough so we skipped the t
 
 **_Do it_** **again? Not with the heavy bags and uncomfortable huts.**
 
-**Adrenalin rush No. 3: Via Ferrata**
+# Adrenaline rush No. 3: Via Ferrata
 
 - Where/who: Wildwire, Wanaka
 
@@ -102,7 +108,7 @@ Our guide demonstrated how you can hang off the cable, hands free, trusting only
 
 **_Do it again? Definitely!_**
 
-**Adrenalin rush No. 2: Extreme hiking on Fox Glacier**
+# Adrenaline rush No. 2: Extreme hiking on Fox Glacier
 
 - Where/who: Fox Glacier Guides
 
@@ -133,7 +139,7 @@ The afternoon was anti-climactic by comparison. We reached the “summit” wher
 
 **_Do it again? You bet!_**
 
-**And the No. 1 adrenalin rush: Skydiving**
+## And the No. 1 adrenaline rush: Skydiving
 
 - Where/who: Skydive Southern Alps, Glenorchy
 

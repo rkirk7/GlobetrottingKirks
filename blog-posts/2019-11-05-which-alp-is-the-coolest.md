@@ -1,4 +1,4 @@
-# title: "Which Alp is the coolest?"
+# Which Alp is the coolest?
 *2019-11-05*
 
 Randy and I spent two glorious weeks reveling in Switzerland's famed Alps in September.
@@ -12,6 +12,18 @@ The Alps run 750 miles through eight countries, with some 100 peaks above 13,000
 Important tip: Due to unpredictable/fickle weather, give yourself ample time in each location to enjoy the peaks. During our three nights in Zermatt, the Matterhorn was clearly visible for only about five hours!
 
 Here's how we rank our mountain experiences:
+
+1. [No. 10: Piz Nair in St. Moritz](#no-10-piz-nair-in-st-moritz)
+2. [No. 9: Grindelwald-First, Berner Oberland](#no-9-grindelwald-first-berner-oberland)
+3. [No. 8: Mannlichen in Wengen, Berner Oberland](#no-8-mannlichen-in-wengen-berner-oberland)
+4. [No. 7: Schilthorn in Murren, Berner Oberland](#no-7-schilthorn-in-murren-berner-oberland)
+5. [No. 6: Eiger Trail, Berner Oberland](#no-6-eiger-trail-berner-oberland)
+6. [No. 5: Grindelwald-First to Schynige Platte, Berner Oberland](#no-5-grindelwald-first-to-schynige-platte-berner-oberland)
+7. [No. 4: Aiguille Du Midi in Chamonix, France](#no-4-aiguille-du-midi-in-chamonix-france)
+8. [No. 3: Kleine Matterhorn in Zermatt](#no-3-kleine-matterhorn-in-zermatt)
+9. [No. 2: Jungfraujoch, Berner Oberland](#no-2-jungfraujoch-berner-oberland)
+10. [No. 1: Panoramic cable car to Helbronner, Italy, from Chamonix, France](#and-the-no-1-alpine-mountain-experience-panoramic-cable-car-to-helbronner-italy-from-chamonix-france)
+
 
 ## No. 10: Plz Nair in St. Moritz
 

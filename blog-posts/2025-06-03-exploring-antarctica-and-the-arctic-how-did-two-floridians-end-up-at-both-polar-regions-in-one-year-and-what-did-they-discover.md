@@ -29,7 +29,7 @@ On Dec. 30, 2024, we were 12,000 miles away on the opposite end of the world, at
 
 For perspective, we were about 1,000 miles north of the Arctic Circle and 635 miles south of the North Pole, and about 200 miles north of the Antarctic Circle and 2,000 miles north of the South Pole.
 
-([Click here if you want to skip ahead to how the Arctic and Antarctic compare.](#Compare-AA))
+[Click here if you want to skip ahead to how the Arctic and Antarctic compare.](#heres-how-the-arctic-and-the-antarctic-compare-in-our-view)
 
 How long had we been planning this unique triumph? Um, months.
 
@@ -117,19 +117,19 @@ Because their summer tourist seasons are polar opposite each other, you can visi
 
 [As a Fora travel advisor, I would love to get you on a polar expedition! Click here to connect!](https://www.foratravel.com/advisor/mei-mei-kirk)
 
-**Here’s how the Arctic and the Antarctic compare, in our view.**
+## Here’s how the Arctic and the Antarctic compare, in our view.
 
-1. [Getting there](https://meimeichan.com/2025/06/03/exploring-antarctica-and-the-arctic-how-did-two-floridians-end-up-at-both-polar-regions-in-one-year-and-what-did-they-discover/#getting-there)
-2. [Weather and seas](https://meimeichan.com/2025/06/03/exploring-antarctica-and-the-arctic-how-did-two-floridians-end-up-at-both-polar-regions-in-one-year-and-what-did-they-discover/#getting-there)
-3. [Landscapes](https://meimeichan.com/2025/06/03/exploring-antarctica-and-the-arctic-how-did-two-floridians-end-up-at-both-polar-regions-in-one-year-and-what-did-they-discover/#getting-there)
-4. [Wildlife](https://meimeichan.com/2025/06/03/exploring-antarctica-and-the-arctic-how-did-two-floridians-end-up-at-both-polar-regions-in-one-year-and-what-did-they-discover/#getting-there)
-5. ["That was freaking amazing" moments](https://meimeichan.com/2025/06/03/exploring-antarctica-and-the-arctic-how-did-two-floridians-end-up-at-both-polar-regions-in-one-year-and-what-did-they-discover/#getting-there)
-6. [Fitness required](https://meimeichan.com/2025/06/03/exploring-antarctica-and-the-arctic-how-did-two-floridians-end-up-at-both-polar-regions-in-one-year-and-what-did-they-discover/#fitness-required)
-7. [History and culture](https://meimeichan.com/2025/06/03/exploring-antarctica-and-the-arctic-how-did-two-floridians-end-up-at-both-polar-regions-in-one-year-and-what-did-they-discover/#getting-there)
-8. [What else is there to do?](https://meimeichan.com/2025/06/03/exploring-antarctica-and-the-arctic-how-did-two-floridians-end-up-at-both-polar-regions-in-one-year-and-what-did-they-discover/#getting-there)
-9. [So what's the verdict?](https://meimeichan.com/2025/06/03/exploring-antarctica-and-the-arctic-how-did-two-floridians-end-up-at-both-polar-regions-in-one-year-and-what-did-they-discover/#getting-there)
+1. [Getting there](#getting-there)
+2. [Weather and seas](#weather-and-seas)
+3. [Landscapes](#landscapes)
+4. [Wildlife](#wildlife)
+5. ["That was freaking amazing" moments](#that-was-freaking-amazing-moments)
+6. [Fitness required](#fitness-required)
+7. [History and culture](#history-and-culture)
+8. [What else is there to do?](#what-else-is-there-to-do)
+9. [So what's the verdict?](#so-whats-the-verdict)
 
-#### Getting there
+## Getting there
 
 In a nutshell: The best way to explore these regions is aboard expedition ships sailing from far north or south.
 
@@ -141,7 +141,7 @@ Expedition ships range in size from 8-500 passengers, from no-frills to ultra-lu
 
 _Edge goes to: it’s a tie_
 
-#### Weather and seas
+## Weather and seas
 
 In a nutshell: Antarctica is colder because its average height is 7,500 feet, the highest of all continents. The Arctic is warmer because the sea ice stays at 28 degrees Fahrenheit.
 
@@ -151,7 +151,7 @@ The seas were largely smooth in the Arctic. The Antarctic was much rougher, star
 
 _Edge goes to: the Arctic_
 
-#### Landscapes
+## Landscapes
 
 In a nutshell: Both are otherworldly spectacular, immense, untouched, with amazing colors. Both are at risk from global warming, pollution, and commercial industry including mining, fishing, and shipping.
 
@@ -167,7 +167,7 @@ Most of the ice in the Arctic is frozen sea, both seasonal and multi-year (howev
 
 _Edge goes to: Antarctica_
 
-#### Wildlife
+## Wildlife
 
 In a nutshell: Both have numerous birds and whales; the Arctic has 270 polar bears and Antarctica has nearly 12 million penguins.
 
@@ -201,7 +201,7 @@ My husband, the homebody, often asks: why not just go to the zoo? My response: z
 
 _Edge goes to: Antarctica, by a mile_
 
-#### "That was freaking amazing" moments
+## "That was freaking amazing" moments
 
 In a nutshell: Expedition ships will often include kayaking and hiking amid incredible landscapes and possibly close to wildlife such as seals, penguins and whales (but not polar bears or walruses).
 
@@ -211,7 +211,7 @@ In the Arctic, you’ll likely sail toward the Arctic pack ice at the top of the
 
 _Edge goes to: Antarctica_
 
-#### Fitness required
+## Fitness required
 
 In a nutshell: You are going to the most remote places on Earth. So you need to be healthy enough not to worry about access to a hospital or sophisticated emergency care.
 
@@ -221,7 +221,7 @@ The level of activity will vary based on the company/ship you choose. Quark's hi
 
 _Edge goes to: it’s a tie_
 
-#### History and culture
+## History and culture
 
 In a nutshell: Both regions have long fascinated adventurers. Because the Arctic is surrounded by eight countries, it's been inhabited for tens of thousands of years. The first landing in Antarctica wasn't until 1821.
 
@@ -247,7 +247,7 @@ While Peary was just miles from the North Pole in 1909, Amundsen was actually cl
 
 _Edge goes to: the Arctic_
 
-#### What else is there to do?
+## What else is there to do?
 
 In a nutshell: Since you’re already there, you can check out more of South America or Norway.
 
@@ -259,7 +259,7 @@ For both, you’ll have the midnight sun nearly 24 hours a day in the summer, so
 
 _Edge goes to: the Arctic_
 
-#### So what's the verdict?
+## So what's the verdict?
 
 Searching and finding tiny polar bears in the distance was exhilarating but exhausting. If you long to see the bears, be prepared for only long-distance viewing in Svalbard, and make that excursion only part of your visit to Norway. (Of note: we're headed to Churchill, Canada, in July, 2025 for what we expect to be far more intimate polar bear encounters!)
 
