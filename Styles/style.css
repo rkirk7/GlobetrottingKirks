@@ -329,3 +329,32 @@ footer {
 #toc .nav-link, #toc-list-mobile .nav-link {
   padding-left: 0.5rem;
 }
+
+.post-toc-container a {
+  color: #0d6efd;       /* Bootstrap primary color */
+}
+
+.post-toc-container a:hover {
+  text-decoration: underline;
+}
+
+.post-toc-container li {
+  margin-bottom: 0.25rem;
+}
+
+.post-toc-container {
+  max-width: 300px;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  position: sticky;
+  top: 1rem;             /* distance from top when scrolling */
+  z-index: 10;           /* stay above other content */
+}
+
+@media (max-width: 992px) {
+  .post-toc-container {
+    position: static;   /* no sticky on smaller screens */
+    top: auto;
+    max-width: 100%;
+  }
+}
