@@ -1,7 +1,6 @@
 marked.setOptions({
-  headerIds: true,
   mangle: false,
-  headerPrefix: ''
+  headerIds: true
 });
 
 async function initBlog() {
@@ -49,16 +48,23 @@ async function initBlog() {
     })
   );
 
-  // Sort newest first using the YYYY-MM-DD at the start of filename
+  // Sort newest first
   postsData.sort((a, b) => new Date(b.filename.slice(0, 10)) - new Date(a.filename.slice(0, 10)));
 
   postsData.forEach((postData, index) => {
     const postId = `post${index}`;
     const postTitle = extractTitle(postData.content) || postData.filename;
 
-    // Convert markdown to HTML with postId-prefixed heading IDs
-    // (Use headerPrefix here—not a custom "headerId" option)
-    const html = marked.parse(postData.content, {
+    // ===========================
+    // Prefix internal Markdown links
+    // ===========================
+    const prefixedMarkdown = postData.content.replace(
+      /\[([^\]]+)\]\(#([^\)]+)\)/g,
+      (_, text, id) => `[${text}](#${postId}-${id})`
+    );
+
+    // Convert markdown to HTML
+    const html = marked.parse(prefixedMarkdown, {
       headerIds: true,
       mangle: false,
       headerPrefix: `${postId}-`
@@ -87,11 +93,13 @@ async function initBlog() {
     const collapseEl = postDiv.querySelector(`#collapse${index}`);
     const titleEl = postDiv.querySelector(".post-title");
 
-    // Show title when expanded, reveal when collapsed
+    // Show/hide title when card collapses
     collapseEl.addEventListener("show.bs.collapse", () => titleEl.classList.add("d-none"));
     collapseEl.addEventListener("hide.bs.collapse", () => titleEl.classList.remove("d-none"));
 
+    // ===========================
     // Add TOC links (desktop + mobile)
+    // ===========================
     const addTocLink = (ul) => {
       const li = document.createElement("li");
       li.classList.add("nav-item");
@@ -116,25 +124,14 @@ async function initBlog() {
     addTocLink(tocList);
     addTocLink(tocListMobile);
 
-    // ================================
-    // Internal anchors inside this post
-    // ================================
+    // ===========================
+    // Smooth scrolling for internal links inside post
+    // ===========================
     const postContent = postDiv.querySelector('.blog-post-content');
-
-    // Helper: ensure an id has this post's prefix once (no double-prefix)
-    const ensurePrefixed = (rawId) => rawId.startsWith(`${postId}-`) ? rawId : `${postId}-${rawId}`;
-
-    // 1) Rewrite hrefs so copy/paste links include the correct prefix
-    postContent.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      const rawId = decodeURIComponent(anchor.getAttribute('href').substring(1));
-      anchor.setAttribute('href', `#${ensurePrefixed(rawId)}`);
-    });
-
-    // 2) Click behavior: open card if needed, then smooth scroll + update hash
     postContent.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', e => {
         e.preventDefault();
-        const targetId = anchor.getAttribute('href').substring(1); // already prefixed by step 1
+        const targetId = anchor.getAttribute('href').substring(1);
         const targetEl = document.getElementById(targetId);
         if (!targetEl) return;
 
@@ -154,19 +151,12 @@ async function initBlog() {
     });
   });
 
-  // ================================
+  // ===========================
   // Scroll to hash on page load
-  // ================================
+  // ===========================
   if (window.location.hash) {
-    const rawHash = decodeURIComponent(window.location.hash.substring(1));
-    // Try exact id first (works if the link already includes postX- prefix)
-    let targetEl = document.getElementById(rawHash);
-
-    // Fallback: if someone linked to an unprefixed slug, find the first matching prefixed id
-    if (!targetEl && rawHash && !/^post\d+-/.test(rawHash)) {
-      targetEl = document.querySelector(`[id$="-${CSS && CSS.escape ? CSS.escape(rawHash) : rawHash}"]`);
-    }
-
+    const hash = decodeURIComponent(window.location.hash.substring(1));
+    const targetEl = document.getElementById(hash);
     if (targetEl) {
       const collapseParent = targetEl.closest('.collapse');
       if (collapseParent && !collapseParent.classList.contains('show')) {
