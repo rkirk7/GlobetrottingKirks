@@ -1,31 +1,9 @@
----
-title: "3 perfect weeks in South Africa"
-date: 2019-04-09
-categories: 
-  - "africa"
-  - "cape-town"
-  - "safari"
-  - "south-africa"
-tags: 
-  - "blyde-river-canyon"
-  - "boulders-penguins"
-  - "cape-of-good-hope"
-  - "cheetah-outreach"
-  - "dyer-island-cruise"
-  - "kruger"
-  - "robben-island"
-  - "swartberg-pass"
-  - "table-mountain"
-  - "timbavati"
-  - "tsitsikamma"
-coverImage: "img_2664-e1554383135113.jpg"
----
+# 3 perfect weeks in South Africa
+*2019-04-09*
 
 Our first visit to this vast country exceeded our expectations in every way: The beauty and variety of the gorgeous coast and the mountainous interior; the sophisticated and inexpensive food; and the marvelous creatures, especially on our Timbavati safari. But we were also taken aback by the shantytowns, barbed wire and the division of black and white.
 
 Here are highlights and tips from our trip from Feb. 24-March 15, 2019, with our friends Mary and George. We agreed this was a perfect itinerary, including nearly all our lodgings.
-
-<!--more-->
 
 - 5 nights Cape Town after overnight in Johannesburg (Tree House Boutique Hotel)
 - 2 nights Hermanus (Auberge Provence)
@@ -36,54 +14,83 @@ Here are highlights and tips from our trip from Feb. 24-March 15, 2019, with our
 - 4 nights Timbavati, part of the Greater Kruger Park (Makanyi lodge)
 - 1 night Nelspruit (Torburnlea)
 
-## **Cape Town area**
+## Cape Town area
 
 **Table Mountain**: We had purchased cable car tickets online long ago as they are good for 7 days. Based on the weather forecast, we went on a beautiful Monday, arriving at 8:20 a.m. to beat the tour buses. We got onto the second cable car (there are two that alternate, holding 65 each) for the fast ride up. The cable car rotates, and has opened and closed windows that everyone crowds against for pictures.
 
 On top: What a tremendous plateau! The walking paths are pretty flat and easy; the more adventurous can scamper onto the many cliff rocks. We spent about 2 1/2 hours soaking it in, including the cute dassies (rock hyraxes). When we got back down, the lines were horrendous.
 
-<figure>
-
-![Beautiful view of Lion's Peak, Signal Hill, Cape Town, Robben island and Blouberg from Table Mountain.](images/table-mt-best-overview-cape-town-sa-2019-img_0278-e1554296275923.jpg)
-
-<figcaption>
-
-Beautiful view of Lion's Peak, Signal Hill, Cape Town, Robben island and Blouberg from Table Mountain
-
-</figcaption>
-
-</figure>
+<div class="gallery">
+  <figure>
+    <img src="./Images/19SouthAfrica/19SouthAfrica1.jpeg" alt="">
+    <figcaption>Beautiful view of Lion's Peak, Signal Hill, Cape Town, Robben island and Blouberg from Table Mountain</figcaption>
+  </figure>
+</div>
 
 - Hiking: From the cable car, you can see some of the very steep paths to hike up the mountain in about two hours. With more time/good weather, I would have liked to hike up to Devil's Peak.
 - Note: The hop on/hop off bus conveniently stops at the cable car station. 
 
 **Camps Bay:** We had dinner in this area twice with a sparkling sunset one night. It's a beautiful, vibrant beach set against Lion's Head and the 12 Apostles (back side) of Table Mountain.
 
-- ![](images/camps-bay-best-pano-with-12-apostles-cape-town-sa-2019-img_4947.jpg)
-    
-- ![](images/camps-bay-view-of-table-mt-cable-car-sa-2019-img_1009.jpg)
-    
-- ![](images/camps-bay-sunset-cape-town-sa-2019-img_1007.jpg)
-    
-- ![](images/table-mt-view-of-camps-bay-cape-town-sa-2019-img_1160.jpg)
-    
+<div class="gallery">
+  <figure>
+    <img src="./Images/19SouthAfrica/19SouthAfrica2.jpeg" alt="">
+    <figcaption>Camps Bay Panorama with 12 Apostles</figcaption>
+  </figure>
+   <figure>
+    <img src="./Images/19SouthAfrica/19SouthAfrica3.jpeg" alt="">
+    <figcaption>Camps Bay View of Table Mountain Cable Car</figcaption>
+  </figure>
+   <figure>
+    <img src="./Images/19SouthAfrica/19SouthAfrica4.jpeg" alt="">
+    <figcaption>Camps Bay Sunset</figcaption>
+  </figure>
+   <figure>
+    <img src="./Images/19SouthAfrica/19SouthAfrica5.jpeg" alt="">
+    <figcaption>Table Mountain View of Camps Bay</figcaption>
+  </figure>
+</div>
 
 **Robben Island:** We booked the 9 a.m. tour two days in advance and sauntered to the waterfront from our hotel. (Beware your GPS directions: you want the museum, not the "embarkation building"!) Imagine our dismay when we got to the short bridge connecting the waterfront to the museum and were told it out for maintenance! We had to hoof 1.3 miles around another bridge, arriving at 9:06. They held the ferry till 9:15. 
 
 Watch for great views of Cape Town and Table Mountain from the back of the ferry--they'll let you hover in the doorway after departure. Once on the island, you're loaded onto buses to stagger tours of key sites (such as the limestone quarry where Mandela and others toiled) before ending at the prison cell where Mandela was imprisoned for 17 of his 28 years of captivity. Sobering and powerful reminder of a painful era.
 
-- ![](images/robben-island-mandela-cell-for-18-years-sa-2019-img_1448-e1554380266845.jpg)
-    
-- ![](images/robben-island-sa-2019-img_1456.jpg)
-    
-- ![](images/robben-island-view-of-table-mt-sa-2019-img_1418.jpg)
-    
-- ![](images/robben-island-lime-quarry-with-cave-and-rock-pile-created-upon-mandela-return-sa-2019-img_0445-e1554380289666.jpg)
+<div class="gallery">
+  <figure>
+    <img src="./Images/19SouthAfrica/19SouthAfrica6.jpeg" alt="">
+    <figcaption>Nelson Mandela's cell for 18 years</figcaption>
+  </figure>
+   <figure>
+    <img src="./Images/19SouthAfrica/19SouthAfrica7.jpeg" alt="">
+    <figcaption>Robben Island</figcaption>
+  </figure>
+   <figure>
+    <img src="./Images/19SouthAfrica/19SouthAfrica8.jpeg" alt="">
+    <figcaption>View of Table Mountain from Robben Island</figcaption>
+  </figure>
+   <figure>
+    <img src="./Images/19SouthAfrica/19SouthAfrica9.jpeg" alt="">
+    <figcaption>Robben Island Lime Quarry</figcaption>
+  </figure>
+</div>
     
 
 **Downtown Cape Town:** We didn't see many other tourists while strolling through the key sites such as the Bo Kaap Muslim quarter, City Hall where Mandela spoke after his 1990 release and when he became president four years later, Rev. Tutu's church, the Castle of Good Hope (oldest building in town) and the Company's Gardens.
 
-\[gallery ids="4019,4018,4020,3997" type="rectangular"\]
+<div class="gallery">
+  <figure>
+    <img src="./Images/19SouthAfrica/19SouthAfrica10.jpeg" alt="">
+    <figcaption>The Company’s Gardens</figcaption>
+  </figure>
+   <figure>
+    <img src="./Images/19SouthAfrica/19SouthAfrica11.jpeg" alt="">
+    <figcaption>Bo Kaap Muslim area</figcaption>
+  </figure>
+   <figure>
+    <img src="./Images/19SouthAfrica/19SouthAfrica12.jpeg" alt="">
+    <figcaption>Shantytown or township outside Cape Town</figcaption>
+  </figure>
+</div>
 
 Apartheid is over, but the problems persist. On our travels, it was easy to see that the vast amount of wealth is still controlled by whites, despite the decline in population. We learned about the alarming emigration of whites and influx of migrants from troubled African countries, and heard voices of anger, bitterness and fear. Everywhere with middle class affluence was protected by barbed wire walls and "armed response" signs. 
 
@@ -95,11 +102,34 @@ These incidents should not put you off but should caution you to be wary and sma
 
 **Boulders Beach African Penguins:** These were so cute! There are some 2,000 breeding pairs clustered near the end of the walkway, on the sand and on the beach. It was nesting season and we loved watching the infants and siblings frolic.
 
-\[gallery ids="4002,4003,4001" type="circle"\]
+<div class="gallery">
+  <figure>
+    <img src="./Images/19SouthAfrica/19SouthAfrica13.jpeg" alt="">
+    <figcaption>Boulders Beach Penguins</figcaption>
+  </figure>
+   <figure>
+    <img src="./Images/19SouthAfrica/19SouthAfrica14.jpeg" alt="">
+    <figcaption>Boulders Beach Penguins</figcaption>
+  </figure>
+   <figure>
+    <img src="./Images/19SouthAfrica/19SouthAfrica15.jpeg" alt="">
+    <figcaption>Boulders Beach Penguins</figcaption>
+  </figure>
+</div>
+
 
 **Cape of Good Hope:** Wonderful views and hike between the cape and Cape Point, which is where the lighthouses are. If you don't hike, you just drive to both sites.
 
-\[gallery ids="3999,4000" type="rectangular"\]
+<div class="gallery">
+  <figure>
+    <img src="./Images/19SouthAfrica/19SouthAfrica16.jpeg" alt="">
+    <figcaption>Cape of Good Hope</figcaption>
+  </figure>
+   <figure>
+    <img src="./Images/19SouthAfrica/19SouthAfrica17.jpeg" alt="">
+    <figcaption>Cape of Good Hope</figcaption>
+  </figure>
+</div>
 
 ## Hermanus to Port Elizabeth
 

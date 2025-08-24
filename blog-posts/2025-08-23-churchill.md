@@ -157,7 +157,7 @@ Regan and I stayed in Churchill town for three more nights at Churchill Wild's n
   - Guide Dylan McCart expertly managed rough roads and nearly 40 guests, serving a surprisingly tasty lunch and drinks.  
   - We spotted **eight bears**, including three youngsters!  
 
-   <div class="gallery">
+<div class="gallery">
   <figure>
     <img src="./Images/Churchill/Churchill17.jpeg" alt="Big Bear">
     <figcaption>This big, happy female bear enjoyed lazing in the grass!</figcaption>
@@ -188,7 +188,7 @@ Regan and I stayed in Churchill town for three more nights at Churchill Wild's n
   - A private tour with owner Leroy Whitmore.
   - He worked tirelessly to find us a polar bear in the publicly accessible areas around Churchill, making sure to point out arctic hares and belugas along the way. Near the end of the day, we spotted one **very** large bear, sprawled atop rocks, and got to enjoy him for about an hour--the only bear we had all to ourselves.
 
-  <div class="gallery">
+<div class="gallery">
   <figure>
     <img src="./Images/Churchill/Churchill12.jpeg" alt="Big Bear">
     <figcaption>We enjoyed quality time with this big bear!</figcaption>
@@ -248,7 +248,7 @@ Regan and I stayed in Churchill town for three more nights at Churchill Wild's n
   - We got to enjoy a beautiful sunset over the water.
   - Don't ask about the flat tire. Regan is starting to collect them in various countries around the world through no fault of her own.
 
-  <div class="gallery">
+<div class="gallery">
   <figure>
     <img src="./Images/Churchill/Churchill11.jpeg" alt="Galloping Bear">
     <figcaption>Mei-Mei spotted this bear from the car as it **ran**, but we couldn't see anything nearby that might have excited it</figcaption>
