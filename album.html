@@ -70,48 +70,51 @@
       albumTitle.innerText = album.name;
 
       fetch(`image-data.json`)
-        .then(res => res.json())
-        .then(data => {
-          const filenames = Object.keys(data);
-          if (!filenames.length) {
-            container.innerHTML = "<p class='text-center'>No images found.</p>";
-            return;
-          }
+  .then(res => res.json())
+  .then(data => {
+    const filenames = Object.keys(data);
+    if (!filenames.length) {
+      container.innerHTML = "<p class='text-center'>No images found.</p>";
+      return;
+    }
 
-          let lightbox;
+    filenames.forEach(filename => {
+      const caption = data[filename] || "";
 
-          filenames.forEach(filename => {
-            const caption = data[filename] || "";
+      const col = document.createElement("div");
+      col.classList.add("col-md-4", "mb-4");
 
-            const col = document.createElement("div");
-            col.classList.add("col-md-4", "mb-4");
+      const img = document.createElement("img");
+      img.src = `Images/${album.folder}/${filename}`;
+      img.alt = caption;
+      img.classList.add("album-img");
 
-            const img = document.createElement("img");
-            img.src = `Images/${album.folder}/${filename}`;
-            img.alt = caption;
-            img.classList.add("album-img");
+      // Handle broken images
+      img.onerror = () => {
+        console.warn(`Failed to load image: ${filename}`);
+        img.src = "Images/placeholder.png"; // Optional fallback image
+        img.alt = "Image not available";
+      };
 
-            const link = document.createElement("a");
-            link.href = img.src;
-            link.classList.add("glightbox");
-            link.setAttribute("data-gallery", albumParam);
-            if (caption) link.setAttribute("data-title", caption);
+      const link = document.createElement("a");
+      link.href = img.src;
+      link.classList.add("glightbox");
+      link.setAttribute("data-gallery", albumParam);
+      if (caption) link.setAttribute("data-title", caption);
 
-            link.appendChild(img);
-            col.appendChild(link);
-            container.appendChild(col);
+      link.appendChild(img);
+      col.appendChild(link);
+      container.appendChild(col);
+    });
 
-            if (!lightbox) {
-              lightbox = GLightbox({ selector: ".glightbox" });
-            } else {
-              lightbox.reload();
-            }
-          });
-        })
-        .catch(err => {
-          console.error("Failed to load image data JSON:", err);
-          container.innerHTML = "<p class='text-center'>Failed to load album images.</p>";
-        });
+    // Initialize GLightbox once after all images are added
+    GLightbox({ selector: ".glightbox" });
+  })
+  .catch(err => {
+    console.error("Failed to load image data JSON:", err);
+    container.innerHTML = "<p class='text-center'>Failed to load album images.</p>";
+  });
+
     }
   </script>
 </body>
