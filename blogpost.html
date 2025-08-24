@@ -86,49 +86,47 @@ postText = lines.join("\n");
       const imageMeta = await fetch('image-data.json').then(res => res.json());
 
       // --- IMAGE & GALLERY HANDLING ---
-      const images = Array.from(tempDiv.querySelectorAll('img'));
-      let galleryWrapper = null;
+     // --- IMAGE & GALLERY HANDLING ---
+const images = Array.from(tempDiv.querySelectorAll('img'));
+let galleryWrapper = null;
 
-      images.forEach((img, idx) => {
-        const filename = img.getAttribute('src').split('/').pop();
-        const caption = (imageMeta && imageMeta[filename]) || "";
+images.forEach((img, idx) => {
+  const filename = img.getAttribute('src').split('/').pop();
+  const caption = (imageMeta && imageMeta[filename]) || "";
 
-        // Wrap img in figure if not already
-        if (!img.closest('figure')) {
-          const figure = document.createElement('figure');
-          img.parentNode.insertBefore(figure, img);
-          figure.appendChild(img);
+  // Wrap img in figure if not already
+  let figure = img.closest('figure');
+  if (!figure) {
+    figure = document.createElement('figure');
+    img.parentNode.insertBefore(figure, img);
+    figure.appendChild(img);
+  }
 
-          if (caption) {
-            const figcap = document.createElement('figcaption');
-            figcap.textContent = caption;
-            figure.appendChild(figcap);
-          }
-        } else {
-          const figcap = img.nextElementSibling;
-          if (!figcap || figcap.tagName.toLowerCase() !== 'figcaption') {
-            if (caption) {
-              const figcapNew = document.createElement('figcaption');
-              figcapNew.textContent = caption;
-              img.after(figcapNew);
-            }
-          } else {
-            figcap.textContent = caption;
-          }
-        }
+  // Add figcaption
+  let figcap = figure.querySelector('figcaption');
+  if (!figcap && caption) {
+    figcap = document.createElement('figcaption');
+    figcap.textContent = caption;
+    figure.appendChild(figcap);
+  } else if (figcap) {
+    figcap.textContent = caption;
+  }
 
-        // --- GROUP CONSECUTIVE FIGURES INTO GALLERY ---
-        const figure = img.closest('figure');
-        const prevSibling = figure.previousElementSibling;
+  // Wrap all images in one gallery div
+  if (!galleryWrapper) {
+    galleryWrapper = document.createElement('div');
+    galleryWrapper.classList.add('gallery');
+    figure.parentNode.insertBefore(galleryWrapper, figure);
+  }
+  galleryWrapper.appendChild(figure);
 
-        if (!galleryWrapper || !prevSibling || !prevSibling.classList.contains('gallery')) {
-          galleryWrapper = document.createElement('div');
-          galleryWrapper.classList.add('gallery');
-          figure.parentNode.insertBefore(galleryWrapper, figure);
-        }
+  // Add responsive class
+  img.style.maxWidth = "100%";
+  img.style.height = "auto";
+  img.style.display = "block";
+  img.style.margin = "0 auto";
+});
 
-        galleryWrapper.appendChild(figure);
-      });
 
       // --- TOC ---
       const tocList = document.getElementById('toc-list');

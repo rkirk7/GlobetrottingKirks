@@ -156,3 +156,27 @@
     }
   }
   
+
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  .gallery figure {
+    margin: 0;
+    flex: 1 1 auto;
+    max-width: 100%;
+  }
+  .gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  figcaption {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 4px;
+    color: #555;
+  }
+  
