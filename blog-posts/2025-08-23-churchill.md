@@ -1,6 +1,19 @@
 # Birds, Bears, Belugas, and So Much More: Our Churchill Adventure
 *2025-08-23*
 
+If spotting polar bears in the wild is on your bucket list, there are only a few destinations to consider: Norway, Kaktovik, Alaska (off-limits for now), and parts of Canada, Greenland and Russia. There are currently two accessible areas where polar bears are most concentrated:
+
+--Svalbard, Norway, an archipelago just 800 miles from the North Pole, with about 300 polar bears.
+--Churchill, Manitoba, Canada, with about 700 polar bears, claiming the title of "Polar Bear Capital of the World."
+
+Globally, there may be around 25,000 polar bears. There hasn’t been a coordinated survey since 2004, when the count was 22,000 to 24,000.
+
+Polar bears are the largest land predators in the world (an adult male will outweigh an adult male grizzly). But they are struggling as ice melts more rapidly and frequently. It’s tiring for them to hunt seals on land and water instead of on ice. In Norway, bears are now snacking on reindeer, while in Churchill, they can sometimes feast on belugas.
+
+Having journeyed to Svalbard in May, 2024, we went to Churchill in August, 2025, in search of polar bears. Here's what we found!
+
+---
+
 Whew.
 
 The sleepy little town of Churchill, Manitoba, in the subarctic Hudson Bay, buzzes with tourists from May to November. That's when Arctic birds migrate overhead, 50,000 beluga whales come to feed, polar bears wander by waiting for the bay to freeze, and the Northern Lights can be spotted if one is lucky.
