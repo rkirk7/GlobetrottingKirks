@@ -10,26 +10,11 @@ The Princess is posh, compact (especially the staterooms), with some terrific st
 We had 111 passengers (capacity is 128), mostly middle aged and up, dominated by 57 Aussies and Kiwis and 35 Americans. One of the repeat customers was on his 10th Uniworld river cruise! (How did we like it? Read to the end.)
 
 <div class="gallery">
-  <figure>
-    <img src="./Images/18RiverCruise/18RiverCruise1.jpeg" alt="">
-    <figcaption>Uniworld’s River Princess</figcaption>
-  </figure>
-  <figure>
-    <img src="./Images/18RiverCruise/18RiverCruise2.jpeg" alt="">
-    <figcaption>The Captain of Uniworld’s River Princess taking us through the first of what was to be 76 locks.</figcaption>
-  </figure>  
-  <figure>
-    <img src="./Images/18RiverCruise/18RiverCruise3.jpeg" alt="">
-    <figcaption>Uniworld’s River Princess cabins were comfy but too tiny for us</figcaption>
-  </figure>  
-  <figure>
-    <img src="./Images/18RiverCruise/18RiverCruise4.jpeg" alt="">
-    <figcaption>Uniworld’s River Princess had some wonderful food and staff.</figcaption>
-  </figure>  
-  <figure>
-    <img src="./Images/18RiverCruise/18RiverCruise5.jpeg" alt="">
-    <figcaption>Going through one of many locks.</figcaption>
-  </figure>
+![](./Images/18RiverCruise/18RiverCruise1.jpeg)
+![](./Images/18RiverCruise/18RiverCruise2.jpeg)
+![](./Images/18RiverCruise/18RiverCruise3.jpeg)
+![](./Images/18RiverCruise/18RiverCruise4.jpeg)
+![](./Images/18RiverCruise/18RiverCruise5.jpeg)
 
 </div>
 
