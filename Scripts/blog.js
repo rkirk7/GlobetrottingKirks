@@ -1,13 +1,14 @@
+// ===========================
+// MARKED RENDERER FOR HEADINGS
+// ===========================
 const renderer = new marked.Renderer();
 
-let currentPostIndex = 0; // We'll set this for each post before rendering
+let currentPostIndex = 0; // Will be set for each post
 
-renderer.heading = function (text, level, raw, slugger) {
-  // Use raw markdown text for the slug
+renderer.heading = function (text, level, raw) {
   const headingText = raw || String(text);
   const slug = headingText.toLowerCase().replace(/[^\w]+/g, '-');
   const id = `post${currentPostIndex}-${slug}`;
-  
   return `<h${level} id="${id}">${text}</h${level}>`;
 };
 
@@ -17,6 +18,9 @@ marked.setOptions({
   headerIds: true
 });
 
+// ===========================
+// BLOG INIT FUNCTION
+// ===========================
 async function initBlog() {
   const posts = [
     "2025-08-23-churchill.md",
@@ -48,6 +52,7 @@ async function initBlog() {
   const tocListMobile = document.getElementById("toc-list-mobile");
   if (!container || !tocList || !tocListMobile) return;
 
+  // --- Extract main title from markdown
   function extractTitle(mdContent) {
     const lines = mdContent.split("\n");
     for (let line of lines) {
@@ -57,28 +62,58 @@ async function initBlog() {
     return null;
   }
 
+  // --- Load all posts
   const postsData = await Promise.all(
     posts.map(async post => {
       let text = await fetch(`blog-posts/${post}`).then(res => res.text());
-      text = text.replace(/^---[\s\S]*?---/, '').trim();
+      text = text.replace(/^---[\s\S]*?---/, '').trim(); // remove YAML frontmatter
       return { filename: post, content: text };
     })
   );
 
+  // Sort newest first
   postsData.sort((a, b) => new Date(b.filename.slice(0, 10)) - new Date(a.filename.slice(0, 10)));
 
+  // --- Load image metadata ---
+  const imageMeta = await fetch('image-data.json').then(res => res.json());
+
+  // --- Render each post
   postsData.forEach((postData, index) => {
     currentPostIndex = index;
     const postId = `post${index}`;
     const postTitle = extractTitle(postData.content) || postData.filename;
 
+    // Prefix internal Markdown links
     const prefixedMarkdown = postData.content.replace(
       /\[([^\]]+)\]\(#([^\)]+)\)/g,
       (_, text, id) => `[${text}](#${postId}-${id})`
     );
 
-    const html = marked.parse(prefixedMarkdown);
+    // Convert markdown to HTML
+    let html = marked.parse(prefixedMarkdown);
 
+    // --- Apply alt and captions for gallery images ---
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = html;
+
+    tempDiv.querySelectorAll('div.gallery').forEach(gallery => {
+      gallery.querySelectorAll('img').forEach(img => {
+        const filename = img.getAttribute('src').split('/').pop();
+        if (imageMeta[filename]) {
+          img.setAttribute('alt', imageMeta[filename]);
+          let figcap = img.nextElementSibling;
+          if (!figcap || figcap.tagName.toLowerCase() !== 'figcaption') {
+            figcap = document.createElement('figcaption');
+            img.after(figcap);
+          }
+          figcap.textContent = imageMeta[filename];
+        }
+      });
+    });
+
+    html = tempDiv.innerHTML;
+
+    // --- Create post card ---
     const postDiv = document.createElement("div");
     postDiv.classList.add("card", "shadow-lg", "mb-3");
     postDiv.id = postId;
@@ -95,37 +130,30 @@ async function initBlog() {
         <div class="card-body blog-post-content">${html}</div>
         <div class="card-footer">
           <button class="btn btn-outline-primary btn-sm share-btn" data-post="${postId}">Share</button>
-          <div class="comments mt-3">
-            <h6>Comments</h6>
-            <textarea class="form-control mb-2" rows="2" placeholder="Write a comment..."></textarea>
-            <button class="btn btn-sm btn-primary submit-comment" data-post="${postId}">Post</button>
-            <div class="comment-list mt-2"></div>
-          </div>
         </div>
       </div>
     `;
 
     container.appendChild(postDiv);
 
-    // --- Load existing comments ---
-    const commentList = postDiv.querySelector(".comment-list");
-    const savedComments = JSON.parse(localStorage.getItem(`${postId}-comments`) || "[]");
-    savedComments.forEach(c => {
-      const p = document.createElement("p");
-      p.textContent = c;
-      commentList.appendChild(p);
-    });
+    const collapseEl = postDiv.querySelector(`#collapse${index}`);
+    const titleEl = postDiv.querySelector(".post-title");
+
+    collapseEl.addEventListener("show.bs.collapse", () => titleEl.classList.add("d-none"));
+    collapseEl.addEventListener("hide.bs.collapse", () => titleEl.classList.remove("d-none"));
 
     // --- Add TOC links ---
-    function addTocLink(ul) {
+    const addTocLink = (ul) => {
       const li = document.createElement("li");
       li.classList.add("nav-item");
       li.innerHTML = `<a class="nav-link" href="#${postId}">${postTitle}</a>`;
       ul.appendChild(li);
+
       li.querySelector("a").addEventListener("click", e => {
         e.preventDefault();
         const offcanvasEl = document.getElementById("offcanvasToc");
-        const scrollToPost = () => document.getElementById(postId).scrollIntoView({ behavior: "smooth", block: "start" });
+        const scrollToPost = () =>
+          document.getElementById(postId).scrollIntoView({ behavior: "smooth", block: "start" });
         if (offcanvasEl && offcanvasEl.classList.contains("show")) {
           bootstrap.Offcanvas.getInstance(offcanvasEl).hide();
           setTimeout(scrollToPost, 300);
@@ -133,11 +161,12 @@ async function initBlog() {
           scrollToPost();
         }
       });
-    }
+    };
+
     addTocLink(tocList);
     addTocLink(tocListMobile);
 
-    // --- Smooth scrolling for internal links ---
+    // --- Smooth scrolling for internal links inside post ---
     const postContent = postDiv.querySelector('.blog-post-content');
     postContent.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', e => {
@@ -145,41 +174,34 @@ async function initBlog() {
         const targetId = anchor.getAttribute('href').substring(1);
         const targetEl = document.getElementById(targetId);
         if (!targetEl) return;
+
         const collapseParent = targetEl.closest('.collapse');
         if (collapseParent && !collapseParent.classList.contains('show')) {
           const bsCollapse = bootstrap.Collapse.getOrCreateInstance(collapseParent);
-          collapseParent.addEventListener('shown.bs.collapse', () => targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' }), { once: true });
+          collapseParent.addEventListener('shown.bs.collapse', () => {
+            targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }, { once: true });
           bsCollapse.show();
         } else {
           targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
+
         history.pushState(null, '', `#${targetId}`);
       });
     });
 
     // --- Share button ---
     postDiv.querySelector(".share-btn").addEventListener("click", () => {
-      const url = `${window.location.origin}${window.location.pathname}#${postId}`;
+      const postUrl = `${window.location.origin}${window.location.pathname}#${postId}`;
       if (navigator.share) {
-        navigator.share({ title: postTitle, url });
+        navigator.share({ title: postTitle, url: postUrl }).catch(err => console.error("Share failed:", err));
       } else {
-        navigator.clipboard.writeText(url);
-        alert("Post link copied to clipboard!");
+        navigator.clipboard.writeText(postUrl).then(() => {
+          alert(`Post link copied to clipboard!\n${postUrl}`);
+        }).catch(err => console.error("Clipboard write failed:", err));
       }
     });
 
-    // --- Comment submit ---
-    postDiv.querySelector(".submit-comment").addEventListener("click", e => {
-      const textarea = postDiv.querySelector("textarea");
-      if (textarea.value.trim() !== "") {
-        const newComment = document.createElement("p");
-        newComment.textContent = textarea.value;
-        commentList.appendChild(newComment);
-        savedComments.push(textarea.value);
-        localStorage.setItem(`${postId}-comments`, JSON.stringify(savedComments));
-        textarea.value = "";
-      }
-    });
   });
 
   // --- Scroll to hash on page load ---
@@ -190,7 +212,9 @@ async function initBlog() {
       const collapseParent = targetEl.closest('.collapse');
       if (collapseParent && !collapseParent.classList.contains('show')) {
         const bsCollapse = bootstrap.Collapse.getOrCreateInstance(collapseParent);
-        collapseParent.addEventListener('shown.bs.collapse', () => targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' }), { once: true });
+        collapseParent.addEventListener('shown.bs.collapse', () => {
+          targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, { once: true });
         bsCollapse.show();
       } else {
         targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
