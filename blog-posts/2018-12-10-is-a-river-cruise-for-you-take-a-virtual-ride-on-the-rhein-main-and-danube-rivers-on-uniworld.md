@@ -1,17 +1,5 @@
----
-title: "Is a river cruise for you? Take a virtual ride on the Rhein, Main and Danube rivers on Uniworld"
-date: 2018-12-10
-categories: 
-  - "europe"
-  - "river-cruise"
-  - "travel"
-tags: 
-  - "budapest"
-  - "danube"
-  - "european-river-cruise"
-  - "uniworld"
-coverImage: "2018-river-cruise-middle-rhine-valley-schc3b6nburg-castle-above-oberwesel-img_0414.jpg"
----
+# Is a river cruise for you? Take a virtual ride on the Rhein, Main and Danube rivers on Uniworld
+*2018-12-10*
 
 We are active, independent travelers who took our first river cruise from Amsterdam to Budapest (almost) on the Uniworld River Princess starting Aug. 5, 2018. If you're considering a European river cruise, here's what to expect.
 
@@ -21,7 +9,29 @@ The Princess is posh, compact (especially the staterooms), with some terrific st
 
 We had 111 passengers (capacity is 128), mostly middle aged and up, dominated by 57 Aussies and Kiwis and 35 Americans. One of the repeat customers was on his 10th Uniworld river cruise! (How did we like it? Read to the end.)
 
-\[gallery type="rectangular" ids="3773,3716,3713,3748,3717"\]
+<div class="gallery">
+  <figure>
+    <img src="./Images/18RiverCruise/18RiverCruise1.jpeg" alt="">
+    <figcaption>Uniworld’s River Princess</figcaption>
+  </figure>
+  <figure>
+    <img src="./Images/18RiverCruise/18RiverCruise2.jpeg" alt="">
+    <figcaption>The Captain of Uniworld’s River Princess taking us through the first of what was to be 76 locks.</figcaption>
+  </figure>  
+  <figure>
+    <img src="./Images/18RiverCruise/18RiverCruise3.jpeg" alt="">
+    <figcaption>Uniworld’s River Princess cabins were comfy but too tiny for us</figcaption>
+  </figure>  
+  <figure>
+    <img src="./Images/18RiverCruise/18RiverCruise4.jpeg" alt="">
+    <figcaption>Uniworld’s River Princess had some wonderful food and staff.</figcaption>
+  </figure>  
+  <figure>
+    <img src="./Images/18RiverCruise/18RiverCruise5.jpeg" alt="">
+    <figcaption>Going through one of many locks.</figcaption>
+  </figure>
+
+</div>
 
 <!--more-->**Amsterdam:** Our starting point was one of only five cities where we could readily walk to town from the boat instead of requiring a bus. After an introduction on board from a curator, we toured the Van Gogh museum ahead of regular opening hours, then took a canal ride that ended at our dock. Most stops had two excursion options in groups of 15 or so with one dubbed "gentle" walkers.
 
