@@ -3,6 +3,7 @@ const renderer = new marked.Renderer();
 let currentPostIndex = 0; // We'll set this for each post before rendering
 
 renderer.heading = function (text, level) {
+  text = String(text || "");  // Ensure it's always a string
   const slug = text.toLowerCase().replace(/[^\w]+/g, '-');
   const id = `post${currentPostIndex}-${slug}`;
   return `<h${level} id="${id}">${text}</h${level}>`;
