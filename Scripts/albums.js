@@ -2,7 +2,7 @@
 
 // Centralized album data (single source of truth)
 const ALBUMS = {
-  "churchill-2025": { name: "Churchill 2025", folder: "Churchill", total: 6 },
+  "churchill-2025": { name: "Churchill 2025", folder: "Churchill", total: 40 },
   "pandas-2025":    { name: "Pandas 2025",    folder: "Pandas",     total: 8 },
   "nepal-2025":     { name: "Nepal 2025",     folder: "Nepal",      total: 19 },
   "antarctica-2024":{ name: "Antarctica 2024", folder: "Antarctica", total: 14 },
