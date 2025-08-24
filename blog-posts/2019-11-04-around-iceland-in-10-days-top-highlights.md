@@ -163,7 +163,7 @@ Imagine a gigantic, ancient glacier calving constantly, shedding icebergs that s
     <figcaption>Jökulsárlón Glacial Lagoon</figcaption>
   </figure>
     <figure>
-    <img src="./Images/Iceland/Iceland122.jpeg" alt="">        
+    <img src="./Images/Iceland/Iceland22.jpeg" alt="">        
     <figcaption>Jökulsárlón Glacial Lagoon’s diamond beach</figcaption>
   </figure>
 

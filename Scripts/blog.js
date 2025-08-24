@@ -5,7 +5,7 @@ marked.setOptions({
 
 async function initBlog() {
   const posts = [
-    "2025-08-23-churchill",
+    "2025-08-23-churchill.md",
     "2025-08-14-panda-monium-close-encounters-in-chengdu-and-wolong-china.md",
     "2025-06-03-exploring-antarctica-and-the-arctic-how-did-two-floridians-end-up-at-both-polar-regions-in-one-year-and-what-did-they-discover.md",
     "2025-01-29-antarctica-calls-and-we-must-go.md",
