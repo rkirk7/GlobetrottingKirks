@@ -22,7 +22,7 @@ const ALBUMS = {
 
 // Build the album cards on albums.html (list page)
 // in albums.js
-function initAlbums() {
+async function initAlbums() {
   const container = document.getElementById("albums-container");
   const toc = document.getElementById("albums-toc");
   if (!container || !toc) return;
@@ -30,10 +30,20 @@ function initAlbums() {
   container.innerHTML = "";
   toc.innerHTML = "";
 
+  // Load image metadata
+  const imageMeta = await fetch("image-data.json").then(res => res.json());
+
   Object.entries(ALBUMS).forEach(([key, album]) => {
-    const cover = `Images/${album.folder}/${album.folder}1.jpeg`;
     const albumId = `album-${key}`;
     const albumHref = `album.html?album=${encodeURIComponent(key)}`;
+
+    // Filter only images that exist for this folder
+    const albumImages = Object.keys(imageMeta).filter(f => f.startsWith(album.folder));
+
+    // First image as cover
+    const cover = albumImages.length > 0
+      ? `Images/${album.folder}/${albumImages[0]}`
+      : "placeholder.jpg";
 
     // TOC link
     const tocLink = document.createElement("a");
@@ -42,12 +52,12 @@ function initAlbums() {
     tocLink.textContent = album.name;
     toc.appendChild(tocLink);
 
-    // Previews
+    // Previews (first 4 real images)
     let previewsHTML = '<div class="d-flex justify-content-center flex-wrap mt-2">';
-    for (let i = 1; i <= Math.min(album.total, 4); i++) {
-      previewsHTML += `<img src="Images/${album.folder}/${album.folder}${i}.jpeg" 
+    albumImages.slice(0, 4).forEach(img => {
+      previewsHTML += `<img src="Images/${album.folder}/${img}" 
                         class="img-thumbnail m-1" style="height:60px;width:60px;object-fit:cover;">`;
-    }
+    });
     previewsHTML += "</div>";
 
     // Card
@@ -82,7 +92,6 @@ function initAlbums() {
 document.addEventListener("DOMContentLoaded", () => {
   if (document.getElementById("albums-container")) initAlbums();
 });
-
 
 // If albums.html is the initial page content (SSR), you could call initAlbums on DOM ready.
 // In SPA flow we call it from loadPage after injecting albums.html.
