@@ -37,9 +37,12 @@ async function initBlog() {
     const lines = mdContent.split("\n");
     for (let line of lines) {
       line = line.trim();
-      if (line.startsWith("# ")) return line.replace(/^# /, "").trim();
+      if (line.startsWith("# ")) {
+        const title = line.replace(/^# /, "").trim();
+        return { title, id: sanitizeId(title) };
+      }
     }
-    return null;
+    return { title: null, id: null };
   }
 
   const postsData = await Promise.all(
@@ -60,11 +63,15 @@ async function initBlog() {
     // ===========================
     // Prefix internal Markdown links
     // ===========================
-   // Prefix all internal Markdown links like [Text](#some-id)
-const prefixedMarkdown = postData.content.replace(
-  /\[([^\]]+)\]\(\s*#([^\)]+)\s*\)/g,  // matches [Text](#id) even with spaces
-  (_, text, id) => `[${text}](#${postId}-${id.trim()})`
-);
+
+    const prefixedMarkdown = postData.content.replace(
+      /\[([^\]]+)\]\(\s*#([^)]+)\s*\)/g,
+      (_, text, id) => {
+        const safeId = sanitizeId(id);
+        return `[${text}](#${postId}-${safeId})`;
+      }
+    );
+
 
     // Convert markdown to HTML
     const html = marked.parse(prefixedMarkdown, {
@@ -103,18 +110,20 @@ const prefixedMarkdown = postData.content.replace(
     // ===========================
     // Add TOC links (desktop + mobile)
     // ===========================
+    const { title: postTitle, id: postIdSanitized } = extractTitle(postData.content) || { title: postData.filename, id: sanitizeId(postData.filename) };
+
     const addTocLink = (ul) => {
       const li = document.createElement("li");
       li.classList.add("nav-item");
-      li.innerHTML = `<a class="nav-link" href="#${postId}">${postTitle}</a>`;
+      li.innerHTML = `<a class="nav-link" href="#${postId}-${postIdSanitized}">${postTitle}</a>`;
       ul.appendChild(li);
-
+    
       li.querySelector("a").addEventListener("click", e => {
         e.preventDefault();
         const offcanvasEl = document.getElementById("offcanvasToc");
         const scrollToPost = () =>
-          document.getElementById(postId).scrollIntoView({ behavior: "smooth", block: "start" });
-
+          document.getElementById(`${postId}-${postIdSanitized}`).scrollIntoView({ behavior: "smooth", block: "start" });
+    
         if (offcanvasEl && offcanvasEl.classList.contains("show")) {
           bootstrap.Offcanvas.getInstance(offcanvasEl).hide();
           setTimeout(scrollToPost, 300);
@@ -123,6 +132,7 @@ const prefixedMarkdown = postData.content.replace(
         }
       });
     };
+    
 
     addTocLink(tocList);
     addTocLink(tocListMobile);
@@ -134,13 +144,8 @@ const prefixedMarkdown = postData.content.replace(
     postContent.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', e => {
         e.preventDefault();
-    
-        let targetId = anchor.getAttribute('href').substring(1);
-    
-        // Add post prefix if missing
-        if (!targetId.startsWith(postId + "-")) {
-          targetId = `${postId}-${targetId}`;
-        }
+        let targetId = sanitizeId(anchor.getAttribute('href').substring(1));
+        targetId = `${postId}-${targetId}`;
     
         const targetEl = document.getElementById(targetId);
         if (!targetEl) return;
@@ -160,6 +165,16 @@ const prefixedMarkdown = postData.content.replace(
       });
     });
   });
+
+  function sanitizeId(text) {
+    return text.trim()
+               .replace(/[’‘]/g, "'")              // normalize fancy apostrophes
+               .replace(/[^a-zA-Z0-9-_]/g, '-')    // replace invalid chars with dash
+               .replace(/--+/g, '-')               // collapse multiple dashes
+               .replace(/^-+|-+$/g, '')            // trim leading/trailing dashes
+               .toLowerCase();                     // optional: lowercase for consistency
+  }
+  
 
   // ===========================
   // Scroll to hash on page load
