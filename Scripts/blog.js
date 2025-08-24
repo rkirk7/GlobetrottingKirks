@@ -43,7 +43,6 @@ async function initBlog() {
       .replace(/^-+|-+$/g, '')
       .toLowerCase();
   }
-  
 
   const postsData = await Promise.all(
     posts.map(async post => {
@@ -62,26 +61,27 @@ async function initBlog() {
     let firstHeaderId = null;
     let firstHeaderText = null;
 
-    // Custom renderer to add unique IDs to headings
+    // Custom renderer: safe heading text extraction
     const renderer = new marked.Renderer();
     renderer.heading = (text, level) => {
-      const id = `${postId}-${sanitizeId(text)}`;
+      const rawText = typeof text === "string" ? text : marked.parseInline(text);
+      const id = `${postId}-${sanitizeId(rawText)}`;
       if (level === 1 && !firstHeaderId) {
         firstHeaderId = id;
-        firstHeaderText = text; // use actual H1 text for TOC
+        firstHeaderText = rawText;
       }
-      return `<h${level} id="${id}">${text}</h${level}>`;
+      return `<h${level} id="${id}">${rawText}</h${level}>`;
     };
 
-    // Prefix internal links so they match generated IDs
+    // Fix internal links
     const prefixedMarkdown = postData.content.replace(/\[([^\]]+)\]\(\s*#([^)]+)\s*\)/g, (_, text, id) => {
       return `[${text}](#${postId}-${sanitizeId(id)})`;
     });
 
-    // Convert Markdown → HTML
+    // Render HTML
     const html = marked.parse(prefixedMarkdown, { renderer });
 
-    // Create post card
+    // Create card
     const postDiv = document.createElement("div");
     postDiv.classList.add("card", "shadow-lg", "mb-3");
     postDiv.id = postId;
@@ -103,8 +103,9 @@ async function initBlog() {
     collapseEl.addEventListener("show.bs.collapse", () => titleEl.classList.add("d-none"));
     collapseEl.addEventListener("hide.bs.collapse", () => titleEl.classList.remove("d-none"));
 
-    // TOC links (desktop + mobile)
+    // TOC links
     const addTocLink = (ul) => {
+      if (!firstHeaderId) return; // skip if no heading
       const li = document.createElement("li");
       li.classList.add("nav-item");
       li.innerHTML = `<a class="nav-link" href="#${firstHeaderId}">${firstHeaderText || "Untitled Post"}</a>`;
@@ -112,8 +113,10 @@ async function initBlog() {
 
       li.querySelector("a").addEventListener("click", e => {
         e.preventDefault();
+        const targetEl = document.getElementById(firstHeaderId);
+        if (!targetEl) return;
         const offcanvasEl = document.getElementById("offcanvasToc");
-        const scrollToPost = () => document.getElementById(firstHeaderId).scrollIntoView({ behavior: "smooth", block: "start" });
+        const scrollToPost = () => targetEl.scrollIntoView({ behavior: "smooth", block: "start" });
 
         if (offcanvasEl?.classList.contains("show")) {
           bootstrap.Offcanvas.getInstance(offcanvasEl).hide();
@@ -127,7 +130,7 @@ async function initBlog() {
     addTocLink(tocList);
     addTocLink(tocListMobile);
 
-    // Smooth scrolling for internal links
+    // Smooth internal links
     const postContent = postDiv.querySelector('.blog-post-content');
     postContent.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', e => {
@@ -150,7 +153,7 @@ async function initBlog() {
     });
   });
 
-  // Scroll to hash on load
+  // Scroll to hash on page load
   if (window.location.hash) {
     const hash = decodeURIComponent(window.location.hash.substring(1));
     const targetEl = document.getElementById(hash);

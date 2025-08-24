@@ -106,8 +106,6 @@ The days were long. Sometimes so were the nights.
 - Regan woke me up once for a bear right outside the lodge around 10:30 p.m.  
 - And again at 11:20 p.m. (the same night!) for the Northern Lights. This was an unexpected bonus since nights were still pretty light near the Arctic.
 
-Bonus: [check out Regan's timelapse of sunset, taken from the watchtower](https://youtu.be/g9-Pn-Pf43U)
-
 <div class="gallery">
   <figure>
     <img src="./Images/Churchill/Churchill23.jpeg" alt="Night Bear">
@@ -122,6 +120,8 @@ Bonus: [check out Regan's timelapse of sunset, taken from the watchtower](https:
     <figcaption>Mei-Mei and Regan with the Northern Lights</figcaption>
   </figure>
 </div>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/g9-Pn-Pf43U?si=QZImjZ_srMkVPZCz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### Departure
 
