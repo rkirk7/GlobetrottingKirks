@@ -39,83 +39,80 @@
   <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 
   <script>
-    // Get album parameter from URL
     const urlParams = new URLSearchParams(window.location.search);
     const albumParam = urlParams.get("album");
-  
-    // Map parameter to folder and title
+
     const albums = {
-      "churchill-2025": { name: "Churchill 2025", folder: "Churchill" },
-      "pandas-2025": { name: "Pandas 2025", folder: "Pandas" },
-      "nepal-2025": { name: "Nepal 2025", folder: "Nepal" },
-      "antarctica-2024": { name: "Antarctica 2024", folder: "Antarctica" },
-      "svalbard-2024": { name: "Svalbard 2024", folder: "Svalbard" },
-      "safari-2023": { name: "Safari to Botswana, Zimbabwe, Zambia and Namibia 2023", folder: "23Safari" },
-      "patagonia-2023": { name: "Patagonia 2023", folder: "Patagonia" },
-      "french-polynesia-2023": { name: "French Polynesia 2023", folder: "FrenchPolynesia" },
-      "galapagos-2022": { name: "Galapagos 2023", folder: "Galapagos" },
-      "western-parks-2021": { name: "Western Parks 2021", folder: "WesternParks" },
-      "new-zealand-2019": { name: "New Zealand 2019", folder: "NewZealand" },
-      "switzerland-2019": { name: "Switzerland 2019", folder: "Switzerland" },
-      "via-ferrata": { name: "Via Ferratas Around the World", folder: "ViaFerrata" },
-      "iceland-2019": { name: "Iceland 2019", folder: "Iceland" },
-      "river-cruise-2018": { name: "Rhine River Cruise 2018", folder: "18RiverCruise" }
+"churchill-2025": { name: "Churchill 2025", folder: "Churchill" },
+"pandas-2025": { name: "Pandas 2025", folder: "Pandas" },
+"nepal-2025": { name: "Nepal 2025", folder: "Nepal" },
+"antarctica-2024": { name: "Antarctica 2024", folder: "Antarctica" },
+"svalbard-2024": { name: "Svalbard 2024", folder: "Svalbard" },
+"safari-2023": { name: "Safari to Botswana, Zimbabwe, Zambia and Namibia 2023", folder: "23Safari" },
+"patagonia-2023": { name: "Patagonia 2023", folder: "Patagonia" },
+"french-polynesia-2023": { name: "French Polynesia 2023", folder: "FrenchPolynesia" },
+"galapagos-2022": { name: "Galapagos 2023", folder: "Galapagos" },
+"western-parks-2021": { name: "Western Parks 2021", folder: "WesternParks" },
+"new-zealand-2019": { name: "New Zealand 2019", folder: "NewZealand" },
+"switzerland-2019": { name: "Switzerland 2019", folder: "Switzerland" },
+"via-ferrata": { name: "Via Ferratas Around the World", folder: "ViaFerrata" },
+"iceland-2019": { name: "Iceland 2019", folder: "Iceland" },
+"river-cruise-2018": { name: "Rhine River Cruise 2018", folder: "18RiverCruise" }
     };
-  
+
     const container = document.getElementById("album-container");
     const albumTitle = document.getElementById("album-title");
-  
+
     if (!albums[albumParam]) {
       albumTitle.innerText = "Album not found";
     } else {
       const album = albums[albumParam];
       albumTitle.innerText = album.name;
-  
-      let index = 1;
-      let lightbox;
-  
-      function loadNextImage() {
-  const img = new Image();
-  img.src = `Images/${album.folder}/${album.folder}${index}.jpeg`;
-  img.classList.add("album-img");
 
-  img.onload = () => {
-    const col = document.createElement("div");
-    col.classList.add("col-md-4", "mb-4");
+      fetch(`Images/${album.folder}/image-data.json`)
+        .then(res => res.json())
+        .then(data => {
+          const filenames = Object.keys(data);
+          if (!filenames.length) {
+            container.innerHTML = "<p class='text-center'>No images found.</p>";
+            return;
+          }
 
-    const link = document.createElement("a");
-    link.href = img.src;
-    link.classList.add("glightbox");
-    link.setAttribute("data-gallery", albumParam);
-    link.appendChild(img);
+          let lightbox;
 
-    col.appendChild(link);
-    container.appendChild(col);
+          filenames.forEach(filename => {
+            const caption = data[filename] || "";
 
-    if (!lightbox) {
-      lightbox = GLightbox({ selector: ".glightbox" });
-    } else {
-      lightbox.reload();
-    }
+            const col = document.createElement("div");
+            col.classList.add("col-md-4", "mb-4");
 
-    index++;
-    loadNextImage(); // only load next if this one succeeded
-  };
+            const img = document.createElement("img");
+            img.src = `Images/${album.folder}/${filename}`;
+            img.alt = caption;
+            img.classList.add("album-img");
 
-  img.onerror = () => {
-    // stop loading when a missing image is found
-    if (index === 1) {
-      container.innerHTML = "<p class='text-center'>No images found.</p>";
-    }
-    // no further calls → loop ends here
-  };
-}
+            const link = document.createElement("a");
+            link.href = img.src;
+            link.classList.add("glightbox");
+            link.setAttribute("data-gallery", albumParam);
+            if (caption) link.setAttribute("data-title", caption);
 
-  
-      // **Call the function to start loading images**
-      loadNextImage();
+            link.appendChild(img);
+            col.appendChild(link);
+            container.appendChild(col);
+
+            if (!lightbox) {
+              lightbox = GLightbox({ selector: ".glightbox" });
+            } else {
+              lightbox.reload();
+            }
+          });
+        })
+        .catch(err => {
+          console.error("Failed to load image data JSON:", err);
+          container.innerHTML = "<p class='text-center'>Failed to load album images.</p>";
+        });
     }
   </script>
-  
 </body>
 </html>
