@@ -1,4 +1,19 @@
+const renderer = new marked.Renderer();
+
+let currentPostIndex = 0; // We'll set this for each post before rendering
+
+renderer.heading = function (text, level) {
+  // Create a slug from the heading text
+  const slug = text.toLowerCase().replace(/[^\w]+/g, '-');
+  
+  // Prefix with post number for uniqueness
+  const id = `post${currentPostIndex}-${slug}`;
+
+  return `<h${level} id="${id}">${text}</h${level}>`;
+};
+
 marked.setOptions({
+  renderer,
   mangle: false,
   headerIds: true
 });
