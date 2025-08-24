@@ -69,7 +69,7 @@
       const album = albums[albumParam];
       albumTitle.innerText = album.name;
 
-      fetch(`Images/${album.folder}/image-data.json`)
+      fetch(`image-data.json`)
         .then(res => res.json())
         .then(data => {
           const filenames = Object.keys(data);
