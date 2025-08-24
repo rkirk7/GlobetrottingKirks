@@ -139,43 +139,69 @@ We chose to pay for a driver so we could all enjoy the journey and felt it was w
 
 By the way: shark divers looked a little silly to us: they're in wet suits dunked in a small cage attached to the boat. The crew would toss out fish/chum to entice sharks (copper ones while we were there) to swim right up to the cage, over and over again.  
 
-\[gallery ids="3990,3985,3988,3986" type="rectangular"\]
+<div class="gallery">
+  <figure>
+    <img src="./Images/19SouthAfrica/19SouthAfrica18.jpeg" alt="">
+    <figcaption>Copper shark at cage divers</figcaption>
+  </figure>
+   <figure>
+    <img src="./Images/19SouthAfrica/19SouthAfrica19.jpeg" alt="">
+    <figcaption>Brydes whale</figcaption>
+  </figure>
+     <figure>
+    <img src="./Images/19SouthAfrica/19SouthAfrica20.jpeg" alt="">
+    <figcaption>Shark alley</figcaption>
+  </figure>
+</div>
 
 **Oudtshoorn**: I had debated whether to stop here. But surely one must check out the ostrich capital of the world (80% are in this region)! We had an educational and fun tour at Highgate, holding 5-day old chicks and getting ostrich "massages." I also did the adventure tour at Cango Caves, where you actually crawl through tight spaces for the fun of it; quite an adrenalin rush. And we drove the impressive all-gravel Swartberg Pass for sweeping mountain views.
 
-\[gallery ids="3979,3981,3977" type="circle"\]
+<div class="gallery">
+  <figure>
+    <img src="./Images/19SouthAfrica/19SouthAfrica21.jpeg" alt="">
+    <figcaption>Impressive Swartberg Pass</figcaption>
+  </figure>
+   <figure>
+    <img src="./Images/19SouthAfrica/19SouthAfrica22.jpeg" alt="">
+    <figcaption>My caboose going through Cango Caves</figcaption>
+  </figure>
+     <figure>
+    <img src="./Images/19SouthAfrica/19SouthAfrica23.jpeg" alt="">
+    <figcaption>Five day old chick at Highgate ostrich farm</figcaption>
+  </figure>
+</div>
 
 **Tsitsikamma National Park:** Beautiful rocky shore with the crashing Indian ocean, and a lovely visual feast at the Storms River Mouth with its three suspension bridges. It's a bit of a walk with many steps to get there but doable for most. We never saw the boat options that were supposed to be at the bridge though there were kayakers. I took the steep hike to the top overlook above the mouth in about 30 minutes. (BTW: the entry fee is much cheaper when you tell them you'll just be a few hours.)
 
-\[gallery ids="3971,3972,3973" type="rectangular"\]
+<div class="gallery">
+  <figure>
+    <img src="./Images/19SouthAfrica/19SouthAfrica24.jpeg" alt="">
+    <figcaption>Mesmerizing Indian Ocean at Tsitskamma park</figcaption>
+  </figure>
+   <figure>
+    <img src="./Images/19SouthAfrica/19SouthAfrica25.jpeg" alt="">
+    <figcaption>Tsitskamma park Storms River Mouth</figcaption>
+  </figure>
+</div>
 
 We lucked out with a luxurious **[Plettenberg base](https://www.airbnb.com/rooms/18465291)** through airbnb that was enormous and reasonable with fabulous views.
 
-<figure>
 
-![Plettenberg luxury rental best pano SA 2019 IMG_5982](images/plettenberg-luxury-rental-best-pano-sa-2019-img_5982.jpg)
-
-<figcaption>
-
-View from our fantastic rental in Plettenberg Bay
-
-</figcaption>
-
-</figure>
+<div class="gallery">
+  <figure>
+    <img src="./Images/19SouthAfrica/19SouthAfrica26.jpeg" alt="">
+    <figcaption>View from our fantastic rental in Plettenberg Bay</figcaption>
+  </figure>
+</div>
 
 **Robberg Reserve:**  This compact peninsula at Plettenberg has very cool sand dunes and huge waves on one side. It would not be worthwhile unless you went at least to the middle (note the small seal colony below), across the Witsand sand dune and down along the sand and rocks (RT 2.6 miles) with the roaring Indian Ocean all about.
 
-<figure>
-
-![Plettenberg Robberg Nature Reserve hike SA 2019 IMG_4660](images/plettenberg-robberg-nature-reserve-hike-sa-2019-img_4660-e1554462365772.jpg)
-
-<figcaption>
-
-Robberg Nature Reserve
-
-</figcaption>
-
-</figure>
+<div class="gallery">
+  <figure>
+    <img src="./Images/19SouthAfrica/19SouthAfrica27.jpeg" alt="">
+    <figcaption>Robberg Nature Reserve</figcaption>
+  </figure>
+</div>
 
 ## Makanyi lodge in Timbavati
 
@@ -183,10 +209,16 @@ We flew from Port Elizabeth to Hoedspruit with a change at J-Burg, arriving at M
 
 Great decision! We were captivated by the stylish setting, thoughtful touches and amazing animal encounters.
 
-- ![](images/makanyi-lodge-timbavati-sa-2019-img_5670.jpg)
-    
-- ![](images/makanyi-sundowner-best-best-sunset-group-timbavati-sa-2019-img_6409.jpg)
-    
+<div class="gallery">
+  <figure>
+    <img src="./Images/19SouthAfrica/19SouthAfrica28.jpeg" alt="">
+    <figcaption>Makanyi Lodge, Timbavati</figcaption>
+  </figure>
+    <figure>
+    <img src="./Images/19SouthAfrica/19SouthAfrica29.jpeg" alt="">
+    <figcaption>Sundowner at Makanyi</figcaption>
+  </figure>
+</div>
 
 Each morning, our guide Sean would call at 5:30; we'd go to the lodge for coffee and muffins then depart at 6 for our first game drive, stopping midway for coffee (with perhaps a splash of Amarula). Back around 9 for a robust breakfast at 10, followed by a light lunch from 1-2:30 and tea at 4. Out again from 4:30 till 7:30ish, with a sundowner drink around sunset at 6:20. Drinks (included) around 7:45 with dinner at 8. 
 
@@ -194,27 +226,43 @@ On our first drive, we caught sight of a rare pack of endangered wild dogs, and 
 
 Down time was spent on naps, a little exercise in the gym, and soaking in the tranquil setting, interrupted only by hippo snorts. This was our third trip to Africa (the first two were to Tanzania) and Makanyi really spoiled us. 
 
-- ![](images/makanyi-female-leopard-hides-in-tree-from-male-leopard-timbavati-sa-2019-img_5169-e1554461922193.jpg)
-    
-- ![](images/makanyi-mom-and-infant-rhino-best-timbavati-sa-2019-img_6257.jpg)
-    
-- ![](images/makanyi-lodge-views-timbavati-sa-2019-img_6145.jpg)
-    
-- ![](images/makanyi-wild-dogs-timbavati-sa-2019-img_4964.jpg)
+<div class="gallery">
+  <figure>
+    <img src="./Images/19SouthAfrica/19SouthAfrica30.jpeg" alt="">
+    <figcaption>A female leopard hiding from a male leopard</figcaption>
+  </figure>
+    <figure>
+    <img src="./Images/19SouthAfrica/19SouthAfrica31.jpeg" alt="">
+    <figcaption>Mother and infant rhino</figcaption>
+  </figure>
+      <figure>
+    <img src="./Images/19SouthAfrica/19SouthAfrica32.jpeg" alt="">
+    <figcaption>Zebra family</figcaption>
+  </figure>
+      <figure>
+    <img src="./Images/19SouthAfrica/19SouthAfrica33.jpeg" alt="">
+    <figcaption>Wild Dogs</figcaption>
+  </figure>
+</div>
     
 
 ## Blyde River Canyon and home
 
 We drove ourselves from Hoedspruit (Avis rental) along the beautiful Blyde River Canyon to Nelspruit and J-Burg. The roads were easy but traffic was tricky. I stayed within speed limits while my friends helpfully shouted out STAY LEFT; there were no signs of dubious police as feared.
 
-**Blyde River Canyon i**s not very well marketed by South Africa but definitely worth the effort! At 16 miles long, it's one of the largest in the world, and perhaps the greenest, with a variety of pull-off overlooks (each with a fee). It was a great wrap-up to our trip.  
+**Blyde River Canyon** is not very well marketed by South Africa but definitely worth the effort! At 16 miles long, it's one of the largest in the world, and perhaps the greenest, with a variety of pull-off overlooks (each with a fee). It was a great wrap-up to our trip.  
 
-- ![](images/blyde-river-canyon-gods-window-sa-2019-img_6759.jpg)
-    
-- ![](images/blyde-river-canyon-bourkes-luck-potholes-best-pano-sa-2019-img_6631-2-1.jpg)
-    
-- ![](images/blyde-river-canyon-3-rondavels-best-pano-sa-2019-img_2993-2.jpg)
-    
+<div class="gallery">
+    <figure>
+    <img src="./Images/19SouthAfrica/19SouthAfrica34.jpeg" alt="">
+    <figcaption>Bourke's Luck</figcaption>
+  </figure>
+      <figure>
+    <img src="./Images/19SouthAfrica/19SouthAfrica35.jpeg" alt="">
+    <figcaption>Rondavels</figcaption>
+  </figure>
+</div>
+
 
 ## Final short notes
 
