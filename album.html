@@ -72,40 +72,41 @@
       fetch(`image-data.json`)
   .then(res => res.json())
   .then(data => {
-    const filenames = Object.keys(data);
-    if (!filenames.length) {
-      container.innerHTML = "<p class='text-center'>No images found.</p>";
-      return;
-    }
+    const filenames = Object.keys(data).filter(f => f.startsWith(album.folder + "/"));
 
-    filenames.forEach(filename => {
-      const caption = data[filename] || "";
+if (!filenames.length) {
+  container.innerHTML = "<p class='text-center'>No images found.</p>";
+  return;
+}
 
-      const col = document.createElement("div");
-      col.classList.add("col-md-4", "mb-4");
+filenames.forEach(filename => {
+  const caption = data[filename] || "";
 
-      const img = document.createElement("img");
-      img.src = `Images/${album.folder}/${filename}`;
-      img.alt = caption;
-      img.classList.add("album-img");
+  const col = document.createElement("div");
+  col.classList.add("col-md-4", "mb-4");
 
-      // Handle broken images
-      img.onerror = () => {
-        console.warn(`Failed to load image: ${filename}`);
-        img.src = "Images/placeholder.png"; // Optional fallback image
-        img.alt = "Image not available";
-      };
+  const img = document.createElement("img");
+  img.src = `Images/${filename}`;  // Don't prepend folder again
+  img.alt = caption;
+  img.classList.add("album-img");
 
-      const link = document.createElement("a");
-      link.href = img.src;
-      link.classList.add("glightbox");
-      link.setAttribute("data-gallery", albumParam);
-      if (caption) link.setAttribute("data-title", caption);
+  img.onerror = () => {
+    console.warn(`Failed to load image: ${filename}`);
+    img.src = "Images/placeholder.png";
+    img.alt = "Image not available";
+  };
 
-      link.appendChild(img);
-      col.appendChild(link);
-      container.appendChild(col);
-    });
+  const link = document.createElement("a");
+  link.href = img.src;
+  link.classList.add("glightbox");
+  link.setAttribute("data-gallery", albumParam);
+  if (caption) link.setAttribute("data-title", caption);
+
+  link.appendChild(img);
+  col.appendChild(link);
+  container.appendChild(col);
+});
+
 
     // Initialize GLightbox once after all images are added
     GLightbox({ selector: ".glightbox" });

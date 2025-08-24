@@ -314,6 +314,31 @@ footer {
   font-size: 0.95rem;
 }
 
+#toc-list li, #toc-list-mobile li {
+  margin-bottom: 10px;
+  list-style: none;
+}
+#toc-list a, #toc-list-mobile a {
+  display: block;
+  padding: 6px 8px;
+  font-size: 1rem;
+  line-height: 1.3;
+  text-decoration: none;
+  color: #333;
+  border-radius: 4px;
+}
+#toc-list a:hover, #toc-list-mobile a:hover {
+  background-color: #f0f0f0;
+  color: #007bff;
+}
+#toc-list strong {
+  font-size: 1.05rem;
+}
+#toc-list small {
+  font-size: 0.85rem;
+  color: #666;
+}
+
 #toc .nav-link, #toc-list-mobile .nav-link {
   padding-left: 0.5rem;
 }

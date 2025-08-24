@@ -1,17 +1,17 @@
 // ===========================
 // MARKED RENDERER FOR HEADINGS
 // ===========================
-// const renderer = new marked.Renderer();
-// let currentPostIndex = 0; // Set for each post
+const renderer = new marked.Renderer();
+let currentPostIndex = 0; // Set for each post
 
-// renderer.heading = function(text, level, raw) {
-//   const tempDiv = document.createElement('div');
-//   tempDiv.innerHTML = text;
-//   const plainText = raw || tempDiv.textContent || tempDiv.innerText || '';
-//   const slug = plainText.toLowerCase().replace(/[^\w]+/g, '-');
-//   const id = `post${currentPostIndex}-${slug}`;
-//   return `<h${level} id="${id}">${text}</h${level}>`;
-// };
+renderer.heading = function(text, level, raw) {
+  const tempDiv = document.createElement('div');
+  tempDiv.innerHTML = text;
+  const plainText = raw || tempDiv.textContent || tempDiv.innerText || '';
+  const slug = plainText.toLowerCase().replace(/[^\w]+/g, '-');
+  const id = `post${currentPostIndex}-${slug}`;
+  return `<h${level} id="${id}">${text}</h${level}>`;
+};
 
 marked.setOptions({
   renderer,
@@ -151,11 +151,21 @@ async function initBlog() {
     container.appendChild(postDiv);
 
     // TOC population example (if you need titles in TOC)
-    const tocItem = document.createElement('li');
-    tocItem.innerHTML = `<a href="#${postId}">${postTitle}</a>`;
-    tocList.appendChild(tocItem);
-    const tocItemMobile = tocItem.cloneNode(true);
-    tocListMobile.appendChild(tocItemMobile);
+// TOC population with date
+const tocItem = document.createElement('li');
+
+// Extract date from filename (YYYY-MM-DD format)
+const postDate = postData.filename.slice(0, 10); 
+const dateFormatted = new Date(postDate).toLocaleDateString('en-US', {
+  year: 'numeric', month: 'short', day: 'numeric'
+});
+
+tocItem.innerHTML = `<a href="#${postId}"><strong>${postTitle}</strong><br><small class="text-muted">${dateFormatted}</small></a>`;
+
+tocList.appendChild(tocItem);
+const tocItemMobile = tocItem.cloneNode(true);
+tocListMobile.appendChild(tocItemMobile);
+
   });
 }
 
