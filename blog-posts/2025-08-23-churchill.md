@@ -59,9 +59,13 @@ This precautionary care/expertise is a fundamental principle for Churchill Wild,
 The guides were all well-equipped with numerous bear deterrents; the rifles were in case of a worst-case scenario (we're told none of the guides has ever had to use them); the most effective defense, we were told, was to loudly bang two rocks together. Loudly shouting "Hey bear!" was also supposedly an effective strategy, and one they had us practice as a group. It may sound silly, but we felt safe under the guides' expert care.
 
 <div class="gallery">
+
 ![](./Images/Churchill/Churchill29.jpeg)
+
 ![](./Images/Churchill/Churchill30.jpeg)
+
 ![](./Images/Churchill/Churchill31.jpeg)
+
 </div>
 
 ---
