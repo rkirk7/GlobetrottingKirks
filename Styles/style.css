@@ -504,3 +504,52 @@ footer {
     }
   }
   
+
+  /* Override for gallery images to keep them smaller and uniform */
+.blog-post-content .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* smaller min width */
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
+.blog-post-content .gallery img {
+  width: 100%;
+  height: 180px; /* fixed height */
+  object-fit: cover; /* crop to fill box neatly */
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.blog-post-content .gallery img:hover {
+  transform: scale(1.05);
+}
+
+.blog-post-content .gallery figure {
+  margin: 0;
+}
+
+.blog-post-content .gallery figcaption {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 4px;
+}
+
+/* On small screens, one column */
+@media (max-width: 600px) {
+  .blog-post-content .gallery {
+    grid-template-columns: 1fr;
+  }
+  .blog-post-content .gallery img {
+    height: auto; /* let them grow naturally on mobile */
+  }
+}
+
+.blog-post-content > figure > img {
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+}
