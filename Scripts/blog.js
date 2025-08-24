@@ -191,16 +191,29 @@ async function initBlog() {
     });
 
     // --- Share button ---
-    postDiv.querySelector(".share-btn").addEventListener("click", () => {
-      const postUrl = `${window.location.origin}${window.location.pathname}#${postId}`;
-      if (navigator.share) {
-        navigator.share({ title: postTitle, url: postUrl }).catch(err => console.error("Share failed:", err));
-      } else {
-        navigator.clipboard.writeText(postUrl).then(() => {
-          alert(`Post link copied to clipboard!\n${postUrl}`);
-        }).catch(err => console.error("Clipboard write failed:", err));
-      }
-    });
+// --- Share button ---
+postDiv.querySelector(".share-btn").addEventListener("click", () => {
+  // Get current URL without any hash
+  const baseUrl = window.location.origin + window.location.pathname;
+  const postUrl = `${baseUrl}#${postId}`;
+
+  if (navigator.share) {
+    // Native share (mobile-friendly)
+    navigator.share({
+      title: postTitle,
+      url: postUrl
+    }).catch(err => console.error("Share failed:", err));
+  } else {
+    // Fallback: copy the exact post link to clipboard
+    navigator.clipboard.writeText(postUrl).then(() => {
+      alert(`Post link copied to clipboard!\n${postUrl}`);
+    }).catch(err => console.error("Clipboard write failed:", err));
+  }
+
+  // Optionally, update the URL in the address bar
+  history.replaceState(null, '', postUrl);
+});
+
 
   });
 
