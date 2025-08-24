@@ -1,555 +1,158 @@
 /* ================================
-   General Styles
+   General Page Styles
    ================================ */
-body {
-  margin: 0;
-  padding-top: 70px; /* offset for fixed navbar */
-  font-family: 'Roboto Slab', serif;
-  background: #f4f6f8;
-  color: #333;
-}
-
-/* Headings */
-h1, h2, h3 {
-  color: #222;
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-/* ================================
-   Navbar
-   ================================ */
-.navbar {
-  background: rgba(0, 0, 0, 0.85) !important;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-}
-
-.navbar-brand {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #f8f9fa !important;
-}
-
-/* Nav links */
-.navbar .nav-link {
-  color: #f8f9fa !important;
-  margin: 0 5px;
-  transition: color 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.navbar .nav-link:hover,
-.navbar .nav-link.active {
-  color: #ffcc00 !important;
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-/* Social SVG icons */
-.navbar-nav.ms-auto .nav-link svg {
-  width: 24px;
-  height: 24px;
-  transition: transform 0.3s;
-}
-
-.navbar-nav.ms-auto .nav-link:hover svg {
-  transform: scale(1.2);
-}
-
-/* Optional hover background for icons */
-.navbar-nav.ms-auto .nav-link:hover {
-  background: rgba(255, 204, 0, 0.1);
-  border-radius: 4px;
-}
-
-/* ================================
-   Hero Section
-   ================================ */
-.hero {
-  background: url('../Images/hero-image.jpeg') no-repeat center center/cover;
-  height: 60vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-.hero::after {
-  content: '';
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.4);
-}
-
-.hero-content {
-  position: relative;
-  z-index: 1;
-  max-width: 700px;
-  text-align: center;
-}
-
-.hero-title, .hero-p {
-  color: white;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
-}
-
-/* ================================
-   Cards (Specials, Tips, Top Places, Blog)
-   ================================ */
-.card {
-  border: none;
-  border-radius: 12px;
-  margin-bottom: 1.5rem;
-}
-
-.card-title {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #222;
-}
-
-.card-text {
-  font-size: 1.15rem;
-  color: #444;
-  line-height: 1.6;
-}
-
-/* Buttons */
-.btn-primary {
-  background-color: #007bff;
-  border: none;
-  font-weight: bold;
-  padding: 10px 20px;
-  font-size: 1rem;
-}
-
-.btn-warning {
-  background-color: #ffcc00;
-  border: none;
-  font-weight: bold;
-}
-
-/* ================================
-   Images
-   ================================ */
-img.img-fluid {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  transition: transform 0.3s;
-  margin-bottom: 10px;
-}
-
-img.img-fluid:hover {
-  transform: scale(1.05);
-}
-
-/* Profile images for About section */
-.profile-img {
-  max-width: 250px;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  float: left;
-  margin-right: 20px;
-  margin-bottom: 15px;
-}
-
-@media (max-width: 767px) {
-  .profile-img {
-    float: none;
-    display: block;
-    margin: 0 auto 15px auto;
-  }
-}
-
-/* ================================
-   Grid Row Spacing
-   ================================ */
-.row.g-3, .row.g-4 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-/* ================================
-   Blog Specific
-   ================================ */
-   #blog-container .card {
-    border: none;
-    border-radius: 12px;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  }
-  
-  /* Card header (title + caret) */
-  
-  .card-header .post-title {
-    margin-left: 0.5rem;
-    transform: rotate(0deg);
-    flex: 1;
-    text-align: left;
-  }
-  
-  .card-header {
-    cursor: pointer;
-    background-color: #007bff;
-    color: white;
-    font-weight: bold;
-    padding: 0.75rem 1rem;
-    text-align: center; /* optional */
-  }
-  
-  .card-header .post-title {
-    margin: 0;
-    text-align: center;
-  }
-  
-  
-  /* Blog post content */
-  .blog-post-content {
-    padding: 1rem 1.25rem;
+   body {
+    font-family: Arial, sans-serif;
     line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+    color: #333;
   }
   
-  .blog-post-content h1,
-  .blog-post-content h2,
-  .blog-post-content h3 {
-    color: #222;
-    text-align: center;
+  a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* ================================
+     Navbar
+     ================================ */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    color: #fff;
+    padding: 0.5rem 1rem;
+  }
+  
+  .navbar a {
+    color: #fff;
+    margin: 0 0.5rem;
+  }
+  
+  /* ================================
+     Blog Post Styles
+     ================================ */
+  .blog-post {
+    background: #fff;
+    margin: 1rem auto;
+    padding: 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+  }
+  
+  .blog-post h1,
+  .blog-post h2,
+  .blog-post h3 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .blog-post p {
+    margin: 0.5rem 0;
+  }
+  
+  /* ================================
+     Table of Contents
+     ================================ */
+  .toc {
+    background: #f1f1f1;
+    padding: 1rem;
+    border-radius: 6px;
     margin: 1rem 0;
   }
   
-  .blog-post-content p {
-    margin-bottom: 1rem;
+  .toc h3 {
+    margin-top: 0;
   }
   
-  .blog-post-content ul,
-  .blog-post-content ol {
-    margin-left: 1.5rem;
-    padding-left: 1.2rem;
-    list-style-position: outside;
+  .toc ul {
+    list-style: none;
+    padding-left: 0;
   }
   
-  .blog-post-content li {
-    margin-bottom: 0.5rem;
+  .toc ul li {
+    margin: 0.25rem 0;
   }
-
-/* Figures and captions */
-.blog-post-content figure {
-  text-align: center;
-  margin: 1rem 0;
-}
-
-.blog-post-content figcaption {
-  font-size: 0.9rem;
-  color: #555;
-  margin-top: 0.25rem;  /* small gap to keep caption close to image */
-  text-align: center;
-  line-height: 1.3;
-  word-wrap: break-word;
-}
-
   
-
-/* ================================
-   Footer
-   ================================ */
-footer {
-  background: #222;
-  color: #f8f9fa;
-  font-size: 1rem;
-  padding: 20px 0;
-  text-align: center;
-}
-
-/* ================================
-   Albums
-   ================================ */
-.album-photo {
-  border-radius: 8px;
-  margin-bottom: 15px;
-  transition: transform 0.3s, box-shadow 0.3s;
-  cursor: pointer;
-}
-
-.album-photo:hover {
-  transform: scale(1.03);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-}
-
-
-#toc .nav-link {
-  display: flex;
-  align-items: center;
-  font-size: 0.95rem;
-}
-
-#toc .nav-link span {
-  margin-right: 0.5rem;
-  transition: transform 0.3s;
-}
-
-/* Rotate caret when open */
-.collapse.show ~ .card-header span,
-.card-header[aria-expanded="true"] span {
-  transform: rotate(90deg);
-}
-
-.card-header .caret {
-  display: inline-block;
-  transform: rotate(0deg);
-  transition: transform 0.3s;
-}
-
-/* Rotate only the caret when expanded */
-.card-header[aria-expanded="true"] .caret {
-  transform: rotate(90deg);
-}
-
-/* TOC scrolling for desktop */
-#toc {
-  font-size: 0.95rem;
-}
-
-#toc-list li, #toc-list-mobile li {
-  margin-bottom: 10px;
-  list-style: none;
-}
-#toc-list a, #toc-list-mobile a {
-  display: block;
-  padding: 6px 8px;
-  font-size: 1rem;
-  line-height: 1.3;
-  text-decoration: none;
-  color: #333;
-  border-radius: 4px;
-}
-#toc-list a:hover, #toc-list-mobile a:hover {
-  background-color: #f0f0f0;
-  color: #007bff;
-}
-#toc-list strong {
-  font-size: 1.05rem;
-}
-#toc-list small {
-  font-size: 0.85rem;
-  color: #666;
-}
-
-#toc .nav-link, #toc-list-mobile .nav-link {
-  padding-left: 0.5rem;
-}
-
-.post-toc-container a {
-  color: #0d6efd;       /* Bootstrap primary color */
-}
-
-.post-toc-container a:hover {
-  text-decoration: underline;
-}
-
-.post-toc-container li {
-  margin-bottom: 0.25rem;
-}
-
-.post-toc-container {
-  max-width: 300px;
-  margin-bottom: 1rem;
-  font-size: 0.95rem;
-  position: sticky;
-  top: 1rem;             /* distance from top when scrolling */
-  z-index: 10;           /* stay above other content */
-}
-
-@media (max-width: 992px) {
-  .post-toc-container {
-    position: static;   /* no sticky on smaller screens */
-    top: auto;
-    max-width: 100%;
+  /* ================================
+     Buttons
+     ================================ */
+  .btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    background: #007bff;
+    color: #fff;
+    text-align: center;
   }
-}
-
-/* ================================
-   Blog Post Images & Gallery
-   ================================ */
-
-/* Make blog-post-content full width and stack normally */
-.blog-post-content {
-  display: block;
-  width: 100%;
-}
-
-.blog-post-content img:not(.gallery img) {
-  max-height: 600px; /* optional: keep tall single images under control */
-  object-fit: cover; /* keeps the aspect ratio neat */
-}
-
-
-/* Responsive gallery grid for consecutive images */
-.blog-post-content .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* bigger min width */
-  gap: 1rem;
-  margin: 1rem 0;
-  width: 100%;
-}
-
-/* Images inside gallery: fill their cell completely */
-.blog-post-content .gallery img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  transition: transform 0.3s;
-}
-
-.blog-post-content .gallery img:hover {
-  transform: scale(1.05);
-}
-
-/* Figures and captions */
-.blog-post-content .gallery figure {
-  margin: 0;
-}
-
-.blog-post-content .gallery figcaption {
-  font-size: 0.9rem;
-  color: #555;
-  text-align: center;
-  margin-top: 0.25rem;
-}
-
-/* Single images outside a gallery */
-.blog-post-content img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 1rem auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  transition: transform 0.3s;
-}
-
-.blog-post-content img:hover {
-  transform: scale(1.05);
-}
-
-
-/* ================================
-   Blog Preview Card Gallery
-   ================================ */
-   .card .blog-post-content .gallery {
+  
+  .btn:hover {
+    background: #0056b3;
+  }
+  
+  /* ================================
+     Blog Post Images & Gallery (Final Clean Version)
+     ================================ */
+  
+  /* Gallery grid */
+  .blog-post-content .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* smaller min width for preview */
-    gap: 0.5rem; /* tighter spacing */
-    margin: 0.5rem 0; /* less vertical margin */
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 0.75rem;
+    margin: 1rem 0;
   }
   
-  .card .blog-post-content .gallery img {
+  /* Gallery images */
+  .blog-post-content .gallery img {
     width: 100%;
-    height: 100px; /* fixed height for preview cards */
+    height: 180px;
     object-fit: cover;
     border-radius: 6px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
   }
   
-  .card .blog-post-content .gallery img:hover {
+  .blog-post-content .gallery img:hover {
     transform: scale(1.05);
   }
   
-  .card .blog-post-content .gallery figcaption {
-    font-size: 0.75rem; /* smaller for preview */
-    margin-top: 0.15rem;
-    color: #666;
-    text-align: center;
-    line-height: 1.2;
-  }
-  
-
-
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 10px;
-    margin: 20px 0;
-  }
-  
-  .gallery img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 6px;
-    object-fit: cover;
-  }
-  
-  .gallery figure {
+  /* Gallery figure and caption */
+  .blog-post-content .gallery figure {
     margin: 0;
-    padding: 0;
   }
   
-  .gallery figcaption {
+  .blog-post-content .gallery figcaption {
     text-align: center;
-    font-size: 0.9rem;
-    color: #555;
+    font-size: 0.85rem;
+    color: #666;
     margin-top: 4px;
   }
-
+  
+  /* Single images outside gallery */
+  .blog-post-content > figure > img {
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Mobile adjustments */
   @media (max-width: 600px) {
-    .gallery {
+    .blog-post-content .gallery {
       grid-template-columns: 1fr;
+    }
+    .blog-post-content .gallery img {
+      height: auto;
     }
   }
   
-
-  /* Override for gallery images to keep them smaller and uniform */
-.blog-post-content .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* smaller min width */
-  gap: 0.75rem;
-  margin: 1rem 0;
-}
-
-.blog-post-content .gallery img {
-  width: 100%;
-  height: 180px; /* fixed height */
-  object-fit: cover; /* crop to fill box neatly */
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.2s;
-}
-
-.blog-post-content .gallery img:hover {
-  transform: scale(1.05);
-}
-
-.blog-post-content .gallery figure {
-  margin: 0;
-}
-
-.blog-post-content .gallery figcaption {
-  text-align: center;
-  font-size: 0.85rem;
-  color: #666;
-  margin-top: 4px;
-}
-
-/* On small screens, one column */
-@media (max-width: 600px) {
-  .blog-post-content .gallery {
-    grid-template-columns: 1fr;
-  }
-  .blog-post-content .gallery img {
-    height: auto; /* let them grow naturally on mobile */
-  }
-}
-
-.blog-post-content > figure > img {
-  max-width: 600px;
-  height: auto;
-  display: block;
-  margin: 1rem auto;
-}
