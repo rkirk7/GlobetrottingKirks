@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Post</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      position: relative;
+    }
+    figure {
+      text-align: center;
+      margin: 1em 0;
+    }
+    figure img {
+      max-width: 100%;
+      height: auto;
+    }
+    figure figcaption {
+      font-size: 0.9em;
+      color: #666;
+      margin-top: 0.4em;
+    }
+    #toc {
+      position: fixed;
+      top: 80px;
+      right: 20px;
+      max-width: 250px;
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      max-height: 80vh;
+      overflow-y: auto;
+      z-index: 999;
+    }
+    #toc h5 {
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+    #toc ul {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 0;
+    }
+    #toc li {
+      margin-bottom: 4px;
+    }
+    #toc a {
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body class="bg-light">
+
+  <div class="container mt-4 mb-5">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <a href="index.html" class="btn btn-secondary">← Back to Blog</a>
+      <button id="shareBtn" class="btn btn-outline-primary">Share Post</button>
+    </div>
+    
+    <div id="post-container" class="card shadow-lg">
+      <div class="card-body">
+        <h1 id="post-title" class="mb-3"></h1>
+        <div id="post-content"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating TOC -->
+  <div id="toc" class="d-none">
+    <h5>On this page</h5>
+    <ul id="toc-list"></ul>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    async function loadPost() {
+      const params = new URLSearchParams(window.location.search);
+      const postFile = params.get('post');
+      if (!postFile) return;
+
+      // Load the post
+      let postText = await fetch(`blog-posts/${postFile}`).then(res => res.text());
+      postText = postText.replace(/^---[\\s\\S]*?---/, '').trim();
+
+      // Extract title
+      const postTitle = postText.split("\\n").find(l => l.startsWith("# "))?.replace(/^# /, "") || postFile;
+      document.getElementById('post-title').textContent = postTitle;
+
+      // Convert markdown to HTML
+      let html = marked.parse(postText);
+
+      // Load image metadata
+      const imageMeta = await fetch('image-data.json').then(res => res.json());
+
+      // Add captions to images
+      const tempDiv = document.createElement('div');
+      tempDiv.innerHTML = html;
+      tempDiv.querySelectorAll('img').forEach(img => {
+        const filename = img.getAttribute('src').split('/').pop();
+        const caption = (imageMeta && imageMeta[filename]) || "";
+        img.setAttribute('alt', caption || filename);
+
+        if (!img.closest('figure')) {
+          const figure = document.createElement('figure');
+          img.parentNode.insertBefore(figure, img);
+          figure.appendChild(img);
+          if (caption) {
+            const figcap = document.createElement('figcaption');
+            figcap.textContent = caption;
+            figure.appendChild(figcap);
+          }
+        } else {
+          const figcap = img.nextElementSibling;
+          if (!figcap || figcap.tagName.toLowerCase() !== 'figcaption') {
+            if (caption) {
+              const figcapNew = document.createElement('figcaption');
+              figcapNew.textContent = caption;
+              img.after(figcapNew);
+            }
+          } else {
+            figcap.textContent = caption;
+          }
+        }
+      });
+
+      // Build TOC from headings
+      const tocList = document.getElementById('toc-list');
+      const headings = tempDiv.querySelectorAll('h1, h2, h3');
+      if (headings.length > 0) {
+        document.getElementById('toc').classList.remove('d-none');
+        headings.forEach((heading, i) => {
+          const id = `heading-${i}`;
+          heading.id = id;
+          const li = document.createElement('li');
+          li.innerHTML = `<a href="#${id}">${heading.textContent}</a>`;
+          tocList.appendChild(li);
+        });
+      }
+
+      // Insert full content
+      document.getElementById('post-content').innerHTML = tempDiv.innerHTML;
+    }
+
+    // Share post URL
+    function sharePost() {
+      const url = window.location.href;
+      if (navigator.share) {
+        navigator.share({ title: document.title, url })
+          .catch(err => console.log("Share canceled", err));
+      } else {
+        navigator.clipboard.writeText(url).then(() => {
+          alert("Post URL copied to clipboard!");
+        });
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      loadPost();
+      document.getElementById("shareBtn").addEventListener("click", sharePost);
+    });
+  </script>
+</body>
+</html>
