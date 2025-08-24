@@ -34,13 +34,16 @@ async function initBlog() {
   if (!container || !tocList || !tocListMobile) return;
 
   function sanitizeId(text) {
-    return text.trim()
+    if (!text) return "";
+    return String(text)
+      .trim()
       .replace(/[’‘]/g, "'")
       .replace(/[^a-zA-Z0-9-_]/g, '-')
       .replace(/--+/g, '-')
       .replace(/^-+|-+$/g, '')
       .toLowerCase();
   }
+  
 
   const postsData = await Promise.all(
     posts.map(async post => {
