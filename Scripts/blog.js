@@ -150,6 +150,17 @@ async function initBlog() {
 
     container.appendChild(postDiv);
 
+    // Toggle title visibility on collapse/expand
+const collapseEl = postDiv.querySelector(`#collapse${index}`);
+const titleSpan = postDiv.querySelector(".post-title");
+
+collapseEl.addEventListener("hidden.bs.collapse", () => {
+  titleSpan.classList.remove("d-none");
+});
+collapseEl.addEventListener("show.bs.collapse", () => {
+  titleSpan.classList.add("d-none");
+});
+
     // TOC population example (if you need titles in TOC)
 // TOC population with date
 const tocItem = document.createElement('li');
