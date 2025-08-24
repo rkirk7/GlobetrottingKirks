@@ -469,3 +469,38 @@ footer {
     line-height: 1.2;
   }
   
+
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+    object-fit: cover;
+  }
+  
+  .gallery figure {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .gallery figcaption {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 4px;
+  }
+
+  @media (max-width: 600px) {
+    .gallery {
+      grid-template-columns: 1fr;
+    }
+  }
+  

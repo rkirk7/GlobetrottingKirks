@@ -67,8 +67,16 @@
       postText = postText.replace(/^---[\s\S]*?---/, '').trim();
 
       // Extract title
-      const postTitle = postText.split("\n").find(l => l.startsWith("# "))?.replace(/^# /, "") || postFile;
-      document.getElementById('post-title').textContent = postTitle;
+const lines = postText.split("\n");
+const firstHeadingIndex = lines.findIndex(l => l.startsWith("# "));
+const postTitle = firstHeadingIndex >= 0 ? lines[firstHeadingIndex].replace(/^# /, "") : postFile;
+document.getElementById('post-title').textContent = postTitle;
+
+// Remove the first H1 line so it doesn't show twice
+if (firstHeadingIndex >= 0) {
+  lines.splice(firstHeadingIndex, 1);
+}
+postText = lines.join("\n");
 
       // Parse markdown
       const tempDiv = document.createElement('div');
