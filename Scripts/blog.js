@@ -93,25 +93,34 @@ async function initBlog() {
     let html = marked.parse(prefixedMarkdown);
 
     // --- Apply alt and captions for gallery images ---
-    const tempDiv = document.createElement('div');
-    tempDiv.innerHTML = html;
+tempDiv.querySelectorAll('div.gallery').forEach(gallery => {
+  // Collect all child nodes (including bare text nodes) that are images
+  const images = Array.from(gallery.querySelectorAll('img'));
 
-    tempDiv.querySelectorAll('div.gallery').forEach(gallery => {
-      gallery.querySelectorAll('img').forEach(img => {
-        const filename = img.getAttribute('src').split('/').pop();
-        if (imageMeta[filename]) {
-          img.setAttribute('alt', imageMeta[filename]);
-          let figcap = img.nextElementSibling;
-          if (!figcap || figcap.tagName.toLowerCase() !== 'figcaption') {
-            figcap = document.createElement('figcaption');
-            img.after(figcap);
-          }
-          figcap.textContent = imageMeta[filename];
-        }
-      });
-    });
+  images.forEach(img => {
+    const filename = img.getAttribute('src').split('/').pop();
+    const caption = imageMeta[filename] || "";
 
-    html = tempDiv.innerHTML;
+    // Wrap img in <figure> if not already wrapped
+    if (img.parentElement.tagName.toLowerCase() !== 'figure') {
+      const figure = document.createElement('figure');
+      img.replaceWith(figure);
+      figure.appendChild(img);
+    }
+
+    // Add <figcaption> if missing
+    let figcap = img.nextElementSibling;
+    if (!figcap || figcap.tagName.toLowerCase() !== 'figcaption') {
+      figcap = document.createElement('figcaption');
+      img.after(figcap);
+    }
+
+    // Set caption text and alt attribute
+    figcap.textContent = caption;
+    img.setAttribute('alt', caption);
+  });
+});
+
 
     // --- Create post card ---
     const postDiv = document.createElement("div");
