@@ -39,75 +39,81 @@
   <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 
   <script>
-    // Initialize GLightbox
-    const lightbox = GLightbox({
-      selector: '.glightbox'
-    });
-
     // Get album parameter from URL
     const urlParams = new URLSearchParams(window.location.search);
     const albumParam = urlParams.get("album");
-
+  
     // Map parameter to folder and title
     const albums = {
       "churchill-2025": { name: "Churchill 2025", folder: "Churchill" },
-            "pandas-2025": { name: "Pandas 2025", folder: "Pandas" },
-            "nepal-2025":    { name: "Nepal 2025",    folder: "Nepal" },
-     "antarctica-2024": { name: "Antarctica 2024", folder: "Antarctica" },
+      "pandas-2025": { name: "Pandas 2025", folder: "Pandas" },
+      "nepal-2025": { name: "Nepal 2025", folder: "Nepal" },
+      "antarctica-2024": { name: "Antarctica 2024", folder: "Antarctica" },
       "svalbard-2024": { name: "Svalbard 2024", folder: "Svalbard" },
-      "safari-2023":  { name: "Safari to Botswana, Zimbabwe, Zambia and Namibia 2023",  folder: "23Safari" },
-      "patagonia-2023":  { name: "Patagonia 2023",  folder: "Patagonia" },
-      "french-polynesia-2023":  { name: "French Polynesia 2023",  folder: "FrenchPolynesia" },
-      "galapagos-2022":  { name: "Galapagos 2023",  folder: "Galapagos" },
-      "western-parks-2021":  { name: "Western Parks 2021",  folder: "WesternParks" },
-      "new-zealand-2019":  { name: "New Zealand 2019",  folder: "NewZealand" },
-      "switzerland-2019":  { name: "Switzerland 2019",  folder: "Switzerland" },
-      "via-ferrata":  { name: "Via Ferratas Around the World",  folder: "ViaFerrata" },
-      "iceland-2019":  { name: "Iceland 2019",  folder: "Iceland" }
-      
-
+      "safari-2023": { name: "Safari to Botswana, Zimbabwe, Zambia and Namibia 2023", folder: "23Safari" },
+      "patagonia-2023": { name: "Patagonia 2023", folder: "Patagonia" },
+      "french-polynesia-2023": { name: "French Polynesia 2023", folder: "FrenchPolynesia" },
+      "galapagos-2022": { name: "Galapagos 2023", folder: "Galapagos" },
+      "western-parks-2021": { name: "Western Parks 2021", folder: "WesternParks" },
+      "new-zealand-2019": { name: "New Zealand 2019", folder: "NewZealand" },
+      "switzerland-2019": { name: "Switzerland 2019", folder: "Switzerland" },
+      "via-ferrata": { name: "Via Ferratas Around the World", folder: "ViaFerrata" },
+      "iceland-2019": { name: "Iceland 2019", folder: "Iceland" }
     };
-
+  
+    const container = document.getElementById("album-container");
+    const albumTitle = document.getElementById("album-title");
+  
     if (!albums[albumParam]) {
-      document.getElementById("album-title").innerText = "Album not found";
+      albumTitle.innerText = "Album not found";
     } else {
       const album = albums[albumParam];
-      document.getElementById("album-title").innerText = album.name;
-      const container = document.getElementById("album-container");
-
+      albumTitle.innerText = album.name;
+  
       let index = 1;
+      let lightbox;
+  
       function loadNextImage() {
         const img = new Image();
         img.src = `Images/${album.folder}/${album.folder}${index}.jpeg`;
         img.classList.add("album-img");
-
+  
         img.onload = () => {
           const col = document.createElement("div");
           col.classList.add("col-md-4", "mb-4");
-
-          // Wrap image in GLightbox link
+  
           const link = document.createElement("a");
           link.href = img.src;
           link.classList.add("glightbox");
           link.setAttribute("data-gallery", albumParam);
           link.appendChild(img);
-
+  
           col.appendChild(link);
           container.appendChild(col);
-
+  
           index++;
-          loadNextImage();
+          loadNextImage(); // load next image
+  
+          if (lightbox) {
+            lightbox.reload(); // refresh GLightbox with new images
+          } else {
+            lightbox = GLightbox({
+              selector: '.glightbox'
+            });
+          }
         };
-
+  
         img.onerror = () => {
           if (index === 1) {
             container.innerHTML = "<p class='text-center'>No images found.</p>";
           }
         };
       }
-
+  
+      // **Call the function to start loading images**
       loadNextImage();
     }
   </script>
+  
 </body>
 </html>
