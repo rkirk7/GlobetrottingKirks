@@ -52,5 +52,12 @@ Key tips:
 -Chengdu park is humongous and best with a guide. To catch the young pandas, take the shuttle to the far end where the sub-adult enclosures feature youngsters 1 to 5 years old. (Opens at 7:30; 8 from November-February.)  
 -Wolong is at 5,600 feet so prepare for a cold morning. It's compact enough to do by yourself. (Opens at 9.)
 
+<p class="text-center">
+  <a href="mailto:meimei.kirk@fora.travel?subject=Tell%20me%20more%20about%20pandas!" class="btn btn-primary">
+    I'm interested in learning more about how to see lots of pandas!
+  </a>
+</p>
+
 ![Mei-Mei and Regan Panda Keepers](./Images/Pandas/Pandas8.jpeg)
 *2016 panda keepers with Wu Wen at the Dujiangyan Panda Base*
+
