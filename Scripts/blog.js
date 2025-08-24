@@ -1,17 +1,17 @@
 // ===========================
 // MARKED RENDERER FOR HEADINGS
 // ===========================
-const renderer = new marked.Renderer();
-let currentPostIndex = 0; // Set for each post
+// const renderer = new marked.Renderer();
+// let currentPostIndex = 0; // Set for each post
 
-renderer.heading = function(text, level, raw) {
-  const tempDiv = document.createElement('div');
-  tempDiv.innerHTML = text;
-  const plainText = raw || tempDiv.textContent || tempDiv.innerText || '';
-  const slug = plainText.toLowerCase().replace(/[^\w]+/g, '-');
-  const id = `post${currentPostIndex}-${slug}`;
-  return `<h${level} id="${id}">${text}</h${level}>`;
-};
+// renderer.heading = function(text, level, raw) {
+//   const tempDiv = document.createElement('div');
+//   tempDiv.innerHTML = text;
+//   const plainText = raw || tempDiv.textContent || tempDiv.innerText || '';
+//   const slug = plainText.toLowerCase().replace(/[^\w]+/g, '-');
+//   const id = `post${currentPostIndex}-${slug}`;
+//   return `<h${level} id="${id}">${text}</h${level}>`;
+// };
 
 marked.setOptions({
   renderer,
