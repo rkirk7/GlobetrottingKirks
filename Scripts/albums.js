@@ -15,7 +15,8 @@ const ALBUMS = {
   "new-zealand-2019": { name: "New Zealand 2019", folder: "NewZealand", total: 21 },
   "switzerland-2019": { name: "Switzerland 2019", folder: "Switzerland", total: 25 },
   "via-ferrata": { name: "Via Ferratas Around the World", folder: "ViaFerrata", total: 4 },
-  "iceland-2019": { name: "Iceland 2019", folder: "Iceland", total: 22 }
+  "iceland-2019": { name: "Iceland 2019", folder: "Iceland", total: 22 },
+  "south-africa-2019": { name: "South Africa 2019", folder: "19SouthAfrica", total: 22 }
 };
 
 // Build the album cards on albums.html (list page)

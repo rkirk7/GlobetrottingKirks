@@ -5,6 +5,7 @@ marked.setOptions({
 
 async function initBlog() {
   const posts = [
+    "2025-08-23-churchill",
     "2025-08-14-panda-monium-close-encounters-in-chengdu-and-wolong-china.md",
     "2025-06-03-exploring-antarctica-and-the-arctic-how-did-two-floridians-end-up-at-both-polar-regions-in-one-year-and-what-did-they-discover.md",
     "2025-01-29-antarctica-calls-and-we-must-go.md",
@@ -19,6 +20,7 @@ async function initBlog() {
     "2019-11-05-which-alp-is-the-coolest.md",
     "2019-11-04-viva-la-via-ferrata.md",
     "2019-11-04-around-iceland-in-10-days-top-highlights.md",
+    "2019-04-09-3-perfect-weeks-in-south-africa.md",
     "2015-10-03-reunion-magic-returning-to-goudy-and-lane.md",
     "2015-09-28-reunion-part-one.md",
     "2015-09-16-retirement-milestone-3-months-and-counting.md",
