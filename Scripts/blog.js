@@ -2,11 +2,22 @@ const renderer = new marked.Renderer();
 
 let currentPostIndex = 0; // We'll set this for each post before rendering
 
-renderer.heading = function (text, level) {
-  text = String(text || "");  // Ensure it's always a string
-  const slug = text.toLowerCase().replace(/[^\w]+/g, '-');
+renderer.heading = function (text, level, raw, slugger) {
+  // `text` can be a string or an object — convert to string
+  let headingText = "";
+  if (typeof text === "string") {
+    headingText = text;
+  } else if (Array.isArray(text)) {
+    // join all text chunks
+    headingText = text.map(t => (typeof t === "string" ? t : "")).join("");
+  } else {
+    headingText = String(text);
+  }
+
+  const slug = headingText.toLowerCase().replace(/[^\w]+/g, '-');
   const id = `post${currentPostIndex}-${slug}`;
-  return `<h${level} id="${id}">${text}</h${level}>`;
+
+  return `<h${level} id="${id}">${headingText}</h${level}>`;
 };
 
 marked.setOptions({
