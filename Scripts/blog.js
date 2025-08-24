@@ -60,10 +60,11 @@ async function initBlog() {
     // ===========================
     // Prefix internal Markdown links
     // ===========================
-    const prefixedMarkdown = postData.content.replace(
-      /\[([^\]]+)\]\(#([^\)]+)\)/g,
-      (_, text, id) => `[${text}](#${postId}-${id})`
-    );
+   // Prefix all internal Markdown links like [Text](#some-id)
+const prefixedMarkdown = postData.content.replace(
+  /\[([^\]]+)\]\(\s*#([^\)]+)\s*\)/g,  // matches [Text](#id) even with spaces
+  (_, text, id) => `[${text}](#${postId}-${id.trim()})`
+);
 
     // Convert markdown to HTML
     const html = marked.parse(prefixedMarkdown, {
@@ -133,10 +134,17 @@ async function initBlog() {
     postContent.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', e => {
         e.preventDefault();
-        const targetId = anchor.getAttribute('href').substring(1);
+    
+        let targetId = anchor.getAttribute('href').substring(1);
+    
+        // Add post prefix if missing
+        if (!targetId.startsWith(postId + "-")) {
+          targetId = `${postId}-${targetId}`;
+        }
+    
         const targetEl = document.getElementById(targetId);
         if (!targetEl) return;
-
+    
         const collapseParent = targetEl.closest('.collapse');
         if (collapseParent && !collapseParent.classList.contains('show')) {
           const bsCollapse = bootstrap.Collapse.getOrCreateInstance(collapseParent);
@@ -147,7 +155,7 @@ async function initBlog() {
         } else {
           targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
-
+    
         history.pushState(null, '', `#${targetId}`);
       });
     });
