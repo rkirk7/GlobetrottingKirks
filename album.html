@@ -72,7 +72,7 @@
       fetch(`image-data.json`)
   .then(res => res.json())
   .then(data => {
-    const filenames = Object.keys(data).filter(f => f.startsWith(album.folder + "/"));
+    const filenames = Object.keys(data).filter(f => f.startsWith(album.folder));
 
 if (!filenames.length) {
   container.innerHTML = "<p class='text-center'>No images found.</p>";
@@ -85,25 +85,21 @@ filenames.forEach(filename => {
   const col = document.createElement("div");
   col.classList.add("col-md-4", "mb-4");
 
-  const img = document.createElement("img");
-  img.src = `Images/${filename}`;  // Don't prepend folder again
-  img.alt = caption;
-  img.classList.add("album-img");
+  const fullPath = `Images/${album.folder}/${filename}`;
 
-  img.onerror = () => {
-    console.warn(`Failed to load image: ${filename}`);
-    img.src = "Images/placeholder.png";
-    img.alt = "Image not available";
-  };
+const img = document.createElement("img");
+img.src = fullPath;
+img.alt = data[filename] || "";
+img.classList.add("album-img");
 
-  const link = document.createElement("a");
-  link.href = img.src;
-  link.classList.add("glightbox");
-  link.setAttribute("data-gallery", albumParam);
-  if (caption) link.setAttribute("data-title", caption);
+const link = document.createElement("a");
+link.href = fullPath;
+link.classList.add("glightbox");
+link.setAttribute("data-gallery", albumParam);
+if (data[filename]) link.setAttribute("data-title", data[filename]);
 
-  link.appendChild(img);
-  col.appendChild(link);
+link.appendChild(img);
+col.appendChild(link);
   container.appendChild(col);
 });
 
