@@ -1,17 +1,5 @@
----
-title: "Bosnia-Herzegovina highlights in 4 days"
-date: 2018-11-08
-categories: 
-  - "travel"
-tags: 
-  - "balkans"
-  - "bosnia"
-  - "herzegovina"
-  - "mostar"
-  - "sarajevo"
-  - "siege"
-coverImage: "2018-sarajevo-from-yellow-fortress-img_9094-e1541078545512.jpg"
----
+# Bosnia-Herzegovina highlights in 4 days
+*2018-11-08*
 
 Our six-week adventure starting Aug. 4, 2018, included five new countries for us: Hungary, Slovenia, Croatia, Montenegro and Bosnia-Herzegovina.
 

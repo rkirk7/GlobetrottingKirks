@@ -1,15 +1,5 @@
----
-title: "Tackling the Tongariro Alpine Crossing"
-date: 2017-04-11
-categories: 
-  - "tongariro"
-  - "travel"
-tags: 
-  - "how-to-hike-tongariro"
-  - "new-zealand"
-  - "tongariro-crossing"
-coverImage: "tongariro-hike-best-best-w-doom-and-ruapehu-sort-of-2017-01-07-184.jpg"
----
+# Tackling the Tongariro Alpine Crossing
+*2017-04-11*
 
 This famed 12-mile hike between Mt. Doom (aka Ngauruhoe) and Tongariro would be relatively easy for strong hikers on a nice day, even with the steep grades and slippery slopes. The route is a mix of steps, walkways, ash, rocky dirt up and down with signposts throughout although not always a clear “path.”
 

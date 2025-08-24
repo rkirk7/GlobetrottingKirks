@@ -1,16 +1,5 @@
----
-title: "Off to the land of my birth!"
-date: 2016-06-19
-categories: 
-  - "family"
-  - "immigration"
-  - "travel"
-tags: 
-  - "china"
-  - "homeland"
-  - "visa"
-coverImage: "chan-fam-coming-to-america-edited-feb-25-1967.jpg"
----
+# Off to the land of my birth!
+*2016-06-19*
 
 I'm one day away from an epic adventure: returning to China, my homeland.
 

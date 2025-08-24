@@ -1,21 +1,6 @@
----
-title: "Top 10 Balkan highlights: the best of Slovenia, Croatia, Bosnia-Herzegovina and Montenegro"
-date: 2018-11-08
-categories: 
-  - "bosnia"
-  - "travel"
-tags: 
-  - "balkans"
-  - "dubrovnik"
-  - "lake-bled"
-  - "lukomir"
-  - "plitvice-lakes"
-  - "rovinj"
-  - "sarajevo"
-  - "slovenia"
-  - "split"
-coverImage: "2018-dubrovnik-from-fort-lovrijenac-best-img_7150-e1541677858209.jpg"
----
+# Top 10 Balkan highlights: the best of Slovenia, Croatia, Bosnia-Herzegovina and Montenegro
+*2018-11-08*
+
 
 In August 2018, we explored the Balkans for the first time, with 17 days in Croatia, four in Slovenia, three in Bosnia-Herzegovina, and a day trip to Montenegro. This included a seven-day cruise from Split to Dubrovnik aboard the Mama Marija, stopping at six charming islands.
 

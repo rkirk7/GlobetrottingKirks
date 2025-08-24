@@ -1,20 +1,5 @@
----
-title: "Ireland: Top 10 highlights driving around the Emerald Isle"
-date: 2017-08-19
-categories: 
-  - "ireland"
-  - "road-trips"
-  - "travel"
-tags: 
-  - "belfast"
-  - "black-taxi-tour"
-  - "cliffs-of-moher"
-  - "giants-causeway"
-  - "hawk-walk"
-  - "how-to-drive-around-ireland"
-  - "skellig-michael"
-coverImage: "kerry-ring-best-best-2017-07-07-168.jpg"
----
+# Ireland: Top 10 highlights driving around the Emerald Isle
+*2017-08-19*
 
 We nearly circled the Emerald Isle over 16 days, driving 1500 miles through some 1500 wrong-way-roundabouts--or so it seemed.
 

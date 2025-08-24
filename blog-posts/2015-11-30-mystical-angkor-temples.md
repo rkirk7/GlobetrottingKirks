@@ -1,21 +1,11 @@
----
-title: "Mystical Angkor temples"
-date: 2015-11-30
-categories: 
-  - "travel"
-tags: 
-  - "angkor-wat"
-  - "cambodia"
-  - "siem-reap"
-  - "temples"
-coverImage: "siem-reap-angkor-wat-best-sunrise-mm-day-2-2015-11-03-054.jpg"
----
+# Mystical Angkor temples
+*2015-11-30*
 
 Siem Reap, Cambodia, is 32 travel hours from Fort Myers--literally and figuratively a world away.
 
 The draw: a unique concentration of impressive Hindu and Buddhist ruins in the Angkor region.
 
-And indeed, we had mystical encounters at Angkor Wat, the largest religious complex in the world; the former fortress of Angkor Thom and its Bayon temple; the tree-entangled Ta Prohm; and the intimate pink temple, Banteay Srei.<!--more-->
+And indeed, we had mystical encounters at Angkor Wat, the largest religious complex in the world; the former fortress of Angkor Thom and its Bayon temple; the tree-entangled Ta Prohm; and the intimate pink temple, Banteay Srei.
 
 At its peak, the Khmer Empire spread across Cambodia, Thailand, Laos and southern Vietnam. From the 9th to the 14th centuries, Angkor was the capital. It was the largest pre-industrial city in the world covering nearly 400 square miles—about the size of Los Angeles--according to Wikipedia. The Khmer built extensive temples, reservoirs, canals and highways, using more sandstone than the Egyptian pyramids combined, transported from a quarry about 25 miles away.
 

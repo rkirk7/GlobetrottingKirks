@@ -1,15 +1,6 @@
----
-title: "Top 10 China highlights"
-date: 2016-08-04
-categories: 
-  - "family"
-  - "travel"
-tags: 
-  - "adventure"
-  - "china"
-  - "roots"
-coverImage: "beijing-wall-2016-07-18-002-3.jpg"
----
+# Top 10 China highlights
+*2016-08-04*
+
 
 Our 30-day odyssey across China exceeded our expectations as we hiked, biked, flew, cruised and ate our way across 14 cities from June 20-July 20. Here, in reverse order, are the top 10 of oh-so-many amazing experiences.
 

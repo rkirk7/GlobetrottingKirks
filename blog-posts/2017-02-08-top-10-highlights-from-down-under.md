@@ -1,23 +1,5 @@
----
-title: "Top 10 highlights from Down Under"
-date: 2017-02-08
-categories: 
-  - "down-under"
-  - "travel"
-tags: 
-  - "hobbitontours"
-  - "australia"
-  - "ayers-rock"
-  - "hobbiton"
-  - "maasdam"
-  - "mount-cook"
-  - "mount-doom"
-  - "new-zealand"
-  - "tasmanian-devils"
-  - "tongariro"
-  - "uluru"
-coverImage: "queenstown-to-glenorchy-best-2017-01-03-052.jpg"
----
+# Top 10 highlights from Down Under
+*2017-02-08*
 
 Over 34 days, we enjoyed some of Australia's top sites and crisscrossed 930 miles of New Zealand’s twisty roads. This included six days of independent travel in Australia, 17 days aboard Holland America's Maasdam from Sydney to Auckland; and nine days roaming New Zealand on our own. (Click here for our [best 232 photos](https://goo.gl/photos/ptEKgNNHU96C8a1B6).)
 

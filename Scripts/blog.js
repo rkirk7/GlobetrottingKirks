@@ -4,11 +4,13 @@
 const renderer = new marked.Renderer();
 let currentPostIndex = 0; // Set for each post
 
-renderer.heading = function (text, level, raw) {
-  const headingText = String(raw || text);
-  const slug = headingText.toLowerCase().replace(/[^\w]+/g, '-');
+renderer.heading = function(text, level, raw) {
+  const tempDiv = document.createElement('div');
+  tempDiv.innerHTML = text;
+  const plainText = raw || tempDiv.textContent || tempDiv.innerText || '';
+  const slug = plainText.toLowerCase().replace(/[^\w]+/g, '-');
   const id = `post${currentPostIndex}-${slug}`;
-  return `<h${level} id="${id}">${headingText}</h${level}>`;
+  return `<h${level} id="${id}">${text}</h${level}>`;
 };
 
 marked.setOptions({
@@ -39,11 +41,18 @@ async function initBlog() {
     "2019-11-04-around-iceland-in-10-days-top-highlights.md",
     "2019-04-09-3-perfect-weeks-in-south-africa.md",
     "2018-12-10-is-a-river-cruise-for-you-take-a-virtual-ride-on-the-rhein-main-and-danube-rivers-on-uniworld.md",
-    "2015-10-03-reunion-magic-returning-to-goudy-and-lane.md",
-    "2015-09-28-reunion-part-one.md",
-    "2015-09-16-retirement-milestone-3-months-and-counting.md",
-    "2015-09-14-yes-the-world-needs-another-website-mine.md",
-    "2015-08-29-hello-world-2.md"
+    
+    "2018-11-08-top-10-balkan-highlights-the-best-of-slovenia-croatia-bosnia-herzegovina-and-montenegro.md",
+    "2018-11-08-bosnia-herzegovina-highlights-in-4-days.md",
+    "2018-07-01-amalfi-coast-and-more-top-10-highlights.md",
+    "2017-08-19-ireland-top-10-highlights-driving-around-the-emerald-isle.md",
+    "2017-04-29-magical-machu-picchu-and-hiking-huayna-picchu.md",
+    "2017-04-11-tackling-the-tongariro-alpine-crossing.md",
+    "2017-02-08-top-10-highlights-from-down-under.md",
+    "2016-08-04-top-10-china-highlights.md",
+    "2016-08-04-china-dim-sum-report.md",
+    "2016-06-19-off-to-the-land-of-my-birth.md",
+    "2015-11-30-mystical-angkor-temples.md",
   ];
 
   const container = document.getElementById("blog-container");
@@ -87,25 +96,31 @@ async function initBlog() {
 
     tempDiv.querySelectorAll('img').forEach(img => {
       const filename = img.getAttribute('src').split('/').pop();
-      const caption = imageMeta[filename] || "";
-
+      const caption = (imageMeta && imageMeta[filename]) || "";
+      img.setAttribute('alt', caption || filename);
+      
       if (!img.closest('figure')) {
         const figure = document.createElement('figure');
-        img.replaceWith(figure);
+        img.parentNode.insertBefore(figure, img);
         figure.appendChild(img);
-        const figcap = document.createElement('figcaption');
-        figcap.textContent = caption;
-        figure.appendChild(figcap);
+        if (caption) {
+          const figcap = document.createElement('figcaption');
+          figcap.textContent = caption;
+          figure.appendChild(figcap);
+        }
       } else {
         const figcap = img.nextElementSibling;
         if (!figcap || figcap.tagName.toLowerCase() !== 'figcaption') {
-          const figcapNew = document.createElement('figcaption');
-          figcapNew.textContent = caption;
-          img.after(figcapNew);
+          if (caption) {
+            const figcapNew = document.createElement('figcaption');
+            figcapNew.textContent = caption;
+            img.after(figcapNew);
+          }
         } else {
           figcap.textContent = caption;
         }
       }
+      
 
       img.setAttribute('alt', caption);
     });

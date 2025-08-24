@@ -1,15 +1,8 @@
----
-title: "China dim sum report"
-date: 2016-08-04
-categories: 
-  - "dim-sum"
-  - "dining"
-  - "family"
-  - "travel"
-tags: 
-  - "china"
-coverImage: "img_2323-2.jpg"
----
+# China dim sum report
+*2016-08-04*
+
+*Updated 2025-8-25*
+
 
 Our China culinary adventure began in the southern region with four dim sum brunches and two dim sum dinners over eight days. When we completed our [30-day odyssey](https://meimeikirk.wordpress.com/2016/08/04/top-10-china-highlights/), we had an even 10 dim sums literally under our belts, thanks to my daughter Regan's avid research. While many meals were memorable in both good ways (Dadong Peking duck in Beijing) and bad (Huangshan pickled everything), here's how the dim sum lined up.<!--more-->
 

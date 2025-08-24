@@ -1,19 +1,6 @@
----
-title: "Top 10 safari highlights from Tanzania, Africa"
-date: 2018-01-12
-categories: 
-  - "africa"
-  - "great-migration"
-  - "safari"
-  - "tanzania"
-  - "travel"
-tags: 
-  - "leopards"
-  - "ngorongoro"
-  - "rhino"
-  - "serengeti"
-coverImage: "img_4830-e1515692783258.jpg"
----
+# Top 10 safari highlights from Tanzania, Africa
+*2018-01-12*
+
 
 Six of us had an amazing expedition to Tanzania for eight nights starting on Christmas Eve 2017.
 

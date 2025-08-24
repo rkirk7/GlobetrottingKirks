@@ -60,12 +60,9 @@ The guides were all well-equipped with numerous bear deterrents; the rifles were
 
 <div class="gallery">
 
-![](./Images/Churchill/Churchill29.jpeg)
-
+![](./Images/Churchill/Churchill29.jpeg)  
 ![](./Images/Churchill/Churchill30.jpeg)
-
 ![](./Images/Churchill/Churchill31.jpeg)
-
 </div>
 
 ---
@@ -82,10 +79,8 @@ There were only 17 of us guests, immediately bonded by a love of nature and wild
 Weather varied: we occasionally had T-shirt weather, but also stood in frigid rain one morning to admire a mom with two youngsters and a solo bear, all out on a spit. (The threesome were the same bears who greeted us upon arrival and saw us off when we left.)
 
 <div class="gallery">
-  <figure>
-    <img src="./Images/Churchill/Churchill32.jpeg" alt="Bears on a spit">
-    <figcaption>Our familiar mom and cubs on a distant spit in the rain. Not pictured, a fourth bear--probably a solitary male--swimming at the end of the spit.</figcaption>
-  </figure>
+
+![](./Images/Churchill/Churchill32.jpeg)
 </div>
 
 ### Beluga Day
@@ -93,18 +88,10 @@ Weather varied: we occasionally had T-shirt weather, but also stood in frigid ra
 One day was devoted to the playful, frolicking belugas. We took Zodiacs out on Hudson Bay to the mouth of the Seal River, where belugas swam all around us (and yes, a polar bear was swimming too!).
 
 <div class="gallery">
-  <figure>
-    <img src="./Images/Churchill/Churchill26.jpeg" alt="Swimming Bear">
-    <figcaption>A bear swimming towards belugas. We couldn't believe it!</figcaption>
-  </figure>
-   <figure>
-    <img src="./Images/Churchill/Churchill27.jpeg" alt="Belugas">
-    <figcaption>It was hard to capture the sheer number of belugas. They're fast!</figcaption>
-  </figure>
-     <figure>
-    <img src="./Images/Churchill/Churchill28.jpeg" alt="Belguas and Observers">
-    <figcaption>People on a zodiac watch the frolicking belugas</figcaption>
-  </figure>
+
+![](./Images/Churchill/Churchill26.jpeg)
+![](./Images/Churchill/Churchill27.jpeg)
+![](./Images/Churchill/Churchill28.jpeg)
 </div>
 
 ### Night Encounters
@@ -115,18 +102,10 @@ The days were long. Sometimes so were the nights.
 - And again at 11:20 p.m. (the same night!) for the Northern Lights. This was an unexpected bonus since nights were still pretty light near the Arctic.
 
 <div class="gallery">
-  <figure>
-    <img src="./Images/Churchill/Churchill23.jpeg" alt="Night Bear">
-    <figcaption>Regan spotted this bear from the watchtower and woke Mei-Mei in time to see him stride by the lodge. This photo was taken at 10:57 p.m. It's amazing what the iPhone can do!</figcaption>
-  </figure>
-   <figure>
-    <img src="./Images/Churchill/Churchill24.jpeg" alt="Seal Aurora Borealis">
-    <figcaption>The Northern Lights over the Churchill Wild sign</figcaption>
-  </figure>
-     <figure>
-    <img src="./Images/Churchill/Churchill25.jpeg" alt="Seal Aurora Borealis">
-    <figcaption>Mei-Mei and Regan with the Northern Lights</figcaption>
-  </figure>
+
+![](./Images/Churchill/Churchill23.jpeg)
+![](./Images/Churchill/Churchill24.jpeg)
+![](./Images/Churchill/Churchill25.jpeg)
 </div>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/g9-Pn-Pf43U?si=QZImjZ_srMkVPZCz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -136,22 +115,11 @@ The days were long. Sometimes so were the nights.
 We were disappointed when we didn't see any polar bears for nearly a day and a half, partially due to the thick haze of smoke that was blown in from numerous wildfires in Manitoba. Then on departure day, there were **four** right at the lodge! The lodge manager practically had to drag us away to catch our flight—-we reluctantly left our bears, and a piece of our hearts, behind.
 
 <div class="gallery">
-  <figure>
-    <img src="./Images/Churchill/Churchill37.jpeg" alt="Farewell Bears">
-    <figcaption>The same mom and two cubs who'd greeted us came to bid us farewell on our last night</figcaption>
-  </figure>
-   <figure>
-    <img src="./Images/Churchill/Churchill38.jpeg" alt="Regan and Farewell Bears">
-    <figcaption>They walked right past our room as Regan rushed in for a picture!</figcaption>
-  </figure>
-   <figure>
-    <img src="./Images/Churchill/Churchill39.jpeg" alt="Farewell Bears">
-    <figcaption>They ambled by just as the sun was going down</figcaption>
-  </figure>
-     <figure>
-    <img src="./Images/Churchill/Churchill40.jpeg" alt="Big Male">
-    <figcaption>As we were watching the mom and two cubs in the distance the next morning, this big male suddenly **stood up** from the grass next to the lodge, where he'd apparently been hidden from view all</figcaption>
-  </figure>
+
+![](./Images/Churchill/Churchill37.jpeg)
+![](./Images/Churchill/Churchill38.jpeg)
+![](./Images/Churchill/Churchill39.jpeg)
+![](./Images/Churchill/Churchill40.jpeg)
 </div>
 
 ---
@@ -166,30 +134,13 @@ Regan and I stayed in Churchill town for three more nights at Churchill Wild's n
   - We spotted **eight bears**, including three youngsters!  
 
 <div class="gallery">
-  <figure>
-    <img src="./Images/Churchill/Churchill17.jpeg" alt="Big Bear">
-    <figcaption>This big, happy female bear enjoyed lazing in the grass!</figcaption>
-  </figure>
-    <figure>
-    <img src="./Images/Churchill/Churchill18.jpeg" alt="Big Bear">
-    <figcaption>This big, happy female bear enjoyed posing for us</figcaption>
-  </figure>
-    <figure>
-    <img src="./Images/Churchill/Churchill19.jpeg" alt="Mom and Two COYs">
-    <figcaption>The south end of a mom and two COYs (cubs of the year, born in January) going north</figcaption>
-  </figure>
-      <figure>
-    <img src="./Images/Churchill/Churchill20.jpeg" alt="Mom and Two COYs">
-    <figcaption>And the same three, found again later taking a siesta</figcaption>
-  </figure>
-      <figure>
-    <img src="./Images/Churchill/Churchill21.jpeg" alt="Distant Mom and COY">
-    <figcaption>A distant mom with one COY, resting in the vibrant fireweed</figcaption>
-  </figure>
-       <figure>
-    <img src="./Images/Churchill/Churchill22.jpeg" alt="Caribou">
-    <figcaption>A lone caribou fording the pond</figcaption>
-  </figure>
+
+![](./Images/Churchill/Churchill17.jpeg)
+![](./Images/Churchill/Churchill18.jpeg)
+![](./Images/Churchill/Churchill19.jpeg)
+![](./Images/Churchill/Churchill20.jpeg)
+![](./Images/Churchill/Churchill21.jpeg)
+![](./Images/Churchill/Churchill22.jpeg)
 </div>
 
 - **Sub-Arctic Tours**  
@@ -197,26 +148,12 @@ Regan and I stayed in Churchill town for three more nights at Churchill Wild's n
   - He worked tirelessly to find us a polar bear in the publicly accessible areas around Churchill, making sure to point out arctic hares and belugas along the way. Near the end of the day, we spotted one **very** large bear, sprawled atop rocks, and got to enjoy him for about an hour--the only bear we had all to ourselves.
 
 <div class="gallery">
-  <figure>
-    <img src="./Images/Churchill/Churchill12.jpeg" alt="Big Bear">
-    <figcaption>We enjoyed quality time with this big bear!</figcaption>
-  </figure>
-    <figure>
-    <img src="./Images/Churchill/Churchill13.jpeg" alt="Big Bear">
-    <figcaption>He was lazy and well-fed.</figcaption>
-  </figure>
-    <figure>
-    <img src="./Images/Churchill/Churchill15.jpeg" alt="Bald Eagle">
-    <figcaption>We saw a few bald eagles on this trip.</figcaption>
-  </figure>
-      <figure>
-    <img src="./Images/Churchill/Churchill16.jpeg" alt="Bald Eagle">
-    <figcaption>We saw a few bald eagles on this trip.</figcaption>
-  </figure>
-      <figure>
-    <img src="./Images/Churchill/Churchill14.jpeg" alt="Arctic Hare">
-    <figcaption>And a bonus arctic hare!</figcaption>
-  </figure>
+
+![](./Images/Churchill/Churchill12.jpeg)
+![](./Images/Churchill/Churchill13.jpeg)
+![](./Images/Churchill/Churchill15.jpeg)
+![](./Images/Churchill/Churchill16.jpeg)
+![](./Images/Churchill/Churchill14.jpeg)
 </div>
 
 - **Discover Churchill's Northern Lights**  
@@ -224,14 +161,9 @@ Regan and I stayed in Churchill town for three more nights at Churchill Wild's n
   - We got the call around 10:30 p.m., drove out of town, and enjoyed a good light show, with an excellent photographer making sure to help capture the experience.
   
 <div class="gallery">
-  <figure>
-    <img src="./Images/Churchill/Churchill3.jpeg" alt="The Northern Lights">
-    <figcaption>The Northern Lights as seen near the the famous Miss Piggy plane crash</figcaption>
-  </figure>
-   <figure>
-    <img src="./Images/Churchill/Churchill9.jpeg" alt="The Northern Lights">
-    <figcaption>Mei-Mei and Regan with the Northern Lights, photo courtesy of Discover Churchill</figcaption>
-  </figure>
+
+![](./Images/Churchill/Churchill3.jpeg)
+![](./Images/Churchill/Churchill9.jpeg)
 </div>
 
 - **Kayaking with Sea North**  
@@ -240,14 +172,9 @@ Regan and I stayed in Churchill town for three more nights at Churchill Wild's n
   - We were part of a group of over 40 kayakers; orientation took a while, but we had two delightful hours on the water to play with the belugas.
 
 <div class="gallery">
-  <figure>
-    <img src="./Images/Churchill/Churchill4.jpeg" alt="Kayaking with Belugas">
-    <figcaption>Mei-Mei with playful belugas</figcaption>
-  </figure>
-    <figure>
-    <img src="./Images/Churchill/Churchill7.jpeg" alt="Beluga Selfie">
-    <figcaption>We were having trouble capturing the belugas with the GoPro under water...but this one certainly came close enough!</figcaption>
-  </figure>
+
+![](./Images/Churchill/Churchill4.jpeg)
+![](./Images/Churchill/Churchill7.jpeg)
 </div>
 
 - **Car rental for bear spotting and general shenanigans**  
@@ -257,18 +184,10 @@ Regan and I stayed in Churchill town for three more nights at Churchill Wild's n
   - Don't ask about the flat tire. Regan is starting to collect them in various countries around the world through no fault of her own.
 
 <div class="gallery">
-  <figure>
-    <img src="./Images/Churchill/Churchill11.jpeg" alt="Galloping Bear">
-    <figcaption>Mei-Mei spotted this bear from the car as it **ran**, but we couldn't see anything nearby that might have excited it</figcaption>
-  </figure>
-  <figure>
-    <img src="./Images/Churchill/Churchill10.jpeg" alt="Sunset">
-    <figcaption>Sunset over the Hudson Bay.</figcaption>
-  </figure>
-  <figure>
-    <img src="./Images/Churchill/Churchill8.jpeg" alt="Flat Tire">
-    <figcaption>Pay no attention to the flat tire.</figcaption>
-  </figure>
+
+![](./Images/Churchill/Churchill11.jpeg)
+![](./Images/Churchill/Churchill10.jpeg)
+![](./Images/Churchill/Churchill8.jpeg)
 </div>
 
 > **Final tally**: about **20 polar bears** (not including the ones from the plane) over eight nights, including several cubs, two swimming, and two spotted on our own. By comparison, during a 12-day cruise around Svalbard, Norway, we saw only seven bears, all from very far away. Churchill rocks!

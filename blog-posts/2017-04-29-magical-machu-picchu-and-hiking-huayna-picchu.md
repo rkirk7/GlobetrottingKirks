@@ -1,15 +1,5 @@
----
-title: "Magical Machu Picchu and hiking Huayna Picchu"
-date: 2017-04-29
-categories: 
-  - "huayna-picchu"
-  - "machu-picchu"
-  - "peru"
-  - "travel"
-tags: 
-  - "how-to-hike-huayna-picchu"
-coverImage: "huayna-picchu-hike-machu-picchu1-e1493488821792.jpg"
----
+# Magical Machu Picchu and hiking Huayna Picchu
+*2017-04-29*
 
 You've seen pictures; you've studied it; you've imagined it.
 

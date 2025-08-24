@@ -1,19 +1,6 @@
----
-title: "Amalfi Coast and more: Top 10 highlights"
-date: 2018-07-01
-categories: 
-  - "italy"
-  - "travel"
-tags: 
-  - "amalfi-coast"
-  - "capri"
-  - "path-of-the-gods"
-  - "positano"
-  - "ravello"
-  - "sicily"
-  - "stromboli"
-  - "volcanoes"
----
+# Amalfi Coast and more: Top 10 highlights
+*2018-07-01*
+
 
 We spent three wonderful weeks savoring the Amalfi Coast with two nights each at Ravello, Praiano and Positano, followed by Sorrento, Sicily and Stromboli. You really can't experience or appreciate the charm of each town as a day tripper.
 
