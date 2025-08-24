@@ -2,11 +2,10 @@
 // MARKED RENDERER FOR HEADINGS
 // ===========================
 const renderer = new marked.Renderer();
-
-let currentPostIndex = 0; // Will be set for each post
+let currentPostIndex = 0; // Set for each post
 
 renderer.heading = function (text, level, raw) {
-  const headingText = String(raw || text); // Force string
+  const headingText = String(raw || text);
   const slug = headingText.toLowerCase().replace(/[^\w]+/g, '-');
   const id = `post${currentPostIndex}-${slug}`;
   return `<h${level} id="${id}">${headingText}</h${level}>`;
@@ -45,13 +44,14 @@ async function initBlog() {
     "2015-09-16-retirement-milestone-3-months-and-counting.md",
     "2015-09-14-yes-the-world-needs-another-website-mine.md",
     "2015-08-29-hello-world-2.md"
-   ];
+  ];
+
   const container = document.getElementById("blog-container");
   const tocList = document.getElementById("toc-list");
   const tocListMobile = document.getElementById("toc-list-mobile");
   if (!container || !tocList || !tocListMobile) return;
 
-  // --- Load all posts
+  // --- Load posts
   const postsData = await Promise.all(
     posts.map(async post => {
       let text = await fetch(`blog-posts/${post}`).then(res => res.text());
@@ -72,7 +72,7 @@ async function initBlog() {
     const postId = `post${index}`;
     const postTitle = postData.content.split("\n").find(l => l.startsWith("# "))?.replace(/^# /, "") || postData.filename;
 
-    // Prefix internal Markdown links
+    // Prefix internal Markdown links with post ID
     const prefixedMarkdown = postData.content.replace(
       /\[([^\]]+)\]\(#([^\)]+)\)/g,
       (_, text, id) => `[${text}](#${postId}-${id})`
@@ -81,36 +81,33 @@ async function initBlog() {
     // Convert markdown to HTML
     let html = marked.parse(prefixedMarkdown);
 
-    // --- Wrap plain gallery images in figure + figcaption ---
+    // --- Add captions to images ---
     const tempDiv = document.createElement('div');
     tempDiv.innerHTML = html;
 
-    tempDiv.querySelectorAll('div.gallery').forEach(gallery => {
-      gallery.querySelectorAll('img').forEach(img => {
-        const filename = img.getAttribute('src').split('/').pop();
-        const caption = imageMeta[filename] || "";
+    tempDiv.querySelectorAll('img').forEach(img => {
+      const filename = img.getAttribute('src').split('/').pop();
+      const caption = imageMeta[filename] || "";
 
-        // Wrap in figure if not already
-        if (!img.closest('figure')) {
-          const figure = document.createElement('figure');
-          img.replaceWith(figure);
-          figure.appendChild(img);
-          const figcap = document.createElement('figcaption');
-          figcap.textContent = caption;
-          figure.appendChild(figcap);
+      if (!img.closest('figure')) {
+        const figure = document.createElement('figure');
+        img.replaceWith(figure);
+        figure.appendChild(img);
+        const figcap = document.createElement('figcaption');
+        figcap.textContent = caption;
+        figure.appendChild(figcap);
+      } else {
+        const figcap = img.nextElementSibling;
+        if (!figcap || figcap.tagName.toLowerCase() !== 'figcaption') {
+          const figcapNew = document.createElement('figcaption');
+          figcapNew.textContent = caption;
+          img.after(figcapNew);
         } else {
-          const figcap = img.nextElementSibling;
-          if (!figcap || figcap.tagName.toLowerCase() !== 'figcaption') {
-            const figcapNew = document.createElement('figcaption');
-            figcapNew.textContent = caption;
-            img.after(figcapNew);
-          } else {
-            figcap.textContent = caption;
-          }
+          figcap.textContent = caption;
         }
+      }
 
-        img.setAttribute('alt', caption);
-      });
+      img.setAttribute('alt', caption);
     });
 
     html = tempDiv.innerHTML;
@@ -138,7 +135,12 @@ async function initBlog() {
 
     container.appendChild(postDiv);
 
-    // ... rest of your TOC, collapse, internal link, and share button logic ...
+    // TOC population example (if you need titles in TOC)
+    const tocItem = document.createElement('li');
+    tocItem.innerHTML = `<a href="#${postId}">${postTitle}</a>`;
+    tocList.appendChild(tocItem);
+    const tocItemMobile = tocItem.cloneNode(true);
+    tocListMobile.appendChild(tocItemMobile);
   });
 }
 
