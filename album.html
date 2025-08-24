@@ -74,41 +74,42 @@
       let lightbox;
   
       function loadNextImage() {
-        const img = new Image();
-        img.src = `Images/${album.folder}/${album.folder}${index}.jpeg`;
-        img.classList.add("album-img");
-  
-        img.onload = () => {
-          const col = document.createElement("div");
-          col.classList.add("col-md-4", "mb-4");
-  
-          const link = document.createElement("a");
-          link.href = img.src;
-          link.classList.add("glightbox");
-          link.setAttribute("data-gallery", albumParam);
-          link.appendChild(img);
-  
-          col.appendChild(link);
-          container.appendChild(col);
-  
-          index++;
-          loadNextImage(); // load next image
-  
-          if (lightbox) {
-            lightbox.reload(); // refresh GLightbox with new images
-          } else {
-            lightbox = GLightbox({
-              selector: '.glightbox'
-            });
-          }
-        };
-  
-        img.onerror = () => {
-          if (index === 1) {
-            container.innerHTML = "<p class='text-center'>No images found.</p>";
-          }
-        };
-      }
+  const img = new Image();
+  img.src = `Images/${album.folder}/${album.folder}${index}.jpeg`;
+  img.classList.add("album-img");
+
+  img.onload = () => {
+    const col = document.createElement("div");
+    col.classList.add("col-md-4", "mb-4");
+
+    const link = document.createElement("a");
+    link.href = img.src;
+    link.classList.add("glightbox");
+    link.setAttribute("data-gallery", albumParam);
+    link.appendChild(img);
+
+    col.appendChild(link);
+    container.appendChild(col);
+
+    if (!lightbox) {
+      lightbox = GLightbox({ selector: ".glightbox" });
+    } else {
+      lightbox.reload();
+    }
+
+    index++;
+    loadNextImage(); // only load next if this one succeeded
+  };
+
+  img.onerror = () => {
+    // stop loading when a missing image is found
+    if (index === 1) {
+      container.innerHTML = "<p class='text-center'>No images found.</p>";
+    }
+    // no further calls → loop ends here
+  };
+}
+
   
       // **Call the function to start loading images**
       loadNextImage();
