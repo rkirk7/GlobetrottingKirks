@@ -11,8 +11,8 @@ async function initBlog() {
     "2025-01-29-antarctica-calls-and-we-must-go.md",
     "2024-09-12-in-search-of-polar-bears-in-the-arctic.md",
     "2023-07-20-come-safari-with-us.md",
-    "2023-02-25-100-miles-in-10-days-the-nearly-perfect-patagonia-hiking-trip",
-    "2022-10-20-paradise-found-french-polynesia",
+    "2023-02-25-100-miles-in-10-days-the-nearly-perfect-patagonia-hiking-trip.md",
+    "2022-10-20-paradise-found-french-polynesia.md",
     "2022-06-13-enchanting-galapagos-a-wildlife-wonderland.md",
     "2021-08-26-my-heritage-journey-to-hong-kong-and-china.md",
     "2021-08-22-western-parks-adventure-top-highlights.md",
@@ -34,22 +34,18 @@ async function initBlog() {
   if (!container || !tocList || !tocListMobile) return;
 
   function extractTitle(mdContent) {
-    const lines = mdContent.split("\n");
-    for (let line of lines) {
-      line = line.trim();
-      if (line.startsWith("# ")) {
-        const title = line.replace(/^# /, "").trim();
-        return { title, id: sanitizeId(title) };
-      }
-    }
-    return { title: null, id: null };
+    const line = mdContent.split("\n").find(l => l.trim().startsWith("# "));
+    if (!line) return { title: "Untitled Post", id: "untitled-post" };
+    const title = line.replace(/^# /, "").trim();
+    return { title, id: sanitizeId(title) };
   }
 
   const postsData = await Promise.all(
     posts.map(async post => {
-      let text = await fetch(`blog-posts/${post}`).then(res => res.text());
-      text = text.replace(/^---[\s\S]*?---/, '').trim(); // remove YAML frontmatter
-      return { filename: post, content: text };
+      const response = await fetch(`blog-posts/${post}`);
+      const text = await response.text();
+      const clean = text.replace(/^---[\s\S]*?---/, '').trim();
+      return { filename: post, content: clean };
     })
   );
 
@@ -58,22 +54,14 @@ async function initBlog() {
 
   postsData.forEach((postData, index) => {
     const postId = `post${index}`;
-    const postTitle = extractTitle(postData.content) || postData.filename;
+    const { title: postTitle, id: postIdSanitized } = extractTitle(postData.content);
 
-    // ===========================
-    // Prefix internal Markdown links
-    // ===========================
+    // Prefix internal links inside Markdown
+    const prefixedMarkdown = postData.content.replace(/\[([^\]]+)\]\(\s*#([^)]+)\s*\)/g, (_, text, id) => {
+      return `[${text}](#${postId}-${sanitizeId(id)})`;
+    });
 
-    const prefixedMarkdown = postData.content.replace(
-      /\[([^\]]+)\]\(\s*#([^)]+)\s*\)/g,
-      (_, text, id) => {
-        const safeId = sanitizeId(id);
-        return `[${text}](#${postId}-${safeId})`;
-      }
-    );
-
-
-    // Convert markdown to HTML
+    // Convert Markdown → HTML with prefixed IDs
     const html = marked.parse(prefixedMarkdown, {
       headerIds: true,
       mangle: false,
@@ -86,11 +74,7 @@ async function initBlog() {
     postDiv.id = postId;
 
     postDiv.innerHTML = `
-      <div class="card-header bg-primary text-white"
-           style="cursor:pointer;"
-           data-bs-toggle="collapse"
-           data-bs-target="#collapse${index}"
-           aria-expanded="true">
+      <div class="card-header bg-primary text-white" data-bs-toggle="collapse" data-bs-target="#collapse${index}" aria-expanded="true">
         <span class="post-title d-none">${postTitle}</span>
       </div>
       <div id="collapse${index}" class="collapse show">
@@ -103,28 +87,22 @@ async function initBlog() {
     const collapseEl = postDiv.querySelector(`#collapse${index}`);
     const titleEl = postDiv.querySelector(".post-title");
 
-    // Show/hide title when card collapses
     collapseEl.addEventListener("show.bs.collapse", () => titleEl.classList.add("d-none"));
     collapseEl.addEventListener("hide.bs.collapse", () => titleEl.classList.remove("d-none"));
 
-    // ===========================
-    // Add TOC links (desktop + mobile)
-    // ===========================
-    const { title: postTitle, id: postIdSanitized } = extractTitle(postData.content) || { title: postData.filename, id: sanitizeId(postData.filename) };
-
+    // TOC links (desktop + mobile)
     const addTocLink = (ul) => {
       const li = document.createElement("li");
       li.classList.add("nav-item");
       li.innerHTML = `<a class="nav-link" href="#${postId}-${postIdSanitized}">${postTitle}</a>`;
       ul.appendChild(li);
-    
+
       li.querySelector("a").addEventListener("click", e => {
         e.preventDefault();
         const offcanvasEl = document.getElementById("offcanvasToc");
-        const scrollToPost = () =>
-          document.getElementById(`${postId}-${postIdSanitized}`).scrollIntoView({ behavior: "smooth", block: "start" });
-    
-        if (offcanvasEl && offcanvasEl.classList.contains("show")) {
+        const scrollToPost = () => document.getElementById(`${postId}-${postIdSanitized}`).scrollIntoView({ behavior: "smooth", block: "start" });
+
+        if (offcanvasEl?.classList.contains("show")) {
           bootstrap.Offcanvas.getInstance(offcanvasEl).hide();
           setTimeout(scrollToPost, 300);
         } else {
@@ -132,35 +110,29 @@ async function initBlog() {
         }
       });
     };
-    
 
     addTocLink(tocList);
     addTocLink(tocListMobile);
 
-    // ===========================
-    // Smooth scrolling for internal links inside post
-    // ===========================
+    // Smooth scrolling for internal links
     const postContent = postDiv.querySelector('.blog-post-content');
     postContent.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', e => {
         e.preventDefault();
-        let targetId = sanitizeId(anchor.getAttribute('href').substring(1));
-        targetId = `${postId}-${targetId}`;
-    
+        const rawId = anchor.getAttribute('href').substring(1);
+        const targetId = `${postId}-${sanitizeId(rawId)}`;
         const targetEl = document.getElementById(targetId);
         if (!targetEl) return;
-    
+
         const collapseParent = targetEl.closest('.collapse');
         if (collapseParent && !collapseParent.classList.contains('show')) {
           const bsCollapse = bootstrap.Collapse.getOrCreateInstance(collapseParent);
-          collapseParent.addEventListener('shown.bs.collapse', () => {
-            targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }, { once: true });
+          collapseParent.addEventListener('shown.bs.collapse', () => targetEl.scrollIntoView({ behavior: 'smooth' }), { once: true });
           bsCollapse.show();
         } else {
-          targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          targetEl.scrollIntoView({ behavior: 'smooth' });
         }
-    
+
         history.pushState(null, '', `#${targetId}`);
       });
     });
@@ -168,17 +140,14 @@ async function initBlog() {
 
   function sanitizeId(text) {
     return text.trim()
-               .replace(/[’‘]/g, "'")              // normalize fancy apostrophes
-               .replace(/[^a-zA-Z0-9-_]/g, '-')    // replace invalid chars with dash
-               .replace(/--+/g, '-')               // collapse multiple dashes
-               .replace(/^-+|-+$/g, '')            // trim leading/trailing dashes
-               .toLowerCase();                     // optional: lowercase for consistency
+      .replace(/[’‘]/g, "'")
+      .replace(/[^a-zA-Z0-9-_]/g, '-')
+      .replace(/--+/g, '-')
+      .replace(/^-+|-+$/g, '')
+      .toLowerCase();
   }
-  
 
-  // ===========================
-  // Scroll to hash on page load
-  // ===========================
+  // Scroll to hash on load
   if (window.location.hash) {
     const hash = decodeURIComponent(window.location.hash.substring(1));
     const targetEl = document.getElementById(hash);
@@ -186,12 +155,10 @@ async function initBlog() {
       const collapseParent = targetEl.closest('.collapse');
       if (collapseParent && !collapseParent.classList.contains('show')) {
         const bsCollapse = bootstrap.Collapse.getOrCreateInstance(collapseParent);
-        collapseParent.addEventListener('shown.bs.collapse', () => {
-          targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }, { once: true });
+        collapseParent.addEventListener('shown.bs.collapse', () => targetEl.scrollIntoView({ behavior: 'smooth' }), { once: true });
         bsCollapse.show();
       } else {
-        targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        targetEl.scrollIntoView({ behavior: 'smooth' });
       }
     }
   }
