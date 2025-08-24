@@ -1,6 +1,6 @@
 marked.setOptions({
   mangle: false,
-  headerIds: true
+  headerIds: false // we'll handle IDs manually
 });
 
 async function initBlog() {
@@ -33,11 +33,13 @@ async function initBlog() {
   const tocListMobile = document.getElementById("toc-list-mobile");
   if (!container || !tocList || !tocListMobile) return;
 
-  function extractTitle(mdContent) {
-    const line = mdContent.split("\n").find(l => l.trim().startsWith("# "));
-    if (!line) return { title: "Untitled Post", id: "untitled-post" };
-    const title = line.replace(/^# /, "").trim();
-    return { title, id: sanitizeId(title) };
+  function sanitizeId(text) {
+    return text.trim()
+      .replace(/[’‘]/g, "'")
+      .replace(/[^a-zA-Z0-9-_]/g, '-')
+      .replace(/--+/g, '-')
+      .replace(/^-+|-+$/g, '')
+      .toLowerCase();
   }
 
   const postsData = await Promise.all(
@@ -54,19 +56,27 @@ async function initBlog() {
 
   postsData.forEach((postData, index) => {
     const postId = `post${index}`;
-    const { title: postTitle, id: postIdSanitized } = extractTitle(postData.content);
+    let firstHeaderId = null;
+    let firstHeaderText = null;
 
-    // Prefix internal links inside Markdown
+    // Custom renderer to add unique IDs to headings
+    const renderer = new marked.Renderer();
+    renderer.heading = (text, level) => {
+      const id = `${postId}-${sanitizeId(text)}`;
+      if (level === 1 && !firstHeaderId) {
+        firstHeaderId = id;
+        firstHeaderText = text; // use actual H1 text for TOC
+      }
+      return `<h${level} id="${id}">${text}</h${level}>`;
+    };
+
+    // Prefix internal links so they match generated IDs
     const prefixedMarkdown = postData.content.replace(/\[([^\]]+)\]\(\s*#([^)]+)\s*\)/g, (_, text, id) => {
       return `[${text}](#${postId}-${sanitizeId(id)})`;
     });
 
-    // Convert Markdown → HTML with prefixed IDs
-    const html = marked.parse(prefixedMarkdown, {
-      headerIds: true,
-      mangle: false,
-      headerPrefix: `${postId}-`
-    });
+    // Convert Markdown → HTML
+    const html = marked.parse(prefixedMarkdown, { renderer });
 
     // Create post card
     const postDiv = document.createElement("div");
@@ -75,7 +85,7 @@ async function initBlog() {
 
     postDiv.innerHTML = `
       <div class="card-header bg-primary text-white" data-bs-toggle="collapse" data-bs-target="#collapse${index}" aria-expanded="true">
-        <span class="post-title d-none">${postTitle}</span>
+        <span class="post-title d-none">${firstHeaderText || "Untitled Post"}</span>
       </div>
       <div id="collapse${index}" class="collapse show">
         <div class="card-body blog-post-content">${html}</div>
@@ -94,13 +104,13 @@ async function initBlog() {
     const addTocLink = (ul) => {
       const li = document.createElement("li");
       li.classList.add("nav-item");
-      li.innerHTML = `<a class="nav-link" href="#${postId}-${postIdSanitized}">${postTitle}</a>`;
+      li.innerHTML = `<a class="nav-link" href="#${firstHeaderId}">${firstHeaderText || "Untitled Post"}</a>`;
       ul.appendChild(li);
 
       li.querySelector("a").addEventListener("click", e => {
         e.preventDefault();
         const offcanvasEl = document.getElementById("offcanvasToc");
-        const scrollToPost = () => document.getElementById(`${postId}-${postIdSanitized}`).scrollIntoView({ behavior: "smooth", block: "start" });
+        const scrollToPost = () => document.getElementById(firstHeaderId).scrollIntoView({ behavior: "smooth", block: "start" });
 
         if (offcanvasEl?.classList.contains("show")) {
           bootstrap.Offcanvas.getInstance(offcanvasEl).hide();
@@ -119,8 +129,7 @@ async function initBlog() {
     postContent.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', e => {
         e.preventDefault();
-        const rawId = anchor.getAttribute('href').substring(1);
-        const targetId = `${postId}-${sanitizeId(rawId)}`;
+        const targetId = anchor.getAttribute('href').substring(1);
         const targetEl = document.getElementById(targetId);
         if (!targetEl) return;
 
@@ -137,15 +146,6 @@ async function initBlog() {
       });
     });
   });
-
-  function sanitizeId(text) {
-    return text.trim()
-      .replace(/[’‘]/g, "'")
-      .replace(/[^a-zA-Z0-9-_]/g, '-')
-      .replace(/--+/g, '-')
-      .replace(/^-+|-+$/g, '')
-      .toLowerCase();
-  }
 
   // Scroll to hash on load
   if (window.location.hash) {
