@@ -59,9 +59,9 @@ async function initBlog() {
     const postTitle = postData.content.split("\n").find(l => l.startsWith("# "))?.replace(/^# /, "") || postData.filename;
 
     // --- Get preview (first 6 non-empty lines) ---
-    const lines = postData.content.split("\n").filter(line => line.trim() !== "");
-    const previewLines = lines.slice(0, 6).join("\n");
-    let previewHtml = marked.parse(previewLines);
+    const paragraphs = postData.content.split(/\n\s*\n/); // split by blank lines = paragraphs
+    const previewText = paragraphs.slice(0, 3).join("\n\n"); // e.g., first 3 paragraphs
+    let previewHtml = marked.parse(previewText);
 
     // --- Add captions & create gallery ---
     const tempDiv = document.createElement('div');
