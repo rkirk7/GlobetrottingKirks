@@ -86,7 +86,6 @@ postText = lines.join("\n");
       const imageMeta = await fetch('image-data.json').then(res => res.json());
 
       // --- IMAGE & GALLERY HANDLING ---
-     // --- IMAGE & GALLERY HANDLING ---
 const images = Array.from(tempDiv.querySelectorAll('img'));
 let galleryWrapper = null;
 
@@ -112,13 +111,13 @@ images.forEach((img, idx) => {
     figcap.textContent = caption;
   }
 
-  // Wrap all images in one gallery div
-  if (!galleryWrapper) {
-    galleryWrapper = document.createElement('div');
-    galleryWrapper.classList.add('gallery');
-    figure.parentNode.insertBefore(galleryWrapper, figure);
-  }
-  galleryWrapper.appendChild(figure);
+//   // Wrap all images in one gallery div
+//   if (!galleryWrapper) {
+//     galleryWrapper = document.createElement('div');
+//     galleryWrapper.classList.add('gallery');
+//     figure.parentNode.insertBefore(galleryWrapper, figure);
+//   }
+//   galleryWrapper.appendChild(figure);
 
   // Add responsive class
   img.style.maxWidth = "100%";
