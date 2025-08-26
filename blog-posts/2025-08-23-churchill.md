@@ -1,6 +1,8 @@
 # Birds, Bears, Belugas, and So Much More: Our Churchill Adventure
 *2025-08-23*
 
+![](./Images/Churchill/Churchill1.jpeg)
+
 If spotting polar bears in the wild is on your bucket list, there are only a few destinations to consider: Norway, Kaktovik, Alaska (off-limits for now), and parts of Canada, Greenland and Russia. There are currently two accessible areas where polar bears are most concentrated:
 
 --Svalbard, Norway, an archipelago just 800 miles from the North Pole, with about 300 polar bears.

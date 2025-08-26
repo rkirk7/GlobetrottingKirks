@@ -56,12 +56,33 @@ async function initBlog() {
   // --- Render each post ---
   postsData.forEach((postData, index) => {
     const postId = `post${index}`;
+    postDiv.id = postId;
     const postTitle = postData.content.split("\n").find(l => l.startsWith("# "))?.replace(/^# /, "") || postData.filename;
+
+
+    const imageRegex = /!\[.*?\]\((.*?)\)/;
+    const match = postData.content.match(imageRegex);
+    let headerImage = null;
+    
+    if (match) {
+      headerImage = match[1]; // URL of the first image
+      // Remove only the first image line from the content
+      postData.content = postData.content.replace(imageRegex, "");
+    }
+
 
     // --- Get preview (first 6 non-empty lines) ---
     const paragraphs = postData.content.split(/\n\s*\n/); // split by blank lines = paragraphs
-    const previewText = paragraphs.slice(0, 3).join("\n\n"); // e.g., first 3 paragraphs
+    const previewText = paragraphs.slice(0, 5).join("\n\n"); // e.g., first 3 paragraphs
     let previewHtml = marked.parse(previewText);
+    
+
+    let finalHtml = "";
+if (headerImage) {
+  finalHtml += `<img class="header-image" src="${headerImage}" alt="Header Image">`;
+}
+finalHtml += previewHtml;
+
 
     // --- Add captions & create gallery ---
     const tempDiv = document.createElement('div');
@@ -112,6 +133,8 @@ async function initBlog() {
       galleryWrapper.appendChild(figure);
     });
 
+    finalHtml = headerImage ? img + tempDiv.innerHTML : tempDiv.innerHTML;
+
     previewHtml = tempDiv.innerHTML;
 
     // --- Create post card ---
@@ -119,11 +142,8 @@ async function initBlog() {
     postDiv.classList.add("card", "shadow-lg", "mb-3");
 
     postDiv.innerHTML = `
-      <div class="card-header bg-primary text-white" style="cursor:pointer;">
-        ${postTitle}
-      </div>
       <div class="card-body blog-post-content">
-        ${previewHtml}
+        ${finalHtml}
         <a href="blogpost.html?post=${encodeURIComponent(postData.filename)}" class="btn btn-primary btn-sm mt-2">Read More</a>
       </div>
     `;
