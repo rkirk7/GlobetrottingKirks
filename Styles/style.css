@@ -156,14 +156,32 @@
 }
 
 /* Gallery images fill grid cells */
+
+/* Target images directly under gallery */
 .blog-post-content .gallery img {
-  width: 80%;
-  height: 200px;
+  width: 100%;             /* fill the grid cell */
+  height: auto;            /* maintain aspect ratio */
   object-fit: cover;
   border-radius: 6px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
+  display: block;          /* important */
 }
+
+/* Ensure direct children of gallery behave as grid items */
+.blog-post-content .gallery > img,
+.blog-post-content .gallery > p > img {
+  display: block;
+}
+
+/* Set the gallery grid */
+.blog-post-content .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
 
 .blog-post-content .gallery img:hover {
   transform: scale(1.05);
@@ -205,7 +223,7 @@
   position: relative;
   width: 100%;
   min-height: 300px;       /* adjust height as needed */
-  background: url('Images/hero-image.jpg') center center / cover no-repeat;
+  background: img('Images/hero-image.jpg') center center / cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
