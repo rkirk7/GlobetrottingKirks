@@ -231,7 +231,7 @@
   position: relative;
   width: 100%;
   min-height: 300px;       /* adjust height as needed */
-  background: img('Images/hero-image.jpg') center center / cover no-repeat;
+  background: url('./Images/hero-image.jpg') center center / cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -258,4 +258,26 @@
 .hero .btn {
   font-size: 1.2rem;
   padding: 0.75rem 1.5rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.caption {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 4px;
+  color: #555;
 }

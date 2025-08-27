@@ -84,32 +84,57 @@ postText = lines.join("\n");
       tempDiv.innerHTML = marked.parse(postText);
 
       // Load image metadata
-      const imageMeta = await fetch('image-data.json').then(res => res.json());
+      const captions = await fetch('image-data.json').then(res => res.json());
 
-      // --- IMAGE & GALLERY HANDLING ---
-      // --- IMAGE & GALLERY HANDLING ---
-const images = Array.from(tempDiv.querySelectorAll('img'));
-const figures = [];
+    // Format galleries
+   // 5. Process all galleries
+   const galleries = container.querySelectorAll('.gallery');
+    galleries.forEach(gallery => {
+      gallery.classList.add('gallery-grid'); // apply grid CSS
 
-// Wrap each image in a figure and add caption if needed
-images.forEach((img) => {
-  const filename = img.getAttribute('src').split('/').pop();
-  const caption = (imageMeta && imageMeta[filename]) || "";
-  img.setAttribute('alt', caption || filename);
+      // Process every image in this gallery
+      const imgs = gallery.querySelectorAll('img');
+      imgs.forEach(img => {
+        const filename = img.src.split('/').pop(); // get filename only
+        const captionText = captions[filename];
 
-  // Wrap img in figure if not already
-  if (!img.closest('figure')) {
-    const figure = document.createElement('figure');
-    img.parentNode.insertBefore(figure, img);
-    figure.appendChild(img);
+        if (captionText) {
+          // Set alt attribute
+          img.alt = captionText;
 
-    if (caption) {
-      const figcap = document.createElement('figcaption');
-      figcap.textContent = caption;
-      figure.appendChild(figcap);
-    }
-  }
-});
+          // Add caption element below the image
+          const captionEl = document.createElement('div');
+          captionEl.className = 'caption';
+          captionEl.textContent = captionText;
+          img.insertAdjacentElement('afterend', captionEl);
+        }
+      });
+    });
+  
+//       // --- IMAGE & GALLERY HANDLING ---
+//       // --- IMAGE & GALLERY HANDLING ---
+// const images = Array.from(tempDiv.querySelectorAll('img'));
+// const figures = [];
+
+// // Wrap each image in a figure and add caption if needed
+// images.forEach((img) => {
+//   const filename = img.getAttribute('src').split('/').pop();
+//   const caption = (imageMeta && imageMeta[filename]) || "";
+//   img.setAttribute('alt', caption || filename);
+
+//   // Wrap img in figure if not already
+//   if (!img.closest('figure')) {
+//     const figure = document.createElement('figure');
+//     img.parentNode.insertBefore(figure, img);
+//     figure.appendChild(img);
+
+//     if (caption) {
+//       const figcap = document.createElement('figcaption');
+//       figcap.textContent = caption;
+//       figure.appendChild(figcap);
+//     }
+//   }
+// });
 
 // --- Wrap consecutive figures into galleries ---
 // let currentGallery = [];
