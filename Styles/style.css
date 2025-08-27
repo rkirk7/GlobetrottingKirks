@@ -35,6 +35,26 @@
     color: #fff;
     margin: 0 0.5rem;
   }
+
+  /* Fix dropdown menu colors */
+.dropdown-menu {
+  background-color: #fff;  /* White background */
+}
+
+.dropdown-item {
+  color: #333 !important;  /* Dark text */
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: #f1f1f1; /* Light gray on hover */
+  color: #000 !important;    /* Even darker text on hover */
+}
+
+.dropdown-header {
+  color: #555; /* Make headers visible */
+}
+
   
   /* ================================
      Blog Post Styles
