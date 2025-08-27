@@ -87,16 +87,18 @@ postText = lines.join("\n");
       const imageMeta = await fetch('image-data.json').then(res => res.json());
 
       // --- IMAGE & GALLERY HANDLING ---
+      // --- IMAGE & GALLERY HANDLING ---
 const images = Array.from(tempDiv.querySelectorAll('img'));
 const figures = [];
 
+// Wrap each image in a figure and add caption if needed
 images.forEach((img) => {
   const filename = img.getAttribute('src').split('/').pop();
   const caption = (imageMeta && imageMeta[filename]) || "";
   img.setAttribute('alt', caption || filename);
 
-  // Only wrap if not in a figure AND not in a gallery
-  if (!img.closest('figure') && !img.closest('.gallery')) {
+  // Wrap img in figure if not already
+  if (!img.closest('figure')) {
     const figure = document.createElement('figure');
     img.parentNode.insertBefore(figure, img);
     figure.appendChild(img);
@@ -109,10 +111,47 @@ images.forEach((img) => {
   }
 });
 
+// --- Wrap consecutive figures into galleries ---
+// let currentGallery = [];
+// const allFigures = Array.from(tempDiv.querySelectorAll('figure'));
+
+// allFigures.forEach((figure, i) => {
+//   const next = allFigures[i + 1];
+
+//   currentGallery.push(figure);
+
+//   // If next isn't directly after this one or no next -> finalize group
+//   if (!next || next.previousElementSibling !== figure) {
+//     if (currentGallery.length > 1) {
+//       // Wrap group in gallery
+//       const galleryWrapper = document.createElement('div');
+//       galleryWrapper.classList.add('gallery');
+//       currentGallery[0].parentNode.insertBefore(galleryWrapper, currentGallery[0]);
+//       currentGallery.forEach(fig => galleryWrapper.appendChild(fig));
+//     }
+//     currentGallery = [];
+//   }
+// });
 
 
     previewHtml = tempDiv.innerHTML;
   
+
+//   // Wrap all images in one gallery div
+//   if (!galleryWrapper) {
+//     galleryWrapper = document.createElement('div');
+//     galleryWrapper.classList.add('gallery');
+//     figure.parentNode.insertBefore(galleryWrapper, figure);
+//   }
+//   galleryWrapper.appendChild(figure);
+
+  // Add responsive class
+//   img.style.maxWidth = "100%";
+//   img.style.height = "auto";
+//   img.style.display = "block";
+//   img.style.margin = "0 auto";
+// });
+
 
       // --- TOC ---
       const tocList = document.getElementById('toc-list');
