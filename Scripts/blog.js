@@ -61,6 +61,9 @@ async function initBlog() {
     const previewText = paragraphs.slice(0, 5).join("\n\n"); // e.g., first 3 paragraphs
     let previewHtml = marked.parse(previewText);
     
+    const imageRegex = /!\[.*?\]\((.*?)\)/;
+    const match = postData.content.match(imageRegex);
+    let headerImage = null;
 
     let finalHtml = "";
 if (headerImage) {
@@ -129,11 +132,6 @@ finalHtml += previewHtml;
     const postId = `post${index}`;
     postDiv.id = postId;
     const postTitle = postData.content.split("\n").find(l => l.startsWith("# "))?.replace(/^# /, "") || postData.filename;
-
-
-    const imageRegex = /!\[.*?\]\((.*?)\)/;
-    const match = postData.content.match(imageRegex);
-    let headerImage = null;
     
     if (match) {
       headerImage = match[1]; // URL of the first image
