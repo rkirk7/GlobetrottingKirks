@@ -112,26 +112,26 @@ images.forEach((img) => {
 });
 
 // --- Wrap consecutive figures into galleries ---
-let currentGallery = [];
-const allFigures = Array.from(tempDiv.querySelectorAll('figure'));
+// let currentGallery = [];
+// const allFigures = Array.from(tempDiv.querySelectorAll('figure'));
 
-allFigures.forEach((figure, i) => {
-  const next = allFigures[i + 1];
+// allFigures.forEach((figure, i) => {
+//   const next = allFigures[i + 1];
 
-  currentGallery.push(figure);
+//   currentGallery.push(figure);
 
-  // If next isn't directly after this one or no next -> finalize group
-  if (!next || next.previousElementSibling !== figure) {
-    if (currentGallery.length > 1) {
-      // Wrap group in gallery
-      const galleryWrapper = document.createElement('div');
-      galleryWrapper.classList.add('gallery');
-      currentGallery[0].parentNode.insertBefore(galleryWrapper, currentGallery[0]);
-      currentGallery.forEach(fig => galleryWrapper.appendChild(fig));
-    }
-    currentGallery = [];
-  }
-});
+//   // If next isn't directly after this one or no next -> finalize group
+//   if (!next || next.previousElementSibling !== figure) {
+//     if (currentGallery.length > 1) {
+//       // Wrap group in gallery
+//       const galleryWrapper = document.createElement('div');
+//       galleryWrapper.classList.add('gallery');
+//       currentGallery[0].parentNode.insertBefore(galleryWrapper, currentGallery[0]);
+//       currentGallery.forEach(fig => galleryWrapper.appendChild(fig));
+//     }
+//     currentGallery = [];
+//   }
+// });
 
 
     previewHtml = tempDiv.innerHTML;
