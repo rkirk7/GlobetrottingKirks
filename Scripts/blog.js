@@ -55,21 +55,6 @@ async function initBlog() {
 
   // --- Render each post ---
   postsData.forEach((postData, index) => {
-    const postId = `post${index}`;
-    postDiv.id = postId;
-    const postTitle = postData.content.split("\n").find(l => l.startsWith("# "))?.replace(/^# /, "") || postData.filename;
-
-
-    const imageRegex = /!\[.*?\]\((.*?)\)/;
-    const match = postData.content.match(imageRegex);
-    let headerImage = null;
-    
-    if (match) {
-      headerImage = match[1]; // URL of the first image
-      // Remove only the first image line from the content
-      postData.content = postData.content.replace(imageRegex, "");
-    }
-
 
     // --- Get preview (first 6 non-empty lines) ---
     const paragraphs = postData.content.split(/\n\s*\n/); // split by blank lines = paragraphs
@@ -140,6 +125,22 @@ finalHtml += previewHtml;
     // --- Create post card ---
     const postDiv = document.createElement("div");
     postDiv.classList.add("card", "shadow-lg", "mb-3");
+
+    const postId = `post${index}`;
+    postDiv.id = postId;
+    const postTitle = postData.content.split("\n").find(l => l.startsWith("# "))?.replace(/^# /, "") || postData.filename;
+
+
+    const imageRegex = /!\[.*?\]\((.*?)\)/;
+    const match = postData.content.match(imageRegex);
+    let headerImage = null;
+    
+    if (match) {
+      headerImage = match[1]; // URL of the first image
+      // Remove only the first image line from the content
+      postData.content = postData.content.replace(imageRegex, "");
+    }
+
 
     postDiv.innerHTML = `
       <div class="card-body blog-post-content">
