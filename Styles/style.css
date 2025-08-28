@@ -35,26 +35,13 @@
     color: #fff;
     margin: 0 0.5rem;
   }
-
-  /* Fix dropdown menu colors */
-.dropdown-menu {
-  background-color: #fff;  /* White background */
-}
-
-.dropdown-item {
-  color: #333 !important;  /* Dark text */
-}
-
-.dropdown-item:hover,
-.dropdown-item:focus {
-  background-color: #f1f1f1; /* Light gray on hover */
-  color: #000 !important;    /* Even darker text on hover */
-}
-
-.dropdown-header {
-  color: #555; /* Make headers visible */
-}
-
+  
+  /* Dropdown menu */
+  .dropdown-menu { background-color: #fff; }
+  .dropdown-item { color: #333 !important; }
+  .dropdown-item:hover,
+  .dropdown-item:focus { background-color: #f1f1f1; color: #000 !important; }
+  .dropdown-header { color: #555; }
   
   /* ================================
      Blog Post Styles
@@ -64,15 +51,12 @@
     margin: 1rem auto;
     padding: 1.5rem;
     border-radius: 6px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     max-width: 800px;
   }
   
-  .blog-post h1,
-  .blog-post h2,
-  .blog-post h3 {
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
+  .blog-post h1, .blog-post h2, .blog-post h3 {
+    margin: 1rem 0 0.5rem 0;
   }
   
   .blog-post p {
@@ -89,18 +73,9 @@
     margin: 1rem 0;
   }
   
-  .toc h3 {
-    margin-top: 0;
-  }
-  
-  .toc ul {
-    list-style: none;
-    padding-left: 0;
-  }
-  
-  .toc ul li {
-    margin: 0.25rem 0;
-  }
+  .toc h3 { margin-top: 0; }
+  .toc ul { list-style: none; padding-left: 0; }
+  .toc ul li { margin: 0.25rem 0; }
   
   /* ================================
      Buttons
@@ -112,19 +87,17 @@
     background: #007bff;
     color: #fff;
     text-align: center;
+    text-decoration: none;
   }
   
-  .btn:hover {
-    background: #0056b3;
-  }
-  
+  .btn:hover { background: #0056b3; }
   
   /* ================================
      Header Image
      ================================ */
   .header-image {
     display: block;
-    margin: 0 auto 1rem auto;
+    margin: 0 auto 1rem;
     max-width: 75%;
     max-height: 300px;
     height: auto;
@@ -132,338 +105,199 @@
     border-radius: 8px;
   }
   
-
   /* ================================
-   Hero Section
-   ================================ */
-.hero {
-  position: relative;
-  width: 100%;
-  min-height: 400px;       /* adjust height as needed */
-  background: url('../Images/hero-image.jpeg') center center / cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.5);
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.35); /* optional overlay for contrast */
-}
-
-.hero-content {
-  position: relative;
-  text-align: center;
-  z-index: 1;
-}
-
-.hero .btn {
-  font-size: 1.2rem;
-  padding: 0.75rem 1.5rem;
-}
-
-/* ================================
-   Blog Post Images & Gallery
-   ================================ */
-
-   .blog-container {
-    max-width: 800px;
+     Hero Section
+     ================================ */
+  .hero {
+    position: relative;
+    width: 100%;
+    min-height: 400px;
+    background: url('../Images/hero-image.jpeg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  }
+  
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+  }
+  
+  .hero-content {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+  }
+  
+  .hero .btn {
+    font-size: 1.2rem;
+    padding: 0.75rem 1.5rem;
+  }
+  
+  /* ================================
+     Blog Post Images & Gallery
+     ================================ */
+  .blog-container, #post-container {
+    max-width: 960px;
     margin: 0 auto;
     padding: 0 15px;
   }
-
-/* All images in blog posts scale to container */
-.blog-post-content img {
-  max-width: 100%;      /* Make images fit inside the container width */
-  height: auto;         /* Keep aspect ratio */
-  display: block;       /* Removes inline spacing issues */
-  margin: 20px auto;    /* Centers images and adds space around them */
-  border-radius: 6px;   /* Optional: rounded corners */
-  max-height: 500px;    /* Optional: limit super tall images */
-  object-fit: contain;  /* Prevent weird cropping */
-}
-
-
-/* Images inside galleries */
-.blog-post-content .gallery img {
-  width: 100%;           /* fill the grid cell */
-  height: auto;
-  object-fit: cover;
-  border-radius: 6px;
-  display: block;
-  transition: transform 0.2s;
-}
-
-.blog-post-content .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 0.75rem;
-  margin: 1rem 0;
-}
-
-.blog-post-content .gallery .caption {
-  text-align: center;
-  font-size: 0.85rem;
-  color: #666;
-}
-
-
-
-.blog-post-content .gallery img:hover {
-  transform: scale(1.05);
-}
-
-/* Handle images wrapped in <p> (common from marked.js) */
-.blog-post-content p img {
-  display: block;
-  margin: 1rem auto;
-}
-
-/* Captions */
-.blog-post-content .caption,
-.blog-post-content figcaption {
-  text-align: center;
-  font-size: 0.85rem;
-  color: #666;
-  margin-top: 4px;
-}
-
-/* Gallery grid */
-.blog-post-content .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 0.75rem;
-  margin: 1rem 0;
-}
-
-/* Mobile adjustments */
-@media (max-width: 768px) {
-  .blog-post-content .gallery {
-    grid-template-columns: 1fr; /* single column on mobile */
+  
+  /* All images in blog posts scale responsibly */
+  .blog-post-content img,
+  .container img,
+  .blog-container img {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    object-fit: contain;
+    box-sizing: border-box;
   }
-  .blog-post-content .gallery img {
+  
+  /* Captions */
+  .caption,
+  figcaption,
+  .blog-post-content .caption {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 4px;
+  }
+  
+  /* Gallery layout */
+  .blog-post-content .gallery,
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .blog-post-content .gallery img,
+  .gallery img {
     width: 100%;
     height: auto;
+    border-radius: 6px;
+    display: block;
+    transition: transform 0.2s;
   }
-}
-
-/* Single images full width */
-.blog-post-content p img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 1em auto;
-}
-
-/* Galleries */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 10px;
-  margin: 1em 0;
-}
-
-.gallery img {
-  width: 100%;
-  display: block;
-  border-radius: 4px;
-}
-
-.caption {
-  text-align: center;
-  font-size: 0.9em;
-  color: #666;
-  margin-top: 5px;
-}
-
-#lightbox {
-  display: none;
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.9);
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  flex-direction: column;
-}
-
-#lightbox img {
-  max-width: 90%;
-  max-height: 80%;
-  border-radius: 6px;
-}
-
-.lightbox-caption {
-  color: #fff;
-  margin-top: 10px;
-  text-align: center;
-}
-
-.lightbox-close,
-.lightbox-prev,
-.lightbox-next {
-  position: absolute;
-  color: white;
-  font-size: 2em;
-  cursor: pointer;
-  user-select: none;
-  padding: 10px;
-}
-
-.lightbox-close { top: 20px; right: 30px; }
-.lightbox-prev { top: 50%; left: 20px; transform: translateY(-50%); }
-.lightbox-next { top: 50%; right: 20px; transform: translateY(-50%); }
-
-/* Constrain the card so 100% images aren’t “huge” on desktop */
-#post-container { max-width: 960px; margin: 0 auto; }
-
-/* All post images: scale responsibly */
-.blog-post-content img {
-  width: 100%;
-  max-width: 900px;      /* cap single-image width on large screens */
-  height: auto;
-  display: block;
-  margin: 1rem auto;
-  border-radius: 6px;
-  box-sizing: border-box;
-}
-
-/* Galleries: images should fill their grid cells */
-.blog-post-content .gallery img {
-  width: 100%;
-  max-width: none;       /* don’t cap inside grid */
-  height: auto;
-}
-
-/* (Optional) tighten captions */
-.blog-post-content .caption { font-size: 0.9rem; color: #666; text-align: center; margin-top: 4px; }
-
-
-/* Make sure images never overflow */
-.blog-post-content img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 10px auto;
-  border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-/* Single image captions */
-.caption {
-  text-align: center;
-  font-size: 0.9rem;
-  color: #666;
-  margin-top: 4px;
-}
-
-/* Gallery layout for multiple images */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 10px;
-  margin: 20px 0;
-}
-
-.gallery img {
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-}
-
-.gallery .caption {
-  text-align: center;
-  font-size: 0.85rem;
-  color: #666;
-}
-
-
-/*newsletter signup*/
-
-.newsletter-section {
-  border-top: 1px solid #eaeaea;
-}
-
-.newsletter-section h2 {
-  font-size: 1.8rem;
-  font-weight: 600;
-}
-
-#newsletter-form input {
-  border-radius: 50px;
-  padding-left: 20px;
-}
-
-#newsletter-form button {
-  border-radius: 50px;
-  padding: 0.5rem 1.5rem;
-}
-
-
-.img-wrapper {
-  position: relative;
-  display: inline-block;
-  margin: 8px;
-  overflow: hidden;
-  border-radius: 8px;
-}
-
-.img-wrapper img {
-  display: block;
-  width: 100%;
-  height: auto;
-  transition: transform 0.3s ease;
-}
-
-/* overlay at bottom */
-.img-overlay {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 8px 10px;
-  background: rgba(0,0,0,0.62);
-  color: #fff;
-  font-size: 0.95rem;
-  text-align: center;
-  opacity: 0;
-  transform: translateY(6px);
-  transition: opacity 0.25s ease, transform 0.25s ease;
-}
-
-/* hover/keyboard focus */
-.img-wrapper:hover img,
-.img-wrapper:focus-within img {
-  transform: scale(1.04);
-}
-.img-wrapper:hover .img-overlay,
-.img-wrapper:focus-within .img-overlay {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Touch devices: show caption (no hover) but make it look nicer */
-@media (hover: none) {
-  .img-overlay {
+  
+  .blog-post-content .gallery img:hover,
+  .gallery img:hover { transform: scale(1.05); }
+  
+  /* Mobile adjustments */
+  @media (max-width: 768px) {
+    .blog-post-content .gallery,
+    .gallery { grid-template-columns: 1fr; }
+  }
+  
+  /* Lightbox */
+  #lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    flex-direction: column;
+  }
+  
+  #lightbox img { max-width: 90%; max-height: 80%; border-radius: 6px; }
+  
+  .lightbox-caption { color: #fff; margin-top: 10px; text-align: center; }
+  
+  .lightbox-close,
+  .lightbox-prev,
+  .lightbox-next {
+    position: absolute;
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+    user-select: none;
+    padding: 10px;
+  }
+  
+  .lightbox-close { top: 20px; right: 30px; }
+  .lightbox-prev { top: 50%; left: 20px; transform: translateY(-50%); }
+  .lightbox-next { top: 50%; right: 20px; transform: translateY(-50%); }
+  
+  /* ================================
+     Newsletter Signup
+     ================================ */
+  .newsletter-section { border-top: 1px solid #eaeaea; }
+  
+  .newsletter-section h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+  
+  #newsletter-form input,
+  #newsletter-form button {
+    border-radius: 50px;
+    padding: 0.5rem 1.5rem;
+  }
+  
+  #newsletter-form input { padding-left: 20px; }
+  
+  /* ================================
+     Image Overlays
+     ================================ */
+  .img-wrapper {
     position: relative;
-    background: transparent;
-    color: #444;
-    opacity: 1;
-    transform: none;
-    padding-top: 6px;
+    display: inline-block;
+    margin: 8px;
+    overflow: hidden;
+    border-radius: 8px;
   }
+  
   .img-wrapper img {
-    transform: none;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
   }
-}
-
-/* Optional smaller caption text under images for a different style:
-   .img-caption-below { text-align:center; color:#555; font-size: .9rem; margin-top:6px; } */
+  
+  .img-overlay {
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    padding: 8px 10px;
+    background: rgba(0,0,0,0.62);
+    color: #fff;
+    font-size: 0.95rem;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+  }
+  
+  .img-wrapper:hover img,
+  .img-wrapper:focus-within img { transform: scale(1.04); }
+  
+  .img-wrapper:hover .img-overlay,
+  .img-wrapper:focus-within .img-overlay {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Touch devices */
+  @media (hover: none) {
+    .img-overlay {
+      position: relative;
+      background: transparent;
+      color: #444;
+      opacity: 1;
+      transform: none;
+      padding-top: 6px;
+    }
+    .img-wrapper img { transform: none; }
+  }
+  
