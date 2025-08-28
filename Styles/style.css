@@ -406,3 +406,64 @@
   border-radius: 50px;
   padding: 0.5rem 1.5rem;
 }
+
+
+.img-wrapper {
+  position: relative;
+  display: inline-block;
+  margin: 8px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.img-wrapper img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+/* overlay at bottom */
+.img-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 8px 10px;
+  background: rgba(0,0,0,0.62);
+  color: #fff;
+  font-size: 0.95rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+/* hover/keyboard focus */
+.img-wrapper:hover img,
+.img-wrapper:focus-within img {
+  transform: scale(1.04);
+}
+.img-wrapper:hover .img-overlay,
+.img-wrapper:focus-within .img-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Touch devices: show caption (no hover) but make it look nicer */
+@media (hover: none) {
+  .img-overlay {
+    position: relative;
+    background: transparent;
+    color: #444;
+    opacity: 1;
+    transform: none;
+    padding-top: 6px;
+  }
+  .img-wrapper img {
+    transform: none;
+  }
+}
+
+/* Optional smaller caption text under images for a different style:
+   .img-caption-below { text-align:center; color:#555; font-size: .9rem; margin-top:6px; } */

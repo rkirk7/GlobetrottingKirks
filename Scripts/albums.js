@@ -18,6 +18,7 @@ const ALBUMS = {
   "via-ferrata": { name: "Via Ferratas Around the World", folder: "ViaFerrata", total: 4 },
   "iceland-2019": { name: "Iceland 2019", folder: "Iceland", total: 22 },
   "south-africa-2019": { name: "South Africa 2019", folder: "19SouthAfrica", total: 35 },
+  "safari-2019": { name: "Safari to Botswana, Zambia, and Zimbabwe 2019", folder: "19Safari", total: 29 },
   "river-cruise-2018": { name: "Rhine River Cruise 2018", folder: "18RiverCruise", total: 35 }
 };
 
