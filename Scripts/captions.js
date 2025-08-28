@@ -2,33 +2,31 @@ function addCaptionsAndGalleries() {
   const container = document.getElementById("content");
   if (!container) return;
 
-  // Find all images inside #content
   const images = Array.from(container.querySelectorAll("img"));
-
-  // Group images that are siblings (simple gallery detection)
   let galleryGroup = [];
+  let galleryCount = 0;
+
   images.forEach((img, i) => {
-    // Skip if already in a figure
-    if (img.parentElement.tagName.toLowerCase() === "figure") return;
+    if (img.closest("figure")) return; // Skip if already wrapped
 
     galleryGroup.push(img);
 
-    // Check if next image is not immediately after this one or last image
     const nextImg = images[i + 1];
-    if (!nextImg || nextImg.previousElementSibling !== img) {
+    const isGalleryEnd = !nextImg || nextImg.previousElementSibling !== img;
+
+    if (isGalleryEnd) {
       if (galleryGroup.length > 1) {
-        // Wrap as gallery
+        // Multiple images = gallery
         const galleryDiv = document.createElement("div");
         galleryDiv.classList.add("gallery", "d-flex", "flex-wrap", "gap-2", "justify-content-center");
+        galleryGroup[0].parentNode.insertBefore(galleryDiv, galleryGroup[0]);
 
-        galleryGroup.forEach((gImg, index) => {
+        galleryGroup.forEach(gImg => {
           const figure = document.createElement("figure");
           figure.classList.add("figure", "m-1");
-          gImg.parentNode.insertBefore(galleryDiv, gImg);
           galleryDiv.appendChild(figure);
           figure.appendChild(gImg);
 
-          // Add figcaption if alt exists
           if (gImg.alt) {
             const caption = document.createElement("figcaption");
             caption.classList.add("figure-caption", "text-center");
@@ -36,9 +34,10 @@ function addCaptionsAndGalleries() {
             figure.appendChild(caption);
           }
 
-          // Add GLightbox attribute
-          gImg.setAttribute("data-glightbox", `title: ${gImg.alt || ""}; group: gallery${i}`);
+          gImg.setAttribute("data-glightbox", `title: ${gImg.alt || ""}; group: gallery${galleryCount}`);
         });
+
+        galleryCount++;
       } else {
         // Single image
         const singleImg = galleryGroup[0];
@@ -49,12 +48,11 @@ function addCaptionsAndGalleries() {
 
         if (singleImg.alt) {
           const caption = document.createElement("figcaption");
-          caption.classList.add("figure-caption");
+          caption.classList.add("figure-caption", "text-center");
           caption.textContent = singleImg.alt;
           figure.appendChild(caption);
         }
 
-        // GLightbox for single image
         singleImg.setAttribute("data-glightbox", `title: ${singleImg.alt || ""}`);
       }
 
@@ -62,7 +60,7 @@ function addCaptionsAndGalleries() {
     }
   });
 
-  // Initialize GLightbox (works for all images added dynamically)
+  // Init GLightbox after everything is ready
   if (window.GLightbox) {
     GLightbox({ selector: 'img[data-glightbox]' });
   }
