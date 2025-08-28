@@ -20,6 +20,7 @@ const ALBUMS = {
   "south-africa-2019": { name: "South Africa 2019", folder: "19SouthAfrica", total: 35 },
   "safari-2019": { name: "Safari to Botswana, Zambia, and Zimbabwe 2019", folder: "19Safari", total: 29 },
   "river-cruise-2018": { name: "Rhine River Cruise 2018", folder: "18RiverCruise", total: 35 },
+  "amalfi-2018": { name: "Amalfi Coast 2018", folder: "Amalfi", total: 27 },
   "tanzania-2017": { name: "Safari to Tanzania 2017", folder: "17Tanzania", total: 24 }
 
 };
