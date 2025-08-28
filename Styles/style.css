@@ -118,28 +118,6 @@
     background: #0056b3;
   }
   
-  /* ================================
-     Blog Post Images & Gallery
-     ================================ */
-  
-  /* Single images (not in gallery) */
-  .blog-post-content figure > img {
-    max-width: 600px;
-    width: auto;         /* Instead of 100% */
-    height: auto;
-    display: block;
-    margin: 1rem auto;   /* Keeps images centered */
-    border-radius: 6px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-  
-  /* On mobile, let single images go full width */
-  @media (max-width: 768px) {
-    .blog-post-content figure > img {
-      max-width: 100%;
-    }
-  }
   
   /* ================================
      Header Image
@@ -197,7 +175,7 @@
 
 /* All images in blog posts scale to container */
 .blog-post-content img {
-  max-width: 100%;       /* never exceed container width */
+  max-width: 20%;       /* never exceed container width */
   height: auto;          /* maintain aspect ratio */
   display: block;
   margin: 1rem auto;     /* center images */
@@ -208,7 +186,7 @@
 
 /* Images inside galleries */
 .blog-post-content .gallery img {
-  width: 100%;           /* fill the grid cell */
+  width: 20%;           /* fill the grid cell */
   height: auto;
   object-fit: cover;
   border-radius: 6px;
