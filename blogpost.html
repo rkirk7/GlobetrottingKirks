@@ -67,7 +67,7 @@
       let postText = await fetch(`blog-posts/${postFile}`).then(res => res.text());
       postText = postText.replace(/^---[\s\S]*?---/, '').trim();
 
-      // Extract title
+            // Extract title
 const lines = postText.split("\n");
 const firstHeadingIndex = lines.findIndex(l => l.startsWith("# "));
 const postTitle = firstHeadingIndex >= 0 ? lines[firstHeadingIndex].replace(/^# /, "") : postFile;
@@ -86,32 +86,147 @@ postText = lines.join("\n");
       // Load image metadata
       const captions = await fetch('image-data.json').then(res => res.json());
 
-    // Format galleries
-   // 5. Process all galleries
-   const galleries = tempDiv.querySelectorAll('.gallery');
-       galleries.forEach(gallery => {
-      gallery.classList.add('gallery-grid'); // apply grid CSS
+      function processGalleries(containerSelector) {
+  const container = document.querySelector(containerSelector);
+  if (!container) return;
 
-      // Process every image in this gallery
-      const imgs = gallery.querySelectorAll('img');
-      imgs.forEach(img => {
-        const filename = img.src.split('/').pop(); // get filename only
-        const captionText = captions[filename];
+  // Find all <p><img></p> pairs from Markdown
+  const paragraphs = Array.from(container.querySelectorAll("p > img")).map(img => img.parentNode);
 
-        if (captionText) {
-          // Set alt attribute
-          img.alt = captionText;
+  let gallery = [];
+  const flushGallery = () => {
+    if (gallery.length === 1) {
+      // Single image → keep it full width, but wrap with caption if alt text exists
+      const img = gallery[0].querySelector("img");
+      if (img.alt) {
+        const caption = document.createElement("div");
+        caption.className = "caption";
+        caption.textContent = img.alt;
+        gallery[0].appendChild(caption);
+      }
+    } else if (gallery.length > 1) {
+      // Multiple images → wrap in gallery div
+      const wrapper = document.createElement("div");
+      wrapper.className = "gallery";
+      gallery[0].parentNode.insertBefore(wrapper, gallery[0]);
 
-          // Add caption element below the image
-          const captionEl = document.createElement('div');
-          captionEl.className = 'caption';
-          captionEl.textContent = captionText;
-          img.insertAdjacentElement('afterend', captionEl);
+      gallery.forEach(block => {
+        const img = block.querySelector("img");
+        if (img.alt) {
+          const caption = document.createElement("div");
+          caption.className = "caption";
+          caption.textContent = img.alt;
+          block.appendChild(caption);
         }
+        wrapper.appendChild(block);
       });
-    });
+    }
+    gallery = [];
+  };
+
+  for (let i = 0; i < paragraphs.length; i++) {
+    const current = paragraphs[i];
+    const next = paragraphs[i + 1];
+
+    gallery.push(current);
+
+    if (!next || next.previousElementSibling !== current) {
+      flushGallery();
+    }
+  }
+}
+
+processGalleries(".blog-post-content");
+
+function addLightbox(containerSelector) {
+  const container = document.querySelector(containerSelector);
+  if (!container) return;
+
+  // Create lightbox overlay
+  const lightbox = document.createElement("div");
+  lightbox.id = "lightbox";
+  lightbox.innerHTML = `
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-img" />
+    <div class="lightbox-caption"></div>
+    <span class="lightbox-prev">&#10094;</span>
+    <span class="lightbox-next">&#10095;</span>
+  `;
+  document.body.appendChild(lightbox);
+
+  const lightboxImg = lightbox.querySelector(".lightbox-img");
+  const caption = lightbox.querySelector(".lightbox-caption");
+  let currentIndex = 0;
+  let images = [];
+
+  // Collect all images inside container
+  images = Array.from(container.querySelectorAll("img"));
+
+  function showImage(index) {
+    currentIndex = index;
+    const img = images[currentIndex];
+    lightboxImg.src = img.src;
+    caption.textContent = img.alt || "";
+    lightbox.style.display = "flex";
+  }
+
+  images.forEach((img, index) => {
+    img.addEventListener("click", () => showImage(index));
+  });
+
+  // Close button
+  lightbox.querySelector(".lightbox-close").addEventListener("click", () => {
+    lightbox.style.display = "none";
+  });
+
+  // Navigation
+  lightbox.querySelector(".lightbox-prev").addEventListener("click", () => {
+    showImage((currentIndex - 1 + images.length) % images.length);
+  });
+
+  lightbox.querySelector(".lightbox-next").addEventListener("click", () => {
+    showImage((currentIndex + 1) % images.length);
+  });
+
+  // Close on overlay click
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) lightbox.style.display = "none";
+  });
+}
+
+addLightbox(".blog-post-content");
+
+
+
+
+
+
+//     // Format galleries
+//    // 5. Process all galleries
+//    const galleries = tempDiv.querySelectorAll('.gallery');
+//        galleries.forEach(gallery => {
+//       gallery.classList.add('gallery-grid'); // apply grid CSS
+
+//       // Process every image in this gallery
+//       const imgs = gallery.querySelectorAll('img');
+//       imgs.forEach(img => {
+//         const filename = img.src.split('/').pop(); // get filename only
+//         const captionText = captions[filename];
+
+//         if (captionText) {
+//           // Set alt attribute
+//           img.alt = captionText;
+
+//           // Add caption element below the image
+//           const captionEl = document.createElement('div');
+//           captionEl.className = 'caption';
+//           captionEl.textContent = captionText;
+//           img.insertAdjacentElement('afterend', captionEl);
+//         }
+//       });
+//     });
   
-//       // --- IMAGE & GALLERY HANDLING ---
+// //       // --- IMAGE & GALLERY HANDLING ---
 //       // --- IMAGE & GALLERY HANDLING ---
 // const images = Array.from(tempDiv.querySelectorAll('img'));
 // const figures = [];
