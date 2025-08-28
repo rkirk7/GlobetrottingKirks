@@ -11,7 +11,7 @@
 
   <style>
     body { position: relative; }
-    p { size: 1.5em; }
+    p { font-size: 1.5em; }
     #toc {
       position: fixed; top: 80px; right: 20px;
       max-width: 250px; background: #fff;
@@ -88,8 +88,8 @@ postText = lines.join("\n");
 
     // Format galleries
    // 5. Process all galleries
-   const galleries = container.querySelectorAll('.gallery');
-    galleries.forEach(gallery => {
+   const galleries = tempDiv.querySelectorAll('.gallery');
+       galleries.forEach(gallery => {
       gallery.classList.add('gallery-grid'); // apply grid CSS
 
       // Process every image in this gallery
