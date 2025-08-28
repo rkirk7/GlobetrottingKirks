@@ -24,6 +24,14 @@
     .album-img:hover {
       transform: scale(1.02);
     }
+
+    .container p {
+  text-align: center;
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
   </style>
 </head>
 <body>
@@ -115,5 +123,41 @@ col.appendChild(link);
 
     }
   </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", async () => {
+    try {
+      // Load the JSON file
+      const response = await fetch("image-data.json");
+      const captions = await response.json();
+  
+      // Select all images inside the container
+      document.querySelectorAll(".container img").forEach(img => {
+        const src = img.getAttribute("src");
+        const filename = src.split("/").pop(); // Extract filename
+        const caption = captions[filename];
+  
+        if (caption) {
+          // Update alt text
+          img.alt = caption;
+  
+          // Replace the <p> above image with the caption
+          const pTag = img.previousElementSibling;
+          if (pTag && pTag.tagName === "P") {
+            pTag.textContent = caption;
+          } else {
+            // If no <p> exists, create one
+            const newP = document.createElement("p");
+            newP.textContent = caption;
+            img.parentNode.insertBefore(newP, img);
+          }
+        }
+      });
+    } catch (err) {
+      console.error("Error loading captions:", err);
+    }
+  });
+  </script>
+  
 </body>
 </html>
