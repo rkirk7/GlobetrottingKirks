@@ -80,232 +80,91 @@ if (firstHeadingIndex >= 0) {
 postText = lines.join("\n");
 
       // Parse markdown
-      const tempDiv = document.createElement('div');
-      tempDiv.innerHTML = marked.parse(postText);
+// Parse markdown into a detached div
+const tempDiv = document.createElement('div');
+tempDiv.innerHTML = marked.parse(postText);
 
-      // Load image metadata
-      const captions = await fetch('image-data.json').then(res => res.json());
+// Load image metadata (filename -> caption)
+const captions = await fetch('image-data.json').then(r => r.json()).catch(() => ({}));
 
-      function processGalleries(containerSelector) {
-  const container = document.querySelector(containerSelector);
-  if (!container) return;
+// Apply captions to <img alt> using filename
+tempDiv.querySelectorAll('img').forEach(img => {
+  const src = img.getAttribute('src') || '';
+  const filename = src.split('/').pop();
+  const cap = captions[filename];
+  if (cap && !img.alt) img.alt = cap;
+});
 
-  // Find all <p><img></p> pairs from Markdown
-  const paragraphs = Array.from(container.querySelectorAll("p > img")).map(img => img.parentNode);
+// Group consecutive <p><img></p> into .gallery and add captions
+function processGalleries(rootEl) {
+  const children = Array.from(rootEl.children);
+  let run = [];
 
-  let gallery = [];
-  const flushGallery = () => {
-    if (gallery.length === 1) {
-      // Single image → keep it full width, but wrap with caption if alt text exists
-      const img = gallery[0].querySelector("img");
-      if (img.alt) {
-        const caption = document.createElement("div");
-        caption.className = "caption";
-        caption.textContent = img.alt;
-        gallery[0].appendChild(caption);
-      }
-    } else if (gallery.length > 1) {
-      // Multiple images → wrap in gallery div
-      const wrapper = document.createElement("div");
-      wrapper.className = "gallery";
-      gallery[0].parentNode.insertBefore(wrapper, gallery[0]);
-
-      gallery.forEach(block => {
-        const img = block.querySelector("img");
-        if (img.alt) {
-          const caption = document.createElement("div");
-          caption.className = "caption";
-          caption.textContent = img.alt;
-          block.appendChild(caption);
+  const flush = () => {
+    if (run.length === 1) {
+      const img = run[0].querySelector('img');
+      if (img && img.alt) {
+        let cap = run[0].querySelector('.caption');
+        if (!cap) {
+          cap = document.createElement('div');
+          cap.className = 'caption';
+          cap.textContent = img.alt;
+          run[0].appendChild(cap);
         }
-        wrapper.appendChild(block);
+      }
+    } else if (run.length > 1) {
+      const wrap = document.createElement('div');
+      wrap.className = 'gallery';
+      run[0].parentNode.insertBefore(wrap, run[0]);
+      run.forEach(p => {
+        const img = p.querySelector('img');
+        if (img && img.alt) {
+          let cap = p.querySelector('.caption');
+          if (!cap) {
+            cap = document.createElement('div');
+            cap.className = 'caption';
+            cap.textContent = img.alt;
+            p.appendChild(cap);
+          }
+        }
+        wrap.appendChild(p);
       });
     }
-    gallery = [];
+    run = [];
   };
 
-  for (let i = 0; i < paragraphs.length; i++) {
-    const current = paragraphs[i];
-    const next = paragraphs[i + 1];
+  children.forEach((el, i) => {
+    const isImgPara = el.tagName === 'P' && el.querySelector('img') && el.childElementCount === 1;
+    if (isImgPara) run.push(el);
 
-    gallery.push(current);
-
-    if (!next || next.previousElementSibling !== current) {
-      flushGallery();
-    }
-  }
+    const next = children[i + 1];
+    const nextIsImgPara = next && next.tagName === 'P' && next.querySelector('img') && next.childElementCount === 1;
+    if (!next || !nextIsImgPara) flush();
+  });
 }
+processGalleries(tempDiv);
 
-processGalleries(".blog-post-content");
+// Put processed HTML into the page (now the nodes exist in the DOM)
+const postContentEl = document.getElementById('post-content');
+postContentEl.innerHTML = '';
+postContentEl.appendChild(tempDiv);
 
-function addLightbox(containerSelector) {
-  const container = document.querySelector(containerSelector);
-  if (!container) return;
-
-  // Create lightbox overlay
-  const lightbox = document.createElement("div");
-  lightbox.id = "lightbox";
-  lightbox.innerHTML = `
-    <span class="lightbox-close">&times;</span>
-    <img class="lightbox-img" />
-    <div class="lightbox-caption"></div>
-    <span class="lightbox-prev">&#10094;</span>
-    <span class="lightbox-next">&#10095;</span>
-  `;
-  document.body.appendChild(lightbox);
-
-  const lightboxImg = lightbox.querySelector(".lightbox-img");
-  const caption = lightbox.querySelector(".lightbox-caption");
-  let currentIndex = 0;
-  let images = [];
-
-  // Collect all images inside container
-  images = Array.from(container.querySelectorAll("img"));
-
-  function showImage(index) {
-    currentIndex = index;
-    const img = images[currentIndex];
-    lightboxImg.src = img.src;
-    caption.textContent = img.alt || "";
-    lightbox.style.display = "flex";
-  }
-
-  images.forEach((img, index) => {
-    img.addEventListener("click", () => showImage(index));
-  });
-
-  // Close button
-  lightbox.querySelector(".lightbox-close").addEventListener("click", () => {
-    lightbox.style.display = "none";
-  });
-
-  // Navigation
-  lightbox.querySelector(".lightbox-prev").addEventListener("click", () => {
-    showImage((currentIndex - 1 + images.length) % images.length);
-  });
-
-  lightbox.querySelector(".lightbox-next").addEventListener("click", () => {
-    showImage((currentIndex + 1) % images.length);
-  });
-
-  // Close on overlay click
-  lightbox.addEventListener("click", (e) => {
-    if (e.target === lightbox) lightbox.style.display = "none";
+// Build TOC from the content now in the DOM
+const tocList = document.getElementById('toc-list');
+const headings = postContentEl.querySelectorAll('h1, h2, h3');
+if (headings.length > 0) {
+  document.getElementById('toc').classList.remove('d-none');
+  headings.forEach((heading, i) => {
+    const id = `heading-${i}`;
+    heading.id = id;
+    const li = document.createElement('li');
+    li.innerHTML = `<a href="#${id}">${heading.textContent}</a>`;
+    tocList.appendChild(li);
   });
 }
 
-addLightbox(".blog-post-content");
-
-
-
-
-
-
-//     // Format galleries
-//    // 5. Process all galleries
-//    const galleries = tempDiv.querySelectorAll('.gallery');
-//        galleries.forEach(gallery => {
-//       gallery.classList.add('gallery-grid'); // apply grid CSS
-
-//       // Process every image in this gallery
-//       const imgs = gallery.querySelectorAll('img');
-//       imgs.forEach(img => {
-//         const filename = img.src.split('/').pop(); // get filename only
-//         const captionText = captions[filename];
-
-//         if (captionText) {
-//           // Set alt attribute
-//           img.alt = captionText;
-
-//           // Add caption element below the image
-//           const captionEl = document.createElement('div');
-//           captionEl.className = 'caption';
-//           captionEl.textContent = captionText;
-//           img.insertAdjacentElement('afterend', captionEl);
-//         }
-//       });
-//     });
-  
-// //       // --- IMAGE & GALLERY HANDLING ---
-//       // --- IMAGE & GALLERY HANDLING ---
-// const images = Array.from(tempDiv.querySelectorAll('img'));
-// const figures = [];
-
-// // Wrap each image in a figure and add caption if needed
-// images.forEach((img) => {
-//   const filename = img.getAttribute('src').split('/').pop();
-//   const caption = (imageMeta && imageMeta[filename]) || "";
-//   img.setAttribute('alt', caption || filename);
-
-//   // Wrap img in figure if not already
-//   if (!img.closest('figure')) {
-//     const figure = document.createElement('figure');
-//     img.parentNode.insertBefore(figure, img);
-//     figure.appendChild(img);
-
-//     if (caption) {
-//       const figcap = document.createElement('figcaption');
-//       figcap.textContent = caption;
-//       figure.appendChild(figcap);
-//     }
-//   }
-// });
-
-// --- Wrap consecutive figures into galleries ---
-// let currentGallery = [];
-// const allFigures = Array.from(tempDiv.querySelectorAll('figure'));
-
-// allFigures.forEach((figure, i) => {
-//   const next = allFigures[i + 1];
-
-//   currentGallery.push(figure);
-
-//   // If next isn't directly after this one or no next -> finalize group
-//   if (!next || next.previousElementSibling !== figure) {
-//     if (currentGallery.length > 1) {
-//       // Wrap group in gallery
-//       const galleryWrapper = document.createElement('div');
-//       galleryWrapper.classList.add('gallery');
-//       currentGallery[0].parentNode.insertBefore(galleryWrapper, currentGallery[0]);
-//       currentGallery.forEach(fig => galleryWrapper.appendChild(fig));
-//     }
-//     currentGallery = [];
-//   }
-// });
-
-
-    previewHtml = tempDiv.innerHTML;
-  
-
-//   // Wrap all images in one gallery div
-//   if (!galleryWrapper) {
-//     galleryWrapper = document.createElement('div');
-//     galleryWrapper.classList.add('gallery');
-//     figure.parentNode.insertBefore(galleryWrapper, figure);
-//   }
-//   galleryWrapper.appendChild(figure);
-
-  // Add responsive class
-//   img.style.maxWidth = "100%";
-//   img.style.height = "auto";
-//   img.style.display = "block";
-//   img.style.margin = "0 auto";
-// });
-
-
-      // --- TOC ---
-      const tocList = document.getElementById('toc-list');
-      const headings = tempDiv.querySelectorAll('h1, h2, h3');
-      if (headings.length > 0) {
-        document.getElementById('toc').classList.remove('d-none');
-        headings.forEach((heading, i) => {
-          const id = `heading-${i}`;
-          heading.id = id;
-          const li = document.createElement('li');
-          li.innerHTML = `<a href="#${id}">${heading.textContent}</a>`;
-          tocList.appendChild(li);
-        });
-      }
+// Lightbox AFTER content is in the DOM
+addLightbox('#post-content');
 
       // Insert final HTML
       document.getElementById('post-content').innerHTML = tempDiv.innerHTML;
@@ -325,7 +184,7 @@ addLightbox(".blog-post-content");
     }
 
     document.addEventListener("DOMContentLoaded", () => {
-      loadPost();
+      loadPost(); 
       document.getElementById("shareBtn").addEventListener("click", sharePost);
     });
   </script>

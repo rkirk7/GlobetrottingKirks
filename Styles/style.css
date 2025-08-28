@@ -175,7 +175,7 @@
 
 /* All images in blog posts scale to container */
 .blog-post-content img {
-  max-width: 20%;       /* never exceed container width */
+  max-width: 100%;       /* never exceed container width */
   height: auto;          /* maintain aspect ratio */
   display: block;
   margin: 1rem auto;     /* center images */
@@ -186,7 +186,7 @@
 
 /* Images inside galleries */
 .blog-post-content .gallery img {
-  width: 20%;           /* fill the grid cell */
+  width: 100%;           /* fill the grid cell */
   height: auto;
   object-fit: cover;
   border-radius: 6px;
@@ -299,3 +299,27 @@
 .lightbox-close { top: 20px; right: 30px; }
 .lightbox-prev { top: 50%; left: 20px; transform: translateY(-50%); }
 .lightbox-next { top: 50%; right: 20px; transform: translateY(-50%); }
+
+/* Constrain the card so 100% images aren’t “huge” on desktop */
+#post-container { max-width: 960px; margin: 0 auto; }
+
+/* All post images: scale responsibly */
+.blog-post-content img {
+  width: 100%;
+  max-width: 900px;      /* cap single-image width on large screens */
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+/* Galleries: images should fill their grid cells */
+.blog-post-content .gallery img {
+  width: 100%;
+  max-width: none;       /* don’t cap inside grid */
+  height: auto;
+}
+
+/* (Optional) tighten captions */
+.blog-post-content .caption { font-size: 0.9rem; color: #666; text-align: center; margin-top: 4px; }
