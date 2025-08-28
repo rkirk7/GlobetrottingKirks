@@ -130,21 +130,31 @@
 
 <script>
   function loadMailchimpPopup() {
-    // Only load the script if it hasn't been added yet
     if (!document.getElementById('mcjs')) {
       var mcjs = document.createElement('script');
       mcjs.id = 'mcjs';
       mcjs.async = true;
       mcjs.src = 'https://chimpstatic.com/mcjs-connected/js/users/9e4e0ffaef14115fa941069c0/b5a76e1c6b27b9c1b8c9ea14f.js';
+      
+      // When the script loads, try to open the popup
+      mcjs.onload = function() {
+        // window.MC and window.dojo are Mailchimp internal objects
+        if (typeof window.MC !== 'undefined' && typeof window.MC.showPopup !== 'undefined') {
+          window.MC.showPopup();  // force popup to appear
+        } else {
+          console.log('Mailchimp script loaded, but popup API not ready yet.');
+        }
+      };
+  
       document.head.appendChild(mcjs);
+    } else {
+      // Script already loaded, try to trigger popup directly
+      if (typeof window.MC !== 'undefined' && typeof window.MC.showPopup !== 'undefined') {
+        window.MC.showPopup();
+      }
     }
   }
-  
-  // Load on initial page load
-  document.addEventListener('DOMContentLoaded', () => {
-    loadMailchimpPopup();
-    loadPage('home.html');
-  });
   </script>
+  
   </body>
 </html>
