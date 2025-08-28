@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Globetrotting Kirks</title>
 
-    <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/9e4e0ffaef14115fa941069c0/b5a76e1c6b27b9c1b8c9ea14f.js");</script>
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -116,6 +115,9 @@
     <div id="content" class="container mt-5 pt-5"></div>
 
     <!-- Scripts -->
+
+
+    
         <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
@@ -125,5 +127,24 @@
     <script>
       loadPage('home.html');
     </script>
+
+<script>
+  function loadMailchimpPopup() {
+    // Only load the script if it hasn't been added yet
+    if (!document.getElementById('mcjs')) {
+      var mcjs = document.createElement('script');
+      mcjs.id = 'mcjs';
+      mcjs.async = true;
+      mcjs.src = 'https://chimpstatic.com/mcjs-connected/js/users/9e4e0ffaef14115fa941069c0/b5a76e1c6b27b9c1b8c9ea14f.js';
+      document.head.appendChild(mcjs);
+    }
+  }
+  
+  // Load on initial page load
+  document.addEventListener('DOMContentLoaded', () => {
+    loadMailchimpPopup();
+    loadPage('home.html');
+  });
+  </script>
   </body>
 </html>

@@ -10,4 +10,6 @@ if (page === 'albums.html' && typeof initAlbums === 'function') {
 }
 
   if (page === 'blog.html') initBlog();
+
+  loadMailchimpPopup();
 }
