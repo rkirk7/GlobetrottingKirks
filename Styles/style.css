@@ -194,6 +194,21 @@
   transition: transform 0.2s;
 }
 
+.blog-post-content .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
+.blog-post-content .gallery .caption {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+
+
 .blog-post-content .gallery img:hover {
   transform: scale(1.05);
 }

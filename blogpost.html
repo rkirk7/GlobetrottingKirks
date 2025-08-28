@@ -102,46 +102,48 @@ function processGalleries(rootEl) {
 
   const flush = () => {
     if (run.length === 1) {
+      // Single image stays in normal flow
       const img = run[0].querySelector('img');
       if (img && img.alt) {
-        let cap = run[0].querySelector('.caption');
-        if (!cap) {
-          cap = document.createElement('div');
-          cap.className = 'caption';
-          cap.textContent = img.alt;
-          run[0].appendChild(cap);
-        }
+        const cap = document.createElement('div');
+        cap.className = 'caption';
+        cap.textContent = img.alt;
+        run[0].appendChild(cap);
       }
     } else if (run.length > 1) {
+      // Multiple images → wrap directly in gallery div
       const wrap = document.createElement('div');
       wrap.className = 'gallery';
       run[0].parentNode.insertBefore(wrap, run[0]);
+
       run.forEach(p => {
         const img = p.querySelector('img');
-        if (img && img.alt) {
-          let cap = p.querySelector('.caption');
-          if (!cap) {
-            cap = document.createElement('div');
+        if (img) {
+          // move image directly under gallery
+          wrap.appendChild(img);
+          if (img.alt) {
+            const cap = document.createElement('div');
             cap.className = 'caption';
             cap.textContent = img.alt;
-            p.appendChild(cap);
+            wrap.appendChild(cap);
           }
         }
-        wrap.appendChild(p);
+        p.remove(); // remove original paragraph
       });
     }
     run = [];
   };
 
   children.forEach((el, i) => {
-    const isImgPara = el.tagName === 'P' && el.querySelector('img') && el.childElementCount === 1;
+    const isImgPara = el.tagName === 'P' && el.querySelector('img');
     if (isImgPara) run.push(el);
 
     const next = children[i + 1];
-    const nextIsImgPara = next && next.tagName === 'P' && next.querySelector('img') && next.childElementCount === 1;
+    const nextIsImgPara = next && next.tagName === 'P' && next.querySelector('img');
     if (!next || !nextIsImgPara) flush();
   });
 }
+
 processGalleries(tempDiv);
 
 // Put processed HTML into the page (now the nodes exist in the DOM)
