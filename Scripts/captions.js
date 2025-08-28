@@ -4,26 +4,27 @@ function addCaptionsAndGalleries() {
 
   const images = Array.from(container.querySelectorAll("img"));
   let galleryGroup = [];
-  let galleryCount = 0;
 
   images.forEach((img, i) => {
-    if (img.closest("figure")) return; // Skip if already wrapped
+    // Skip if already wrapped
+    if (img.closest("figure") || img.closest(".gallery")) return;
 
     galleryGroup.push(img);
 
     const nextImg = images[i + 1];
-    const isGalleryEnd = !nextImg || nextImg.previousElementSibling !== img;
+    const nextIsAdjacent = nextImg && nextImg.previousElementSibling === img;
 
-    if (isGalleryEnd) {
+    // End of a group if next image is not adjacent or last image
+    if (!nextIsAdjacent) {
       if (galleryGroup.length > 1) {
-        // Multiple images = gallery
+        // Wrap group in gallery
         const galleryDiv = document.createElement("div");
         galleryDiv.classList.add("gallery", "d-flex", "flex-wrap", "gap-2", "justify-content-center");
-        galleryGroup[0].parentNode.insertBefore(galleryDiv, galleryGroup[0]);
 
-        galleryGroup.forEach(gImg => {
+        galleryGroup.forEach((gImg) => {
           const figure = document.createElement("figure");
           figure.classList.add("figure", "m-1");
+          gImg.parentNode.insertBefore(galleryDiv, gImg);
           galleryDiv.appendChild(figure);
           figure.appendChild(gImg);
 
@@ -34,10 +35,9 @@ function addCaptionsAndGalleries() {
             figure.appendChild(caption);
           }
 
-          gImg.setAttribute("data-glightbox", `title: ${gImg.alt || ""}; group: gallery${galleryCount}`);
+          // GLightbox grouping
+          gImg.setAttribute("data-glightbox", `title: ${gImg.alt || ""}; group: gallery${i}`);
         });
-
-        galleryCount++;
       } else {
         // Single image
         const singleImg = galleryGroup[0];
@@ -48,7 +48,7 @@ function addCaptionsAndGalleries() {
 
         if (singleImg.alt) {
           const caption = document.createElement("figcaption");
-          caption.classList.add("figure-caption", "text-center");
+          caption.classList.add("figure-caption");
           caption.textContent = singleImg.alt;
           figure.appendChild(caption);
         }
@@ -60,7 +60,7 @@ function addCaptionsAndGalleries() {
     }
   });
 
-  // Init GLightbox after everything is ready
+  // Re-init GLightbox after dynamic content loads
   if (window.GLightbox) {
     GLightbox({ selector: 'img[data-glightbox]' });
   }
