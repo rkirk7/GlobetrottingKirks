@@ -19,7 +19,9 @@ const ALBUMS = {
   "iceland-2019": { name: "Iceland 2019", folder: "Iceland", total: 22 },
   "south-africa-2019": { name: "South Africa 2019", folder: "19SouthAfrica", total: 35 },
   "safari-2019": { name: "Safari to Botswana, Zambia, and Zimbabwe 2019", folder: "19Safari", total: 29 },
-  "river-cruise-2018": { name: "Rhine River Cruise 2018", folder: "18RiverCruise", total: 35 }
+  "river-cruise-2018": { name: "Rhine River Cruise 2018", folder: "18RiverCruise", total: 35 },
+  "tanzania-2017": { name: "Safari to Tanzania 2017", folder: "17Tanzania", total: 24 }
+
 };
 
 // Build the album cards on albums.html (list page)
