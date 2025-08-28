@@ -140,7 +140,7 @@
   position: relative;
   width: 100%;
   min-height: 300px;       /* adjust height as needed */
-  background: url('./Images/hero-image.jpg') center center / cover no-repeat;
+  background: url('../Images/hero-image.jpg') center center / cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -173,7 +173,7 @@
    Blog Post Images & Gallery
    ================================ */
 
-   .container {
+   .blog-container {
     max-width: 800px;
     margin: 0 auto;
     padding: 0 15px;
@@ -345,7 +345,6 @@
 
 /* (Optional) tighten captions */
 .blog-post-content .caption { font-size: 0.9rem; color: #666; text-align: center; margin-top: 4px; }
-
 
 
 /* Make sure images never overflow */
