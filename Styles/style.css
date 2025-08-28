@@ -173,16 +173,23 @@
    Blog Post Images & Gallery
    ================================ */
 
+   .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
 /* All images in blog posts scale to container */
 .blog-post-content img {
-  max-width: 100%;       /* never exceed container width */
-  height: auto;          /* maintain aspect ratio */
-  display: block;
-  margin: 1rem auto;     /* center images */
-  border-radius: 6px;
-  object-fit: cover;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  max-width: 100%;      /* Make images fit inside the container width */
+  height: auto;         /* Keep aspect ratio */
+  display: block;       /* Removes inline spacing issues */
+  margin: 20px auto;    /* Centers images and adds space around them */
+  border-radius: 6px;   /* Optional: rounded corners */
+  max-height: 500px;    /* Optional: limit super tall images */
+  object-fit: contain;  /* Prevent weird cropping */
 }
+
 
 /* Images inside galleries */
 .blog-post-content .gallery img {
