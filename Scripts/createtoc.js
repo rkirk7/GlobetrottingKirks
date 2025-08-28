@@ -42,8 +42,13 @@ function createTOCAndReturnLinks() {
   
     toc.appendChild(ul);
   
-    const topHeading = container.querySelector("h1");
-    topHeading.insertAdjacentElement("afterend", toc);
+    const topHeading = document.querySelector("#content h1");
+    if (topHeading) {
+      topHeading.insertAdjacentElement("afterend", toc);
+    } else {
+      console.warn("No <h1> found to insert TOC after.");
+    }
+    
   
     const topAnchor = document.createElement("a");
     topAnchor.id = "top";
