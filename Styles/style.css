@@ -384,3 +384,25 @@
   font-size: 0.85rem;
   color: #666;
 }
+
+
+/*newsletter signup*/
+
+.newsletter-section {
+  border-top: 1px solid #eaeaea;
+}
+
+.newsletter-section h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+#newsletter-form input {
+  border-radius: 50px;
+  padding-left: 20px;
+}
+
+#newsletter-form button {
+  border-radius: 50px;
+  padding: 0.5rem 1.5rem;
+}
