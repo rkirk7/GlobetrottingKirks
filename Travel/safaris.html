@@ -1,3 +1,52 @@
+<style>
+  /* Add this to your style.css or inside a <style> tag */
+#toc {
+  position: fixed;
+  top: 100px; /* distance from top of window */
+  right: 20px; /* distance from right edge */
+  width: 200px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  max-height: 80vh;
+  overflow-y: auto;
+  font-size: 0.9rem;
+  z-index: 1000;
+}
+
+#toc h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+#toc ul li {
+  margin-bottom: 0.5rem;
+}
+
+#toc a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+#toc a:hover {
+  text-decoration: underline;
+}
+
+/* Optional: add some space for mobile so it doesn't cover content */
+@media (max-width: 992px) {
+  #toc {
+    position: static;
+    width: auto;
+    max-height: none;
+    margin-bottom: 2rem;
+  }
+}
+
+</style>
+
 <div class="container my-5">
   <h1 class="text-center mb-5">Safari</h1>
 
@@ -977,3 +1026,60 @@
           </div>
         </div>
       </div>
+
+      <script>
+        function createTOCAndReturnLinks() {
+          const container = document.querySelector(".container");
+          if (!container) return;
+        
+          // Find all H2 elements
+          const headers = container.querySelectorAll("h2");
+        
+          // Create TOC container
+          const toc = document.createElement("nav");
+          toc.id = "toc";
+          toc.innerHTML = "<h3>Contents</h3>";
+          const ul = document.createElement("ul");
+          ul.style.listStyleType = "none";
+          ul.style.paddingLeft = "0";
+        
+          headers.forEach((h2, i) => {
+            if (!h2.id) h2.id = `section-${i + 1}`;
+            const li = document.createElement("li");
+            li.style.marginBottom = "0.5rem";
+            const a = document.createElement("a");
+            a.href = `#${h2.id}`;
+            a.textContent = h2.textContent;
+            a.style.textDecoration = "none";
+            a.style.color = "#007bff";
+            a.onmouseover = () => a.style.textDecoration = "underline";
+            a.onmouseout = () => a.style.textDecoration = "none";
+            li.appendChild(a);
+            ul.appendChild(li);
+        
+            const returnLink = document.createElement("p");
+            returnLink.style.textAlign = "right";
+            returnLink.innerHTML = `<a href="#top" style="text-decoration:none;color:#007bff;">Return to Top ↑</a>`;
+        
+            // Find end of section
+            let sectionEnd = h2.nextElementSibling;
+            while (sectionEnd && sectionEnd.tagName.toLowerCase() !== "h2") {
+              if (!sectionEnd.nextElementSibling) break;
+              sectionEnd = sectionEnd.nextElementSibling;
+            }
+            sectionEnd?.insertAdjacentElement("afterend", returnLink);
+          });
+        
+          toc.appendChild(ul);
+        
+          const topHeading = container.querySelector("h1");
+          topHeading.insertAdjacentElement("afterend", toc);
+        
+          const topAnchor = document.createElement("a");
+          topAnchor.id = "top";
+          container.insertBefore(topAnchor, container.firstChild);
+        }
+        
+        window.addEventListener("DOMContentLoaded", createTOCAndReturnLinks);
+        </script>
+        
