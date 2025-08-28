@@ -345,3 +345,43 @@
 
 /* (Optional) tighten captions */
 .blog-post-content .caption { font-size: 0.9rem; color: #666; text-align: center; margin-top: 4px; }
+
+
+
+/* Make sure images never overflow */
+.blog-post-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Single image captions */
+.caption {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 4px;
+}
+
+/* Gallery layout for multiple images */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.gallery .caption {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #666;
+}
