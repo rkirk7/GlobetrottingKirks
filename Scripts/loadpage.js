@@ -4,6 +4,8 @@ async function loadPage(page) {
   const element = document.getElementById("content");
   element.innerHTML = content;
 
+  addCaptionsAndGalleries();
+
 // inside the loadPage(page) success handler, AFTER content.innerHTML = html
 if (page === 'albums.html' && typeof initAlbums === 'function') {
   initAlbums();
@@ -13,4 +15,5 @@ if (page === 'albums.html' && typeof initAlbums === 'function') {
 
 
   loadMailchimpPopup();
+
 }

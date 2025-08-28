@@ -301,3 +301,17 @@
     .img-wrapper img { transform: none; }
   }
   
+  .figure {
+    margin: 1rem 0;
+  }
+  
+  .figure img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .figure-caption {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 0.25rem;
+  }

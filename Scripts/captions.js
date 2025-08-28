@@ -1,61 +1,69 @@
+function addCaptionsAndGalleries() {
+  const container = document.getElementById("content");
+  if (!container) return;
 
-async function fetchImageData() {
-  const response = await fetch('../image-data.json');
-  return response.json();  // expect format: { "Churchill29.jpeg": "This bear watched our plane fly by", ... }
-}
+  // Find all images inside #content
+  const images = Array.from(container.querySelectorAll("img"));
 
-async function addCaptionToImage(img, imageData) {
-  const filename = img.getAttribute('src').split('/').pop();
-  const captionText = imageData[filename];
+  // Group images that are siblings (simple gallery detection)
+  let galleryGroup = [];
+  images.forEach((img, i) => {
+    // Skip if already in a figure
+    if (img.parentElement.tagName.toLowerCase() === "figure") return;
 
-  if (!captionText) return;
+    galleryGroup.push(img);
 
-  // Check if image is already inside a <figure>
-  let figure = img.closest('figure');
-  if (!figure) {
-    // Wrap the image in a <figure>
-    figure = document.createElement('figure');
-    figure.classList.add('img-wrapper'); // keeps your overlay effect if you use it
-    img.parentNode.insertBefore(figure, img);
-    figure.appendChild(img);
-  }
+    // Check if next image is not immediately after this one or last image
+    const nextImg = images[i + 1];
+    if (!nextImg || nextImg.previousElementSibling !== img) {
+      if (galleryGroup.length > 1) {
+        // Wrap as gallery
+        const galleryDiv = document.createElement("div");
+        galleryDiv.classList.add("gallery", "d-flex", "flex-wrap", "gap-2", "justify-content-center");
 
-  // Prevent adding duplicate <figcaption>
-  if (!figure.querySelector('figcaption')) {
-    const figcaption = document.createElement('figcaption');
-    figcaption.classList.add('caption');
-    figcaption.innerText = captionText;
-    figure.appendChild(figcaption);
-  }
-}
+        galleryGroup.forEach((gImg, index) => {
+          const figure = document.createElement("figure");
+          figure.classList.add("figure", "m-1");
+          gImg.parentNode.insertBefore(galleryDiv, gImg);
+          galleryDiv.appendChild(figure);
+          figure.appendChild(gImg);
 
-async function setupGalleryCaptions() {
-  const imageData = await fetchImageData();
-
-  const blogContainer = document.querySelector('.blog-post-content');
-  if (!blogContainer) return;
-
-  // Add captions to all existing images
-  blogContainer.querySelectorAll('img').forEach(img => addCaptionToImage(img, imageData));
-
-  // Observe dynamically added images (SPA or async loads)
-  const observer = new MutationObserver(mutations => {
-    mutations.forEach(mutation => {
-      mutation.addedNodes.forEach(node => {
-        if (node.nodeType === 1) { // Element node
-          if (node.tagName === 'IMG') {
-            addCaptionToImage(node, imageData);
-          } else {
-            node.querySelectorAll && node.querySelectorAll('img').forEach(img => addCaptionToImage(img, imageData));
+          // Add figcaption if alt exists
+          if (gImg.alt) {
+            const caption = document.createElement("figcaption");
+            caption.classList.add("figure-caption", "text-center");
+            caption.textContent = gImg.alt;
+            figure.appendChild(caption);
           }
+
+          // Add GLightbox attribute
+          gImg.setAttribute("data-glightbox", `title: ${gImg.alt || ""}; group: gallery${i}`);
+        });
+      } else {
+        // Single image
+        const singleImg = galleryGroup[0];
+        const figure = document.createElement("figure");
+        figure.classList.add("figure", "text-center");
+        singleImg.parentNode.insertBefore(figure, singleImg);
+        figure.appendChild(singleImg);
+
+        if (singleImg.alt) {
+          const caption = document.createElement("figcaption");
+          caption.classList.add("figure-caption");
+          caption.textContent = singleImg.alt;
+          figure.appendChild(caption);
         }
-      });
-    });
+
+        // GLightbox for single image
+        singleImg.setAttribute("data-glightbox", `title: ${singleImg.alt || ""}`);
+      }
+
+      galleryGroup = [];
+    }
   });
 
-  observer.observe(blogContainer, { childList: true, subtree: true });
+  // Initialize GLightbox (works for all images added dynamically)
+  if (window.GLightbox) {
+    GLightbox({ selector: 'img[data-glightbox]' });
+  }
 }
-
-// Run on page load
-document.addEventListener('DOMContentLoaded', setupGalleryCaptions);
-
