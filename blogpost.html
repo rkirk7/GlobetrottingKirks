@@ -34,6 +34,51 @@
   border-radius: 6px; /* Optional: match card rounding */
 }
 
+/* Gallery grid layout */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin: 20px 0;
+}
+
+/* Gallery images */
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  display: block;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
+}
+
+/* Captions under each image */
+.gallery .caption {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 6px;
+}
+
+/* Keep captions aligned properly */
+.gallery > * {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Optional: center single images nicely */
+.blog-post-content img:only-child {
+  display: block;
+  margin: 0 auto;
+}
+
+
   </style>
 </head>
 <body class="bg-light">
@@ -109,27 +154,36 @@ function processGalleries(rootEl) {
       // Single image stays in normal flow
       const img = run[0].querySelector('img');
       if (img && img.alt) {
+        const wrap = document.createElement('div');
+        wrap.className = 'gallery-item';
+        img.parentNode.insertBefore(wrap, img);
+        wrap.appendChild(img);
+
         const cap = document.createElement('div');
         cap.className = 'caption';
         cap.textContent = img.alt;
-        run[0].appendChild(cap);
+        wrap.appendChild(cap);
       }
     } else if (run.length > 1) {
-      // Multiple images → wrap directly in gallery div
-      const wrap = document.createElement('div');
-      wrap.className = 'gallery';
-      run[0].parentNode.insertBefore(wrap, run[0]);
+      // Multiple images → wrap in gallery
+      const wrapGallery = document.createElement('div');
+      wrapGallery.className = 'gallery';
+      run[0].parentNode.insertBefore(wrapGallery, run[0]);
 
       run.forEach(p => {
         const img = p.querySelector('img');
         if (img) {
-          // move image directly under gallery
-          wrap.appendChild(img);
+          const wrapItem = document.createElement('div');
+          wrapItem.className = 'gallery-item';
+          wrapGallery.appendChild(wrapItem);
+
+          wrapItem.appendChild(img);
+
           if (img.alt) {
             const cap = document.createElement('div');
             cap.className = 'caption';
             cap.textContent = img.alt;
-            wrap.appendChild(cap);
+            wrapItem.appendChild(cap);
           }
         }
         p.remove(); // remove original paragraph

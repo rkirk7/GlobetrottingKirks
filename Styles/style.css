@@ -139,7 +139,7 @@
 .hero {
   position: relative;
   width: 100%;
-  min-height: 300px;       /* adjust height as needed */
+  min-height: 400px;       /* adjust height as needed */
   background: url('../Images/hero-image.jpeg') center center / cover no-repeat;
   display: flex;
   align-items: center;
