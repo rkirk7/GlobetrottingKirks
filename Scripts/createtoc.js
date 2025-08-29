@@ -4,9 +4,9 @@ function createTOCAndReturnLinks() {
 
   // Find all H2 elements
   const headers = container.querySelectorAll("h2");
-  if (!headers.length) return;
+    console.log("Found headings:", headers.length);
 
-  console.log("Found headings:", headers.length);
+  if (!headers.length) return;
 
   // Get the UL for the TOC
   const tocList = document.getElementById('toc-list');
