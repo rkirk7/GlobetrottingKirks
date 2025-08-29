@@ -17,17 +17,4 @@ async function loadPage(page) {
   }
 
   if (page === "blog.html") initBlog();
-
-  // TOC creation
-  // After loading content into #content
-  if (
-    page === "hikingadventures.html" ||
-    page === "europe.html"
-  ) {
-    // Give the DOM a tick to render the injected HTML
-    setTimeout(() => {
-      console.log("trying to create toc");
-      createTOCAndReturnLinks();
-    }, 0);
-  }
 }
