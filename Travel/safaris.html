@@ -1165,3 +1165,55 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 </script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const tocList = document.getElementById("toc-list");
+  if (!tocList) return;
+
+  // Find all <h2> inside travel sections
+  const sections = document.querySelectorAll(".travel-section h2");
+
+  sections.forEach((section, index) => {
+    // Give each section an ID if it doesn't have one
+    if (!section.id) section.id = `section-${index+1}`;
+
+    // Create TOC item
+    const li = document.createElement("li");
+    const a = document.createElement("a");
+    a.href = `#${section.id}`;
+    a.textContent = section.textContent;
+    li.appendChild(a);
+    tocList.appendChild(li);
+
+    // Add "Return to top" link at the end of the section
+    const returnLink = document.createElement("a");
+    returnLink.href = "#toc";
+    returnLink.textContent = "Return to top ↑";
+    returnLink.style.display = "block";
+    returnLink.style.marginTop = "1em";
+    returnLink.style.fontSize = "0.9rem";
+    returnLink.style.textAlign = "right";
+
+    // Append it after the section container
+    section.parentNode.appendChild(returnLink);
+  });
+
+  // Optional: smooth scrolling for TOC and return links
+  document.querySelectorAll('#toc a, .travel-section a[href^="#"]').forEach(link => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const targetId = link.getAttribute("href").substring(1);
+      const target = document.getElementById(targetId);
+      if (target) {
+        window.scrollTo({
+          top: target.offsetTop - 60, // offset for fixed header if needed
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+});
+</script>
+
+

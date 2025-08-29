@@ -21,7 +21,6 @@ async function loadPage(page) {
   // TOC creation
   // After loading content into #content
   if (
-    page === "safaris.html" ||
     page === "hikingadventures.html" ||
     page === "europe.html"
   ) {
