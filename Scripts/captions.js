@@ -35,3 +35,5 @@ function wrapImageWithCaption(img, inGallery = false) {
     `title: ${captionText}${inGallery ? "; group: gallery" : ""}`
   );
 }
+
+

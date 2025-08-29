@@ -42,3 +42,27 @@ function createTOCAndReturnLinks() {
 
   document.getElementById('toc').classList.remove('d-none');
 }
+
+function addReturnToTopLinks(container) {
+  // Grab all sections that start with an H2
+  const sections = container.querySelectorAll("h2");
+
+  sections.forEach(h2 => {
+    // Find the next sibling elements until the next H2 or end of container
+    let current = h2.nextElementSibling;
+    let lastElement = h2; 
+
+    while (current && current.tagName !== "H2") {
+      lastElement = current;
+      current = current.nextElementSibling;
+    }
+
+    // Add "Return to top" at the end of this section
+    const returnLink = document.createElement("a");
+    returnLink.href = "#top";
+    returnLink.textContent = "Return to top ↑";
+    returnLink.classList.add("d-block", "text-center", "my-3");
+
+    lastElement.insertAdjacentElement("afterend", returnLink);
+  });
+}
