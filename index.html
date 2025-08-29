@@ -175,6 +175,16 @@
       }
     }
     </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+  const hero = document.querySelector(".hero");
+  const heroImage = document.body.getAttribute("data-hero");
+  if (hero && heroImage) {
+    hero.style.backgroundImage = `url('${heroImage}')`;
+  }
+});
+    </script>
   
     
   

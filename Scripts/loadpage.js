@@ -7,6 +7,13 @@ async function loadPage(page) {
   await loadImageData();   // Load the JSON once
   addCaptionsAndGalleries();
 
+    // Set hero background if present
+  const hero = element.querySelector(".hero");
+  if (hero && hero.dataset.hero) {
+    hero.style.backgroundImage = `url('${hero.dataset.hero}')`;
+  }
+
+
   if (page === 'albums.html' && typeof initAlbums === 'function') {
     initAlbums();
   }
@@ -14,7 +21,7 @@ async function loadPage(page) {
   if (page === 'blog.html') initBlog();
 
   // TOC creation
-  if (page === 'safaris.html' || page === 'activeadventures.html') {
+  if (page === 'safaris.html' || page === 'hikingadventures.html' || page === 'europe.html' ) {
     // Delay slightly to make sure DOM is updated
     setTimeout(() => createTOCAndReturnLinks(), 50);
   }
