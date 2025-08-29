@@ -1,162 +1,77 @@
 /* ================================
    General Page Styles
    ================================ */
-   body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background: #f9f9f9;
-    color: #333;
-  }
-  
-  a {
-    text-decoration: none;
-    color: #007bff;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  /* ================================
-     Navbar
-     ================================ */
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #333;
-    color: #fff;
-    padding: 0.5rem 1rem;
-  }
-  
-  .navbar a {
-    color: #fff;
-    margin: 0 0.5rem;
-  }
-  
-  /* Dropdown menu */
-  .dropdown-menu { background-color: #fff; }
-  .dropdown-item { color: #333 !important; }
-  .dropdown-item:hover,
-  .dropdown-item:focus { background-color: #f1f1f1; color: #000 !important; }
-  .dropdown-header { color: #555; }
-  
-  /* ================================
-     Blog Post Styles
-     ================================ */
-  .blog-post {
-    background: #fff;
-    margin: 1rem auto;
-    padding: 1.5rem;
-    border-radius: 6px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    max-width: 800px;
-  }
-  
-  .blog-post h1, .blog-post h2, .blog-post h3 {
-    margin: 1rem 0 0.5rem 0;
-  }
-  
-  .blog-post p {
-    margin: 0.5rem 0;
-  }
-  
-  /* ================================
-     Table of Contents
-     ================================ */
-  .blog-toc {
-    background: #f1f1f1;
-    padding: 1rem;
-    border-radius: 6px;
-    margin: 1rem 0;
-  }
-  
-  .blog-toc h3 { margin-top: 0; }
-  .blog-toc ul { list-style: none; padding-left: 0; }
-  .blog-toc ul li { margin: 0.25rem 0; }
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  color: #333;
+}
 
-  .toc {
-    position: fixed;
-    top: 100px; /* distance from top of window */
-    right: 20px; /* distance from right edge */
-    width: 200px;
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    max-height: 80vh;
-    overflow-y: auto;
-    font-size: 0.9rem;
-    z-index: 1000;
-  }
+a {
+  text-decoration: none;
+  color: #007bff;
+}
 
-  .toc h3 {
-    margin-top: 0;
-    margin-bottom: 10px;
-    font-size: 1rem;
-  }
+a:hover {
+  text-decoration: underline;
+}
 
-  .toc ul li {
-    margin-bottom: 0.5rem;
-  }
+/* ================================
+   Navbar
+   ================================ */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333;
+  color: #fff;
+  padding: 0.4rem 1rem;
+}
 
-  .toc a {
-    color: #007bff;
-    text-decoration: none;
-  }
+.navbar a {
+  color: #fff;
+  margin: 0 0.5rem;
+}
 
-  .toc a:hover {
-    text-decoration: underline;
-  }
+.navbar-brand img {
+  object-fit: contain;
+  display: block;
+  max-height: 50px;
+}
 
-  /* Optional: add some space for mobile so it doesn't cover content */
-  @media (max-width: 992px) {
-    .toc {
-      position: static;
-      width: auto;
-      max-height: none;
-      margin-bottom: 2rem;
-    }
-  }
+.navbar-nav .nav-link {
+  line-height: 1.2;
+}
 
-  
-  
-  /* ================================
-     Buttons
-     ================================ */
-  .btn {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    background: #007bff;
-    color: #fff;
-    text-align: center;
-    text-decoration: none;
-  }
-  
-  .btn:hover { background: #0056b3; }
-  
-  /* ================================
-     Header Image
-     ================================ */
-  .header-image {
-    display: block;
-    margin: 0 auto 1rem;
-    max-width: 75%;
-    max-height: 300px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 8px;
-  }
-  
-  /* ================================
-     Hero Section
-     ================================ */
+/* Dropdown menu */
+.dropdown-menu { background-color: #fff; }
+.dropdown-item { color: #333 !important; }
+.dropdown-item:hover,
+.dropdown-item:focus { background-color: #f1f1f1; color: #000 !important; }
+.dropdown-header { color: #555; }
 
-  .hero {
+/* ================================
+   Buttons
+   ================================ */
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  background: #007bff;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn:hover { background: #0056b3; }
+
+/* ================================
+   Hero Section
+   ================================ */
+.hero {
   position: relative;
   width: 100%;
   min-height: 400px;
@@ -169,22 +84,20 @@
   padding: 2rem 1rem;
   color: white;
   text-shadow: 0 2px 6px rgba(0,0,0,0.5);
-
 }
 
- .hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.35);
-  }
-  
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+}
 
-  .hero-content {
-    position: relative;
-    text-align: center;
-    z-index: 1;
-  }
+.hero-content {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
 
 .hero-title {
   font-size: 2.5rem;
@@ -198,278 +111,169 @@
   color: #f1f1f1;
 }
 
-.hero-image img {
-  max-width: 250px;
-  border-radius: 10px;
-  margin-bottom: 1rem;
-  border: 3px solid #fff;
+.hero .btn {
+  font-size: 1.2rem;
+  padding: 0.75rem 1.5rem;
 }
 
-  .hero .btn {
-    font-size: 1.2rem;
-    padding: 0.75rem 1.5rem;
-  }
-  
-  /* ================================
-     Blog Post Images & Gallery
-     ================================ */
-  .blog-container, #post-container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 15px;
-  }
-  
-  /* All images in blog posts scale responsibly */
-  .blog-post-content img,
-  .container img,
-  .blog-container img {
-    width: 100%;
-    max-width: 900px;
-    height: auto;
-    display: block;
-    margin: 1rem auto;
-    border-radius: 6px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    object-fit: contain;
-    box-sizing: border-box;
-  }
-  
-  /* Captions */
-  .caption,
-  figcaption,
-  .blog-post-content .caption {
-    text-align: center;
-    font-size: 0.85rem;
-    color: #666;
-    margin-top: 4px;
-  }
-  
-  /* Gallery layout */
-  .blog-post-content .gallery,
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 10px;
-    margin: 20px 0;
-  }
-  
-  .blog-post-content .gallery img,
-  .gallery img {
-    width: 100%;
-    height: auto;
-    border-radius: 6px;
-    display: block;
-    transition: transform 0.2s;
-  }
-  
-  .blog-post-content .gallery img:hover,
-  .gallery img:hover { transform: scale(1.05); }
-  
-  /* Mobile adjustments */
-  @media (max-width: 768px) {
-    .blog-post-content .gallery,
-    .gallery { grid-template-columns: 1fr; }
-  }
-  
-  /* Lightbox */
-  #lightbox {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.9);
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    flex-direction: column;
-  }
-  
-  #lightbox img { max-width: 90%; max-height: 80%; border-radius: 6px; }
-  
-  .lightbox-caption { color: #fff; margin-top: 10px; text-align: center; }
-  
-  .lightbox-close,
-  .lightbox-prev,
-  .lightbox-next {
-    position: absolute;
-    color: white;
-    font-size: 2em;
-    cursor: pointer;
-    user-select: none;
-    padding: 10px;
-  }
-  
-  .lightbox-close { top: 20px; right: 30px; }
-  .lightbox-prev { top: 50%; left: 20px; transform: translateY(-50%); }
-  .lightbox-next { top: 50%; right: 20px; transform: translateY(-50%); }
-  
-  /* ================================
-     Newsletter Signup
-     ================================ */
-  .newsletter-section { border-top: 1px solid #eaeaea; }
-  
-  .newsletter-section h2 {
-    font-size: 1.8rem;
-    font-weight: 600;
-  }
-  
-  #newsletter-form input,
-  #newsletter-form button {
-    border-radius: 50px;
-    padding: 0.5rem 1.5rem;
-  }
-  
-  #newsletter-form input { padding-left: 20px; }
-  
-  /* ================================
-     Image Overlays
-     ================================ */
-  .img-wrapper {
-    position: relative;
-    display: inline-block;
-    margin: 8px;
-    overflow: hidden;
-    border-radius: 8px;
-  }
-  
-  .img-wrapper img {
-    display: block;
-    width: 100%;
-    height: auto;
-    transition: transform 0.3s ease;
-  }
-  
-  .img-overlay {
-    position: absolute;
-    left: 0; right: 0; bottom: 0;
-    padding: 8px 10px;
-    background: rgba(0,0,0,0.62);
-    color: #fff;
-    font-size: 0.95rem;
-    text-align: center;
-    opacity: 0;
-    transform: translateY(6px);
-    transition: opacity 0.25s ease, transform 0.25s ease;
-  }
-  
-  .img-wrapper:hover img,
-  .img-wrapper:focus-within img { transform: scale(1.04); }
-  
-  .img-wrapper:hover .img-overlay,
-  .img-wrapper:focus-within .img-overlay {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  /* Touch devices */
-  @media (hover: none) {
-    .img-overlay {
-      position: relative;
-      background: transparent;
-      color: #444;
-      opacity: 1;
-      transform: none;
-      padding-top: 6px;
-    }
-    .img-wrapper img { transform: none; }
-  }
-  
-  .figure {
-    margin: 1rem 0;
-  }
-  
-  .figure img {
-    width: 100%;
-    height: auto;
-  }
-  
-  .figure-caption {
-    font-size: 0.9rem;
-    color: #555;
-    margin-top: 0.25rem;
-  }
-
-
-  /*Travel pages */
-    /* Section spacing & background */
-    .travel-section {
-      background: #f9f9f9;
-      padding: 2rem;
-      border-radius: 10px;
-      margin-bottom: 3rem;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    }
-  
-    /* Headings */
-    .travel-section h2 {
-      margin-top: 0;
-      font-size: 2rem;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
-    }
-  
-    /* Paragraphs */
-    .travel-section p {
-      font-size: 1.1rem;
-      line-height: 1.7;
-      margin-bottom: 1rem;
-    }
-  
-    /* Lists */
-    .travel-section ul {
-      padding-left: 1.5rem;
-      margin-bottom: 1.5rem;
-    }
-  
-    /* Image grid */
-    .travel-section .row img {
-      border-radius: 8px;
-      transition: transform 0.2s ease;
-    }
-    .travel-section .row img:hover {
-      transform: scale(1.03);
-    }
-  
-    /* Buttons */
-    .travel-section .btn {
-      margin-top: 1rem;
-    }
-
-
-    img[data-caption] {
-  display: block;
-  margin: 0 auto 1rem;
-  position: relative;
+/* ================================
+   Blog Post Container
+   ================================ */
+.blog-container, #post-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
-img[data-caption]::after {
-  content: attr(data-caption);
-  display: block;
+.blog-post-content {
+  background: #fff;
+  margin: 1rem auto;
+  padding: 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.blog-post-content h1,
+.blog-post-content h2,
+.blog-post-content h3 {
+  margin: 1rem 0 0.5rem 0;
+}
+
+.blog-post-content p {
+  margin: 0.5rem 0;
+}
+
+/* ================================
+   Blog Post Images & Captions
+   ================================ */
+.figure {
+  margin: 1rem 0;
   text-align: center;
-  font-size: 0.9rem;
-  color: #555;
-  margin-top: 0.3rem;
 }
 
-
-.auto-caption {
-  display: inline-block;      /* Keeps figure tight around image */
-  text-align: center;         /* Center the caption */
-  margin: 1rem;
-  position: relative;
-}
-
-.auto-caption img {
-  display: block;
-  max-width: 100%;
+.figure img {
+  width: 100%;
   height: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  object-fit: contain;
 }
 
-/* Use the alt attribute as content */
-.auto-caption::after {
-  content: attr(data-alt);    /* We'll set data-alt in JS */
-  display: block;
+.figure-caption {
   font-size: 0.9rem;
   color: #555;
-  margin-top: 0.5rem;
+  margin-top: 0.25rem;
 }
+
+/* Gallery layout */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .gallery { grid-template-columns: 1fr; }
+}
+
+/* ================================
+   Table of Contents
+   ================================ */
+.toc {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  width: 200px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  max-height: 80vh;
+  overflow-y: auto;
+  font-size: 0.9rem;
+  z-index: 1000;
+}
+
+.toc h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.toc ul li {
+  margin-bottom: 0.5rem;
+}
+
+.toc a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.toc a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 992px) {
+  .toc {
+    position: static;
+    width: auto;
+    max-height: none;
+    margin-bottom: 2rem;
+  }
+}
+
+/* ================================
+   Travel Page Sections
+   ================================ */
+.travel-section {
+  background: #f9f9f9;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 3rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.travel-section h2 {
+  margin-top: 0;
+  font-size: 2rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.travel-section p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.travel-section ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.travel-section .row img {
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.travel-section .row img:hover {
+  transform: scale(1.03);
+}
+
+.travel-section .btn { margin-top: 1rem; }
