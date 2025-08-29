@@ -58,7 +58,7 @@ The guides were all well-equipped with numerous bear deterrents; the rifles were
 <div class="gallery">
 
 ![](./Images/Churchill/Churchill29.jpeg)  
-![](./Images/Churchill/Churchill30.jpeg)
+![test alt](./Images/Churchill/Churchill30.jpeg)
 ![](./Images/Churchill/Churchill31.jpeg)
 </div>
 

@@ -450,3 +450,26 @@ img[data-caption]::after {
   color: #555;
   margin-top: 0.3rem;
 }
+
+
+.auto-caption {
+  display: inline-block;      /* Keeps figure tight around image */
+  text-align: center;         /* Center the caption */
+  margin: 1rem;
+  position: relative;
+}
+
+.auto-caption img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Use the alt attribute as content */
+.auto-caption::after {
+  content: attr(data-alt);    /* We'll set data-alt in JS */
+  display: block;
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 0.5rem;
+}

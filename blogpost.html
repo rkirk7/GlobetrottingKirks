@@ -7,12 +7,12 @@
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="Styles/style.css">
+  <link rel="stylesheet" href="Styles/style.css">
 
   <style>
-
     body { position: relative; }
     p { font-size: 1.5em; }
+
     #toc {
       position: fixed; top: 80px; right: 20px;
       max-width: 250px; background: #fff;
@@ -28,72 +28,60 @@
     #toc a:hover { color: #007bff; text-decoration: underline; }
 
     #post-content img {
-  max-width: 80%;
-  height: auto;
-  display: block;
-  margin: 0 auto; /* Optional: center images */
-  border-radius: 6px; /* Optional: match card rounding */
-}
+      max-width: 80%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border-radius: 6px;
+    }
 
-/* Gallery grid layout */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 15px;
-  margin: 20px 0;
-}
+    /* Gallery grid layout */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+      margin: 20px 0;
+    }
 
-/* Gallery images */
-.gallery img {
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-  display: block;
-  object-fit: cover;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease;
-}
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      display: block;
+      object-fit: cover;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease;
+    }
 
-.gallery img:hover {
-  transform: scale(1.03);
-}
+    .gallery img:hover {
+      transform: scale(1.03);
+    }
 
-/* Captions under each image */
-.gallery .caption {
-  text-align: center;
-  font-size: 0.9rem;
-  color: #555;
-  margin-top: 6px;
-}
+    /* Keep captions aligned properly */
+    .gallery > * {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-/* Keep captions aligned properly */
-.gallery > * {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+    .blog-post-content img:only-child {
+      display: block;
+      margin: 0 auto;
+    }
 
-/* Optional: center single images nicely */
-.blog-post-content img:only-child {
-  display: block;
-  margin: 0 auto;
-}
-
-
-@media (max-width: 768px) {
-  #toc {
-    position: static;      /* no longer fixed */
-    max-width: 100%;       /* full width on mobile */
-    margin: 15px 0;        /* spacing */
-    box-shadow: none;      /* cleaner look */
-    border: 1px solid #ddd;
-  }
-}
-
-
+    @media (max-width: 768px) {
+      #toc {
+        position: static;
+        max-width: 100%;
+        margin: 15px 0;
+        box-shadow: none;
+        border: 1px solid #ddd;
+      }
+    }
   </style>
 </head>
 <body class="bg-light">
+
 <div class="blog-container">
   <div class="container mt-4 mb-5">
     <div id="post-container" class="card shadow-lg">
@@ -108,17 +96,15 @@
   </div>
 </div>
 
-  <!-- Floating TOC -->
-  <div id="toc" class="d-none">
-    <h5>On this page</h5>
-    <ul id="toc-list"></ul>
-  </div>
+<!-- Floating TOC -->
+<div id="toc" class="d-none">
+  <h5>On this page</h5>
+  <ul id="toc-list"></ul>
+</div>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-   <script src="Scripts/captions.js"></script>
-
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
 <script>
 async function loadPost() {
@@ -136,21 +122,19 @@ async function loadPost() {
   const postTitle = firstHeadingIndex >= 0 ? lines[firstHeadingIndex].replace(/^# /, "") : postFile;
   document.getElementById('post-title').textContent = postTitle;
 
-  // Remove first H1 line
   if (firstHeadingIndex >= 0) lines.splice(firstHeadingIndex, 1);
   postText = lines.join("\n");
 
-  // Parse Markdown into a detached div
+  // Parse Markdown
   const tempDiv = document.createElement('div');
   tempDiv.innerHTML = marked.parse(postText);
 
-  // Insert HTML into DOM first (so images exist)
   const postContentEl = document.getElementById('post-content');
   postContentEl.innerHTML = '';
   postContentEl.appendChild(tempDiv);
 
-  // Load captions and apply to images
-  await addCaptionsAndGalleries(postContentEl);
+  // Add captions
+  addCaptionsAndGalleries(postContentEl);
 
   // Build TOC
   const tocList = document.getElementById('toc-list');
@@ -161,88 +145,50 @@ async function loadPost() {
     headings.forEach((heading, i) => {
       const id = `heading-${i}`;
       heading.id = id;
-      const li = document.createElement('li');
-      li.innerHTML = `<a href="#${id}">${heading.textContent}</a>`;
-      tocList.appendChild(li);
+      tocList.innerHTML += `<li><a href="#${id}">${heading.textContent}</a></li>`;
     });
   }
 }
 
-// Optimized captions + galleries
-async function addCaptionsAndGalleries(container) {
-  // Load image metadata
-  let imageData = {};
-  try {
-    const res = await fetch("./image-data.json");
-    if (res.ok) imageData = await res.json();
-  } catch (err) {
-    console.warn("Failed to load image data", err);
-  }
+// Wrap images with figure + caption using alt text
+function addCaptionsAndGalleries(container) {
+  const images = container.querySelectorAll("img");
+  images.forEach(img => {
+    if (img.closest("figure")) return;
 
-  const images = Array.from(container.querySelectorAll("img"));
-  const batchSize = 20;
+    const figure = document.createElement("figure");
+    figure.classList.add("figure", "text-center");
+    img.parentNode.insertBefore(figure, img);
+    figure.appendChild(img);
 
-  for (let i = 0; i < images.length; i += batchSize) {
-    const batch = images.slice(i, i + batchSize);
-    batch.forEach(img => wrapImageWithCaption(img, imageData));
-    
-    // Yield to browser
-    if (window.requestIdleCallback) {
-      await new Promise(resolve => requestIdleCallback(resolve));
-    } else {
-      await new Promise(requestAnimationFrame);
+    const captionText = img.alt || "";
+    if (captionText) {
+      const caption = document.createElement("figcaption");
+      caption.classList.add("figure-caption", "text-center");
+      caption.textContent = captionText;
+      figure.appendChild(caption);
     }
-  }
 
-  // Initialize GLightbox once
-  if (window.GLightbox && !window.gLightboxInstance) {
-    window.gLightboxInstance = GLightbox({ selector: 'img[data-glightbox]' });
-  }
-}
-
-function wrapImageWithCaption(img, imageData, inGallery = false) {
-  if (img.closest("figure")) return;
-
-  const figure = document.createElement("figure");
-  figure.classList.add("figure", inGallery ? "m-1" : "text-center");
-  img.parentNode.insertBefore(figure, img);
-  figure.appendChild(img);
-
-  const filename = img.src.split("/").pop();
-  const captionText = imageData?.[filename] || img.alt || "";
-
-  if (captionText) {
-    const caption = document.createElement("figcaption");
-    caption.classList.add("figure-caption", "text-center");
-    caption.textContent = captionText;
-    figure.appendChild(caption);
-  }
-
-  img.setAttribute(
-    "data-glightbox",
-    `title: ${captionText}${inGallery ? "; group: gallery" : ""}`
-  );
-
-  if (!img.hasAttribute("loading")) img.setAttribute("loading", "lazy");
+    img.setAttribute("data-glightbox", `title: ${captionText}`);
+    if (!img.hasAttribute("loading")) img.setAttribute("loading", "lazy");
+  });
 }
 
 // Share button
 function sharePost() {
   const url = window.location.href;
   if (navigator.share) {
-    navigator.share({ title: document.title, url }).catch(err => console.log("Share canceled", err));
+    navigator.share({ title: document.title, url }).catch(() => {});
   } else {
     navigator.clipboard.writeText(url).then(() => alert("Post URL copied to clipboard!"));
   }
 }
 
-// Init
 document.addEventListener("DOMContentLoaded", () => {
   loadPost();
   document.getElementById("shareBtn").addEventListener("click", sharePost);
 });
 </script>
-
 
 </body>
 </html>
