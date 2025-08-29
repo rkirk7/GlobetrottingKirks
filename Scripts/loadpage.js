@@ -1,22 +1,12 @@
 let imageData = {};
 
-async function loadImageData() {
-  try {
-    const res = await fetch("./image-data.json");
-    if (!res.ok) throw new Error(`Failed to load image-data.json`);
-    imageData = await res.json();
-  } catch (err) {
-    console.error("Error loading image data:", err);
-  }
-}
-
 async function loadPage(page) {
   const res = await fetch(page);
   const content = await res.text();
   const element = document.getElementById("content");
   element.innerHTML = content;
 
-  await loadImageData();   // Load the JSON once
+  // Load the JSON once
   addCaptionsAndGalleries();
 
     // Set hero background if present

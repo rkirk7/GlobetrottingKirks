@@ -2,15 +2,22 @@ async function addCaptionsAndGalleries() {
   const container = document.getElementById("content");
   if (!container) return;
 
+  // Load image data inside this function
+  let imageData = {};
+  try {
+    const res = await fetch("./image-data.json");
+    if (res.ok) {
+      imageData = await res.json();
+    }
+  } catch (err) {
+    console.warn("Failed to load image data", err);
+  }
+
   const images = Array.from(container.querySelectorAll("img"));
   const batchSize = 20; // process in slightly bigger batches
 
   const processBatch = (batch) => {
-    const fragment = document.createDocumentFragment();
-    batch.forEach(img => {
-      wrapImageWithCaption(img);
-    });
-    container.appendChild(fragment); // minimal DOM reflow
+    batch.forEach(img => wrapImageWithCaption(img, imageData));
   };
 
   for (let i = 0; i < images.length; i += batchSize) {
@@ -33,17 +40,18 @@ async function addCaptionsAndGalleries() {
   }
 }
 
-function wrapImageWithCaption(img, inGallery = false) {
+// Pass imageData to the caption wrapper
+function wrapImageWithCaption(img, imageData, inGallery = false) {
   if (img.closest("figure")) return;
 
   const figure = document.createElement("figure");
-  figure.classList.add("figure", inGallery ? "m-1" : "text-center");
+  figure.classList.add("figure", inGallery ? "m-1" : "text-center", "mb-3");
 
   img.parentNode.insertBefore(figure, img);
   figure.appendChild(img);
 
   const filename = img.src.split("/").pop();
-  const captionText = window.imageData?.[filename] || img.alt || "";
+  const captionText = imageData?.[filename] || img.alt || filename;
 
   if (captionText) {
     const caption = document.createElement("figcaption");

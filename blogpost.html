@@ -120,147 +120,129 @@
    <script src="Scripts/captions.js"></script>
 
 
-  <script>
-    async function loadPost() {
-      const params = new URLSearchParams(window.location.search);
-      const postFile = params.get('post');
-      if (!postFile) return;
+<script>
+async function loadPost() {
+  const params = new URLSearchParams(window.location.search);
+  const postFile = params.get('post');
+  if (!postFile) return;
 
-      // Load Markdown
-      let postText = await fetch(`blog-posts/${postFile}`).then(res => res.text());
-      postText = postText.replace(/^---[\s\S]*?---/, '').trim();
+  // Load Markdown
+  let postText = await fetch(`blog-posts/${postFile}`).then(res => res.text());
+  postText = postText.replace(/^---[\s\S]*?---/, '').trim();
 
-            // Extract title
-const lines = postText.split("\n");
-const firstHeadingIndex = lines.findIndex(l => l.startsWith("# "));
-const postTitle = firstHeadingIndex >= 0 ? lines[firstHeadingIndex].replace(/^# /, "") : postFile;
-document.getElementById('post-title').textContent = postTitle;
+  // Extract title
+  const lines = postText.split("\n");
+  const firstHeadingIndex = lines.findIndex(l => l.startsWith("# "));
+  const postTitle = firstHeadingIndex >= 0 ? lines[firstHeadingIndex].replace(/^# /, "") : postFile;
+  document.getElementById('post-title').textContent = postTitle;
 
-// Remove the first H1 line so it doesn't show twice
-if (firstHeadingIndex >= 0) {
-  lines.splice(firstHeadingIndex, 1);
-}
-postText = lines.join("\n");
+  // Remove first H1 line
+  if (firstHeadingIndex >= 0) lines.splice(firstHeadingIndex, 1);
+  postText = lines.join("\n");
 
-      // Parse markdown
-// Parse markdown into a detached div
-const tempDiv = document.createElement('div');
-tempDiv.innerHTML = marked.parse(postText);
+  // Parse Markdown into a detached div
+  const tempDiv = document.createElement('div');
+  tempDiv.innerHTML = marked.parse(postText);
 
-// // Load image metadata (filename -> caption)
-// const captions = await fetch('image-data.json').then(r => r.json()).catch(() => ({}));
+  // Insert HTML into DOM first (so images exist)
+  const postContentEl = document.getElementById('post-content');
+  postContentEl.innerHTML = '';
+  postContentEl.appendChild(tempDiv);
 
-// // Apply captions to <img alt> using filename
-// tempDiv.querySelectorAll('img').forEach(img => {
-//   const src = img.getAttribute('src') || '';
-//   const filename = src.split('/').pop();
-//   const cap = captions[filename];
-//   if (cap && !img.alt) img.alt = cap;
-//   img.setAttribute('loading', 'lazy');
-// });
+  // Load captions and apply to images
+  await addCaptionsAndGalleries(postContentEl);
 
-// // Group consecutive <p><img></p> into .gallery and add captions
-// function processGalleries(rootEl) {
-//   const children = Array.from(rootEl.children);
-//   let run = [];
-
-//   const flush = () => {
-//     if (run.length === 1) {
-//       // Single image stays in normal flow
-//       const img = run[0].querySelector('img');
-//       if (img && img.alt) {
-//         const wrap = document.createElement('div');
-//         wrap.className = 'gallery-item';
-//         img.parentNode.insertBefore(wrap, img);
-//         wrap.appendChild(img);
-
-//         const cap = document.createElement('div');
-//         cap.className = 'caption';
-//         cap.textContent = img.alt;
-//         wrap.appendChild(cap);
-//       }
-//     } else if (run.length > 1) {
-//       // Multiple images → wrap in gallery
-//       const wrapGallery = document.createElement('div');
-//       wrapGallery.className = 'gallery';
-//       run[0].parentNode.insertBefore(wrapGallery, run[0]);
-
-//       run.forEach(p => {
-//         const img = p.querySelector('img');
-//         if (img) {
-//           const wrapItem = document.createElement('div');
-//           wrapItem.className = 'gallery-item';
-//           wrapGallery.appendChild(wrapItem);
-
-//           wrapItem.appendChild(img);
-
-//           if (img.alt) {
-//             const cap = document.createElement('div');
-//             cap.className = 'caption';
-//             cap.textContent = img.alt;
-//             wrapItem.appendChild(cap);
-//           }
-//         }
-//         p.remove(); // remove original paragraph
-//       });
-//     }
-//     run = [];
-//   };
-
-//   children.forEach((el, i) => {
-//     const isImgPara = el.tagName === 'P' && el.querySelector('img');
-//     if (isImgPara) run.push(el);
-
-//     const next = children[i + 1];
-//     const nextIsImgPara = next && next.tagName === 'P' && next.querySelector('img');
-//     if (!next || !nextIsImgPara) flush();
-//   });
-// }
-
-// processGalleries(tempDiv);
-
-// Put processed HTML into the page (now the nodes exist in the DOM)
-const postContentEl = document.getElementById('post-content');
-postContentEl.innerHTML = '';
-postContentEl.appendChild(tempDiv);
-
-// Build TOC from the content now in the DOM
-const tocList = document.getElementById('toc-list');
-const headings = postContentEl.querySelectorAll('h1, h2, h3');
-if (headings.length > 0) {
-  document.getElementById('toc').classList.remove('d-none');
-  headings.forEach((heading, i) => {
-    const id = `heading-${i}`;
-    heading.id = id;
-    const li = document.createElement('li');
-    li.innerHTML = `<a href="#${id}">${heading.textContent}</a>`;
-    tocList.appendChild(li);
-  });
-}
-      // Insert final HTML
-      document.getElementById('post-content').innerHTML = tempDiv.innerHTML;
-    }
-
-    // Share post
-    function sharePost() {
-      const url = window.location.href;
-      if (navigator.share) {
-        navigator.share({ title: document.title, url })
-          .catch(err => console.log("Share canceled", err));
-      } else {
-        navigator.clipboard.writeText(url).then(() => {
-          alert("Post URL copied to clipboard!");
-        });
-      }
-    }
-
-    document.addEventListener("DOMContentLoaded", () => {
-         loadImageData();   // Load the JSON once
-      loadPost(); 
-  addCaptionsAndGalleries();
-      document.getElementById("shareBtn").addEventListener("click", sharePost);
+  // Build TOC
+  const tocList = document.getElementById('toc-list');
+  const headings = postContentEl.querySelectorAll('h1, h2, h3');
+  if (headings.length > 0) {
+    document.getElementById('toc').classList.remove('d-none');
+    tocList.innerHTML = '';
+    headings.forEach((heading, i) => {
+      const id = `heading-${i}`;
+      heading.id = id;
+      const li = document.createElement('li');
+      li.innerHTML = `<a href="#${id}">${heading.textContent}</a>`;
+      tocList.appendChild(li);
     });
-  </script>
+  }
+}
+
+// Optimized captions + galleries
+async function addCaptionsAndGalleries(container) {
+  // Load image metadata
+  let imageData = {};
+  try {
+    const res = await fetch("./image-data.json");
+    if (res.ok) imageData = await res.json();
+  } catch (err) {
+    console.warn("Failed to load image data", err);
+  }
+
+  const images = Array.from(container.querySelectorAll("img"));
+  const batchSize = 20;
+
+  for (let i = 0; i < images.length; i += batchSize) {
+    const batch = images.slice(i, i + batchSize);
+    batch.forEach(img => wrapImageWithCaption(img, imageData));
+    
+    // Yield to browser
+    if (window.requestIdleCallback) {
+      await new Promise(resolve => requestIdleCallback(resolve));
+    } else {
+      await new Promise(requestAnimationFrame);
+    }
+  }
+
+  // Initialize GLightbox once
+  if (window.GLightbox && !window.gLightboxInstance) {
+    window.gLightboxInstance = GLightbox({ selector: 'img[data-glightbox]' });
+  }
+}
+
+function wrapImageWithCaption(img, imageData, inGallery = false) {
+  if (img.closest("figure")) return;
+
+  const figure = document.createElement("figure");
+  figure.classList.add("figure", inGallery ? "m-1" : "text-center");
+  img.parentNode.insertBefore(figure, img);
+  figure.appendChild(img);
+
+  const filename = img.src.split("/").pop();
+  const captionText = imageData?.[filename] || img.alt || "";
+
+  if (captionText) {
+    const caption = document.createElement("figcaption");
+    caption.classList.add("figure-caption", "text-center");
+    caption.textContent = captionText;
+    figure.appendChild(caption);
+  }
+
+  img.setAttribute(
+    "data-glightbox",
+    `title: ${captionText}${inGallery ? "; group: gallery" : ""}`
+  );
+
+  if (!img.hasAttribute("loading")) img.setAttribute("loading", "lazy");
+}
+
+// Share button
+function sharePost() {
+  const url = window.location.href;
+  if (navigator.share) {
+    navigator.share({ title: document.title, url }).catch(err => console.log("Share canceled", err));
+  } else {
+    navigator.clipboard.writeText(url).then(() => alert("Post URL copied to clipboard!"));
+  }
+}
+
+// Init
+document.addEventListener("DOMContentLoaded", () => {
+  loadPost();
+  document.getElementById("shareBtn").addEventListener("click", sharePost);
+});
+</script>
+
 
 </body>
 </html>
