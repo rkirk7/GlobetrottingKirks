@@ -7,16 +7,17 @@ async function loadPage(page) {
   await loadImageData();   // Load the JSON once
   addCaptionsAndGalleries();
 
-// inside the loadPage(page) success handler, AFTER content.innerHTML = html
-if (page === 'albums.html' && typeof initAlbums === 'function') {
-  initAlbums();
-}
+  if (page === 'albums.html' && typeof initAlbums === 'function') {
+    initAlbums();
+  }
 
   if (page === 'blog.html') initBlog();
+
+  // TOC creation
   if (page === 'safaris.html' || page === 'activeadventures.html') {
-    createTOCAndReturnLinks();
+    // Delay slightly to make sure DOM is updated
+    setTimeout(() => createTOCAndReturnLinks(), 50);
   }
   
   loadMailchimpPopup();
-
 }
