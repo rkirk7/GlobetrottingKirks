@@ -27,6 +27,23 @@
       .navbar-dark .nav-link svg:hover {
         fill: #ffcc00;
       }
+
+      body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+#content {
+  flex: 1; /* takes remaining space */
+}
+
+footer {
+  /* Already has bg-dark and text-center, optionally: */
+  flex-shrink: 0;
+}
+
     </style>
   </head>
 
