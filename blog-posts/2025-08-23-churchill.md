@@ -14,28 +14,6 @@ Polar bears are the largest land predators in the world (an adult male will outw
 
 Having journeyed to Svalbard in May, 2024, we went to Churchill in August, 2025, in search of polar bears. Here's what we found!
 
- <div class="row g-3 justify-content-center">
-      <div class="col-6 col-md-4 col-lg-2">
-        <img src="Images/Churchill/Churchill1.jpeg" alt="Adult Polar Bear" class="img-fluid rounded shadow-sm">
-      </div>
-      <div class="col-6 col-md-4 col-lg-2">
-        <img src="Images/Churchill/Churchill2.jpeg" alt="Three Polar Bears Against the Sunset" class="img-fluid rounded shadow-sm">
-      </div>
-      <div class="col-6 col-md-4 col-lg-2">
-        <img src="Images/Churchill/Churchill3.jpeg" alt="The Aurora Borealis" class="img-fluid rounded shadow-sm">
-      </div>
-      <div class="col-6 col-md-4 col-lg-2">
-        <img src="Images/Churchill/Churchill4.jpeg" alt="Mei-Mei Kayaking with Belugas" class="img-fluid rounded shadow-sm">
-      </div>
-      <div class="col-6 col-md-4 col-lg-2">
-        <img src="Images/Churchill/Churchill5.jpeg" alt="Adult Polar Bear" class="img-fluid rounded shadow-sm">
-      </div>
-      <div class="col-6 col-md-4 col-lg-2">
-        <img src="Images/Churchill/Churchill6.jpeg" alt="Mama Bear and Two Babies" class="img-fluid rounded shadow-sm">
-      </div>
-    </div>
-  </div>
-
 ---
 
 Whew.
@@ -43,11 +21,6 @@ Whew.
 The sleepy little town of Churchill, Manitoba, in the subarctic Hudson Bay, buzzes with tourists from May to November. That's when Arctic birds migrate overhead, 50,000 beluga whales come to feed, polar bears wander by waiting for the bay to freeze, and the Northern Lights can be spotted if one is lucky.
 
 Indeed, in late July to late August, it's possible to kayak next to belugas, catch polar bears lazing in the sun, and admire the Aurora Borealis, all in the same day. Which we did!
-
-1. [Ways to Experience Churchill](#ways-to-experience-churchill)
-2. [Arrival at Churchill Wild](#arrival-at-churchill-wild)
-3. [Lodge Life and Activities](#lodge-life-and-activities)
-4. [Churchill Wild’s Blueberry Inn and Additional Excursions](#churchill-wilds-blueberry-inn-and-additional-excursions)
 
 
 ## Ways to Experience Churchill
