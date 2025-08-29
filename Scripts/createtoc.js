@@ -1,5 +1,5 @@
 function createTOCAndReturnLinks() {
-  const container = document.querySelector(".container");
+  const container = document.querySelector("#content"); // select actual content
   if (!container) return;
 
   const headers = container.querySelectorAll("h2");
@@ -19,23 +19,18 @@ function createTOCAndReturnLinks() {
   headers.forEach((h2, i) => {
     if (!h2.id) h2.id = `section-${i + 1}`;
 
-    // Create TOC entry
+    // TOC entry
     const li = document.createElement("li");
     const a = document.createElement("a");
     a.href = `#${h2.id}`;
     a.textContent = h2.textContent;
-    a.style.textDecoration = "none";
-    a.style.color = "#007bff";
-    a.onmouseover = () => a.style.textDecoration = "underline";
-    a.onmouseout = () => a.style.textDecoration = "none";
     li.appendChild(a);
     tocList.appendChild(li);
 
-    // Add "Return to Top" without scanning the DOM
+    // Return to top
     const returnLink = document.createElement("p");
     returnLink.style.textAlign = "right";
     returnLink.innerHTML = `<a href="#top" style="text-decoration:none;color:#007bff;">Return to Top ↑</a>`;
-    
     h2.insertAdjacentElement("afterend", returnLink);
   });
 
