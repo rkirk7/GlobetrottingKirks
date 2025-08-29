@@ -1,30 +1,21 @@
-let imageData = {};
-
-async function loadImageData() {
-  try {
-    const res = await fetch("./image-data.json");
-    if (!res.ok) throw new Error(`Failed to load image-data.json`);
-    imageData = await res.json();
-  } catch (err) {
-    console.error("Error loading image data:", err);
-  }
-}
-
-function addCaptionsAndGalleries() {
+async function addCaptionsAndGalleries() {
   const container = document.getElementById("content");
   if (!container) return;
 
-  const galleries = container.querySelectorAll(".gallery, img");
+  const images = Array.from(container.querySelectorAll("img"));
 
-  galleries.forEach((gallery) => {
-    if (gallery.tagName === "IMG") {
-      wrapImageWithCaption(gallery);
-    } else {
-      const images = gallery.querySelectorAll("img");
-      images.forEach((img) => wrapImageWithCaption(img, true));
-    }
-  });
+  // Process images in small batches to avoid blocking the main thread
+  const batchSize = 10;
 
+  for (let i = 0; i < images.length; i += batchSize) {
+    const batch = images.slice(i, i + batchSize);
+    batch.forEach(img => wrapImageWithCaption(img));
+    
+    // Yield to the browser to update rendering
+    await new Promise(requestAnimationFrame);
+  }
+
+  // Initialize GLightbox once after all images are processed
   if (window.GLightbox) {
     GLightbox({ selector: 'img[data-glightbox]' });
   }
@@ -39,12 +30,10 @@ function wrapImageWithCaption(img, inGallery = false) {
   img.parentNode.insertBefore(figure, img);
   figure.appendChild(img);
 
-  // Extract just the filename from the src
   const srcParts = img.src.split("/");
   const filename = srcParts[srcParts.length - 1];
 
-  // Get caption from JSON; fallback to alt text
-  const captionText = imageData[filename] || img.alt || "";
+  const captionText = window.imageData?.[filename] || img.alt || "";
 
   if (captionText) {
     const caption = document.createElement("figcaption");
@@ -53,10 +42,11 @@ function wrapImageWithCaption(img, inGallery = false) {
     figure.appendChild(caption);
   }
 
-  // Add GLightbox attributes
   img.setAttribute(
     "data-glightbox",
     `title: ${captionText}${inGallery ? "; group: gallery" : ""}`
   );
-}
 
+  // Add lazy loading if not already present
+  if (!img.hasAttribute("loading")) img.setAttribute("loading", "lazy");
+}

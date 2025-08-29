@@ -1111,22 +1111,3 @@
   <h3>Table of Contents</h3>
   <ul id="toc-list"></ul>
 </div>
-
-<script>
-  const postContentEl = document.getElementById('content');
-
-  // Build TOC from headings
-  const tocList = document.getElementById('toc-list');
-  const headings = postContentEl.querySelectorAll('h2');
-
-  if (headings.length > 0) {
-    document.getElementById('toc').classList.remove('d-none');
-    headings.forEach((heading, i) => {
-      const id = `heading-${i}`;
-      heading.id = id;
-      const li = document.createElement('li');
-      li.innerHTML = `<a href="#${id}">${heading.textContent}</a>`;
-      tocList.appendChild(li);
-    });
-  }
-</script>
