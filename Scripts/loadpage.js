@@ -6,8 +6,10 @@ async function loadPage(page) {
   const element = document.getElementById("content");
   element.innerHTML = content;
 
-  // Load the JSON once
-  addCaptionsAndGalleries();
+const postContentEl = document.getElementById('#content');
+if (postContentEl) {
+  addCaptionsAndGalleries(postContentEl);
+}
 
   // Set hero background if present
   const hero = element.querySelector(".hero");
