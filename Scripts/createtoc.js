@@ -5,8 +5,10 @@ function createTOCAndReturnLinks() {
     // Find all H2 elements
     const headers = container.querySelectorAll("h2");
   
+    console.log(headers);
+
     // Create TOC container
-    const toc = document.createElement("nav");
+    const toc = document.getElementById('toc-list');
     toc.id = "toc";
     toc.innerHTML = "<h3>Contents</h3>";
     const ul = document.createElement("ul");

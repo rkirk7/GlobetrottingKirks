@@ -66,16 +66,63 @@
   /* ================================
      Table of Contents
      ================================ */
-  .toc {
+  .blog-toc {
     background: #f1f1f1;
     padding: 1rem;
     border-radius: 6px;
     margin: 1rem 0;
   }
   
-  .toc h3 { margin-top: 0; }
-  .toc ul { list-style: none; padding-left: 0; }
-  .toc ul li { margin: 0.25rem 0; }
+  .blog-toc h3 { margin-top: 0; }
+  .blog-toc ul { list-style: none; padding-left: 0; }
+  .blog-toc ul li { margin: 0.25rem 0; }
+
+  .toc {
+    position: fixed;
+    top: 100px; /* distance from top of window */
+    right: 20px; /* distance from right edge */
+    width: 200px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-height: 80vh;
+    overflow-y: auto;
+    font-size: 0.9rem;
+    z-index: 1000;
+  }
+
+  .toc h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+
+  .toc ul li {
+    margin-bottom: 0.5rem;
+  }
+
+  .toc a {
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  .toc a:hover {
+    text-decoration: underline;
+  }
+
+  /* Optional: add some space for mobile so it doesn't cover content */
+  @media (max-width: 992px) {
+    .toc {
+      position: static;
+      width: auto;
+      max-height: none;
+      margin-bottom: 2rem;
+    }
+  }
+
+  
   
   /* ================================
      Buttons
@@ -315,3 +362,50 @@
     color: #555;
     margin-top: 0.25rem;
   }
+
+
+  /*Travel pages */
+    /* Section spacing & background */
+    .travel-section {
+      background: #f9f9f9;
+      padding: 2rem;
+      border-radius: 10px;
+      margin-bottom: 3rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+  
+    /* Headings */
+    .travel-section h2 {
+      margin-top: 0;
+      font-size: 2rem;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+  
+    /* Paragraphs */
+    .travel-section p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+  
+    /* Lists */
+    .travel-section ul {
+      padding-left: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+  
+    /* Image grid */
+    .travel-section .row img {
+      border-radius: 8px;
+      transition: transform 0.2s ease;
+    }
+    .travel-section .row img:hover {
+      transform: scale(1.03);
+    }
+  
+    /* Buttons */
+    .travel-section .btn {
+      margin-top: 1rem;
+    }

@@ -1,51 +1,10 @@
 <style>
-  /* Add this to your style.css or inside a <style> tag */
-#toc {
-  position: fixed;
-  top: 100px; /* distance from top of window */
-  right: 20px; /* distance from right edge */
-  width: 200px;
-  background: #f9f9f9;
-  border: 1px solid #ddd;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  max-height: 80vh;
-  overflow-y: auto;
-  font-size: 0.9rem;
-  z-index: 1000;
-}
-
-#toc h3 {
-  margin-top: 0;
-  margin-bottom: 10px;
-  font-size: 1rem;
-}
-
-#toc ul li {
-  margin-bottom: 0.5rem;
-}
-
-#toc a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-#toc a:hover {
-  text-decoration: underline;
-}
-
-/* Optional: add some space for mobile so it doesn't cover content */
-@media (max-width: 992px) {
-  #toc {
-    position: static;
-    width: auto;
-    max-height: none;
-    margin-bottom: 2rem;
+  /* Limit text width for readability */
+  #content .container {
+    max-width: 900px;
   }
-}
-
 </style>
+
 
 <div id="content">
 <div class="container my-5">
@@ -60,7 +19,13 @@
   </p>
   <p></p>
 
-  <h2>Botswana</h2>
+  <p><a href="mailto:meimei.kirk@fora.travel?subject=I%20am%20interested%20in%20safaris%20" class="btn btn-primary">
+    I am interested in going on safari!
+  </a></p>
+
+
+  <div class="travel-section">
+      <h2>Botswana</h2>
 
   <p class="about">
     We've been to Botswana twice. The Okavango Delta is such a special place; if
@@ -161,8 +126,10 @@
 
     <br />
     <hr />
+    </div>
 
-    <h2>South Africa</h2>
+    <div class="travel-section">
+      <h2>South Africa</h2>
 
     <p class="about">
       South Africa is famous for Kruger National Park. Attached to the park are private reserves which house lodges that have more flexibility than those located in the park proper. Sabi Sands is one such reserve, and we had an absolutely amazing time there! This might be the best place we've visited in terms of leopard sightings and the likelihood of seeing the Big 5 (lion, leopard, elephant, buffalo, rhino) in one park. In fact, if you're lucky, you might see them in one drive!
@@ -180,7 +147,7 @@
       <li>More convenient than a lot of places since you stay within South Africa (assuming you fly into Johannesberg or Cape Town).</li>
     </ul>
 
-    <p><a href="https://www.foratravel.com/guides/AH537H/south-africa-in-3-perfect-weeks-cape-town-to-kruger-mei-mei-kirk">Read Mei-Mei's South Africa trip report</a></p>
+    <p><a href="https://www.foratravel.com/guides/AH537H/south-africa-in-3-perfect-weeks-cape-town-to-kruger-mei-mei-kirk" target="_blank" rel="noopener noreferrer">Read Mei-Mei's South Africa trip report</a></p>
 
     <div class="mb-5">
       <div class="row g-3 justify-content-center">
@@ -231,8 +198,10 @@
 
     <br />
     <hr />
+    </div>
 
-    <h2>Zimbabwe</h2>
+    <div class="travel-section">
+      <h2>Zimbabwe</h2>
 
     <p class="about">
       Hwange National Park is the largest in the country and is known as the home for about 50,000 elephants. As a result, they gather around the sparse watering holes and are a delight to watch. Somalisa Acacia, located within the park, is the only lodge we've ever returned to--and we've been three times! That should tell you how much we love it. There is nothing to match the thrill of sitting on your deck and watching the elephants frolic right in front of you. In addition to the elephants, there are lions, leopards, buffalo, antelopes of all sorts, and a lot of interesting bird life.
@@ -380,8 +349,10 @@
 
       <br />
       <hr />
+      </div>
 
-      <h2>Zambia</h2>
+      <div class="travel-section">
+        <h2>Zambia</h2>
 
       <p class="about">We've visited Zambia twice, and on both occasions we've had excellent sightings and experiences. Here, you can watch elephants cross a river, listen to the hippos honking outside your tent at night, and find lions and wild dogs lounging or hunting.</p>
 
@@ -520,7 +491,9 @@
 
         <br />
         <hr />
+        </div>
 
+        <div class="travel-section">
         <h2>Tanzania</h2>
 
         <p class="about">
@@ -717,8 +690,10 @@
 
           <br />
           <hr />
+          </div>
 
-          <h2>Kenya</h2>
+          <div class="travel-section">
+             <h2>Kenya</h2>
 
           <p class="about">
             The Masai Mara is a special place; river crossings; Great Migration; saw the big five in one drive as well as two kills.
@@ -862,7 +837,9 @@
 
             <br />
             <hr />
+            </div>
 
+            <div class="travel-section">
             <h2>Namibia</h2>
 
             <p class="about">
@@ -881,7 +858,7 @@
               <li>You can drive yourself around much of the country...although flat tires are likely!</li>
             </ul>
 
-            <p><a href="https://www.foratravel.com/guides/QKHCSB/into-the-wild-10-days-of-namibia-discovery-mei-mei-kirk">Read Mei-Mei's Namibia trip report!</a></p>
+            <p><a href="https://www.foratravel.com/guides/QKHCSB/into-the-wild-10-days-of-namibia-discovery-mei-mei-kirk" target="_blank" rel="noopener noreferrer">Read Mei-Mei's Namibia trip report</a></p>
 
             <div class="mb-5">
               <div class="row g-3 justify-content-center">
@@ -966,6 +943,7 @@
       </div>
     </div>
   </div>
+</div>
 
   <div id="toc">
     <h3>Table of Contents</h3>
