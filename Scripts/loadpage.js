@@ -9,22 +9,29 @@ async function loadPage(page) {
   // Load the JSON once
   addCaptionsAndGalleries();
 
-    // Set hero background if present
+  // Set hero background if present
   const hero = element.querySelector(".hero");
   if (hero && hero.dataset.hero) {
     hero.style.backgroundImage = `url('${hero.dataset.hero}')`;
   }
 
-
-  if (page === 'albums.html' && typeof initAlbums === 'function') {
+  if (page === "albums.html" && typeof initAlbums === "function") {
     initAlbums();
   }
 
-  if (page === 'blog.html') initBlog();
+  if (page === "blog.html") initBlog();
 
   // TOC creation
-if (page === 'safaris.html' || page === 'hikingadventures.html' || page === 'europe.html') {
-console.log('trying to create toc')
-  createTOCAndReturnLinks();
-}
+  // After loading content into #content
+  if (
+    page === "safaris.html" ||
+    page === "hikingadventures.html" ||
+    page === "europe.html"
+  ) {
+    // Give the DOM a tick to render the injected HTML
+    setTimeout(() => {
+      console.log("trying to create toc");
+      createTOCAndReturnLinks();
+    }, 0);
+  }
 }
