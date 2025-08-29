@@ -13,8 +13,10 @@ if (page === 'albums.html' && typeof initAlbums === 'function') {
 }
 
   if (page === 'blog.html') initBlog();
-  if (page === 'safaris.html') createTOCAndReturnLinks();
-
+  if (page === 'safaris.html' || page === 'activeadventures.html') {
+    createTOCAndReturnLinks();
+  }
+  
   loadMailchimpPopup();
 
 }

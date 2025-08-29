@@ -118,6 +118,8 @@
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="Scripts/captions.js"></script>
+
 
   <script>
     async function loadPost() {
@@ -146,76 +148,79 @@ postText = lines.join("\n");
 const tempDiv = document.createElement('div');
 tempDiv.innerHTML = marked.parse(postText);
 
-// Load image metadata (filename -> caption)
-const captions = await fetch('image-data.json').then(r => r.json()).catch(() => ({}));
+// // Load image metadata (filename -> caption)
+// const captions = await fetch('image-data.json').then(r => r.json()).catch(() => ({}));
 
-// Apply captions to <img alt> using filename
-tempDiv.querySelectorAll('img').forEach(img => {
-  const src = img.getAttribute('src') || '';
-  const filename = src.split('/').pop();
-  const cap = captions[filename];
-  if (cap && !img.alt) img.alt = cap;
-});
+// // Apply captions to <img alt> using filename
+// tempDiv.querySelectorAll('img').forEach(img => {
+//   const src = img.getAttribute('src') || '';
+//   const filename = src.split('/').pop();
+//   const cap = captions[filename];
+//   if (cap && !img.alt) img.alt = cap;
+// });
 
-// Group consecutive <p><img></p> into .gallery and add captions
-function processGalleries(rootEl) {
-  const children = Array.from(rootEl.children);
-  let run = [];
+// // Group consecutive <p><img></p> into .gallery and add captions
+// function processGalleries(rootEl) {
+//   const children = Array.from(rootEl.children);
+//   let run = [];
 
-  const flush = () => {
-    if (run.length === 1) {
-      // Single image stays in normal flow
-      const img = run[0].querySelector('img');
-      if (img && img.alt) {
-        const wrap = document.createElement('div');
-        wrap.className = 'gallery-item';
-        img.parentNode.insertBefore(wrap, img);
-        wrap.appendChild(img);
+//   const flush = () => {
+//     if (run.length === 1) {
+//       // Single image stays in normal flow
+//       const img = run[0].querySelector('img');
+//       if (img && img.alt) {
+//         const wrap = document.createElement('div');
+//         wrap.className = 'gallery-item';
+//         img.parentNode.insertBefore(wrap, img);
+//         wrap.appendChild(img);
 
-        const cap = document.createElement('div');
-        cap.className = 'caption';
-        cap.textContent = img.alt;
-        wrap.appendChild(cap);
-      }
-    } else if (run.length > 1) {
-      // Multiple images → wrap in gallery
-      const wrapGallery = document.createElement('div');
-      wrapGallery.className = 'gallery';
-      run[0].parentNode.insertBefore(wrapGallery, run[0]);
+//         const cap = document.createElement('div');
+//         cap.className = 'caption';
+//         cap.textContent = img.alt;
+//         wrap.appendChild(cap);
+//       }
+//     } else if (run.length > 1) {
+//       // Multiple images → wrap in gallery
+//       const wrapGallery = document.createElement('div');
+//       wrapGallery.className = 'gallery';
+//       run[0].parentNode.insertBefore(wrapGallery, run[0]);
 
-      run.forEach(p => {
-        const img = p.querySelector('img');
-        if (img) {
-          const wrapItem = document.createElement('div');
-          wrapItem.className = 'gallery-item';
-          wrapGallery.appendChild(wrapItem);
+//       run.forEach(p => {
+//         const img = p.querySelector('img');
+//         if (img) {
+//           const wrapItem = document.createElement('div');
+//           wrapItem.className = 'gallery-item';
+//           wrapGallery.appendChild(wrapItem);
 
-          wrapItem.appendChild(img);
+//           wrapItem.appendChild(img);
 
-          if (img.alt) {
-            const cap = document.createElement('div');
-            cap.className = 'caption';
-            cap.textContent = img.alt;
-            wrapItem.appendChild(cap);
-          }
-        }
-        p.remove(); // remove original paragraph
-      });
-    }
-    run = [];
-  };
+//           if (img.alt) {
+//             const cap = document.createElement('div');
+//             cap.className = 'caption';
+//             cap.textContent = img.alt;
+//             wrapItem.appendChild(cap);
+//           }
+//         }
+//         p.remove(); // remove original paragraph
+//       });
+//     }
+//     run = [];
+//   };
 
-  children.forEach((el, i) => {
-    const isImgPara = el.tagName === 'P' && el.querySelector('img');
-    if (isImgPara) run.push(el);
+//   children.forEach((el, i) => {
+//     const isImgPara = el.tagName === 'P' && el.querySelector('img');
+//     if (isImgPara) run.push(el);
 
-    const next = children[i + 1];
-    const nextIsImgPara = next && next.tagName === 'P' && next.querySelector('img');
-    if (!next || !nextIsImgPara) flush();
-  });
-}
+//     const next = children[i + 1];
+//     const nextIsImgPara = next && next.tagName === 'P' && next.querySelector('img');
+//     if (!next || !nextIsImgPara) flush();
+//   });
+// }
 
-processGalleries(tempDiv);
+// processGalleries(tempDiv);
+
+await loadImageData();   // Load the JSON once
+addCaptionsAndGalleries();
 
 // Put processed HTML into the page (now the nodes exist in the DOM)
 const postContentEl = document.getElementById('post-content');
@@ -236,7 +241,7 @@ if (headings.length > 0) {
   });
 }
       // Insert final HTML
-      document.getElementById('post-content').innerHTML = tempDiv.innerHTML;
+      // document.getElementById('post-content').innerHTML = tempDiv.innerHTML;
     }
 
     // Share post
