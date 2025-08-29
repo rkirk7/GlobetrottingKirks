@@ -1,24 +1,37 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Globetrotting Kirks</title>
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
 
-    
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+    />
+
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Your Custom Styles -->
-    <link rel="stylesheet" href="Styles/style.css">
-    
+    <link rel="stylesheet" href="Styles/style.css" />
+
     <style>
       /* Navbar social icon hover */
       .navbar-dark .nav-link svg {
@@ -29,21 +42,20 @@
       }
 
       body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  margin: 0;
-}
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+      }
 
-#content {
-  flex: 1; /* takes remaining space */
-}
+      #content {
+        flex: 1; /* takes remaining space */
+      }
 
-footer {
-  /* Already has bg-dark and text-center, optionally: */
-  flex-shrink: 0;
-}
-
+      footer {
+        /* Already has bg-dark and text-center, optionally: */
+        flex-shrink: 0;
+      }
     </style>
   </head>
 
@@ -51,81 +63,270 @@ footer {
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand" onclick="loadPage('home.html')" href="#home.html">Globetrotting Kirks</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" 
-          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <a
+          class="navbar-brand"
+          onclick="loadPage('home.html')"
+          href="#home.html"
+        >
+          <img
+            src="Images/GKLogo.png"
+            alt="Globetrotting Kirks Logo"
+            height="40"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <!-- Left side links -->
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link" onclick="loadPage('aboutus.html')" href="#aboutus.html">About Us</a></li>
-            <li class="nav-item"><a class="nav-link" onclick="loadPage('specials.html')" href="#specials.html">Specials</a></li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                onclick="loadPage('aboutus.html')"
+                href="#aboutus.html"
+                >About Us</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                onclick="loadPage('specials.html')"
+                href="#specials.html"
+                >Specials</a
+              >
+            </li>
 
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
                 Our Favorite Types of Travel
               </a>
               <ul class="dropdown-menu">
                 <li><h6 class="dropdown-header">Wildlife Adventures</h6></li>
-                <li><a class="dropdown-item" onclick="loadPage('Travel/safaris.html')" href="#Travel/safaris.html">Safari</a></li>
-                <li><a class="dropdown-item" onclick="loadPage('Travel/polarbears.html')" href="#Travel/polarbears.html">Polar Bears</a></li>
-                <li><a class="dropdown-item" href="https://www.foratravel.com/guides/BDZTA6/enchanting-galapagos-12-days-in-a-wildlife-wonderland-mei-mei-kirk" target="_blank" rel="noopener noreferrer">Galapagos</a></li>
-                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" onclick="loadPage('Travel/hikingadventures.html')" href="#Travel/hikingadventures.html">Hiking and Other Thrill-Seeking</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" onclick="loadPage('Travel/grouptravel.html')" href="#Travel/grouptravel.html">Group Travel</a></li>
-                <li><hr class="dropdown-divider"></li>
-                 <li><h6 class="dropdown-header">By Geography</h6></li>
-                 <li><a class="dropdown-item" onclick="loadPage('Travel/europe.html')" href="#Travel/europe.html">Europe</a></li>
-                 <li><a class="dropdown-item" onclick="loadPage('Travel/downunder.html')" href="#Travel/downunder.html">Australia and New Zealand</a></li>
-                 <li><a class="dropdown-item" onclick="loadPage('Travel/asia.html')" href="#Travel/asia.html">Asia</a></li>
-                 <li><a class="dropdown-item" onclick="loadPage('Travel/unitedstates.html')" href="#Travel/unitedstates.html">The U.S.</a></li>
-                 <li><a class="dropdown-item" onclick="loadPage('Travel/antarctica.html')" href="#Travel/antarctica.html">Antarctica</a></li>
-                 <li><hr class="dropdown-divider"></li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    onclick="loadPage('Travel/safaris.html')"
+                    href="#Travel/safaris.html"
+                    >Safari</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    onclick="loadPage('Travel/polarbears.html')"
+                    href="#Travel/polarbears.html"
+                    >Polar Bears</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="https://www.foratravel.com/guides/BDZTA6/enchanting-galapagos-12-days-in-a-wildlife-wonderland-mei-mei-kirk"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Galapagos</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    onclick="loadPage('Travel/hikingadventures.html')"
+                    href="#Travel/hikingadventures.html"
+                    >Hiking and Other Thrill-Seeking</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    onclick="loadPage('Travel/grouptravel.html')"
+                    href="#Travel/grouptravel.html"
+                    >Group Travel</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><h6 class="dropdown-header">By Geography</h6></li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    onclick="loadPage('Travel/europe.html')"
+                    href="#Travel/europe.html"
+                    >Europe</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    onclick="loadPage('Travel/downunder.html')"
+                    href="#Travel/downunder.html"
+                    >Australia and New Zealand</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    onclick="loadPage('Travel/asia.html')"
+                    href="#Travel/asia.html"
+                    >Asia</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    onclick="loadPage('Travel/unitedstates.html')"
+                    href="#Travel/unitedstates.html"
+                    >The U.S.</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    onclick="loadPage('Travel/antarctica.html')"
+                    href="#Travel/antarctica.html"
+                    >Antarctica</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
                 <li><h6 class="dropdown-header">Cruises</h6></li>
-                <li><a class="dropdown-item" onclick="loadPage('Travel/cruises.html')" href="#Travel/cruises.html">Cruises</a></li>
-                <li><a class="dropdown-item" href="https://www.foratravel.com/trip-reports/FTYYJ7/polar-exploration-comparing-the-arctic-and-antarctic-mei-mei-kirk" target="_blank" rel="noopener noreferrer">Expedition Cruises</a></li>
-                <li><hr class="dropdown-divider"></li> 
+                <li>
+                  <a
+                    class="dropdown-item"
+                    onclick="loadPage('Travel/cruises.html')"
+                    href="#Travel/cruises.html"
+                    >Cruises</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="https://www.foratravel.com/trip-reports/FTYYJ7/polar-exploration-comparing-the-arctic-and-antarctic-mei-mei-kirk"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Expedition Cruises</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
                 <li><h6 class="dropdown-header">Theme Parks</h6></li>
-                <li><a class="dropdown-item" onclick="loadPage('Travel/disney.html')" href="#Travel/disney.html">Disney Vacations</a></li>
-                <li><a class="dropdown-item" onclick="loadPage('Travel/universal.html')" href="#Travel/universal.html">Universal Studios Packages</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" onclick="loadPage('Travel/theater.html')" href="#Travel/theater.html">Musical Theater</a></li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    onclick="loadPage('Travel/disney.html')"
+                    href="#Travel/disney.html"
+                    >Disney Vacations</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    onclick="loadPage('Travel/universal.html')"
+                    href="#Travel/universal.html"
+                    >Universal Studios Packages</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    onclick="loadPage('Travel/theater.html')"
+                    href="#Travel/theater.html"
+                    >Musical Theater</a
+                  >
+                </li>
               </ul>
             </li>
 
-            <li class="nav-item"><a class="nav-link" onclick="loadPage('blog.html')" href="#blog.html">Travel Blog</a></li>
-            <li class="nav-item"><a class="nav-link" onclick="loadPage('albums.html')" href="#albums.html">Photo Albums</a></li>
-            <li class="nav-item"><a class="nav-link" onclick="loadPage('clientreviews.html')" href="#clientreviews.html">Client Reviews</a></li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                onclick="loadPage('blog.html')"
+                href="#blog.html"
+                >Travel Blog</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                onclick="loadPage('albums.html')"
+                href="#albums.html"
+                >Photo Albums</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                onclick="loadPage('clientreviews.html')"
+                href="#clientreviews.html"
+                >Client Reviews</a
+              >
+            </li>
             <!-- <li class="nav-item"><a class="nav-link" onclick="loadPage('tips.html')" href="#tips.html">Travel Tips</a></li> -->
-            <li class="nav-item"><a class="nav-link" onclick="loadPage('travelagentbenefits.html')" href="#travelagentbenefits.html">Travel Agent Benefits</a></li>
-            <li class="nav-item"><a class="nav-link" onclick="loadPage('contact.html')" href="#contact.html">Contact</a></li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                onclick="loadPage('travelagentbenefits.html')"
+                href="#travelagentbenefits.html"
+                >Travel Agent Benefits</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                onclick="loadPage('contact.html')"
+                href="#contact.html"
+                >Contact</a
+              >
+            </li>
           </ul>
 
-          
-<!-- Social Media Icons -->
-<ul class="navbar-nav ms-auto d-flex align-items-center">
-  <li class="nav-item">
-    <a class="nav-link" href="https://www.tiktok.com/@globetrottingkirks" target="_blank" title="TikTok"><i class="bi bi-tiktok"></i>
-    </a>
-  </li>
-  <!-- Instagram -->
-  <li class="nav-item">
-    <a class="nav-link" href="https://www.instagram.com/globetrottingkirks" target="_blank" title="Instagram"><i class="bi bi-instagram"></i>
-     
-    </a>
-  </li>
-  <!-- Facebook -->
-  <li class="nav-item">
-    <a class="nav-link" href="https://www.facebook.com/profile.php?id=61579778874988" target="_blank" title="Facebook"><i class="bi bi-facebook"></i>
-    </a>
-  </li>
-</ul>
-
-
-
+          <!-- Social Media Icons -->
+          <ul class="navbar-nav ms-auto d-flex align-items-center">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://www.tiktok.com/@globetrottingkirks"
+                target="_blank"
+                title="TikTok"
+                ><i class="bi bi-tiktok"></i>
+              </a>
+            </li>
+            <!-- Instagram -->
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://www.instagram.com/globetrottingkirks"
+                target="_blank"
+                title="Instagram"
+                ><i class="bi bi-instagram"></i>
+              </a>
+            </li>
+            <!-- Facebook -->
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://www.facebook.com/profile.php?id=61579778874988"
+                target="_blank"
+                title="Facebook"
+                ><i class="bi bi-facebook"></i>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
@@ -134,38 +335,47 @@ footer {
     <div id="content" class="container mt-5 pt-5"></div>
 
     <footer class="bg-dark text-white text-center p-4 mt-5">
-  <p>&copy; 2025 Globetrotting Kirks | Your Travel Experts</p>
-   <p><a href="mailto:meimei.kirk@fora.travel">meimei.kirk@fora.travel</a>  |  <a href="mailto:regan.kirk@fora.travel">regan.kirk@fora.travel</a></p>
-   <p><i>Globetrotting Kirks is an affiliate of Fora Travel, a Virtuoso Member</i></p>
-</footer>
+      <p>&copy; 2025 Globetrotting Kirks | Your Travel Experts</p>
+      <p>
+        <a href="mailto:meimei.kirk@fora.travel">meimei.kirk@fora.travel</a> |
+        <a href="mailto:regan.kirk@fora.travel">regan.kirk@fora.travel</a>
+      </p>
+      <p>
+        <i
+          >Globetrotting Kirks is an affiliate of Fora Travel, a Virtuoso
+          Member</i
+        >
+      </p>
+    </footer>
 
     <!-- Scripts -->
 
-
-    
-        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-   
-        <script src="Scripts/captions.js"></script>
-        <script src="Scripts/createtoc.js"></script>
-        <script src="Scripts/blog.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="Scripts/captions.js"></script>
+    <script src="Scripts/createtoc.js"></script>
+    <script src="Scripts/blog.js"></script>
     <script src="Scripts/albums.js"></script>
     <script src="Scripts/loadpage.js"></script>
 
-<script>
-      loadPage('home.html');
+    <script>
+      loadPage("home.html");
     </script>
 
-<script>
-  function hasSeenMailchimpPopup() {
-    return localStorage.getItem('mailchimpPopupShown') === 'true';
-  }
-  
-  function markMailchimpPopupShown() {
-    localStorage.setItem('mailchimpPopupShown', 'true');
-  }
-  </script>  
-  
+    <script>
+      function hasSeenMailchimpPopup() {
+        return localStorage.getItem("mailchimpPopupShown") === "true";
+      }
+
+      function markMailchimpPopupShown() {
+        localStorage.setItem("mailchimpPopupShown", "true");
+      }
+    </script>
   </body>
 </html>
