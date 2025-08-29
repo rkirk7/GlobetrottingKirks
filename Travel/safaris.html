@@ -3,6 +3,21 @@
   #content .container {
     max-width: 900px;
   }
+
+  #toc {
+      position: fixed; top: 80px; right: 20px;
+      max-width: 250px; background: #fff;
+      border: 1px solid #ddd; padding: 10px; border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      max-height: 80vh; overflow-y: auto; z-index: 999;
+      font-size: 0.95rem;
+    }
+    #toc h5 { font-size: 1rem; margin-bottom: 8px; }
+    #toc ul { list-style: none; padding-left: 0; margin-bottom: 0; }
+    #toc li { margin-bottom: 4px; }
+    #toc a { text-decoration: none; font-size: 0.9rem; color: #333; }
+    #toc a:hover { color: #007bff; text-decoration: underline; }
+
 </style>
 
 <div id="content">
@@ -1096,3 +1111,22 @@
   <h3>Table of Contents</h3>
   <ul id="toc-list"></ul>
 </div>
+
+<script>
+  const postContentEl = document.getElementById('content');
+
+  // Build TOC from headings
+  const tocList = document.getElementById('toc-list');
+  const headings = postContentEl.querySelectorAll('h2');
+
+  if (headings.length > 0) {
+    document.getElementById('toc').classList.remove('d-none');
+    headings.forEach((heading, i) => {
+      const id = `heading-${i}`;
+      heading.id = id;
+      const li = document.createElement('li');
+      li.innerHTML = `<a href="#${id}">${heading.textContent}</a>`;
+      tocList.appendChild(li);
+    });
+  }
+</script>

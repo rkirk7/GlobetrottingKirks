@@ -142,51 +142,7 @@
   function markMailchimpPopupShown() {
     localStorage.setItem('mailchimpPopupShown', 'true');
   }
-  </script>
-  
-
-  <script>
-    function loadMailchimpPopup() {
-      if (hasSeenMailchimpPopup()) return; // already shown
-    
-      if (!document.getElementById('mcjs')) {
-        var mcjs = document.createElement('script');
-        mcjs.id = 'mcjs';
-        mcjs.async = true;
-        mcjs.src = 'https://chimpstatic.com/mcjs-connected/js/users/9e4e0ffaef14115fa941069c0/b5a76e1c6b27b9c1b8c9ea14f.js';
-    
-        mcjs.onload = function() {
-          // Wait a tiny bit for Mailchimp to initialize
-          setTimeout(() => {
-            if (typeof window.MC !== 'undefined' && typeof window.MC.showPopup !== 'undefined') {
-              window.MC.showPopup();
-              markMailchimpPopupShown(); // remember we showed it
-            }
-          }, 500);
-        };
-    
-        document.head.appendChild(mcjs);
-      } else {
-        // Script already loaded, trigger popup if API ready
-        if (typeof window.MC !== 'undefined' && typeof window.MC.showPopup !== 'undefined') {
-          window.MC.showPopup();
-          markMailchimpPopupShown();
-        }
-      }
-    }
-    </script>
-
-    <!-- <script>
-      document.addEventListener("DOMContentLoaded", () => {
-  const hero = document.querySelector(".hero");
-  const heroImage = document.body.getAttribute("data-hero");
-  if (hero && heroImage) {
-    hero.style.backgroundImage = `url('${heroImage}')`;
-  }
-});
-    </script> -->
-  
-    
+  </script>  
   
   </body>
 </html>

@@ -22,9 +22,8 @@ async function loadPage(page) {
 
   // TOC creation
 if (page === 'safaris.html' || page === 'hikingadventures.html' || page === 'europe.html') {
-      createTOCAndReturnLinks();
+console.log('trying to create toc')
+  createTOCAndReturnLinks();
 }
-
-  
-  loadMailchimpPopup();
+ 
 }
