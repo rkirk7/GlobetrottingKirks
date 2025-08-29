@@ -83,6 +83,7 @@ finalHtml += previewHtml;
       const filename = img.getAttribute('src').split('/').pop();
       const caption = (imageMeta && imageMeta[filename]) || "";
       img.setAttribute('alt', caption || filename);
+        img.setAttribute('loading', 'lazy');
 
       // Wrap img in figure if not already
       if (!img.closest('figure')) {

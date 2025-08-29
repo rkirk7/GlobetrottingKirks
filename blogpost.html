@@ -155,6 +155,7 @@ tempDiv.querySelectorAll('img').forEach(img => {
   const filename = src.split('/').pop();
   const cap = captions[filename];
   if (cap && !img.alt) img.alt = cap;
+  img.setAttribute('loading', 'lazy');
 });
 
 // Group consecutive <p><img></p> into .gallery and add captions
