@@ -6,6 +6,8 @@ function createTOCAndReturnLinks() {
   const headers = container.querySelectorAll("h2");
   if (!headers.length) return;
 
+  console.log("Found headings:", headers.length);
+
   // Get the UL for the TOC
   const tocList = document.getElementById('toc-list');
   if (!tocList) return;

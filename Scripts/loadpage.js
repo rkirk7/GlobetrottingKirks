@@ -21,10 +21,14 @@ async function loadPage(page) {
   if (page === 'blog.html') initBlog();
 
   // TOC creation
-  if (page === 'safaris.html' || page === 'hikingadventures.html' || page === 'europe.html' ) {
-    // Delay slightly to make sure DOM is updated
-    setTimeout(() => createTOCAndReturnLinks(), 50);
-  }
+if (page === 'safaris.html' || page === 'hikingadventures.html' || page === 'europe.html') {
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      createTOCAndReturnLinks();
+    });
+  });
+}
+
   
   loadMailchimpPopup();
 }
