@@ -209,6 +209,7 @@
           <div class="col-6 col-md-4 col-lg-2">
             <img
               src="../Images/24Safari/24Safari2.jpeg"
+              alt="test caption"
               class="img-fluid rounded shadow-sm"
                
             />
@@ -1111,3 +1112,59 @@
   <h3>Table of Contents</h3>
   <ul id="toc-list"></ul>
 </div>
+
+
+<script>
+/**
+ * Adds captions from alt text and sets up lightbox for all images inside a container.
+ * @param {HTMLElement} container - The element containing images to process
+ */
+function addCaptions(container) {
+  if (!container) return;
+
+  const images = Array.from(container.querySelectorAll("img"));
+
+  images.forEach(img => {
+    // Skip if already processed
+    if (img.dataset.captionProcessed) return;
+
+    const captionText = img.alt || "";
+
+    // Add caption div if alt text exists
+    if (captionText) {
+      const caption = document.createElement("div");
+      caption.classList.add("image-caption");
+      caption.style.textAlign = "center";
+      caption.style.fontSize = "0.9rem";
+      caption.style.color = "#555";
+      caption.style.marginTop = "4px";
+      caption.textContent = captionText;
+
+      img.parentNode.insertBefore(caption, img.nextSibling);
+    }
+
+    // Setup GLightbox
+    img.setAttribute("data-glightbox", `title: ${captionText}`);
+    if (!img.hasAttribute("loading")) img.setAttribute("loading", "lazy");
+
+    // Mark as processed
+    img.dataset.captionProcessed = "true";
+  });
+
+  // Initialize GLightbox once
+  if (window.GLightbox && !window.gLightboxInstance) {
+    window.gLightboxInstance = GLightbox({ selector: 'img[data-glightbox]' });
+  }
+}
+
+// Example usage for homepage or blog pages
+document.addEventListener("DOMContentLoaded", () => {
+  // For homepage content
+  const content = document.getElementById("content");
+  addCaptions(content);
+
+  // For blog posts
+  const postContent = document.getElementById("post-content");
+  addCaptions(postContent);
+});
+</script>
