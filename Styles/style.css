@@ -434,3 +434,19 @@
     .travel-section .btn {
       margin-top: 1rem;
     }
+
+
+    img[data-caption] {
+  display: block;
+  margin: 0 auto 1rem;
+  position: relative;
+}
+
+img[data-caption]::after {
+  content: attr(data-caption);
+  display: block;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 0.3rem;
+}
