@@ -1,3 +1,15 @@
+let imageData = {};
+
+async function loadImageData() {
+  try {
+    const res = await fetch("./image-data.json");
+    if (!res.ok) throw new Error(`Failed to load image-data.json`);
+    imageData = await res.json();
+  } catch (err) {
+    console.error("Error loading image data:", err);
+  }
+}
+
 async function loadPage(page) {
   const res = await fetch(page);
   const content = await res.text();
@@ -25,5 +37,4 @@ if (page === 'safaris.html' || page === 'hikingadventures.html' || page === 'eur
 console.log('trying to create toc')
   createTOCAndReturnLinks();
 }
- 
 }

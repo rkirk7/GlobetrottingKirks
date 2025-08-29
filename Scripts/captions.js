@@ -3,21 +3,33 @@ async function addCaptionsAndGalleries() {
   if (!container) return;
 
   const images = Array.from(container.querySelectorAll("img"));
+  const batchSize = 20; // process in slightly bigger batches
 
-  // Process images in small batches to avoid blocking the main thread
-  const batchSize = 10;
+  const processBatch = (batch) => {
+    const fragment = document.createDocumentFragment();
+    batch.forEach(img => {
+      wrapImageWithCaption(img);
+    });
+    container.appendChild(fragment); // minimal DOM reflow
+  };
 
   for (let i = 0; i < images.length; i += batchSize) {
     const batch = images.slice(i, i + batchSize);
-    batch.forEach(img => wrapImageWithCaption(img));
-    
-    // Yield to the browser to update rendering
-    await new Promise(requestAnimationFrame);
+    processBatch(batch);
+
+    // Yield to the browser to paint
+    if (window.requestIdleCallback) {
+      await new Promise(resolve => requestIdleCallback(resolve));
+    } else {
+      await new Promise(requestAnimationFrame);
+    }
   }
 
-  // Initialize GLightbox once after all images are processed
+  // Initialize GLightbox once at the end
   if (window.GLightbox) {
-    GLightbox({ selector: 'img[data-glightbox]' });
+    if (!window.gLightboxInstance) {
+      window.gLightboxInstance = GLightbox({ selector: 'img[data-glightbox]' });
+    }
   }
 }
 
@@ -30,9 +42,7 @@ function wrapImageWithCaption(img, inGallery = false) {
   img.parentNode.insertBefore(figure, img);
   figure.appendChild(img);
 
-  const srcParts = img.src.split("/");
-  const filename = srcParts[srcParts.length - 1];
-
+  const filename = img.src.split("/").pop();
   const captionText = window.imageData?.[filename] || img.alt || "";
 
   if (captionText) {
@@ -47,6 +57,5 @@ function wrapImageWithCaption(img, inGallery = false) {
     `title: ${captionText}${inGallery ? "; group: gallery" : ""}`
   );
 
-  // Add lazy loading if not already present
   if (!img.hasAttribute("loading")) img.setAttribute("loading", "lazy");
 }
