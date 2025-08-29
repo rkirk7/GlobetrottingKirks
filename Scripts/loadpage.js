@@ -22,11 +22,7 @@ async function loadPage(page) {
 
   // TOC creation
 if (page === 'safaris.html' || page === 'hikingadventures.html' || page === 'europe.html') {
-  requestAnimationFrame(() => {
-    requestAnimationFrame(() => {
       createTOCAndReturnLinks();
-    });
-  });
 }
 
   
