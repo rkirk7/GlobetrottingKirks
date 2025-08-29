@@ -14,14 +14,15 @@ function addCaptionsAndGalleries(container) {
 function wrapImageWithCaption(img, inGallery = false) {
   if (img.closest("figure")) return;
 
+  // Ensure lazy loading
+  if (!img.hasAttribute("loading")) img.setAttribute("loading", "lazy");
+
   const figure = document.createElement("figure");
   figure.classList.add("figure", inGallery ? "m-1" : "text-center");
   img.parentNode.insertBefore(figure, img);
   figure.appendChild(img);
 
-  // Use alt text as caption
   const captionText = img.alt || "";
-
   if (captionText) {
     const caption = document.createElement("figcaption");
     caption.classList.add("figure-caption", "text-center");
@@ -33,6 +34,4 @@ function wrapImageWithCaption(img, inGallery = false) {
     "data-glightbox",
     `title: ${captionText}${inGallery ? "; group: gallery" : ""}`
   );
-
-  if (!img.hasAttribute("loading")) img.setAttribute("loading", "lazy");
 }
