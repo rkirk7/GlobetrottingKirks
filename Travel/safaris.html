@@ -42,7 +42,7 @@
   }
 </style>
 
-<div class="container my-5">
+<div class="container my-5" id="container">
   <div class="hero" data-hero="../Images/19Safari/19Safari27.jpeg">
     <div class="hero-content text-center">
       <h1 class="hero-title">Safaris</h1>
@@ -1024,33 +1024,7 @@
   </div>
 </div>
 
-<div id="toc">
-  <h3>Table of Contents</h3>
+<div id="toc" class="d-none">
+  <h5>On This Page</h5>
   <ul id="toc-list"></ul>
 </div>
-
-
-<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-
-<script>
-async function loadTOC() {
-  const postContentEl = document.getElementById('container');
-
-  // Build TOC
-  const tocList = document.getElementById('toc-list');
-  const headings = postContentEl.querySelectorAll('h2, h3');
-  if (headings.length > 0) {
-    document.getElementById('toc').classList.remove('d-none');
-    tocList.innerHTML = '';
-    headings.forEach((heading, i) => {
-      const id = `heading-${i}`;
-      heading.id = id;
-      tocList.innerHTML += `<li><a href="#${id}">${heading.textContent}</a></li>`;
-    });
-  }
-}
-document.addEventListener("DOMContentLoaded", () => {
-  loadTOC();
-});
-
-</script>

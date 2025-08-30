@@ -153,8 +153,8 @@ async function loadPost() {
   postContentEl.innerHTML = '';
   postContentEl.appendChild(tempDiv);
 
-  // Add captions automatically
-  addCaptions(postContentEl);
+  // // Add captions automatically
+  // addCaptions(postContentEl);
 
   // Build TOC
   const tocList = document.getElementById('toc-list');
@@ -170,43 +170,43 @@ async function loadPost() {
   }
 }
 
-// Universal caption function
-function addCaptions(container) {
-  if (!container) return;
-  const images = Array.from(container.querySelectorAll("img"));
+// // Universal caption function
+// function addCaptions(container) {
+//   if (!container) return;
+//   const images = Array.from(container.querySelectorAll("img"));
 
-  images.forEach(img => {
-    if (img.dataset.captionProcessed) return;
+//   images.forEach(img => {
+//     if (img.dataset.captionProcessed) return;
 
-    // Wrap in figure
-    if (!img.closest("figure")) {
-      const figure = document.createElement("figure");
-      figure.classList.add("figure", "text-center");
-      img.parentNode.insertBefore(figure, img);
-      figure.appendChild(img);
-    }
+//     // Wrap in figure
+//     if (!img.closest("figure")) {
+//       const figure = document.createElement("figure");
+//       figure.classList.add("figure", "text-center");
+//       img.parentNode.insertBefore(figure, img);
+//       figure.appendChild(img);
+//     }
 
-    // Add figcaption
-    const captionText = img.alt || "";
-    if (captionText && !img.nextElementSibling?.classList.contains('figure-caption')) {
-      const figcap = document.createElement("figcaption");
-      figcap.classList.add("figure-caption", "text-center");
-      figcap.textContent = captionText;
-      img.parentNode.appendChild(figcap);
-    }
+//     // Add figcaption
+//     const captionText = img.alt || "";
+//     if (captionText && !img.nextElementSibling?.classList.contains('figure-caption')) {
+//       const figcap = document.createElement("figcaption");
+//       figcap.classList.add("figure-caption", "text-center");
+//       figcap.textContent = captionText;
+//       img.parentNode.appendChild(figcap);
+//     }
 
-    // Lightbox + lazy
-    img.setAttribute("data-glightbox", `title: ${captionText}`);
-    if (!img.hasAttribute("loading")) img.setAttribute("loading", "lazy");
+//     // Lightbox + lazy
+//     img.setAttribute("data-glightbox", `title: ${captionText}`);
+//     if (!img.hasAttribute("loading")) img.setAttribute("loading", "lazy");
 
-    img.dataset.captionProcessed = "true";
-  });
+//     img.dataset.captionProcessed = "true";
+//   });
 
-  // Initialize GLightbox once
-  if (window.GLightbox && !window.gLightboxInstance) {
-    window.gLightboxInstance = GLightbox({ selector: 'img[data-glightbox]' });
-  }
-}
+//   // Initialize GLightbox once
+//   if (window.GLightbox && !window.gLightboxInstance) {
+//     window.gLightboxInstance = GLightbox({ selector: 'img[data-glightbox]' });
+//   }
+// }
 
 // Share button
 function sharePost() {
@@ -221,10 +221,6 @@ function sharePost() {
 document.addEventListener("DOMContentLoaded", () => {
   loadPost();
   document.getElementById("shareBtn").addEventListener("click", sharePost);
-
-  // Example for homepage or other pages
-  const homepageContent = document.getElementById("content");
-  if (homepageContent) addCaptions(homepageContent);
 });
 </script>
 
