@@ -1,5 +1,5 @@
 // ===========================
-// BLOG INIT FUNCTION
+// BLOG INIT FUNCTION (No captions, no gallery)
 // ===========================
 async function initBlog() {
   const posts = [ 
@@ -50,81 +50,30 @@ async function initBlog() {
   // --- Sort newest first ---
   postsData.sort((a, b) => new Date(b.filename.slice(0, 10)) - new Date(a.filename.slice(0, 10)));
 
-  // --- Load image metadata ---
-  // const imageMeta = await fetch('image-data.json').then(res => res.json());
-
   // --- Render each post ---
   postsData.forEach((postData, index) => {
 
-    // --- Get preview (first 6 non-empty lines) ---
-    const paragraphs = postData.content.split(/\n\s*\n/); // split by blank lines = paragraphs
-    const previewText = paragraphs.slice(0, 5).join("\n\n"); // e.g., first 3 paragraphs
+    // --- Get preview (first 5 non-empty paragraphs) ---
+    const paragraphs = postData.content.split(/\n\s*\n/);
+    const previewText = paragraphs.slice(0, 5).join("\n\n");
     let previewHtml = marked.parse(previewText);
     
+    // --- Find first image for header if you want one ---
     const imageRegex = /!\[.*?\]\((.*?)\)/;
     const match = postData.content.match(imageRegex);
-    let headerImage = null;
+    let headerImage = match ? match[1] : null;
 
+    // Remove the first image from preview text if needed
+    if (match) {
+      postData.content = postData.content.replace(imageRegex, "");
+    }
+
+    // --- Build final HTML ---
     let finalHtml = "";
-if (headerImage) {
-  finalHtml += `<img class="header-image" src="${headerImage}" alt="Header Image">`;
-}
-finalHtml += previewHtml;
-
-
-    // --- Add captions & create gallery ---
-    const tempDiv = document.createElement('div');
-    tempDiv.innerHTML = previewHtml;
-
-    const images = Array.from(tempDiv.querySelectorAll('img'));
-    let galleryWrapper = null;
-
-    images.forEach((img) => {
-      const filename = img.getAttribute('src').split('/').pop();
-      const caption = (imageMeta && imageMeta[filename]) || "";
-      img.setAttribute('alt', caption || filename);
-        img.setAttribute('loading', 'lazy');
-
-      // Wrap img in figure if not already
-      if (!img.closest('figure')) {
-        const figure = document.createElement('figure');
-        img.parentNode.insertBefore(figure, img);
-        figure.appendChild(img);
-
-        if (caption) {
-          const figcap = document.createElement('figcaption');
-          figcap.textContent = caption;
-          figure.appendChild(figcap);
-        }
-      } else {
-        const figcap = img.nextElementSibling;
-        if (!figcap || figcap.tagName.toLowerCase() !== 'figcaption') {
-          if (caption) {
-            const figcapNew = document.createElement('figcaption');
-            figcapNew.textContent = caption;
-            img.after(figcapNew);
-          }
-        } else {
-          figcap.textContent = caption;
-        }
-      }
-
-      // Wrap consecutive figures in gallery
-      const figure = img.closest('figure');
-      const prevSibling = figure.previousElementSibling;
-
-      if (!galleryWrapper || !prevSibling || !prevSibling.classList.contains('gallery')) {
-        galleryWrapper = document.createElement('div');
-        galleryWrapper.classList.add('gallery');
-        figure.parentNode.insertBefore(galleryWrapper, figure);
-      }
-
-      galleryWrapper.appendChild(figure);
-    });
-
-    finalHtml = headerImage ? img + tempDiv.innerHTML : tempDiv.innerHTML;
-
-    previewHtml = tempDiv.innerHTML;
+    if (headerImage) {
+      finalHtml += `<img class="header-image" src="${headerImage}" alt="Header Image" loading="lazy">`;
+    }
+    finalHtml += previewHtml;
 
     // --- Create post card ---
     const postDiv = document.createElement("div");
@@ -133,13 +82,6 @@ finalHtml += previewHtml;
     const postId = `post${index}`;
     postDiv.id = postId;
     const postTitle = postData.content.split("\n").find(l => l.startsWith("# "))?.replace(/^# /, "") || postData.filename;
-    
-    if (match) {
-      headerImage = match[1]; // URL of the first image
-      // Remove only the first image line from the content
-      postData.content = postData.content.replace(imageRegex, "");
-    }
-
 
     postDiv.innerHTML = `
       <div class="card-body blog-post-content">

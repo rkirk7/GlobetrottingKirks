@@ -1,146 +1,287 @@
-<div class="content">
+<style>
+  /* Limit text width for readability */
+  #content .container {
+    max-width: 900px;
+  }
+
+  #toc {
+    position: fixed;
+    top: 150px;
+    right: 20px;
+    max-width: 250px;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    max-height: 80vh;
+    overflow-y: auto;
+    z-index: 999;
+    font-size: 0.95rem;
+  }
+  #toc h5 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+  #toc ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+  #toc li {
+    margin-bottom: 4px;
+  }
+  #toc a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: #333;
+  }
+  #toc a:hover {
+    color: #007bff;
+    text-decoration: underline;
+  }
+</style>
+
 <div class="container my-5" id="container">
-    <h1 class="text-center mb-5">Fabulous Hikes and Thrill-Seeking Around the World</h1>
+  <h1 class="text-center mb-5">
+    Fabulous Hikes and Thrill-Seeking Around the World
+  </h1>
 
-    <p style="font-size: 1.5rem;">Do you like the thrill of adventure? We certainly do! The Kirk girls have made it their mission to hike and explore the most beautiful places in the world. Although there's still so much more to discover, some of our favorite adventure locales include:</p>
+  <p>
+    <a
+      href="mailto:meimei.kirk@fora.travel?subject=Tell%20me%20more%20about%20active%20adventures!"
+      class="btn btn-primary"
+    >
+      Tell Me More About Active Adventures
+    </a>
+  </p>
 
-    <h2>New Zealand</h2>
+  <p style="font-size: 1.5rem">
+    Do you like the thrill of adventure? We certainly do! The Kirk girls have
+    made it their mission to hike and explore the most beautiful places in the
+    world. Although there's still so much more to discover, some of our favorite
+    adventure locales include:
+  </p>
 
-    <p class="about">We must love New Zealand, because we've both been there three times (twice together, once independently)! There's a reason this country was chosen as the setting for Middle Earth; everywhere you look there's stunning scenery. Some of our favorite experiences in New Zealand include:</p>
+  <h2>New Zealand</h2>
 
-    <div class="mb-5">      
-      <div class="row g-3 justify-content-center">
-        <div class="col-6 col-md-4 col-lg-2">
-            <p>The Tongariro Crossing</p>
-          <img src="Images/NewZealand/NewZealand1.jpeg" class="img-fluid rounded shadow-sm">
-        </div>
-        <div class="col-6 col-md-4 col-lg-2">
-            <p>The Milford Track</p>
-          <img src="Images/NewZealand/NewZealand2.jpeg" class="img-fluid rounded shadow-sm">
-        </div>
-        <div class="col-6 col-md-4 col-lg-2">
-            <p>The Kepler Track</p>
-          <img src="Images/NewZealand/NewZealand21.jpeg" class="img-fluid rounded shadow-sm">
-        </div>
-        <div class="col-6 col-md-4 col-lg-2">
-            <p>Sky Diving the Southern Alps</p>
-          <img src="Images/NewZealand/NewZealand19.jpeg" class="img-fluid rounded shadow-sm">
-        </div>
-        <div class="col-6 col-md-4 col-lg-2">
-            <p>Via Ferrata</p>
-          <img src="Images/NewZealand/NewZealand8.jpeg" class="img-fluid rounded shadow-sm">
-        </div>
-        <div class="col-6 col-md-4 col-lg-2">
-            <p>White Water Rafting</p>
-          <img src="Images/NewZealand/NewZealand1.jpeg" class="img-fluid rounded shadow-sm">
-        </div>
-        <div class="col-6 col-md-4 col-lg-2">
-            <p>Hiking Fox Glacier</p>
-          <img src="Images/NewZealand/NewZealand13.jpeg" class="img-fluid rounded shadow-sm">
-        </div>
+  <p class="about">
+    We must love New Zealand, because we've both been there three times (twice
+    together, once independently)! There's a reason this country was chosen as
+    the setting for Middle Earth; everywhere you look there's stunning scenery.
+    Some of our favorite experiences in New Zealand include:
+  </p>
+
+  <div class="mb-5">
+    <div class="row g-3 justify-content-center">
+      <div class="col-6 col-md-4 col-lg-2">
+        <p>The Tongariro Crossing</p>
+        <img
+          src="Images/NewZealand/NewZealand1.jpeg"
+          class="img-fluid rounded shadow-sm"
+        />
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <p>The Milford Track</p>
+        <img
+          src="Images/NewZealand/NewZealand2.jpeg"
+          class="img-fluid rounded shadow-sm"
+        />
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <p>The Kepler Track</p>
+        <img
+          src="Images/NewZealand/NewZealand21.jpeg"
+          class="img-fluid rounded shadow-sm"
+        />
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <p>Sky Diving the Southern Alps</p>
+        <img
+          src="Images/NewZealand/NewZealand19.jpeg"
+          class="img-fluid rounded shadow-sm"
+        />
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <p>Via Ferrata</p>
+        <img
+          src="Images/NewZealand/NewZealand8.jpeg"
+          class="img-fluid rounded shadow-sm"
+        />
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <p>White Water Rafting</p>
+        <img
+          src="Images/NewZealand/NewZealand1.jpeg"
+          class="img-fluid rounded shadow-sm"
+        />
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <p>Hiking Fox Glacier</p>
+        <img
+          src="Images/NewZealand/NewZealand13.jpeg"
+          class="img-fluid rounded shadow-sm"
+        />
       </div>
     </div>
+  </div>
 
-    <p class="about">Of course, there's so much else to do there as well, from cherry picking to white water rafting to a fabulous feast at Hobbiton.</p>
-  
-<br>
+  <p class="about">
+    Of course, there's so much else to do there as well, from cherry picking to
+    white water rafting to a fabulous feast at Hobbiton.
+  </p>
 
-<p><a href="mailto:meimei.kirk@fora.travel?subject=Tell%20me%20more%20about%20New%20Zealand!" class="btn btn-primary">
-  Tell Me More About New Zealand
-</a></p>
+  <br />
+  <hr />
 
-<hr>
+  <h2>Patagonia (Chile and Argentina)</h2>
 
-    <h2>Patagonia (Chile and Argentina)</h2>
+  <p class="about">
+    We've been here once and can't wait to go back. (In fact, the trip is
+    already planned--now to find the time!) Between completing the multi-day W
+    Trek in Chile's Torres Del Paine and conquering multiple rigorous hikes in
+    Argentina's El Chalten/Glaciares National Park, there's so much beautiful
+    scenery to soak in.
+  </p>
 
-    <p class="about">We've been here once and can't wait to go back. (In fact, the trip is already planned--now to find the time!) Between completing the multi-day W Trek in Chile's Torres Del Paine and conquering multiple rigorous hikes in Argentina's El Chalten/Glaciares National Park, there's so much beautiful scenery to soak in.</p>
-
-    <div class="mb-5">      
-      <div class="row g-3 justify-content-center">
-        <div class="col-6 col-md-4 col-lg-2">
-          <img src="Images/Patagonia/Patagonia2.jpeg" alt="Regan and Mei-Mei at the base of the Torres Del Paine" class="img-fluid rounded shadow-sm">
-        </div>
-        <div class="col-6 col-md-4 col-lg-2">
-          <img src="Images/Patagonia/Patagonia14.jpeg" alt="Mei-Mei in front of Nordenskjöld Lake" class="img-fluid rounded shadow-sm">
-        </div>
-        <div class="col-6 col-md-4 col-lg-2">
-            <p>Inside an Ice Cave in Grey Glacier</p>
-          <img src="Images/Patagonia/Patagonia15.jpeg" class="img-fluid rounded shadow-sm">
-        </div>
-        <div class="col-6 col-md-4 col-lg-2">
-          <img src="Images/Patagonia/Patagonia12.jpeg" alt="Laguna De Los Tres, El Chalten" class="img-fluid rounded shadow-sm">
-        </div>
-        <div class="col-6 col-md-4 col-lg-2">
-          <img src="Images/Patagonia/Patagonia16.jpeg" alt="Kayaking in front of Perito Glacier" class="img-fluid rounded shadow-sm">
-        </div>
+  <div class="mb-5">
+    <div class="row g-3 justify-content-center">
+      <div class="col-6 col-md-4 col-lg-2">
+        <img
+          src="Images/Patagonia/Patagonia2.jpeg"
+          alt="Regan and Mei-Mei at the base of the Torres Del Paine"
+          class="img-fluid rounded shadow-sm"
+        />
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <img
+          src="Images/Patagonia/Patagonia14.jpeg"
+          alt="Mei-Mei in front of Nordenskjöld Lake"
+          class="img-fluid rounded shadow-sm"
+        />
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <p>Inside an Ice Cave in Grey Glacier</p>
+        <img
+          src="Images/Patagonia/Patagonia15.jpeg"
+          class="img-fluid rounded shadow-sm"
+        />
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <img
+          src="Images/Patagonia/Patagonia12.jpeg"
+          alt="Laguna De Los Tres, El Chalten"
+          class="img-fluid rounded shadow-sm"
+        />
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <img
+          src="Images/Patagonia/Patagonia16.jpeg"
+          alt="Kayaking in front of Perito Glacier"
+          class="img-fluid rounded shadow-sm"
+        />
       </div>
     </div>
+  </div>
 
-    <p class="about">Of course, there's so much else to do there as well, from cherry picking to white water rafting to a fabulous feast at Hobbiton.</p>
+  <p class="about">
+    Of course, there's so much else to do there as well, from cherry picking to
+    white water rafting to a fabulous feast at Hobbiton.
+  </p>
 
-    <br>
+  <br />
+  <hr />
 
-    <p><a href="mailto:meimei.kirk@fora.travel?subject=Tell%20me%20more%20about%20Patagonia!" class="btn btn-primary">
-      Tell Me More About Patagonia
-    </a></p>
-<hr>
+  <h2>The Himalayas (Nepal)</h2>
 
-<h2>The Himalayas (Nepal)</h2>
+  <p class="about">
+    For adventurers, Nepal is best known as the home to Mount Everest. There are
+    so many astonishingly beautiful mountains here, though. We hiked the
+    Annapurna Circuit over the course of ten challenging, wonderful days. Regan
+    is dying to go back and do the Three Passes Trek. Anyone want to come along?
+  </p>
 
-    <p class="about">For adventurers, Nepal is best known as the home to Mount Everest. There are so many astonishingly beautiful mountains here, though. We hiked the Annapurna Circuit over the course of ten challenging, wonderful days. Regan is dying to go back and do the Three Passes Trek. Anyone want to come along?</p>
-
-    <div class="mb-5">      
-      <div class="row g-3 justify-content-center">
-        <div class="col-6 col-md-4 col-lg-2">
-            <p>Hiking the Annapurna Circuit</p>
-          <img src="Images/Nepal/Nepal7.jpeg" class="img-fluid rounded shadow-sm">
-        </div>
-        <div class="col-6 col-md-4 col-lg-2">
-          <p>Hiking the Annapurna Circuit</p>
-        <img src="Images/Nepal/Nepal13.jpeg" class="img-fluid rounded shadow-sm">
+  <div class="mb-5">
+    <div class="row g-3 justify-content-center">
+      <div class="col-6 col-md-4 col-lg-2">
+        <p>Hiking the Annapurna Circuit</p>
+        <img
+          src="Images/Nepal/Nepal7.jpeg"
+          class="img-fluid rounded shadow-sm"
+        />
       </div>
-        <div class="col-6 col-md-4 col-lg-2">
-          <p>Hiking the Annapurna Circuit</p>
-        <img src="Images/Nepal/Nepal8.jpeg" class="img-fluid rounded shadow-sm">
+      <div class="col-6 col-md-4 col-lg-2">
+        <p>Hiking the Annapurna Circuit</p>
+        <img
+          src="Images/Nepal/Nepal13.jpeg"
+          class="img-fluid rounded shadow-sm"
+        />
       </div>
-        <div class="col-6 col-md-4 col-lg-2">
-            <p>Hiking the Annapurna Circuit</p>
-          <img src="Images/Nepal/Nepal5.jpeg" class="img-fluid rounded shadow-sm">
-        </div>
-        <div class="col-6 col-md-4 col-lg-2">
-          <p>Hiking the Annapurna Circuit</p>
-        <img src="Images/Nepal/Nepal6.jpeg" class="img-fluid rounded shadow-sm">
+      <div class="col-6 col-md-4 col-lg-2">
+        <p>Hiking the Annapurna Circuit</p>
+        <img
+          src="Images/Nepal/Nepal8.jpeg"
+          class="img-fluid rounded shadow-sm"
+        />
       </div>
-        <div class="col-6 col-md-4 col-lg-2">
-            <p>Hiking the Annapurna Circuit</p>
-          <img src="Images/Nepal/Nepal4.jpeg" class="img-fluid rounded shadow-sm">
-        </div>
-        <div class="col-6 col-md-4 col-lg-2">
-            <p>Helicopter Ride from Kathmandu to the most dangerous airport in the world (Lukla)</p>
-          <img src="Images/Patagonia/Patagonia12.jpeg" class="img-fluid rounded shadow-sm">
-        </div>
-        <div class="col-6 col-md-4 col-lg-2">
-          <img src="Images/Nepal/Nepal1.jpeg" alt="Seeing Everest on our departure from Kathmandu" class="img-fluid rounded shadow-sm">
-        </div>
-        <div class="col-6 col-md-4 col-lg-2">
-          <p>Paragliding in Pokhara</p>
-        <img src="Images/Nepal/Nepal3.jpeg" class="img-fluid rounded shadow-sm">
+      <div class="col-6 col-md-4 col-lg-2">
+        <p>Hiking the Annapurna Circuit</p>
+        <img
+          src="Images/Nepal/Nepal5.jpeg"
+          class="img-fluid rounded shadow-sm"
+        />
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <p>Hiking the Annapurna Circuit</p>
+        <img
+          src="Images/Nepal/Nepal6.jpeg"
+          class="img-fluid rounded shadow-sm"
+        />
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <p>Hiking the Annapurna Circuit</p>
+        <img
+          src="Images/Nepal/Nepal4.jpeg"
+          class="img-fluid rounded shadow-sm"
+        />
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <p>
+          Helicopter Ride from Kathmandu to the most dangerous airport in the
+          world (Lukla)
+        </p>
+        <img
+          src="Images/Patagonia/Patagonia12.jpeg"
+          class="img-fluid rounded shadow-sm"
+        />
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <img
+          src="Images/Nepal/Nepal1.jpeg"
+          alt="Seeing Everest on our departure from Kathmandu"
+          class="img-fluid rounded shadow-sm"
+        />
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <p>Paragliding in Pokhara</p>
+        <img
+          src="Images/Nepal/Nepal3.jpeg"
+          class="img-fluid rounded shadow-sm"
+        />
       </div>
       <div class="col-6 col-md-4 col-lg-2">
         <p>Searching for Tigers in Bardiya</p>
-      <img src="Images/Nepal/Nepal2.jpeg" class="img-fluid rounded shadow-sm">
-    </div>
+        <img
+          src="Images/Nepal/Nepal2.jpeg"
+          class="img-fluid rounded shadow-sm"
+        />
       </div>
     </div>
-
-    <br>
-
-    <p><a href="mailto:meimei.kirk@fora.travel?subject=Tell%20me%20more%20about%20the%20Himalayas!" class="btn btn-primary">
-      Tell Me More About the Himalayas
-    </a></p>
-<hr>
   </div>
 
+  <br />
+  <hr />
+</div>
 
 <div id="toc">
   <h3>Table of Contents</h3>
