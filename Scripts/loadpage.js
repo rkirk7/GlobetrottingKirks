@@ -1,5 +1,3 @@
-let imageData = {};
-
 async function loadPage(page) {
   const res = await fetch(page);
   const content = await res.text();
