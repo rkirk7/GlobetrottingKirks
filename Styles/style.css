@@ -39,7 +39,7 @@ a:hover {
 .navbar-brand img {
   object-fit: contain;
   display: block;
-  max-height: 80px;
+  max-height: 70px;
 }
 
 .navbar-nav .nav-link {
