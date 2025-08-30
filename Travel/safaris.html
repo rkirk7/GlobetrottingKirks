@@ -46,17 +46,18 @@
   <div class="hero" data-hero="../Images/19Safari/19Safari27.jpeg">
     <div class="hero-content text-center">
       <h1 class="hero-title">Safaris</h1>
-      <a
-        href="mailto:meimei.kirk@fora.travel?subject=I%20am%20interested%20in%20safaris%20"
-        class="btn btn-primary"
-      >
-        I am interested in going on safari!
-      </a>
     </div>
   </div>
 
   <br />
   <br />
+
+ <p><a
+    href="mailto:meimei.kirk@fora.travel?subject=I%20am%20interested%20in%20safaris%20"
+    class="btn btn-primary"
+  >
+    I am interested in going on safari!
+  </a></p>
 
   <p style="font-size: 1.5rem">
     Whenever we're asked our favorite type of travel, it's hard to come up with
@@ -65,6 +66,8 @@
     in safari trips and would love to help you plan your dream safari. Here are
     some of the great places we've been:
   </p>
+
+  <h2>Top</h2>
 
   <div class="travel-section">
     <h2>Botswana</h2>
@@ -1021,104 +1024,33 @@
   </div>
 </div>
 
-<!-- <div id="toc">
+<div id="toc">
   <h3>Table of Contents</h3>
   <ul id="toc-list"></ul>
 </div>
 
 
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
 <script>
-/**
- * Adds captions from alt text and sets up lightbox for all images inside a container.
- * @param {HTMLElement} container - The element containing images to process
- */
-function addCaptions(container) {
-  if (!container) return;
+async function loadTOC() {
+  const postContentEl = document.getElementById('container');
 
-  const images = Array.from(container.querySelectorAll("img"));
-
-  images.forEach(img => {
-    // Skip if already processed
-    if (img.dataset.captionProcessed) return;
-
-    const captionText = img.alt || "";
-
-    // Add caption div if alt text exists
-    if (captionText) {
-      const caption = document.createElement("div");
-      caption.classList.add("image-caption");
-      caption.style.textAlign = "center";
-      caption.style.fontSize = "0.9rem";
-      caption.style.color = "#555";
-      caption.style.marginTop = "4px";
-      caption.textContent = captionText;
-
-      img.parentNode.insertBefore(caption, img.nextSibling);
-    }
-
-    // Setup GLightbox
-    img.setAttribute("data-glightbox", `title: ${captionText}`);
-    if (!img.hasAttribute("loading")) img.setAttribute("loading", "lazy");
-
-    // Mark as processed
-    img.dataset.captionProcessed = "true";
-  });
-
-  // Initialize GLightbox once
-  if (window.GLightbox && !window.gLightboxInstance) {
-    window.gLightboxInstance = GLightbox({ selector: 'img[data-glightbox]' });
+  // Build TOC
+  const tocList = document.getElementById('toc-list');
+  const headings = postContentEl.querySelectorAll('h2, h3');
+  if (headings.length > 0) {
+    document.getElementById('toc').classList.remove('d-none');
+    tocList.innerHTML = '';
+    headings.forEach((heading, i) => {
+      const id = `heading-${i}`;
+      heading.id = id;
+      tocList.innerHTML += `<li><a href="#${id}">${heading.textContent}</a></li>`;
+    });
   }
 }
-
-// Example usage for homepage or blog pages
 document.addEventListener("DOMContentLoaded", () => {
-  // For homepage content
-  const content = document.getElementById("content");
-  addCaptions(content);
-  const tocList = document.getElementById("toc-list");
-  if (!tocList) return;
-
-  // Find all <h2> inside travel sections
-  const sections = document.querySelectorAll(".travel-section h2");
-
-  sections.forEach((section, index) => {
-    // Give each section an ID if it doesn't have one
-    if (!section.id) section.id = `section-${index+1}`;
-
-    // Create TOC item
-    const li = document.createElement("li");
-    const a = document.createElement("a");
-    a.href = `#${section.id}`;
-    a.textContent = section.textContent;
-    li.appendChild(a);
-    tocList.appendChild(li);
-
-    // Add "Return to top" link at the end of the section
-    const returnLink = document.createElement("a");
-    returnLink.href = "#toc";
-    returnLink.textContent = "Return to top ↑";
-    returnLink.style.display = "block";
-    returnLink.style.marginTop = "1em";
-    returnLink.style.fontSize = "0.9rem";
-    returnLink.style.textAlign = "right";
-
-    // Append it after the section container
-    section.parentNode.appendChild(returnLink);
-  });
-
-  // Optional: smooth scrolling for TOC and return links
-  document.querySelectorAll('#toc a, .travel-section a[href^="#"]').forEach(link => {
-    link.addEventListener("click", (e) => {
-      e.preventDefault();
-      const targetId = link.getAttribute("href").substring(1);
-      const target = document.getElementById(targetId);
-      if (target) {
-        window.scrollTo({
-          top: target.offsetTop - 60, // offset for fixed header if needed
-          behavior: 'smooth'
-        });
-      }
-    });
-  });
+  loadTOC();
 });
-</script> -->
+
+</script>
