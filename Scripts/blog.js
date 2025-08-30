@@ -72,55 +72,55 @@ if (headerImage) {
 finalHtml += previewHtml;
 
 
-    // // --- Add captions & create gallery ---
-    // const tempDiv = document.createElement('div');
-    // tempDiv.innerHTML = previewHtml;
+    // --- Add captions & create gallery ---
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = previewHtml;
 
-    // const images = Array.from(tempDiv.querySelectorAll('img'));
-    // let galleryWrapper = null;
+    const images = Array.from(tempDiv.querySelectorAll('img'));
+    let galleryWrapper = null;
 
-    // images.forEach((img) => {
-    //   const filename = img.getAttribute('src').split('/').pop();
-    //   const caption = (imageMeta && imageMeta[filename]) || "";
-    //   img.setAttribute('alt', caption || filename);
-    //     img.setAttribute('loading', 'lazy');
+    images.forEach((img) => {
+      const filename = img.getAttribute('src').split('/').pop();
+      const caption = (imageMeta && imageMeta[filename]) || "";
+      img.setAttribute('alt', caption || filename);
+        img.setAttribute('loading', 'lazy');
 
-    //   // Wrap img in figure if not already
-    //   if (!img.closest('figure')) {
-    //     const figure = document.createElement('figure');
-    //     img.parentNode.insertBefore(figure, img);
-    //     figure.appendChild(img);
+      // Wrap img in figure if not already
+      if (!img.closest('figure')) {
+        const figure = document.createElement('figure');
+        img.parentNode.insertBefore(figure, img);
+        figure.appendChild(img);
 
-    //     if (caption) {
-    //       const figcap = document.createElement('figcaption');
-    //       figcap.textContent = caption;
-    //       figure.appendChild(figcap);
-    //     }
-    //   } else {
-    //     const figcap = img.nextElementSibling;
-    //     if (!figcap || figcap.tagName.toLowerCase() !== 'figcaption') {
-    //       if (caption) {
-    //         const figcapNew = document.createElement('figcaption');
-    //         figcapNew.textContent = caption;
-    //         img.after(figcapNew);
-    //       }
-    //     } else {
-    //       figcap.textContent = caption;
-    //     }
-    //   }
+        if (caption) {
+          const figcap = document.createElement('figcaption');
+          figcap.textContent = caption;
+          figure.appendChild(figcap);
+        }
+      } else {
+        const figcap = img.nextElementSibling;
+        if (!figcap || figcap.tagName.toLowerCase() !== 'figcaption') {
+          if (caption) {
+            const figcapNew = document.createElement('figcaption');
+            figcapNew.textContent = caption;
+            img.after(figcapNew);
+          }
+        } else {
+          figcap.textContent = caption;
+        }
+      }
 
-    //   // Wrap consecutive figures in gallery
-    //   const figure = img.closest('figure');
-    //   const prevSibling = figure.previousElementSibling;
+      // Wrap consecutive figures in gallery
+      const figure = img.closest('figure');
+      const prevSibling = figure.previousElementSibling;
 
-    //   if (!galleryWrapper || !prevSibling || !prevSibling.classList.contains('gallery')) {
-    //     galleryWrapper = document.createElement('div');
-    //     galleryWrapper.classList.add('gallery');
-    //     figure.parentNode.insertBefore(galleryWrapper, figure);
-    //   }
+      if (!galleryWrapper || !prevSibling || !prevSibling.classList.contains('gallery')) {
+        galleryWrapper = document.createElement('div');
+        galleryWrapper.classList.add('gallery');
+        figure.parentNode.insertBefore(galleryWrapper, figure);
+      }
 
-    //   galleryWrapper.appendChild(figure);
-    // });
+      galleryWrapper.appendChild(figure);
+    });
 
     finalHtml = headerImage ? img + tempDiv.innerHTML : tempDiv.innerHTML;
 
