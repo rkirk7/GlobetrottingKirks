@@ -2,6 +2,7 @@ const pageCache = {};
 
 // -------------------- Load Page --------------------
 async function loadPage(page) {
+   cancelPendingImages();
   const content = document.getElementById("content");
   requestAnimationFrame(() => window.scrollTo(0, 0));
 
@@ -22,6 +23,10 @@ async function loadPage(page) {
     if (!mainContainer) throw new Error("No #container found in page");
 
     // Insert the container itself
+
+    mainContainer.querySelectorAll("img").forEach(img => {
+  if (!img.hasAttribute("loading")) img.setAttribute("loading", "lazy");
+});
     content.innerHTML = "";
     content.appendChild(mainContainer.cloneNode(true));
 
@@ -143,17 +148,11 @@ if (tocToggle) {
 }
 
 
-// let imageData = {};
-
-// async function loadImageData() {
-//   if (Object.keys(imageData).length) return; // already loaded
-//   try {
-//     const res = await fetch("image-data.json");
-//     if (res.ok) imageData = await res.json();
-//   } catch (err) {
-//     console.error("Failed to load image-data.json", err);
-//   }
-// }
+function cancelPendingImages() {
+  document.querySelectorAll("img").forEach(img => {
+    img.src = ""; // stops download
+  });
+}
 
 async function processImages(container) {
   if (!container) return;
