@@ -1,14 +1,18 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById('mc-embedded-subscribe-form');
+  if (!form) return; // prevent errors if form not found
 
-document.getElementById('newsletter-form').addEventListener('submit', function(e) {
-  e.preventDefault();
+  form.addEventListener('submit', function(e) {
+    // This will NOT block Mailchimp's default behavior
+    // Only useful if you want to show your own success popup
+    e.preventDefault();
 
-  const email = document.getElementById('emailInput').value.trim();
-  if (!email) return;
+    const email = document.getElementById('mce-EMAIL').value.trim();
+    if (!email) return;
 
-  // TODO: Send email to backend or Mailchimp API
-  console.log("Newsletter signup:", email);
+    console.log("Newsletter signup:", email);
 
-  // Show success message
-  document.getElementById('form-message').classList.remove('d-none');
-  document.getElementById('emailInput').value = '';
+    alert("Success! Thanks for subscribing.");
+    form.reset();
+  });
 });
