@@ -58,8 +58,8 @@ async function initializePageScripts(page) {
     hero.style.backgroundImage = `url('${hero.dataset.hero}')`;
   }
 
-  // Table of Contents
-  loadTOC();
+  // Table of Contents: run after the DOM has fully updated
+  requestAnimationFrame(() => loadTOC());
 
   // Process images and galleries
   await processImages(content);
@@ -70,7 +70,11 @@ async function initializePageScripts(page) {
 }
 
 
+
 // -------------------- Smooth Scroll + Active TOC --------------------
+
+let tocScrollListenerAdded = false;
+
 function loadTOC() {
   const postContentEl = document.querySelector("#content .container");
   if (!postContentEl) return;
@@ -80,7 +84,6 @@ function loadTOC() {
   if (!toc || !tocList) return;
 
   const headings = postContentEl.querySelectorAll("h2, h3");
-
   if (headings.length === 0) {
     toc.classList.add("d-none");
     return;
@@ -99,57 +102,55 @@ function loadTOC() {
   });
 
   const tocToggle = document.getElementById("toc-toggle");
-if (tocToggle) {
-  tocToggle.addEventListener("click", () => {
-    tocList.classList.toggle("show");
-  });
-}
+  if (tocToggle) {
+    tocToggle.addEventListener("click", () => {
+      tocList.classList.toggle("show");
+    });
+  }
 
   // Smooth scroll
   tocList.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", (e) => {
-    e.preventDefault();
-    const target = document.getElementById(
-      link.getAttribute("href").substring(1)
-    );
-    if (target) {
-      window.scrollTo({
-        top: target.getBoundingClientRect().top + window.scrollY - 80, // offset for navbar
-        behavior: "smooth",
-      });
-    }
-
-    // Close TOC dropdown on small screens
-    if (window.innerWidth < 992) {
-      tocList.classList.remove("show");
-    }
-  });
-});
-
-
-  // Highlight headings while scrolling
-  let ticking = false;
-  window.addEventListener("scroll", () => {
-    if (!ticking) {
-      window.requestAnimationFrame(() => {
-        let currentId = "";
-        headings.forEach(h => {
-          if (h.getBoundingClientRect().top <= 90) currentId = h.id;
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const target = document.getElementById(link.getAttribute("href").substring(1));
+      if (target) {
+        window.scrollTo({
+          top: target.getBoundingClientRect().top + window.scrollY - 80,
+          behavior: "smooth",
         });
+      }
 
-        tocList.querySelectorAll("a").forEach(link => {
-          link.classList.toggle("active", link.getAttribute("href") === `#${currentId}`);
-        });
-        ticking = false;
-      });
-      ticking = true;
-    }
+      if (window.innerWidth < 992) tocList.classList.remove("show");
+    });
   });
+
+  // Highlight headings while scrolling (only attach once)
+  if (!tocScrollListenerAdded) {
+    let ticking = false;
+    window.addEventListener("scroll", () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          let currentId = "";
+          headings.forEach(h => {
+            if (h.getBoundingClientRect().top <= 90) currentId = h.id;
+          });
+
+          tocList.querySelectorAll("a").forEach(link => {
+            link.classList.toggle("active", link.getAttribute("href") === `#${currentId}`);
+          });
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+    tocScrollListenerAdded = true;
+  }
 }
 
 
+
 function cancelPendingImages() {
-  document.querySelectorAll("img").forEach(img => {
+  document.querySelectorAll("#content img").forEach(img => {
     img.src = ""; // stops download
   });
 }
