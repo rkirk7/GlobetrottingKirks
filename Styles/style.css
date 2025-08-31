@@ -177,8 +177,9 @@ a:hover {
 
 .gallery img {
   width: 100%;
-  height: auto;
+  height: 250px;
   border-radius: 6px;
+  object-fit: cover;    /* Crop rather than stretch the image */
   display: block;
   transition: transform 0.2s ease;
 }
