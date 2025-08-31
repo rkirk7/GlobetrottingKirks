@@ -59,7 +59,7 @@ async function initBlog() {
     tempDiv.innerHTML = previewHtml;
     tempDiv.querySelectorAll("img").forEach(img => {
       img.style.maxWidth = "100%";
-      img.style.height = "auto";
+      img.style.maxHeight = "300px";
       img.style.display = "block";
       img.style.margin = "0 auto";
       img.style.borderRadius = "6px";
