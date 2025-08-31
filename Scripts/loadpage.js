@@ -74,7 +74,7 @@ function initializePageScripts(page) {
   if (page === "blog.html" && typeof initBlog === "function") initBlog();
 }
 
-// -------------------- Load Table of Contents --------------------
+// -------------------- Smooth Scroll + Active TOC --------------------
 function loadTOC() {
   const postContentEl = document.querySelector("#content .container");
   if (!postContentEl) return;
@@ -97,7 +97,41 @@ function loadTOC() {
       li.innerHTML = `<a href="#${id}">${heading.textContent}</a>`;
       tocList.appendChild(li);
     });
+
+    // Smooth scroll on click
+    tocList.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", e => {
+        e.preventDefault();
+        const target = document.getElementById(link.getAttribute("href").substring(1));
+        if (target) {
+          window.scrollTo({
+            top: target.getBoundingClientRect().top + window.scrollY - 80, // offset for navbar
+            behavior: "smooth"
+          });
+        }
+      });
+    });
+
+    // Highlight current heading while scrolling
+    window.addEventListener("scroll", () => {
+      let currentId = "";
+      headings.forEach(h => {
+        const offsetTop = h.getBoundingClientRect().top;
+        if (offsetTop <= 90) { // slightly below navbar
+          currentId = h.id;
+        }
+      });
+
+      tocList.querySelectorAll("a").forEach(link => {
+        if (link.getAttribute("href") === `#${currentId}`) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+    });
   } else {
     toc.classList.add("d-none");
   }
 }
+
