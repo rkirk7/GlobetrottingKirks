@@ -44,7 +44,7 @@ async function loadPage(page) {
 }
 
 // -------------------- Initialize Page Scripts --------------------
-function initializePageScripts(page) {
+async function initializePageScripts(page) {
   const content = document.getElementById("content");
 
   // Hero background
@@ -56,21 +56,14 @@ function initializePageScripts(page) {
   // Table of Contents
   loadTOC();
 
-  // GLightbox for galleries
-  if (typeof GLightbox !== "undefined") {
-    if (!window.glightboxInstance) {
-      window.glightboxInstance = GLightbox({ selector: ".glightbox" });
-    } else {
-      window.glightboxInstance.reload();
-    }
-  }
+  // Process images and galleries
+  await processImages(content);
 
   // Page-specific scripts
   if (page === "albums.html" && typeof initAlbums === "function") initAlbums();
   if (page === "blog.html" && typeof initBlog === "function") initBlog();
-
-  initGalleries();
 }
+
 
 // -------------------- Smooth Scroll + Active TOC --------------------
 function loadTOC() {
@@ -108,19 +101,6 @@ if (tocToggle) {
 }
 
   // Smooth scroll
-  tocList.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", e => {
-      e.preventDefault();
-      const target = document.getElementById(link.getAttribute("href").substring(1));
-      if (target) {
-        window.scrollTo({
-          top: target.getBoundingClientRect().top + window.scrollY - 80,
-          behavior: "smooth"
-        });
-      }
-    });
-  });
-
   tocList.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", (e) => {
     e.preventDefault();
@@ -163,46 +143,61 @@ if (tocToggle) {
 }
 
 
-let imageData = {};
+// let imageData = {};
 
-// Load image-data.json
-async function loadImageData() {
-  try {
-    const res = await fetch("image-data.json");
-    imageData = await res.json();
-  } catch (err) {
-    console.error("Failed to load image-data.json", err);
+// async function loadImageData() {
+//   if (Object.keys(imageData).length) return; // already loaded
+//   try {
+//     const res = await fetch("image-data.json");
+//     if (res.ok) imageData = await res.json();
+//   } catch (err) {
+//     console.error("Failed to load image-data.json", err);
+//   }
+// }
+
+async function processImages(container) {
+  if (!container) return;
+
+  // Load image-data.json once
+  if (!window._imageData) {
+    try {
+      const res = await fetch("image-data.json");
+      window._imageData = res.ok ? await res.json() : {};
+    } catch (err) {
+      console.warn("Could not load image captions:", err);
+      window._imageData = {};
+    }
   }
-}
 
-// Initialize galleries
-async function initGalleries() {
-  const galleries = document.querySelectorAll(".gallery");
-  if (!galleries.length) return; // exit early if no galleries
+  const images = container.querySelectorAll("img");
+  images.forEach(img => {
+    const src = img.getAttribute("src");
+    const fileName = src.split("/").pop();
+    const caption = window._imageData[fileName] || img.alt || "";
 
-  // Fetch the JSON with captions (once)
-  let imageData = {};
-  try {
-    const res = await fetch("image-data.json");
-    if (res.ok) imageData = await res.json();
-  } catch (err) {
-    console.warn("Could not load image captions:", err);
-  }
+    // Wrap in <figure> if not already
+    if (!img.closest("figure")) {
+      const figure = document.createElement("figure");
+      figure.classList.add("figure", "text-center");
+      img.parentNode.insertBefore(figure, img);
+      figure.appendChild(img);
+    }
 
-  galleries.forEach((gallery) => {
-    const images = gallery.querySelectorAll("img");
+    // Add <figcaption>
+    if (caption && !img.nextElementSibling?.classList.contains('figure-caption')) {
+      const figcap = document.createElement("figcaption");
+      figcap.classList.add("figure-caption", "text-center");
+      figcap.textContent = caption;
+      img.parentNode.appendChild(figcap);
+    }
 
-    images.forEach((img) => {
-      const src = img.getAttribute("src");
-      const fileName = src.split("/").pop(); // get "19Safari1.jpeg"
-      const caption = imageData[fileName] || "";
-
-      img.setAttribute("data-glightbox", "title:" + caption);
-      img.classList.add("glightbox");
-    });
+    // GLightbox setup
+    img.setAttribute("data-glightbox", "title:" + caption);
+    img.classList.add("glightbox");
+    if (!img.hasAttribute("loading")) img.setAttribute("loading", "lazy");
   });
 
-  // Initialize or reload GLightbox
+  // Initialize/reload GLightbox
   if (typeof GLightbox !== "undefined") {
     if (!window.glightboxInstance) {
       window.glightboxInstance = GLightbox({ selector: ".glightbox" });
@@ -211,3 +206,4 @@ async function initGalleries() {
     }
   }
 }
+
