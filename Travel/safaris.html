@@ -4,88 +4,87 @@
     max-width: 900px;
   }
 
-/* Desktop: fixed sidebar */
-#toc {
-  position: fixed;
-  top: 100px;
-  left: 20px;
-  width: 220px;
-  max-height: calc(100vh - 120px);
-  overflow-y: auto;
-  background: #fff;
-  border: 1px solid #ddd;
-  padding: 10px;
-  border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  z-index: 1000;
-}
-
-/* Hide the toggle button by default on desktop */
-#toc-toggle {
-  display: none;
-  width: 100%;
-  margin-bottom: 10px;
-  background: #f8f9fa;
-  border: 1px solid #ccc;
-  padding: 6px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-/* TOC links */
-#toc ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-#toc li a {
-  display: block;
-  padding: 4px 0;
-  color: #333;
-  text-decoration: none;
-}
-
-#toc li a.active {
-  font-weight: bold;
-  color: #007bff;
-}
-
-/* Responsive: small screens */
-@media (max-width: 992px) {
+  /* Desktop: fixed sidebar */
   #toc {
-    position: static;
-    width: 100%;
-    max-height: none;
-    border: none;
-    box-shadow: none;
-    padding: 0;
-    margin-bottom: 20px;
+    position: fixed;
+    top: 100px;
+    left: 20px;
+    width: 220px;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
   }
 
+  /* Hide the toggle button by default on desktop */
   #toc-toggle {
-    display: block;
-  }
-
-  #toc-list {
     display: none;
-    padding-left: 0;
-    margin-top: 0;
+    width: 100%;
+    margin-bottom: 10px;
+    background: #f8f9fa;
+    border: 1px solid #ccc;
+    padding: 6px;
+    border-radius: 4px;
+    cursor: pointer;
   }
 
-  #toc-list.show {
+  /* TOC links */
+  #toc ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  #toc li a {
     display: block;
+    padding: 4px 0;
+    color: #333;
+    text-decoration: none;
   }
-}
 
+  #toc li a.active {
+    font-weight: bold;
+    color: #007bff;
+  }
+
+  /* Responsive: small screens */
+  @media (max-width: 992px) {
+    #toc {
+      position: static;
+      width: 100%;
+      max-height: none;
+      border: none;
+      box-shadow: none;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+
+    #toc-toggle {
+      display: block;
+    }
+
+    #toc-list {
+      display: none;
+      padding-left: 0;
+      margin-top: 0;
+    }
+
+    #toc-list.show {
+      display: block;
+    }
+  }
 </style>
 
-  <div id="toc">
-    <h5>Table of Contents</h5>
-    <ul id="toc-list"></ul>
-  </div>
+<div id="toc" class="toc bg-light p-3 border rounded d-none d-md-block">
+  <button id="toc-toggle" class="btn btn-sm btn-primary d-md-none mb-2">☰ Table of Contents</button>
+  <ul id="toc-list" class="list-unstyled mb-0"></ul>
+</div>
 
-  <div class="container my-5" id="container">
+<div class="container my-5" id="container">
   <div class="hero" data-hero="../Images/19Safari/19Safari27.jpeg">
     <div class="hero-content text-center">
       <h1 class="hero-title">Safaris</h1>
@@ -93,7 +92,13 @@
   </div>
 
   <br />
-  <br />
+
+  <p class="intro-text">
+    Whenever we're asked our favorite type of travel, it's hard to come up with
+    an answer. However, we've gone on safari more times than we've done anything
+    else--which should tell you how much we love the experience. We specialize
+    in safari trips and would love to help you plan your dream safari.
+  </p>
 
   <p>
     <a
@@ -102,14 +107,6 @@
     >
       I am interested in going on safari!
     </a>
-  </p>
-
-  <p class="intro-text">
-    Whenever we're asked our favorite type of travel, it's hard to come up with
-    an answer. However, we've gone on safari more times than we've done anything
-    else--which should tell you how much we love the experience. We specialize
-    in safari trips and would love to help you plan your dream safari. Here are
-    some of the great places we've been:
   </p>
 
   <h2 id="top" hidden>Top</h2>
@@ -127,7 +124,6 @@
       program to encourage more women to become guides!
     </p>
 
-    <br />
     <p class="about">
       <strong>What makes Botswana stand out:</strong>
     </p>
@@ -141,75 +137,73 @@
     </ul>
 
     <div class="gallery">
-      <div class="mb-5">
-        <div class="row g-3 justify-content-center">
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/23Safari/23Safari2.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/23Safari/23Safari36.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/23Safari/23Safari44.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/23Safari/23Safari45.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/19Safari/19Safari21.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/19Safari/19Safari22.jpeg"
-              alt="Elephants"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/19Safari/19Safari23.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/19Safari/19Safari24.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/19Safari/19Safari26.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/19Safari/19Safari27.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/19Safari/19Safari28.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
+      <div class="row g-3 justify-content-center">
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/23Safari/23Safari2.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/23Safari/23Safari36.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/23Safari/23Safari44.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/23Safari/23Safari45.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/19Safari/19Safari21.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/19Safari/19Safari22.jpeg"
+            alt="Elephants"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/19Safari/19Safari23.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/19Safari/19Safari24.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/19Safari/19Safari26.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/19Safari/19Safari27.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/19Safari/19Safari28.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
         </div>
       </div>
     </div>
@@ -227,7 +221,7 @@
       (lion, leopard, elephant, buffalo, rhino) in one park. In fact, if you're
       lucky, you might see them in one drive!
     </p>
-    <br />
+
     <p class="about">
       <strong
         >What makes South Africa (and specifically Sabi Sands) stand
@@ -259,57 +253,55 @@
     </p>
 
     <div class="gallery">
-      <div class="mb-5">
-        <div class="row g-3 justify-content-center">
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/24Safari/24Safari1.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/24Safari/24Safari2.jpeg"
-              alt="test caption"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/24Safari/24Safari5.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/24Safari/24Safari7.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/24Safari/24Safari8.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/24Safari/24Safari9.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/24Safari/24Safari10.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/24Safari/24Safari20.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
+      <div class="row g-3 justify-content-center">
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/24Safari/24Safari1.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/24Safari/24Safari2.jpeg"
+            alt="test caption"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/24Safari/24Safari5.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/24Safari/24Safari7.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/24Safari/24Safari8.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/24Safari/24Safari9.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/24Safari/24Safari10.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/24Safari/24Safari20.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
         </div>
       </div>
     </div>
@@ -330,7 +322,6 @@
       life.
     </p>
 
-    <br />
     <p class="about">
       <strong>What makes Zimbabwe stand out:</strong>
     </p>
@@ -349,86 +340,84 @@
     </ul>
 
     <div class="gallery">
-      <div class="mb-5">
-        <div class="row g-3 justify-content-center">
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/23Safari/23Safari46.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/23Safari/23Safari47.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/23Safari/23Safari27.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/24Safari/24Safari11.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/24Safari/24Safari14.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/24Safari/24Safari15.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/24Safari/24Safari16.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/24Safari/24Safari17.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/19Safari/19Safari13.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/24Safari/24Safari14.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/24Safari/24Safari15.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/24Safari/24Safari16.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/24Safari/24Safari18.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
+      <div class="row g-3 justify-content-center">
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/23Safari/23Safari46.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/23Safari/23Safari47.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/23Safari/23Safari27.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/24Safari/24Safari11.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/24Safari/24Safari14.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/24Safari/24Safari15.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/24Safari/24Safari16.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/24Safari/24Safari17.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/19Safari/19Safari13.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/24Safari/24Safari14.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/24Safari/24Safari15.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/24Safari/24Safari16.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/24Safari/24Safari18.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
         </div>
       </div>
     </div>
@@ -444,7 +433,6 @@
       and wild dogs lounging or hunting.
     </p>
 
-    <br />
     <p class="about">
       <strong>What makes Zambia stand out:</strong>
     </p>
@@ -460,132 +448,130 @@
     </ul>
 
     <div class="gallery">
-      <div class="mb-5">
-        <div class="row g-3 justify-content-center">
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/19Safari/19Safari3.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/23Safari/23Safari5.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/23Safari/23Safari6.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/23Safari/23Safari7.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/23Safari/23Safari8.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/23Safari/23Safari9.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/23Safari/23Safari30.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/23Safari/23Safari48.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/23Safari/23Safari49.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/19Safari/19Safari4.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/19Safari/19Safari5.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/19Safari/19Safari6.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/19Safari/19Safari7.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
+      <div class="row g-3 justify-content-center">
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/19Safari/19Safari3.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/23Safari/23Safari5.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/23Safari/23Safari6.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/23Safari/23Safari7.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/23Safari/23Safari8.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/23Safari/23Safari9.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/23Safari/23Safari30.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/23Safari/23Safari48.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/23Safari/23Safari49.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/19Safari/19Safari4.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/19Safari/19Safari5.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/19Safari/19Safari6.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/19Safari/19Safari7.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
 
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/19Safari/19Safari8.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/19Safari/19Safari8.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
 
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/19Safari/19Safari9.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/19Safari/19Safari9.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
 
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/19Safari/19Safari1.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/19Safari/19Safari11.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/19Safari/19Safari1.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/19Safari/19Safari11.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
 
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/19Safari/19Safari12.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/23Safari/23Safari30.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/23Safari/23Safari48.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/19Safari/19Safari12.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/23Safari/23Safari30.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/23Safari/23Safari48.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
         </div>
       </div>
     </div>
@@ -602,7 +588,6 @@
       nothing like it.
     </p>
 
-    <br />
     <p class="about">
       <strong>What makes Tanzania stand out:</strong>
     </p>
@@ -630,176 +615,174 @@
     </ul>
 
     <div class="gallery">
-      <div class="mb-5">
-        <div class="row g-3 justify-content-center">
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/17Tanzania/17Tanzania1.jpeg"
-              alt=""
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/17Tanzania/17Tanzania2.jpeg"
-              alt=""
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/17Tanzania/17Tanzania3.jpeg"
-              alt=""
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/17Tanzania/17Tanzania4.jpeg"
-              alt=""
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/17Tanzania/17Tanzania5.jpeg"
-              alt=""
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/17Tanzania/17Tanzania6.jpeg"
-              alt=""
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/17Tanzania/17Tanzania7.jpeg"
-              alt=""
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/17Tanzania/17Tanzania8.jpeg"
-              alt=""
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/17Tanzania/17Tanzania9.jpeg"
-              alt=""
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/17Tanzania/17Tanzania10.jpeg"
-              alt=""
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/17Tanzania/17Tanzania11.jpeg"
-              alt=""
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/17Tanzania/17Tanzania12.jpeg"
-              alt=""
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/17Tanzania/17Tanzania13.jpeg"
-              alt=""
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/17Tanzania/17Tanzania14.jpeg"
-              alt=""
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/17Tanzania/17Tanzania15.jpeg"
-              alt=""
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/17Tanzania/17Tanzania16.jpeg"
-              alt=""
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/17Tanzania/17Tanzania17.jpeg"
-              alt=""
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/17Tanzania/17Tanzania18.jpeg"
-              alt=""
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/17Tanzania/17Tanzania19.jpeg"
-              alt=""
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/17Tanzania/17Tanzania20.jpeg"
-              alt=""
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/17Tanzania/17Tanzania21.jpeg"
-              alt=""
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/17Tanzania/17Tanzania22.jpeg"
-              alt=""
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/17Tanzania/17Tanzania23.jpeg"
-              alt=""
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/17Tanzania/17Tanzania24.jpeg"
-              alt=""
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
+      <div class="row g-3 justify-content-center">
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/17Tanzania/17Tanzania1.jpeg"
+            alt=""
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/17Tanzania/17Tanzania2.jpeg"
+            alt=""
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/17Tanzania/17Tanzania3.jpeg"
+            alt=""
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/17Tanzania/17Tanzania4.jpeg"
+            alt=""
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/17Tanzania/17Tanzania5.jpeg"
+            alt=""
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/17Tanzania/17Tanzania6.jpeg"
+            alt=""
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/17Tanzania/17Tanzania7.jpeg"
+            alt=""
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/17Tanzania/17Tanzania8.jpeg"
+            alt=""
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/17Tanzania/17Tanzania9.jpeg"
+            alt=""
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/17Tanzania/17Tanzania10.jpeg"
+            alt=""
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/17Tanzania/17Tanzania11.jpeg"
+            alt=""
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/17Tanzania/17Tanzania12.jpeg"
+            alt=""
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/17Tanzania/17Tanzania13.jpeg"
+            alt=""
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/17Tanzania/17Tanzania14.jpeg"
+            alt=""
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/17Tanzania/17Tanzania15.jpeg"
+            alt=""
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/17Tanzania/17Tanzania16.jpeg"
+            alt=""
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/17Tanzania/17Tanzania17.jpeg"
+            alt=""
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/17Tanzania/17Tanzania18.jpeg"
+            alt=""
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/17Tanzania/17Tanzania19.jpeg"
+            alt=""
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/17Tanzania/17Tanzania20.jpeg"
+            alt=""
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/17Tanzania/17Tanzania21.jpeg"
+            alt=""
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/17Tanzania/17Tanzania22.jpeg"
+            alt=""
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/17Tanzania/17Tanzania23.jpeg"
+            alt=""
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/17Tanzania/17Tanzania24.jpeg"
+            alt=""
+            class="img-fluid rounded shadow-sm"
+          />
         </div>
       </div>
     </div>
@@ -813,7 +796,6 @@
       the big five in one drive as well as two kills.
     </p>
 
-    <br />
     <p class="about">
       <strong>What makes Kenya stand out:</strong>
     </p>
@@ -835,123 +817,121 @@
     </ul>
 
     <div class="gallery">
-      <div class="mb-5">
-        <div class="row g-3 justify-content-center">
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/24Safari/24Safari9.jpeg"
-              alt="Masai Mara"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/24Safari/24Safari21.jpeg"
-              alt="Masai Mara"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/24Safari/24Safari22.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/24Safari/24Safari23.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/24Safari/24Safari24.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/24Safari/24Safari25.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/24Safari/24Safari26.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/24Safari/24Safari27.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/24Safari/24Safari28.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/24Safari/24Safari29.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/24Safari/24Safari30.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/24Safari/24Safari32.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/24Safari/24Safari33.jpeg"
-              alt="Mom and young topi, Masai Mara"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/24Safari/24Safari34.jpeg"
-              alt="Mom and young topi, Masai Mara"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/24Safari/24Safari36.jpeg"
-              alt="Cute hyeneas, Masai Mara"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/24Safari/24Safari38.jpeg"
-              alt="Cute hyeneas, Masai Mara"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/24Safari/24Safari41.jpeg"
-              alt="Cute hyeneas, Masai Mara"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/24Safari/24Safari19.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
+      <div class="row g-3 justify-content-center">
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/24Safari/24Safari9.jpeg"
+            alt="Masai Mara"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/24Safari/24Safari21.jpeg"
+            alt="Masai Mara"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/24Safari/24Safari22.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/24Safari/24Safari23.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/24Safari/24Safari24.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/24Safari/24Safari25.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/24Safari/24Safari26.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/24Safari/24Safari27.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/24Safari/24Safari28.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/24Safari/24Safari29.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/24Safari/24Safari30.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/24Safari/24Safari32.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/24Safari/24Safari33.jpeg"
+            alt="Mom and young topi, Masai Mara"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/24Safari/24Safari34.jpeg"
+            alt="Mom and young topi, Masai Mara"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/24Safari/24Safari36.jpeg"
+            alt="Cute hyeneas, Masai Mara"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/24Safari/24Safari38.jpeg"
+            alt="Cute hyeneas, Masai Mara"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/24Safari/24Safari41.jpeg"
+            alt="Cute hyeneas, Masai Mara"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/24Safari/24Safari19.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
         </div>
       </div>
     </div>
@@ -970,7 +950,6 @@
       of happy seals.
     </p>
 
-    <br />
     <p class="about">
       <strong>What makes Namibia stand out:</strong>
     </p>
@@ -1004,79 +983,77 @@
     </p>
 
     <div class="gallery">
-      <div class="mb-5">
-        <div class="row g-3 justify-content-center">
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/23Safari/23Safari50.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/23Safari/23Safari10.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/23Safari/23Safari11.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/23Safari/23Safari17.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
+      <div class="row g-3 justify-content-center">
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/23Safari/23Safari50.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/23Safari/23Safari10.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/23Safari/23Safari11.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/23Safari/23Safari17.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
 
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/23Safari/23Safari24.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/23Safari/23Safari25.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/23Safari/23Safari28.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/23Safari/23Safari24.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/23Safari/23Safari25.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/23Safari/23Safari28.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
 
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/23Safari/23Safari29.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/23Safari/23Safari29.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
 
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/23Safari/23Safari34.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/23Safari/23Safari34.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
 
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/23Safari/23Safari32.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/23Safari/23Safari32.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
 
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/23Safari/23Safari35.jpeg"
-              class="img-fluid rounded shadow-sm"
-            />
-          </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/23Safari/23Safari35.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
         </div>
       </div>
     </div>
