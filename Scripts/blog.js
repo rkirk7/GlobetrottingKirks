@@ -57,23 +57,23 @@ async function initBlog() {
     const paragraphs = postData.content.split(/\n\s*\n/);
     const previewText = paragraphs.slice(0, 5).join("\n\n");
     let previewHtml = marked.parse(previewText);
-    
-    // // --- Find first image for header if you want one ---
-    // const imageRegex = /!\[.*?\]\((.*?)\)/;
-    // const match = postData.content.match(imageRegex);
-    // let headerImage = match ? match[1] : null;
 
-    // // Remove the first image from preview text if needed
-    // if (match) {
-    //   postData.content = postData.content.replace(imageRegex, "");
-    // }
+    // --- Wrap preview in a temp div to constrain images ---
+    const tempDiv = document.createElement("div");
+    tempDiv.innerHTML = previewHtml;
 
-    // --- Build final HTML ---
-    let finalHtml = "";
-    // if (headerImage) {
-    //   finalHtml += `<img class="header-image" src="${headerImage}" alt="Header Image" loading="lazy">`;
-    // }
-    finalHtml += previewHtml;
+    // --- Constrain all images in preview ---
+    const imgs = tempDiv.querySelectorAll("img");
+    imgs.forEach(img => {
+      img.style.maxWidth = "100%"; // never exceed container
+      img.style.height = "auto";
+      img.style.display = "block";
+      img.style.margin = "0 auto";
+      img.style.borderRadius = "6px"; // optional
+    });
+
+    // --- Final HTML for card ---
+    const finalHtml = tempDiv.innerHTML;
 
     // --- Create post card ---
     const postDiv = document.createElement("div");
