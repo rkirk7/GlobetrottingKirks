@@ -340,3 +340,18 @@ h1, h2, h3, h4, h5, h6 {
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
 }
+
+
+.footer-logo {
+  height: 30px; /* default for desktop */
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+  transition: height 0.2s ease;
+}
+
+@media (max-width: 576px) {
+  .footer-logo {
+    height: 20px; /* smaller logo on mobile */
+  }
+}
