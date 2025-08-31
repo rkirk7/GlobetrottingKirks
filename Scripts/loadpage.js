@@ -1,5 +1,74 @@
 const pageCache = {};
 
+async function loadPage(page) {
+  const content = document.getElementById("content");
+
+  // Scroll to top immediately
+  requestAnimationFrame(() => window.scrollTo(0, 0));
+
+  // Use cache if available
+  if (pageCache[page]) {
+    content.innerHTML = pageCache[page];
+    initializePageScripts(page);
+    return;
+  }
+
+  try {
+    const res = await fetch(page);
+    if (!res.ok) throw new Error(`Failed to fetch ${page}: ${res.status}`);
+    const htmlText = await res.text();
+
+    // Parse only the inner content of #container
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(htmlText, "text/html");
+    const mainContent = doc.querySelector("#container")?.innerHTML || "";
+
+    // Insert content and cache it
+    content.innerHTML = mainContent;
+    pageCache[page] = mainContent;
+
+    // Initialize scripts immediately
+    initializePageScripts(page);
+
+    // Lazy-load images asynchronously
+    content.querySelectorAll("img:not([loading])").forEach((img) => {
+      img.setAttribute("loading", "lazy");
+    });
+
+  } catch (err) {
+    console.error(err);
+    content.innerHTML = `<p>Error loading page.</p>`;
+  }
+}
+
+function initializePageScripts(page) {
+  const content = document.getElementById("content");
+
+  // Hero background
+  const hero = content.querySelector(".hero");
+  if (hero && hero.dataset.hero) {
+    hero.style.backgroundImage = `url('${hero.dataset.hero}')`;
+  }
+
+  // Table of Contents
+  loadTOC();
+
+  // GLightbox for galleries
+  if (typeof GLightbox !== "undefined") {
+    if (!window.glightboxInstance) {
+      window.glightboxInstance = GLightbox({ selector: ".glightbox" });
+    } else {
+      window.glightboxInstance.reload();
+    }
+  }
+
+  // Page-specific scripts
+  // Page-specific initializers
+  if (page === "albums.html" && typeof initAlbums === "function") initAlbums();
+  if (page === "blog.html" && typeof initBlog === "function") initBlog();
+
+}
+
 async function loadTOC() {
   const postContentEl = document.querySelector("#content .container");
   if (!postContentEl) return;
@@ -22,74 +91,4 @@ async function loadTOC() {
   } else if (tocList) {
     document.getElementById("toc").classList.add("d-none");
   }
-}
-
-async function loadPage(page) {
-  const content = document.getElementById("content");
-  requestAnimationFrame(() => window.scrollTo(0, 0));
-
-  if (pageCache[page]) {
-    content.innerHTML = pageCache[page];
-    initializePageScripts(page);
-    return;
-  }
-
-  try {
-    const res = await fetch(page);
-    if (!res.ok) throw new Error(`Failed to fetch ${page}: ${res.status}`);
-    const htmlText = await res.text();
-
-    // Parse HTML
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(htmlText, "text/html");
-    const mainContainer = doc.getElementById("container");
-
-    if (!mainContainer) {
-      content.innerHTML = `<p>Page content missing</p>`;
-      return;
-    }
-
-    // Insert content without blocking render
-    content.innerHTML = "";
-    Array.from(mainContainer.childNodes).forEach(node => content.appendChild(node));
-
-    // Lazy-load images and preload above-the-fold images
-    const imgs = content.querySelectorAll("img");
-    imgs.forEach((img, i) => {
-      if (!img.hasAttribute("loading")) {
-        img.loading = i < 3 ? "eager" : "lazy"; // first 3 images load immediately
-      }
-    });
-
-    // Cache the content AFTER inserting
-    pageCache[page] = content.innerHTML;
-
-    initializePageScripts(page);
-  } catch (err) {
-    console.error(err);
-    content.innerHTML = `<p>Error loading page.</p>`;
-  }
-}
-
-
-function initializePageScripts(page) {
-  const content = document.getElementById("content");
-
-  // Hero background
-  const hero = content.querySelector(".hero");
-  if (hero && hero.dataset.hero) {
-    hero.style.backgroundImage = `url('${hero.dataset.hero}')`;
-  }
-
-  // GLightbox (for galleries)
-  if (typeof GLightbox !== "undefined") {
-    GLightbox({ selector: ".glightbox" });
-  }
-
-  // Page-specific initializers
-  if (page === "albums.html" && typeof initAlbums === "function") initAlbums();
-  if (page === "blog.html" && typeof initBlog === "function") initBlog();
-
-  // Load TOC if needed
-  loadTOC();
 }
