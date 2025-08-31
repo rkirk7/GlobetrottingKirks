@@ -73,11 +73,11 @@ function initializePageScripts() {
 
   // Page-specific initializers
   if (document.getElementById("albums") && typeof initAlbums === "function") {
-    requestIdleCallback(() => initAlbums());
+    initAlbums();
   }
 
   if (document.getElementById("blog") && typeof initBlog === "function") {
-   requestIdleCallback(() => initBlog());
+   initBlog();
   }
 
   // Load TOC if needed
