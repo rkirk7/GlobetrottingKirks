@@ -1,8 +1,5 @@
-// ===========================
-// BLOG INIT FUNCTION (No captions, no gallery)
-// ===========================
 async function initBlog() {
-  const posts = [ 
+  const posts = [
     "2025-08-23-churchill.md",
     "2025-08-14-panda-monium-close-encounters-in-chengdu-and-wolong-china.md",
     "2025-06-03-exploring-antarctica-and-the-arctic-how-did-two-floridians-end-up-at-both-polar-regions-in-one-year-and-what-did-they-discover.md",
@@ -42,7 +39,7 @@ async function initBlog() {
   const postsData = await Promise.all(
     posts.map(async post => {
       let text = await fetch(`blog-posts/${post}`).then(res => res.text());
-      text = text.replace(/^---[\s\S]*?---/, '').trim(); // remove YAML frontmatter
+      text = text.replace(/^---[\s\S]*?---/, '').trim();
       return { filename: post, content: text };
     })
   );
@@ -52,30 +49,23 @@ async function initBlog() {
 
   // --- Render each post ---
   postsData.forEach((postData, index) => {
-
-    // --- Get preview (first 5 non-empty paragraphs) ---
+    // --- Get preview ---
     const paragraphs = postData.content.split(/\n\s*\n/);
     const previewText = paragraphs.slice(0, 5).join("\n\n");
     let previewHtml = marked.parse(previewText);
 
-    // --- Wrap preview in a temp div to constrain images ---
+    // --- Constrain images in preview ---
     const tempDiv = document.createElement("div");
     tempDiv.innerHTML = previewHtml;
-
-    // --- Constrain all images in preview ---
-    const imgs = tempDiv.querySelectorAll("img");
-    imgs.forEach(img => {
-      img.style.maxWidth = "100%"; // never exceed container
+    tempDiv.querySelectorAll("img").forEach(img => {
+      img.style.maxWidth = "100%";
       img.style.height = "auto";
       img.style.display = "block";
       img.style.margin = "0 auto";
-      img.style.borderRadius = "6px"; // optional
+      img.style.borderRadius = "6px";
     });
 
-    // --- Final HTML for card ---
-    const finalHtml = tempDiv.innerHTML;
-
-    // --- Create post card ---
+    // --- Build card ---
     const postDiv = document.createElement("div");
     postDiv.classList.add("card", "shadow-lg", "mb-3");
 
@@ -85,14 +75,14 @@ async function initBlog() {
 
     postDiv.innerHTML = `
       <div class="card-body blog-post-content">
-        ${finalHtml}
+        ${tempDiv.innerHTML}
         <a href="blogpost.html?post=${encodeURIComponent(postData.filename)}" class="btn btn-primary btn-sm mt-2">Read More</a>
       </div>
     `;
 
     container.appendChild(postDiv);
 
-    // --- TOC population ---
+    // --- TOC ---
     const tocItem = document.createElement('li');
     const postDate = postData.filename.slice(0, 10); 
     const dateFormatted = new Date(postDate).toLocaleDateString('en-US', {
