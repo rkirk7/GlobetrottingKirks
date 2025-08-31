@@ -133,7 +133,6 @@ async function loadPost() {
   while(tempDiv.firstChild){
     const node = tempDiv.firstChild;
     if(node.tagName !== 'IMG') frag.appendChild(node);
-    tempDiv.removeChild(node);
   }
 
   postContentEl.appendChild(frag);
