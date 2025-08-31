@@ -321,3 +321,10 @@ p.intro-text {
   transform: rotate(180deg);
 }
 
+.bi-caret-down-fill {
+  transition: transform 0.3s ease;
+}
+.bi-caret-down-fill.rotate {
+  transform: rotate(180deg);
+}
+
