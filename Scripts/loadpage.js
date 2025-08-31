@@ -72,6 +72,8 @@ function initializePageScripts(page) {
   // Page-specific scripts
   if (page === "albums.html" && typeof initAlbums === "function") initAlbums();
   if (page === "blog.html" && typeof initBlog === "function") initBlog();
+
+    initGalleries();
 }
 
 // -------------------- Smooth Scroll + Active TOC --------------------
@@ -132,6 +134,57 @@ function loadTOC() {
     });
   } else {
     toc.classList.add("d-none");
+  }
+}
+
+
+
+let imageData = {};
+
+// Load image-data.json
+async function loadImageData() {
+  try {
+    const res = await fetch("image-data.json");
+    imageData = await res.json();
+  } catch (err) {
+    console.error("Failed to load image-data.json", err);
+  }
+}
+
+// Initialize galleries
+async function initGalleries() {
+  const galleries = document.querySelectorAll(".gallery");
+  if (!galleries.length) return; // exit early if no galleries
+
+  // Fetch the JSON with captions (once)
+  let imageData = {};
+  try {
+    const res = await fetch("image-data.json");
+    if (res.ok) imageData = await res.json();
+  } catch (err) {
+    console.warn("Could not load image captions:", err);
+  }
+
+  galleries.forEach((gallery) => {
+    const images = gallery.querySelectorAll("img");
+
+    images.forEach((img) => {
+      const src = img.getAttribute("src");
+      const fileName = src.split("/").pop(); // get "19Safari1.jpeg"
+      const caption = imageData[fileName] || "";
+
+      img.setAttribute("data-glightbox", "title:" + caption);
+      img.classList.add("glightbox");
+    });
+  });
+
+  // Initialize or reload GLightbox
+  if (typeof GLightbox !== "undefined") {
+    if (!window.glightboxInstance) {
+      window.glightboxInstance = GLightbox({ selector: ".glightbox" });
+    } else {
+      window.glightboxInstance.reload();
+    }
   }
 }
 
