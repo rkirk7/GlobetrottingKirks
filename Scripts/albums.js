@@ -19,7 +19,8 @@ const ALBUMS = {
   "river-cruise-2018": { name: "Rhine River Cruise 2018", folder: "18RiverCruise", total: 35 },
   "amalfi-2018": { name: "Amalfi Coast 2018", folder: "Amalfi", total: 27 },
   "balkans-2018": { name: "Slovenia, Croatia, Bosnia-Herzegovina and Montenegro 2018", folder: "Balkans", total: 59 },
-  "tanzania-2017": { name: "Safari to Tanzania 2017", folder: "17Tanzania", total: 34 }
+  "tanzania-2017": { name: "Safari to Tanzania 2017", folder: "17Tanzania", total: 34 },
+  "ireland-2017": { name: "Ireland 2017", folder: "17Ireland", total: 31 }
 };
 
 async function initAlbums() {
