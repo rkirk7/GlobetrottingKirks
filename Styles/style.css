@@ -279,3 +279,12 @@ a:hover {
 }
 
 .travel-section .btn { margin-top: 1rem; }
+
+p.intro-text {
+  font-size: 1.2rem;      /* ~19px: easier to read */
+  line-height: 1.6;       /* more space between lines */
+  max-width: 700px;       /* keeps text from being too wide */
+  margin: 20px auto;      /* center it with spacing */
+  text-align: center;     /* optional: nice for intro paragraphs */
+  color: #333;            /* softer than pure black */
+}
