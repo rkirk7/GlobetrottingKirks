@@ -9,6 +9,8 @@ async function loadPage(page) {
   cancelPendingImages();
 
   const content = document.getElementById("content");
+
+  
   requestAnimationFrame(() => window.scrollTo(0, 0));
 
   if (pageCache[page]) {
@@ -59,6 +61,8 @@ async function initializePageScripts(page, loadId) {
   if (hero && hero.dataset.hero) {
     hero.style.backgroundImage = `url('${hero.dataset.hero}')`;
   }
+
+    processMarkdownGalleries(content);
 
 requestAnimationFrame(() => {
   if (loadId === currentLoadId && document.getElementById("toc-list")) {
@@ -215,5 +219,58 @@ function scrollToHeadingWithOffset(heading) {
   window.scrollTo({
     top: elementTop - navbarHeight - 10, // 10px extra padding
     behavior: 'smooth'
+  });
+}
+
+
+function processMarkdownGalleries(container) {
+  if (!container) return;
+
+  // Find all galleries
+  const galleries = container.querySelectorAll('.gallery');
+
+  galleries.forEach(gallery => {
+    // Unwrap images from <p> if Markdown added it
+    gallery.querySelectorAll('p').forEach(p => {
+      const img = p.querySelector('img');
+      if (img) p.replaceWith(img);
+    });
+
+    // Wrap images in <figure> and add captions
+    gallery.querySelectorAll('img').forEach(img => {
+      const src = img.getAttribute('src');
+      const fileName = src?.split('/').pop();
+      const caption = window._imageData?.[fileName] || img.alt || "";
+
+      // Wrap in figure if not already
+      if (!img.closest('figure')) {
+        const figure = document.createElement('figure');
+        figure.classList.add('figure', 'text-center');
+        img.parentNode.insertBefore(figure, img);
+        figure.appendChild(img);
+      }
+
+      // Add figcaption if caption exists
+      if (caption && !img.nextElementSibling?.classList.contains('figure-caption')) {
+        const figcap = document.createElement('figcaption');
+        figcap.classList.add('figure-caption', 'text-center');
+        figcap.textContent = caption;
+        img.parentNode.appendChild(figcap);
+      }
+
+      // Add GLightbox attributes
+      img.setAttribute('data-glightbox', 'title:' + caption);
+      img.classList.add('glightbox');
+      if (!img.hasAttribute('loading')) img.setAttribute('loading', 'lazy');
+    });
+
+    // Initialize or reload GLightbox
+    if (typeof GLightbox !== "undefined") {
+      if (!window.glightboxInstance) {
+        window.glightboxInstance = GLightbox({ selector: ".glightbox" });
+      } else {
+        window.glightboxInstance.reload();
+      }
+    }
   });
 }
