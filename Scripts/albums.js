@@ -18,7 +18,8 @@ const ALBUMS = {
   "safari-2019": { name: "Safari to Botswana, Zambia, and Zimbabwe 2019", folder: "19Safari", total: 29 },
   "river-cruise-2018": { name: "Rhine River Cruise 2018", folder: "18RiverCruise", total: 35 },
   "amalfi-2018": { name: "Amalfi Coast 2018", folder: "Amalfi", total: 27 },
-  "tanzania-2017": { name: "Safari to Tanzania 2017", folder: "17Tanzania", total: 24 }
+  "balkans-2018": { name: "Slovenia, Croatia, Bosnia-Herzegovina and Montenegro 2018", folder: "Balkans", total: 59 },
+  "tanzania-2017": { name: "Safari to Tanzania 2017", folder: "17Tanzania", total: 34 }
 };
 
 async function initAlbums() {
@@ -32,63 +33,55 @@ async function initAlbums() {
   // Load image metadata
   const imageMeta = await fetch("image-data.json").then(res => res.json());
 
-  // --- Create search input ---
+  // --- Search bar ---
   const searchInput = document.createElement("input");
   searchInput.type = "text";
   searchInput.className = "form-control mb-3";
   searchInput.placeholder = "Search albums...";
   toc.appendChild(searchInput);
 
-  const albumCards = [];
-
-  // --- Build album cards ---
+  // --- Dropdown for quick navigation ---
+  const albumSelect = document.createElement("select");
+  albumSelect.className = "form-select mb-3";
+  albumSelect.innerHTML = `<option value="">Select an album...</option>`;
   Object.entries(ALBUMS).forEach(([key, album]) => {
-    const albumId = `album-${key}`;
-    const albumHref = `album.html?album=${encodeURIComponent(key)}`;
+    albumSelect.innerHTML += `<option value="${key}">${album.name}</option>`;
+  });
+  toc.appendChild(albumSelect);
 
-    // Filter only images that exist for this folder
-    const albumImages = Object.keys(imageMeta).filter(f => f.startsWith(album.folder));
-
-    // First image as cover
-    const cover = albumImages.length > 0
-      ? `Images/${album.folder}/${albumImages[0]}`
-      : "placeholder.jpg";
-
-    // Previews (first 4 real images)
-    let previewsHTML = '<div class="d-flex justify-content-center flex-wrap mt-2">';
-    albumImages.slice(0, 4).forEach(img => {
-      previewsHTML += `<img src="Images/${album.folder}/${img}" 
-                        class="img-thumbnail m-1" style="height:60px;width:60px;object-fit:cover;">`;
-    });
-    previewsHTML += "</div>";
-
-    // Card
-    const col = document.createElement("div");
-    col.className = "col-md-4 mb-4 album-card";
-    col.id = albumId;
-    col.setAttribute("data-album-name", album.name.toLowerCase());
-    col.innerHTML = `
-      <div class="card shadow-lg h-100">
-        <a href="${albumHref}">
-          <img src="${cover}" class="card-img-top" alt="${album.name}" style="object-fit:cover;height:180px;">
-        </a>
-        <div class="card-body text-center d-flex flex-column">
-          <h5 class="card-title mb-2">${album.name}</h5>
-          ${previewsHTML}
-          <a class="btn btn-primary mt-auto" href="${albumHref}">View Album</a>
-        </div>
-      </div>
-    `;
-    container.appendChild(col);
-    albumCards.push(col);
+  // Jump to album page when selected
+  albumSelect.addEventListener("change", () => {
+    const selected = albumSelect.value;
+    if (selected) {
+      window.location.href = `album.html?album=${encodeURIComponent(selected)}`;
+    }
   });
 
-  // --- Filter logic ---
+  // --- Create album cards ---
+  const albumCards = [];
+  Object.entries(ALBUMS).forEach(([key, album]) => {
+    const card = document.createElement("div");
+    card.className = "col-md-4 mb-4 album-card";
+    card.innerHTML = `
+      <div class="card h-100">
+        <img src="${album.cover}" class="card-img-top" alt="${album.name}">
+        <div class="card-body">
+          <h5 class="card-title">${album.name}</h5>
+          <p class="card-text">${album.description || ""}</p>
+          <a href="album.html?album=${encodeURIComponent(key)}" class="btn btn-primary">View Album</a>
+        </div>
+      </div>`;
+    container.appendChild(card);
+    albumCards.push({ key, card });
+  });
+
+  // --- Search filter logic ---
   searchInput.addEventListener("input", () => {
     const query = searchInput.value.toLowerCase();
-    albumCards.forEach(card => {
-      const name = card.getAttribute("data-album-name");
+    albumCards.forEach(({ key, card }) => {
+      const name = ALBUMS[key].name.toLowerCase();
       card.style.display = name.includes(query) ? "" : "none";
     });
   });
 }
+
