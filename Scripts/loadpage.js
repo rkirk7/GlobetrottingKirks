@@ -27,13 +27,13 @@ async function loadPage(page) {
   const element = document.getElementById("content");
   element.innerHTML = content;
 
-  window.scrollTo(0, 0);
+  requestAnimationFrame(() => window.scrollTo(0, 0));
 
   // Set hero background if present
-  // const hero = element.querySelector(".hero");
-  // if (hero && hero.dataset.hero) {
-  //   hero.style.backgroundImage = `url('${hero.dataset.hero}')`;
-  // }
+  const hero = element.querySelector(".hero");
+  if (hero && hero.dataset.hero) {
+    hero.style.backgroundImage = `url('${hero.dataset.hero}')`;
+  }
 
   if (page === "albums.html" && typeof initAlbums === "function") {
     initAlbums();
