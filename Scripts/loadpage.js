@@ -167,35 +167,31 @@ async function processImages(container, loadId) {
 
 for (const img of images) {
   if (loadId !== currentLoadId) return; // stop mid-loop
+  if (img.classList.contains("card-img-top") || img.classList.contains("special-img")) continue; // skip special card images
+
   const src = img.getAttribute("src");
   const fileName = src?.split("/").pop();
   const caption = window._imageData[fileName] || img.alt || "";
 
-  // Wrap image in a figure if needed
-  let figure = img.closest("figure");
-  if (!figure) {
-    figure = document.createElement("figure");
+  if (!img.closest("figure")) {
+    const figure = document.createElement("figure");
     figure.classList.add("figure", "text-center");
     img.parentNode.insertBefore(figure, img);
     figure.appendChild(img);
   }
 
-  // Add caption if needed
-  if (caption && !img.nextElementSibling?.classList.contains("figure-caption")) {
+  if (caption && !img.nextElementSibling?.classList.contains('figure-caption')) {
     const figcap = document.createElement("figcaption");
     figcap.classList.add("figure-caption", "text-center");
     figcap.textContent = caption;
     img.parentNode.appendChild(figcap);
   }
 
-  // Lazy loading + lightbox
   img.setAttribute("data-glightbox", "title:" + caption);
   img.classList.add("glightbox");
   if (!img.hasAttribute("loading")) img.setAttribute("loading", "lazy");
-
-  // Add the whole figure to the fragment
-  frag.appendChild(figure);
 }
+
 
 // Append all at once
 container.appendChild(frag);
