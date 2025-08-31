@@ -1,7 +1,8 @@
-async function loadTOC() {
-  const postContentEl = document.getElementById("container"); // safer selector
+const pageCache = {};
 
-  if (!postContentEl) return; // stop if container not found
+async function loadTOC() {
+  const postContentEl = document.querySelector("#content .container");
+  if (!postContentEl) return;
 
   const tocList = document.getElementById("toc-list");
   const headings = postContentEl.querySelectorAll("h2, h3");
@@ -18,69 +19,67 @@ async function loadTOC() {
       li.innerHTML = `<a href="#${id}">${heading.textContent}</a>`;
       tocList.appendChild(li);
     });
+  } else if (tocList) {
+    document.getElementById("toc").classList.add("d-none");
   }
 }
-
-const pageCache = {};
 
 async function loadPage(page) {
   const content = document.getElementById("content");
 
-  requestAnimationFrame(() => window.scrollTo(0, 0));
-
-  if (pageCache[page]) {
-    content.innerHTML = pageCache[page];
-    initializePageScripts(page);
-    return;
-  }
-
   try {
-    const res = await fetch(page);
+    if (pageCache[page]) {
+      content.innerHTML = pageCache[page];
+      initializePageScripts();
+      requestAnimationFrame(() => window.scrollTo(0, 0));
+      return;
+    }
 
+    const res = await fetch(page);
     if (!res.ok) throw new Error(`Failed to fetch ${page}: ${res.status}`);
 
     const html = await res.text();
-    pageCache[page] = html; // cache for future visits
+    pageCache[page] = html;
 
     content.innerHTML = html;
 
-    // Lazy-load images inside loaded content
-    const imgs = content.querySelectorAll("img");
-    imgs.forEach((img) => {
-      if (!img.hasAttribute("loading")) {
-        img.setAttribute("loading", "lazy");
-      }
+    // Lazy-load images
+    content.querySelectorAll("img").forEach((img) => {
+      if (!img.hasAttribute("loading")) img.setAttribute("loading", "lazy");
     });
 
-    initializePageScripts(page);
+    initializePageScripts();
+
+    requestAnimationFrame(() => window.scrollTo(0, 0));
   } catch (err) {
     console.error(err);
     content.innerHTML = `<p>Error loading page.</p>`;
   }
 }
 
-// Optional: initialize scripts specific to a page
-function initializePageScripts(page) {
-  // Set hero background if present
-  const hero = page.querySelector(".hero");
+function initializePageScripts() {
+  const content = document.getElementById("content");
+
+  // Hero background
+  const hero = content.querySelector(".hero");
   if (hero && hero.dataset.hero) {
     hero.style.backgroundImage = `url('${hero.dataset.hero}')`;
-
-    // Example: run GLightbox only on pages that have galleries
-      if (typeof GLightbox !== "undefined") {
-        GLightbox({ selector: "glightbox" });
-      }
-
-    if (page === "albums.html" && typeof initAlbums === "function") {
-      initAlbums();
-    }
-
-    if (page === "blog.html") initBlog();
-
-    const postContentEl = document.getElementById("container");
-
-    if (postContentEl) {
-      loadTOC();
-    }
   }
+
+  // GLightbox (for galleries)
+  if (typeof GLightbox !== "undefined") {
+    GLightbox({ selector: ".glightbox" });
+  }
+
+  // Page-specific initializers
+  if (document.getElementById("albums") && typeof initAlbums === "function") {
+    initAlbums();
+  }
+
+  if (document.getElementById("blog") && typeof initBlog === "function") {
+    initBlog();
+  }
+
+  // Load TOC if needed
+  loadTOC();
 }
