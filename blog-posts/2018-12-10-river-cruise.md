@@ -10,6 +10,7 @@ The Princess is posh, compact (especially the staterooms), with some terrific st
 We had 111 passengers (capacity is 128), mostly middle aged and up, dominated by 57 Aussies and Kiwis and 35 Americans. One of the repeat customers was on his 10th Uniworld river cruise! (How did we like it? Read to the end.)
 
 <div class="gallery">
+
 ![](./Images/18RiverCruise/18RiverCruise1.jpeg)
 ![](./Images/18RiverCruise/18RiverCruise2.jpeg)
 ![](./Images/18RiverCruise/18RiverCruise3.jpeg)
@@ -36,6 +37,7 @@ We had 111 passengers (capacity is 128), mostly middle aged and up, dominated by
 </div>
 
 <div class="gallery">
+
 ![](./Images/18RiverCruise/18RiverCruise6.jpeg)
 ![](./Images/18RiverCruise/18RiverCruise7.jpeg)
 ![](./Images/18RiverCruise/18RiverCruise8.jpeg)
@@ -44,6 +46,7 @@ We had 111 passengers (capacity is 128), mostly middle aged and up, dominated by
 **Cologne:** Got into Dusseldorf around 1:15, then bused to the cathedral around 3 p.m. for small group tours.
 
 <div class="gallery">
+
 ![](./Images/18RiverCruise/18RiverCruise9.jpeg)
 ![](./Images/18RiverCruise/18RiverCruise10.jpeg)
 ![](./Images/18RiverCruise/18RiverCruise11.jpeg)
@@ -52,6 +55,7 @@ We had 111 passengers (capacity is 128), mostly middle aged and up, dominated by
 **En route to Rudesheim:** One of the highlights of the cruise is the gorgeous middle Rhine with its castles and rolling hills. (We expected more of the cruise to be this scenic but this was the exception rather than the rule.) Unfortunately, we were misinformed about when we would enter the valley and missed the first 6 miles or so. For us, miscommunication was too frequent, partly because the staff avoids using the intercom because it's unbecoming for the ship.
 
 <div class="gallery">
+
 ![](./Images/18RiverCruise/18RiverCruise12.jpeg)
 ![](./Images/18RiverCruise/18RiverCruise13.jpeg)
 ![](./Images/18RiverCruise/18RiverCruise14.jpeg)
@@ -60,6 +64,7 @@ We had 111 passengers (capacity is 128), mostly middle aged and up, dominated by
 **Rudesheim:** A few of us more active guests took a walk through vineyards to the monument marking the unification of Germany after the Franco-Prussian War in 1877 while others took the cable car up from town. If you like Rieslings, make a point of going to the 100-year-old Hildegard abbey! Alas, they do not ship outside of Germany.
 
 <div class="gallery">
+
 ![](./Images/18RiverCruise/18RiverCruise15.jpeg)
 ![](./Images/18RiverCruise/18RiverCruise16.jpeg)
 ![](./Images/18RiverCruise/18RiverCruise17.jpeg)
@@ -68,6 +73,7 @@ We had 111 passengers (capacity is 128), mostly middle aged and up, dominated by
 **Frankfurt:** We docked early and could have strolled around town but we weren't given that information. The bus ride to the delightful Heidelberg Castle took about 90 minutes. We learned different tour guides will go into much more detail and take much longer than others. Although our guide was skeptical, two of us walked down easily to the lovely town in about 15 minutes while others took the buses.
 
 <div class="gallery">
+
 ![](./Images/18RiverCruise/18RiverCruise18.jpeg)
 ![](./Images/18RiverCruise/18RiverCruise19.jpeg)
 ![](./Images/18RiverCruise/18RiverCruise20.jpeg)
@@ -76,6 +82,7 @@ We had 111 passengers (capacity is 128), mostly middle aged and up, dominated by
 **Low bridges ahead!** To my dismay, we were told the sun deck would be closed through Passau due to low bridges: that's nearly half the cruise without the ability to enjoy the river outside. (This was our first cruise without a balcony and I missed it greatly.) In another appalling lack of communication, I learned near the end you could actually go topside as long as the way was not barred for safety reasons--seeing the bridge collapse was a treat. 
 
 <div class="gallery">
+
 ![](./Images/18RiverCruise/18RiverCruise21.jpeg)
 ![](./Images/18RiverCruise/18RiverCruise22.jpeg)
 </div>
@@ -83,6 +90,7 @@ We had 111 passengers (capacity is 128), mostly middle aged and up, dominated by
 **Wertheim:** For some reason, we docked in Milterberg and were bused to Wertheim. My husband enjoyed the town tour, while I went with 27 others on an easy 8.7 mile bike ride. The pace was frustrating as we had to wait for stragglers to catch up. We met up at the Alte Grafschaft, which has been in business since 1594, for wine sampling and pretzel eating. 
 
 <div class="gallery">
+
 ![](./Images/18RiverCruise/18RiverCruise23.jpeg)
 ![](./Images/18RiverCruise/18RiverCruise24.jpeg)
 ![](./Images/18RiverCruise/18RiverCruise25.jpeg)
@@ -91,6 +99,7 @@ We had 111 passengers (capacity is 128), mostly middle aged and up, dominated by
 **Wurzburg:** We docked 3.5 miles from town (staff gave different distances when asked), which my husband and I walked. Met the group who came via bus at the lavish 18-century Residenz, featuring the world’s largest ceiling fresco. I hiked up to the Marienberg Fortress and the pilgrimage church for great views. A pal and I then took a ride on the boat-provided bikes, which were serviceable and easy to use.
 
 <div class="gallery">
+
 ![](./Images/18RiverCruise/18RiverCruise26.jpeg)
 ![](./Images/18RiverCruise/18RiverCruise27.jpeg)
 ![](./Images/18RiverCruise/18RiverCruise28.jpeg)
@@ -100,6 +109,7 @@ We had 111 passengers (capacity is 128), mostly middle aged and up, dominated by
 **Kitzingen/Schweinfurt:** Almost everyone took the bus to dazzling Rothenburg with its medieval buildings and wall. (This was our favorite walled city until we got to Dubrovnik weeks later.) The ship traveled onward to Schweinfurt, where we reboarded.
 
 <div class="gallery">
+
 ![](./Images/18RiverCruise/18RiverCruise30.jpeg)
 ![](./Images/18RiverCruise/18RiverCruise31.jpeg)
 ![](./Images/18RiverCruise/18RiverCruise32.jpeg)
@@ -108,6 +118,7 @@ We had 111 passengers (capacity is 128), mostly middle aged and up, dominated by
 **Bamberg:** Most folks took a bus to tour the city, which avoided World War II damage. About 10 of us took a nice 10-mile bike ride but didn't get to explore the city much.
 
 <div class="gallery">
+
 ![](./Images/18RiverCruise/18RiverCruise33.jpeg)
 ![](./Images/18RiverCruise/18RiverCruise34.jpeg)
 ![](./Images/18RiverCruise/18RiverCruise35.jpeg)
@@ -116,6 +127,7 @@ We had 111 passengers (capacity is 128), mostly middle aged and up, dominated by
 **Nuremberg:** Bus tours took groups to a city tour, or to the WWII sites, including Hitler's Zeppelin Fields and Congress Hall. Alas, the courtroom for the Nuremberg trials was not opened to the public today.
 
 <div class="gallery">
+
 ![](./Images/18RiverCruise/18RiverCruise36.jpeg)
 ![](./Images/18RiverCruise/18RiverCruise37.jpeg)
 ![](./Images/18RiverCruise/18RiverCruise38.jpeg)
@@ -125,6 +137,7 @@ We had 111 passengers (capacity is 128), mostly middle aged and up, dominated by
 - A lecturer came on board to provide an overview of the famed Main-Danube canal: 16 locks along 103 miles connecting the North Sea to the Black Sea, with 123 very low bridges, completed in 1992. We saw our first such lock as he was talking.
 
 <div class="gallery">
+
 ![](./Images/18RiverCruise/18RiverCruise39.jpeg)
 ![](./Images/18RiverCruise/18RiverCruise40.jpeg)
 ![](./Images/18RiverCruise/18RiverCruise41.jpeg)
@@ -133,6 +146,7 @@ We had 111 passengers (capacity is 128), mostly middle aged and up, dominated by
 **Regensburg:** This was our first experience of docking next to another boat, through which you have to walk to get ashore. It's the first rainy day we've had, but not enough to help river levels.
 
 <div class="gallery">
+
 ![](./Images/18RiverCruise/18RiverCruise42.jpeg)
 ![](./Images/18RiverCruise/18RiverCruise43.jpeg)
 </div>
@@ -142,6 +156,7 @@ We had 111 passengers (capacity is 128), mostly middle aged and up, dominated by
 We enjoyed the lovely town of Passau, the junction of three rivers. Ironically the town hall has a marker showing floods with 2013 being the worst in 500 years. About 25 of us took a bike tour into Austria! We were provided 20 Euros each for lunch that we would otherwise have had on board.
 
 <div class="gallery">
+
 ![](./Images/18RiverCruise/18RiverCruise44.jpeg)
 ![](./Images/18RiverCruise/18RiverCruise45.jpeg)
 ![](./Images/18RiverCruise/18RiverCruise46.jpeg)
@@ -154,6 +169,7 @@ We enjoyed the lovely town of Passau, the junction of three rivers. Ironically t
 **Melk/Vienna:** The next morning, we were bused four hours to the over-the-top baroque Melk abbey (no pixes allowed), with a library featured in The Name of the Rose. Then we boarded a 19-mile local boat ride on the Danube (water levels seem fine here!) to Krems through the pretty Wachau valley. We bused about 90 minutes to to the Vienna Hilton.
 
 <div class="gallery">
+
 ![](./Images/18RiverCruise/18RiverCruise47.jpeg)
 ![](./Images/18RiverCruise/18RiverCruise48.jpeg)
 ![](./Images/18RiverCruise/18RiverCruise49.jpeg)
@@ -162,6 +178,7 @@ We enjoyed the lovely town of Passau, the junction of three rivers. Ironically t
 **Vienna Klosterneuburg Monastery:** Another highlight of the cruise was this tour/concert, which Uniworld provided for free due to the disrupted cruise. Although we were tired from a long day, about 85 of us took the 25 minute bus ride to the 900-year-old monastery. Seated in the former dining hall of the monks, which had great acoustics, we enjoyed an excellent seven-piece ensemble and two singers.
 
 <div class="gallery">
+
 ![](./Images/18RiverCruise/18RiverCruise50.jpeg)
 ![](./Images/18RiverCruise/18RiverCruise51.jpeg)
 ![](./Images/18RiverCruise/18RiverCruise52.jpeg)
@@ -170,6 +187,7 @@ We enjoyed the lovely town of Passau, the junction of three rivers. Ironically t
 **Vienna:** A variety of tours were offered, most with the same top sights. The “exclusive” morning at the Fine Arts museum before normal opening hours was excellent, especially seeing the imperial treasures of the Hapsburgs.
 
 <div class="gallery">
+
 ![](./Images/18RiverCruise/18RiverCruise53.jpeg)
 ![](./Images/18RiverCruise/18RiverCruise54.jpeg)
 ![](./Images/18RiverCruise/18RiverCruise55.jpeg)
@@ -180,6 +198,7 @@ We enjoyed the lovely town of Passau, the junction of three rivers. Ironically t
 **Budapest:** We were bused nearly three hours to Budapest, arriving around noon for lunch on our own before tours began. What a gorgeous city! I can only imagine how spectacular it would have been to arrive via the river. There were mobs, vendors and food everywhere as the national St. Stephens holiday ran all weekend. We were bused to the New York Palace about 4:30.
 
 <div class="gallery">
+
 ![](./Images/18RiverCruise/18RiverCruise58.jpeg)
 ![](./Images/18RiverCruise/18RiverCruise59.jpeg)
 ![](./Images/18RiverCruise/18RiverCruise60.jpeg)
@@ -188,6 +207,7 @@ We enjoyed the lovely town of Passau, the junction of three rivers. Ironically t
 **So long, Uniworld!** Some of us organize a farewell celebration at the New York Palace's gorgeous cafe. The next morning, we all went our separate ways. My husband and I enjoyed another two nights in Budapest, including the fireworks and other festivities for St. Stephen's Day.
 
 <div class="gallery">
+
 ![](./Images/18RiverCruise/18RiverCruise61.jpeg)
 ![](./Images/18RiverCruise/18RiverCruise62.jpeg)
 ![](./Images/18RiverCruise/18RiverCruise63.jpeg)
