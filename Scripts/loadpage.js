@@ -1,12 +1,10 @@
 const pageCache = {};
 
+// -------------------- Load Page --------------------
 async function loadPage(page) {
   const content = document.getElementById("content");
-
-  // Scroll to top immediately
   requestAnimationFrame(() => window.scrollTo(0, 0));
 
-  // Use cache if available
   if (pageCache[page]) {
     content.innerHTML = pageCache[page];
     initializePageScripts(page);
@@ -18,23 +16,28 @@ async function loadPage(page) {
     if (!res.ok) throw new Error(`Failed to fetch ${page}: ${res.status}`);
     const htmlText = await res.text();
 
-    // Parse only the inner content of #container
     const parser = new DOMParser();
     const doc = parser.parseFromString(htmlText, "text/html");
-    const mainContent = doc.querySelector("#container")?.innerHTML || "";
+    const mainContainer = doc.querySelector("#container");
+    if (!mainContainer) throw new Error("No #container found in page");
 
-    // Insert content and cache it
-    content.innerHTML = mainContent;
-    pageCache[page] = mainContent;
+    // Insert the container itself
+    content.innerHTML = "";
+    content.appendChild(mainContainer.cloneNode(true));
 
-    // Initialize scripts immediately
+    // Cache the content
+    pageCache[page] = content.innerHTML;
+
     initializePageScripts(page);
 
-     // Lazy-load images, but eager-load first 2
+    // Lazy-load images: hero images eager, rest lazy
     const imgs = Array.from(content.querySelectorAll("img"));
-    imgs.forEach((img, index) => {
+    imgs.forEach((img) => {
       if (!img.hasAttribute("loading")) {
-        img.setAttribute("loading", index < 2 ? "eager" : "lazy");
+        img.setAttribute(
+          "loading",
+          img.closest(".hero") ? "eager" : "lazy"
+        );
       }
     });
 
@@ -44,6 +47,7 @@ async function loadPage(page) {
   }
 }
 
+// -------------------- Initialize Page Scripts --------------------
 function initializePageScripts(page) {
   const content = document.getElementById("content");
 
@@ -66,21 +70,23 @@ function initializePageScripts(page) {
   }
 
   // Page-specific scripts
-  // Page-specific initializers
   if (page === "albums.html" && typeof initAlbums === "function") initAlbums();
   if (page === "blog.html" && typeof initBlog === "function") initBlog();
-
 }
 
-async function loadTOC() {
+// -------------------- Load Table of Contents --------------------
+function loadTOC() {
   const postContentEl = document.querySelector("#content .container");
   if (!postContentEl) return;
 
+  const toc = document.getElementById("toc");
   const tocList = document.getElementById("toc-list");
+  if (!tocList) return;
+
   const headings = postContentEl.querySelectorAll("h2, h3");
 
-  if (headings.length > 0 && tocList) {
-    document.getElementById("toc").classList.remove("d-none");
+  if (headings.length > 0) {
+    toc.classList.remove("d-none");
     tocList.innerHTML = "";
 
     headings.forEach((heading, i) => {
@@ -91,7 +97,7 @@ async function loadTOC() {
       li.innerHTML = `<a href="#${id}">${heading.textContent}</a>`;
       tocList.appendChild(li);
     });
-  } else if (tocList) {
-    document.getElementById("toc").classList.add("d-none");
+  } else {
+    toc.classList.add("d-none");
   }
 }
