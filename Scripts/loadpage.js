@@ -25,7 +25,7 @@ const pageCache = {};
 
 async function loadPage(page) {
   const content = document.getElementById("content");
-  
+
   requestAnimationFrame(() => window.scrollTo(0, 0));
 
   if (pageCache[page]) {
@@ -62,7 +62,7 @@ async function loadPage(page) {
 // Optional: initialize scripts specific to a page
 function initializePageScripts(page) {
   // Set hero background if present
-  const hero = element.querySelector(".hero");
+  const hero = page.querySelector(".hero");
   if (hero && hero.dataset.hero) {
     hero.style.backgroundImage = `url('${hero.dataset.hero}')`;
 
