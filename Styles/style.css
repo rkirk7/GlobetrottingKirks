@@ -312,4 +312,12 @@ p.intro-text {
   transform: rotate(180deg);
 }
 
+/* smooth rotation for caret */
+.dropdown-item i {
+  transition: transform 0.3s;
+}
+
+.dropdown-item i.rotate {
+  transform: rotate(180deg);
+}
 

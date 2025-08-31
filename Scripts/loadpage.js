@@ -98,11 +98,11 @@ function loadTOC() {
     const a = document.createElement("a");
     a.href = `#${heading.id}`;
     a.textContent = heading.textContent;
-    a.addEventListener("click", (e) => {
-      e.preventDefault();
-      document.getElementById(heading.id).scrollIntoView({ behavior: "smooth" });
-      if (window.innerWidth < 768) tocList.classList.add("d-none"); // auto-hide on mobile
-    });
+ a.addEventListener("click", (e) => {
+  e.preventDefault();
+  scrollToHeadingWithOffset(document.getElementById(heading.id));
+  if (window.innerWidth < 768) tocList.classList.add("d-none"); // auto-hide on mobile
+});
     li.appendChild(a);
     tocList.appendChild(li);
   });
@@ -194,3 +194,12 @@ async function processImages(container) {
   }
 }
 
+
+function scrollToHeadingWithOffset(heading) {
+  const navbarHeight = document.querySelector('.navbar').offsetHeight;
+  const elementTop = heading.getBoundingClientRect().top + window.scrollY;
+  window.scrollTo({
+    top: elementTop - navbarHeight - 10, // 10px extra padding
+    behavior: 'smooth'
+  });
+}
