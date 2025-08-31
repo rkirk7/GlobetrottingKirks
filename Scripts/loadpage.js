@@ -48,7 +48,7 @@ async function loadPage(page) {
     content.innerHTML = mainContent;
 
     // Lazy-load images
-    content.querySelectorAll("img:not([loading])").forEach(img => img.setAttribute("loading","lazy"));
+    // content.querySelectorAll("img:not([loading])").forEach(img => img.setAttribute("loading","lazy"));
 
     initializePageScripts(page);
   } catch (err) {
