@@ -67,11 +67,9 @@ function initializePageScripts(page) {
     hero.style.backgroundImage = `url('${hero.dataset.hero}')`;
 
     // Example: run GLightbox only on pages that have galleries
-    if (page.includes("albums") || page.includes("blog")) {
       if (typeof GLightbox !== "undefined") {
         GLightbox({ selector: "glightbox" });
       }
-    }
 
     if (page === "albums.html" && typeof initAlbums === "function") {
       initAlbums();
