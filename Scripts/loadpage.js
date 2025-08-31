@@ -26,31 +26,31 @@ async function loadTOC() {
 
 async function loadPage(page) {
   const content = document.getElementById("content");
+  requestAnimationFrame(() => window.scrollTo(0, 0));
+
+  if (pageCache[page]) {
+    content.innerHTML = pageCache[page];
+    initializePageScripts(page);
+    return;
+  }
 
   try {
-    if (pageCache[page]) {
-      content.innerHTML = pageCache[page];
-      initializePageScripts();
-      requestAnimationFrame(() => window.scrollTo(0, 0));
-      return;
-    }
-
     const res = await fetch(page);
     if (!res.ok) throw new Error(`Failed to fetch ${page}: ${res.status}`);
+    const htmlText = await res.text();
 
-    const html = await res.text();
-    pageCache[page] = html;
+    // Extract just the inner content
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(htmlText, "text/html");
+    const mainContent = doc.querySelector("#container")?.innerHTML || "";
 
-    content.innerHTML = html;
+    pageCache[page] = mainContent;
+    content.innerHTML = mainContent;
 
     // Lazy-load images
-    content.querySelectorAll("img").forEach((img) => {
-      if (!img.hasAttribute("loading")) img.setAttribute("loading", "lazy");
-    });
+    content.querySelectorAll("img:not([loading])").forEach(img => img.setAttribute("loading","lazy"));
 
-    initializePageScripts();
-
-    requestAnimationFrame(() => window.scrollTo(0, 0));
+    initializePageScripts(page);
   } catch (err) {
     console.error(err);
     content.innerHTML = `<p>Error loading page.</p>`;
@@ -73,11 +73,11 @@ function initializePageScripts() {
 
   // Page-specific initializers
   if (document.getElementById("albums") && typeof initAlbums === "function") {
-    initAlbums();
+    requestIdleCallback(() => initAlbums());
   }
 
   if (document.getElementById("blog") && typeof initBlog === "function") {
-    initBlog();
+   requestIdleCallback(() => initBlog());
   }
 
   // Load TOC if needed
