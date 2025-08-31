@@ -10,92 +10,48 @@
 <link rel="stylesheet" href="Styles/style.css">
 
 <style>
-  body { position: relative; }
-/* Responsive paragraph font size */
-p {
-  font-size: clamp(1rem, 2vw + 0.5rem, 1.2rem);
-  line-height: 1.6;
+body { position: relative; }
+p { font-size: clamp(1rem, 2vw + 0.5rem, 1.2rem); line-height: 1.6; }
+h1 { font-size: clamp(1.5rem, 3vw + 0.5rem, 2.5rem); }
+h2 { font-size: clamp(1.3rem, 2.5vw + 0.5rem, 2rem); }
+h3 { font-size: clamp(1.1rem, 2vw + 0.5rem, 1.5rem); }
+
+#toc {
+  position: fixed; top: 80px; right: 20px;
+  max-width: 250px; background: #fff;
+  border: 1px solid #ddd; padding: 10px; border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  max-height: 80vh; overflow-y: auto; z-index: 999;
+  font-size: 0.95rem;
 }
+#toc h5 { font-size: 1rem; margin-bottom: 8px; }
+#toc ul { list-style: none; padding-left: 0; margin-bottom: 0; }
+#toc li { margin-bottom: 4px; }
+#toc a { text-decoration: none; font-size: 0.9rem; color: #333; }
+#toc a:hover { color: #007bff; text-decoration: underline; }
 
+#post-content img { max-width: 80%; height: auto; display: block; margin: 0 auto; border-radius: 6px; }
 
-h1 {
-  font-size: clamp(1.5rem, 3vw + 0.5rem, 2.5rem);
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin: 20px 0;
 }
-h2 {
-  font-size: clamp(1.3rem, 2.5vw + 0.5rem, 2rem);
+.gallery img {
+  width: 100%; height: auto; border-radius: 6px;
+  display: block; object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
 }
-h3 {
-  font-size: clamp(1.1rem, 2vw + 0.5rem, 1.5rem);
-}
+.gallery img:hover { transform: scale(1.03); }
+.gallery > * { display: flex; flex-direction: column; align-items: center; }
 
-  #toc {
-    position: fixed; top: 80px; right: 20px;
-    max-width: 250px; background: #fff;
-    border: 1px solid #ddd; padding: 10px; border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    max-height: 80vh; overflow-y: auto; z-index: 999;
-    font-size: 0.95rem;
-  }
-  #toc h5 { font-size: 1rem; margin-bottom: 8px; }
-  #toc ul { list-style: none; padding-left: 0; margin-bottom: 0; }
-  #toc li { margin-bottom: 4px; }
-  #toc a { text-decoration: none; font-size: 0.9rem; color: #333; }
-  #toc a:hover { color: #007bff; text-decoration: underline; }
+.blog-post-content img:only-child { display: block; margin: 0 auto; }
 
-  #post-content img {
-    max-width: 80%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    border-radius: 6px;
-  }
-
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 15px;
-    margin: 20px 0;
-  }
-
-  .gallery img {
-    width: 100%;
-    height: auto;
-    border-radius: 6px;
-    display: block;
-    object-fit: cover;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease;
-  }
-
-  .gallery img:hover {
-    transform: scale(1.03);
-  }
-
-  .gallery > * {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .blog-post-content img:only-child {
-    display: block;
-    margin: 0 auto;
-  }
-
-  @media (max-width: 768px) {
-    #toc {
-      position: static;
-      max-width: 100%;
-      margin: 15px 0;
-      box-shadow: none;
-      border: 1px solid #ddd;
-    }
-  }
-
-  @media (max-width: 768px) {
-  #toc a {
-    font-size: 0.85rem;
-  }
+@media (max-width: 768px) {
+  #toc { position: static; max-width: 100%; margin: 15px 0; box-shadow: none; border: 1px solid #ddd; }
+  #toc a { font-size: 0.85rem; }
 }
 </style>
 </head>
@@ -133,139 +89,89 @@ async function loadPost() {
   const postFile = params.get('post');
   if (!postFile) return;
 
-  // --- Load Markdown ---
-  let postText = await fetch(`blog-posts/${postFile}`).then(res => res.text());
+  let postText = await fetch(`blog-posts/${postFile}`).then(r => r.text());
   postText = postText.replace(/^---[\s\S]*?---/, '').trim();
 
-  // --- Extract title ---
   const lines = postText.split("\n");
   const firstHeadingIndex = lines.findIndex(l => l.startsWith("# "));
-  const postTitle = firstHeadingIndex >= 0 ? lines[firstHeadingIndex].replace(/^# /, "") : postFile;
+  const postTitle = firstHeadingIndex >= 0 ? lines[firstHeadingIndex].replace(/^# /,'') : postFile;
   document.getElementById('post-title').textContent = postTitle;
-
-  if (firstHeadingIndex >= 0) lines.splice(firstHeadingIndex, 1);
+  if(firstHeadingIndex >= 0) lines.splice(firstHeadingIndex,1);
   postText = lines.join("\n");
 
-  // --- Parse Markdown to temporary container ---
+  // --- Parse Markdown
   const tempDiv = document.createElement('div');
   tempDiv.innerHTML = marked.parse(postText);
 
+  // --- Process images safely
   const postContentEl = document.getElementById('post-content');
   postContentEl.innerHTML = '';
-
-  // --- Wrap images in galleries ---
-  const allImages = tempDiv.querySelectorAll('img');
-  const galleryMap = {};
-
-  allImages.forEach(img => {
-    const parent = img.parentNode;
-    if (!galleryMap[parent]) galleryMap[parent] = [];
-    galleryMap[parent].push(img);
-  });
-
-  Object.values(galleryMap).forEach(images => {
-    if (images.length === 1) {
-      // Single image: wrap in figure for caption
-      const img = images[0];
-      wrapImageInFigure(img);
-    } else {
-      // Multiple images: create gallery
-      const galleryDiv = document.createElement('div');
-      galleryDiv.classList.add('gallery');
-
-      images.forEach(img => {
-        wrapImageInFigure(img);
-        galleryDiv.appendChild(img.closest('figure'));
-      });
-
-      // Replace original images with gallery container
-      const firstParent = images[0].parentNode;
-      firstParent.innerHTML = '';
-      firstParent.appendChild(galleryDiv);
-    }
-  });
-
-  // --- Append processed content in one batch ---
   const frag = document.createDocumentFragment();
-  while (tempDiv.firstChild) frag.appendChild(tempDiv.firstChild);
+
+  tempDiv.querySelectorAll('img').forEach(img => {
+    const figure = document.createElement('figure');
+    figure.classList.add('figure','text-center');
+
+    img.setAttribute('loading','lazy');
+    const src = img.getAttribute('src');
+    const fileName = src?.split("/").pop();
+    const caption = window._imageData?.[fileName] || img.alt || "";
+    img.setAttribute('data-glightbox','title:' + caption);
+    img.classList.add('glightbox');
+
+    figure.appendChild(img);
+    if(caption){
+      const figcap = document.createElement('figcaption');
+      figcap.classList.add('figure-caption','text-center');
+      figcap.textContent = caption;
+      figure.appendChild(figcap);
+    }
+
+    frag.appendChild(figure);
+  });
+
+  while(tempDiv.firstChild){
+    const node = tempDiv.firstChild;
+    if(node.tagName !== 'IMG') frag.appendChild(node);
+    tempDiv.removeChild(node);
+  }
+
   postContentEl.appendChild(frag);
 
-  // --- Build TOC ---
-  buildTOC(postContentEl);
-
-  // --- Initialize images (lazy loading + GLightbox) ---
-  await processImages(postContentEl);
-}
-
-// --- Helper: wrap image in figure + caption ---
-function wrapImageInFigure(img) {
-  if (img.closest('figure')) return;
-
-  const figure = document.createElement('figure');
-  figure.classList.add('figure', 'text-center');
-
-  img.setAttribute('loading', 'lazy'); // lazy load before DOM append
-
-  const src = img.getAttribute("src");
-  const fileName = src?.split("/").pop();
-  const caption = window._imageData?.[fileName] || img.alt || "";
-
-  figure.appendChild(img);
-
-  if (caption) {
-    const figcap = document.createElement('figcaption');
-    figcap.classList.add('figure-caption', 'text-center');
-    figcap.textContent = caption;
-    figure.appendChild(figcap);
-  }
-
-  img.setAttribute("data-glightbox", "title:" + caption);
-  img.classList.add("glightbox");
-}
-
-// --- Helper: build TOC ---
-function buildTOC(container) {
+  // --- TOC ---
   const tocList = document.getElementById('toc-list');
   tocList.innerHTML = '';
-
-  // Top button
   const topLi = document.createElement('li');
   const topA = document.createElement('a');
-  topA.href = "#";
-  topA.textContent = "Top";
-  topA.addEventListener('click', e => {
-    e.preventDefault();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-  topLi.appendChild(topA);
-  tocList.appendChild(topLi);
+  topA.href="#"; topA.textContent="Top";
+  topA.addEventListener('click', e=>{e.preventDefault();window.scrollTo({top:0,behavior:'smooth'});});
+  topLi.appendChild(topA); tocList.appendChild(topLi);
 
-  // Headings
-  const headings = container.querySelectorAll('h1, h2, h3');
-  headings.forEach((heading, i) => {
-    heading.id = `heading-${i}`;
+  const headings = postContentEl.querySelectorAll('h1,h2,h3');
+  headings.forEach((h,i)=>{
+    const id = `heading-${i}`;
+    h.id = id;
     const li = document.createElement('li');
-    li.innerHTML = `<a href="#${heading.id}">${heading.textContent}</a>`;
+    li.innerHTML=`<a href="#${id}">${h.textContent}</a>`;
     tocList.appendChild(li);
   });
-}
 
-
-// Share button
-function sharePost() {
-  const url = window.location.href;
-  if (navigator.share) {
-    navigator.share({ title: document.title, url }).catch(() => {});
-  } else {
-    navigator.clipboard.writeText(url).then(() => alert("Post URL copied!"));
+  if(typeof GLightbox!=='undefined'){
+    if(!window.glightboxInstance) window.glightboxInstance=GLightbox({selector:'.glightbox'});
+    else window.glightboxInstance.reload();
   }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+function sharePost(){
+  const url = window.location.href;
+  if(navigator.share) navigator.share({title: document.title,url}).catch(()=>{});
+  else navigator.clipboard.writeText(url).then(()=>alert("Post URL copied!"));
+}
+
+document.addEventListener('DOMContentLoaded',()=>{
   loadPost();
-  document.getElementById("shareBtn").addEventListener("click", sharePost);
+  document.getElementById('shareBtn').addEventListener('click',sharePost);
 });
 </script>
-
 </body>
 </html>
