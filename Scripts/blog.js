@@ -58,21 +58,21 @@ async function initBlog() {
     const previewText = paragraphs.slice(0, 5).join("\n\n");
     let previewHtml = marked.parse(previewText);
     
-    // --- Find first image for header if you want one ---
-    const imageRegex = /!\[.*?\]\((.*?)\)/;
-    const match = postData.content.match(imageRegex);
-    let headerImage = match ? match[1] : null;
+    // // --- Find first image for header if you want one ---
+    // const imageRegex = /!\[.*?\]\((.*?)\)/;
+    // const match = postData.content.match(imageRegex);
+    // let headerImage = match ? match[1] : null;
 
-    // Remove the first image from preview text if needed
-    if (match) {
-      postData.content = postData.content.replace(imageRegex, "");
-    }
+    // // Remove the first image from preview text if needed
+    // if (match) {
+    //   postData.content = postData.content.replace(imageRegex, "");
+    // }
 
     // --- Build final HTML ---
     let finalHtml = "";
-    if (headerImage) {
-      finalHtml += `<img class="header-image" src="${headerImage}" alt="Header Image" loading="lazy">`;
-    }
+    // if (headerImage) {
+    //   finalHtml += `<img class="header-image" src="${headerImage}" alt="Header Image" loading="lazy">`;
+    // }
     finalHtml += previewHtml;
 
     // --- Create post card ---
