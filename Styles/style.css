@@ -296,3 +296,18 @@ p.intro-text {
   text-align: center;     /* optional: nice for intro paragraphs */
   color: #333;            /* softer than pure black */
 }
+
+
+/* Indent submenus and add caret icon spacing */
+.dropdown-menu .collapse {
+  margin-top: 0.3rem;
+}
+
+.dropdown-menu .dropdown-item i {
+  float: right;
+  transition: transform 0.3s;
+}
+
+.dropdown-menu .collapse.show + a i {
+  transform: rotate(180deg);
+}
