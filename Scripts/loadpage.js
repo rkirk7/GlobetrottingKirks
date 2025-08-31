@@ -30,9 +30,12 @@ async function loadPage(page) {
     // Initialize scripts immediately
     initializePageScripts(page);
 
-    // Lazy-load images asynchronously
-    content.querySelectorAll("img:not([loading])").forEach((img) => {
-      img.setAttribute("loading", "lazy");
+     // Lazy-load images, but eager-load first 2
+    const imgs = Array.from(content.querySelectorAll("img"));
+    imgs.forEach((img, index) => {
+      if (!img.hasAttribute("loading")) {
+        img.setAttribute("loading", index < 2 ? "eager" : "lazy");
+      }
     });
 
   } catch (err) {
