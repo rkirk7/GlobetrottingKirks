@@ -18,7 +18,7 @@ async function loadPage(page) {
 
     const parser = new DOMParser();
     const doc = parser.parseFromString(htmlText, "text/html");
-const mainContainer = doc.querySelector(".container");
+    const mainContainer = doc.querySelector(".container");
     if (!mainContainer) throw new Error("No #container found in page");
 
     // Insert the container itself
@@ -34,13 +34,9 @@ const mainContainer = doc.querySelector(".container");
     const imgs = Array.from(content.querySelectorAll("img"));
     imgs.forEach((img) => {
       if (!img.hasAttribute("loading")) {
-        img.setAttribute(
-          "loading",
-          img.closest(".hero") ? "eager" : "lazy"
-        );
+        img.setAttribute("loading", img.closest(".hero") ? "eager" : "lazy");
       }
     });
-
   } catch (err) {
     console.error(err);
     content.innerHTML = `<p>Error loading page.</p>`;
@@ -73,7 +69,7 @@ function initializePageScripts(page) {
   if (page === "albums.html" && typeof initAlbums === "function") initAlbums();
   if (page === "blog.html" && typeof initBlog === "function") initBlog();
 
-    initGalleries();
+  initGalleries();
 }
 
 // -------------------- Smooth Scroll + Active TOC --------------------
@@ -83,8 +79,7 @@ function loadTOC() {
 
   const toc = document.getElementById("toc");
   const tocList = document.getElementById("toc-list");
-  if (!tocList) return;
-
+  if (!toc || !tocList) return;
   const headings = postContentEl.querySelectorAll("h2, h3");
 
   if (headings.length > 0) {
@@ -101,14 +96,16 @@ function loadTOC() {
     });
 
     // Smooth scroll on click
-    tocList.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", e => {
+    tocList.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", (e) => {
         e.preventDefault();
-        const target = document.getElementById(link.getAttribute("href").substring(1));
+        const target = document.getElementById(
+          link.getAttribute("href").substring(1)
+        );
         if (target) {
           window.scrollTo({
             top: target.getBoundingClientRect().top + window.scrollY - 80, // offset for navbar
-            behavior: "smooth"
+            behavior: "smooth",
           });
         }
       });
@@ -117,14 +114,15 @@ function loadTOC() {
     // Highlight current heading while scrolling
     window.addEventListener("scroll", () => {
       let currentId = "";
-      headings.forEach(h => {
+      headings.forEach((h) => {
         const offsetTop = h.getBoundingClientRect().top;
-        if (offsetTop <= 90) { // slightly below navbar
+        if (offsetTop <= 90) {
+          // slightly below navbar
           currentId = h.id;
         }
       });
 
-      tocList.querySelectorAll("a").forEach(link => {
+      tocList.querySelectorAll("a").forEach((link) => {
         if (link.getAttribute("href") === `#${currentId}`) {
           link.classList.add("active");
         } else {
@@ -136,8 +134,6 @@ function loadTOC() {
     toc.classList.add("d-none");
   }
 }
-
-
 
 let imageData = {};
 
@@ -187,4 +183,3 @@ async function initGalleries() {
     }
   }
 }
-
