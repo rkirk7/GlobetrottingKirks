@@ -1,16 +1,14 @@
 const pageCache = {};
 let currentLoadId = 0;
 
-
 // -------------------- Load Page --------------------
 async function loadPage(page) {
-  currentLoadId++;         // new page load
+  currentLoadId++; // new page load
   const loadId = currentLoadId; // capture this load's ID
   cancelPendingImages();
 
   const content = document.getElementById("content");
 
-  
   requestAnimationFrame(() => window.scrollTo(0, 0));
 
   if (pageCache[page]) {
@@ -31,7 +29,7 @@ async function loadPage(page) {
     const mainContainer = doc.querySelector(".container");
     if (!mainContainer) throw new Error("No .container found in page");
 
-    mainContainer.querySelectorAll("img").forEach(img => {
+    mainContainer.querySelectorAll("img").forEach((img) => {
       if (!img.hasAttribute("loading")) img.setAttribute("loading", "lazy");
     });
 
@@ -51,7 +49,6 @@ async function loadPage(page) {
   }
 }
 
-
 // -------------------- Initialize Page Scripts --------------------
 async function initializePageScripts(page, loadId) {
   const content = document.getElementById("content");
@@ -62,13 +59,13 @@ async function initializePageScripts(page, loadId) {
     hero.style.backgroundImage = `url('${hero.dataset.hero}')`;
   }
 
-    processMarkdownGalleries(content);
+  processMarkdownGalleries(content);
 
-requestAnimationFrame(() => {
-  if (loadId === currentLoadId && document.getElementById("toc-list")) {
-    loadTOC();
-  }
-});
+  requestAnimationFrame(() => {
+    if (loadId === currentLoadId && document.getElementById("toc-list")) {
+      loadTOC();
+    }
+  });
 
   await processImages(content, loadId);
 
@@ -76,9 +73,6 @@ requestAnimationFrame(() => {
   if (page === "albums.html" && typeof initAlbums === "function") initAlbums();
   if (page === "blog.html" && typeof initBlog === "function") initBlog();
 }
-
-
-
 
 // -------------------- Smooth Scroll + Active TOC --------------------
 
@@ -101,17 +95,29 @@ function loadTOC() {
   toc.classList.remove("d-none");
   tocList.innerHTML = "";
 
+  // Add "Top" button at the beginning
+  const topLi = document.createElement("li");
+  const topA = document.createElement("a");
+  topA.href = "#";
+  topA.textContent = "Top";
+  topA.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+  topLi.appendChild(topA);
+  tocList.appendChild(topLi);
+
   headings.forEach((heading, i) => {
     if (!heading.id) heading.id = `heading-${i}`;
     const li = document.createElement("li");
     const a = document.createElement("a");
     a.href = `#${heading.id}`;
     a.textContent = heading.textContent;
- a.addEventListener("click", (e) => {
-  e.preventDefault();
-  scrollToHeadingWithOffset(document.getElementById(heading.id));
-  if (window.innerWidth < 768) tocList.classList.add("d-none"); // auto-hide on mobile
-});
+    a.addEventListener("click", (e) => {
+      e.preventDefault();
+      scrollToHeadingWithOffset(document.getElementById(heading.id));
+      if (window.innerWidth < 768) tocList.classList.add("d-none"); // auto-hide on mobile
+    });
     li.appendChild(a);
     tocList.appendChild(li);
   });
@@ -131,7 +137,9 @@ function loadTOC() {
         if (rect.top <= 100) current = heading;
       });
 
-      tocList.querySelectorAll("a").forEach((a) => a.classList.remove("active"));
+      tocList
+        .querySelectorAll("a")
+        .forEach((a) => a.classList.remove("active"));
       const activeLink = tocList.querySelector(`a[href="#${current.id}"]`);
       if (activeLink) activeLink.classList.add("active");
     });
@@ -142,11 +150,8 @@ function loadTOC() {
 // Run after page content loads
 document.addEventListener("DOMContentLoaded", loadTOC);
 
-
-
-
 function cancelPendingImages() {
-  document.querySelectorAll("#content img").forEach(img => {
+  document.querySelectorAll("#content img").forEach((img) => {
     img.removeAttribute("src"); // safer than setting src=""
   });
 }
@@ -166,41 +171,44 @@ async function processImages(container, loadId) {
 
   const images = container.querySelectorAll("img");
 
-
   const frag = document.createDocumentFragment();
 
-for (const img of images) {
-  if (loadId !== currentLoadId) return; // stop mid-loop
-  if (img.classList.contains("card-img-top") || img.classList.contains("special-img")) continue; // skip special card images
+  for (const img of images) {
+    if (loadId !== currentLoadId) return; // stop mid-loop
+    if (
+      img.classList.contains("card-img-top") ||
+      img.classList.contains("special-img")
+    )
+      continue; // skip special card images
 
-  const src = img.getAttribute("src");
-  const fileName = src?.split("/").pop();
-  const caption = window._imageData[fileName] || img.alt || "";
+    const src = img.getAttribute("src");
+    const fileName = src?.split("/").pop();
+    const caption = window._imageData[fileName] || img.alt || "";
 
-  if (!img.closest("figure")) {
-    const figure = document.createElement("figure");
-    figure.classList.add("figure", "text-center");
-    img.parentNode.insertBefore(figure, img);
-    figure.appendChild(img);
+    if (!img.closest("figure")) {
+      const figure = document.createElement("figure");
+      figure.classList.add("figure", "text-center");
+      img.parentNode.insertBefore(figure, img);
+      figure.appendChild(img);
+    }
+
+    if (
+      caption &&
+      !img.nextElementSibling?.classList.contains("figure-caption")
+    ) {
+      const figcap = document.createElement("figcaption");
+      figcap.classList.add("figure-caption", "text-center");
+      figcap.textContent = caption;
+      img.parentNode.appendChild(figcap);
+    }
+
+    img.setAttribute("data-glightbox", "title:" + caption);
+    img.classList.add("glightbox");
+    if (!img.hasAttribute("loading")) img.setAttribute("loading", "lazy");
   }
 
-  if (caption && !img.nextElementSibling?.classList.contains('figure-caption')) {
-    const figcap = document.createElement("figcaption");
-    figcap.classList.add("figure-caption", "text-center");
-    figcap.textContent = caption;
-    img.parentNode.appendChild(figcap);
-  }
-
-  img.setAttribute("data-glightbox", "title:" + caption);
-  img.classList.add("glightbox");
-  if (!img.hasAttribute("loading")) img.setAttribute("loading", "lazy");
-}
-
-
-// Append all at once
-container.appendChild(frag);
-
-
+  // Append all at once
+  container.appendChild(frag);
 
   if (loadId === currentLoadId && typeof GLightbox !== "undefined") {
     if (!window.glightboxInstance) {
@@ -211,57 +219,57 @@ container.appendChild(frag);
   }
 }
 
-
-
 function scrollToHeadingWithOffset(heading) {
-  const navbarHeight = document.querySelector('.navbar').offsetHeight;
+  const navbarHeight = document.querySelector(".navbar").offsetHeight;
   const elementTop = heading.getBoundingClientRect().top + window.scrollY;
   window.scrollTo({
     top: elementTop - navbarHeight - 10, // 10px extra padding
-    behavior: 'smooth'
+    behavior: "smooth",
   });
 }
-
 
 function processMarkdownGalleries(container) {
   if (!container) return;
 
   // Find all galleries
-  const galleries = container.querySelectorAll('.gallery');
+  const galleries = container.querySelectorAll(".gallery");
 
-  galleries.forEach(gallery => {
+  galleries.forEach((gallery) => {
     // Unwrap images from <p> if Markdown added it
-    gallery.querySelectorAll('p').forEach(p => {
-      const img = p.querySelector('img');
+    gallery.querySelectorAll("p").forEach((p) => {
+      const img = p.querySelector("img");
       if (img) p.replaceWith(img);
     });
 
     // Wrap images in <figure> and add captions
-    gallery.querySelectorAll('img').forEach(img => {
-      const src = img.getAttribute('src');
-      const fileName = src?.split('/').pop();
+    gallery.querySelectorAll("img").forEach((img) => {
+      const src = img.getAttribute("src");
+      const fileName = src?.split("/").pop();
       const caption = window._imageData?.[fileName] || img.alt || "";
 
       // Wrap in figure if not already
-      if (!img.closest('figure')) {
-        const figure = document.createElement('figure');
-        figure.classList.add('figure', 'text-center');
+      if (!img.closest("figure")) {
+        const figure = document.createElement("figure");
+        figure.classList.add("figure", "text-center");
         img.parentNode.insertBefore(figure, img);
         figure.appendChild(img);
       }
 
       // Add figcaption if caption exists
-      if (caption && !img.nextElementSibling?.classList.contains('figure-caption')) {
-        const figcap = document.createElement('figcaption');
-        figcap.classList.add('figure-caption', 'text-center');
+      if (
+        caption &&
+        !img.nextElementSibling?.classList.contains("figure-caption")
+      ) {
+        const figcap = document.createElement("figcaption");
+        figcap.classList.add("figure-caption", "text-center");
         figcap.textContent = caption;
         img.parentNode.appendChild(figcap);
       }
 
       // Add GLightbox attributes
-      img.setAttribute('data-glightbox', 'title:' + caption);
-      img.classList.add('glightbox');
-      if (!img.hasAttribute('loading')) img.setAttribute('loading', 'lazy');
+      img.setAttribute("data-glightbox", "title:" + caption);
+      img.classList.add("glightbox");
+      if (!img.hasAttribute("loading")) img.setAttribute("loading", "lazy");
     });
 
     // Initialize or reload GLightbox
