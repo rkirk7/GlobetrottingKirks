@@ -167,7 +167,7 @@ a:hover {
 
 /* Gallery layout */
 .gallery {
-  aspect-ratio: 4/3;      /* consistent shape */
+  aspect-ratio: 3/4;
   object-fit: cover;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -176,7 +176,7 @@ a:hover {
 }
 
 .gallery img {
-  width: 100%;
+  max-width: 100%;
   height: 250px;
   border-radius: 6px;
   object-fit: cover;    /* Crop rather than stretch the image */
