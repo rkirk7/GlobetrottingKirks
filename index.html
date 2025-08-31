@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Globetrotting Kirks</title>
-
-<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/9e4e0ffaef14115fa941069c0/e58b4bc534a7df2709d8339f9.js");</script>
 
     <!-- Bootstrap CSS -->
     <link
@@ -34,6 +32,8 @@
     <!-- Your Custom Styles -->
     <link rel="stylesheet" href="Styles/style.css" />
 
+    <!-- Mailchimp form CSS -->
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css" />
     <style>
       /* Navbar social icon hover */
       .navbar-dark .nav-link svg {
@@ -51,12 +51,21 @@
       }
 
       #content {
-        flex: 1; /* takes remaining space */
+        flex: 1;
       }
 
       footer {
-        /* Already has bg-dark and text-center, optionally: */
         flex-shrink: 0;
+      }
+
+      #mc_embed_signup {
+        background: #fff;
+        font: 14px Helvetica, Arial, sans-serif;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
       }
     </style>
   </head>
@@ -65,269 +74,52 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container-fluid">
-        <a
-          class="navbar-brand d-flex align-items-center"
-          onclick="loadPage('home.html')"
-          href="#home.html"
-        >
-          <img
-            src="Images/GKLogo.png"
-            alt="Globetrotting Kirks Logo"
-          />
+        <a class="navbar-brand d-flex align-items-center" onclick="loadPage('home.html')" href="#home.html">
+          <img src="Images/GKLogo.png" alt="Globetrotting Kirks Logo" />
         </a>
-
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarCollapse"
-          aria-controls="navbarCollapse"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarCollapse">
-          <!-- Left side links -->
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                onclick="loadPage('aboutus.html')"
-                href="#aboutus.html"
-                >About Us</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                onclick="loadPage('specials.html')"
-                href="#specials.html"
-                >Specials</a
-              >
-            </li>
-
+            <li class="nav-item"><a class="nav-link" onclick="loadPage('aboutus.html')" href="#aboutus.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" onclick="loadPage('specials.html')" href="#specials.html">Specials</a></li>
             <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Our Favorite Types of Travel
               </a>
               <ul class="dropdown-menu">
                 <li><h6 class="dropdown-header">Wildlife Adventures</h6></li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    onclick="loadPage('Travel/safaris.html')"
-                    href="#Travel/safaris.html"
-                    >Safari</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    onclick="loadPage('Travel/polarbears.html')"
-                    href="#Travel/polarbears.html"
-                    >Polar Bears</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="https://www.foratravel.com/guides/BDZTA6/enchanting-galapagos-12-days-in-a-wildlife-wonderland-mei-mei-kirk"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Galapagos</a
-                  >
-                </li>
+                <li><a class="dropdown-item" onclick="loadPage('Travel/safaris.html')" href="#Travel/safaris.html">Safari</a></li>
+                <li><a class="dropdown-item" onclick="loadPage('Travel/polarbears.html')" href="#Travel/polarbears.html">Polar Bears</a></li>
+                <li><a class="dropdown-item" href="https://www.foratravel.com/guides/BDZTA6/enchanting-galapagos-12-days-in-a-wildlife-wonderland-mei-mei-kirk" target="_blank" rel="noopener noreferrer">Galapagos</a></li>
                 <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    onclick="loadPage('Travel/hikingadventures.html')"
-                    href="#Travel/hikingadventures.html"
-                    >Hiking and Other Thrill-Seeking</a
-                  >
-                </li>
+                <li><a class="dropdown-item" onclick="loadPage('Travel/hikingadventures.html')" href="#Travel/hikingadventures.html">Hiking and Other Thrill-Seeking</a></li>
                 <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    onclick="loadPage('Travel/grouptravel.html')"
-                    href="#Travel/grouptravel.html"
-                    >Group Travel</a
-                  >
-                </li>
+                <li><a class="dropdown-item" onclick="loadPage('Travel/grouptravel.html')" href="#Travel/grouptravel.html">Group Travel</a></li>
                 <li><hr class="dropdown-divider" /></li>
-                <!-- <li><h6 class="dropdown-header">By Geography</h6></li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    onclick="loadPage('Travel/europe.html')"
-                    href="#Travel/europe.html"
-                    >Europe</a
-                  >
-                </li> -->
-                <!-- <li>
-                  <a
-                    class="dropdown-item"
-                    onclick="loadPage('Travel/downunder.html')"
-                    href="#Travel/downunder.html"
-                    >Australia and New Zealand</a
-                  >
-                </li> -->
-                <!-- <li>
-                  <a
-                    class="dropdown-item"
-                    onclick="loadPage('Travel/asia.html')"
-                    href="#Travel/asia.html"
-                    >Asia</a
-                  >
-                </li> -->
-                <!-- <li>
-                  <a
-                    class="dropdown-item"
-                    onclick="loadPage('Travel/unitedstates.html')"
-                    href="#Travel/unitedstates.html"
-                    >The U.S.</a
-                  >
-                </li> -->
-                <!-- <li>
-                  <a
-                    class="dropdown-item"
-                    onclick="loadPage('Travel/antarctica.html')"
-                    href="#Travel/antarctica.html"
-                    >Antarctica</a
-                  >
-                </li>
-                <li><hr class="dropdown-divider" /></li> -->
                 <li><h6 class="dropdown-header">Cruises</h6></li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    onclick="loadPage('Travel/cruises.html')"
-                    href="#Travel/cruises.html"
-                    >Cruises</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="https://www.foratravel.com/trip-reports/FTYYJ7/polar-exploration-comparing-the-arctic-and-antarctic-mei-mei-kirk"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Expedition Cruises</a
-                  >
-                </li>
+                <li><a class="dropdown-item" onclick="loadPage('Travel/cruises.html')" href="#Travel/cruises.html">Cruises</a></li>
+                <li><a class="dropdown-item" href="https://www.foratravel.com/trip-reports/FTYYJ7/polar-exploration-comparing-the-arctic-and-antarctic-mei-mei-kirk" target="_blank" rel="noopener noreferrer">Expedition Cruises</a></li>
                 <li><hr class="dropdown-divider" /></li>
                 <li><h6 class="dropdown-header">Theme Parks</h6></li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    onclick="loadPage('Travel/disney.html')"
-                    href="#Travel/disney.html"
-                    >Disney Vacations</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    onclick="loadPage('Travel/universal.html')"
-                    href="#Travel/universal.html"
-                    >Universal Studios Packages</a
-                  >
-                </li>
+                <li><a class="dropdown-item" onclick="loadPage('Travel/disney.html')" href="#Travel/disney.html">Disney Vacations</a></li>
+                <li><a class="dropdown-item" onclick="loadPage('Travel/universal.html')" href="#Travel/universal.html">Universal Studios Packages</a></li>
                 <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    onclick="loadPage('Travel/theater.html')"
-                    href="#Travel/theater.html"
-                    >Musical Theater</a
-                  >
-                </li>
+                <li><a class="dropdown-item" onclick="loadPage('Travel/theater.html')" href="#Travel/theater.html">Musical Theater</a></li>
               </ul>
             </li>
-
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                onclick="loadPage('blog.html')"
-                href="#blog.html"
-                >Travel Blog</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                onclick="loadPage('albums.html')"
-                href="#albums.html"
-                >Photo Albums</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                onclick="loadPage('reviews.html')"
-                href="#reviews.html"
-                >Client Reviews</a
-              >
-            </li>
-            <!-- <li class="nav-item"><a class="nav-link" onclick="loadPage('tips.html')" href="#tips.html">Travel Tips</a></li> -->
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                onclick="loadPage('travelagentbenefits.html')"
-                href="#travelagentbenefits.html"
-                >Travel Agent Benefits</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                onclick="loadPage('contact.html')"
-                href="#contact.html"
-                >Contact</a
-              >
-            </li>
+            <li class="nav-item"><a class="nav-link" onclick="loadPage('blog.html')" href="#blog.html">Travel Blog</a></li>
+            <li class="nav-item"><a class="nav-link" onclick="loadPage('albums.html')" href="#albums.html">Photo Albums</a></li>
+            <li class="nav-item"><a class="nav-link" onclick="loadPage('reviews.html')" href="#reviews.html">Client Reviews</a></li>
+            <li class="nav-item"><a class="nav-link" onclick="loadPage('travelagentbenefits.html')" href="#travelagentbenefits.html">Travel Agent Benefits</a></li>
+            <li class="nav-item"><a class="nav-link" onclick="loadPage('contact.html')" href="#contact.html">Contact</a></li>
           </ul>
-
-          <!-- Social Media Icons -->
           <ul class="navbar-nav ms-auto d-flex align-items-center">
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="https://www.tiktok.com/@globetrottingkirks"
-                target="_blank"
-                title="TikTok"
-                ><i class="bi bi-tiktok"></i>
-              </a>
-            </li>
-            <!-- Instagram -->
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="https://www.instagram.com/globetrottingkirks"
-                target="_blank"
-                title="Instagram"
-                ><i class="bi bi-instagram"></i>
-              </a>
-            </li>
-            <!-- Facebook -->
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="https://www.facebook.com/profile.php?id=61579778874988"
-                target="_blank"
-                title="Facebook"
-                ><i class="bi bi-facebook"></i>
-              </a>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="https://www.tiktok.com/@globetrottingkirks" target="_blank" title="TikTok"><i class="bi bi-tiktok"></i></a></li>
+            <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/globetrottingkirks" target="_blank" title="Instagram"><i class="bi bi-instagram"></i></a></li>
+            <li class="nav-item"><a class="nav-link" href="https://www.facebook.com/profile.php?id=61579778874988" target="_blank" title="Facebook"><i class="bi bi-facebook"></i></a></li>
           </ul>
         </div>
       </div>
@@ -336,174 +128,77 @@
     <!-- Page Content -->
     <div id="content" class="container mt-5 pt-5"></div>
 
-        <!-- Newsletter Signup Section -->
-  <div id="mc_embed_shell">
-    <link
-      href="//cdn-images.mailchimp.com/embedcode/classic-061523.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <style type="text/css">
-  #mc_embed_signup {
-  background: #fff;
-  font: 14px Helvetica, Arial, sans-serif;
-  max-width: 600px;      /* instead of width: 600px */
-  margin: 0 auto;         /* centers horizontally */
-  padding: 20px;          /* optional: add some breathing room */
-  border-radius: 8px;     /* optional: round corners */
-  text-align: center;     /* centers text and inline elements */
-}
-
-      /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-       We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-    </style>
-    <div id="mc_embed_signup">
-      <form
-        action="https://fora.us12.list-manage.com/subscribe/post?u=9e4e0ffaef14115fa941069c0&amp;id=9d3e039cb7&amp;f_id=00c7f9e3f0"
-        method="post"
-        id="mc-embedded-subscribe-form"
-        name="mc-embedded-subscribe-form"
-        class="validate"
-        target="_blank"
-      >
-        <div id="mc_embed_signup_scroll">
-          <h2>
-            Subscribe to our newsletter to keep up with great deals and travel
-            posts!
-          </h2>
-          <div class="indicates-required">
-            <span class="asterisk">*</span> indicates required
-          </div>
-          <div class="mc-field-group">
-            <label for="mce-EMAIL"
-              >Email Address <span class="asterisk">*</span></label
-            ><input
-              type="email"
-              name="EMAIL"
-              class="required email"
-              id="mce-EMAIL"
-              required=""
-              value=""
-            />
-          </div>
-          <div id="mce-responses" class="clear foot">
-            <div
-              class="response"
-              id="mce-error-response"
-              style="display: none"
-            ></div>
-            <div
-              class="response"
-              id="mce-success-response"
-              style="display: none"
-            ></div>
-          </div>
-          <div style="position: absolute; left: -5000px" aria-hidden="true">
-            /* real people should not fill this in and expect good things - do
-            not remove this or risk form bot signups */
-            <input
-              type="text"
-              name="b_9e4e0ffaef14115fa941069c0_9d3e039cb7"
-              tabindex="-1"
-              value=""
-            />
-          </div>
-          <div class="optionalParent">
-            <div class="clear foot">
-              <input
-                type="submit"
-                name="subscribe"
-                id="mc-embedded-subscribe"
-                class="button"
-                value="Subscribe"
-              />
-              <p style="margin: 0px auto">
-                <a
-                  href="http://eepurl.com/jmagF6"
-                  title="Mailchimp - email marketing made easy and fun"
-                  ><span
-                    style="
-                      display: inline-block;
-                      background-color: transparent;
-                      border-radius: 4px;
-                    "
-                    ><img
-                      class="refferal_badge"
-                      src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg"
-                      alt="Intuit Mailchimp"
-                      style="
-                        width: 220px;
-                        height: 40px;
-                        display: flex;
-                        padding: 2px 0px;
-                        justify-content: center;
-                        align-items: center;
-                      " /></span
-                ></a>
-              </p>
+    <!-- Newsletter Signup Section -->
+    <div id="mc_embed_shell">
+      <div id="mc_embed_signup">
+        <form action="https://fora.us12.list-manage.com/subscribe/post?u=9e4e0ffaef14115fa941069c0&amp;id=9d3e039cb7&amp;f_id=00c7f9e3f0"
+              method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+          <div id="mc_embed_signup_scroll">
+            <h2>Subscribe to our newsletter to keep up with great deals and travel posts!</h2>
+            <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+            <div class="mc-field-group">
+              <label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
+              <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required value="" />
+            </div>
+            <div id="mce-responses" class="clear foot">
+              <div class="response" id="mce-error-response" style="display:none"></div>
+              <div class="response" id="mce-success-response" style="display:none"></div>
+            </div>
+            <div style="position:absolute; left:-5000px" aria-hidden="true">
+              <input type="text" name="b_9e4e0ffaef14115fa941069c0_9d3e039cb7" tabindex="-1" value="" />
+            </div>
+            <div class="optionalParent">
+              <div class="clear foot">
+                <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe" />
+                <p style="margin:0 auto">
+                  <a href="http://eepurl.com/jmagF6" title="Mailchimp - email marketing made easy and fun">
+                    <img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width:220px;height:40px;display:flex;padding:2px 0;justify-content:center;align-items:center;" />
+                  </a>
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
-    <script
-      type="text/javascript"
-      src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"
-    ></script>
-    <script type="text/javascript">
-      (function ($) {
-        window.fnames = new Array();
-        window.ftypes = new Array();
-        fnames[0] = "EMAIL";
-        ftypes[0] = "email";
-        fnames[1] = "FNAME";
-        ftypes[1] = "text";
-        fnames[2] = "LNAME";
-        ftypes[2] = "text";
-        fnames[3] = "ADDRESS";
-        ftypes[3] = "address";
-        fnames[4] = "PHONE";
-        ftypes[4] = "phone";
-        fnames[5] = "BIRTHDAY";
-        ftypes[5] = "birthday";
-        fnames[6] = "COMPANY";
-        ftypes[6] = "text";
-      })(jQuery);
-      var $mcj = jQuery.noConflict(true);
-    </script>
-  </div>
 
+    <!-- Footer -->
     <footer class="bg-dark text-white text-center p-4 mt-5">
       <p>&copy; 2025 Globetrotting Kirks | Your Travel Experts</p>
       <p>
         <a href="mailto:meimei.kirk@fora.travel">meimei.kirk@fora.travel</a> |
         <a href="mailto:regan.kirk@fora.travel">regan.kirk@fora.travel</a>
       </p>
-      <p>
-        <i
-          >Globetrotting Kirks is an affiliate of Fora Travel, a Virtuoso
-          Member</i
-        >
-      </p>
+      <p><i>Globetrotting Kirks is an affiliate of Fora Travel, a Virtuoso Member</i></p>
     </footer>
 
-    <!-- Scripts -->
+    <!-- Scripts (defer or async) -->
+    <script src="Scripts/loadpage.js" defer></script>
+    <script src="Scripts/newsletter.js" defer></script>
+    <script src="Scripts/blog.js" defer></script>
+    <script src="Scripts/albums.js" defer></script>
 
-      <script src="Scripts/newsletter.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous" defer></script>
 
-    <script src="Scripts/blog.js"></script>
-    <script src="Scripts/albums.js"></script>
-    <script src="Scripts/loadpage.js"></script>
+    <!-- Initialize home page -->
+    <script defer>
+      document.addEventListener("DOMContentLoaded", () => {
+        loadPage("home.html");
+      });
+    </script>
 
-    <script>
-      loadPage("home.html");
+    <!-- Mailchimp asynchronous script -->
+    <script id="mcjs" async>
+      !function(c,h,i,m,p){
+        m=c.createElement(h),p=c.getElementsByTagName(h)[0],
+        m.async=1,
+        m.src=i,
+        p.parentNode.insertBefore(m,p)
+      }(document,"script","https://chimpstatic.com/mcjs-connected/js/users/9e4e0ffaef14115fa941069c0/e58b4bc534a7df2709d8339f9.js");
     </script>
   </body>
 </html>
