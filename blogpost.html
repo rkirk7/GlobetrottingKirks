@@ -89,7 +89,6 @@ async function loadPost() {
   const postFile = params.get('post');
   if (!postFile) return;
 
-  // --- Fetch Markdown ---
   let postText = await fetch(`blog-posts/${postFile}`).then(r => r.text());
   postText = postText.replace(/^---[\s\S]*?---/, '').trim();
 
@@ -106,15 +105,14 @@ async function loadPost() {
 
   const postContentEl = document.getElementById('post-content');
   postContentEl.innerHTML = '';
-  postContentEl.appendChild(tempDiv); // move entire parsed content
+  postContentEl.appendChild(tempDiv);
 
-  // --- Process images and galleries ---
-  function processImagesAndGalleries(container) {
+  // --- Process images ---
+  function processImages(container) {
     if (!container) return;
 
-    // Galleries first
-    const galleries = container.querySelectorAll('.gallery');
-    galleries.forEach(gallery => {
+    // 1️⃣ Galleries
+    container.querySelectorAll('.gallery').forEach(gallery => {
       gallery.querySelectorAll('p').forEach(p => {
         const img = p.querySelector('img');
         if (img) p.replaceWith(img);
@@ -125,6 +123,7 @@ async function loadPost() {
         const fileName = src?.split('/').pop();
         const caption = window._imageData?.[fileName] || img.alt || '';
 
+        // Wrap img in figure but **keep it inside gallery** for grid
         if (!img.closest('figure')) {
           const figure = document.createElement('figure');
           figure.classList.add('figure', 'text-center');
@@ -145,7 +144,7 @@ async function loadPost() {
       });
     });
 
-    // Standalone images
+    // 2️⃣ Standalone images outside galleries
     container.querySelectorAll('img:not(.glightbox)').forEach(img => {
       const src = img.getAttribute('src');
       const fileName = src?.split('/').pop();
@@ -170,22 +169,22 @@ async function loadPost() {
       img.setAttribute('loading', 'lazy');
     });
 
+    // Initialize GLightbox
     if (typeof GLightbox !== 'undefined') {
       if (!window.glightboxInstance) window.glightboxInstance = GLightbox({ selector: '.glightbox' });
       else window.glightboxInstance.reload();
     }
   }
 
-  processImagesAndGalleries(postContentEl);
+  processImages(postContentEl);
 
-  // --- Build TOC ---
+  // --- TOC ---
   const tocList = document.getElementById('toc-list');
   tocList.innerHTML = '';
 
-  // "Top" button
   const topLi = document.createElement('li');
   const topA = document.createElement('a');
-  topA.href = "#"; topA.textContent="Top";
+  topA.href="#"; topA.textContent="Top";
   topA.addEventListener('click', e=>{
     e.preventDefault();
     window.scrollTo({top:0, behavior:'smooth'});
@@ -193,7 +192,6 @@ async function loadPost() {
   topLi.appendChild(topA);
   tocList.appendChild(topLi);
 
-  // Add headings
   const headings = postContentEl.querySelectorAll('h1,h2,h3');
   headings.forEach((h,i)=>{
     const id = `heading-${i}`;
@@ -203,20 +201,8 @@ async function loadPost() {
     tocList.appendChild(li);
   });
 }
-
-// --- Share button ---
-function sharePost(){
-  const url = window.location.href;
-  if(navigator.share) navigator.share({title: document.title,url}).catch(()=>{});
-  else navigator.clipboard.writeText(url).then(()=>alert("Post URL copied!"));
-}
-
-// --- Init ---
-document.addEventListener('DOMContentLoaded',()=>{
-  loadPost();
-  document.getElementById('shareBtn').addEventListener('click',sharePost);
-});
 </script>
+
 
 </body>
 </html>
