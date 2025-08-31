@@ -1,14 +1,20 @@
 const pageCache = {};
+let currentLoadId = 0;
+
 
 // -------------------- Load Page --------------------
 async function loadPage(page) {
-   cancelPendingImages();
+  currentLoadId++;         // new page load
+  const loadId = currentLoadId; // capture this load's ID
+  cancelPendingImages();
+
   const content = document.getElementById("content");
   requestAnimationFrame(() => window.scrollTo(0, 0));
 
   if (pageCache[page]) {
+    if (loadId !== currentLoadId) return; // page load canceled
     content.innerHTML = pageCache[page];
-    initializePageScripts(page);
+    initializePageScripts(page, loadId);
     return;
   }
 
@@ -16,58 +22,57 @@ async function loadPage(page) {
     const res = await fetch(page);
     if (!res.ok) throw new Error(`Failed to fetch ${page}: ${res.status}`);
     const htmlText = await res.text();
+    if (loadId !== currentLoadId) return; // canceled mid-fetch
 
     const parser = new DOMParser();
     const doc = parser.parseFromString(htmlText, "text/html");
     const mainContainer = doc.querySelector(".container");
-    if (!mainContainer) throw new Error("No #container found in page");
-
-    // Insert the container itself
+    if (!mainContainer) throw new Error("No .container found in page");
 
     mainContainer.querySelectorAll("img").forEach(img => {
-  if (!img.hasAttribute("loading")) img.setAttribute("loading", "lazy");
-});
+      if (!img.hasAttribute("loading")) img.setAttribute("loading", "lazy");
+    });
+
+    if (loadId !== currentLoadId) return; // canceled before render
     content.innerHTML = "";
     content.appendChild(mainContainer.cloneNode(true));
 
-    // Cache the content
     pageCache[page] = content.innerHTML;
 
-    initializePageScripts(page);
-
-    // Lazy-load images: hero images eager, rest lazy
-    const imgs = Array.from(content.querySelectorAll("img"));
-    imgs.forEach((img) => {
-      if (!img.hasAttribute("loading")) {
-        img.setAttribute("loading", img.closest(".hero") ? "eager" : "lazy");
-      }
-    });
+    if (loadId !== currentLoadId) return;
+    initializePageScripts(page, loadId);
   } catch (err) {
-    console.error(err);
-    content.innerHTML = `<p>Error loading page.</p>`;
+    if (loadId === currentLoadId) {
+      console.error(err);
+      content.innerHTML = `<p>Error loading page.</p>`;
+    }
   }
 }
 
-// -------------------- Initialize Page Scripts --------------------
-async function initializePageScripts(page) {
-  const content = document.getElementById("content");
 
-  // Hero background
+// -------------------- Initialize Page Scripts --------------------
+async function initializePageScripts(page, loadId) {
+  const content = document.getElementById("content");
+  if (loadId !== currentLoadId) return; // canceled
+
   const hero = content.querySelector(".hero");
   if (hero && hero.dataset.hero) {
     hero.style.backgroundImage = `url('${hero.dataset.hero}')`;
   }
 
-  // Table of Contents: run after the DOM has fully updated
-  requestAnimationFrame(() => loadTOC());
+requestAnimationFrame(() => {
+  if (loadId === currentLoadId && document.getElementById("toc-list")) {
+    loadTOC();
+  }
+});
 
-  // Process images and galleries
-  await processImages(content);
+  await processImages(content, loadId);
 
-  // Page-specific scripts
+  if (loadId !== currentLoadId) return;
   if (page === "albums.html" && typeof initAlbums === "function") initAlbums();
   if (page === "blog.html" && typeof initBlog === "function") initBlog();
 }
+
 
 
 
@@ -138,14 +143,13 @@ document.addEventListener("DOMContentLoaded", loadTOC);
 
 function cancelPendingImages() {
   document.querySelectorAll("#content img").forEach(img => {
-    img.src = ""; // stops download
+    img.removeAttribute("src"); // safer than setting src=""
   });
 }
 
-async function processImages(container) {
-  if (!container) return;
+async function processImages(container, loadId) {
+  if (!container || loadId !== currentLoadId) return;
 
-  // Load image-data.json once
   if (!window._imageData) {
     try {
       const res = await fetch("image-data.json");
@@ -157,35 +161,48 @@ async function processImages(container) {
   }
 
   const images = container.querySelectorAll("img");
-  images.forEach(img => {
-    const src = img.getAttribute("src");
-    const fileName = src.split("/").pop();
-    const caption = window._imageData[fileName] || img.alt || "";
 
-    // Wrap in <figure> if not already
-    if (!img.closest("figure")) {
-      const figure = document.createElement("figure");
-      figure.classList.add("figure", "text-center");
-      img.parentNode.insertBefore(figure, img);
-      figure.appendChild(img);
-    }
 
-    // Add <figcaption>
-    if (caption && !img.nextElementSibling?.classList.contains('figure-caption')) {
-      const figcap = document.createElement("figcaption");
-      figcap.classList.add("figure-caption", "text-center");
-      figcap.textContent = caption;
-      img.parentNode.appendChild(figcap);
-    }
+  const frag = document.createDocumentFragment();
 
-    // GLightbox setup
-    img.setAttribute("data-glightbox", "title:" + caption);
-    img.classList.add("glightbox");
-    if (!img.hasAttribute("loading")) img.setAttribute("loading", "lazy");
-  });
+for (const img of images) {
+  if (loadId !== currentLoadId) return; // stop mid-loop
+  const src = img.getAttribute("src");
+  const fileName = src?.split("/").pop();
+  const caption = window._imageData[fileName] || img.alt || "";
 
-  // Initialize/reload GLightbox
-  if (typeof GLightbox !== "undefined") {
+  // Wrap image in a figure if needed
+  let figure = img.closest("figure");
+  if (!figure) {
+    figure = document.createElement("figure");
+    figure.classList.add("figure", "text-center");
+    img.parentNode.insertBefore(figure, img);
+    figure.appendChild(img);
+  }
+
+  // Add caption if needed
+  if (caption && !img.nextElementSibling?.classList.contains("figure-caption")) {
+    const figcap = document.createElement("figcaption");
+    figcap.classList.add("figure-caption", "text-center");
+    figcap.textContent = caption;
+    img.parentNode.appendChild(figcap);
+  }
+
+  // Lazy loading + lightbox
+  img.setAttribute("data-glightbox", "title:" + caption);
+  img.classList.add("glightbox");
+  if (!img.hasAttribute("loading")) img.setAttribute("loading", "lazy");
+
+  // Add the whole figure to the fragment
+  frag.appendChild(figure);
+}
+
+// Append all at once
+container.appendChild(frag);
+
+
+
+  if (loadId === currentLoadId && typeof GLightbox !== "undefined") {
     if (!window.glightboxInstance) {
       window.glightboxInstance = GLightbox({ selector: ".glightbox" });
     } else {
@@ -193,6 +210,7 @@ async function processImages(container) {
     }
   }
 }
+
 
 
 function scrollToHeadingWithOffset(heading) {
