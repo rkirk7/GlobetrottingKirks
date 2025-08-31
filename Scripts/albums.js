@@ -1,32 +1,3 @@
-// ---------- albums.js ----------
-
-// Centralized album data (single source of truth)
-const ALBUMS = {
-  "churchill-2025": { name: "Churchill 2025", folder: "Churchill", total: 40 },
-  "pandas-2025":    { name: "Pandas 2025",    folder: "Pandas",     total: 8 },
-  "nepal-2025":     { name: "Nepal 2025",     folder: "Nepal",      total: 19 },
-  "antarctica-2024":{ name: "Antarctica 2024", folder: "Antarctica", total: 14 },
-  "safari-2024":    { name: "Safari to Botswana, Zimbabwe, and Kenya 2024", folder: "23Safari", total: 41 },
-  "svalbard-2024":  { name: "Svalbard 2024",  folder: "Svalbard",   total: 16 },
-  "safari-2023":    { name: "Safari to Botswana, Zimbabwe, Zambia and Namibia 2023", folder: "23Safari", total: 50 },
-  "patagonia-2023": { name: "Patagonia 2023", folder: "Patagonia",  total: 16 },
-  "french-polynesia-2023": { name: "French Polynesia 2023", folder: "FrenchPolynesia", total: 17 },
-  "galapagos-2022": { name: "Galapagos 2023", folder: "Galapagos",  total: 9 },
-  "western-parks-2021": { name: "Western Parks 2021", folder: "WesternParks", total: 22 },
-  "new-zealand-2019": { name: "New Zealand 2019", folder: "NewZealand", total: 21 },
-  "switzerland-2019": { name: "Switzerland 2019", folder: "Switzerland", total: 25 },
-  "via-ferrata": { name: "Via Ferratas Around the World", folder: "ViaFerrata", total: 10 },
-  "iceland-2019": { name: "Iceland 2019", folder: "Iceland", total: 22 },
-  "south-africa-2019": { name: "South Africa 2019", folder: "19SouthAfrica", total: 35 },
-  "safari-2019": { name: "Safari to Botswana, Zambia, and Zimbabwe 2019", folder: "19Safari", total: 29 },
-  "river-cruise-2018": { name: "Rhine River Cruise 2018", folder: "18RiverCruise", total: 35 },
-  "amalfi-2018": { name: "Amalfi Coast 2018", folder: "Amalfi", total: 27 },
-  "tanzania-2017": { name: "Safari to Tanzania 2017", folder: "17Tanzania", total: 24 }
-
-};
-
-// Build the album cards on albums.html (list page)
-// in albums.js
 async function initAlbums() {
   const container = document.getElementById("albums-container");
   const toc = document.getElementById("albums-toc");
@@ -38,6 +9,16 @@ async function initAlbums() {
   // Load image metadata
   const imageMeta = await fetch("image-data.json").then(res => res.json());
 
+  // --- Create search input ---
+  const searchInput = document.createElement("input");
+  searchInput.type = "text";
+  searchInput.className = "form-control mb-3";
+  searchInput.placeholder = "Search albums...";
+  toc.appendChild(searchInput);
+
+  const albumCards = [];
+
+  // --- Build album cards ---
   Object.entries(ALBUMS).forEach(([key, album]) => {
     const albumId = `album-${key}`;
     const albumHref = `album.html?album=${encodeURIComponent(key)}`;
@@ -50,13 +31,6 @@ async function initAlbums() {
       ? `Images/${album.folder}/${albumImages[0]}`
       : "placeholder.jpg";
 
-    // TOC link
-    const tocLink = document.createElement("a");
-    tocLink.href = `#${albumId}`;
-    tocLink.className = "btn btn-outline-primary btn-sm m-1";
-    tocLink.textContent = album.name;
-    toc.appendChild(tocLink);
-
     // Previews (first 4 real images)
     let previewsHTML = '<div class="d-flex justify-content-center flex-wrap mt-2">';
     albumImages.slice(0, 4).forEach(img => {
@@ -67,8 +41,9 @@ async function initAlbums() {
 
     // Card
     const col = document.createElement("div");
-    col.className = "col-md-4 mb-4";
+    col.className = "col-md-4 mb-4 album-card";
     col.id = albumId;
+    col.setAttribute("data-album-name", album.name.toLowerCase());
     col.innerHTML = `
       <div class="card shadow-lg h-100">
         <a href="${albumHref}">
@@ -82,25 +57,15 @@ async function initAlbums() {
       </div>
     `;
     container.appendChild(col);
+    albumCards.push(col);
   });
 
-  // Smooth scroll
-  toc.querySelectorAll("a[href^='#']").forEach(link => {
-    link.addEventListener("click", e => {
-      e.preventDefault();
-      const target = document.getElementById(link.getAttribute("href").substring(1));
-      if (target) target.scrollIntoView({ behavior: "smooth" });
+  // --- Filter logic ---
+  searchInput.addEventListener("input", () => {
+    const query = searchInput.value.toLowerCase();
+    albumCards.forEach(card => {
+      const name = card.getAttribute("data-album-name");
+      card.style.display = name.includes(query) ? "" : "none";
     });
   });
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  if (document.getElementById("albums-container")) initAlbums();
-});
-
-// If albums.html is the initial page content (SSR), you could call initAlbums on DOM ready.
-// In SPA flow we call it from loadPage after injecting albums.html.
-document.addEventListener("DOMContentLoaded", () => {
-  const maybeList = document.getElementById("albums-container");
-  if (maybeList) initAlbums();
-});
