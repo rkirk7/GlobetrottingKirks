@@ -39,16 +39,30 @@ async function loadPage(page) {
     if (!res.ok) throw new Error(`Failed to fetch ${page}: ${res.status}`);
     const htmlText = await res.text();
 
-    // Extract just the inner content
+    // Parse HTML
     const parser = new DOMParser();
     const doc = parser.parseFromString(htmlText, "text/html");
-    const mainContent = doc.querySelector("#container")?.innerHTML || "";
+    const mainContainer = doc.getElementById("container");
 
-    pageCache[page] = mainContent;
-    content.innerHTML = mainContent;
+    if (!mainContainer) {
+      content.innerHTML = `<p>Page content missing</p>`;
+      return;
+    }
 
-    // Lazy-load images
-    // content.querySelectorAll("img:not([loading])").forEach(img => img.setAttribute("loading","lazy"));
+    // Insert content without blocking render
+    content.innerHTML = "";
+    Array.from(mainContainer.childNodes).forEach(node => content.appendChild(node));
+
+    // Lazy-load images and preload above-the-fold images
+    const imgs = content.querySelectorAll("img");
+    imgs.forEach((img, i) => {
+      if (!img.hasAttribute("loading")) {
+        img.loading = i < 3 ? "eager" : "lazy"; // first 3 images load immediately
+      }
+    });
+
+    // Cache the content AFTER inserting
+    pageCache[page] = content.innerHTML;
 
     initializePageScripts(page);
   } catch (err) {
@@ -57,7 +71,8 @@ async function loadPage(page) {
   }
 }
 
-function initializePageScripts() {
+
+function initializePageScripts(page) {
   const content = document.getElementById("content");
 
   // Hero background
@@ -72,13 +87,8 @@ function initializePageScripts() {
   }
 
   // Page-specific initializers
-  if (document.getElementById("albums") && typeof initAlbums === "function") {
-    initAlbums();
-  }
-
-  if (document.getElementById("blog") && typeof initBlog === "function") {
-   initBlog();
-  }
+  if (page === "albums.html" && typeof initAlbums === "function") initAlbums();
+  if (page === "blog.html" && typeof initBlog === "function") initBlog();
 
   // Load TOC if needed
   loadTOC();
