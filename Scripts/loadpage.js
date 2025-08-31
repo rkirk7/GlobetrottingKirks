@@ -80,60 +80,88 @@ function loadTOC() {
   const toc = document.getElementById("toc");
   const tocList = document.getElementById("toc-list");
   if (!toc || !tocList) return;
+
   const headings = postContentEl.querySelectorAll("h2, h3");
 
-  if (headings.length > 0) {
-    toc.classList.remove("d-none");
-    tocList.innerHTML = "";
-
-    headings.forEach((heading, i) => {
-      const id = `heading-${i}`;
-      heading.id = id;
-
-      const li = document.createElement("li");
-      li.innerHTML = `<a href="#${id}">${heading.textContent}</a>`;
-      tocList.appendChild(li);
-    });
-
-    // Smooth scroll on click
-    tocList.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", (e) => {
-        e.preventDefault();
-        const target = document.getElementById(
-          link.getAttribute("href").substring(1)
-        );
-        if (target) {
-          window.scrollTo({
-            top: target.getBoundingClientRect().top + window.scrollY - 80, // offset for navbar
-            behavior: "smooth",
-          });
-        }
-      });
-    });
-
-    // Highlight current heading while scrolling
-    window.addEventListener("scroll", () => {
-      let currentId = "";
-      headings.forEach((h) => {
-        const offsetTop = h.getBoundingClientRect().top;
-        if (offsetTop <= 90) {
-          // slightly below navbar
-          currentId = h.id;
-        }
-      });
-
-      tocList.querySelectorAll("a").forEach((link) => {
-        if (link.getAttribute("href") === `#${currentId}`) {
-          link.classList.add("active");
-        } else {
-          link.classList.remove("active");
-        }
-      });
-    });
-  } else {
+  if (headings.length === 0) {
     toc.classList.add("d-none");
+    return;
   }
+
+  toc.classList.remove("d-none");
+  tocList.innerHTML = "";
+
+  headings.forEach((heading, i) => {
+    const id = `heading-${i}`;
+    heading.id = id;
+
+    const li = document.createElement("li");
+    li.innerHTML = `<a href="#${id}">${heading.textContent}</a>`;
+    tocList.appendChild(li);
+  });
+
+  const tocToggle = document.getElementById("toc-toggle");
+if (tocToggle) {
+  tocToggle.addEventListener("click", () => {
+    tocList.classList.toggle("show");
+  });
 }
+
+  // Smooth scroll
+  tocList.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", e => {
+      e.preventDefault();
+      const target = document.getElementById(link.getAttribute("href").substring(1));
+      if (target) {
+        window.scrollTo({
+          top: target.getBoundingClientRect().top + window.scrollY - 80,
+          behavior: "smooth"
+        });
+      }
+    });
+  });
+
+  tocList.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    const target = document.getElementById(
+      link.getAttribute("href").substring(1)
+    );
+    if (target) {
+      window.scrollTo({
+        top: target.getBoundingClientRect().top + window.scrollY - 80, // offset for navbar
+        behavior: "smooth",
+      });
+    }
+
+    // Close TOC dropdown on small screens
+    if (window.innerWidth < 992) {
+      tocList.classList.remove("show");
+    }
+  });
+});
+
+
+  // Highlight headings while scrolling
+  let ticking = false;
+  window.addEventListener("scroll", () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        let currentId = "";
+        headings.forEach(h => {
+          if (h.getBoundingClientRect().top <= 90) currentId = h.id;
+        });
+
+        tocList.querySelectorAll("a").forEach(link => {
+          link.classList.toggle("active", link.getAttribute("href") === `#${currentId}`);
+        });
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+}
+
 
 let imageData = {};
 

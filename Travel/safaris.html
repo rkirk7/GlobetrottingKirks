@@ -4,50 +4,88 @@
     max-width: 900px;
   }
 
+/* Desktop: fixed sidebar */
+#toc {
+  position: fixed;
+  top: 100px;
+  left: 20px;
+  width: 220px;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+/* Hide the toggle button by default on desktop */
+#toc-toggle {
+  display: none;
+  width: 100%;
+  margin-bottom: 10px;
+  background: #f8f9fa;
+  border: 1px solid #ccc;
+  padding: 6px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* TOC links */
+#toc ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#toc li a {
+  display: block;
+  padding: 4px 0;
+  color: #333;
+  text-decoration: none;
+}
+
+#toc li a.active {
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* Responsive: small screens */
+@media (max-width: 992px) {
   #toc {
-    position: fixed;
-    top: 150px;
-    right: 20px;
-    max-width: 250px;
-    background: #fff;
-    border: 1px solid #ddd;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    max-height: 80vh;
-    overflow-y: auto;
-    z-index: 999;
-    font-size: 0.95rem;
+    position: static;
+    width: 100%;
+    max-height: none;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin-bottom: 20px;
   }
-  #toc h5 {
-    font-size: 1rem;
-    margin-bottom: 8px;
+
+  #toc-toggle {
+    display: block;
   }
-  #toc ul {
-    list-style: none;
+
+  #toc-list {
+    display: none;
     padding-left: 0;
-    margin-bottom: 0;
+    margin-top: 0;
   }
-  #toc li {
-    margin-bottom: 4px;
+
+  #toc-list.show {
+    display: block;
   }
-  #toc a {
-    text-decoration: none;
-    font-size: 0.9rem;
-    color: #333;
-  }
-  #toc a:hover {
-    color: #007bff;
-    text-decoration: underline;
-  }
+}
+
 </style>
 
-<div class="container my-5" id="container">
   <div id="toc">
     <h5>Table of Contents</h5>
     <ul id="toc-list"></ul>
   </div>
 
+  <div class="container my-5" id="container"></div>
   <div class="hero" data-hero="../Images/19Safari/19Safari27.jpeg">
     <div class="hero-content text-center">
       <h1 class="hero-title">Safaris</h1>
