@@ -89,6 +89,7 @@ async function loadPost() {
   const postFile = params.get('post');
   if (!postFile) return;
 
+  // --- Fetch Markdown ---
   let postText = await fetch(`blog-posts/${postFile}`).then(r => r.text());
   postText = postText.replace(/^---[\s\S]*?---/, '').trim();
 
@@ -99,53 +100,100 @@ async function loadPost() {
   if(firstHeadingIndex >= 0) lines.splice(firstHeadingIndex,1);
   postText = lines.join("\n");
 
-  // --- Parse Markdown
+  // --- Parse Markdown ---
   const tempDiv = document.createElement('div');
   tempDiv.innerHTML = marked.parse(postText);
 
-  // --- Process images safely
   const postContentEl = document.getElementById('post-content');
   postContentEl.innerHTML = '';
-  const frag = document.createDocumentFragment();
+  postContentEl.appendChild(tempDiv); // move entire parsed content
 
-  tempDiv.querySelectorAll('img').forEach(img => {
-    const figure = document.createElement('figure');
-    figure.classList.add('figure','text-center');
+  // --- Process images and galleries ---
+  function processImagesAndGalleries(container) {
+    if (!container) return;
 
-    img.setAttribute('loading','lazy');
-    const src = img.getAttribute('src');
-    const fileName = src?.split("/").pop();
-    const caption = window._imageData?.[fileName] || img.alt || "";
-    img.setAttribute('data-glightbox','title:' + caption);
-    img.classList.add('glightbox');
+    // Galleries first
+    const galleries = container.querySelectorAll('.gallery');
+    galleries.forEach(gallery => {
+      gallery.querySelectorAll('p').forEach(p => {
+        const img = p.querySelector('img');
+        if (img) p.replaceWith(img);
+      });
 
-    figure.appendChild(img);
-    if(caption){
-      const figcap = document.createElement('figcaption');
-      figcap.classList.add('figure-caption','text-center');
-      figcap.textContent = caption;
-      figure.appendChild(figcap);
+      gallery.querySelectorAll('img').forEach(img => {
+        const src = img.getAttribute('src');
+        const fileName = src?.split('/').pop();
+        const caption = window._imageData?.[fileName] || img.alt || '';
+
+        if (!img.closest('figure')) {
+          const figure = document.createElement('figure');
+          figure.classList.add('figure', 'text-center');
+          img.parentNode.insertBefore(figure, img);
+          figure.appendChild(img);
+
+          if (caption) {
+            const figcap = document.createElement('figcaption');
+            figcap.classList.add('figure-caption', 'text-center');
+            figcap.textContent = caption;
+            figure.appendChild(figcap);
+          }
+        }
+
+        img.setAttribute('data-glightbox', 'title:' + caption);
+        img.classList.add('glightbox');
+        img.setAttribute('loading', 'lazy');
+      });
+    });
+
+    // Standalone images
+    container.querySelectorAll('img:not(.glightbox)').forEach(img => {
+      const src = img.getAttribute('src');
+      const fileName = src?.split('/').pop();
+      const caption = window._imageData?.[fileName] || img.alt || '';
+
+      if (!img.closest('figure')) {
+        const figure = document.createElement('figure');
+        figure.classList.add('figure', 'text-center');
+        img.parentNode.insertBefore(figure, img);
+        figure.appendChild(img);
+
+        if (caption) {
+          const figcap = document.createElement('figcaption');
+          figcap.classList.add('figure-caption', 'text-center');
+          figcap.textContent = caption;
+          figure.appendChild(figcap);
+        }
+      }
+
+      img.setAttribute('data-glightbox', 'title:' + caption);
+      img.classList.add('glightbox');
+      img.setAttribute('loading', 'lazy');
+    });
+
+    if (typeof GLightbox !== 'undefined') {
+      if (!window.glightboxInstance) window.glightboxInstance = GLightbox({ selector: '.glightbox' });
+      else window.glightboxInstance.reload();
     }
-
-    frag.appendChild(figure);
-  });
-
-  while(tempDiv.firstChild){
-    const node = tempDiv.firstChild;
-    if(node.tagName !== 'IMG') frag.appendChild(node);
   }
 
-  postContentEl.appendChild(frag);
+  processImagesAndGalleries(postContentEl);
 
-  // --- TOC ---
+  // --- Build TOC ---
   const tocList = document.getElementById('toc-list');
   tocList.innerHTML = '';
+
+  // "Top" button
   const topLi = document.createElement('li');
   const topA = document.createElement('a');
-  topA.href="#"; topA.textContent="Top";
-  topA.addEventListener('click', e=>{e.preventDefault();window.scrollTo({top:0,behavior:'smooth'});});
-  topLi.appendChild(topA); tocList.appendChild(topLi);
+  topA.href = "#"; topA.textContent="Top";
+  topA.addEventListener('click', e=>{
+    e.preventDefault();
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+  topLi.appendChild(topA);
+  tocList.appendChild(topLi);
 
+  // Add headings
   const headings = postContentEl.querySelectorAll('h1,h2,h3');
   headings.forEach((h,i)=>{
     const id = `heading-${i}`;
@@ -154,23 +202,21 @@ async function loadPost() {
     li.innerHTML=`<a href="#${id}">${h.textContent}</a>`;
     tocList.appendChild(li);
   });
-
-  if(typeof GLightbox!=='undefined'){
-    if(!window.glightboxInstance) window.glightboxInstance=GLightbox({selector:'.glightbox'});
-    else window.glightboxInstance.reload();
-  }
 }
 
+// --- Share button ---
 function sharePost(){
   const url = window.location.href;
   if(navigator.share) navigator.share({title: document.title,url}).catch(()=>{});
   else navigator.clipboard.writeText(url).then(()=>alert("Post URL copied!"));
 }
 
+// --- Init ---
 document.addEventListener('DOMContentLoaded',()=>{
   loadPost();
   document.getElementById('shareBtn').addEventListener('click',sharePost);
 });
 </script>
+
 </body>
 </html>
