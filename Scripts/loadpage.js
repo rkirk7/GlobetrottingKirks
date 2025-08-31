@@ -24,8 +24,8 @@ async function loadTOC() {
 const pageCache = {};
 
 async function loadPage(page) {
-  const content = await res.text();
-
+  const content = document.getElementById("content");
+  
   requestAnimationFrame(() => window.scrollTo(0, 0));
 
   if (pageCache[page]) {
