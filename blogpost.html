@@ -133,11 +133,11 @@ async function loadPost() {
   const postFile = params.get('post');
   if (!postFile) return;
 
-  // Load Markdown
+  // --- Load Markdown ---
   let postText = await fetch(`blog-posts/${postFile}`).then(res => res.text());
   postText = postText.replace(/^---[\s\S]*?---/, '').trim();
 
-  // Extract title
+  // --- Extract title ---
   const lines = postText.split("\n");
   const firstHeadingIndex = lines.findIndex(l => l.startsWith("# "));
   const postTitle = firstHeadingIndex >= 0 ? lines[firstHeadingIndex].replace(/^# /, "") : postFile;
@@ -146,45 +146,108 @@ async function loadPost() {
   if (firstHeadingIndex >= 0) lines.splice(firstHeadingIndex, 1);
   postText = lines.join("\n");
 
-  // Parse Markdown
+  // --- Parse Markdown to temporary container ---
   const tempDiv = document.createElement('div');
   tempDiv.innerHTML = marked.parse(postText);
 
   const postContentEl = document.getElementById('post-content');
   postContentEl.innerHTML = '';
-  postContentEl.appendChild(tempDiv);
 
+  // --- Wrap images in galleries ---
+  const allImages = tempDiv.querySelectorAll('img');
+  const galleryMap = {};
+
+  allImages.forEach(img => {
+    const parent = img.parentNode;
+    if (!galleryMap[parent]) galleryMap[parent] = [];
+    galleryMap[parent].push(img);
+  });
+
+  Object.values(galleryMap).forEach(images => {
+    if (images.length === 1) {
+      // Single image: wrap in figure for caption
+      const img = images[0];
+      wrapImageInFigure(img);
+    } else {
+      // Multiple images: create gallery
+      const galleryDiv = document.createElement('div');
+      galleryDiv.classList.add('gallery');
+
+      images.forEach(img => {
+        wrapImageInFigure(img);
+        galleryDiv.appendChild(img.closest('figure'));
+      });
+
+      // Replace original images with gallery container
+      const firstParent = images[0].parentNode;
+      firstParent.innerHTML = '';
+      firstParent.appendChild(galleryDiv);
+    }
+  });
+
+  // --- Append processed content in one batch ---
+  const frag = document.createDocumentFragment();
+  while (tempDiv.firstChild) frag.appendChild(tempDiv.firstChild);
+  postContentEl.appendChild(frag);
+
+  // --- Build TOC ---
+  buildTOC(postContentEl);
+
+  // --- Initialize images (lazy loading + GLightbox) ---
   await processImages(postContentEl);
+}
 
-  // // Add captions automatically
-  // addCaptions(postContentEl);
+// --- Helper: wrap image in figure + caption ---
+function wrapImageInFigure(img) {
+  if (img.closest('figure')) return;
 
-// Build TOC
-const tocList = document.getElementById('toc-list');
-tocList.innerHTML = '';
+  const figure = document.createElement('figure');
+  figure.classList.add('figure', 'text-center');
 
-// Add "Top" button
-const topLi = document.createElement('li');
-const topA = document.createElement('a');
-topA.href = "#";
-topA.textContent = "Top";
-topA.addEventListener('click', (e) => {
-  e.preventDefault();
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-topLi.appendChild(topA);
-tocList.appendChild(topLi);
+  img.setAttribute('loading', 'lazy'); // lazy load before DOM append
 
-// Add the rest of the headings
-const headings = postContentEl.querySelectorAll('h1, h2, h3');
-headings.forEach((heading, i) => {
-  const id = `heading-${i}`;
-  heading.id = id;
-  const li = document.createElement('li');
-  li.innerHTML = `<a href="#${id}">${heading.textContent}</a>`;
-  tocList.appendChild(li);
-});
+  const src = img.getAttribute("src");
+  const fileName = src?.split("/").pop();
+  const caption = window._imageData?.[fileName] || img.alt || "";
 
+  figure.appendChild(img);
+
+  if (caption) {
+    const figcap = document.createElement('figcaption');
+    figcap.classList.add('figure-caption', 'text-center');
+    figcap.textContent = caption;
+    figure.appendChild(figcap);
+  }
+
+  img.setAttribute("data-glightbox", "title:" + caption);
+  img.classList.add("glightbox");
+}
+
+// --- Helper: build TOC ---
+function buildTOC(container) {
+  const tocList = document.getElementById('toc-list');
+  tocList.innerHTML = '';
+
+  // Top button
+  const topLi = document.createElement('li');
+  const topA = document.createElement('a');
+  topA.href = "#";
+  topA.textContent = "Top";
+  topA.addEventListener('click', e => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+  topLi.appendChild(topA);
+  tocList.appendChild(topLi);
+
+  // Headings
+  const headings = container.querySelectorAll('h1, h2, h3');
+  headings.forEach((heading, i) => {
+    heading.id = `heading-${i}`;
+    const li = document.createElement('li');
+    li.innerHTML = `<a href="#${heading.id}">${heading.textContent}</a>`;
+    tocList.appendChild(li);
+  });
 }
 
 
