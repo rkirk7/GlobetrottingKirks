@@ -74,7 +74,7 @@ a:hover {
 .hero {
   position: relative;
   width: 100%;
-  min-height: 400px;
+  min-height: 200px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
