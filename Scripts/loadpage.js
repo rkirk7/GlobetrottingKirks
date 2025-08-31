@@ -18,7 +18,7 @@ async function loadPage(page) {
 
     const parser = new DOMParser();
     const doc = parser.parseFromString(htmlText, "text/html");
-    const mainContainer = doc.querySelector("#container");
+const mainContainer = doc.querySelector(".container");
     if (!mainContainer) throw new Error("No #container found in page");
 
     // Insert the container itself
