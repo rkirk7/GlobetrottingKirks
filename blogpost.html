@@ -162,6 +162,7 @@ async function loadPost() {
   // postContentEl.innerHTML = '';
   // postContentEl.appendChild(tempDiv);
 
+  const postContentEl = document.getElementById('post-content');
 postContentEl.innerHTML = marked.parse(postText);
 
 
