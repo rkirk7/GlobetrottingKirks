@@ -259,8 +259,10 @@ postContentEl.innerHTML = marked.parse(postText);
   processImages(postContentEl);
 
   // Build TOC
+setTimeout(() => {
   const tocList = document.getElementById('toc-list');
   tocList.innerHTML = '';
+
   const topLi = document.createElement('li');
   const topA = document.createElement('a');
   topA.href = "#";
@@ -280,6 +282,7 @@ postContentEl.innerHTML = marked.parse(postText);
     li.innerHTML = `<a href="#${id}">${h.textContent}</a>`;
     tocList.appendChild(li);
   });
+}, 50);
 }
 document.addEventListener("DOMContentLoaded", loadPost);
 

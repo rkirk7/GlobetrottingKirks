@@ -1,20 +1,19 @@
 # Enchanting Galapagos: a wildlife wonderland
 *2022-06-13*
 
+![](./Images/Galapagos/Galapagos1.jpeg)
+
 I confess. I had thought the Galapagos would be kind of boring: big turtles and lots of birds on barren rock. Yawn.
 
 I was thrilled to be utterly wrong wrong wrong.
 
 Just a four-hour flight from Miami is a pristine, unique wildlife wonderland. The abundance of unusual, endemic (i.e. exists only here) critters--unafraid of humans--makes you gawk and smile. But I offer this caveat: you can enjoy a lot on land. But it's underwater where the magic happens.
 
-![](./Images/Galapagos/Galapagos1.jpeg)
-*This is our favorite shot of one of many playful sea lions boldly swimming around us.*
-
-My daughter and I are active, independent travelers, and spent 19 wonderous nights in December: 7 in the Quito area (Mindo, Cotopaxi, Quilotoa), 3 on Isabela, 4 on Santa Cruz, and 4 on a La Pinta cruise.
+My daughter Regan and I are active, independent travelers, and spent 19 wonderous nights in December: 7 in the Quito area (Mindo, Cotopaxi, Quilotoa), 3 on Isabela, 4 on Santa Cruz, and 4 on a La Pinta cruise.
 
 Here are our highlights and suggestions.
 
-**RAVE HIGHLIGHTS**
+## RAVE HIGHLIGHTS
 
 1.       ISABELA:  Snorkeling at Cabo Rosa, which is part of the famed Tuneles tour. We went twice: Darwin (!) with Padhoehoe was amazing. Within a small area, you will see gigantic sea turtles (dwarfing giant tortoises), sea lions, sharks, a sea horse (perhaps there’s only one as we saw him twice?), giant lobsters, and eagle rays.
 
@@ -24,25 +23,28 @@ Here are our highlights and suggestions.
 
 3.        ISABELA: Tintoreras kayak and snorkel with Carlos of Kayaking Isabela (the hut on the beach of Concha de Perla). He was incredibly nice, fun and engaged. While waiting for three young men to join us, he took many Christmas portraits of us with sea lions and in our kayak. When one of the three, going bare-chested, froze and got tired in the water, Carlos towed him to see sights including three huge lobsters he spotted under a cave; and a number of sharks (Tintoreras=species of shark!). We saw five penguins together on this trip.
 
+<div class="gallery">
+
 ![](./Images/Galapagos/Galapagos2.jpeg)
-*Me, with one of many sharks! Fortunately, they're pretty sleepy during the day and just want to be left alone.*
+</div>
 
 4.        FROM SANTA CRUZ: Meine Steffi yacht day trips with Guiding Galapagos: We went to Floreana and Pinzon on this beautiful boat, guided by enthusiastic, knowledgeable co-owner Yazmany on the second trip. Floreana included amazing sea lions frolicking all about and a beach where many turtles had recently laid eggs and were getting ready to go back to sea. At Pinzon, we had perfect weather and clear water for phenomenal photos. (We were tickled by Yazmany’s rapture as we tracked a marine iguana dining underwater.)
 
+<div class="gallery">
+
 ![](./Images/Galapagos/Galapagos3.jpeg)
-*My daughter with a sea turtle beauty: they were much larger than the "giant" tortoises!*
+</div>
 
 5.        ABOARD LA PINTA: Many nice stops but the standouts were gorgeous Cerro Brujo beach at San Cristobal with lots of turtles and sea lions (but snorkeling not allowed); and Punta Suárez at Espanola with sea lions, cliffs, oodles of waved albatrosses; boobies with eggs and infants; hawks and, of course, iguanas.
 
+<div class="gallery">
+
 ![](./Images/Galapagos/Galapagos4.jpeg)
-
 ![](./Images/Galapagos/Galapagos5.jpeg)
-
 ![](./Images/Galapagos/Galapagos6.jpeg)
-
 ![](./Images/Galapagos/Galapagos7.jpeg)
-
 ![](./Images/Galapagos/Galapagos8.jpeg)
+</div>
 
 6.        ABOARD LA PINTA: Astonishing last night of the cruise around Gardner Bay at Espanola: After a mediocre kayak, five of us were in a panga back to the boat when someone spotted splashing way in distance: a ton of bottle-nosed dolphins. We spent nearly an hour surrounded by leaping playful dolphins as the sun set!!!
 
@@ -54,10 +56,12 @@ Here are our highlights and suggestions.
 
 - It was tricky to pack for two different trips: cold hiking at Cotopaxi and Quilotoa plus water adventures in Galapagos. Tip: arrange to store unneeded gear at your airport hotel before going to the Galapagos, then retrieve before flying home.
 
-![](./Images/Galapagos/Galapagos9.jpeg)
-*The mountain peeked out as we left. You can see the refuge we climbed beyond in the middle.*
+<div class="gallery">
 
-**RAVE PEOPLE/LODGINGS/MEALS**
+![](./Images/Galapagos/Galapagos9.jpeg)
+</div>
+
+## RAVE PEOPLE/LODGINGS/MEALS
 
 1.         Campus Adventure Trekking was our local tour contact in Quito and they were awesome in responsiveness and assistance, especially when American Airlines lost our bags. At the last minute, Mery arranged to store bags for us at Quito Wyndham so we didn’t have to lug them to the Galapagos.
 
@@ -71,11 +75,11 @@ Here are our highlights and suggestions.
 
 6.         Best shopping: We loved the soft alpaca wool and negotiated at both the artisan hall in Quilotoa and the big craft market in Mariscal, not far from Casa Joachin. (Tip: you can get the big blankets for $15 with just a little haggling.)
 
-**COVID TRAVEL LOGISTICS**
+## COVID TRAVEL LOGISTICS
 
 Our trip had been postponed twice due to COVID. Originally, we were doing both Peru (Machu Picchu) and Galapagos but decided to focus on Ecuador--where COVID incidences began peaking as we were ending our travels.
 
-The [State department websit](https://ec.usembassy.gov/covid-19-information-ecu-2/)e says as of April 25, travelers over 13 are required to have:
+The [State department website](https://ec.usembassy.gov/covid-19-information-ecu-2/)e says as of April 25, travelers over 13 are required to have:
 
 - A COVID-19 vaccination card
 
@@ -85,7 +89,7 @@ The [State department websit](https://ec.usembassy.gov/covid-19-information-ecu-
 
 As of February, you do not need a special PCR test to get into the Galapagos from mainland Ecuador.
 
-**TRAVEL LOGISTICS**
+## TRAVEL LOGISTICS
 
 Ecuador is an ideal destination, especially from the East Coast, because it's so close, it uses American dollars and American plugs and is on the same time zone! If you fly into Quito, be prepared for acclimatization at 10,000 feet!
 

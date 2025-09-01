@@ -1,19 +1,13 @@
 # Paradise Found: French Polynesia
 *2022-10-20*
 
-![Morrea Hilton Bungalow](./Images/FrenchPolynesia/FrenchPolynesia1.jpeg)
+![](./Images/FrenchPolynesia/FrenchPolynesia1.jpeg)
 
 **Azure waters against lush green crags; golden sunsets and sunrises; balmy temperatures without humidity; all manner of bold fish and sea creatures savoring thriving coral.**
 
 This bucket list destination is, indeed, like stepping into a living postcard. Compared to Hawaii, French Polynesia is way more remote, compact and untouched, so you are intimately caressed in its beauty.
 
 After a two-year delay, my husband and I enjoyed 11 days in paradise August, 2022: 1 night in Tahiti, then 5 each at the Hilton Moorea and St. Regis Bora Bora (why do those four words sound so magical?). Here's what you need to know.
-
-1. [Travel](#travel)
-2. [French Polynesia is very French!](#french-polynesia-is-very-french)
-3. [Living overwater](#living-overwater)
-4. [Dining](#dining)
-5. [Paradise found (and how to swim with whales)](#paradise-found-and-how-to-swim-with-whales)
 
 ## Travel
 
@@ -39,20 +33,21 @@ Those amazing images of bungalows in the midst of the ocean are very cool in per
 
 We were over-the-moon living in an aquarium at over-water-bungalow 79 at the Hilton Moorea. So many fish and other critters to watch and track and swim with, right at our deck. My husband has less mobility, yet was able to enjoy spying string rays and sharks and fish from our room and the boardwalk—we saw an octopus on our last day! We stayed five nights, long enough to see the giant sea cucumbers move, and observe how the rains and winds impacted our reef life. What a joy to be surrounded by blue waters, colorful fish, craggy mountains and sparkling sunsets and sunrises.
 
+<div class="gallery">
+
 ![](./Images/FrenchPolynesia/FrenchPolynesia2.jpeg)
-
 ![](./Images/FrenchPolynesia/FrenchPolynesia3.jpeg)
-
 ![](./Images/FrenchPolynesia/FrenchPolynesia4.jpeg)
+</div>
 
 When we got to over-water villa 115 at the posh St. Regis Bora Bora we were dismayed to realize there is almost no coral and therefore very few fish around. It never occurred to us that over-the-water would be just water, no fish. As mesmerizing as the blue waters are, that alone is not worth the OWB money to us. Thus we learned that when the water is stunningly blue, it means there’s no coral. We spent a lot of time at the St Regis Lagoonarium, where they planted coral 17 years ago, and is home to a lot of fun fish.
 
+<div class="gallery">
+
 ![](./Images/FrenchPolynesia/FrenchPolynesia5.jpeg)
-
 ![](./Images/FrenchPolynesia/FrenchPolynesia6.jpeg)
-
-![#stregisborabora](./Images/FrenchPolynesia/FrenchPolynesia7.jpeg)
-*St. Regis Lagoonarium*
+![](./Images/FrenchPolynesia/FrenchPolynesia7.jpeg)
+</div>
 
 St. Regis was gorgeous, with ginormous villas and very good restaurants. But we preferred the more modest Hilton Moorea because of the sea life in our backyard (and better sunsets and sunrises).
 
@@ -78,35 +73,19 @@ The temperatures, the views, the sea life, the pampering. Yes, it's pretty much 
 
 We've active people and really loved the underwater world (diving is famous here!). In addition to our backyard aquarium, we took two tours. In Moorea, I got close to three whales for a minute; and frolicked with sting rays and sharks at the string ray flat where locals feed them regularly. In Bora Bora, I snorkeled high above massive manta rays and tracked a fever of eagle rays. I was fascinated by what looked like colorful worms, then was told they are the lips of clams!
 
-![#mooreawhales #frenchpolynesia](./Images/FrenchPolynesia/FrenchPolynesia8.jpeg)
-*That's my head near a gorgeous humpback whale diving quickly*
+<div class="gallery">
 
-![#mooreawhales #frenchpolynesia](./Images/FrenchPolynesia/FrenchPolynesia9.jpeg)
-*I caught two whales diving...really fast!*
-    
-![#borabora #mantarays](./Images/FrenchPolynesia/FrenchPolynesia10.jpeg)
-*Tracking giant manta rays far below in Bora Bora*
-    
-![#moorea #frenchpolynesia](./Images/FrenchPolynesia/FrenchPolynesia11.jpeg)
-*Playing with friendly stingrays while friendly sharks swam by, too!*
-    
-![#borabora #eagleray](./Images/FrenchPolynesia/FrenchPolynesia12.jpeg)   
-*Gorgeous eagle ray from the boardwalk at Bora Bora*
-    
-![#borabora #coral](./Images/FrenchPolynesia/FrenchPolynesia13.jpeg)
-*Coral gardens in Bora Bora*
-    
-![#borabora](./Images/FrenchPolynesia/FrenchPolynesia14.jpeg)
-*I thought these clam lips were colorful worms at first!*
-    
-![#Hiltonmoorea #frenchpolynesia](./Images/FrenchPolynesia/FrenchPolynesia15.jpeg)
-*Octopus spotted from the boardwalk at the Hilton Moorea*
-        
-![#stregisborabora](./Images/FrenchPolynesia/FrenchPolynesia16.jpeg)
-*Darling Moana, the resident Napoleon fish at the St. Regis lagoonarium.*
-    
-![#borabora #eaglerays](./Images/FrenchPolynesia/FrenchPolynesia17.jpeg)
-*Tracking eagle rays in Bora Bora*
+![](./Images/FrenchPolynesia/FrenchPolynesia8.jpeg)
+![](./Images/FrenchPolynesia/FrenchPolynesia9.jpeg)    
+![](./Images/FrenchPolynesia/FrenchPolynesia10.jpeg)    
+![](./Images/FrenchPolynesia/FrenchPolynesia11.jpeg)    
+![](./Images/FrenchPolynesia/FrenchPolynesia12.jpeg)   
+![](./Images/FrenchPolynesia/FrenchPolynesia13.jpeg)    
+![](./Images/FrenchPolynesia/FrenchPolynesia14.jpeg)    
+![](./Images/FrenchPolynesia/FrenchPolynesia15.jpeg)        
+![](./Images/FrenchPolynesia/FrenchPolynesia16.jpeg)    
+![](./Images/FrenchPolynesia/FrenchPolynesia17.jpeg)
+</div>
 
 - Tip 1: Swimming with whales. If this is a high priority for you, as it was for me, know what to expect. The Moorea ships are supposed to stay 657 feet away. So you have to swim nearly twice the height of the Statue of Liberty to where they last dove and are likely to resurface (usually with a tour group). If you get lucky, the whales might be where you are waiting, and hover long enough for you to enjoy them. I got to see one whale surface and disappear, and two dive and disappear. Both happened so fast I couldn’t quite grasp or appreciate it (how do those giants move so quickly!?) The best memento for four hours is a picture my husband took from the boat: the back of my head bobbing very close to the body of a whale. 
 

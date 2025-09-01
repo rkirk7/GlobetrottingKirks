@@ -1,7 +1,9 @@
 # 100 miles in 10 days: the (nearly) perfect Patagonia hiking trip
 *2023-02-25*
 
-My adult daughter and I are active, independent travelers who love the great outdoors.
+![](./Images/Patagonia/Patagonia1.jpeg)
+
+My adult daughter, Regan, and I are active, independent travelers who love the great outdoors.
 
 Regan, a college professor, has limited time, so I tend to pack our adventures to maximize each day. We started planning for the famed W trek in Torres Del Paine in Chile, and ended up with 18 days in December, 2022: Santiago-Torres Del Paine-Calafate-El Chalten-Iguazu-Buenos Aires.
 
@@ -9,36 +11,23 @@ My husband, who wisely stays home, noted, "That's a lot of hiking." "Well, yeah,
 
 But I must admit, I never really, _um,_ added up the miles.
 
-In 2021, we had hiked 108 miles over 20 days in [six U.S. western parks.](http://meimeichan.com/2021/08/22/western-parks-adventure-top-highlights/) Our previous multi-day hike was 2019 on the Kepler Track in [New Zealand](http://meimeichan.com/2020/02/21/new-zealand-adrenaline-rush-2-death-defying-weeks/), which is only three nights, with lots of down time each day.
+In 2021, we had hiked 108 miles over 20 days in [six U.S. western parks.](https://www.globetrottingkirks.com/blogpost.html?post=2021-08-22-western-parks.md) Our previous multi-day hike was 2019 on the Kepler Track in [New Zealand](https://www.globetrottingkirks.com/blogpost.html?post=2020-02-21-new-zealand.md), which is only three nights, with lots of down time each day.
 
 In Patagonia, we hiked all day long nearly every day. We did 59.5 miles in seven days in Torres Del Paine in Chile and 39 miles in three days at Glaciares National Park in Argentina, with a total elevation change of 26,869 feet--Everest is 29,035 feet. This was the most we've ever done in one swoop, and we loved it, even though we caught colds right at the start. Here are details of how our (nearly) perfect plan unfolded.
-
-### Table of Contents
-1. [Hotel Las Torres to Mirador base de Las Torres (twice)](#hotel-las-torres-to-mirador-base-de-las-torres-twice)
-2. [Chileno to Cuernos](#chileno-to-cuernos)
-3. [Cuernos to Frances Valley and Paine Grande](#cuernos-to-frances-valley-and-paine-grande)
-4. [Paine Grande to Grey](#paine-grande-to-grey)
-5. [Grey Glacier hike, wrapping up our W Trek](#grey-glacier-hike-wrapping-up-our-w-trek)
-6. [Christmas Day "rest" to Miradores Condor y Alguila and Salto Waterfall](#christmas-day-rest-to-miradores-condor-y-alguila-and-salto-waterfall)
-7. [Laguna de Los Tres aka Fitz Roy](#laguna-de-los-tres-aka-fitz-roy)
-8. [Laguna Torres: finishing 100 miles in 10 days!](#laguna-torres-finishing-100-miles-in-10-days)
-9. [Bonus: How did Fitz Roy compare with Torres Del Paine?](#bonus-how-did-fitz-roy-compare-with-torres-del-paine)
 
 Days 1-3: Travel to Santiago, Chile, hiking 11.8 miles around Cerro San Cristobal on our "rest" day (not included in the 100 miles! Nor are our five miles at Iguazu Falls at the end).
 
 Days 4-10: Torres Del Paine (pronounced Piney), Chile: _59.5 miles and 16,435 feet elevation change_**
 
-![Torres del Paine](./Images/Patagonia/Patagonia1.jpeg)
+<div class="gallery">
 
-![Torres del Paine](./Images/Patagonia/Patagonia2.jpeg)
-
-![Frances Valley](./Images/Patagonia/Patagonia3.jpeg)
-
-![Britanico](./Images/Patagonia/Patagonia4.jpeg)
-
-![Grey Glacier](./Images/Patagonia/Patagonia5.jpeg)
-
-![The W Trek](./Images/Patagonia/Patagonia6.jpeg)
+![](./Images/Patagonia/Patagonia1.jpeg)
+![](./Images/Patagonia/Patagonia2.jpeg)
+![](./Images/Patagonia/Patagonia3.jpeg)
+![](./Images/Patagonia/Patagonia4.jpeg)
+![](./Images/Patagonia/Patagonia5.jpeg)
+![](./Images/Patagonia/Patagonia6.jpeg)
+</div>
 
 Filled with gorgeous peaks, glaciers and lakes, this national park is set up with refugios (aka dorms) for multi-day routes: the "O" trek circles the park in 7-10 days, while the "W" hits the southern highlights in 3-5 days. We did an expanded W trek, east to west, with 2 nights at the beginning and the end. The times noted are hiking only and do not include breaks.
 
@@ -112,15 +101,14 @@ Days 11-12: Instead of hiking back to Paine Grande to depart by ferry, we took t
 
 Days 13-15: El Chalten, the heart of Glaciares National Park, Argentina. *39 miles, 8000 feet elevation change*
 
-![Glaciares National Park](./Images/Patagonia/Patagonia7.jpeg)
+<div class="gallery">
 
-![Laguna Torres](./Images/Patagonia/Patagonia8.jpeg)
-
-![Laguna De Los Tres](./Images/Patagonia/Patagonia9.jpeg)
-
-![Mt. Fitzroy](./Images/Patagonia/Patagonia10.jpeg)
-
-![Glaciares National Park](./Images/Patagonia/Patagonia11.jpeg)
+![](./Images/Patagonia/Patagonia7.jpeg)
+![](./Images/Patagonia/Patagonia8.jpeg)
+![](./Images/Patagonia/Patagonia9.jpeg)
+![](./Images/Patagonia/Patagonia10.jpeg)
+![](./Images/Patagonia/Patagonia11.jpeg)
+</div>
 
 ## Christmas Day "rest" to Miradores Condor y Alguila and Salto Waterfall
 
@@ -158,8 +146,8 @@ Days 13-15: El Chalten, the heart of Glaciares National Park, Argentina. *39 mil
 
 To me, the view at Laguna de Los Tres was more spectacular (even on a cloudy day) with many rugged, jagged peaks, powerful glaciers and two glistening lakes. What do you think?
 
-![Laguna de Los Tres](./Images/Patagonia/Patagonia12.jpeg)
-*Laguna de Los Tres (and Laguna Sucia on left)*
+<div class="gallery">
 
-![Torres Del Paine](./Images/Patagonia/Patagonia13.jpeg)
-*Mirador base de las Torres*
+![](./Images/Patagonia/Patagonia12.jpeg)
+![](./Images/Patagonia/Patagonia13.jpeg)
+</div>

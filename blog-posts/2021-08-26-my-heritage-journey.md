@@ -14,6 +14,7 @@ I was 7 when we immigrated to Chicago in 1967, sponsored by my Dad's sister and 
 Dad had passed two years earlier; mom wasn't inclined to tackle such a big trip; my husband had surgery. So Regan and I were off on a mission to explore our heritage, armed with fragments of addresses and descriptions in Chinese.
 
 What a fascinating journey of discovery.
+
     
 ![](./Images/Heritage/taishan-bai-san-prep-best-2016-06-26-009.jpg)
 *"Bai San" ritual to pay respects to our ancestors in Taishan*

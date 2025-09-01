@@ -1,21 +1,11 @@
 # Western Parks adventure: top highlights
 *2021-08-22*
 
+![](./Images/WesternParks/WesternParks1.jpeg)
+
 My daughter and I enjoyed three fabulous weeks at six national parks, hiking 108 miles with 24,000 feet elevation gain (Everest is 29,000 feet!). We flew into Denver June 22, 2021, then drove 3,200 miles to Rocky Mountain NP, Grand Canyon South, Grand Canyon North, Escalante, Bryce, Cedar Breaks, Zion, Death Valley and Yosemite. We flew out of Los Angeles after a dolphin cruise at Newport Beach.
 
 Here are our highlights and tips.
-
-1. [Best hikes](#best-hikes)
-2. [Top of the world](#top-of-the-world)
-3. [Gorgeous viewpoints without much effort](#gorgeous-viewpoints-without-much-effort)
-4. [Best critters](#best-critters)
-5. [Surprised by](#surprised-by)
-6. [Most fun](#most-fun)
-7. [Harrowing moments](#harrowing-moments)
-8. [Top temperatures](#top-temperatures)
-9. [Top tips](#top-tips)
-10. [Best dining](#best-dining)
-11. [Best lodging](#best-lodging)
 
 ## Best hikes:
 
