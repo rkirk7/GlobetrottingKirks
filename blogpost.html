@@ -11,15 +11,17 @@
 
 <style>
 
-  .blog-card {
-  max-width: 850px; /* Keeps nice width on desktop */
-  margin: 0 auto;   /* Centers it */
+.blog-card {
+  max-width: 850px;    /* Nice centered width on desktop */
+  margin: 0 auto;      /* Center horizontally */
+  width: 100%;         /* Full width inside container */
 }
 
 @media (max-width: 768px) {
   .blog-card {
-    border-radius: 0;   /* Optional: remove rounded corners on mobile */
-    box-shadow: none;   /* Optional: simpler look on mobile */
+    max-width: 100%;    /* Take up full screen on mobile */
+    border-radius: 0;   /* Optional: squared corners on mobile */
+    box-shadow: none;   /* Optional: remove shadow on mobile */
   }
 }
 
@@ -81,9 +83,8 @@ h3 { font-size: clamp(1.1rem, 2vw + 0.5rem, 1.5rem); }
 </head>
 <body class="bg-light">
 
-<div class="blog-container">
-  <div class="container-fluid mt-4 mb-5">
-    <div id="post-container" class="card shadow-lg">
+<div class="blog-container mt-4 mb-5">
+  <div id="post-container" class="card shadow-lg blog-card">
       <div class="card-body">
         <h1 id="post-title" class="mb-3"></h1>
         <div id="post-content" class="blog-post-content"></div>
@@ -93,7 +94,6 @@ h3 { font-size: clamp(1.1rem, 2vw + 0.5rem, 1.5rem); }
       </div>
     </div>
   </div>
-</div>
 
 <!-- Floating TOC -->
 <div id="toc" class="d-none">
