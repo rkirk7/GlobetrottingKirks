@@ -57,16 +57,16 @@ It was fascinating to see the plumes of steam ebb and flow, the boats and helico
 
 WHAT A HARBOR! The vibrant activity with ships of every size and shape against the backdrop of the Sydney Opera House and Harbor Bridge is intoxicating. We admired it from our hotel, from our walk across the bridge (not atop the bridge as did tethered bridge climbers who had paid a handsome fee), from the ferry to the Taronga Zoo, from Mrs. Macquaries Point, and from our cruise ship Maasdam as we sailed away, going under the bridge as bridge climbers waved us off.
 
-Two other fabulous Sydney highlights:![down-under-mm-sydney-2016-12-10-223](images/down-under-mm-sydney-2016-12-10-223.jpg)
+Two other fabulous Sydney highlights:
 
 - The wonderful zoo, with the harbor as the backdrop, where you can be photographed up close with panda (but save the encounter for Burnie if you’re going to Tasmania. See No. 4)
+- The lively Bondi beach, set on a sweeping crescent bay, and the spectacular 2.5 mile coastal walk to Bronte Beach
 
 <div class="gallery">
 
 ![](./Images/17DownUnder/17DownUnder5.jpeg)
+![](./Images/17DownUnder/17DownUnder21.jpeg)
 </div>
-
-- The lively Bondi beach, set on a sweeping crescent bay, and the spectacular 2.5 mile coastal walk to Bronte Beach
 
 ## No. 5: Hiking Uluru and Kata Tjuta, Australia
 
@@ -105,7 +105,7 @@ The most memorable sight was the feeding of the devils, safely inside a compound
 
 This renowned 12-mile hike between Mt. Doom (aka Ngauruhoe) and Tongariro is relatively easy for fit hikers on a nice day. On Jan. 8, 2017, it was miserable and grueling for three and a half hours due to severe winds, fog and cold drizzle. I met people turning back, and passed others sobbing and depleted. I couldn’t see Mt. Doom let alone climb to the top to pay tribute to Lord of the Rings as I had wanted.
 
-Stubborn and optimistic, I pushed on. As I descended the slippery peak from Red Crater, I was rewarded by a hint of a blue emerald lake in the mist. But wait! It got clearer and clearer and the sun finally edged out for the rest of the hike. It took me nearly eight hours with a long break at the Emerald Lakes. Here's my [detailed report of the hike](http://www.meimeikirk.com/copy-of-siem-reap-cambodia).
+Stubborn and optimistic, I pushed on. As I descended the slippery peak from Red Crater, I was rewarded by a hint of a blue emerald lake in the mist. But wait! It got clearer and clearer and the sun finally edged out for the rest of the hike. It took me nearly eight hours with a long break at the Emerald Lakes.
 
 <div class="gallery">
 
@@ -148,8 +148,6 @@ Soon you catch a glimpse of Hobbiton and Bilbo's house in the distance and you'r
 </div>
 
 While there are large crowds, you can find a moment of solitude for pictures and reflections if you drag your feet just a tad. Our guide was generous with our time and we didn't return until 3 1/2 hours later. When I told her how much I appreciated her not rushing us through, she said, "For some people, this is the only reason they come to New Zealand." Indeed.
-
-[Click here to take a stroll through Hobbiton!](http://www.meimeikirk.com/copy-of-towering-views)
 
 * * *
 

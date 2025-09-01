@@ -36,14 +36,16 @@ h3 { font-size: clamp(1.1rem, 2vw + 0.5rem, 1.5rem); }
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 15px;
-  margin: 20px 0;
 }
+
 .gallery img {
-  width: 100%; height: auto; border-radius: 6px;
-  display: block; object-fit: cover;
+  width: 100%;
+  height: auto; /* natural height */
+  border-radius: 6px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   transition: transform 0.2s ease;
 }
+
 .gallery img:hover { transform: scale(1.03); }
 .gallery > * { display: flex; flex-direction: column; align-items: center; }
 
@@ -111,26 +113,27 @@ async function loadPost() {
 function processImages(container) {
   if (!container) return;
 
-  // Process galleries
-  container.querySelectorAll('.gallery').forEach(gallery => {
-    // Find all images inside this gallery, even if wrapped in <p>
+  // --- Process Galleries ---
+  container.querySelectorAll('.gallery').forEach((gallery, idx) => {
+    // Collect all images inside this gallery, even if wrapped in <p>
     const imgs = gallery.querySelectorAll('img, p > img');
-    gallery.innerHTML = ''; // Clear the gallery to rebuild properly
+    gallery.innerHTML = ''; // Clear the gallery
 
     imgs.forEach(img => {
       const src = img.getAttribute('src');
       const fileName = src?.split('/').pop();
       const caption = window._imageData?.[fileName] || img.alt || '';
 
-      // Build figure with optional caption
+      // Build <figure> container
       const figure = document.createElement('figure');
       figure.classList.add('figure', 'text-center');
 
-      // Wrap img in <a> for GLightbox
+      // Wrap image in <a> for GLightbox with gallery grouping
       const link = document.createElement('a');
       link.href = src;
-      link.setAttribute('data-glightbox', `title:${caption}`);
       link.classList.add('glightbox');
+      link.setAttribute('data-gallery', `gallery-${idx}`); // group images per gallery
+      link.setAttribute('data-title', caption); // caption in lightbox
 
       img.classList.add('img-fluid');
       img.setAttribute('loading', 'lazy');
@@ -138,6 +141,7 @@ function processImages(container) {
       link.appendChild(img);
       figure.appendChild(link);
 
+      // Show caption in the post below the image
       if (caption) {
         const figcap = document.createElement('figcaption');
         figcap.classList.add('figure-caption', 'text-center');
@@ -149,7 +153,7 @@ function processImages(container) {
     });
   });
 
-  // Process standalone images (outside galleries)
+  // --- Process standalone images (outside galleries) ---
   container.querySelectorAll('img:not(.glightbox)').forEach(img => {
     const src = img.getAttribute('src');
     const fileName = src?.split('/').pop();
@@ -160,8 +164,8 @@ function processImages(container) {
 
     const link = document.createElement('a');
     link.href = src;
-    link.setAttribute('data-glightbox', `title:${caption}`);
     link.classList.add('glightbox');
+    link.setAttribute('data-title', caption); // standalone caption
 
     img.classList.add('img-fluid');
     img.setAttribute('loading', 'lazy');
@@ -169,6 +173,7 @@ function processImages(container) {
     link.appendChild(img);
     figure.appendChild(link);
 
+    // Caption below image
     if (caption) {
       const figcap = document.createElement('figcaption');
       figcap.classList.add('figure-caption', 'text-center');
@@ -180,7 +185,7 @@ function processImages(container) {
     figure.appendChild(img);
   });
 
-  // Init or reload GLightbox
+  // --- Initialize or reload GLightbox ---
   if (typeof GLightbox !== 'undefined') {
     if (!window.glightboxInstance) {
       window.glightboxInstance = GLightbox({ selector: '.glightbox' });
@@ -189,6 +194,7 @@ function processImages(container) {
     }
   }
 }
+
 
 
   processImages(postContentEl);
