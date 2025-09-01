@@ -263,6 +263,10 @@ processImages(postContentEl);
     li.innerHTML=`<a href="#${id}">${h.textContent}</a>`;
     tocList.appendChild(li);
   });
+
+  if (headings.length > 0) {
+  document.getElementById('toc').classList.remove('d-none');
+}
 }
 document.addEventListener("DOMContentLoaded", loadPost);
 
