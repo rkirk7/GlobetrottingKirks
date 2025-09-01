@@ -131,9 +131,12 @@ async function loadPost() {
 function processImages(container) {
   if (!container) return;
 
-  container.querySelectorAll('.gallery').forEach(gallery => {
+  container.querySelectorAll('.gallery').forEach((gallery, galleryIndex) => {
     const imgs = gallery.querySelectorAll('img, p > img');
     gallery.innerHTML = ''; // rebuild gallery
+
+    // Each gallery gets a unique GLightbox group
+    const lightboxGroup = `gallery-${galleryIndex}`;
 
     imgs.forEach(img => {
       const src = img.getAttribute('src');
@@ -147,7 +150,7 @@ function processImages(container) {
       // Wrap image in <a> for GLightbox
       const link = document.createElement('a');
       link.href = src;
-      link.setAttribute('data-glightbox', `title:${caption}`);
+      link.setAttribute('data-glightbox', `title:${caption}; group:${lightboxGroup}`);
       link.classList.add('glightbox');
 
       img.classList.add('img-fluid');
@@ -168,7 +171,7 @@ function processImages(container) {
     });
   });
 
-  // Process standalone images outside galleries
+  // Standalone images outside galleries (single-image lightbox)
   container.querySelectorAll('img:not(.glightbox)').forEach(img => {
     const src = img.getAttribute('src');
     const fileName = src?.split('/').pop();
@@ -179,7 +182,7 @@ function processImages(container) {
 
     const link = document.createElement('a');
     link.href = src;
-    link.setAttribute('data-glightbox', `title:${caption}`);
+    link.setAttribute('data-glightbox', `title:${caption}`); // no group
     link.classList.add('glightbox');
 
     img.classList.add('img-fluid');
