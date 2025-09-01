@@ -5,11 +5,11 @@ const ALBUMS = {
   "antarctica-2024": {
     name: "Antarctica 2024",
     folder: "Antarctica",
-    total: 14,
+    total: 18,
   },
   "safari-2024": {
     name: "Safari to Botswana, Zimbabwe, and Kenya 2024",
-    folder: "23Safari",
+    folder: "24Safari",
     total: 41,
   },
   "svalbard-2024": { name: "Svalbard 2024", folder: "Svalbard", total: 16 },
