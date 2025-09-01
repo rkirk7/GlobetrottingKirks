@@ -1,6 +1,8 @@
 # Bosnia-Herzegovina highlights in 4 days
 *2018-11-08*
 
+![](./Images/Balkans/Balkans50.jpeg)
+
 Our six-week adventure starting Aug. 4, 2018, included five new countries for us: Hungary, Slovenia, Croatia, Montenegro and Bosnia-Herzegovina.
 
 [Read our top 10 Balkan highlights here.](https://wp.me/p6xsQy-XL)

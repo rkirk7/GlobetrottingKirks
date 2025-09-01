@@ -1,6 +1,8 @@
 # Top 10 highlights from Down Under
 *2017-02-08*
 
+![](./Images/17DownUnder/17DownUnder1.jpeg)
+
 Over 34 days, we enjoyed some of Australia's top sites and crisscrossed 930 miles of New Zealand’s twisty roads. This included six days of independent travel in Australia, 17 days aboard Holland America's Maasdam from Sydney to Auckland; and nine days roaming New Zealand on our own. (Click here for our [best 232 photos](https://goo.gl/photos/ptEKgNNHU96C8a1B6).)
 
 Here are my top 10 highlights from Down Under:

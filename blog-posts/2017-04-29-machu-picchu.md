@@ -1,6 +1,8 @@
 # Magical Machu Picchu and hiking Huayna Picchu
 *2017-04-29*
 
+![](./Images/17Peru/17Peru1.jpeg)
+
 You've seen pictures; you've studied it; you've imagined it.
 
 And still, Machu Picchu is a stunning revelation that captivates the heart and soul.

@@ -1,6 +1,8 @@
 # Mystical Angkor temples
 *2015-11-30*
 
+![](./Images/15Asia1/15Asia1.jpeg)
+
 Siem Reap, Cambodia, is 32 travel hours from Fort Myers--literally and figuratively a world away.
 
 The draw: a unique concentration of impressive Hindu and Buddhist ruins in the Angkor region.

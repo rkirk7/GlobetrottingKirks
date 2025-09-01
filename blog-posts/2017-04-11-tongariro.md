@@ -1,6 +1,8 @@
 # Tackling the Tongariro Alpine Crossing
 *2017-04-11*
 
+![](./Images/NewZealand/NewZealand22.jpeg)
+
 This famed 12-mile hike between Mt. Doom (aka Ngauruhoe) and Tongariro would be relatively easy for strong hikers on a nice day, even with the steep grades and slippery slopes. The route is a mix of steps, walkways, ash, rocky dirt up and down with signposts throughout although not always a clear “path.”
 
 But on Jan. 8, 2017, severe winds, fog and drizzle made it a grueling and unenjoyable trek to get to the peak of Red Crater. I was bundled in layers, raincoat, winter hat and gloves, buffeted by wind and  blinded by the spray on my glasses.

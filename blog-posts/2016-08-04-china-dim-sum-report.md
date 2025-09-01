@@ -1,6 +1,8 @@
 # China dim sum report
 *2016-08-04*
 
+![](./Images/16China/16China26.jpeg)
+
 Our China culinary adventure began in the southern region with four dim sum brunches and two dim sum dinners over eight days. When we completed our 30-day odyssey, we had an even 10 dim sums literally under our belts, thanks to my daughter Regan's avid research. While many meals were memorable in both good ways (Dadong Peking duck in Beijing) and bad (Huangshan pickled everything), here's how the dim sum lined up.
 
 ## 1\. CaterKing, Hong Kong.
