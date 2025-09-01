@@ -19,17 +19,14 @@ Around midnight on May 15, 2024, under the bright midnight sun, [the Ultramarine
 
 On Dec. 30, 2024, we were 12,000 miles away on the opposite end of the world, at 64 degrees south. Greeted by gentoo penguins, shimmering blue icebergs and snowy mountains at Recess Cove, Charlotte Bay, Antarctica, we gleefully strolled on the 7th continent, becoming members of an exclusive club. Only 79,000 tourists landed on Antarctica last season—and Charlotte Bay is not among the top 20 landed sites. Later the same day, our last day, we were ecstatic as humpback whales surrounded us while we were kayaking and riding in one of [Octantis](https://www.vikingcruises.com/expeditions/ships/viking-octantis.html)' special operations boats.
 
-![Arctic at 80 degrees north](./Images/Svalbard/Svalbard7.jpeg)
-*Quark Ultramarine at 80 degrees north, 635 miles from the North Pole*
+<div class="gallery">
 
-![Explorers on the white continent at Recess Cove, Antarctica](./Images/Antarctica/Antarctica1.jpeg)
-*Viking Octantis explorers on the 7th continent, 64 degrees south, Recess Cove, Antarctica*
-
+![](./Images/Svalbard/Svalbard7.jpeg)
+![](./Images/Antarctica/Antarctica1.jpeg)
 ![](./Images/Blog/globe-with-both-poles.jpg)
+</div>
 
 For perspective, we were about 1,000 miles north of the Arctic Circle and 635 miles south of the North Pole, and about 200 miles north of the Antarctic Circle and 2,000 miles north of the South Pole.
-
-[Click here if you want to skip ahead to how the Arctic and Antarctic compare.](#heres-how-the-arctic-and-the-antarctic-compare-in-our-view)
 
 How long had we been planning this unique triumph? Um, months.
 
@@ -43,22 +40,20 @@ After unexpected hiccups too complicated to recount here, we boarded the beautif
 
 Over 12 days, we saw seven polar bears, oodles of walruses, four Arctic foxes, some seals, a large pod of beluga whales, herds of reindeer, and seabirds galore including puffins. We walked on frozen sea ice (called “fast ice” because it is still “fastened” to shore) in front of an ancient glacier and sailed north until we hit the Arctic pack ice.
 
-![Polar bear in Svalbard](./Images/Svalbard/Svalbard8.jpeg)
+<div class="gallery">
 
+![Polar bear in Svalbard](./Images/Svalbard/Svalbard8.jpeg)
 ![Seven Polar Bears in Svalbard](./Images/Svalbard/Svalbard9.jpeg)
 *Seven bears seen over 12 days*
-
 ![Quark Ultramarine at Camp Zoe, the Arctic](./Images/Svalbard/Svalbard10.jpeg)
 *Quark Ultramarine at Camp Zoe, the Arctic*
-
 ![Standing on Arctic ice that soon will melt](./Images/Svalbard/Svalbard11.jpeg)
 *Standing on Arctic ice that soon will melt*
-
 ![Arctic Fox](./Images/Svalbard/Svalbard6.jpeg)
 *Arctic Fox*
-
 ![Walruses in the Arctic](./Images/Svalbard/Svalbard12.jpeg)
 *Walruses in the Arctic*
+</div>
 
 We came home glowing, not just from the cold, and wondering (now that we have all this winter garb): how and when can we get to Antarctica?
 
@@ -88,26 +83,16 @@ In all, we saw six types of penguins (king, gentoos, macaroni, chinstrap, Adelie
 
 We got to admire the world’s largest iceberg, A23A, for hours; rammed the ship into sea/fast ice not once, but twice; and kayaked five glorious times, including being the first to do so in a glacial lake that had been frozen until now. On our last and best day, we strolled on the white continent at Recess Cove.
 
-![Volunteer Point king penguins](./Images/Antarctica/Antarctica2.jpeg)
-*Volunteer Point King Penguins*
+<div class="gallery">
 
-![We're on the white continent!](./Images/Antarctica/Antarctica3.jpeg)
-*We're on the White Continent!*
-
-![South Georgia penguins](./Images/Antarctica/Antarctica4.jpeg)
-*Thousands of penguins at Salisbury Plain in South Georgia*
-
-![The Octantis in Reeses Cove](./Images/Antarctica/Antarctica5.jpeg)
-*The majestic Viking Octantis*
-
-![Kayak in Antarctica](./Images/Antarctica/Antarctica6.jpeg)
-*Kayaking adventures in Antarctica*
-
-![Humpback whale snout](./Images/Antarctica/Antarctica7.jpeg)
-*Humpback Whale*
-
-![We saw six penguin species in Antarctica](./Images/Antarctica/Antarctica8.jpeg)
-*Collage of the six penguin species we saw*
+![](./Images/Antarctica/Antarctica2.jpeg)
+![](./Images/Antarctica/Antarctica3.jpeg)
+![](./Images/Antarctica/Antarctica4.jpeg)
+![](./Images/Antarctica/Antarctica5.jpeg)
+![](./Images/Antarctica/Antarctica6.jpeg)
+![](./Images/Antarctica/Antarctica7.jpeg)
+![](./Images/Antarctica/Antarctica8.jpeg)
+</div>
 
 I have been reliving our journey every day since our return, with appreciation, and longing.
 
@@ -117,17 +102,7 @@ Because their summer tourist seasons are polar opposite each other, you can visi
 
 [As a Fora travel advisor, I would love to get you on a polar expedition! Click here to connect!](https://www.foratravel.com/advisor/mei-mei-kirk)
 
-## Here’s how the Arctic and the Antarctic compare, in our view.
-
-1. [Getting there](#getting-there)
-2. [Weather and seas](#weather-and-seas)
-3. [Landscapes](#landscapes)
-4. [Wildlife](#wildlife)
-5. ["That was freaking amazing" moments](#that-was-freaking-amazing-moments)
-6. [Fitness required](#fitness-required)
-7. [History and culture](#history-and-culture)
-8. [What else is there to do?](#what-else-is-there-to-do)
-9. [So what's the verdict?](#so-whats-the-verdict)
+**Here’s how the Arctic and the Antarctic compare, in our view.**
 
 ## Getting there
 
@@ -159,11 +134,13 @@ Antarctica is almost entirely covered in ice; it has uniquely humongous ice shel
 
 Most of the ice in the Arctic is frozen sea, both seasonal and multi-year (however, Greenland's ice cap is the second largest in the world after Antarctica). The Arctic has more diversity with tundra, fjords and rolling hills, as well as more plant life and signs of history and civilization. It also had numerous ice sheets during our May journey.
 
+<div class="gallery">
+
 ![](./Images/Svalbard/Svalbard13.jpeg)
 *Wijdefjorden fjord, Svalbard, Norway, aboard Quark Ultramarine*
-
 ![](./Images/Antarctica/Antarctica9.jpeg)
 *Greenwich Island, Antarctica, aboard Viking Octantis*
+</div>
 
 _Edge goes to: Antarctica_
 
@@ -191,11 +168,11 @@ Antarctica has about 5.8 million breeding pairs of penguins, the most anywhere. 
 
 And, Antarctica is a whale magnet: the Southern Ocean is the earth’s largest feeding ground for marine mammals, says the Antarctic and Southern Ocean Coalition.
 
-![Reindeer cautiously eye the polar bear](./Images/Svalbard/Svalbard14.jpeg)
-*Reindeer cautiously eyeing a polar bear*
+<div class="gallery">
 
-![Gentoo penguins and whale](./Images/Antarctica/Antarctica10.jpeg)
-*Gentoo penguins admire a passing whale, Wilhelmina Bay, Antarctica*
+![](./Images/Svalbard/Svalbard14.jpeg)
+![](./Images/Antarctica/Antarctica10.jpeg)
+</div>
 
 My husband, the homebody, often asks: why not just go to the zoo? My response: zoos are not natural habitats. In a zoo, you would not see a polar bear sliding down snowy hills, hovering for hours by a hole in the ice awaiting a seal to emerge, or catching a reindeer for a snack (a recent change in behavior due to shrinking ice and access to seals). In a zoo, you would not have penguins waddling past you (even as you attempt to back away the prerequisite 5-meters), hopping on and off icebergs, or stealing nesting rocks. And you would never see humpback whales. Period. (A few zoo/aquariums have belugas or orcas.)
 
@@ -239,11 +216,11 @@ But Amundsen continued to be drawn north, and attempted by ship and plane to rea
 
 While Peary was just miles from the North Pole in 1909, Amundsen was actually closer, though above it. That gives Amundsen the distinction of being the first to reach both the South and North Poles.
 
-![](./Images/Svalbard/Svalbard15.jpeg)
-*May 1926: Amundsen's dirigible prepares for its historic flight over the North Pole*
+<div class="gallery">
 
+![](./Images/Svalbard/Svalbard15.jpeg)
 ![](./Images/Svalbard/Svalbard16.jpeg)
-*May 2024: Amundsen's legacy still stands*
+</div>
 
 _Edge goes to: the Arctic_
 
@@ -266,7 +243,5 @@ Searching and finding tiny polar bears in the distance was exhilarating but exha
 _**The edge goes to:**_ the Antarctic. The breathtaking vistas and vibrant wildlife gave me such joy, I had a ridiculous grin nearly the whole journey. I can't wait to return.
 
 [As a Fora travel advisor, I would love to get you on a polar expedition! Click here to connect!](https://www.foratravel.com/advisor/mei-mei-kirk)
-
-**[Share and like if you enjoyed this!](http://Is Antarctica calling you? Here's everything you need to know. https://meimeichan.com/2025/01/29/antarctica-calls-and-we-must-go/)**
 
 **Interested in more? [Check out our Antarctic photo highlights](https://photos.app.goo.gl/CzyikJgCZ2AZp8YFA)**, [or our Arctic photo highlights](https://photos.app.goo.gl/nrM7aE43uvYzTVGu6).
