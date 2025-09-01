@@ -27,7 +27,7 @@ async function initBlog() {
     "2017-02-08-down-under.md",
     "2016-08-04-china.md",
     "2016-08-04-china-dim-sum-report.md",
-    "2016-06-19-off-to-the-land-of-my-birth.md",
+    //"2016-06-19-off-to-the-land-of-my-birth.md",
     "2015-11-30-mystical-angkor-temples.md",
   ];
 

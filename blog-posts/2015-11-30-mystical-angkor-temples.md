@@ -17,7 +17,7 @@ Remarkably, visitors can scamper across the ruins with very few exceptions. This
 
 Here are temple highlights from Nov. 1-4, 2015, with tips at the end. (Check out the [top 300 photos](https://goo.gl/photos/wZPU2jLz2nyB2sLY6) from our three-week trip!)
 
-**Angkor Wat or "Temple City"**
+## Angkor Wat or "Temple City"
 
 The best preserved and most renowned, Angkor Wat is breathtaking with its grand symmetry and towers, set off by a moat. How big is it? Vatican City could fit nearly five times on the 500 acres within the walls protecting the temple.
 
@@ -29,9 +29,12 @@ Like all the Khmer temples, Angkor Wat features extensive intricate bas-relief c
 
 Angkor Wat lends itself to spectacular sunrises—usually. Seven of us met up at 5 a.m. to catch the glory at 6 a.m., along with hundreds of other visitors. Alas, there was no sunrise to speak of that day. It was still a special meditative experience to awaken with the temple as it transitioned from dark to day.
 
- **![Siem Reap Angkor Wat sunrise best MM day 2 2015-11-03 095](images/siem-reap-angkor-wat-sunrise-best-mm-day-2-2015-11-03-095.jpg)**
+<div class="gallery">
 
- **Angkor Thom or “great city”**
+![](./Images/15Asia1/15Asia1.jpeg)
+</div>
+
+ ## Angkor Thom or “great city”
 
 Like Angkor Wat, it’s difficult to grasp the scale and design of Angkor Thom from the ground. This walled fortress, spread out over nearly four miles, was the capital during the reign of the empire’s greatest king, Jayavarman VII, who defeated the Cham invaders in the 12th century.
 
@@ -39,7 +42,10 @@ In front of each of the five towered entrances are causeways with a row of gods 
 
 But it’s the hundreds of giant Mona Lisa-like faces that grab you, starting with the ones on the 75-feet entry towers.
 
-![Siem Reap Angkor Thom 2015-11-01 083](images/siem-reap-angkor-thom-2015-11-01-083.jpg)
+<div class="gallery">
+
+![](./Images/15Asia1/15Asia2.jpeg)
+</div>
 
 At the center of Angkor Thom is the Bayon state temple, which features 54 towers, almost all topped with the four faces of the Buddha of Compassion (Avalokiteshvara). (Jayavarman had converted to Buddhism, feeling that Hinduism had failed his kingdom.)
 
@@ -47,13 +53,16 @@ Bayon, the last major temple constructed at Angkor, also features historical bas
 
 Just imagine when all these towers were golden and bronzed, as documented by a Chinese emissary, with all the original structures such as the royal palace, in their splendor.
 
-**Ta Prohm**
+## Ta Prohm
 
 Man vs. nature.
 
 Ta Prohm is a remarkable example of nature’s power and patience winning out. Gigantic trees have coiled their massive roots into the buildings, merging, uprooting and overwhelming much of the temple.
 
-![Siem Reap Ta Prohm aka Tomb Raider MM 2015-11-02 008](images/siem-reap-ta-prohm-aka-tomb-raider-mm-2015-11-02-008.jpg)
+<div class="gallery">
+
+![](./Images/15Asia1/15Asia3.jpeg)
+</div>
 
 The site evokes mixed emotions of fearsome destruction and peaceful serenity at the same time.
 
@@ -63,7 +72,7 @@ Made famous by the Tomb Raider movies, Ta Prohm was wisely preserved as it was f
 
 (What kind of trees are they? These are most commonly named on the internet: silk-cotton, thitpok, strangler fig, gold apple, kapok.)
 
-**Banteay Srei or “citadel of women”**
+## Banteay Srei or “citadel of women”
 
 Known as “the pink temple,” this remarkably preserved beauty stands out due to the reddish color of its sandstone and intricate carvings.
 
@@ -73,13 +82,17 @@ It’s small and located outside of the central temple area but well worth the e
 
 The designs are more richly detailed and sophisticated; the atmosphere much more intimate. Apparently some or many of the sculptures are now replicas though signage is non-existent (as it is throughout Angkor).
 
-![Siem Reap Banteay Srei built 967 2015-11-03 126](images/siem-reap-banteay-srei-built-967-2015-11-03-126.jpg)![Siem Reap Banteay Srei best MM day 2 2015-11-03 203](images/siem-reap-banteay-srei-best-mm-day-2-2015-11-03-203.jpg)
+<div class="gallery">
+
+![](./Images/15Asia1/15Asia4.jpeg)
+![](./Images/15Asia1/15Asia5.jpeg)
+</div>
 
 This temple begs for protective shielding over its facades to preserve it for the future.
 
 _Notable trivia: Noted Frenchman André Malraux, Minister of Culture under Charles de Gaulle, was arrested in 1923 for attempting to steal major pieces from Banteay Srei. He ended up with a one-year suspended sentence._
 
-**Key tips:**
+## Key tips:
 
 - Though mostly flat, be prepared for grueling, extensive walking over uneven surfaces in extreme debilitating heat. Many carry umbrellas to provide some shade.
 - Tuk tuks (motorized rickshaws) are fun and provide coolness from the fresh air. Use them as much as you can.
