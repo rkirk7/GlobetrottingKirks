@@ -176,44 +176,14 @@ async function loadPost() {
 
   // --- 3️⃣ Process galleries and standalone images ---
   function processImages(container) {
-    if (!container) return;
+  if (!container) return;
 
-    container.querySelectorAll('.gallery').forEach(gallery => {
-      const imgs = gallery.querySelectorAll('img, p > img');
-      gallery.innerHTML = '';
-      imgs.forEach(img => {
-        const src = img.getAttribute('src');
-        const fileName = src?.split('/').pop();
-        const caption = window._imageData?.[fileName] || img.alt || '';
+  // --- 1️⃣ Process galleries ---
+  container.querySelectorAll('.gallery').forEach(gallery => {
+    const imgs = Array.from(gallery.querySelectorAll('img, p > img'));
+    gallery.innerHTML = ''; // clear gallery
 
-        const figure = document.createElement('figure');
-        figure.classList.add('figure');
-
-        const link = document.createElement('a');
-        link.href = src;
-        link.classList.add('glightbox');
-        link.setAttribute('data-gallery', 'page-gallery');
-        link.setAttribute('data-title', caption);
-
-        img.classList.add('img-fluid');
-        img.setAttribute('loading', 'lazy');
-
-        link.appendChild(img);
-        figure.appendChild(link);
-
-        if (caption) {
-          const figcap = document.createElement('figcaption');
-          figcap.classList.add('figure-caption');
-          figcap.textContent = caption;
-          figure.appendChild(figcap);
-        }
-        gallery.appendChild(figure);
-      });
-    });
-
-    container.querySelectorAll('img').forEach(img => {
-      if (img.closest('.gallery') || img.closest('figure')) return;
-
+    imgs.forEach(img => {
       const src = img.getAttribute('src');
       const fileName = src?.split('/').pop();
       const caption = window._imageData?.[fileName] || img.alt || '';
@@ -227,10 +197,11 @@ async function loadPost() {
       link.setAttribute('data-gallery', 'page-gallery');
       link.setAttribute('data-title', caption);
 
-      img.classList.add('img-fluid');
-      img.setAttribute('loading', 'lazy');
+      const imgClone = img.cloneNode(true);
+      imgClone.classList.add('img-fluid');
+      imgClone.setAttribute('loading', 'lazy');
 
-      link.appendChild(img);
+      link.appendChild(imgClone);
       figure.appendChild(link);
 
       if (caption) {
@@ -240,20 +211,57 @@ async function loadPost() {
         figure.appendChild(figcap);
       }
 
-      img.replaceWith(figure);
+      gallery.appendChild(figure);
     });
+  });
 
-    // Initialize / reload GLightbox
-    setTimeout(() => {
-      if (typeof GLightbox !== 'undefined') {
-        if (!window.glightboxInstance) {
-          window.glightboxInstance = GLightbox({ selector: '.glightbox' });
-        } else {
-          window.glightboxInstance.reload();
-        }
+  // --- 2️⃣ Process standalone images ---
+  container.querySelectorAll('img').forEach(img => {
+    if (img.closest('.gallery') || img.closest('figure')) return;
+
+    const src = img.getAttribute('src');
+    const fileName = src?.split('/').pop();
+    const caption = window._imageData?.[fileName] || img.alt || '';
+
+    const figure = document.createElement('figure');
+    figure.classList.add('figure');
+
+    const link = document.createElement('a');
+    link.href = src;
+    link.classList.add('glightbox');
+    link.setAttribute('data-gallery', 'page-gallery');
+    link.setAttribute('data-title', caption);
+
+    const imgClone = img.cloneNode(true);
+    imgClone.classList.add('img-fluid');
+    imgClone.setAttribute('loading', 'lazy');
+
+    link.appendChild(imgClone);
+    figure.appendChild(link);
+
+    if (caption) {
+      const figcap = document.createElement('figcaption');
+      figcap.classList.add('figure-caption');
+      figcap.textContent = caption;
+      figure.appendChild(figcap);
+    }
+
+    // Replace the original image with the figure safely
+    img.parentNode.replaceChild(figure, img);
+  });
+
+  // --- 3️⃣ Initialize / reload GLightbox ---
+  setTimeout(() => {
+    if (typeof GLightbox !== 'undefined') {
+      if (!window.glightboxInstance) {
+        window.glightboxInstance = GLightbox({ selector: '.glightbox' });
+      } else {
+        window.glightboxInstance.reload();
       }
-    }, 50);
-  }
+    }
+  }, 50);
+}
+
 
   processImages(postContentEl);
 
