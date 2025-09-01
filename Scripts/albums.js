@@ -24,7 +24,8 @@ const ALBUMS = {
     folder: "FrenchPolynesia",
     total: 17,
   },
-  "galapagos-2022": { name: "Galapagos 2023", folder: "Galapagos", total: 9 },
+    "greece-2022": { name: "Greece 2022", folder: "Greece", total: 23 },
+  "galapagos-2022": { name: "Galapagos 2022", folder: "Galapagos", total: 9 },
   "western-parks-2021": {
     name: "Western Parks 2021",
     folder: "WesternParks",
