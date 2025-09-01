@@ -13,22 +13,15 @@ Here are our highlights and tips.
 - **Bright Angel, Grand Canyon.** I went to 3-mile house while my daughter continued onto Indian Springs. She confirmed the grueling return up would have done me in. 2,166 feet elevation for me; 3,048 for her
 - **Angel’s Landing, Zion.** We stayed at Zion Lodge for an easy 5:30 a.m. start, and were atop around 7:30. The fast hikers from the first shuttles soon arrived. Beautiful scenery, challenging rocks and chains, 2,090 feet elevation including a jaunt to the Rim Trail afterward. (In hindsight, we should have started at 5 or 5:15.)
 
-![Chasm Lake](./Images/WesternParks/WesternParks1.jpeg)
-*Chasm Lake*
+<div class="gallery">
 
-![Chasm Lake](./Images/WesternParks/WesternParks2.jpeg)
-
-![Bright Angel](./Images/WesternParks/WesternParks3.jpeg)
-*Bright Angel Trail*
-
-![Bright Angel](./Images/WesternParks/WesternParks4.jpeg)
-*Bright Angel view of Indian Garden*
-
-![Angel's Landing](./Images/WesternParks/WesternParks5.jpeg)
-*Angel's Landing seen from the Rim Trail*
-
-![Ange's Landing](./Images/WesternParks/WesternParks6.jpeg)
-*Angel's Landing crowds at 10 a.m.*
+![](./Images/WesternParks/WesternParks1.jpeg)
+![](./Images/WesternParks/WesternParks2.jpeg)
+![](./Images/WesternParks/WesternParks3.jpg)
+![](./Images/WesternParks/WesternParks4.jpeg)
+![](./Images/WesternParks/WesternParks5.jpeg)
+![](./Images/WesternParks/WesternParks6.jpeg)
+</div>
 
 ## Top of the world
 
@@ -36,13 +29,12 @@ Here are our highlights and tips.
 - **Via Ferrata, near Estes Park, CO, Cathedral peak at Deville rock, 9,000 feet**. We love via ferratas and started our adventure with a great one installed by Kent Mountain Adventures just outside of town. We were disappointed and surprised the via ferrata was relatively short while the hike to and from was quite long and tough.
 - **Sentinel Dome, Yosemite, 8,123 feet**. Beautiful views, surpassing Taft Point.
 
-![Mt. Hoffman](./Images/WesternParks/WesternParks7.jpeg)
-*Mount Hoffman*
+<div class="gallery">
 
-![Via Ferrata Cathedral Summit](./Images/WesternParks/WesternParks8.jpeg)
-*Via Ferrata, Cathedral Summit*
-
+![](./Images/WesternParks/WesternParks7.jpeg)
+![](./Images/WesternParks/WesternParks8.jpeg)
 ![](./Images/WesternParks/WesternParks9.jpeg)
+</div>
 
 ## Gorgeous viewpoints without much effort:
 
@@ -52,11 +44,11 @@ Here are our highlights and tips.
 - Canyon Overlook, Zion
 - Kolob Canyon overlook, Zion
 
-![North Rim Cape Royal](./Images/WesternParks/WesternParks10.jpeg)
-*North Rim Cape Royal*
+<div class="gallery">
 
-![North Rim Cape Royal](./Images/WesternParks/WesternParks11.jpeg)
-*North Rim Cape Royal*
+![](./Images/WesternParks/WesternParks10.jpeg)
+![](./Images/WesternParks/WesternParks11.jpeg)
+</div>
 
 ## Best critters:
 
@@ -64,17 +56,13 @@ Here are our highlights and tips.
 - Intimate views of a young moose and mom, interrupted by another moose who came right by us, Coyote Valley, Rocky Mountain NP
 - Young bear frolicking in the creek at McGurk Meadow as we finished our longest hike, Yosemite NP (we saw two bears over four days).
 
-![Dewey Point](./Images/WesternParks/WesternParks12.jpeg)
-*Dewey Point*
+<div class="gallery">
 
-![Coyote Valley](./Images/WesternParks/WesternParks13.jpeg)
-*Elk in Coyote Valley*
-
-![Coyote Valley](./Images/WesternParks/WesternParks14.jpeg)
-*Moose in Coyote Valley*
-
+![](./Images/WesternParks/WesternParks12.jpeg)
+![](./Images/WesternParks/WesternParks13.jpeg)
+![](./Images/WesternParks/WesternParks14.jpeg)
 ![](./Images/WesternParks/WesternParks15.jpeg)
-*Gorgeous double rainbow at North Rim*
+</div>
 
 ## Surprised by:
 
@@ -92,20 +80,14 @@ Here are our highlights and tips.
 - **Mist Trail to Nevada Falls, Yosemite.** Waterfalls were not at their full power on our trip but we enjoyed getting close to Vernal and Nevada Falls. My daughter loved scrambling on the boulders in the mist of beautiful Nevada.
 - **Nymph, Dream and Haiyaha lakes, Rocky Mountain (after the fact).** We were prepared to get caught in rain but did not expect hail/sleet in June. We got soaked and were freezing as the temperature dropped to 54, and had to forego Mills Lake. In hindsight, it was a lot of unplanned fun.
 
-![Ebikes on the Parus Trail](./Images/WesternParks/WesternParks16.jpeg)
-*Ebikes on the Parus Trail*
+<div class="gallery">
 
-![Haiyaha Lake](./Images/WesternParks/WesternParks17.jpeg)
-*Haiyaha Lake in the sleet*
-
-![Mist Trail, Nevada Falls](./Images/WesternParks/WesternParks18.jpeg)
-*Mist Trail, Nevada Falls*
-
-![Vernal and Nevada Falls](./Images/WesternParks/WesternParks19.jpeg)
-*Vernal and Nevada Falls*
-
-![Peekaboo Canyon](./Images/WesternParks/WesternParks20.jpeg)
-*Peekaboo Canyon, Grand Escalante Staircase*
+![](./Images/WesternParks/WesternParks16.jpeg)
+![](./Images/WesternParks/WesternParks17.jpeg)
+![](./Images/WesternParks/WesternParks18.jpeg)
+![](./Images/WesternParks/WesternParks19.jpeg)
+![](./Images/WesternParks/WesternParks20.jpeg)
+</div>
 
 ## Harrowing moments:
 
@@ -121,7 +103,11 @@ Here are our highlights and tips.
 - 113 at Escalante during our Peekaboo/Spooky hike
 - 110 around 4 p.m. after the Narrows hike, Zion
 - 46 at Grand Canyon North Rim
-- ![](./Images/WesternParks/WesternParks21.jpeg)
+
+<div class="gallery">
+
+![](./Images/WesternParks/WesternParks21.jpeg)
+</div>
 
 ## Top tips:
 
@@ -147,7 +133,9 @@ Here are our highlights and tips.
 - Entrada Escalante Lodge, Escalante, UT. Extremely guest and eco-friendly.
 - Sonnenhof Lakewood Manor; Estes Park, CO. Spacious Twin Sisters apartment with great views.
 
-![El Tovar](./Images/WesternParks/WesternParks22.jpeg)
-*The amazing terrace of the Fred Harvey suite at El Tovar.*
+<div class="gallery">
+
+![](./Images/WesternParks/WesternParks22.jpeg)
+</div>
 
 [Click here to see our top 100 images.](https://photos.app.goo.gl/H4tpuPCYYMhKwj1z6)

@@ -1,6 +1,8 @@
 #  Viva La Via Ferrata!
 *2019-11-04*
 
+![](./Images/ViaFerrata/ViaFerrata1.jpeg)
+
 In researching our Switzerland trip, I came across the Via Ferrata hike/climb from Murren. While intrigued, I feared it was too daunting.
 
 Via Ferrata means iron path, a protected climbing route with established metal rungs and a cable wire. It’s also known as Klettersteig. They are very popular in the Alps and are expanding worldwide.
@@ -14,20 +16,11 @@ When we started, I couldn't believe what we were doing: rungs jutting out into s
 The tightrope was relatively short, but there was no netting beneath! The zipline, configured with pulleys and rocks, didn't zip so much as dragged slowly. The ladders were completely vertical. The Nepal suspension bridge didn't seem tough in the moment, but it was over a 1,310 feet ravine!
     
 <div class="gallery">
-  <figure>
-    <img src="./Images/ViaFerrata/ViaFerrata1.jpeg" alt="Hanging out in Switzerland on a Via Ferrata">
-    <figcaption>Hanging out in Switzerland on a Via Ferrata</figcaption>
-  </figure>
-  <figure>
-    <img src="./Images/ViaFerrata/ViaFerrata2.jpeg" alt="Via Ferrata Switzerland">
-  </figure>
-  <figure>
-    <img src="./Images/ViaFerrata/ViaFerrata3.jpeg" alt="Via Ferrata Switzerland">
-  </figure>
-  <figure>
-    <img src="./Images/ViaFerrata/ViaFerrata4.jpeg" alt="Adrenaline rush anyone? Via Ferrata Murren to Gimmelwald, Switzerland">
-    <figcaption>Adrenaline rush anyone? Via Ferrata Murren to Gimmelwald, Switzerland</figcaption>
-  </figure>
+
+![](./Images/ViaFerrata/ViaFerrata1.jpeg)
+![](./Images/ViaFerrata/ViaFerrata2.jpeg)
+![](./Images/ViaFerrata/ViaFerrata3.jpeg)
+![](./Images/ViaFerrata/ViaFerrata4.jpeg)
 </div>
 
 

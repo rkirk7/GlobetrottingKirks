@@ -1,6 +1,8 @@
 # 3 perfect weeks in South Africa
 *2019-04-09*
 
+![](./Images/19SouthAfrica/19SouthAfrica4.jpeg)
+
 Our first visit to this vast country exceeded our expectations in every way: The beauty and variety of the gorgeous coast and the mountainous interior; the sophisticated and inexpensive food; and the marvelous creatures, especially on our Timbavati safari. But we were also taken aback by the shantytowns, barbed wire and the division of black and white.
 
 Here are highlights and tips from our trip from Feb. 24-March 15, 2019, with our friends Mary and George. We agreed this was a perfect itinerary, including nearly all our lodgings.
@@ -21,10 +23,8 @@ Here are highlights and tips from our trip from Feb. 24-March 15, 2019, with our
 On top: What a tremendous plateau! The walking paths are pretty flat and easy; the more adventurous can scamper onto the many cliff rocks. We spent about 2 1/2 hours soaking it in, including the cute dassies (rock hyraxes). When we got back down, the lines were horrendous.
 
 <div class="gallery">
-  <figure>
-    <img src="./Images/19SouthAfrica/19SouthAfrica1.jpeg" alt="">
-    <figcaption>Beautiful view of Lion's Peak, Signal Hill, Cape Town, Robben island and Blouberg from Table Mountain</figcaption>
-  </figure>
+
+![](./Images/19SouthAfrica/19SouthAfrica4.1peg)
 </div>
 
 - Hiking: From the cable car, you can see some of the very steep paths to hike up the mountain in about two hours. With more time/good weather, I would have liked to hike up to Devil's Peak.
@@ -33,22 +33,11 @@ On top: What a tremendous plateau! The walking paths are pretty flat and easy; t
 **Camps Bay:** We had dinner in this area twice with a sparkling sunset one night. It's a beautiful, vibrant beach set against Lion's Head and the 12 Apostles (back side) of Table Mountain.
 
 <div class="gallery">
-  <figure>
-    <img src="./Images/19SouthAfrica/19SouthAfrica2.jpeg" alt="">
-    <figcaption>Camps Bay Panorama with 12 Apostles</figcaption>
-  </figure>
-   <figure>
-    <img src="./Images/19SouthAfrica/19SouthAfrica3.jpeg" alt="">
-    <figcaption>Camps Bay View of Table Mountain Cable Car</figcaption>
-  </figure>
-   <figure>
-    <img src="./Images/19SouthAfrica/19SouthAfrica4.jpeg" alt="">
-    <figcaption>Camps Bay Sunset</figcaption>
-  </figure>
-   <figure>
-    <img src="./Images/19SouthAfrica/19SouthAfrica5.jpeg" alt="">
-    <figcaption>Table Mountain View of Camps Bay</figcaption>
-  </figure>
+
+![](./Images/19SouthAfrica/19SouthAfrica2.jpeg)
+![](./Images/19SouthAfrica/19SouthAfrica3.1peg)
+![](./Images/19SouthAfrica/19SouthAfrica4.1peg)
+![](./Images/19SouthAfrica/19SouthAfrica5.1peg)
 </div>
 
 **Robben Island:** We booked the 9 a.m. tour two days in advance and sauntered to the waterfront from our hotel. (Beware your GPS directions: you want the museum, not the "embarkation building"!) Imagine our dismay when we got to the short bridge connecting the waterfront to the museum and were told it out for maintenance! We had to hoof 1.3 miles around another bridge, arriving at 9:06. They held the ferry till 9:15. 
@@ -56,40 +45,21 @@ On top: What a tremendous plateau! The walking paths are pretty flat and easy; t
 Watch for great views of Cape Town and Table Mountain from the back of the ferry--they'll let you hover in the doorway after departure. Once on the island, you're loaded onto buses to stagger tours of key sites (such as the limestone quarry where Mandela and others toiled) before ending at the prison cell where Mandela was imprisoned for 17 of his 28 years of captivity. Sobering and powerful reminder of a painful era.
 
 <div class="gallery">
-  <figure>
-    <img src="./Images/19SouthAfrica/19SouthAfrica6.jpeg" alt="">
-    <figcaption>Nelson Mandela's cell for 18 years</figcaption>
-  </figure>
-   <figure>
-    <img src="./Images/19SouthAfrica/19SouthAfrica7.jpeg" alt="">
-    <figcaption>Robben Island</figcaption>
-  </figure>
-   <figure>
-    <img src="./Images/19SouthAfrica/19SouthAfrica8.jpeg" alt="">
-    <figcaption>View of Table Mountain from Robben Island</figcaption>
-  </figure>
-   <figure>
-    <img src="./Images/19SouthAfrica/19SouthAfrica9.jpeg" alt="">
-    <figcaption>Robben Island Lime Quarry</figcaption>
-  </figure>
+
+![](./Images/19SouthAfrica/19SouthAfrica6.jpeg)
+![](./Images/19SouthAfrica/19SouthAfrica7.1peg)
+![](./Images/19SouthAfrica/19SouthAfrica8.1peg)
+![](./Images/19SouthAfrica/19SouthAfrica9.1peg)
 </div>
     
 
 **Downtown Cape Town:** We didn't see many other tourists while strolling through the key sites such as the Bo Kaap Muslim quarter, City Hall where Mandela spoke after his 1990 release and when he became president four years later, Rev. Tutu's church, the Castle of Good Hope (oldest building in town) and the Company's Gardens.
 
 <div class="gallery">
-  <figure>
-    <img src="./Images/19SouthAfrica/19SouthAfrica10.jpeg" alt="">
-    <figcaption>The Company’s Gardens</figcaption>
-  </figure>
-   <figure>
-    <img src="./Images/19SouthAfrica/19SouthAfrica11.jpeg" alt="">
-    <figcaption>Bo Kaap Muslim area</figcaption>
-  </figure>
-   <figure>
-    <img src="./Images/19SouthAfrica/19SouthAfrica12.jpeg" alt="">
-    <figcaption>Shantytown or township outside Cape Town</figcaption>
-  </figure>
+
+![](./Images/19SouthAfrica/19SouthAfrica10.jpeg)
+![](./Images/19SouthAfrica/19SouthAfrica11.1peg)
+![](./Images/19SouthAfrica/19SouthAfrica12.1peg)
 </div>
 
 Apartheid is over, but the problems persist. On our travels, it was easy to see that the vast amount of wealth is still controlled by whites, despite the decline in population. We learned about the alarming emigration of whites and influx of migrants from troubled African countries, and heard voices of anger, bitterness and fear. Everywhere with middle class affluence was protected by barbed wire walls and "armed response" signs. 
@@ -103,32 +73,19 @@ These incidents should not put you off but should caution you to be wary and sma
 **Boulders Beach African Penguins:** These were so cute! There are some 2,000 breeding pairs clustered near the end of the walkway, on the sand and on the beach. It was nesting season and we loved watching the infants and siblings frolic.
 
 <div class="gallery">
-  <figure>
-    <img src="./Images/19SouthAfrica/19SouthAfrica13.jpeg" alt="">
-    <figcaption>Boulders Beach Penguins</figcaption>
-  </figure>
-   <figure>
-    <img src="./Images/19SouthAfrica/19SouthAfrica14.jpeg" alt="">
-    <figcaption>Boulders Beach Penguins</figcaption>
-  </figure>
-   <figure>
-    <img src="./Images/19SouthAfrica/19SouthAfrica15.jpeg" alt="">
-    <figcaption>Boulders Beach Penguins</figcaption>
-  </figure>
+
+![](./Images/19SouthAfrica/19SouthAfrica13.jpeg)
+![](./Images/19SouthAfrica/19SouthAfrica14.1peg)
+![](./Images/19SouthAfrica/19SouthAfrica15.1peg)
 </div>
 
 
 **Cape of Good Hope:** Wonderful views and hike between the cape and Cape Point, which is where the lighthouses are. If you don't hike, you just drive to both sites.
 
 <div class="gallery">
-  <figure>
-    <img src="./Images/19SouthAfrica/19SouthAfrica16.jpeg" alt="">
-    <figcaption>Cape of Good Hope</figcaption>
-  </figure>
-   <figure>
-    <img src="./Images/19SouthAfrica/19SouthAfrica17.jpeg" alt="">
-    <figcaption>Cape of Good Hope</figcaption>
-  </figure>
+
+![](./Images/19SouthAfrica/19SouthAfrica16.jpeg)
+![](./Images/19SouthAfrica/19SouthAfrica17.1peg)
 </div>
 
 ## Hermanus to Port Elizabeth
@@ -140,67 +97,42 @@ We chose to pay for a driver so we could all enjoy the journey and felt it was w
 By the way: shark divers looked a little silly to us: they're in wet suits dunked in a small cage attached to the boat. The crew would toss out fish/chum to entice sharks (copper ones while we were there) to swim right up to the cage, over and over again.  
 
 <div class="gallery">
-  <figure>
-    <img src="./Images/19SouthAfrica/19SouthAfrica18.jpeg" alt="">
-    <figcaption>Copper shark at cage divers</figcaption>
-  </figure>
-   <figure>
-    <img src="./Images/19SouthAfrica/19SouthAfrica19.jpeg" alt="">
-    <figcaption>Brydes whale</figcaption>
-  </figure>
-     <figure>
-    <img src="./Images/19SouthAfrica/19SouthAfrica20.jpeg" alt="">
-    <figcaption>Shark alley</figcaption>
-  </figure>
+
+![](./Images/19SouthAfrica/19SouthAfrica18.jpeg)
+![](./Images/19SouthAfrica/19SouthAfrica19.1peg)
+![](./Images/19SouthAfrica/19SouthAfrica20.1peg)
 </div>
 
 **Oudtshoorn**: I had debated whether to stop here. But surely one must check out the ostrich capital of the world (80% are in this region)! We had an educational and fun tour at Highgate, holding 5-day old chicks and getting ostrich "massages." I also did the adventure tour at Cango Caves, where you actually crawl through tight spaces for the fun of it; quite an adrenalin rush. And we drove the impressive all-gravel Swartberg Pass for sweeping mountain views.
 
 <div class="gallery">
-  <figure>
-    <img src="./Images/19SouthAfrica/19SouthAfrica21.jpeg" alt="">
-    <figcaption>Impressive Swartberg Pass</figcaption>
-  </figure>
-   <figure>
-    <img src="./Images/19SouthAfrica/19SouthAfrica22.jpeg" alt="">
-    <figcaption>My caboose going through Cango Caves</figcaption>
-  </figure>
-     <figure>
-    <img src="./Images/19SouthAfrica/19SouthAfrica23.jpeg" alt="">
-    <figcaption>Five day old chick at Highgate ostrich farm</figcaption>
-  </figure>
+
+![](./Images/19SouthAfrica/19SouthAfrica21.jpeg)
+![](./Images/19SouthAfrica/19SouthAfrica22.1peg)
+![](./Images/19SouthAfrica/19SouthAfrica23.1peg)
 </div>
 
 **Tsitsikamma National Park:** Beautiful rocky shore with the crashing Indian ocean, and a lovely visual feast at the Storms River Mouth with its three suspension bridges. It's a bit of a walk with many steps to get there but doable for most. We never saw the boat options that were supposed to be at the bridge though there were kayakers. I took the steep hike to the top overlook above the mouth in about 30 minutes. (BTW: the entry fee is much cheaper when you tell them you'll just be a few hours.)
 
 <div class="gallery">
-  <figure>
-    <img src="./Images/19SouthAfrica/19SouthAfrica24.jpeg" alt="">
-    <figcaption>Mesmerizing Indian Ocean at Tsitskamma park</figcaption>
-  </figure>
-   <figure>
-    <img src="./Images/19SouthAfrica/19SouthAfrica25.jpeg" alt="">
-    <figcaption>Tsitskamma park Storms River Mouth</figcaption>
-  </figure>
+
+![](./Images/19SouthAfrica/19SouthAfrica24.jpeg)
+![](./Images/19SouthAfrica/19SouthAfrica25.1peg)
 </div>
 
 We lucked out with a luxurious **[Plettenberg base](https://www.airbnb.com/rooms/18465291)** through airbnb that was enormous and reasonable with fabulous views.
 
 
 <div class="gallery">
-  <figure>
-    <img src="./Images/19SouthAfrica/19SouthAfrica26.jpeg" alt="">
-    <figcaption>View from our fantastic rental in Plettenberg Bay</figcaption>
-  </figure>
+
+![](./Images/19SouthAfrica/19SouthAfrica26.jpeg)
 </div>
 
 **Robberg Reserve:**  This compact peninsula at Plettenberg has very cool sand dunes and huge waves on one side. It would not be worthwhile unless you went at least to the middle (note the small seal colony below), across the Witsand sand dune and down along the sand and rocks (RT 2.6 miles) with the roaring Indian Ocean all about.
 
 <div class="gallery">
-  <figure>
-    <img src="./Images/19SouthAfrica/19SouthAfrica27.jpeg" alt="">
-    <figcaption>Robberg Nature Reserve</figcaption>
-  </figure>
+
+![](./Images/19SouthAfrica/19SouthAfrica27.jpeg)
 </div>
 
 ## Makanyi lodge in Timbavati
@@ -210,39 +142,23 @@ We flew from Port Elizabeth to Hoedspruit with a change at J-Burg, arriving at M
 Great decision! We were captivated by the stylish setting, thoughtful touches and amazing animal encounters.
 
 <div class="gallery">
-  <figure>
-    <img src="./Images/19SouthAfrica/19SouthAfrica28.jpeg" alt="">
-    <figcaption>Makanyi Lodge, Timbavati</figcaption>
-  </figure>
-    <figure>
-    <img src="./Images/19SouthAfrica/19SouthAfrica29.jpeg" alt="">
-    <figcaption>Sundowner at Makanyi</figcaption>
-  </figure>
+
+![](./Images/19SouthAfrica/19SouthAfrica28.jpeg)
+![](./Images/19SouthAfrica/19SouthAfrica29.1peg)
 </div>
 
-Each morning, our guide Sean would call at 5:30; we'd go to the lodge for coffee and muffins then depart at 6 for our first game drive, stopping midway for coffee (with perhaps a splash of Amarula). Back around 9 for a robust breakfast at 10, followed by a light lunch from 1-2:30 and tea at 4. Out again from 4:30 till 7:30ish, with a sundowner drink around sunset at 6:20. Drinks (included) around 7:45 with dinner at 8. 
+Each morning, our guide Sean would call at 5:30; we'd go to the lodge for coffee and muffins then depart at 6 for our first game drive, stopping midway for coffee (with perhaps a splash of Amarula). Back around 9 for a robust breakfast at 10, followed by a light lunch from 1-2:30 and tea at 4. Out again from 4:30 till 7:30ish, with a sundowner drink around sunset at 6:20. Drinks (included) around 7:45 with dinner at 8.
 
 On our first drive, we caught sight of a rare pack of endangered wild dogs, and a stunning battle for an impala carcass by two leopards and a hyena, which ended up with the prize! Another day, our tracker, Luckson, caught a faint lion sneeze, which led to a spectacular viewing of a pride at the watering hole. And, to my surprise, we saw seven rhinos in two days.
 
 Down time was spent on naps, a little exercise in the gym, and soaking in the tranquil setting, interrupted only by hippo snorts. This was our third trip to Africa (the first two were to Tanzania) and Makanyi really spoiled us. 
 
 <div class="gallery">
-  <figure>
-    <img src="./Images/19SouthAfrica/19SouthAfrica30.jpeg" alt="">
-    <figcaption>A female leopard hiding from a male leopard</figcaption>
-  </figure>
-    <figure>
-    <img src="./Images/19SouthAfrica/19SouthAfrica31.jpeg" alt="">
-    <figcaption>Mother and infant rhino</figcaption>
-  </figure>
-      <figure>
-    <img src="./Images/19SouthAfrica/19SouthAfrica32.jpeg" alt="">
-    <figcaption>Zebra family</figcaption>
-  </figure>
-      <figure>
-    <img src="./Images/19SouthAfrica/19SouthAfrica33.jpeg" alt="">
-    <figcaption>Wild Dogs</figcaption>
-  </figure>
+
+![](./Images/19SouthAfrica/19SouthAfrica30.jpeg)
+![](./Images/19SouthAfrica/19SouthAfrica31.1peg)
+![](./Images/19SouthAfrica/19SouthAfrica32.1peg)
+![](./Images/19SouthAfrica/19SouthAfrica33.1peg)
 </div>
     
 
@@ -253,14 +169,9 @@ We drove ourselves from Hoedspruit (Avis rental) along the beautiful Blyde River
 **Blyde River Canyon** is not very well marketed by South Africa but definitely worth the effort! At 16 miles long, it's one of the largest in the world, and perhaps the greenest, with a variety of pull-off overlooks (each with a fee). It was a great wrap-up to our trip.  
 
 <div class="gallery">
-    <figure>
-    <img src="./Images/19SouthAfrica/19SouthAfrica34.jpeg" alt="">
-    <figcaption>Bourke's Luck</figcaption>
-  </figure>
-      <figure>
-    <img src="./Images/19SouthAfrica/19SouthAfrica35.jpeg" alt="">
-    <figcaption>Rondavels</figcaption>
-  </figure>
+
+![](./Images/19SouthAfrica/19SouthAfrica34.1peg)
+![](./Images/19SouthAfrica/19SouthAfrica35.1peg)
 </div>
 
 

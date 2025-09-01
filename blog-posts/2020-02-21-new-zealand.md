@@ -1,6 +1,8 @@
 # New Zealand adrenaline rush: Two death-defying weeks
 *2020-02-21*
 
+![](./Images/NewZealand/NewZealand2.jpeg)
+
 Adrenaline junkie? Me?
 
 My daughter made me do it, Your Honor.
@@ -8,12 +10,6 @@ My daughter made me do it, Your Honor.
 Regan wanted to go all out during our two weeks in New Zealand; I turned 60 in October and wanted to wrap the year in style, so she didn't have to twist my arm, much. Except for the whole jumping out of a perfectly fine airplane thing.
 
 Not everything we did required helmets, but it sure seemed like it. Here are highlights and low lights of our top 5 once(?)-in-a-lifetime adventures:
-
-1. [Adrenaline rush No. 5: White water rafting](#adrenaline-rush-no-5-white-water-rafting)
-2. [Adrenaline rush No. 4: 3-day Kepler Track](#adrenaline-rush-no-4-3-day-kepler-track)
-3. [Adrenaline rush No. 3: Via Ferrata](#adrenaline-rush-no-3-via-ferrata)
-4. [Adrenaline rush No. 2: Extreme hiking on Fox Glacier](#adrenaline-rush-no-2-extreme-hiking-on-fox-glacier)
-5. [No. 1 adrenaline rush: Skydiving](#and-the-no-1-adrenaline-rush-skydiving)
 
 ## Adrenaline rush No. 5: White water rafting
 
@@ -31,14 +27,12 @@ After safety briefings and practice runs (what to do should the raft overturn at
 
 Suddenly Tutea Falls was ahead of us. Regan and I were in the front. As rehearsed, we crouched, heads down, holding onto the rope in front. But the water ripped my hand away and I was sucked up, then tossed under. I bobbed up quickly, still holding the oar. Regan was nearby, as was a third passenger. Only two in our raft clung on through the falls.
 
-![That's us in the front](./Images/NewZealand/NewZealand1.jpeg)
-*That's us in the front*
+<div class="gallery">
 
-![The falls chewed us up](./Images/NewZealand/NewZealand2.jpeg)
-*The falls chewed us up*
-
-![In the river](./Images/NewZealand/NewZealand3.jpeg)
-*Regan and me in the river*
+![](./Images/NewZealand/NewZealand1.jpeg)
+![](./Images/NewZealand/NewZealand2.jpeg)
+![](./Images/NewZealand/NewZealand3.jpeg)
+</div>
 
 I don't recall hitting anything as I fell out, but some people do get damaged ankles or noses being pummeled by the water. 
 
@@ -48,7 +42,7 @@ The adventure was less than an hour but was physically tough, partly due to the 
 
 _**Do it again? Maybe.**_
 
-# Adrenaline rush No. 4: 3-day Kepler Track
+## Adrenaline rush No. 4: 3-day Kepler Track
 
 - Where/who: One of New Zealand's "Great Walks," a 37-mile circuit from Te Anau
 
@@ -68,11 +62,12 @@ There's no electricity or heat; everything is communal; wooden furnishings are d
 
 Day 2, Highlight of the trip: 9.5 miles over 7 hours. A stunningly perfect day with glorious "Lord of the Rings" type ridge views for some three hours including at Luxmore Summit.
 
+<div class="gallery">
+
 ![](./Images/NewZealand/NewZealand4.jpeg)
-
 ![](./Images/NewZealand/NewZealand5.jpeg)
-
 ![](./Images/NewZealand/NewZealand6.jpeg)
+</div>
 
 Low light: Leaving the ridge, it's a grueling, steep half mile down with many switchbacks. I was fatigued; the backpack was heavy; my legs were rubbery. I broke into tears at one point. (Walking sticks would have helped.) It took us more than 3 hours to reach the Iris Burn hut, which was not as nice as Luxmore.
 
@@ -80,7 +75,7 @@ Day 3: 14 miles over 7 hours. We decided two huts was enough so we skipped the t
 
 **_Do it_** **again? Not with the heavy bags and uncomfortable huts.**
 
-# Adrenaline rush No. 3: Via Ferrata
+## Adrenaline rush No. 3: Via Ferrata
 
 - Where/who: Wildwire, Wanaka
 
@@ -94,21 +89,20 @@ Wildwire opened in 2015 and claims to be “the world’s highest waterfall via 
 
 It was an exhilarating 3 hours and 17 minutes climbing right next to the thundering waterfalls or its pools, which pumps up your adrenaline. Especially if you are wobbling while making water crossings as I was. (Demise of camera No. 2.)
 
+<div class="gallery">
+
 ![](./Images/NewZealand/NewZealand7.jpeg)
-
 ![](./Images/NewZealand/NewZealand8.jpeg)
-
 ![](./Images/NewZealand/NewZealand9.jpeg)
-
 ![](./Images/NewZealand/NewZealand10.jpeg)
-
 ![](./Images/NewZealand/NewZealand11.jpeg)
+</div>
 
 Our guide demonstrated how you can hang off the cable, hands free, trusting only in your clip. My heart was pounding but I did it! (An unexpected bonus: the guides will carry your stuff up for you, and also bring snacks.)
 
 **_Do it again? Definitely!_**
 
-# Adrenaline rush No. 2: Extreme hiking on Fox Glacier
+## Adrenaline rush No. 2: Extreme hiking on Fox Glacier
 
 - Where/who: Fox Glacier Guides
 
@@ -124,14 +118,13 @@ There’s a safety video and briefing, weighing of everyone and gear, then we’
 
 We had a blast over the next four hours on this sea of ice! We got to use our ice picks and became very good friends with our crampons and harnesses as we navigated delicate ridges of ice lining treacherous crevasses. We were the first to discover a gorgeous blue cave that would be gone after a few weeks.
 
+<div class="gallery">
+
 ![](./Images/NewZealand/NewZealand12.jpeg)
-
 ![](./Images/NewZealand/NewZealand13.jpeg)
-
 ![](./Images/NewZealand/NewZealand14.jpeg)
-*That's me looking so graceful*
-
 ![](./Images/NewZealand/NewZealand15.jpeg)
+</div>
 
 The glacier changes daily, so our guides would look for promising routes, hammering in ice screws and threading rope for our harnesses. While they confidently scampered on the ice, we slowly picked our way across what seemed to be gaping crevasses beckoning our sacrifice.
 
@@ -165,15 +158,14 @@ We repeated those motions--I sat at the edge of the plane with my legs dangling 
 
 We were in free fall for about 45 seconds, whooshing downward. I was distracted by how badly my ears had plugged up and how dry my mouth was--I may or may not have been shrieking; it was a blur.
 
+<div class="gallery">
+
 ![](./Images/NewZealand/NewZealand16.jpeg)
-
 ![](./Images/NewZealand/NewZealand17.jpeg)
-
 ![](./Images/NewZealand/NewZealand18.jpeg)
-
 ![](./Images/NewZealand/NewZealand19.jpeg)
-
 ![](./Images/NewZealand/NewZealand20.jpeg)
+</div>
 
 When Reuben released the parachute, we were jerked up slightly before settling into a peaceful float with dazzling scenery all around. I had recently gone paragliding and the feeling is comparable. This portion lasted about 3 1/2 minutes.
 

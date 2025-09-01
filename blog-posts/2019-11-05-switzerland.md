@@ -1,6 +1,8 @@
 # Which Alp is the coolest?
 *2019-11-05*
 
+![](./Images/Switzerland/Switzerland4.jpeg)
+
 Randy and I spent two glorious weeks reveling in Switzerland's famed Alps in September.
 
 This deep dive into Switzerland was designed around the peaks we've only heard about in legend. Our itinerary, all by train: St. Moritz, 1 night; Zermatt, 3; Wengen, 5; Murren, 3; Bern, 1; Geneva, 2.
@@ -15,8 +17,10 @@ Here's how we rank our mountain experiences:
 
 ## No. 10: Plz Nair in St. Moritz
 
-![St. Moritz Piz Nair cable car views of Champferesee](./Images/Switzerland/Switzerland1.jpeg)
-*St. Moritz Piz Nair cable car views of Champferesee*
+<div class="gallery">
+
+![](./Images/Switzerland/Switzerland1.jpeg)
+</div>
 
 This was our first mountain top, with glimpses of the town and lakes and marmots, and seemed really high at 10,000 feet. Little did we know how quickly it would be dwarfed. Shoutout to the fabulous Badrutt's Palace, which generously gave us a pass although we stayed only one night instead of two!
 
@@ -26,14 +30,12 @@ Grindelwald is a nice sized city when compared to Wengen or Murren, in a pretty 
 
 There are numerous hikes from the top, the most popular being the 1.9 mile walk to Bachalpsee (which I did twice. See No. 5 below). It's not quite as easy as advertised: I’m fast and it took me 45 minutes with some huffing. It’s another 15 minutes to the higher viewpoint to the next lake.
 
+<div class="gallery">
+
 ![](./Images/Switzerland/Switzerland3.jpeg)
-*Grindelwald-First, Switzerland*
-
 ![](./Images/Switzerland/Switzerland4.jpeg)
-*Grindelwald-First views of Eiger, Switzerland*
-
 ![](./Images/Switzerland/Switzerland5.jpeg)
-*Grindelwald-First at Bachalpsee, Switzerland*
+</div>
 
 ## No. 8: Mannlichen in Wengen, Berner Oberland
 
@@ -41,8 +43,10 @@ This is an easy, short cable car ride from the center of Wengen to Mannlichen (7
 
 There is a very popular and beautiful 3-mile walk from Mannlichen to Klein Scheidegg. It's mostly downhill or level and you’re facing the big three mountains (Eiger, Monch, Jungfrau) nearly the whole way. It took us about 1 hour 45 with lots of dawdling.
 
+<div class="gallery">
+
 ![](./Images/Switzerland/Switzerland6.jpeg)
-*Mannlichen, Switzerland*
+</div>
 
 ## No. 7: Schilthorn in Murren, Berner Oberland
 
@@ -54,8 +58,10 @@ Birg thrill walk: this platform jutting from the mountain is really fun with mor
 
 Tip: Entry was free with the Swiss Travel Pass in 2019 but will change to a 50% discount in 2020.
 
-![Murren](./Images/Switzerland/Switzerland2.jpeg)
-*Murren*
+<div class="gallery">
+
+![](./Images/Switzerland/Switzerland2.jpeg)
+</div>
 
 ## No. 6: Eiger Trail, Berner Oberland
 
@@ -63,8 +69,10 @@ There are several Eiger trails in the region. The one Eigergletscher to Alpiglen
 
 The views were beautiful, especially as we could spot the other summits we had been to. We thought this direction was preferable as it was more downhill. It took us nearly four hours with a lot of dawdling.
 
+<div class="gallery">
+
 ![](./Images/Switzerland/Switzerland7.jpeg)
-*Eiger Trail, Switzerland*
+</div>
 
 ## No. 5: Grindelwald-First to Schynige Platte, Berner Oberland
 
@@ -74,14 +82,12 @@ Magnificent views came about 90 minutes from the Schynige Platte train station, 
 
 Tip: I learned on this hike that the terrific Swiss trains do not list every single stop. I eagerly headed out from Mürren at 7:30, taking the train and gondola to Lauterbrunnen, where I boarded to change at Zweilutschinen. That station came up on the digital board, so I got off…and the stop was Sandweidli, BEFORE Zweilutschinen. It was in the middle of nowhere, very cold and lonely at 8 a.m. and I felt like an idiot, plus I lost 30 minutes until the next train. Later I was told this is one of the few anomalies in Switzerland: a station that doesn't really exist.
 
+<div class="gallery">
+
 ![](./Images/Switzerland/Switzerland8.jpeg)
-*First to Schynige Platte, Switzerland*
-
 ![](./Images/Switzerland/Switzerland9.jpeg)
-*Faulhorn peak from First to Schynige Platte, Switzerland*
-
 ![](./Images/Switzerland/Switzerland10.jpeg)
-*Bachalpsee at First to Schynige Platte, Switzerland*
+</div>
 
 ## No. 4: Aiguille Du Midi in Chamonix, France
 
@@ -91,11 +97,11 @@ From Plan De L'Aiguille, there's a nice 3.6 mile hike to the Montevers train und
 
 Tip: Traveling to Chamonix from Switzerland is included in the Swiss Travel Pass, and the scenery from Martigny to Vallorcine is gorgeous as the narrow gauge train climbs the gorge.  
 
-![](./Images/Switzerland/Switzerland11.jpeg)
-*Mont Blanc, Aiguille du Midi, Bossons glacier, Chamonix, France*
+<div class="gallery">
 
+![](./Images/Switzerland/Switzerland11.jpeg)
 ![](./Images/Switzerland/Switzerland12.jpeg)
-*Aiguille du Midi views, Chamonix, France*
+</div>
 
 ## No. 3: Kleine Matterhorn in Zermatt
 
@@ -105,19 +111,15 @@ During our three nights in Zermatt, the Matterhorn (14,692 feet) was visible for
 
 At the top, the Matterhorn was mostly shrouded while Breithorn (13,661 feet) was most prominent, with many hikers winding their way up. Breithorn is noted as the “easiest” Alp to summit at just 2 1/2 hours. Also called the Glacier Paradise, Kleine Matterhorn has a nice ice cave, and offers skiing all year--we saw and met many skiers in training. 
 
-Some say the Gornergrat train in Zermatt has the best views of the Matterhorn as well as 29 of the 13,000-plus peaks in Switzerland. Unfortunately, it was too cloudy the day I went up and the cogwheel train was awfully slow. 
+Some say the Gornergrat train in Zermatt has the best views of the Matterhorn as well as 29 of the 13,000-plus peaks in Switzerland. Unfortunately, it was too cloudy the day I went up and the cogwheel train was awfully slow.
+
+<div class="gallery"> 
 
 ![](./Images/Switzerland/Switzerland13.jpeg)
-*Matterhorn from Zermatt*
-
 ![](./Images/Switzerland/Switzerland14.jpeg)
-*Matterhorn from Kleine Matterhorn cable, Zermatt*
-
 ![](./Images/Switzerland/Switzerland15.jpeg)
-*Matterhorn from Kleine Matterhorn cable, Zermatt*
-
 ![](./Images/Switzerland/Switzerland16.jpeg)
-*Kleine Matterhorn views, Zermatt*
+</div>
 
 ## No. 2: Jungfraujoch, Berner Oberland
 
@@ -133,17 +135,13 @@ The best experience is to go out the entrance to the Monchsjoch hut, which has e
 - Tip 2: The train stops at the Eismeer station inside a tunnel for five minutes. They're not explicit but you're encouraged to pop out and take pictures of the gorgeous glaciers through panoramic windows. 
 - Tip 3: To our surprise and disappointment, the Lindt chocolate shop at the end does not give free samples, but you get a Thank You chocolate on your way back down on the train.
 
+<div class="gallery">
+
 ![](./Images/Switzerland/Switzerland17.jpeg)
-*Jungfraujoch to Monchsjoch, Switzerland*
-
 ![](./Images/Switzerland/Switzerland18.jpeg)
-*Jungfraujoch to Monchsjoch, Switzerland*
-
 ![](./Images/Switzerland/Switzerland19.jpeg)
-*Jungfraujoch, Switzerland*
-
 ![](./Images/Switzerland/Switzerland20.jpeg)
-*Jungfraujoch, Switzerland
+</div>
 
 ## And the No. 1 Alpine mountain experience: Panoramic cable car to Helbronner, Italy, from Chamonix, France
 
@@ -153,20 +151,14 @@ The cable car ends at the Helbronner station, where a doorway serves as the bord
 
 This amazing journey near the end of our travels was indisputably the top highlight of all our Alpine mountain adventures. 
 
+<div class="gallery">
+
 ![](./Images/Switzerland/Switzerland21.jpeg)
-*Panoramic cable car to Helbronner, Italy, from Chamonix, France*
-
 ![](./Images/Switzerland/Switzerland22.jpeg)
-*Panoramic cable car to Helbronner, Italy, from Chamonix, France*
-
 ![](./Images/Switzerland/Switzerland23.jpeg)
-*Panoramic cable car to Helbronner, Italy, from Chamonix, France*
-
 ![](./Images/Switzerland/Switzerland24.jpeg)
-*Mont Blanc at Helbronner, Italy, from Chamonix, France*
-
 ![](./Images/Switzerland/Switzerland25.jpeg)
-*Panoramic cable car to Helbronner, Italy, from Chamonix, France*
+</div>
 
 [Click here for our](https://photos.app.goo.gl/5fdXkoVah4BkdMMm7) [top 200](https://photos.app.goo.gl/5fdXkoVah4BkdMMm7) [images](https://photos.app.goo.gl/5fdXkoVah4BkdMMm7) from Switzerland and Chamonix, France.
 
