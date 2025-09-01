@@ -50,11 +50,11 @@ async function initAlbums() {
   });
   toc.appendChild(albumSelect);
 
-  // Jump to album page when selected
+  // Open album in new tab when selected
   albumSelect.addEventListener("change", () => {
     const selected = albumSelect.value;
     if (selected) {
-      window.location.href = `album.html?album=${encodeURIComponent(selected)}`;
+      window.open(`album.html?album=${encodeURIComponent(selected)}`, "_blank");
     }
   });
 
@@ -63,13 +63,21 @@ async function initAlbums() {
   Object.entries(ALBUMS).forEach(([key, album]) => {
     const card = document.createElement("div");
     card.className = "col-md-4 mb-4 album-card";
+
+    // Use the first image from the folder as cover if available
+    const albumImages = Object.keys(imageMeta).filter(f => f.startsWith(album.folder));
+    const cover = albumImages.length > 0
+      ? `Images/${album.folder}/${albumImages[0]}`
+      : "placeholder.jpg";
+
     card.innerHTML = `
       <div class="card h-100">
-        <img src="${album.cover}" class="card-img-top" alt="${album.name}">
+        <a href="album.html?album=${encodeURIComponent(key)}" target="_blank">
+          <img src="${cover}" class="card-img-top" alt="${album.name}">
+        </a>
         <div class="card-body">
           <h5 class="card-title">${album.name}</h5>
-          <p class="card-text">${album.description || ""}</p>
-          <a href="album.html?album=${encodeURIComponent(key)}" class="btn btn-primary">View Album</a>
+          <a href="album.html?album=${encodeURIComponent(key)}" target="_blank" class="btn btn-primary">View Album</a>
         </div>
       </div>`;
     container.appendChild(card);
@@ -85,4 +93,5 @@ async function initAlbums() {
     });
   });
 }
+
 
