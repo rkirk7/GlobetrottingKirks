@@ -369,3 +369,20 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 4px;
   min-height: 100px; /* Prevent layout jump */
 }
+
+
+.about-card {
+  background: #fffaf5; /* light warm tone for a welcoming feel */
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.about-img {
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px 0 0 15px;
+}
+
+.about-card .card-body {
+  padding: 1.5rem;
+}
