@@ -131,27 +131,24 @@ async function loadPost() {
 function processImages(container) {
   if (!container) return;
 
-  let galleryCounter = 0; // To create unique gallery groups
+  let galleryCounter = 0;
 
   // --- Process galleries ---
   container.querySelectorAll('.gallery').forEach(gallery => {
     galleryCounter++;
     const galleryGroup = `gallery-${galleryCounter}`;
 
-    // Get all images (even inside <p>)
     const imgs = gallery.querySelectorAll('img, p > img');
-    gallery.innerHTML = ''; // Clear gallery
+    gallery.innerHTML = '';
 
     imgs.forEach(img => {
       const src = img.getAttribute('src');
       const fileName = src?.split('/').pop();
       const caption = window._imageData?.[fileName] || img.alt || '';
 
-      // Build figure
       const figure = document.createElement('figure');
       figure.classList.add('figure', 'text-center');
 
-      // Wrap img in <a> for GLightbox
       const link = document.createElement('a');
       link.href = src;
       link.setAttribute('data-glightbox', `title:${caption}; gallery:${galleryGroup}`);
@@ -172,23 +169,6 @@ function processImages(container) {
 
       gallery.appendChild(figure);
     });
-
-    // --- Masonry sizing ---
-    function resizeMasonryItems() {
-      const rowHeight = parseInt(getComputedStyle(gallery).getPropertyValue('grid-auto-rows'));
-      const rowGap = parseInt(getComputedStyle(gallery).getPropertyValue('gap'));
-
-      gallery.querySelectorAll('figure').forEach(figure => {
-        const contentHeight = figure.querySelector('img').getBoundingClientRect().height +
-                              (figure.querySelector('figcaption')?.getBoundingClientRect().height || 0);
-        const rowSpan = Math.ceil((contentHeight + rowGap) / (rowHeight + rowGap));
-        figure.style.gridRowEnd = `span ${rowSpan}`;
-      });
-    }
-
-    // Call after images load
-    window.addEventListener('load', resizeMasonryItems);
-    window.addEventListener('resize', resizeMasonryItems);
   });
 
   // --- Process standalone images ---
@@ -231,6 +211,7 @@ function processImages(container) {
     }
   }
 }
+
 
 
   processImages(postContentEl);
