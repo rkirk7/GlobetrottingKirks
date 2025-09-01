@@ -275,6 +275,7 @@ async function loadPost() {
 
   // Headings
   const headings = postContentEl.querySelectorAll('h2,h3'); // skip main h1
+  console.log("Headings found:", headings.length);
   headings.forEach((h,i) => {
     const id = `heading-${i}`;
     h.id = id;
