@@ -1,0 +1,283 @@
+<style>
+  /* Limit text width for readability */
+  #content .container {
+    max-width: 900px;
+  }
+
+  /* Desktop: fixed sidebar */
+  #toc {
+    position: fixed;
+    top: 100px;
+    left: 20px;
+    width: 220px;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  /* Hide the toggle button by default on desktop */
+  #toc-toggle {
+    display: none;
+    width: 100%;
+    margin-bottom: 10px;
+    background: #f8f9fa;
+    border: 1px solid #ccc;
+    padding: 6px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  /* TOC links */
+  #toc ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  #toc li a {
+    display: block;
+    padding: 4px 0;
+    color: #333;
+    text-decoration: none;
+  }
+
+  #toc li a.active {
+    font-weight: bold;
+    color: #007bff;
+  }
+
+  /* Responsive: small screens */
+  @media (max-width: 992px) {
+    #toc {
+      position: static;
+      width: 100%;
+      max-height: none;
+      border: none;
+      box-shadow: none;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+
+    #toc-toggle {
+      display: block;
+    }
+
+    #toc-list {
+      display: none;
+      padding-left: 0;
+      margin-top: 0;
+    }
+
+    #toc-list.show {
+      display: block;
+    }
+  }
+</style>
+
+<div class="container my-5" id="container">
+  <div id="toc" class="toc bg-light p-3 border rounded d-none d-md-block">
+    <button id="toc-toggle" class="btn btn-sm btn-primary d-md-none mb-2">
+      ☰ Table of Contents
+    </button>
+    <ul id="toc-list" class="list-unstyled mb-0"></ul>
+  </div>
+
+  <div class="hero" data-hero="../Images/HeroImages/europe-hero.jpeg">
+    <div class="hero-content text-center">
+      <h1 class="hero-title">Europe</h1>
+    </div>
+  </div>
+
+  <br />
+
+  <p class="text-center">
+    <a
+      href="mailto:meimei.kirk@fora.travel?subject=I%20am%20interested%20in%20Europe"
+      class="btn btn-primary"
+    >
+      I am interested in going to Europe!
+    </a>
+  </p>
+
+  <div class="travel-section">
+    <h2>Italy</h2>
+
+    <p class="about">
+      Possibly the most popular European country today and for good reason:
+      Italy is packed with a remarkable variety of landscapes, history, art,
+      culture and food. It takes multiple visits to begin to fully appreciate a
+      dolce vita—the sweet life of Italy.
+    </p>
+
+    <p class="about">Highlights include:</p>
+    <ul>
+      <li>
+        <strong>The three crown jewels:</strong> Venice, Florence, and Rome.
+        Easily connected by train.
+      </li>
+      <li>
+        From Venice, go north to explore the magnificent Dolomites and Alps, or
+        further to classy Milan.
+      </li>
+      <li>
+        From Florence, bask in the Tuscany countryside with world-class
+        vineyards.
+      </li>
+      <li>
+        From Rome, go south toward Naples for Pompeii and the Amalfi Coast.
+      </li>
+      <li>
+        <strong>Coastal towns:</strong> The two most picturesque (and popular)
+        are Amalfi and Cinque Terre.
+        <ul>
+          <li>
+            The Amalfi Coast runs from Positano to Amalfi Town, bookended by
+            Sorrento and Salerno. Frequent ferries pack day trippers that crowd
+            the narrow streets. But stay overnight and enjoy the charming towns
+            in the quiet hours.
+          </li>
+          <li>
+            Cinque Terre are five small villages cascading into the sea. They
+            are visually spectacular and really fun to hike across.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>On the heel of the boot:</strong> Off-the-beaten-path and more
+        authentic is the Puglia region on the southeast side, where daily
+        siestas last for hours and locals outnumber tourists.
+      </li>
+      <li>
+        <strong>Popular islands:</strong>
+        <ul>
+          <li>
+            <strong>Sicily:</strong> The largest island in the Mediterranean,
+            featuring rumbly Mount Etna, many Greek ruins, and Baroque towns.
+          </li>
+          <li>
+            <strong>Sardinia:</strong> Features mountains surrounded by 1,000
+            miles of coastline along pristine waters.
+          </li>
+          <li>
+            <strong>Capri:</strong> An easy ferry ride from Sorrento, the stuff
+            of movies, with an overly hyped blue cave and more tourists than it
+            can handle.
+          </li>
+          <li>
+            <strong>Ischia:</strong> The quieter alternative to Capri, with
+            great beaches, hot springs, and thermal parks.
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="gallery">
+      <div class="row g-3 justify-content-center">
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/Italy/Italy1.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/Italy/Italy2.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/Italy/Italy3.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/Italy/Italy4.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/Italy/Italy5.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/Italy/Italy6.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/Italy/Italy7.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="travel-section">
+    <h2>Ireland</h2>
+
+    <p class="about">
+      There's so much to see and do in this small country, from exploring
+      ancient castles to visiting the Cliffs of Moher to reveling in an island
+      full of Puffins.
+    </p>
+
+    <div class="gallery">
+      <div class="row g-3 justify-content-center">
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/17Ireland/17Ireland2.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/17Ireland/17Ireland5.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/17Ireland/17Ireland6.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/17Ireland/17Ireland11.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/17Ireland/17Ireland17.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/17Ireland/17Ireland20.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/17Ireland/17Ireland25.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
