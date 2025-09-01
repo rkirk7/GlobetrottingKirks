@@ -124,6 +124,9 @@ function processImages(container) {
 
   let galleryCounter = 0;
 
+  // Keep track of all images for a page-wide lightbox
+  const allImages = [];
+
   // --- Process galleries ---
   container.querySelectorAll('.gallery').forEach(gallery => {
     galleryCounter++;
@@ -143,8 +146,8 @@ function processImages(container) {
       const link = document.createElement('a');
       link.href = src;
       link.classList.add('glightbox');
-      link.setAttribute('data-gallery', galleryGroup);
-      link.setAttribute('data-title', caption); // ✅ GLightbox caption
+      link.setAttribute('data-gallery', 'page-gallery'); // unified gallery
+      link.setAttribute('data-title', caption);
 
       img.classList.add('img-fluid');
       img.setAttribute('loading', 'lazy');
@@ -160,11 +163,14 @@ function processImages(container) {
       }
 
       gallery.appendChild(figure);
+      allImages.push(link);
     });
   });
 
-  // --- Standalone images ---
-  container.querySelectorAll('img:not(.glightbox)').forEach(img => {
+  // --- Process standalone images ---
+  container.querySelectorAll('img').forEach(img => {
+    if (img.closest('.gallery') || img.closest('figure')) return;
+
     const src = img.getAttribute('src');
     const fileName = src?.split('/').pop();
     const caption = window._imageData?.[fileName] || img.alt || '';
@@ -175,7 +181,7 @@ function processImages(container) {
     const link = document.createElement('a');
     link.href = src;
     link.classList.add('glightbox');
-    link.setAttribute('data-gallery', 'standalone');
+    link.setAttribute('data-gallery', 'page-gallery'); // unified gallery
     link.setAttribute('data-title', caption);
 
     img.classList.add('img-fluid');
@@ -191,12 +197,12 @@ function processImages(container) {
       figure.appendChild(figcap);
     }
 
-    img.parentNode.insertBefore(figure, img);
-    figure.appendChild(img);
+    img.replaceWith(figure);
+    allImages.push(link);
   });
 
-  // --- Init GLightbox after images are in DOM ---
-  setTimeout(() => { // wait for images to render
+  // --- Init GLightbox for the page-wide gallery ---
+  setTimeout(() => {
     if (typeof GLightbox !== 'undefined') {
       if (!window.glightboxInstance) {
         window.glightboxInstance = GLightbox({ selector: '.glightbox' });
