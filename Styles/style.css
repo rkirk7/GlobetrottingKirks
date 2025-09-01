@@ -355,3 +355,17 @@ h1, h2, h3, h4, h5, h6 {
     height: 20px; /* smaller logo on mobile */
   }
 }
+
+.preview-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3px;
+}
+
+.preview-img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 4px;
+  min-height: 100px; /* Prevent layout jump */
+}

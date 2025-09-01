@@ -59,30 +59,33 @@ async function initAlbums() {
   });
 
   // --- Create album cards ---
-  const albumCards = [];
-  Object.entries(ALBUMS).forEach(([key, album]) => {
-    const card = document.createElement("div");
-    card.className = "col-md-4 mb-4 album-card";
+// --- Create album cards ---
+const albumCards = [];
+Object.entries(ALBUMS).forEach(([key, album]) => {
+  const card = document.createElement("div");
+  card.className = "col-md-4 mb-4 album-card";
 
-    // Use the first image from the folder as cover if available
-    const albumImages = Object.keys(imageMeta).filter(f => f.startsWith(album.folder));
-    const cover = albumImages.length > 0
-      ? `Images/${album.folder}/${albumImages[0]}`
-      : "placeholder.jpg";
+  // Get first 4 images from folder for previews
+  const albumImages = Object.keys(imageMeta).filter(f => f.startsWith(album.folder));
+  const previews = albumImages.slice(0, 4).map(img =>
+    `<img src="Images/${album.folder}/${img}" class="img-fluid preview-img" alt="${album.name}" loading="lazy">`
+  ).join("");
 
-    card.innerHTML = `
-      <div class="card h-100">
-        <a href="album.html?album=${encodeURIComponent(key)}" target="_blank">
-          <img src="${cover}" class="card-img-top" alt="${album.name}">
-        </a>
-        <div class="card-body">
-          <h5 class="card-title">${album.name}</h5>
-          <a href="album.html?album=${encodeURIComponent(key)}" target="_blank" class="btn btn-primary">View Album</a>
-        </div>
-      </div>`;
-    container.appendChild(card);
-    albumCards.push({ key, card });
-  });
+  card.innerHTML = `
+    <div class="card h-100">
+      <a href="album.html?album=${encodeURIComponent(key)}" target="_blank">
+        <div class="preview-grid">${previews}</div>
+      </a>
+      <div class="card-body text-center">
+        <h5 class="card-title">${album.name}</h5>
+        <a href="album.html?album=${encodeURIComponent(key)}" target="_blank" class="btn btn-primary mt-2">View Album</a>
+      </div>
+    </div>`;
+  container.appendChild(card);
+  albumCards.push({ key, card });
+});
+
+
 
   // --- Search filter logic ---
   searchInput.addEventListener("input", () => {
