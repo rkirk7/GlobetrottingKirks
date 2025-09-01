@@ -33,27 +33,27 @@ h3 { font-size: clamp(1.1rem, 2vw + 0.5rem, 1.5rem); }
 #post-content img { max-width: 80%; height: auto; display: block; margin: 0 auto; border-radius: 6px; }
 
 .gallery {
-  display: flex;
-  flex-wrap: wrap;       /* allows multiple rows with varying heights */
-  gap: 15px;             /* spacing between images */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-auto-rows: 10px; /* base row height for calculation */
+  gap: 15px;
   margin: 20px 0;
-  justify-content: center;
 }
 
 .gallery figure {
-  flex: 1 1 220px;       /* min width 220px, grow if needed */
-  max-width: 300px;      /* optional, prevents images from getting too wide */
-  margin: 0;             /* remove default figure margin */
+  display: block;
+  margin: 0;
+  /* each figure will stretch over multiple rows based on image height */
 }
 
 .gallery img {
-  width: 100%;           /* image fills its container */
-  height: auto;          /* natural height preserved */
+  width: 100%;
+  height: auto;
+  display: block;
   border-radius: 6px;
+  object-fit: cover;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   transition: transform 0.2s ease;
-  display: block;
-  object-fit: cover;     /* optional, if you want to crop slightly to fit width */
 }
 
 .gallery img:hover {
@@ -131,26 +131,30 @@ async function loadPost() {
 function processImages(container) {
   if (!container) return;
 
-  container.querySelectorAll('.gallery').forEach((gallery, galleryIndex) => {
-    const imgs = gallery.querySelectorAll('img, p > img');
-    gallery.innerHTML = ''; // rebuild gallery
+  let galleryCounter = 0; // To create unique gallery groups
 
-    // Each gallery gets a unique GLightbox group
-    const lightboxGroup = `gallery-${galleryIndex}`;
+  // --- Process galleries ---
+  container.querySelectorAll('.gallery').forEach(gallery => {
+    galleryCounter++;
+    const galleryGroup = `gallery-${galleryCounter}`;
+
+    // Get all images (even inside <p>)
+    const imgs = gallery.querySelectorAll('img, p > img');
+    gallery.innerHTML = ''; // Clear gallery
 
     imgs.forEach(img => {
       const src = img.getAttribute('src');
       const fileName = src?.split('/').pop();
       const caption = window._imageData?.[fileName] || img.alt || '';
 
-      // Create figure container
+      // Build figure
       const figure = document.createElement('figure');
-      figure.classList.add('figure');
+      figure.classList.add('figure', 'text-center');
 
-      // Wrap image in <a> for GLightbox
+      // Wrap img in <a> for GLightbox
       const link = document.createElement('a');
       link.href = src;
-      link.setAttribute('data-glightbox', `title:${caption}; group:${lightboxGroup}`);
+      link.setAttribute('data-glightbox', `title:${caption}; gallery:${galleryGroup}`);
       link.classList.add('glightbox');
 
       img.classList.add('img-fluid');
@@ -159,30 +163,46 @@ function processImages(container) {
       link.appendChild(img);
       figure.appendChild(link);
 
-      // Add caption
       if (caption) {
         const figcap = document.createElement('figcaption');
-        figcap.classList.add('figure-caption');
+        figcap.classList.add('figure-caption', 'text-center');
         figcap.textContent = caption;
         figure.appendChild(figcap);
       }
 
       gallery.appendChild(figure);
     });
+
+    // --- Masonry sizing ---
+    function resizeMasonryItems() {
+      const rowHeight = parseInt(getComputedStyle(gallery).getPropertyValue('grid-auto-rows'));
+      const rowGap = parseInt(getComputedStyle(gallery).getPropertyValue('gap'));
+
+      gallery.querySelectorAll('figure').forEach(figure => {
+        const contentHeight = figure.querySelector('img').getBoundingClientRect().height +
+                              (figure.querySelector('figcaption')?.getBoundingClientRect().height || 0);
+        const rowSpan = Math.ceil((contentHeight + rowGap) / (rowHeight + rowGap));
+        figure.style.gridRowEnd = `span ${rowSpan}`;
+      });
+    }
+
+    // Call after images load
+    window.addEventListener('load', resizeMasonryItems);
+    window.addEventListener('resize', resizeMasonryItems);
   });
 
-  // Standalone images outside galleries (single-image lightbox)
+  // --- Process standalone images ---
   container.querySelectorAll('img:not(.glightbox)').forEach(img => {
     const src = img.getAttribute('src');
     const fileName = src?.split('/').pop();
     const caption = window._imageData?.[fileName] || img.alt || '';
 
     const figure = document.createElement('figure');
-    figure.classList.add('figure');
+    figure.classList.add('figure', 'text-center');
 
     const link = document.createElement('a');
     link.href = src;
-    link.setAttribute('data-glightbox', `title:${caption}`); // no group
+    link.setAttribute('data-glightbox', `title:${caption}; gallery:standalone`);
     link.classList.add('glightbox');
 
     img.classList.add('img-fluid');
@@ -193,7 +213,7 @@ function processImages(container) {
 
     if (caption) {
       const figcap = document.createElement('figcaption');
-      figcap.classList.add('figure-caption');
+      figcap.classList.add('figure-caption', 'text-center');
       figcap.textContent = caption;
       figure.appendChild(figcap);
     }
@@ -202,7 +222,7 @@ function processImages(container) {
     figure.appendChild(img);
   });
 
-  // Initialize or reload GLightbox
+  // --- Initialize or reload GLightbox ---
   if (typeof GLightbox !== 'undefined') {
     if (!window.glightboxInstance) {
       window.glightboxInstance = GLightbox({ selector: '.glightbox' });
@@ -211,6 +231,7 @@ function processImages(container) {
     }
   }
 }
+
 
   processImages(postContentEl);
 
