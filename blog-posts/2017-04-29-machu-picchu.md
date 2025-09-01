@@ -9,21 +9,22 @@ Tucked between two mountains some 50 miles from Cusco, this remote "lost city" e
 
 Is it worth the effort? Oh yes. Machu Picchu proves the point that even the best picture can't always match the reality.
 
-### **Must-do tip (seriously!)**
-
-<!--more-->
+## Must-do tip (seriously!)
 
 I know you're tired, fighting jet lag and the altitude, eager to get to your hotel. But if your train arrives by 3:30, and it's a nice day, you should dash to the bus stop and head for the site.
 
 You guides will be very dubious since it takes about 20 minutes each way by bus and the last bus leaves Machu Picchu at 5:30. At best, you can count on an hour at the top. But it will be one of the most enchanting hours of your life: just you, a handful of tourists (the busloads of tours will have departed), and a few llamas.
 
-\[caption id="attachment\_1945" align="aligncenter" width="562"\]![Machu Picchu best with llamas 2017-03-25 200](images/machu-picchu-best-with-llamas-2017-03-25-200.jpg) You can have Machu Picchu nearly all to yourself around 4:30 p.m.\[/caption\]
+<div class="gallery">
+
+![](./Images/17Peru/17Peru1.jpeg)
+</div>
 
 You will need your entry ticket and a bus ticket plus your passport. You should be fit, but you don't have to be an athlete. Just take the first left toward the house of guardians, up a fairly easy though steep trail, for the best overview of the beguiling city nestled against Huayna Picchu mountain.
 
 I was especially elated with this quiet introduction to Machu Picchu as the weather deteriorated the next day.
 
-### **Hiking Huayna Picchu**
+## Hiking Huayna Picchu
 
 It took me a while to sort out the three major hikes at Machu Picchu:
 
@@ -39,12 +40,21 @@ I started at 10:35, hiker No. 315 on the sign-in sheet and nearly the eldest at
 
 It took me an hour of huffing and puffing up endless steep, uneven slippery stone steps, many with chains, to reach the peak.
 
-\[gallery ids="1935,1941,1940,2076" type="columns"\]
+<div class="gallery">
+
+![](./Images/17Peru/17Peru2.jpeg)
+</div>
+
 
 (I had passed up acclimating two days in Cusco in favor of a night in Ollantaytambo and another at Aguas Calientes. So I'm thinking my breathing was hampered. That's my story and I'm sticking to it.)
 
 Over 40 minutes at the top, hikers jockeyed for position as the clouds came and went, offering tantalizing misty views of Machu Picchu and Montana behind it.
 
-\[gallery ids="1937,1938,1939" type="rectangular"\]
+<div class="gallery">
+
+![](./Images/17Peru/17Peru3.jpeg)
+![](./Images/17Peru/17Peru4.jpeg)
+![](./Images/17Peru/17Peru5.jpeg)
+</div>
 
 Magical.
