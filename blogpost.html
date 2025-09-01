@@ -10,6 +10,19 @@
 <link rel="stylesheet" href="Styles/style.css">
 
 <style>
+
+  .blog-card {
+  max-width: 850px; /* Keeps nice width on desktop */
+  margin: 0 auto;   /* Centers it */
+}
+
+@media (max-width: 768px) {
+  .blog-card {
+    border-radius: 0;   /* Optional: remove rounded corners on mobile */
+    box-shadow: none;   /* Optional: simpler look on mobile */
+  }
+}
+
 body { position: relative; }
 p { font-size: clamp(1rem, 2vw + 0.5rem, 1.2rem); line-height: 1.6; }
 h1 { font-size: clamp(1.5rem, 3vw + 0.5rem, 2.5rem); }
@@ -69,7 +82,7 @@ h3 { font-size: clamp(1.1rem, 2vw + 0.5rem, 1.5rem); }
 <body class="bg-light">
 
 <div class="blog-container">
-  <div class="container mt-4 mb-5">
+  <div class="container-fluid mt-4 mb-5">
     <div id="post-container" class="card shadow-lg">
       <div class="card-body">
         <h1 id="post-title" class="mb-3"></h1>
@@ -213,7 +226,20 @@ function processImages(container) {
   }, 50);
 }
 
-  processImages(postContentEl);
+// --- Load image-data.json before processing images ---
+if (!window._imageData) {
+  try {
+    const res = await fetch("image-data.json");
+    window._imageData = res.ok ? await res.json() : {};
+  } catch (err) {
+    console.warn("Could not load image captions:", err);
+    window._imageData = {};
+  }
+}
+
+// Now process images with captions available
+processImages(postContentEl);
+
 
   // --- TOC ---
   const tocList = document.getElementById('toc-list');
