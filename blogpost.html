@@ -155,12 +155,15 @@ async function loadPost() {
   if(firstHeadingIndex >= 0) lines.splice(firstHeadingIndex,1);
   postText = lines.join("\n");
 
-  const tempDiv = document.createElement('div');
-  tempDiv.innerHTML = marked.parse(postText);
+  // const tempDiv = document.createElement('div');
+  // tempDiv.innerHTML = marked.parse(postText);
 
-  const postContentEl = document.getElementById('post-content');
-  postContentEl.innerHTML = '';
-  postContentEl.appendChild(tempDiv);
+  // const postContentEl = document.getElementById('post-content');
+  // postContentEl.innerHTML = '';
+  // postContentEl.appendChild(tempDiv);
+
+postContentEl.innerHTML = marked.parse(postText);
+
 
   // Image processing
   function processImages(container) {
