@@ -1,7 +1,7 @@
 # Mystical Angkor temples
 *2015-11-30*
 
-![](./Images/15Asia1/15Asia1.jpeg)
+![](./Images/15Asia/15Asia1.jpeg)
 
 Siem Reap, Cambodia, is 32 travel hours from Fort Myers--literally and figuratively a world away.
 
@@ -33,7 +33,7 @@ Angkor Wat lends itself to spectacular sunrises—usually. Seven of us met up at
 
 <div class="gallery">
 
-![](./Images/15Asia1/15Asia1.jpeg)
+![](./Images/15Asia/15Asia1.jpeg)
 </div>
 
  ## Angkor Thom or “great city”
@@ -46,7 +46,7 @@ But it’s the hundreds of giant Mona Lisa-like faces that grab you, starting wi
 
 <div class="gallery">
 
-![](./Images/15Asia1/15Asia2.jpeg)
+![](./Images/15Asia/15Asia2.jpeg)
 </div>
 
 At the center of Angkor Thom is the Bayon state temple, which features 54 towers, almost all topped with the four faces of the Buddha of Compassion (Avalokiteshvara). (Jayavarman had converted to Buddhism, feeling that Hinduism had failed his kingdom.)
@@ -63,7 +63,7 @@ Ta Prohm is a remarkable example of nature’s power and patience winning out. G
 
 <div class="gallery">
 
-![](./Images/15Asia1/15Asia3.jpeg)
+![](./Images/15Asia/15Asia3.jpeg)
 </div>
 
 The site evokes mixed emotions of fearsome destruction and peaceful serenity at the same time.
@@ -86,8 +86,8 @@ The designs are more richly detailed and sophisticated; the atmosphere much more
 
 <div class="gallery">
 
-![](./Images/15Asia1/15Asia4.jpeg)
-![](./Images/15Asia1/15Asia5.jpeg)
+![](./Images/15Asia/15Asia4.jpeg)
+![](./Images/15Asia/15Asia5.jpeg)
 </div>
 
 This temple begs for protective shielding over its facades to preserve it for the future.
