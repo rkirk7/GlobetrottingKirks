@@ -1,6 +1,8 @@
 # Exploring Antarctica and the Arctic: How did two Floridians end up at both polar regions in one year, and what did they discover?
 *2025-06-03*
 
+![](./Images/Svalbard/Svalbard7.jpeg)
+
 My adult daughter and I have had the good fortune to travel extensively over the past decade since my retirement.
 
 When asked which adventure is my favorite, I cannot choose. Each is singularly outstanding and cherished, from hiking in New Zealand to tracking leopards in Africa to snorkeling with seals in the Galapagos.
