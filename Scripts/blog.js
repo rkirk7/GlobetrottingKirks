@@ -77,7 +77,7 @@ async function initBlog() {
     postDiv.innerHTML = `
       <div class="card-body blog-post-content">
         ${tempDiv.innerHTML}
-        <a href="blogpost.html?post=${encodeURIComponent(postData.filename)}" class="btn btn-primary btn-sm mt-2">Read More</a>
+        <a href="blogpost.html?post=${encodeURIComponent(postData.filename)}" class="btn btn-primary btn-sm mt-2" target="_blank">Read More</a>
       </div>
     `;
 
