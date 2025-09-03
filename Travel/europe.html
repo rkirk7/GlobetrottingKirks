@@ -92,6 +92,23 @@
         margin-bottom: 20px;
       }
     }
+
+    #countryDropdown {
+  z-index: 2000;
+  max-height: 200px;
+  overflow-y: auto;
+  border-radius: 0.25rem;
+}
+
+#countryDropdown li.active {
+  background-color: #007bff;
+  color: white;
+}
+
+#countryDropdown li {
+  cursor: pointer;
+}
+
   }
 </style>
 
@@ -824,50 +841,69 @@
 </div>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const sections = document.querySelectorAll(".travel-section h2");
-    const dropdown = document.getElementById("countryDropdown");
-    const searchInput = document.getElementById("searchInput");
+document.addEventListener("DOMContentLoaded", function () {
+  const sections = document.querySelectorAll(".travel-section h2");
+  const dropdown = document.getElementById("countryDropdown");
+  const searchInput = document.getElementById("searchInput");
 
-    // Populate dropdown with countries
-    sections.forEach((section) => {
-      const li = document.createElement("li");
-      const a = document.createElement("a");
-      a.className = "dropdown-item";
-      a.href = "#";
-      a.textContent = section.innerText;
+  let currentIndex = -1;
 
-      // Scroll to section on click
-      a.addEventListener("click", function (e) {
-        e.preventDefault();
-        section.scrollIntoView({ behavior: "smooth", block: "start" });
-        dropdown.classList.remove("show");
-      });
+  // Populate dropdown
+  sections.forEach(section => {
+    const li = document.createElement("li");
+    li.className = "list-group-item list-group-item-action";
+    li.textContent = section.innerText;
 
-      li.appendChild(a);
-      dropdown.appendChild(li);
+    li.addEventListener("click", function () {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+      dropdown.style.display = "none";
+      searchInput.value = "";
     });
 
-    // Show dropdown when typing
-    searchInput.addEventListener("input", function () {
-      const filter = this.value.toLowerCase();
-      dropdown.classList.add("show");
+    dropdown.appendChild(li);
+  });
 
-      // Filter list items
-      Array.from(dropdown.querySelectorAll("a")).forEach((a) => {
-        a.parentElement.style.display = a.textContent
-          .toLowerCase()
-          .includes(filter)
-          ? "block"
-          : "none";
-      });
-    });
+  // Show & filter on input
+  searchInput.addEventListener("input", function () {
+    const filter = this.value.toLowerCase();
+    dropdown.style.display = "block";
+    currentIndex = -1;
 
-    // Close dropdown when clicking outside
-    document.addEventListener("click", function (e) {
-      if (!searchInput.contains(e.target) && !dropdown.contains(e.target)) {
-        dropdown.classList.remove("show");
-      }
+    Array.from(dropdown.querySelectorAll("li")).forEach(li => {
+      li.style.display = li.textContent.toLowerCase().includes(filter) ? "block" : "none";
+      li.classList.remove("active");
     });
   });
+
+  // Keyboard navigation
+  searchInput.addEventListener("keydown", function (e) {
+    const visibleItems = Array.from(dropdown.querySelectorAll("li"))
+      .filter(li => li.style.display !== "none");
+
+    if (!visibleItems.length) return;
+
+    if (e.key === "ArrowDown") {
+      e.preventDefault();
+      currentIndex = (currentIndex + 1) % visibleItems.length;
+    } else if (e.key === "ArrowUp") {
+      e.preventDefault();
+      currentIndex = (currentIndex - 1 + visibleItems.length) % visibleItems.length;
+    } else if (e.key === "Enter") {
+      e.preventDefault();
+      if (currentIndex >= 0) {
+        visibleItems[currentIndex].click();
+      }
+    }
+
+    visibleItems.forEach((li, idx) => li.classList.toggle("active", idx === currentIndex));
+  });
+
+  // Close when clicking outside
+  document.addEventListener("click", function (e) {
+    if (!searchInput.contains(e.target) && !dropdown.contains(e.target)) {
+      dropdown.style.display = "none";
+    }
+  });
+});
 </script>
+
