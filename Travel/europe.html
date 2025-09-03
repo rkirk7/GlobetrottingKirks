@@ -846,39 +846,45 @@ document.addEventListener("DOMContentLoaded", function () {
   const dropdown = document.getElementById("countryDropdown");
   const searchInput = document.getElementById("searchInput");
 
-  let currentIndex = -1;
+  let currentIndex = -1; // tracks which item is highlighted
 
-  // Populate dropdown
+  if (!sections.length || !dropdown || !searchInput) return;
+
+  // 1. Populate dropdown with all sections
   sections.forEach(section => {
     const li = document.createElement("li");
-    li.className = "list-group-item list-group-item-action";
-    li.textContent = section.innerText;
+    const a = document.createElement("a");
+    a.className = "dropdown-item";
+    a.href = "#";
+    a.textContent = section.innerText;
 
-    li.addEventListener("click", function () {
+    a.addEventListener("click", function (e) {
+      e.preventDefault();
       section.scrollIntoView({ behavior: "smooth", block: "start" });
-      dropdown.style.display = "none";
+      dropdown.classList.remove("show");
       searchInput.value = "";
     });
 
+    li.appendChild(a);
     dropdown.appendChild(li);
   });
 
-  // Show & filter on input
+  // 2. Show & filter dropdown on input
   searchInput.addEventListener("input", function () {
     const filter = this.value.toLowerCase();
-    dropdown.style.display = "block";
-    currentIndex = -1;
+    dropdown.classList.add("show");
+    currentIndex = -1; // reset highlight
 
-    Array.from(dropdown.querySelectorAll("li")).forEach(li => {
-      li.style.display = li.textContent.toLowerCase().includes(filter) ? "block" : "none";
-      li.classList.remove("active");
+    Array.from(dropdown.querySelectorAll("a")).forEach(a => {
+      a.parentElement.style.display = a.textContent.toLowerCase().includes(filter) ? "block" : "none";
+      a.classList.remove("active");
     });
   });
 
-  // Keyboard navigation
+  // 3. Keyboard navigation
   searchInput.addEventListener("keydown", function (e) {
-    const visibleItems = Array.from(dropdown.querySelectorAll("li"))
-      .filter(li => li.style.display !== "none");
+    const visibleItems = Array.from(dropdown.querySelectorAll("a"))
+      .filter(a => a.parentElement.style.display !== "none");
 
     if (!visibleItems.length) return;
 
@@ -893,17 +899,20 @@ document.addEventListener("DOMContentLoaded", function () {
       if (currentIndex >= 0) {
         visibleItems[currentIndex].click();
       }
+    } else if (e.key === "Escape") {
+      e.preventDefault();
+      dropdown.classList.remove("show");
     }
 
-    visibleItems.forEach((li, idx) => li.classList.toggle("active", idx === currentIndex));
+    // highlight current selection
+    visibleItems.forEach((a, idx) => a.classList.toggle("active", idx === currentIndex));
   });
 
-  // Close when clicking outside
+  // 4. Close when clicking outside
   document.addEventListener("click", function (e) {
     if (!searchInput.contains(e.target) && !dropdown.contains(e.target)) {
-      dropdown.style.display = "none";
+      dropdown.classList.remove("show");
     }
   });
 });
 </script>
-
