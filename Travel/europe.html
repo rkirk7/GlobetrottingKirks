@@ -4,145 +4,70 @@
     max-width: 900px;
   }
 
-  /* Desktop: fixed sidebar */
-  #toc {
-    position: fixed;
-    top: 100px;
-    left: 20px;
-    width: 220px;
-    max-height: calc(100vh - 120px);
-    overflow-y: auto;
-    background: #fff;
-    border: 1px solid #ddd;
-    padding: 10px;
-    border-radius: 6px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-  }
+/* Container for dropdown */
+.dropdown-wrapper {
+  position: relative;
+  max-width: 300px;
+  margin: 20px auto;
+}
 
-  /* Hide the toggle button by default on desktop */
-  #toc-toggle {
-    display: none;
-    width: 100%;
-    margin-bottom: 10px;
-    background: #f8f9fa;
-    border: 1px solid #ccc;
-    padding: 6px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
+#searchInput {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
 
-  /* TOC links */
-  #toc ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
+#countryDropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 250px;
+  overflow-y: auto;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 2000;
+  display: none;
+  padding-left: 0;
+  margin: 4px 0 0 0;
+}
 
-  #toc li a {
-    display: block;
-    padding: 4px 0;
-    color: #333;
-    text-decoration: none;
-  }
+#countryDropdown li {
+  list-style: none;
+}
 
-  #toc li a.active {
-    font-weight: bold;
-    color: #007bff;
-  }
+#countryDropdown li a {
+  display: block;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #333;
+  border-radius: 4px;
+  cursor: pointer;
+transition: background-color 0.2s, color 0.2s;
+}
 
-  /* Container for dropdown */
-  .dropdown-wrapper {
-    position: relative;
-    max-width: 300px;
-    margin: 20px auto;
-  }
+#countryDropdown li a:hover,
+#countryDropdown li a.active {
+  background-color: #007bff;
+  color: #fff;
+}
 
-  #searchInput {
-    width: 100%;
-    padding: 8px 12px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-
-  #countryDropdown {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    max-height: 200px;
-    overflow-y: auto;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    z-index: 2000;
-    display: none;
-    padding-left: 0;
-    margin: 0;
-  }
-
-  #countryDropdown li {
-    list-style: none;
-  }
-
-  #countryDropdown li a {
-    display: block;
-    padding: 6px 12px;
-    text-decoration: none;
-    color: #333;
-    cursor: pointer;
-  }
-
-  #countryDropdown li a.active,
-  #countryDropdown li a:hover {
-    background-color: #007bff;
-    color: #fff;
-  }
-
-  /* Responsive: small screens */
-  @media (max-width: 992px) {
-    #toc {
-      position: static;
-      width: 100%;
-      max-height: none;
-      border: none;
-      box-shadow: none;
-      padding: 0;
-      margin-bottom: 20px;
-    }
-
-    #toc-toggle {
-      display: block;
-    }
-
-    #toc-list {
-      display: none;
-      padding-left: 0;
-      margin-top: 0;
-    }
-
-    #toc-list.show {
-      display: block;
-    }
-
-    #country-search {
-      position: fixed;
-      top: 100px;
-      left: 20px;
-      width: 250px;
-      z-index: 1000;
-    }
-  }
+/* optional scrollbar style */
+#countryDropdown::-webkit-scrollbar {
+  width: 6px;
+}
+#countryDropdown::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.2);
+  border-radius: 3px;
+}
 </style>
 
-<div class="container my-5" id="content">
-  <!-- <div id="toc" class="toc bg-light p-3 border rounded d-none d-md-block">
-    <button id="toc-toggle" class="btn btn-sm btn-primary d-md-none mb-2">
-      ☰ Table of Contents
-    </button>
-    <ul id="toc-list" class="list-unstyled mb-0"></ul>
-  </div> -->
+<div class="container my-5">
 
   <div class="hero" data-hero="../Images/HeroImages/europe-hero.jpeg">
     <div class="hero-content text-center">

@@ -290,88 +290,96 @@ function processMarkdownGalleries(container) {
 // dropdown.js (load this once in index.html BEFORE loadpage.js)
 
 function initCountryDropdown() {
-
     console.log('trying to do dropdown');
-  const container = document.querySelector('#content .container'); // FIXED
-  //   if (!container) return;
 
-  const dropdown = document.getElementById('countryDropdown');
-  const searchInput = document.getElementById('searchInput');
-  if (!dropdown || !searchInput) return;
+    const container = document.querySelector('#content .container');
+    const dropdown = document.getElementById('countryDropdown');
+    const searchInput = document.getElementById('searchInput');
+    if (!dropdown || !searchInput || !container) return;
 
-  // clear previous list (safe re-init)
-  dropdown.innerHTML = '';
+    // Clear previous list (safe re-init)
+    dropdown.innerHTML = '';
 
-  const headings = container.querySelectorAll('h2');
-  if (!headings.length) return;
+    const headings = container.querySelectorAll('h2');
+    if (!headings.length) return;
 
-  let currentIndex = -1;
+    let currentIndex = -1;
 
-  // Populate dropdown with headings
-  headings.forEach(h => {
-    const li = document.createElement('li');
-    const a = document.createElement('a');
-    a.textContent = h.innerText.trim();
-    a.href = '#';
-    a.addEventListener('click', (e) => {
-      e.preventDefault();
-      h.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      dropdown.style.display = 'none';
-      searchInput.value = '';
-    });
-    li.appendChild(a);
-    dropdown.appendChild(li);
-  });
+    // Populate dropdown with headings
+    function populateDropdown(filter = '') {
+        dropdown.innerHTML = '';
+        let anyVisible = false;
 
-  // Show dropdown initially
-  dropdown.style.display = 'block';
+        headings.forEach(h => {
+            const text = h.innerText.trim();
+            const match = text.toLowerCase().includes(filter.toLowerCase());
 
-  // Filter dropdown on input
-  searchInput.addEventListener('input', function () {
-    const filter = this.value.toLowerCase();
-    const items = dropdown.querySelectorAll('li');
-    let anyVisible = false;
-    currentIndex = -1;
+            if (match || filter === '') {
+                anyVisible = true;
 
-    items.forEach(li => {
-      const a = li.querySelector('a');
-      const match = a.textContent.toLowerCase().includes(filter);
-      li.style.display = match ? 'block' : 'none';
-      if (match) anyVisible = true;
-      a.classList.remove('active');
-    });
+                const li = document.createElement('li');
+                const a = document.createElement('a');
+                a.textContent = text;
+                a.href = '#';
+                a.style.display = 'block'; // ensures nice block click
+                a.style.padding = '6px 12px';
+                a.style.textDecoration = 'none';
+                a.style.color = '#333';
+                a.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    h.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    dropdown.style.display = 'none';
+                    searchInput.value = '';
+                });
 
-    dropdown.style.display = anyVisible ? 'block' : 'none';
-  });
+                li.appendChild(a);
+                dropdown.appendChild(li);
+            }
+        });
 
-  // Keyboard navigation
-  searchInput.addEventListener('keydown', function (e) {
-    const visibleItems = Array.from(dropdown.querySelectorAll('a'))
-      .filter(a => a.parentElement.style.display !== 'none');
-    if (!visibleItems.length) return;
-
-    if (e.key === 'ArrowDown') {
-      e.preventDefault();
-      currentIndex = (currentIndex + 1) % visibleItems.length;
-    } else if (e.key === 'ArrowUp') {
-      e.preventDefault();
-      currentIndex = (currentIndex - 1 + visibleItems.length) % visibleItems.length;
-    } else if (e.key === 'Enter') {
-      e.preventDefault();
-      if (currentIndex >= 0) visibleItems[currentIndex].click();
-    } else if (e.key === 'Escape') {
-      dropdown.style.display = 'none';
+        dropdown.style.display = anyVisible ? 'block' : 'none';
     }
 
-    visibleItems.forEach((a, idx) =>
-      a.classList.toggle('active', idx === currentIndex)
-    );
-  });
+    // Initial full list
+    populateDropdown();
 
-  // Click outside closes dropdown
-  document.addEventListener('click', function (e) {
-    if (e.target !== searchInput && !dropdown.contains(e.target)) {
-      dropdown.style.display = 'none';
-    }
-  });
+    // Show full list on focus
+    searchInput.addEventListener('focus', () => populateDropdown());
+
+    // Filter dropdown on input
+    searchInput.addEventListener('input', function () {
+        populateDropdown(this.value);
+        currentIndex = -1;
+    });
+
+    // Keyboard navigation
+    searchInput.addEventListener('keydown', function (e) {
+        const visibleItems = Array.from(dropdown.querySelectorAll('a'))
+            .filter(a => a.parentElement.style.display !== 'none');
+        if (!visibleItems.length) return;
+
+        if (e.key === 'ArrowDown') {
+            e.preventDefault();
+            currentIndex = (currentIndex + 1) % visibleItems.length;
+        } else if (e.key === 'ArrowUp') {
+            e.preventDefault();
+            currentIndex = (currentIndex - 1 + visibleItems.length) % visibleItems.length;
+        } else if (e.key === 'Enter') {
+            e.preventDefault();
+            if (currentIndex >= 0) visibleItems[currentIndex].click();
+        } else if (e.key === 'Escape') {
+            dropdown.style.display = 'none';
+        }
+
+        visibleItems.forEach((a, idx) =>
+            a.classList.toggle('active', idx === currentIndex)
+        );
+    });
+
+    // Click outside closes dropdown
+    document.addEventListener('click', function (e) {
+        if (e.target !== searchInput && !dropdown.contains(e.target)) {
+            dropdown.style.display = 'none';
+        }
+    });
 }
