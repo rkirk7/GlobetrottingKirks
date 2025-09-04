@@ -292,8 +292,8 @@ function processMarkdownGalleries(container) {
 function initCountryDropdown() {
 
     console.log('trying to do dropdown');
-  const container = document.querySelector('#content');
-  if (!container) return;
+  const container = document.querySelector('#content .container'); // FIXED
+  //   if (!container) return;
 
   const dropdown = document.getElementById('countryDropdown');
   const searchInput = document.getElementById('searchInput');
