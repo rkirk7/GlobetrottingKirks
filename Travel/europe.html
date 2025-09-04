@@ -884,7 +884,8 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  const sections = document.querySelectorAll(".travel-section h2");
+const postContentEl = document.querySelector("#content .container");
+  const headings = postContentEl.querySelectorAll("h2");
   const dropdown = document.getElementById("countryDropdown");
   const searchInput = document.getElementById("searchInput");
 
@@ -893,7 +894,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (!sections.length || !dropdown || !searchInput) return;
 
   // Populate dropdown
-  sections.forEach(section => {
+  headings.forEach(section => {
     const li = document.createElement("li");
     const a = document.createElement("a");
     a.textContent = section.innerText;
