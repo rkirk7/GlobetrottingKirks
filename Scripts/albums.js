@@ -42,7 +42,7 @@ const ALBUMS = {
     folder: "ViaFerrata",
     total: 10,
   },
-  "iceland-2019": { name: "Iceland 2019", folder: "Iceland", total: 22 },
+  "iceland-2019": { name: "Iceland 2019", folder: "Iceland", total: 23 },
   "south-africa-2019": {
     name: "South Africa 2019",
     folder: "19SouthAfrica",
