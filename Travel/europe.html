@@ -884,11 +884,17 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
+
+  console.log('trying to populate')
 const postContentEl = document.querySelector("#content .container");
+
+if (postContentEl) {
+  console.log('content found');
+}
   const headings = postContentEl.querySelectorAll("h2");
   const dropdown = document.getElementById("countryDropdown");
   const searchInput = document.getElementById("searchInput");
-console.log('headings found:', headings);
+console.log('headings found:', headings.count);
 
   let currentIndex = -1;
 
