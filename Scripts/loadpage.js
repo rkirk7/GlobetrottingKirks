@@ -72,6 +72,9 @@ async function initializePageScripts(page, loadId) {
   if (loadId !== currentLoadId) return;
   if (page === "albums.html" && typeof initAlbums === "function") initAlbums();
   if (page === "blog.html" && typeof initBlog === "function") initBlog();
+  if (page === "europe.html" && typeof initCountryDropdown === "function") {
+    initCountryDropdown();
+  }
 }
 
 // -------------------- Smooth Scroll + Active TOC --------------------
