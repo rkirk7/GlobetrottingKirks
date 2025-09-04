@@ -941,18 +941,13 @@
 </div>
 
 <script>
-//document.addEventListener("DOMContentLoaded", function () {
-
-  console.log('trying to populate')
+function initCountryDropdown() {
   const postContentEl = document.querySelector("#content"); 
-if (postContentEl) {
-  console.log('content found');
-}
+  if (!postContentEl) return;
+
   const headings = postContentEl.querySelectorAll("h2");
   const dropdown = document.getElementById("countryDropdown");
   const searchInput = document.getElementById("searchInput");
-console.log('headings found:', headings.length);
-
   let currentIndex = -1;
 
   // Populate dropdown
@@ -1017,5 +1012,16 @@ console.log('headings found:', headings.length);
       dropdown.style.display = "none";
     }
   });
-//});
+}
+
+
+const observer = new MutationObserver(() => {
+  const postContentEl = document.querySelector("#content");
+  if (postContentEl) {
+    initCountryDropdown();
+    observer.disconnect(); // stop observing once done
+  }
+});
+
+observer.observe(document.body, { childList: true, subtree: true });
 </script>
