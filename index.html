@@ -508,5 +508,37 @@
         );
       });
     </script>
+
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("mc-embedded-subscribe-form");
+  const successEl = document.getElementById("mce-success-response");
+  const errorEl = document.getElementById("mce-error-response");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+      method: "POST",
+      body: formData,
+      mode: "no-cors" // Mailchimp requires this
+    })
+    .then(() => {
+      successEl.style.display = "block";
+      successEl.textContent = "Thanks for subscribing! Please check your email to confirm.";
+      errorEl.style.display = "none";
+      form.reset();
+    })
+    .catch(() => {
+      errorEl.style.display = "block";
+      errorEl.textContent = "Oops, something went wrong. Please try again.";
+      successEl.style.display = "none";
+    });
+  });
+});
+</script>
+
   </body>
 </html>

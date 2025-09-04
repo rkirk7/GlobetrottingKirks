@@ -888,10 +888,9 @@ const postContentEl = document.querySelector("#content .container");
   const headings = postContentEl.querySelectorAll("h2");
   const dropdown = document.getElementById("countryDropdown");
   const searchInput = document.getElementById("searchInput");
+console.log('headings found:', headings);
 
   let currentIndex = -1;
-
-  if (!sections.length || !dropdown || !searchInput) return;
 
   // Populate dropdown
   headings.forEach(section => {
