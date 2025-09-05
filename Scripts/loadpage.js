@@ -341,7 +341,7 @@ function initCountryDropdown() {
     }
 
     // Initial full list
-    populateDropdown();
+searchInput.addEventListener('focus', () => populateDropdown());
 
     // Show full list on focus
     searchInput.addEventListener('focus', () => populateDropdown());
@@ -353,28 +353,52 @@ function initCountryDropdown() {
     });
 
     // Keyboard navigation
-    searchInput.addEventListener('keydown', function (e) {
-        const visibleItems = Array.from(dropdown.querySelectorAll('a'))
-            .filter(a => a.parentElement.style.display !== 'none');
-        if (!visibleItems.length) return;
+searchInput.addEventListener('keyup', (e) => {
+  const items = countryDropdown.getElementsByTagName('a');
+  let currentFocus = -1;
 
-        if (e.key === 'ArrowDown') {
-            e.preventDefault();
-            currentIndex = (currentIndex + 1) % visibleItems.length;
-        } else if (e.key === 'ArrowUp') {
-            e.preventDefault();
-            currentIndex = (currentIndex - 1 + visibleItems.length) % visibleItems.length;
-        } else if (e.key === 'Enter') {
-            e.preventDefault();
-            if (currentIndex >= 0) visibleItems[currentIndex].click();
-        } else if (e.key === 'Escape') {
-            dropdown.style.display = 'none';
-        }
+  if (e.key === 'ArrowDown') {
+    currentFocus++;
+    addActive(items, currentFocus);
+  } else if (e.key === 'ArrowUp') {
+    currentFocus--;
+    addActive(items, currentFocus);
+  } else if (e.key === 'Enter') {
+    e.preventDefault();
+    if (currentFocus > -1 && items[currentFocus]) {
+      items[currentFocus].click();
+    } else if (items.length > 0) {
+      // Default: pick first item
+      items[0].click();
+    }
+  } else {
+    filterDropdown();
+    // auto-highlight first item after filtering
+    const visibleItems = [...countryDropdown.getElementsByTagName('a')]
+      .filter(a => a.style.display !== "none");
+    if (visibleItems.length > 0) {
+      removeActive(items);
+      visibleItems[0].classList.add('active');
+      currentFocus = Array.from(items).indexOf(visibleItems[0]);
+    }
+  }
+});
 
-        visibleItems.forEach((a, idx) =>
-            a.classList.toggle('active', idx === currentIndex)
-        );
-    });
+function addActive(items, index) {
+  if (!items) return;
+  removeActive(items);
+  if (index >= items.length) index = 0;
+  if (index < 0) index = items.length - 1;
+  items[index].classList.add("active");
+  items[index].scrollIntoView({ block: "nearest" });
+}
+
+function removeActive(items) {
+  for (let i = 0; i < items.length; i++) {
+    items[i].classList.remove("active");
+  }
+}
+
 
     // Click outside closes dropdown
     document.addEventListener('click', function (e) {
