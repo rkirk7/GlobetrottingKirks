@@ -325,12 +325,16 @@ function initCountryDropdown() {
                 a.style.padding = '6px 12px';
                 a.style.textDecoration = 'none';
                 a.style.color = '#333';
-                a.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    scrollToHeadingWithOffset(h);
-                    dropdown.style.display = 'none';
-                    searchInput.value = '';
-                });
+a.addEventListener('click', (e) => {
+    e.preventDefault();
+    dropdown.style.display = 'none';
+    searchInput.value = '';
+
+    requestAnimationFrame(() => {
+        scrollToHeadingWithOffset(h);
+    });
+});
+
 
                 li.appendChild(a);
                 dropdown.appendChild(li);
