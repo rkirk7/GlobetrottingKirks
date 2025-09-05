@@ -98,17 +98,17 @@ function loadTOC() {
   toc.classList.remove("d-none");
   tocList.innerHTML = "";
 
-  // Add "Top" button at the beginning
-  const topLi = document.createElement("li");
-  const topA = document.createElement("a");
-  topA.href = "#";
-  topA.textContent = "Top";
-  topA.addEventListener("click", (e) => {
-    e.preventDefault();
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-  topLi.appendChild(topA);
-  tocList.appendChild(topLi);
+  // // Add "Top" button at the beginning
+  // const topLi = document.createElement("li");
+  // const topA = document.createElement("a");
+  // topA.href = "#";
+  // topA.textContent = "Top";
+  // topA.addEventListener("click", (e) => {
+  //   e.preventDefault();
+  //   window.scrollTo({ top: 0, behavior: "smooth" });
+  // });
+  // topLi.appendChild(topA);
+  // tocList.appendChild(topLi);
 
   headings.forEach((heading, i) => {
     if (!heading.id) heading.id = `heading-${i}`;
