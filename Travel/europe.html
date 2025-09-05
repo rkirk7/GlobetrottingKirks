@@ -2,92 +2,95 @@
   /* Limit text width for readability */
   #content .container {
     max-width: 900px;
+    position: relative;
   }
 
-#backToTop {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 3000;
-  display: none; /* hidden by default */
+  html {
+  scroll-padding-top: 70px; /* adjust to your navbar height */
 }
 
-/* Container for dropdown */
-/* Container for dropdown */
-.dropdown-wrapper {
-  position: relative;
-  max-width: 300px;
-  margin: 20px auto;
-}
+  #backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 3000;
+    display: none; /* hidden by default */
+  }
 
-#searchInput {
-  width: 100%;
-  padding: 10px 12px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  outline: none;
-}
+  /* Container for dropdown */
+  /* Container for dropdown */
+  .dropdown-wrapper {
+    position: relative;
+    max-width: 300px;
+    margin: 20px auto;
+  }
 
-#searchInput:focus {
-  border-color: #007bff;
-  box-shadow: 0 0 0 3px rgba(0,123,255,0.25);
-}
+  #searchInput {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    outline: none;
+  }
 
-#countryDropdown {
-  position: absolute;
-  top: 100%;  /* sits right under input */
-  left: 0;
-  width: 100%;
-  max-height: 250px;
-  overflow-y: auto;
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-  z-index: 2000;
-  display: none; /* hidden by default */
-  margin-top: 4px;
-  padding: 0;   /* reset UL padding */
-  list-style: none; /* no bullets */
-}
+  #searchInput:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+  }
 
-#countryDropdown li {
-  list-style: none; /* redundant but safe */
-  margin: 0;
-  padding: 0;
-}
+  #countryDropdown {
+    position: absolute;
+    top: 100%; /* sits right under input */
+    left: 0;
+    width: 100%;
+    max-height: 250px;
+    overflow-y: auto;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    z-index: 2000;
+    display: none; /* hidden by default */
+    margin-top: 4px;
+    padding: 0; /* reset UL padding */
+    list-style: none; /* no bullets */
+  }
 
-#countryDropdown li a {
-  display: block;
-  padding: 10px 14px;
-  text-decoration: none;
-  color: #333;
-  border-radius: 0; /* no rounding inside list */
-  cursor: pointer;
-  transition: background-color 0.2s, color 0.2s;
-}
+  #countryDropdown li {
+    list-style: none; /* redundant but safe */
+    margin: 0;
+    padding: 0;
+  }
 
-#countryDropdown li a:hover,
-#countryDropdown li a.active {
-  background-color: #007bff;
-  color: #fff;
-}
+  #countryDropdown li a {
+    display: block;
+    padding: 10px 14px;
+    text-decoration: none;
+    color: #333;
+    border-radius: 0; /* no rounding inside list */
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+  }
 
-/* optional slim scrollbar */
-#countryDropdown::-webkit-scrollbar {
-  width: 6px;
-}
-#countryDropdown::-webkit-scrollbar-thumb {
-  background: rgba(0,0,0,0.2);
-  border-radius: 3px;
-}
+  #countryDropdown li a:hover,
+  #countryDropdown li a.active {
+    background-color: #007bff;
+    color: #fff;
+  }
 
+  /* optional slim scrollbar */
+  #countryDropdown::-webkit-scrollbar {
+    width: 6px;
+  }
+  #countryDropdown::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+  }
 </style>
 
 <div class="container my-5">
-
   <div class="hero" data-hero="../Images/HeroImages/europe-hero.jpeg">
     <div class="hero-content text-center">
       <h1 class="hero-title">Europe</h1>
@@ -111,12 +114,10 @@
     </a>
   </p>
 
-<div class="dropdown-wrapper">
-  <input id="searchInput" type="text" placeholder="Search countries..." />
-  <ul id="countryDropdown"></ul>
-</div>
-
-
+  <div class="dropdown-wrapper">
+    <input id="searchInput" type="text" placeholder="Search countries..." />
+    <ul id="countryDropdown"></ul>
+  </div>
 
   <div class="travel-section">
     <h2>Italy</h2>
@@ -242,6 +243,7 @@
         </div>
       </div>
     </div>
+    <a href="#" id="backToTop" class="btn btn-primary">↑ Back to Top</a>
   </div>
 
   <div class="travel-section">
@@ -314,6 +316,7 @@
         </div>
       </div>
     </div>
+    <a href="#" id="backToTop" class="btn btn-primary">↑ Back to Top</a>
   </div>
 
   <div class="travel-section">
@@ -368,6 +371,7 @@
         </div>
       </div>
     </div>
+    <a href="#" id="backToTop" class="btn btn-primary">↑ Back to Top</a>
   </div>
 
   <div class="travel-section">
@@ -433,6 +437,7 @@
         </div>
       </div>
     </div>
+    <a href="#" id="backToTop" class="btn btn-primary">↑ Back to Top</a>
   </div>
 
   <div class="travel-section">
@@ -498,6 +503,7 @@
         </div>
       </div>
     </div>
+    <a href="#" id="backToTop" class="btn btn-primary">↑ Back to Top</a>
   </div>
 
   <div class="travel-section">
@@ -562,6 +568,7 @@
         </div>
       </div>
     </div>
+    <a href="#" id="backToTop" class="btn btn-primary">↑ Back to Top</a>
   </div>
 
   <div class="travel-section">
@@ -625,6 +632,7 @@
         </div>
       </div>
     </div>
+    <a href="#" id="backToTop" class="btn btn-primary">↑ Back to Top</a>
   </div>
 
   <div class="travel-section">
@@ -637,7 +645,7 @@
       and, of course, Gaudi’s Sagrada Familia in Barcelona. Mountains, beaches,
       countryside: you name it, Spain has it.
     </p>
-    
+
     <div class="gallery">
       <div class="row g-3 justify-content-center">
         <div class="col-6 col-md-4 col-lg-2">
@@ -646,31 +654,31 @@
             class="img-fluid rounded shadow-sm"
           />
         </div>
-                <div class="col-6 col-md-4 col-lg-2">
+        <div class="col-6 col-md-4 col-lg-2">
           <img
             src="../Images/Spain/Spain2.jpeg"
             class="img-fluid rounded shadow-sm"
           />
         </div>
-                <div class="col-6 col-md-4 col-lg-2">
+        <div class="col-6 col-md-4 col-lg-2">
           <img
             src="../Images/Spain/Spain3.jpeg"
             class="img-fluid rounded shadow-sm"
           />
         </div>
-                <div class="col-6 col-md-4 col-lg-2">
+        <div class="col-6 col-md-4 col-lg-2">
           <img
             src="../Images/Spain/Spain4.jpeg"
             class="img-fluid rounded shadow-sm"
           />
         </div>
-                <div class="col-6 col-md-4 col-lg-2">
+        <div class="col-6 col-md-4 col-lg-2">
           <img
             src="../Images/Spain/Spain5.jpeg"
             class="img-fluid rounded shadow-sm"
           />
         </div>
-                <div class="col-6 col-md-4 col-lg-2">
+        <div class="col-6 col-md-4 col-lg-2">
           <img
             src="../Images/Spain/Spain7.jpeg"
             class="img-fluid rounded shadow-sm"
@@ -678,6 +686,7 @@
         </div>
       </div>
     </div>
+    <a href="#" id="backToTop" class="btn btn-primary">↑ Back to Top</a>
   </div>
 
   <div class="travel-section">
@@ -726,7 +735,7 @@
             class="img-fluid rounded shadow-sm"
           />
         </div>
-                <div class="col-6 col-md-4 col-lg-2">
+        <div class="col-6 col-md-4 col-lg-2">
           <img
             src="../Images/Portugal/Portugal7.jpeg"
             class="img-fluid rounded shadow-sm"
@@ -734,6 +743,7 @@
         </div>
       </div>
     </div>
+    <a href="#" id="backToTop" class="btn btn-primary">↑ Back to Top</a>
   </div>
 
   <div class="travel-section">
@@ -801,6 +811,7 @@
         </div>
       </div>
     </div>
+    <a href="#" id="backToTop" class="btn btn-primary">↑ Back to Top</a>
   </div>
 
   <div class="travel-section">
@@ -827,31 +838,31 @@
             class="img-fluid rounded shadow-sm"
           />
         </div>
-                <div class="col-6 col-md-4 col-lg-2">
+        <div class="col-6 col-md-4 col-lg-2">
           <img
             src="../Images/Germany/Germany7.jpeg"
             class="img-fluid rounded shadow-sm"
           />
         </div>
-                <div class="col-6 col-md-4 col-lg-2">
+        <div class="col-6 col-md-4 col-lg-2">
           <img
             src="../Images/Germany/Germany3.jpeg"
             class="img-fluid rounded shadow-sm"
           />
         </div>
-                <div class="col-6 col-md-4 col-lg-2">
+        <div class="col-6 col-md-4 col-lg-2">
           <img
             src="../Images/Germany/Germany4.jpeg"
             class="img-fluid rounded shadow-sm"
           />
         </div>
-                <div class="col-6 col-md-4 col-lg-2">
+        <div class="col-6 col-md-4 col-lg-2">
           <img
             src="../Images/Germany/Germany5.jpeg"
             class="img-fluid rounded shadow-sm"
           />
         </div>
-                <div class="col-6 col-md-4 col-lg-2">
+        <div class="col-6 col-md-4 col-lg-2">
           <img
             src="../Images/Germany/Germany6.jpeg"
             class="img-fluid rounded shadow-sm"
@@ -859,6 +870,7 @@
         </div>
       </div>
     </div>
+    <a href="#" id="backToTop" class="btn btn-primary">↑ Back to Top</a>
   </div>
 
   <div class="travel-section">
@@ -885,31 +897,31 @@
             class="img-fluid rounded shadow-sm"
           />
         </div>
-                <div class="col-6 col-md-4 col-lg-2">
+        <div class="col-6 col-md-4 col-lg-2">
           <img
             src="../Images/Netherlands/Netherlands2.jpeg"
             class="img-fluid rounded shadow-sm"
           />
         </div>
-                <div class="col-6 col-md-4 col-lg-2">
+        <div class="col-6 col-md-4 col-lg-2">
           <img
             src="../Images/Netherlands/Netherlands3.jpeg"
             class="img-fluid rounded shadow-sm"
           />
         </div>
-                <div class="col-6 col-md-4 col-lg-2">
+        <div class="col-6 col-md-4 col-lg-2">
           <img
             src="../Images/Netherlands/Netherlands4.jpeg"
             class="img-fluid rounded shadow-sm"
           />
         </div>
-                <div class="col-6 col-md-4 col-lg-2">
+        <div class="col-6 col-md-4 col-lg-2">
           <img
             src="../Images/Netherlands/Netherlands5.jpeg"
             class="img-fluid rounded shadow-sm"
           />
         </div>
-                <div class="col-6 col-md-4 col-lg-2">
+        <div class="col-6 col-md-4 col-lg-2">
           <img
             src="../Images/Netherlands/Netherlands6.jpeg"
             class="img-fluid rounded shadow-sm"
@@ -917,22 +929,22 @@
         </div>
       </div>
     </div>
-  </div>
+    <a href="#" id="backToTop" class="btn btn-primary">↑ Back to Top</a>
   </div>
 </div>
 
 <script>
   document.addEventListener("scroll", () => {
-  const btn = document.getElementById("backToTop");
-  if (window.scrollY > 300) {
-    btn.style.display = "block";
-  } else {
-    btn.style.display = "none";
-  }
-});
+    const btn = document.getElementById("backToTop");
+    if (window.scrollY > 300) {
+      btn.style.display = "block";
+    } else {
+      btn.style.display = "none";
+    }
+  });
 
-document.getElementById("backToTop").addEventListener("click", (e) => {
-  e.preventDefault();
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
+  document.getElementById("backToTop").addEventListener("click", (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 </script>
