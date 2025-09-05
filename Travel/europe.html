@@ -1014,4 +1014,24 @@ document.getElementById("toc-toggle").addEventListener("click", () => {
   document.getElementById("toc-list").classList.toggle("show");
 });
 
+  document.addEventListener("DOMContentLoaded", function () {
+    const toc = document.getElementById("toc");
+    const toggleDesktop = document.getElementById("toc-toggle-desktop");
+    const toggleMobile = document.getElementById("toc-toggle");
+    const tocList = document.getElementById("toc-list");
+
+    // Desktop toggle: slide panel in/out
+    if (toggleDesktop) {
+      toggleDesktop.addEventListener("click", function () {
+        toc.classList.toggle("open");
+      });
+    }
+
+    // Mobile toggle: show/hide TOC list
+    if (toggleMobile) {
+      toggleMobile.addEventListener("click", function () {
+        tocList.classList.toggle("show");
+      });
+    }
+  });
 </script>
