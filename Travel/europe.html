@@ -10,7 +10,53 @@
 }
 
 
-  /* Desktop: fixed sidebar */
+/* Floating TOC button */
+#toc-toggle-desktop {
+  position: fixed;
+  top: 120px;
+  left: 20px;
+  z-index: 1100;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* TOC panel hidden by default */
+#toc {
+  position: fixed;
+  top: 120px;
+  left: -200px; /* slide off-screen */
+  width: 180px;
+  max-height: calc(100vh - 160px);
+  overflow-y: auto;
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 12px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: left 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+#toc.open {
+  left: 20px; /* slide in */
+}
+
+/* Mobile already has dropdown styles from your CSS */
+@media (max-width: 992px) {
+  #toc-toggle-desktop {
+    display: none;
+  }
+}
+
+
+
+
+  /* Desktop: fixed sidebar
   #toc {
     position: fixed;
     top: 300px;
@@ -24,10 +70,10 @@
     border-radius: 6px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-  }
+  } */
 
   /* Hide the toggle button by default on desktop */
-  #toc-toggle {
+  /* #toc-toggle {
     display: none;
     width: 100%;
     margin-bottom: 10px;
@@ -36,7 +82,7 @@
     padding: 6px;
     border-radius: 4px;
     cursor: pointer;
-  }
+  } */
 
   /* TOC links */
   #toc ul {
@@ -117,10 +163,16 @@
     </a>
   </p>
 
-<div id="toc" class="toc bg-light p-3 border rounded d-none d-md-block">
-  <button id="toc-toggle" class="btn btn-sm btn-primary d-md-none mb-2">☰ Table of Contents</button>
+<!-- Floating button for desktop -->
+<button id="toc-toggle-desktop">☰ TOC</button>
+
+<div id="toc">
+  <button id="toc-toggle" class="btn btn-sm btn-primary d-md-none mb-2">
+    ☰ Table of Contents
+  </button>
   <ul id="toc-list" class="list-unstyled mb-0"></ul>
 </div>
+
 
   <div class="travel-section">
     <h2>Italy</h2>
@@ -950,4 +1002,16 @@
     e.preventDefault();
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
+
+
+// Toggle TOC open/close
+document.getElementById("toc-toggle-desktop").addEventListener("click", () => {
+  document.getElementById("toc").classList.toggle("open");
+});
+
+// Keep your existing mobile toggle
+document.getElementById("toc-toggle").addEventListener("click", () => {
+  document.getElementById("toc-list").classList.toggle("show");
+});
+
 </script>
