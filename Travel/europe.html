@@ -4,84 +4,94 @@
     max-width: 900px;
     position: relative;
   }
+
   html {
-    scroll-padding-top: 70px; /* offset for sticky nav if you have one */
-  }
+  scroll-padding-top: 70px; /* adjust to your navbar height */
+}
 
-  /* TOC wrapper positions the button and panel */
-  #toc-wrapper {
-    position: fixed;
-    top: 120px;
-    left: 20px;
-    z-index: 2000;
-  }
 
-  /* Button styling */
-  #toc-button {
-    background: #007bff;
-    color: #fff;
-    padding: 8px 12px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 14px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    transition: background-color 0.2s ease;
-  }
-
-  #toc-button:hover {
-    background: #0056b3;
-  }
-
-  /* TOC panel */
+  /* Desktop: fixed sidebar */
   #toc {
-    display: none; /* hidden until toggled */
-    margin-top: 8px;
-    width: 220px;
-    max-height: calc(100vh - 160px);
+    position: fixed;
+    top: 300px;
+    left: 20px;
+    width: 140px;
+    max-height: calc(100vh - 120px);
     overflow-y: auto;
     background: #fff;
     border: 1px solid #ddd;
     padding: 10px;
     border-radius: 6px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
   }
 
-  /* Active state when toggled */
-  #toc.show {
-    display: block;
+  /* Hide the toggle button by default on desktop */
+  #toc-toggle {
+    display: none;
+    width: 100%;
+    margin-bottom: 10px;
+    background: #f8f9fa;
+    border: 1px solid #ccc;
+    padding: 6px;
+    border-radius: 4px;
+    cursor: pointer;
   }
 
-  /* TOC list */
+  /* TOC links */
   #toc ul {
-    padding-left: 0;
-    margin: 0;
     list-style: none;
+    padding: 0;
+    margin: 0;
   }
-  #toc li {
-    margin-bottom: 6px;
-    font-size: 14px;
-  }
-  #toc a {
-    color: #007bff;
+
+  #toc li a {
+    display: block;
+    padding: 4px 0;
+    color: #333;
     text-decoration: none;
   }
-  #toc a:hover {
-    text-decoration: underline;
+
+  #toc li a.active {
+    font-weight: bold;
+    color: #007bff;
   }
 
-  /* Responsive: move TOC inline for small screens */
+  /* Responsive: small screens */
   @media (max-width: 992px) {
-    #toc-wrapper {
-      position: static;
-      margin: 20px 0;
-    }
     #toc {
+      position: static;
       width: 100%;
       max-height: none;
+      border: none;
       box-shadow: none;
-      border: 1px solid #ddd;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+
+    #toc-toggle {
+      display: block;
+    }
+
+    #toc-list {
+      display: none;
+      padding-left: 0;
+      margin-top: 0;
+    }
+
+    #toc-list.show {
+      display: block;
     }
   }
+
+  #backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 3000;
+    display: none; /* hidden by default */
+  }
+
 </style>
 
 <div class="container my-5">
@@ -91,7 +101,6 @@
     </div>
   </div>
 
-  <br />
 
   <p class="intro-text">
     Europe is the second smallest continent but boasts some 50 countries
@@ -108,25 +117,10 @@
     </a>
   </p>
 
-  <!-- <div class="dropdown-wrapper">
-    <input id="searchInput" type="text" placeholder="Search countries..." />
-    <ul id="countryDropdown"></ul>
-  </div> -->
-
-
- <div id="toc-wrapper">
-  <div id="toc-button">☰ TOC</div>
-  <div id="toc">
-    <ul id="toc-list" class="list-unstyled mb-0">
-      <!-- Your TOC items will populate here -->
-    </ul>
-  </div>
-</div>
-
-<!-- <div id="toc" class="toc bg-light p-3 border rounded d-none d-md-block">
+<div id="toc" class="toc bg-light p-3 border rounded d-none d-md-block">
   <button id="toc-toggle" class="btn btn-sm btn-primary d-md-none mb-2">☰ Table of Contents</button>
   <ul id="toc-list" class="list-unstyled mb-0"></ul>
-</div> -->
+</div>
 
   <div class="travel-section">
     <h2>Italy</h2>
@@ -955,27 +949,5 @@
   document.getElementById("backToTop").addEventListener("click", (e) => {
     e.preventDefault();
     window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-</script>
-
-
-<script>
-  // Toggle button click
-  document.getElementById("toc-button").addEventListener("click", function() {
-    document.getElementById("toc").classList.toggle("show");
-  });
-
-  // Build TOC from all h2s inside .travel-section
-  const tocList = document.getElementById("toc-list");
-  document.querySelectorAll(".travel-section h2").forEach((heading, index) => {
-    const id = "section-" + index;
-    heading.id = id;
-
-    const li = document.createElement("li");
-    const a = document.createElement("a");
-    a.href = "#" + id;
-    a.textContent = heading.textContent;
-    li.appendChild(a);
-    tocList.appendChild(li);
   });
 </script>
