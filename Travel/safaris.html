@@ -4,6 +4,15 @@
     max-width: 900px;
   }
 
+
+    #backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 3000;
+    display: none; /* hidden by default */
+  }
+
   /* Desktop: fixed sidebar */
   #toc {
     position: fixed;
@@ -206,6 +215,8 @@
         </div>
       </div>
     </div>
+        <a href="#" id="backToTop" class="btn btn-primary">↑ Back to Top</a>
+
   </div>
 
   <div class="travel-section">
@@ -304,6 +315,8 @@
         </div>
       </div>
     </div>
+        <a href="#" id="backToTop" class="btn btn-primary">↑ Back to Top</a>
+
   </div>
 
   <div class="travel-section">
@@ -420,6 +433,8 @@
         </div>
       </div>
     </div>
+        <a href="#" id="backToTop" class="btn btn-primary">↑ Back to Top</a>
+
   </div>
 
   <div class="travel-section">
@@ -574,6 +589,8 @@
         </div>
       </div>
     </div>
+        <a href="#" id="backToTop" class="btn btn-primary">↑ Back to Top</a>
+
   </div>
 
   <div class="travel-section">
@@ -785,6 +802,8 @@
         </div>
       </div>
     </div>
+        <a href="#" id="backToTop" class="btn btn-primary">↑ Back to Top</a>
+
   </div>
 
   <div class="travel-section">
@@ -934,6 +953,8 @@
         </div>
       </div>
     </div>
+        <a href="#" id="backToTop" class="btn btn-primary">↑ Back to Top</a>
+
   </div>
 
   <div class="travel-section">
@@ -1057,4 +1078,22 @@
       </div>
     </div>
   </div>
+      <a href="#" id="backToTop" class="btn btn-primary">↑ Back to Top</a>
+
 </div>
+
+<script>
+  document.addEventListener("scroll", () => {
+    const btn = document.getElementById("backToTop");
+    if (window.scrollY > 300) {
+      btn.style.display = "block";
+    } else {
+      btn.style.display = "none";
+    }
+  });
+
+  document.getElementById("backToTop").addEventListener("click", (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
