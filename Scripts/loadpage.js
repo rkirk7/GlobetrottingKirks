@@ -353,8 +353,9 @@ searchInput.addEventListener('focus', () => populateDropdown());
     });
 
     // Keyboard navigation
+// Keyboard navigation
 searchInput.addEventListener('keyup', (e) => {
-  const items = countryDropdown.getElementsByTagName('a');
+  const items = dropdown.getElementsByTagName('a'); // FIXED
   let currentFocus = -1;
 
   if (e.key === 'ArrowDown') {
@@ -368,13 +369,14 @@ searchInput.addEventListener('keyup', (e) => {
     if (currentFocus > -1 && items[currentFocus]) {
       items[currentFocus].click();
     } else if (items.length > 0) {
-      // Default: pick first item
       items[0].click();
     }
   } else {
-    filterDropdown();
-    // auto-highlight first item after filtering
-    const visibleItems = [...countryDropdown.getElementsByTagName('a')]
+    // Replace filterDropdown() with populateDropdown
+    populateDropdown(searchInput.value);
+
+    // auto-highlight first visible item
+    const visibleItems = [...dropdown.getElementsByTagName('a')]
       .filter(a => a.style.display !== "none");
     if (visibleItems.length > 0) {
       removeActive(items);
@@ -383,6 +385,7 @@ searchInput.addEventListener('keyup', (e) => {
     }
   }
 });
+
 
 function addActive(items, index) {
   if (!items) return;

@@ -123,9 +123,56 @@
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Our Favorite Types of Travel
+                Our Specialties
               </a>
               <ul class="dropdown-menu p-2">
+                <li>
+                  <a
+                    class="dropdown-item"
+                    onclick="loadPage('Travel/safaris.html')"
+                    href="#Travel/safaris.html"
+                    >African Safaris</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    onclick="loadPage('Travel/hikingadventures.html')"
+                    href="#Travel/hikingadventures.html"
+                    >Hiking and Other Thrill-Seeking</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+
+                <li>
+                  <a
+                    class="dropdown-item"
+                    onclick="loadPage('Travel/antarctica.html')"
+                    href="#Travel/antarctica.html"
+                    >Antarctica</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+
+                <li>
+                  <a
+                    class="dropdown-item"
+                    onclick="loadPage('Travel/downunder.html')"
+                    href="#Travel/downunder.html"
+                    >Down Under: New Zealand, Australia, and French Polynesia</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    onclick="loadPage('Travel/europe.html')"
+                    href="#Travel/europe.html"
+                    >Europe</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+
                 <!-- Wildlife Adventures -->
                 <li>
                   <a
@@ -136,17 +183,10 @@
                     aria-expanded="false"
                     aria-controls="wildlifeSubmenu"
                   >
-                    Wildlife Adventures <i class="bi bi-caret-down-fill"></i>
+                    Other Wildlife Adventures
+                    <i class="bi bi-caret-down-fill"></i>
                   </a>
                   <ul class="collapse list-unstyled ps-3" id="wildlifeSubmenu">
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        onclick="loadPage('Travel/safaris.html')"
-                        href="#Travel/safaris.html"
-                        >Safari</a
-                      >
-                    </li>
                     <li>
                       <a
                         class="dropdown-item"
@@ -172,25 +212,6 @@
                       >
                     </li>
                   </ul>
-                </li>
-                <li><hr class="dropdown-divider" /></li>
-
-                <li>
-                  <a
-                    class="dropdown-item"
-                    onclick="loadPage('Travel/hikingadventures.html')"
-                    href="#Travel/hikingadventures.html"
-                    >Hiking and Other Thrill-Seeking</a
-                  >
-                </li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    onclick="loadPage('Travel/europe.html')"
-                    href="#Travel/europe.html"
-                    >Europe</a
-                  >
                 </li>
                 <li><hr class="dropdown-divider" /></li>
                 <li>
@@ -510,35 +531,36 @@
     </script>
 
     <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("mc-embedded-subscribe-form");
-  const successEl = document.getElementById("mce-success-response");
-  const errorEl = document.getElementById("mce-error-response");
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("mc-embedded-subscribe-form");
+        const successEl = document.getElementById("mce-success-response");
+        const errorEl = document.getElementById("mce-error-response");
 
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
 
-    const formData = new FormData(form);
+          const formData = new FormData(form);
 
-    fetch(form.action, {
-      method: "POST",
-      body: formData,
-      mode: "no-cors" // Mailchimp requires this
-    })
-    .then(() => {
-      successEl.style.display = "block";
-      successEl.textContent = "Thanks for subscribing! Please check your email to confirm.";
-      errorEl.style.display = "none";
-      form.reset();
-    })
-    .catch(() => {
-      errorEl.style.display = "block";
-      errorEl.textContent = "Oops, something went wrong. Please try again.";
-      successEl.style.display = "none";
-    });
-  });
-});
-</script>
-
+          fetch(form.action, {
+            method: "POST",
+            body: formData,
+            mode: "no-cors", // Mailchimp requires this
+          })
+            .then(() => {
+              successEl.style.display = "block";
+              successEl.textContent =
+                "Thanks for subscribing! Please check your email to confirm.";
+              errorEl.style.display = "none";
+              form.reset();
+            })
+            .catch(() => {
+              errorEl.style.display = "block";
+              errorEl.textContent =
+                "Oops, something went wrong. Please try again.";
+              successEl.style.display = "none";
+            });
+        });
+      });
+    </script>
   </body>
 </html>
