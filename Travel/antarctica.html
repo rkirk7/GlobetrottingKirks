@@ -1,0 +1,197 @@
+<style>
+  /* Limit text width for readability */
+  #content .container {
+    max-width: 900px;
+  }
+
+  /* Desktop: fixed sidebar */
+  #toc {
+    position: fixed;
+    top: 100px;
+    left: 20px;
+    width: 220px;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  /* Hide the toggle button by default on desktop */
+  #toc-toggle {
+    display: none;
+    width: 100%;
+    margin-bottom: 10px;
+    background: #f8f9fa;
+    border: 1px solid #ccc;
+    padding: 6px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  /* TOC links */
+  #toc ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  #toc li a {
+    display: block;
+    padding: 4px 0;
+    color: #333;
+    text-decoration: none;
+  }
+
+  #toc li a.active {
+    font-weight: bold;
+    color: #007bff;
+  }
+
+  /* Responsive: small screens */
+  @media (max-width: 992px) {
+    #toc {
+      position: static;
+      width: 100%;
+      max-height: none;
+      border: none;
+      box-shadow: none;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+
+    #toc-toggle {
+      display: block;
+    }
+
+    #toc-list {
+      display: none;
+      padding-left: 0;
+      margin-top: 0;
+    }
+
+    #toc-list.show {
+      display: block;
+    }
+  }
+</style>
+
+<div class="container my-5" id="container">
+
+<div id="toc" class="toc bg-light p-3 border rounded d-none d-md-block">
+  <button id="toc-toggle" class="btn btn-sm btn-primary d-md-none mb-2">☰ Table of Contents</button>
+  <ul id="toc-list" class="list-unstyled mb-0"></ul>
+</div>
+
+  <div class="hero" data-hero="../Images/HeroImages/antarctica-hero.jpeg">
+    <div class="hero-content text-center">
+      <h1 class="hero-title">Antarctica: The White Continent</h1>
+    </div>
+  </div>
+
+  <br />
+
+  <p class="intro-text">
+    Majestic. Stark. Quiet, yet teeming with life, from the many (many, many) penguins to marine mammals such as whales and seals. There's no place on Earth like Antarctica, and it's never been as accessible to travelers as it is today. By cruise, you can explore along the coastline of this awe-inspiring continent, with expeditions to paddle your own kayak, explore by zodiac (think comfortable, inflatable speedboats), spend a night on land under the stars, take a submarine into uncharted waters, and even walk on sea ice. The most discerning of travelers can even take a private jet and spend time on the continent in luxury lodges.
+  </p>
+  <p class="intro-text">
+    Of all of our travels, Antarctica took us the most by surprise with how much we loved it. We believe this is a voyage anyone with an adventurous spirit will love. Let us help you find your way to our planet's most remote continent!
+  </p>
+
+      <p>
+      <a
+        href="https://www.globetrottingkirks.com/blogpost.html?post=2025-01-29-antarctica.md"
+        target="_blank"
+        >Read Mei-Mei's Antarctica blog post: Is Antarctica calling you? Here's everything you need to know.</a
+      >
+    </p>
+
+  <p class="text-center">
+    <a
+      href="mailto:meimei.kirk@fora.travel?subject=I%20am%20interested%20in%20Antarctica"
+      class="btn btn-primary"
+    >
+      I am interested in going to Antarctica
+    </a>
+  </p>
+
+    <div class="gallery">
+      <div class="row g-3 justify-content-center">
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/Antarctica/Antarctica2.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/Antarctica/Antarctica5.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+                <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/Antarctica/Antarctica10.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+                <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/Antarctica/Antarctica3.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+                <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/Antarctica/Antarctica11.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+                <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/Antarctica/Antarctica12.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+                        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/Antarctica/Antarctica15.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+                        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/Antarctica/Antarctica14.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+                        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/Antarctica/Antarctica13.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+                        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/Antarctica/Antarctica9.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+                        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/Antarctica/Antarctica6.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+                        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/Antarctica/Antarctica7.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
