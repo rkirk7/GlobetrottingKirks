@@ -9,6 +9,81 @@
   scroll-padding-top: 70px; /* adjust to your navbar height */
 }
 
+
+  /* Desktop: fixed sidebar */
+  #toc {
+    position: fixed;
+    top: 100px;
+    left: 20px;
+    width: 220px;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  /* Hide the toggle button by default on desktop */
+  #toc-toggle {
+    display: none;
+    width: 100%;
+    margin-bottom: 10px;
+    background: #f8f9fa;
+    border: 1px solid #ccc;
+    padding: 6px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  /* TOC links */
+  #toc ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  #toc li a {
+    display: block;
+    padding: 4px 0;
+    color: #333;
+    text-decoration: none;
+  }
+
+  #toc li a.active {
+    font-weight: bold;
+    color: #007bff;
+  }
+
+  /* Responsive: small screens */
+  @media (max-width: 992px) {
+    #toc {
+      position: static;
+      width: 100%;
+      max-height: none;
+      border: none;
+      box-shadow: none;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+
+    #toc-toggle {
+      display: block;
+    }
+
+    #toc-list {
+      display: none;
+      padding-left: 0;
+      margin-top: 0;
+    }
+
+    #toc-list.show {
+      display: block;
+    }
+  }
+
   #backToTop {
     position: fixed;
     bottom: 20px;
@@ -114,10 +189,15 @@
     </a>
   </p>
 
-  <div class="dropdown-wrapper">
+  <!-- <div class="dropdown-wrapper">
     <input id="searchInput" type="text" placeholder="Search countries..." />
     <ul id="countryDropdown"></ul>
-  </div>
+  </div> -->
+
+<div id="toc" class="toc bg-light p-3 border rounded d-none d-md-block">
+  <button id="toc-toggle" class="btn btn-sm btn-primary d-md-none mb-2">☰ Table of Contents</button>
+  <ul id="toc-list" class="list-unstyled mb-0"></ul>
+</div>
 
   <div class="travel-section">
     <h2>Italy</h2>
