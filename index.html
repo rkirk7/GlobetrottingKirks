@@ -565,5 +565,23 @@
         });
       });
     </script>
+
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll(".navbar-nav .nav-link, .navbar-nav .dropdown-item");
+    const navbarCollapse = document.getElementById("navbarCollapse");
+
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        if (navbarCollapse.classList.contains("show")) {
+          const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse) 
+            || new bootstrap.Collapse(navbarCollapse, { toggle: false });
+          bsCollapse.hide();
+        }
+      });
+    });
+  });
+</script>
+
   </body>
 </html>
