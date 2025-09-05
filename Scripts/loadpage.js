@@ -327,7 +327,7 @@ function initCountryDropdown() {
                 a.style.color = '#333';
                 a.addEventListener('click', (e) => {
                     e.preventDefault();
-                    h.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    scrollToHeadingWithOffset(h);
                     dropdown.style.display = 'none';
                     searchInput.value = '';
                 });

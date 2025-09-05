@@ -4,10 +4,13 @@
     max-width: 900px;
   }
 
-  html {
-  scroll-padding-top: 80px; /* adjust to your navbar’s height */
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 3000;
+  display: none; /* hidden by default */
 }
-
 
 /* Container for dropdown */
 /* Container for dropdown */
@@ -46,11 +49,14 @@
   z-index: 2000;
   display: none; /* hidden by default */
   margin-top: 4px;
-  padding: 4px 0;
+  padding: 0;   /* reset UL padding */
+  list-style: none; /* no bullets */
 }
 
 #countryDropdown li {
-  list-style: none;
+  list-style: none; /* redundant but safe */
+  margin: 0;
+  padding: 0;
 }
 
 #countryDropdown li a {
@@ -181,6 +187,7 @@
         </div>
       </div>
     </div>
+    <a href="#" id="backToTop" class="btn btn-primary">↑ Back to Top</a>
   </div>
 
   <div class="travel-section">
@@ -914,3 +921,18 @@
   </div>
 </div>
 
+<script>
+  document.addEventListener("scroll", () => {
+  const btn = document.getElementById("backToTop");
+  if (window.scrollY > 300) {
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+});
+
+document.getElementById("backToTop").addEventListener("click", (e) => {
+  e.preventDefault();
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+</script>
