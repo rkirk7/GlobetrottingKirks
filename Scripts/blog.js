@@ -111,6 +111,7 @@ tocItem.appendChild(tocLink);
 tocList.appendChild(tocItem);
 tocListMobile.appendChild(tocItem.cloneNode(true));
 
+});
 }
 
 document.addEventListener("DOMContentLoaded", initBlog);
