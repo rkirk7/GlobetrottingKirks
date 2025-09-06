@@ -414,3 +414,18 @@ function removeActive(items) {
         }
     });
 }
+
+
+// -------------------- SPA Router (Hash-based) --------------------
+function handleHashChange() {
+  const page = window.location.hash.substring(1) || "home.html"; 
+  loadPage(page);
+}
+
+// Listen for hash changes
+window.addEventListener("hashchange", handleHashChange);
+
+// On first load
+document.addEventListener("DOMContentLoaded", () => {
+  handleHashChange();
+});
