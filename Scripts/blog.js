@@ -84,15 +84,34 @@ async function initBlog() {
     container.appendChild(postDiv);
 
     // --- TOC ---
-    const tocItem = document.createElement('li');
-    const postDate = postData.filename.slice(0, 10); 
-    const dateFormatted = new Date(postDate).toLocaleDateString('en-US', {
-      year: 'numeric', month: 'short', day: 'numeric'
-    });
-    tocItem.innerHTML = `<a href="#${postId}"><strong>${postTitle}</strong><br><small class="text-muted">${dateFormatted}</small></a>`;
-    tocList.appendChild(tocItem);
-    tocListMobile.appendChild(tocItem.cloneNode(true));
+// --- TOC ---
+const tocItem = document.createElement('li');
+const postDate = postData.filename.slice(0, 10); 
+const dateFormatted = new Date(postDate).toLocaleDateString('en-US', {
+  year: 'numeric', month: 'short', day: 'numeric'
+});
+
+// Use a normal <a>, but handle scrolling manually
+const tocLink = document.createElement("a");
+tocLink.href = `#${postId}`;
+tocLink.innerHTML = `<strong>${postTitle}</strong><br><small class="text-muted">${dateFormatted}</small>`;
+
+// Smooth scroll instead of letting SPA router eat it
+tocLink.addEventListener("click", (e) => {
+  e.preventDefault();
+  document.getElementById(postId)?.scrollIntoView({
+    behavior: "smooth",
+    block: "start"
   });
+  // Optionally also update hash so back button works:
+  history.replaceState(null, "", `#${postId}`);
+});
+
+tocItem.appendChild(tocLink);
+tocList.appendChild(tocItem);
+tocListMobile.appendChild(tocItem.cloneNode(true));
+
 }
 
 document.addEventListener("DOMContentLoaded", initBlog);
+
