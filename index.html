@@ -566,22 +566,30 @@
       });
     </script>
 
-    <script>
+  <script>
   document.addEventListener("DOMContentLoaded", function () {
     const navLinks = document.querySelectorAll(".navbar-nav .nav-link, .navbar-nav .dropdown-item");
     const navbarCollapse = document.getElementById("navbarCollapse");
 
     navLinks.forEach((link) => {
-      link.addEventListener("click", () => {
+      link.addEventListener("click", (e) => {
+        // If the link is a dropdown toggle (opens submenu), don't close navbar
+        if (link.classList.contains("dropdown-toggle") || link.classList.contains("submenu-toggle")) {
+          return; 
+        }
+
+        // Otherwise, close navbar on click (normal navigation)
         if (navbarCollapse.classList.contains("show")) {
-          const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse) 
-            || new bootstrap.Collapse(navbarCollapse, { toggle: false });
+          const bsCollapse =
+            bootstrap.Collapse.getInstance(navbarCollapse) ||
+            new bootstrap.Collapse(navbarCollapse, { toggle: false });
           bsCollapse.hide();
         }
       });
     });
   });
 </script>
+
 
   </body>
 </html>
