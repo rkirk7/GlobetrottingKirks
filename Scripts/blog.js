@@ -11,7 +11,7 @@ async function initBlog() {
     "2022-06-13-galapagos.md",
     "2021-08-26-my-heritage-journey.md",
     "2021-08-22-western-parks.md",
-    "2020-02-21-new-zealand.md",
+   "2020-02-21-new-zealand.md",
     "2019-11-05-switzerland.md",
     "2019-11-04-viva-la-via-ferrata.md",
     "2019-11-04-iceland.md",
