@@ -73,12 +73,18 @@
       }
     </style>
 
-     <meta property="og:title" content="Globetrotting Kirks" />
-  <meta property="og:description" content="A mother-daughter travel agent duo specializing in safaris, cruises, polar expeditions, theme parks, and custom itineraries around the world" />
-  <meta property="og:image" content="https://www.globetrottingkirks.com/Images/GKLogo.png" />
-  <meta property="og:url" content="https://www.globetrottingkirks.com" />
+    <meta property="og:title" content="Globetrotting Kirks" />
+    <meta
+      property="og:description"
+      content="A mother-daughter travel agent duo specializing in safaris, cruises, polar expeditions, theme parks, and custom itineraries around the world"
+    />
+    <meta
+      property="og:image"
+      content="https://www.globetrottingkirks.com/Images/GKLogo.png"
+    />
+    <meta property="og:url" content="https://www.globetrottingkirks.com" />
 
-  <meta property="og:type" content="article" />
+    <meta property="og:type" content="article" />
   </head>
 
   <body>
@@ -336,10 +342,48 @@
                 class="nav-link"
                 onclick="loadPage('travelagentbenefits.html')"
                 href="#travelagentbenefits.html"
-                >Travel Agent Benefits</a
+                >Why Use a TA?</a
               >
             </li>
-                       <li class="nav-item">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-auto-close="outside"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Favorite Partners
+              </a>
+              <ul class="dropdown-menu p-2">
+                <li>
+                  <a
+                    class="dropdown-item"
+                    target="_blank"
+                    href="https://www.vikingcruises.com/oceans/myagent/regankirk"
+                    >Viking Cruise Line</a
+                  >
+                </li>
+                     <li>
+                  <a
+                    class="dropdown-item"
+                    target="_blank"
+                    href="https://www.rssc.com/?insider=e2ol0-regan-kirk"
+                    >Regent Cruise Line</a
+                  >
+                </li>
+                    <li>
+                  <a
+                    class="dropdown-item"
+                    target="_blank"
+                    href="https://www.disneytravelcenter.com/msd819626f/"
+                    >Disney</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
               <a
                 class="nav-link"
                 onclick="loadPage('newsletterarchive.html')"
@@ -581,30 +625,33 @@
       });
     </script>
 
-  <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const navLinks = document.querySelectorAll(".navbar-nav .nav-link, .navbar-nav .dropdown-item");
-    const navbarCollapse = document.getElementById("navbarCollapse");
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const navLinks = document.querySelectorAll(
+          ".navbar-nav .nav-link, .navbar-nav .dropdown-item"
+        );
+        const navbarCollapse = document.getElementById("navbarCollapse");
 
-    navLinks.forEach((link) => {
-      link.addEventListener("click", (e) => {
-        // If the link is a dropdown toggle (opens submenu), don't close navbar
-        if (link.classList.contains("dropdown-toggle") || link.classList.contains("submenu-toggle")) {
-          return; 
-        }
+        navLinks.forEach((link) => {
+          link.addEventListener("click", (e) => {
+            // If the link is a dropdown toggle (opens submenu), don't close navbar
+            if (
+              link.classList.contains("dropdown-toggle") ||
+              link.classList.contains("submenu-toggle")
+            ) {
+              return;
+            }
 
-        // Otherwise, close navbar on click (normal navigation)
-        if (navbarCollapse.classList.contains("show")) {
-          const bsCollapse =
-            bootstrap.Collapse.getInstance(navbarCollapse) ||
-            new bootstrap.Collapse(navbarCollapse, { toggle: false });
-          bsCollapse.hide();
-        }
+            // Otherwise, close navbar on click (normal navigation)
+            if (navbarCollapse.classList.contains("show")) {
+              const bsCollapse =
+                bootstrap.Collapse.getInstance(navbarCollapse) ||
+                new bootstrap.Collapse(navbarCollapse, { toggle: false });
+              bsCollapse.hide();
+            }
+          });
+        });
       });
-    });
-  });
-</script>
-
-
+    </script>
   </body>
 </html>
