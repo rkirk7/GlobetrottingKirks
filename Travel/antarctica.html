@@ -4,6 +4,27 @@
     max-width: 900px;
   }
 
+.highlight-box {
+  background: #f8f9fa;
+  border-left: 5px solid #007bff;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.highlight-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Optional brand colors */
+.aurora {
+  border-left-color: #2b7a78; /* teal */
+}
+
+.viking {
+  border-left-color: #a40000; /* Viking red */
+}
+
+
   /* Desktop: fixed sidebar */
   #toc {
     position: fixed;
@@ -76,15 +97,18 @@
     #toc-list.show {
       display: block;
     }
+
+    
   }
 </style>
 
 <div class="container my-5" id="container">
-
-<div id="toc" class="toc bg-light p-3 border rounded d-none d-md-block">
-  <button id="toc-toggle" class="btn btn-sm btn-primary d-md-none mb-2">☰ Table of Contents</button>
-  <ul id="toc-list" class="list-unstyled mb-0"></ul>
-</div>
+  <div id="toc" class="toc bg-light p-3 border rounded d-none d-md-block">
+    <button id="toc-toggle" class="btn btn-sm btn-primary d-md-none mb-2">
+      ☰ Table of Contents
+    </button>
+    <ul id="toc-list" class="list-unstyled mb-0"></ul>
+  </div>
 
   <div class="hero" data-hero="../Images/HeroImages/antarctica-hero.jpeg">
     <div class="hero-content text-center">
@@ -92,45 +116,65 @@
     </div>
   </div>
 
-<div class="travel-section">
+  <div class="travel-section">
+    <div style="text-align: center">
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/1PEMpqbka_U?si=TxDbiBjMpWxz-r6G"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      >
+      </iframe>
+    </div>
 
-  <p class="about">
-    Majestic. Stark. Quiet, yet teeming with life, from the many (many, many) penguins to marine mammals such as whales and seals. There's no place on Earth like Antarctica, and it's never been as accessible to travelers as it is today.
+    <p class="about">
+      Majestic. Stark. Quiet, yet teeming with life, from the many (many, many)
+      penguins to marine mammals such as whales and seals. There's no place on
+      Earth like Antarctica, and it's never been as accessible to travelers as
+      it is today.
     </p>
 
     <p class="about">
-    By cruise, you can explore along the coastline of this awe-inspiring continent, with expeditions to paddle your own kayak, explore by zodiac (think comfortable, inflatable speedboats), spend a night on land under the stars, take a submarine into uncharted waters, and even walk on sea ice. The most discerning of travelers can even take a private jet and spend time on the continent in luxury lodges.
-  </p>
-      <p class="about">
-    If you have time, we strongly recommend visiting the Falkland Islands and South Georgia while you're in the area. Not only will this let you bypass the infamous Drake Crossing (once--you still have to take it coming back!), but you'll see hordes of King Penguins and other stunning vistas you won't find in Antarctica itself.
-  </p>
-        <p class="about">
-    Depending on your travel goals and style, there are wonderful expedition cruise companies to choose from: Viking, Quark, Seabourn, National Geographic-Lindblad, HX Expeditions, and many more. Let us help you find the perfect sailing.
-  </p>
-  <p class="about">
-    Of all of our travels, Antarctica took us the most by surprise with how much we loved it. We believe this is a voyage anyone with an adventurous spirit will love.
-  </p>
+      By cruise, you can explore along the coastline of this awe-inspiring
+      continent, with expeditions to paddle your own kayak, explore by zodiac
+      (think comfortable, inflatable speedboats), spend a night on land under
+      the stars, take a submarine into uncharted waters, and even walk on sea
+      ice. The most discerning of travelers can even take a private jet and
+      spend time on the continent in luxury lodges.
+    </p>
+    <p class="about">
+      If you have time, we strongly recommend visiting the Falkland Islands and
+      South Georgia while you're in the area. Not only will this let you bypass
+      the infamous Drake Crossing (once--you still have to take it coming
+      back!), but you'll see hordes of King Penguins and other stunning vistas
+      you won't find in Antarctica itself.
+    </p>
+    <p class="about">
+      Depending on your travel goals and style, there are wonderful expedition
+      cruise companies to choose from: Viking, Quark, Seabourn, National
+      Geographic-Lindblad, HX Expeditions, and many more. Let us help you find
+      the perfect sailing.
+    </p>
+    <p class="about">
+      Of all of our travels, Antarctica took us the most by surprise with how
+      much we loved it. We believe this is a voyage anyone with an adventurous
+      spirit will love.
+    </p>
 
-  <div style="text-align:center;">
-  <iframe width="560" height="315"
-    src="https://www.youtube.com/embed/1PEMpqbka_U?si=TxDbiBjMpWxz-r6G"
-    title="YouTube video player" frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    referrerpolicy="strict-origin-when-cross-origin"
-    allowfullscreen>
-  </iframe>
-</div>
-
-
-      <p>
+    <p>
       <a
         href="https://www.globetrottingkirks.com/blogpost.html?post=2025-01-29-antarctica.md"
         target="_blank"
-        >Read Mei-Mei's Antarctica blog post: Is Antarctica calling you? Here's everything you need to know.</a
+        >Read Mei-Mei's Antarctica blog post: Is Antarctica calling you? Here's
+        everything you need to know.</a
       >
     </p>
 
-       <p>
+    <p>
       <a
         href="https://www.foratravel.com/trip-reports/AFXFUT/astonishing-antarctica-and-south-georgia-penguins-whales-and-icebergs-galore-regan-kirk
 "
@@ -139,27 +183,38 @@
       >
     </p>
 
-  <p class="text-center">
+    <p class="text-center">
+      <a
+        href="mailto:meimei.kirk@fora.travel?subject=I%20am%20interested%20in%20Antarctica"
+        class="btn btn-primary"
+      >
+        I am interested in going to Antarctica
+      </a>
+    </p>
+
+  <div class="highlight-box aurora my-4 p-3 rounded shadow-sm">
+  <p class="text-center mb-0">
+    Check out
     <a
-      href="mailto:meimei.kirk@fora.travel?subject=I%20am%20interested%20in%20Antarctica"
-      class="btn btn-primary"
-    >
-      I am interested in going to Antarctica
-    </a>
-  </p>
-
-    <p class="text-center">
-    
-      Check out  <a
       href="https://inspires.to/experiences/antarctica-with-aurora-expeditions-falklands-south-georgia-antarctic-peninsula-0yx0z"
-    >Aurora Expeditions</a>, a preferred Virtuoso partner known for stunning new polar expedition ships, fantastic expedition crew, luxury accommodations, and a passenger count of only 130, guaranteeing you maximum time on land.
+      >Aurora Expeditions</a
+    >, a preferred Virtuoso partner known for stunning new polar expedition
+    ships, fantastic expedition crew, luxury accommodations, and a passenger
+    count of only 130, guaranteeing you maximum time on land.
   </p>
+</div>
 
-    <p class="text-center">
-      Looking for a larger ship and more relaxed experience? Check out<a
-      href="https://www.vikingcruises.com/expeditions/?agentUrlId=regankirk&adobe_mc=TS%3D1762032844%7CMCMID%3D09071009586356739603835813553581719227%7CMCORGID%3D8FC267C25245B36B0A490D4C%2540AdobeOrg&_gl=1%2A8if4l9%2A_ga%2AMTczOTcxNjAyOC4xNzYxNjk4OTcy%2A_ga_24KNYDH1S6%2AczE3NjIwMzI4MTckbzQkZzEkdDE3NjIwMzI4NDMkajM0JGwwJGgw&fbclid=IwY2xjawNzu4NleHRuA2FlbQIxMQABHqgTDplU16eNmoYrVj3IYfnjY3TaqHUaWQKujLoS03gs5b5_SHfZZKJCnO_Y_aem_6gx4fJCfG7w_ALxhd9dkaw"
-    >Viking Expeditions</a>, known for luxury accommodations, phenomenal food, a strong expedition crew, and Special Operations Boats--a great way to get up close and personal with wildlife without sacrificing comfort.
+<div class="highlight-box viking my-4 p-3 rounded shadow-sm">
+  <p class="text-center mb-0">
+    Looking for a larger ship and more relaxed experience? Consider
+    <a
+      href="https://www.vikingcruises.com/expeditions/?agentUrlId=regankirk"
+      >Viking Expeditions</a
+    >, known for luxury accommodations, phenomenal food, a strong expedition
+    crew, and Special Operations Boats--a great way to get up close and
+    personal with wildlife without sacrificing comfort.
   </p>
+</div>
 
 
     <div class="gallery">
@@ -176,61 +231,61 @@
             class="img-fluid rounded shadow-sm"
           />
         </div>
-                <div class="col-6 col-md-4 col-lg-2">
+        <div class="col-6 col-md-4 col-lg-2">
           <img
             src="../Images/Antarctica/Antarctica10.jpeg"
             class="img-fluid rounded shadow-sm"
           />
         </div>
-                <div class="col-6 col-md-4 col-lg-2">
+        <div class="col-6 col-md-4 col-lg-2">
           <img
             src="../Images/Antarctica/Antarctica3.jpeg"
             class="img-fluid rounded shadow-sm"
           />
         </div>
-                <div class="col-6 col-md-4 col-lg-2">
+        <div class="col-6 col-md-4 col-lg-2">
           <img
             src="../Images/Antarctica/Antarctica11.jpeg"
             class="img-fluid rounded shadow-sm"
           />
         </div>
-                <div class="col-6 col-md-4 col-lg-2">
+        <div class="col-6 col-md-4 col-lg-2">
           <img
             src="../Images/Antarctica/Antarctica12.jpeg"
             class="img-fluid rounded shadow-sm"
           />
         </div>
-                        <div class="col-6 col-md-4 col-lg-2">
+        <div class="col-6 col-md-4 col-lg-2">
           <img
             src="../Images/Antarctica/Antarctica16.jpeg"
             class="img-fluid rounded shadow-sm"
           />
         </div>
-                        <div class="col-6 col-md-4 col-lg-2">
+        <div class="col-6 col-md-4 col-lg-2">
           <img
             src="../Images/Antarctica/Antarctica14.jpeg"
             class="img-fluid rounded shadow-sm"
           />
         </div>
-                        <div class="col-6 col-md-4 col-lg-2">
+        <div class="col-6 col-md-4 col-lg-2">
           <img
             src="../Images/Antarctica/Antarctica13.jpeg"
             class="img-fluid rounded shadow-sm"
           />
         </div>
-                        <div class="col-6 col-md-4 col-lg-2">
+        <div class="col-6 col-md-4 col-lg-2">
           <img
             src="../Images/Antarctica/Antarctica9.jpeg"
             class="img-fluid rounded shadow-sm"
           />
         </div>
-                        <div class="col-6 col-md-4 col-lg-2">
+        <div class="col-6 col-md-4 col-lg-2">
           <img
             src="../Images/Antarctica/Antarctica6.jpeg"
             class="img-fluid rounded shadow-sm"
           />
         </div>
-                        <div class="col-6 col-md-4 col-lg-2">
+        <div class="col-6 col-md-4 col-lg-2">
           <img
             src="../Images/Antarctica/Antarctica7.jpeg"
             class="img-fluid rounded shadow-sm"
@@ -239,5 +294,4 @@
       </div>
     </div>
   </div>
-  </div>
-
+</div>
