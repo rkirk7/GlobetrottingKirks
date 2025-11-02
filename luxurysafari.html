@@ -7,7 +7,10 @@
 
   <p class="intro-text">
     From November 11-21, 2026, the Globetrotting Kirks, Mei-Mei and Regan, will
-    escort a group of just 14 other travelers on an exclusive luxury safari in South Africa, with nine nights of game viewing in some of the best places on Earth to see lions, leopards, elephants, rhinos, wild dogs, hyenas, and many others in their natural habitat.
+    escort a group of just 14 other travelers on an exclusive luxury safari in
+    South Africa, with nine nights of game viewing in some of the best places on
+    Earth to see lions, leopards, elephants, rhinos, wild dogs, hyenas, and many
+    others in their natural habitat.
   </p>
 
   <p class="text-center">
@@ -16,30 +19,39 @@
       target="_blank"
       class="btn btn-primary"
     >
-     Here's the trip in detail
+      Here's the trip in detail
     </a>
   </p>
 
   <p class="intro-text">
-    Be sure to read the full trip overview above. (You can also view and download a PDF version <a href="https://drive.google.com/file/d/1JsGGZ8dpYogM1kp_Mb5WMA9vzm745dE9/view?usp=sharing" target="_blank">here</a>.) If you have questions, or would like to discuss future travel, please click the button below or email meimeik.kirk@fora.travel and/or regan.kirk@fora.travel. If you're ready to register, please fill out the form. We look forward to traveling with you!
+    Be sure to read the full trip overview above. (You can also view and
+    download a PDF version
+    <a
+      href="https://drive.google.com/file/d/1JsGGZ8dpYogM1kp_Mb5WMA9vzm745dE9/view?usp=sharing"
+      target="_blank"
+      >here</a
+    >.) If you have questions, or would like to discuss future travel, please
+    click the button below or email meimeik.kirk@fora.travel and/or
+    regan.kirk@fora.travel. If you're ready to register, please fill out the
+    form. We look forward to traveling with you!
   </p>
 
   <p class="intro-text">
     <b>Spots remaining: 3</b>
   </p>
 
-    <p class="intro-text">
+  <p class="intro-text">
     <b>Deadline: ASAP. Claim your spot before it's gone!</b>
   </p>
 
   <br />
 
   <img
-              src="Images/26GroupSafari/South Africa Safari Collage.png"
-              class="img-fluid rounded shadow-sm"
-            />
- 
-   <p class="text-center">
+    src="Images/26GroupSafari/South Africa Safari Collage.png"
+    class="img-fluid rounded shadow-sm"
+  />
+
+  <p class="text-center">
     <a
       href="https://docs.google.com/forms/d/e/1FAIpQLSfdeSfjkXRiqFbNWl16XuQygxxxORSKSf8uSik1xS4Wqhov5Q/viewform?usp=dialog"
       class="btn btn-primary"
@@ -47,7 +59,7 @@
       Register Here
     </a>
   </p>
- 
+
   <p class="text-center">
     <a
       href="mailto:regan.kirk@fora.travel?subject=I%20am%20interested%20in%20the%20group%20safari"
@@ -57,44 +69,29 @@
     </a>
   </p>
 
- <!-- <p class="text-center">
-  <button class="btn btn-primary" id="shareButton">
-    Share this page with a friend
-  </button>
-</p> -->
 
-  <!-- <div class="d-flex justify-content-center">
-    <iframe
-      src="https://docs.google.com/forms/d/e/1FAIpQLSfdeSfjkXRiqFbNWl16XuQygxxxORSKSf8uSik1xS4Wqhov5Q/viewform?embedded=true"
-      width="640"
-      height="4113"
-      frameborder="0"
-      marginheight="0"
-      marginwidth="0"
-      >Loading…</iframe
-    >
-  </div>
-</div> -->
+  <script>
+    document
+      .getElementById("shareButton")
+      .addEventListener("click", async () => {
+        const shareData = {
+          title: "2026 Escorted Group Safari",
+          text: "Join the Globetrotting Kirks on a once-in-a-lifetime safari adventure!",
+          url: "https://www.globetrottingkirks.com/#2026groupsafari",
+        };
 
-<script>
-document.getElementById("shareButton").addEventListener("click", async () => {
-    const shareData = {
-      title: "2026 Escorted Group Safari",
-      text: "Join the Globetrotting Kirks on a once-in-a-lifetime safari adventure!",
-      url: "https://www.globetrottingkirks.com/#2026groupsafari",
-    };
-
-    if (navigator.share) {
-      try {
-        await navigator.share(shareData);
-      } catch (err) {
-        console.error("Share cancelled or failed:", err);
-      }
-    } else {
-      // Fallback if share not supported
-      window.open(
-        `mailto:?subject=Check out this safari!&body=Join the Globetrotting Kirks on their 2026 Safari: ${shareData.url}`
-      );
-    }
-  });
-</script>
+        if (navigator.share) {
+          try {
+            await navigator.share(shareData);
+          } catch (err) {
+            console.error("Share cancelled or failed:", err);
+          }
+        } else {
+          // Fallback if share not supported
+          window.open(
+            `mailto:?subject=Check out this safari!&body=Join the Globetrotting Kirks on their 2026 Safari: ${shareData.url}`
+          );
+        }
+      });
+  </script>
+</div>
