@@ -8,7 +8,7 @@ const ALBUMS = {
     total: 18,
   },
   "safari-2024": {
-    name: "Safari to Botswana, Zimbabwe, and Kenya 2024",
+    name: "Safari to South Africa, Zimbabwe, and Kenya 2024",
     folder: "24Safari",
     total: 41,
   },
