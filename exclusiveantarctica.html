@@ -94,10 +94,48 @@ img {
       border-left: 4px solid #0077b6;
       margin: 20px 0;
     }
+    /* ------------------------------ */
+/* FIX TABLE OVERRIDES            */
+/* ------------------------------ */
+
+.antarctica-page .suite-table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  margin: 20px 0 !important;
+  border: 1px solid #ccc !important;
+}
+
+.antarctica-page .suite-table th,
+.antarctica-page .suite-table td {
+  border: 1px solid #ccc !important;
+  padding: 10px !important;
+  text-align: left !important;
+  background: #fff;
+}
+
+.antarctica-page .suite-table th {
+  background: #f0f4f7 !important;
+  font-weight: bold !important;
+}
+
+/* ------------------------------ */
+/* FIX CALLOUT BOX OVERRIDES      */
+/* ------------------------------ */
+
+.antarctica-page .highlight {
+  background: #e6f4ff !important;
+  padding: 15px !important;
+  border-left: 4px solid #0077b6 !important;
+  margin: 20px 0 !important;
+  color: #333 !important;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
   </style>
 </head>
 
-<body>
+<body class="antarctica-page">
   <div class="container">
     <!-- HERO IMAGE PLACEHOLDER -->
     <div class="hero">
@@ -256,6 +294,7 @@ img {
           >
         </td>
         <td>1130–1184 sq ft</td>
+        <td>Call or email for details on Panorama Suites or above!</td>
       </tr>
     </table>
 
