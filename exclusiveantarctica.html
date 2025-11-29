@@ -6,151 +6,204 @@
       padding: 0;
       background: #f7f7f7;
       color: #333;
-      line-height: 1.6;
+      line-height: 1.7;
+      font-size: 16px;
     }
+
+    /* Typography scale */
+    h1 {
+      font-size: 2rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      color: #003d5b;
+    }
+    h2 {
+      font-size: 1.5rem;
+      margin-top: 2.2rem;
+      margin-bottom: 1rem;
+      color: #003d5b;
+    }
+    h3 {
+      font-size: 1.25rem;
+      margin-top: 1.8rem;
+      margin-bottom: 0.8rem;
+      color: #003d5b;
+    }
+    p, li, td, th {
+      font-size: 1rem;
+    }
+
     .container {
       max-width: 800px;
       margin: auto;
       background: #fff;
       padding: 30px;
     }
-    h1,
-    h2,
-    h3 {
-      color: #003d5b;
-    }
 
     .btn {
-  display: inline-block;
-  padding: 12px 20px;
-  background-color: #0077b6;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-}
-.text-center {
-  text-align: center;
-}
+      display: inline-block;
+      padding: 12px 20px;
+      background-color: #0077b6;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+    .btn:hover {
+      background-color: #005f8c;
+    }
+    .text-center {
+      text-align: center;
+    }
 
-.btn:hover {
-  background-color: #005f8c;
-}
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
 
-/* For the fixed-height hero/placeholder boxes */
-.hero img,
-.image-placeholder img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+    .hero img,
+    .image-placeholder img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
     .hero {
       width: 100%;
-      height: 120px;
+      height: 160px;
       background: #ccc;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 28px;
+      font-size: 1.5rem;
       color: #555;
       margin-bottom: 25px;
     }
+
     .image-placeholder {
       width: 100%;
-      height: 140px;
+      height: 160px;
       background: #ddd;
       display: flex;
       align-items: center;
       justify-content: center;
       color: #555;
-      margin: 20px 0;
-      font-size: 20px;
+      margin: 25px 0;
+      font-size: 1.2rem;
     }
+
     ul {
       margin-left: 20px;
     }
-    .suite-table {
+
+    /* ------------------------------ */
+    /* TABLE STYLING                 */
+    /* ------------------------------ */
+
+    .antarctica-page .suite-table {
       width: 100%;
       border-collapse: collapse;
       margin: 20px 0;
+      border: 1px solid #ccc;
+      font-size: 1rem;
     }
-    .suite-table th,
-    .suite-table td {
+
+    .antarctica-page .suite-table th,
+    .antarctica-page .suite-table td {
       border: 1px solid #ccc;
       padding: 10px;
       text-align: left;
     }
-    .suite-table th {
+
+    .antarctica-page .suite-table th {
       background: #f0f4f7;
+      font-weight: bold;
     }
-    .highlight {
+
+    /* ------------------------------ */
+    /* CALLOUT BOX                    */
+    /* ------------------------------ */
+
+    .antarctica-page .highlight {
       background: #e6f4ff;
       padding: 15px;
       border-left: 4px solid #0077b6;
       margin: 20px 0;
+      color: #333;
+      font-size: 1rem;
+      line-height: 1.5;
     }
+
     /* ------------------------------ */
-/* FIX TABLE OVERRIDES            */
-/* ------------------------------ */
+    /* TABLE OF CONTENTS              */
+    /* ------------------------------ */
 
-.antarctica-page .suite-table {
-  width: 100% !important;
-  border-collapse: collapse !important;
-  margin: 20px 0 !important;
-  border: 1px solid #ccc !important;
-}
+    .toc {
+      background: #eef6fb;
+      border-left: 4px solid #0077b6;
+      padding: 15px 20px;
+      margin-bottom: 30px;
+      font-size: 1rem;
+    }
 
-.antarctica-page .suite-table th,
-.antarctica-page .suite-table td {
-  border: 1px solid #ccc !important;
-  padding: 10px !important;
-  text-align: left !important;
-  background: #fff;
-}
+    .toc h2 {
+      font-size: 1.25rem;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
 
-.antarctica-page .suite-table th {
-  background: #f0f4f7 !important;
-  font-weight: bold !important;
-}
+    .toc ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    .toc li {
+      margin-bottom: 6px;
+    }
+    .toc a {
+      text-decoration: none;
+      color: #0077b6;
+    }
+    .toc a:hover {
+      text-decoration: underline;
+    }
 
-/* ------------------------------ */
-/* FIX CALLOUT BOX OVERRIDES      */
-/* ------------------------------ */
-
-.antarctica-page .highlight {
-  background: #e6f4ff !important;
-  padding: 15px !important;
-  border-left: 4px solid #0077b6 !important;
-  margin: 20px 0 !important;
-  color: #333 !important;
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
+    /* Smooth scroll */
+    html {
+      scroll-behavior: smooth;
+    }
   </style>
 </head>
 
 <body class="antarctica-page">
   <div class="container">
-    <!-- HERO IMAGE PLACEHOLDER -->
+    <!-- HERO IMAGE -->
     <div class="hero">
       <img src="Images/ScenicGroup/SE_Eclipse_Exterior_Pensisula_SR_001.jpg" />
     </div>
 
+    <!-- TABLE OF CONTENTS -->
+    <div class="toc">
+      <h2>Quick Navigation</h2>
+      <ul>
+        <li><a href="#important-notes">Important Notes About Antarctica</a></li>
+        <li><a href="#about">What’s This All About?</a></li>
+        <li><a href="#discount">How Good Is This Discount?</a></li>
+        <li><a href="#sailing-info">Sailing Information</a></li>
+        <li><a href="#rooms">Room Types & Pricing</a></li>
+        <li><a href="#payments">Deposit & Payment Details</a></li>
+        <li><a href="#join-us">Join Us!</a></li>
+      </ul>
+    </div>
+
     <h1>This is the Antarctica Deal to End All Antarctica Deals!</h1>
-    <br />
+
     <h2>We're booked to sail on January 15, 2028. Join us on this ultra-luxury expedition to the White Continent.</h2>
 
     <p class="text-center">
-      <a
-        href="mailto:regan.kirk@fora.travel,meimei.kirk@fora.travel?subject=Tell%20me%20more%20about%20cruise%20deals!"
-        class="btn btn-primary"
-      >
+      <a href="mailto:regan.kirk@fora.travel,meimei.kirk@fora.travel?subject=Tell%20me%20more%20about%20cruise%20deals!" class="btn btn-primary">
         Reach Out with Questions or to Book!
       </a>
     </p>
@@ -162,182 +215,120 @@ img {
       discounts.
     </p>
 
-    <p>Check out <a href="https://www.foratravel.com/guides/AG7S74/dreaming-of-antarctica-heres-everything-you-need-to-know-mei-mei-kirk" target="_blank">Mei-Mei's report from our fabulous December 2024 trip with the same itinerary</a>, and/or take a look at our <a href="https://www.globetrottingkirks.com/album.html?album=antarctica-2024" target="_blank">photo album</a>!</p>
+    <p>
+      Check out <a href="https://www.foratravel.com/guides/AG7S74/dreaming-of-antarctica-heres-everything-you-need-to-know-mei-mei-kirk" target="_blank">Mei-Mei's report from our fabulous December 2024 trip</a> or our
+      <a href="https://www.globetrottingkirks.com/album.html?album=antarctica-2024" target="_blank">photo album</a>!
+    </p>
 
-    <!-- SECTION IMAGE -->
     <div class="image-placeholder">
       <img src="Images/ScenicGroup/SE Antarctica Zodiacs Jason Flesher-3.jpg" />
     </div>
 
-    <h2>Important Notes About Antarctica</h2>
+    <!-- SECTION: Important Notes -->
+    <h2 id="important-notes">Important Notes About Antarctica</h2>
     <ul>
-      <li>
-        <strong>Best wildlife viewing:</strong> Mid-January to mid-February is
-        peak time for penguin chicks, whales, and other marine mammals.
-      </li>
-      <li>
-        <strong>Expedition cruising at its finest:</strong> Flexible itineraries
-        give you the best conditions for kayaking with whales, walking with
-        penguins, and landing at pristine sites.
-      </li>
-      <li>
-        <strong>Smaller ships matter:</strong> Only 100 people can be ashore at
-        once, so ships with 200 guests or fewer maximize your time on land.
-      </li>
-      <li>
-        <strong>The ultimate itinerary:</strong> Falklands, South Georgia &
-        Antarctica, which allows you to experience the legendary wildlife of South Georgia (the "Galapagos of the Poles") and only one crossing of the Drake Passage.
-      </li>
+      <li><strong>Best wildlife viewing:</strong> Mid-Jan to mid-Feb = peak penguin chicks & whales.</li>
+      <li><strong>Expedition cruising at its finest:</strong> Flexible days = better landings.</li>
+      <li><strong>Smaller ships matter:</strong> Maximize time ashore.</li>
+      <li><strong>The ultimate itinerary:</strong> Falklands + South Georgia + Antarctica.</li>
     </ul>
 
-    <h2>What’s This All About?</h2>
+    <!-- SECTION: About -->
+    <h2 id="about">What’s This All About?</h2>
     <p>
-      We’ve secured an exclusive opportunity to bring a small group aboard the <strong>Scenic Eclipse II</strong>, an ultra-luxury expedition discovery yacht, on a 20-day Falklands, South Georgia, Antarctica voyage, roundtrip from Buenos Aires. See the
-      <a
-        href="https://www.scenicusa.com/tours/201s-stusa/201s-stusa-2027-bue-bue"
-        target="_blank"
-        >detailed itinerary here.</a
-      >
+      We’ve secured an exclusive opportunity to bring a small group aboard the <strong>Scenic Eclipse II</strong>
+      on a 20-day Falklands, South Georgia & Antarctica expedition. See the
+      <a href="https://www.scenicusa.com/tours/201s-stusa/201s-stusa-2027-bue-bue" target="_blank">detailed itinerary here</a>.
     </p>
 
-    <!-- SHIP IMAGE -->
     <div class="image-placeholder">
-      <img
-        src="Images/ScenicGroup/SE_Scenic_Eclipse_Exterior_Antarctica_Owners_Penthouse_Deck (1).jpg"
-      />
+      <img src="Images/ScenicGroup/SE_Scenic_Eclipse_Exterior_Antarctica_Owners_Penthouse_Deck (1).jpg" />
     </div>
 
     <p>
-      This stunning ship debuted in 2023. It carries only 200 guests with
-      nearly a 1:1 staff-to-passenger ratio. All suites have private verandahs, and
-      the experience includes gratuities, premium alcohol, Wi-Fi, gourmet
-      dining, an expedition jacket to keep, a Buenos Aires hotel night,
-      transfers, and flights to and from Ushuaia.
+      This stunning ship debuted in 2023 and carries only 200 guests with nearly a 1:1 staff ratio.
     </p>
 
     <p><strong>The sailing is already 25% sold—2+ years in advance.</strong></p>
 
-      <h2>So how good is this discount?</h2>
-     Our rate starts at <strong>$17,154 per person</strong> 
-     <br />The public Black Friday rate for the
-      same stateroom: <strong>$33,038 per person</strong> <br />
-      <br />
-      <em>The deal is so good we initially thought it was a mistake.</em>
+    <!-- SECTION: Discount -->
+    <h2 id="discount">So How Good Is This Discount?</h2>
+    <p>Our rate starts at <strong>$17,154 per person</strong><br>
+    Public Black Friday rate: <strong>$33,038 per person</strong></p>
 
-      <br />
-    <p>
-     We (Mei-Mei and Regan) are already booked and would love for you to join us.
-      We’ve secured a very limited number of suites at these prices. However, the faster the suites sell, the more likely it is that we can get additional rooms so we can share this incredible deal with as many clients as we can!
-    </p>
+    <p><em>The deal is so good we initially thought it was a mistake.</em></p>
 
-    <h2>Sailing Information</h2>
-    <p><strong>Departure:</strong> January 15, 2028 - February 3, 2028 roundtrip from Buenos Aires</p>
+    <p>We’re already booked — and we'd love to have you join us.</p>
 
-    <h2>Room Types & Pricing (Per Person)</h2>
+    <!-- SECTION: Sailing Info -->
+    <h2 id="sailing-info">Sailing Information</h2>
+    <p><strong>Departure:</strong> January 15 – February 3, 2028 (roundtrip Buenos Aires)</p>
+
+    <!-- SECTION: Rooms -->
+    <h2 id="rooms">Room Types & Pricing (Per Person)</h2>
 
     <table class="suite-table">
       <tr>
         <th>Suite Type</th>
         <th>Size</th>
         <th>Price (pp)</th>
-        <th>Guaranteed Rooms Remaining</th>
+        <th>Our Reserved Rooms</th>
       </tr>
       <tr>
-        <td>
-          <a
-            href="https://www.scenicusa.com/ocean/ocean-experience/ship-experience/ultra-luxury-suites/verandah-suites"
-            target="_blank"
-            >Verandah Suite</a
-          >
-        </td>
+        <td><a href="https://www.scenicusa.com/ocean/ocean-experience/ship-experience/ultra-luxury-suites/verandah-suites" target="_blank">Verandah Suite</a></td>
         <td>344–366 sq ft</td>
         <td>$17,154</td>
         <td>1 remaining</td>
       </tr>
       <tr>
-        <td>
-          <a
-            href="https://www.scenicusa.com/ocean/ocean-experience/ship-experience/ultra-luxury-suites/verandah-suites"
-            target="_blank"
-            >Deluxe Verandah Suite</a
-          >
-        </td>
+        <td><a href="https://www.scenicusa.com/ocean/ocean-experience/ship-experience/ultra-luxury-suites/verandah-suites" target="_blank">Deluxe Verandah Suite</a></td>
         <td>344–366 sq ft</td>
         <td>$19,584</td>
         <td>2 remaining</td>
       </tr>
       <tr>
-        <td>
-          <a
-            href="https://www.scenicusa.com/ocean/ocean-experience/ship-experience/ultra-luxury-suites/verandah-suites"
-            target="_blank"
-            >Grand Deluxe Verandah Suite</a
-          >
-        </td>
+        <td><a href="https://www.scenicusa.com/ocean/ocean-experience/ship-experience/ultra-luxury-suites/verandah-suites" target="_blank">Grand Deluxe Verandah Suite</a></td>
         <td>409–430 sq ft</td>
         <td>$20,448</td>
-        <td>0 remaining - Email us to request</td>
+        <td>0 remaining — Email to request</td>
       </tr>
       <tr>
-        <td>
-          <a
-            href="https://www.scenicusa.com/ocean/ocean-experience/ship-experience/ultra-luxury-suites/spa-suites"
-            target="_blank"
-            >Spa Suite</a
-          >
-        </td>
+        <td><a href="https://www.scenicusa.com/ocean/ocean-experience/ship-experience/ultra-luxury-suites/spa-suites" target="_blank">Spa Suite</a></td>
         <td>495–538 sq ft</td>
         <td>$23,346</td>
         <td>1 remaining</td>
       </tr>
       <tr>
-        <td>
-          <a
-            href="https://www.scenicusa.com/ocean/ocean-experience/ship-experience/ultra-luxury-suites/panorama-suites"
-            target="_blank"
-            >Panorama or Grand Panorama Suite</a
-          >
-        </td>
+        <td><a href="https://www.scenicusa.com/ocean/ocean-experience/ship-experience/ultra-luxury-suites/panorama-suites" target="_blank">Panorama or Grand Panorama Suite</a></td>
         <td>1130–1184 sq ft</td>
-        <td></td>
-        <td>Contact us for information about this category</td>
+        <td>—</td>
+        <td>Contact us for details</td>
       </tr>
     </table>
 
-    <!-- ROOM IMAGE -->
     <div class="image-placeholder">
       <img src="Images/ScenicGroup/SE-Grand-Deluxe-Verandah-Suite-001.jpg" />
     </div>
 
-    <h2>Deposit & Payment Details</h2>
+    <!-- SECTION: Payments -->
+    <h2 id="payments">Deposit & Payment Details</h2>
     <ul>
-      <li>
-        <strong>20% nonrefundable deposit</strong> required (we can hold a room
-        and plan to deposit in January unless Scenic requires earlier).
-      </li>
+      <li><strong>20% nonrefundable deposit</strong> required.</li>
       <li><strong>Final payment:</strong> 120 days before sailing.</li>
-      <li>
-        <strong>Travel insurance:</strong> Recommended within 14 days of deposit
-        to cover preexisting conditions and potentially cancel for any reason
-        protection (depending on state of residence). We are happy to prepare a selection of quotes for you.
-      </li>
+      <li><strong>Travel insurance:</strong> Recommended within 14 days of deposit.</li>
     </ul>
 
-    <h2>We’d Love to Have You With Us!</h2>
+    <!-- SECTION: Join Us -->
+    <h2 id="join-us">We’d Love to Have You With Us!</h2>
 
-        <p class="text-center">
-      <a
-        href="mailto:regan.kirk@fora.travel,meimei.kirk@fora.travel?subject=Tell%20me%20more%20about%20cruise%20deals!"
-        class="btn btn-primary"
-      >
+    <p class="text-center">
+      <a href="mailto:regan.kirk@fora.travel,meimei.kirk@fora.travel?subject=Tell%20me%20more%20about%20cruise%20deals!" class="btn btn-primary">
         Reach Out with Questions or to Book!
       </a>
     </p>
-    
-    <!-- PENGUIN IMAGE -->
+
     <div class="image-placeholder">
       <img src="Images/ScenicGroup/SE-Helicopter-Antarctica.jpg" />
     </div>
-
   </div>
 </body>
