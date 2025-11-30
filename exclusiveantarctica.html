@@ -178,6 +178,17 @@
   object-fit: cover !important;
 }
 
+.antarctica-page .image-placeholder {
+  height: 90px !important;
+  overflow: hidden !important;
+}
+
+.antarctica-page .image-placeholder img {
+  height: 90px !important;
+  width: 100% !important;   /* <- 80% was causing stretching; 100% makes it behave */
+  object-fit: cover !important;
+}
+
   </style>
 </head>
 
