@@ -66,12 +66,6 @@
       display: block;
     }
 
-    .image-placeholder img {
-      width: 500px;
-      height: auto;
-      object-fit: cover;
-    }
-
     ul {
       margin-left: 20px;
     }
@@ -153,36 +147,51 @@
       scroll-behavior: smooth;
     }
 
+    /* Remove the 80% max-width override */
+    .antarctica-page img {
+      max-width: none; /* important */
+      height: auto;
+    }
 
+    /* Center the entire image block */
+    .image-placeholder {
+      width: 500px; /* consistent width */
+      margin: 25px auto; /* centers it */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-.antarctica-page img {
-  max-width: 80%;
-  height: auto; /* reset */
+    /* Make the images exactly 500px wide */
+    .image-placeholder img {
+      width: 500px;
+      height: auto;
+      display: block;
+    }
+
+    @media (max-width: 600px) {
+  .image-placeholder {
+    width: 100%;
+  }
+  .image-placeholder img {
+    width: 100%;
+  }
 }
-
-
-.image-placeholder {
-  width: 600px;        /* or 500px or whatever you want */
-  height: auto;
-  background: #ddd;
-  margin: 25px auto;   /* centers it */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
   </style>
 </head>
 
 <body class="antarctica-page">
   <div class="container">
-
-
-  <div class="hero" data-hero="Images/ScenicGroup/SE_Eclipse_Exterior_Pensisula_SR_001_hero.jpg">
-    <div class="hero-content text-center">
-      <h1 class="hero-title">The Antarctica Deal to End All Antarctica Deals!</h1>
+    <div
+      class="hero"
+      data-hero="Images/ScenicGroup/SE_Eclipse_Exterior_Pensisula_SR_001_hero.jpg"
+    >
+      <div class="hero-content text-center">
+        <h1 class="hero-title">
+          The Antarctica Deal to End All Antarctica Deals!
+        </h1>
+      </div>
     </div>
-  </div>
 
     <!-- TABLE OF CONTENTS -->
     <div id="toc" class="toc bg-light p-3 border rounded d-none d-md-block">
@@ -192,7 +201,14 @@
       <ul id="toc-list" class="list-unstyled mb-0"></ul>
     </div>
 
-    <p class="text-center"><strong>If you've ever considered going to Antarctica, this special group rate we've secured for a very limited number of rooms is the best deal you'll see to do so in style, offering an ultra-luxury expedition at budget pricing. We're booked to sail on January 15, 2028. Join us!</strong></p>
+    <p class="text-center">
+      <strong
+        >If you've ever considered going to Antarctica, this special group rate
+        we've secured for a very limited number of rooms is the best deal you'll
+        see to do so in style, offering an ultra-luxury expedition at budget
+        pricing. We're booked to sail on January 15, 2028. Join us!</strong
+      >
+    </p>
 
     <p class="text-center">
       Check out
@@ -219,9 +235,7 @@
     </p>
 
     <div class="image-placeholder">
-       <p class="text-center">
       <img src="Images/ScenicGroup/SE Antarctica Zodiacs Jason Flesher-3.jpg" />
-      </p>
     </div>
 
     <!-- SECTION: Important Notes -->
@@ -282,13 +296,10 @@
         <strong>The sailing is already 25% sold—2+ years in advance.</strong>
       </p>
 
-
       <div class="image-placeholder">
-        <p class="text-center">
         <img
           src="Images/ScenicGroup/SE_Scenic_Eclipse_Exterior_Antarctica_Owners_Penthouse_Deck (1).jpg"
         />
-        </p>
       </div>
     </div>
 
@@ -322,12 +333,8 @@
         >.
       </p>
 
-            <div class="image-placeholder">
-        <p class="text-center">
-        <img
-          src="Images/Antarctica/Antarctica15.jpeg"
-        />
-        </p>
+      <div class="image-placeholder">
+        <img src="Images/Antarctica/Antarctica15.jpeg" />
       </div>
     </div>
 
@@ -412,9 +419,7 @@
       </table>
 
       <div class="image-placeholder">
-         <p class="text-center">
         <img src="Images/ScenicGroup/SE-Grand-Deluxe-Verandah-Suite-001.jpg" />
-         </p>
       </div>
     </div>
 
@@ -444,11 +449,9 @@
         <li>Personal purchases</li>
       </ul>
 
-          <div class="image-placeholder">
-             <p class="text-center">
-      <img src="Images/ScenicGroup/SE-Helicopter-Antarctica.jpg" />
-      </p>
-    </div>
+      <div class="image-placeholder">
+        <img src="Images/ScenicGroup/SE-Helicopter-Antarctica.jpg" />
+      </div>
     </div>
 
     <!-- SECTION: Payments -->
@@ -474,12 +477,8 @@
         </a>
       </p>
 
-                  <div class="image-placeholder">
-        <p class="text-center">
-        <img
-          src="Images/Antarctica/Antarctica14.jpeg"
-        />
-        </p>
+      <div class="image-placeholder">
+        <img src="Images/Antarctica/Antarctica14.jpeg" />
       </div>
     </div>
   </div>
