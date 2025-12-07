@@ -187,6 +187,55 @@
       width: auto !important;
       max-width: none !important;
     }
+
+  /*collapse*/
+
+  /* TOC collapsible behaviour */
+#toc {
+  position: relative;
+}
+
+/* Hide TOC list on mobile by default */
+#toc-list {
+  display: none;
+}
+
+#toc.open #toc-list {
+  display: block;
+}
+
+/* TOC toggle button: visible only on small screens */
+#toc-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  #toc {
+    margin-bottom: 20px;
+  }
+
+  #toc-toggle {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+
+  /* Optional: make TOC look like a collapsible card */
+  #toc {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+}
+
+/* Desktop: show TOC always, hide toggle button */
+@media (min-width: 769px) {
+  #toc-list {
+    display: block !important;
+  }
+  #toc-toggle {
+    display: none !important;
+  }
+}
+
   </style>
 </head>
 
@@ -579,4 +628,12 @@
   <!-- <div class="travel-section">
       <iframe src="https://drive.google.com/file/d/1nRJ_131E5ytVEwQoSEOomPhsSJxvcVyp/preview" width="640" height="480" allow="autoplay"></iframe>
     </div> -->
-</body>
+
+<script>
+  document.getElementById("toc-toggle").addEventListener("click", function () {
+    document.getElementById("toc").classList.toggle("open");
+  });
+</script>
+
+
+  </body>
