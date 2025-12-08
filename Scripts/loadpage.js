@@ -72,7 +72,7 @@ async function initializePageScripts(page, loadId) {
   if (loadId !== currentLoadId) return;
   if (page === "albums.html" && typeof initAlbums === "function") initAlbums();
   if (page === "blog.html" && typeof initBlog === "function") initBlog();
-    if (page === "featureddeal.html") loadPage('#antarcticaspecials');
+    if (page === "featureddeal.html") loadPage('antarcticaspecials.html');
   // if (page === "Travel/europe.html" && typeof initCountryDropdown === "function") {
   //   initCountryDropdown();
   // }
