@@ -8,7 +8,35 @@
     width: 100%;
     object-fit: cover;
   }
+  .share-buttons {
+  margin: 30px 0;
+}
+
+.share-buttons h3 {
+  color: #003d5b;
+  margin-bottom: 15px;
+}
+
+.share-btn {
+  display: inline-block;
+  margin: 5px;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.share-btn.facebook { background: #1877f2; }
+.share-btn.twitter { background: #000000; }
+.share-btn.email { background: #0077b6; }
+
+.share-btn:hover {
+  opacity: 0.85;
+}
+
 </style>
+<body>
 
 <div class="container">
   <div
@@ -72,6 +100,35 @@
       allowfullscreen
     ></iframe>
   </p>
+
+<div class="share-buttons text-center">
+  <h3>Share This Page</h3>
+
+  <a
+    class="share-btn facebook"
+    href="#"
+    onclick="shareToFacebook(); return false;"
+  >
+    Share on Facebook
+  </a>
+
+  <a
+    class="share-btn twitter"
+    href="#"
+    onclick="shareToTwitter(); return false;"
+  >
+    Share on X (Twitter)
+  </a>
+
+  <a
+    class="share-btn email"
+    href="#"
+    onclick="shareToEmail(); return false;"
+  >
+    Share via Email
+  </a>
+</div>
+
 
   <p class="text-center">
     <strong>Solo travelers:</strong> Rooms are priced based on double occupancy.
@@ -157,7 +214,7 @@
           <div class="card-body d-flex flex-column">
             <h3 class="card-title">
               See king penguins and so much more on the ultimate Antarctica
-              itinerary, with South Georgia and the Falkland Islands
+              itinerary, with South Georgia and the Falkland Islands, on TWO separate sailings in early 2028
             </h3>
             <p class="text-muted mb-3">January 15, 2028 – February 3, 2028</p>
             <p class="text-muted mb-3">OR</p>
@@ -205,6 +262,7 @@
             >
               Learn More About February 2028
             </a>
+            <br />
 
                        <a
               href="https://www.globetrottingkirks.com/#exclusiveantarctica"
@@ -297,3 +355,27 @@
     </p>
   </div>
 </div>
+
+<script>
+  const pageUrl = encodeURIComponent(window.location.href);
+  const pageTitle = encodeURIComponent(document.title);
+
+  function shareToFacebook() {
+    window.open(
+      `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`,
+      "_blank"
+    );
+  }
+
+  function shareToTwitter() {
+    window.open(
+      `https://twitter.com/intent/tweet?url=${pageUrl}&text=${pageTitle}`,
+      "_blank"
+    );
+  }
+
+  function shareToEmail() {
+    window.location.href = `mailto:?subject=${pageTitle}&body=${pageUrl}`;
+  }
+</script>
+</body>
