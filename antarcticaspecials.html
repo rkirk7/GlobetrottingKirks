@@ -105,7 +105,7 @@
       <p>
         We've secured outrageously discounted, exclusive group pricing for THREE
         sailings with ultra-luxury expedition cruise line
-        <a href="#scenic"><strong>Scenic</strong></a> aboard their Eclipse II
+        <a href="#" onclick="scrollToSection('scenic'); return false;"><strong>Scenic</strong></a> aboard their Eclipse II
         discovery yacht. If you've ever considered going to Antarctica, this is
         your chance to experience the white continent with butler service while
         paying budget pricing!
@@ -115,15 +115,14 @@
         Additionally, for those who wish to travel to South Georgia next season,
         we've secured a substantial group discount with luxury expedition cruise
         line
-        <a href="#atlas"><strong>Atlas Ocean Voyages</strong></a> aboard the
+        <a href="#" onclick="scrollToSection('atlas'); return false;"><strong>Atlas Ocean Voyages</strong></a> aboard the
         World Traveller private yacht.
       </p>
 
       <p>
         Finally, for the most discerning of Antarctica travelers, we've secured
         exclusive group pricing for
-        <a href="#quark"><strong>Quark Expeditions</strong></a
-        >' November 2027 expedition to Snow Hill, which will attempt to reach
+       <a href="#" onclick="scrollToSection('quark'); return false;"><strong>Quark Expeditions</strong></a>' November 2027 expedition to Snow Hill, which will attempt to reach
         the remote emperor penguin colony.
       </p>
 
@@ -470,3 +469,16 @@
     </p>
   </div>
 </div>
+
+<script>
+  function scrollToSection(id) {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
+  }
+</script>
+
