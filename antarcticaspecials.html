@@ -17,15 +17,14 @@
   }
 
   .scroll-link {
-  cursor: pointer;
-  color: #0077b6;
-  text-decoration: underline;
-}
+    cursor: pointer;
+    color: #0077b6;
+    text-decoration: underline;
+  }
 
-.scroll-link:hover {
-  color: #005f8b;
-}
-
+  .scroll-link:hover {
+    color: #005f8b;
+  }
 
   .hero {
     position: relative;
@@ -47,17 +46,15 @@
     margin-bottom: 10px;
   }
 
-
   a[role="button"] {
-  cursor: pointer;
-  color: #0077b6;
-  text-decoration: underline;
-}
+    cursor: pointer;
+    color: #0077b6;
+    text-decoration: underline;
+  }
 
-a[role="button"]:hover {
-  color: #005f8b;
-}
-
+  a[role="button"]:hover {
+    color: #005f8b;
+  }
 
   .card img {
     max-height: 240px;
@@ -128,25 +125,25 @@ a[role="button"]:hover {
       <p>
         We've secured outrageously discounted, exclusive group pricing for THREE
         sailings with ultra-luxury expedition cruise line
-        <a class="scroll-link" data-target="scenic"><strong>Scenic</strong></a> aboard their Eclipse II
-        discovery yacht. If you've ever considered going to Antarctica, this is
-        your chance to experience the white continent with butler service while
-        paying budget pricing!
+        <strong>Scenic</strong> aboard their Eclipse II discovery yacht. If
+        you've ever considered going to Antarctica, this is your chance to
+        experience the white continent with butler service while paying budget
+        pricing!
       </p>
 
       <p>
         Additionally, for those who wish to travel to South Georgia next season,
         we've secured a substantial group discount with luxury expedition cruise
         line
-        <a class="scroll-link" data-target="atlas"><strong>Atlas Ocean Voyages</strong></a> aboard the
-        World Traveller private yacht.
+        <strong>Atlas Ocean Voyages</strong> aboard the World Traveller private
+        yacht.
       </p>
 
       <p>
         Finally, for the most discerning of Antarctica travelers, we've secured
         exclusive group pricing for
-      <a class="scroll-link" data-target="quark"><strong>Quark Expeditions</strong></a>' November 2027 expedition to Snow Hill, which will attempt to reach
-        the remote emperor penguin colony.
+        <strong>Quark Expeditions</strong>' November 2027 expedition to Snow
+        Hill, which will attempt to reach the remote emperor penguin colony.
       </p>
 
       <p class="text-center">
@@ -159,7 +156,14 @@ a[role="button"]:hover {
       </p>
     </div>
 
-    <h2 id="scenic" class="text-center">Scenic Groups</h2>
+    <div id="toc" class="toc bg-light p-3 border rounded d-none d-md-block">
+      <button id="toc-toggle" class="btn btn-sm btn-primary d-md-none mb-2">
+        ☰ Table of Contents
+      </button>
+      <ul id="toc-list" class="list-unstyled mb-0"></ul>
+    </div>
+
+    <h2 id="scenic" class="text-center">Scenic</h2>
 
     <p class="text-center">
       <iframe
@@ -495,20 +499,17 @@ a[role="button"]:hover {
 
 <script>
   // Smooth scroll for internal links
-  document.querySelectorAll(".scroll-link").forEach(link => {
-    link.addEventListener("click", function(e) {
+  document.querySelectorAll(".scroll-link").forEach((link) => {
+    link.addEventListener("click", function (e) {
       e.preventDefault(); // stop default jump
       const targetId = this.getAttribute("data-target");
       const targetEl = document.getElementById(targetId);
       if (targetEl) {
         targetEl.scrollIntoView({
           behavior: "smooth",
-          block: "start"
+          block: "start",
         });
       }
     });
   });
 </script>
-
-
-
