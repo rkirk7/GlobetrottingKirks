@@ -521,7 +521,7 @@
     <!-- Page Content -->
     <div id="content" class="container mt-5 pt-5"></div>
 
-    <!-- Newsletter Signup Section -->
+    <!-- Newsletter Signup Section
     <div id="mc_embed_shell">
       <div id="mc_embed_signup">
         <form
@@ -604,44 +604,189 @@
                 </p>
               </div>
             </div>
-          </div>
+          </div> -->
         </form>
       </div>
     </div>
 
-    <footer class="bg-dark text-white text-center p-4 mt-5">
-      <p
-        class="footer-text d-flex align-items-center justify-content-center flex-wrap gap-2"
-      >
-        <span>Globetrotting Kirks</span>
-        <img src="Images/GKLogo.png" alt="GK Logo" class="footer-logo" />
-        <span>Your Travel Experts</span>
-      </p>
-      <p>
-        <a href="mailto:meimei.kirk@fora.travel">meimei.kirk@fora.travel</a> |
-        <a href="mailto:regan.kirk@fora.travel">regan.kirk@fora.travel</a>
-      </p>
-      <p>
-        <i
-          >Globetrotting Kirks is an affiliate of Fora Travel, a Virtuoso
-          Member</i
-        >
-      </p>
-      <p>
-        Website designed by
-        <a href="mailto:kirkcreativellc@gmail.com">Kirk Creative LLC</a>, custom
-        app and website developer
-      </p>
+<footer class="footer-mega bg-dark text-light mt-5">
+  <div class="container py-5">
 
-      <p>
-        <a
-          onclick="loadPage('termsandconditions.html')"
-          href="#termsandconditions.html"
-        >
-          Terms and Conditions</a
-        >
-      </p>
-    </footer>
+    <div class="accordion footer-accordion" id="footerAccordion">
+
+      <div class="row g-4">
+
+        <!-- Column 1 -->
+        <div class="col-md-4">
+          <div class="accordion-item bg-dark border-0">
+            <h5 class="accordion-header footer-heading" id="headingGroups">
+              <button
+                class="accordion-button collapsed bg-dark text-light"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseGroups"
+                aria-expanded="false"
+              >
+                Hosted Groups
+              </button>
+            </h5>
+            <div
+              id="collapseGroups"
+              class="accordion-collapse collapse show-md"
+              data-bs-parent="#footerAccordion"
+            >
+              <div class="accordion-body p-0">
+                <ul class="list-unstyled footer-links">
+                  <li><a onclick="loadPage('antarcticaspecials.html')" href="#antarcticaspecials.html">Exclusive Antarctica Groups</a></li>
+                  <li><a onclick="loadPage('luxurysafari.html')" href="#luxurysafari.html">2026 Group Safari</a></li>
+                  <li><a onclick="loadPage('Travel/grouptravel.html')" href="#Travel/grouptravel.html">Group Travel</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="col-md-4">
+          <div class="accordion-item bg-dark border-0">
+            <h5 class="accordion-header footer-heading" id="headingQuick">
+              <button
+                class="accordion-button collapsed bg-dark text-light"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseQuick"
+                aria-expanded="false"
+              >
+                Quick Links
+              </button>
+            </h5>
+            <div
+              id="collapseQuick"
+              class="accordion-collapse collapse show-md"
+              data-bs-parent="#footerAccordion"
+            >
+              <div class="accordion-body p-0">
+                <ul class="list-unstyled footer-links">
+                  <li><a onclick="loadPage('aboutus.html')" href="#aboutus.html">About Us</a></li>
+                  <li><a onclick="loadPage('blog.html')" href="#blog.html">Blog</a></li>
+                  <li><a onclick="loadPage('testimonials.html')" href="#testimonials.html">Testimonials</a></li>
+                  <li><a onclick="loadPage('travelagentbenefits.html')" href="#travelagentbenefits.html">Why Use a TA?</a></li>
+                  <li><a onclick="loadPage('termsandconditions.html')" href="#termsandconditions.html">Terms & Conditions</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 3: Contact + Newsletter -->
+        <div class="col-md-4">
+          <div class="accordion-item bg-dark border-0">
+            <h5 class="accordion-header footer-heading" id="headingContact">
+              <button
+                class="accordion-button collapsed bg-dark text-light"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseContact"
+                aria-expanded="false"
+              >
+                Contact & Newsletter
+              </button>
+            </h5>
+            <div
+              id="collapseContact"
+              class="accordion-collapse collapse show-md"
+              data-bs-parent="#footerAccordion"
+            >
+              <div class="accordion-body p-0">
+
+                <p class="mb-2">
+                  <strong>Email:</strong><br />
+                  <a href="mailto:meimei.kirk@fora.travel">meimei.kirk@fora.travel</a><br />
+                  <a href="mailto:regan.kirk@fora.travel">regan.kirk@fora.travel</a>
+                </p>
+
+                <p class="mb-3">
+                  <strong>Phone:</strong><br />
+                  <a href="tel:+1XXXXXXXXXX">(XXX) XXX-XXXX</a>
+                </p>
+
+                <!-- Newsletter -->
+                <form
+                  action="https://fora.us12.list-manage.com/subscribe/post?u=9e4e0ffaef14115fa941069c0&amp;id=9d3e039cb7"
+                  method="post"
+                  target="_blank"
+                  class="footer-newsletter"
+                >
+                  <label class="form-label">Subscribe to our newsletter</label>
+                  <div class="input-group mb-2">
+                    <input
+                      type="email"
+                      name="EMAIL"
+                      class="form-control"
+                      placeholder="Email address"
+                      required
+                    />
+                    <button class="btn btn-warning" type="submit">
+                      Subscribe
+                    </button>
+                  </div>
+                </form>
+
+                <div class="footer-social d-flex gap-3 mt-3">
+                  <a href="https://www.instagram.com/globetrottingkirks" target="_blank"><i class="bi bi-instagram"></i></a>
+                  <a href="https://www.facebook.com/profile.php?id=61579778874988" target="_blank"><i class="bi bi-facebook"></i></a>
+                  <a href="https://www.youtube.com/@globetrottingkirks" target="_blank"><i class="bi bi-youtube"></i></a>
+                  <a href="https://www.tiktok.com/@globetrottingkirks" target="_blank"><i class="bi bi-tiktok"></i></a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer bottom -->
+  <div class="footer-bottom text-center py-3">
+    <p class="mb-1 d-flex align-items-center justify-content-center gap-2 flex-wrap">
+      <span>Globetrotting Kirks</span>
+      <img src="Images/GKLogo.png" alt="GK Logo" class="footer-logo" />
+      <span>Your Travel Experts</span>
+    </p>
+    <p class="mb-1">
+      <i>Globetrotting Kirks is an affiliate of Fora Travel, a Virtuoso Member</i>
+    </p>
+    <p class="mb-0">
+      Website designed by
+      <a href="mailto:kirkcreativellc@gmail.com">Kirk Creative LLC</a>
+    </p>
+  </div>
+</footer>
+
+
+    <!-- Bottom Section Menu -->
+<nav id="bottomMenu" class="bottom-menu bg-dark">
+  <ul class="nav justify-content-around">
+    <li class="nav-item">
+      <a class="nav-link active" href="#overview">Overview</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#itinerary">Itinerary</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#ships">Ships</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#pricing">Pricing</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#faq">FAQ</a>
+    </li>
+  </ul>
+</nav>
+
 
     <!-- Scripts (defer or async) -->
     <script src="Scripts/loadpage.js"></script>
@@ -747,5 +892,6 @@
         });
       });
     </script>
+    
   </body>
 </html>

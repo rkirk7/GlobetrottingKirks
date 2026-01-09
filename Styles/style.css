@@ -388,6 +388,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+
 .recently-booked-wrapper {
   display: flex;
   gap: 1.25rem;
@@ -395,6 +396,63 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 1rem;
   scrollbar-width: thin;
 }
+
+/* Footer accordion behavior */
+.footer-accordion .accordion-button {
+  font-size: 1.1rem;
+  padding: 0;
+  box-shadow: none;
+}
+
+.footer-accordion .accordion-button::after {
+  filter: invert(1);
+}
+
+.footer-accordion .accordion-body {
+  padding-top: 0.75rem;
+}
+
+/* Footer links */
+.footer-links a {
+  color: #bbbbbb;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #ffcc00;
+  text-decoration: underline;
+}
+
+/* Newsletter */
+.footer-newsletter input {
+  font-size: 0.9rem;
+}
+
+/* Social icons */
+.footer-social a {
+  font-size: 1.4rem;
+  color: #bbbbbb;
+}
+
+.footer-social a:hover {
+  color: #ffcc00;
+}
+
+/* Desktop: keep footer sections open */
+@media (min-width: 768px) {
+  .show-md {
+    display: block !important;
+  }
+
+  .footer-accordion .accordion-button {
+    pointer-events: none;
+  }
+
+  .footer-accordion .accordion-button::after {
+    display: none;
+  }
+}
+
 
 .recently-booked-item {
   min-width: 200px;

@@ -47,6 +47,7 @@ async function loadPage(page) {
       content.innerHTML = `<p>Error loading page.</p>`;
     }
   }
+  
 }
 
 // -------------------- Initialize Page Scripts --------------------
