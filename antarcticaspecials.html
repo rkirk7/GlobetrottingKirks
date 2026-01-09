@@ -16,6 +16,17 @@
     padding: 20px;
   }
 
+  .scroll-link {
+  cursor: pointer;
+  color: #0077b6;
+  text-decoration: underline;
+}
+
+.scroll-link:hover {
+  color: #005f8b;
+}
+
+
   .hero {
     position: relative;
     background-image: url("Images/ScenicGroup/SE_Eclipse_Exterior_Pensisula_SR_001_hero.jpg");
@@ -117,7 +128,7 @@ a[role="button"]:hover {
       <p>
         We've secured outrageously discounted, exclusive group pricing for THREE
         sailings with ultra-luxury expedition cruise line
-        <a role="button" onclick="scrollToSection('scenic')"><strong>Scenic</strong></a> aboard their Eclipse II
+        <a class="scroll-link" data-target="scenic"><strong>Scenic</strong></a> aboard their Eclipse II
         discovery yacht. If you've ever considered going to Antarctica, this is
         your chance to experience the white continent with butler service while
         paying budget pricing!
@@ -127,14 +138,14 @@ a[role="button"]:hover {
         Additionally, for those who wish to travel to South Georgia next season,
         we've secured a substantial group discount with luxury expedition cruise
         line
-        <a role="button" onclick="scrollToSection('atlas')"><strong>Atlas Ocean Voyages</strong></a> aboard the
+        <a class="scroll-link" data-target="atlas"><strong>Atlas Ocean Voyages</strong></a> aboard the
         World Traveller private yacht.
       </p>
 
       <p>
         Finally, for the most discerning of Antarctica travelers, we've secured
         exclusive group pricing for
-      <a role="button" onclick="scrollToSection('quark')"><strong>Quark Expeditions</strong></a>' November 2027 expedition to Snow Hill, which will attempt to reach
+      <a class="scroll-link" data-target="quark"><strong>Quark Expeditions</strong></a>' November 2027 expedition to Snow Hill, which will attempt to reach
         the remote emperor penguin colony.
       </p>
 
@@ -483,14 +494,29 @@ a[role="button"]:hover {
 </div>
 
 <script>
-  function scrollToSection(id) {
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-      });
-    }
-  }
+  document.addEventListener(
+    "click",
+    function (e) {
+      const link = e.target.closest(".scroll-link");
+      if (!link) return;
+
+      // STOP SPA ROUTER DEAD
+      e.preventDefault();
+      e.stopPropagation();
+      e.stopImmediatePropagation();
+
+      const id = link.getAttribute("data-target");
+      const el = document.getElementById(id);
+
+      if (el) {
+        el.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      }
+    },
+    true // 👈 CAPTURE PHASE (critical)
+  );
 </script>
+
 
