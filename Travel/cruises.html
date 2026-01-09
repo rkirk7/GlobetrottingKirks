@@ -21,10 +21,12 @@
   }
 
   .cruise-card img {
-    height: 160px;
+    height: 180px;
     width: 100%;
     object-fit: cover;
   }
+
+  
 
   .cruise-card .card-body {
     padding: 1rem;
@@ -46,6 +48,65 @@
     text-decoration: none;
     color: inherit;
   }
+
+  .cruise-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cruise-card .card-body {
+    flex: 1; /* fills remaining space */
+    display: flex;
+    flex-direction: column;
+  }
+
+.cruise-card p {
+  justify-content: center;
+}
+
+
+  .cruise-card h5 {
+    min-height: 2.6em; /* keeps titles aligned */
+  }
+
+  .cruise-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cruise-card img {
+  height: 160px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.cruise-card .card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.cruise-card h5 {
+  min-height: 2.6em;
+}
+
+.cruise-card p {
+  flex-grow: 1;
+  font-size: 0.9rem;
+  color: #555;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.cruise-card .btn {
+  margin-top: auto; /* pushes button to bottom */
+  align-self: flex-start;
+}
+
 </style>
 
 <div class="container my-5">
@@ -79,72 +140,59 @@
 
     <div class="row g-4">
       <!-- Viking -->
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card cruise-card">
-          <a
-            href="https://www.vikingcruises.com/oceans/myagent/regankirk"
-            target="_blank"
-          >
-            <img src="../Images/Cruises/Cruises1.jpeg" alt="Viking Cruises" />
-            <div class="card-body">
-              <h5>Viking</h5>
-              <p>Refined ocean and river cruises with cultural immersion.</p>
-            </div>
-          </a>
-        </div>
-      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
+  <div class="card cruise-card w-100 shadow-sm">
+    <img
+      src="../Images/Cruises/Cruises1.jpeg"
+      alt="Viking Cruises"
+      class="card-img-top"
+    />
 
-      <!-- Regent Seven Seas -->
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card cruise-card">
-          <a
-            href="https://www.rssc.com/?insider=e2ol0-regan-kirk"
-            target="_blank"
-          >
-            <img
-              src="../Images/Cruises/Cruises2.jpeg"
-              alt="Regent Seven Seas"
-            />
-            <div class="card-body">
-              <h5>Regent Seven Seas</h5>
-              <p>Ultra-luxury, all-inclusive cruising at its finest.</p>
-            </div>
-          </a>
-        </div>
-      </div>
+    <div class="card-body">
+      <h5 class="card-title">Viking</h5>
 
-      <!-- Royal Caribbean -->
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card cruise-card">
-          <a href="https://www.royalcaribbean.com" target="_blank">
-            <img src="../Images/Cruises/Cruises3.jpeg" alt="Royal Caribbean" />
-            <div class="card-body">
-              <h5>Royal Caribbean</h5>
-              <p>
-                Innovative ships and unforgettable family-friendly adventures.
-              </p>
-            </div>
-          </a>
-        </div>
-      </div>
+      <p class="card-text">
+        Refined ocean and river cruises with immersive cultural experiences and
+        destination-focused itineraries.
+      </p>
 
-      <!-- Celebrity -->
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card cruise-card">
-          <a href="https://www.celebritycruises.com" target="_blank">
-            <img
-              src="../Images/Cruises/Cruises4.jpeg"
-              alt="Celebrity Cruises"
-            />
-            <div class="card-body">
-              <h5>Celebrity Cruises</h5>
-              <p>Modern luxury with exceptional dining and design.</p>
-            </div>
-          </a>
-        </div>
-      </div>
+      <a
+        href="https://www.vikingcruises.com/oceans/myagent/regankirk"
+        target="_blank"
+        class="btn btn-outline-primary btn-sm"
+      >
+        Learn more →
+      </a>
     </div>
   </div>
+</div>
+
+<div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
+  <div class="card cruise-card w-100 shadow-sm">
+    <img
+      src="../Images/Cruises/Cruises2.jpeg"
+      alt="Regent Seven Seas"
+      class="card-img-top"
+    />
+
+    <div class="card-body">
+      <h5 class="card-title">Regent Seven Seas</h5>
+
+      <p class="card-text">
+        Ultra-luxury, all-inclusive cruising at its finest.
+      </p>
+
+      <a
+              href="https://www.rssc.com/?insider=e2ol0-regan-kirk"
+        target="_blank"
+        class="btn btn-outline-primary btn-sm"
+      >
+        Learn more →
+      </a>
+    </div>
+  </div>
+</div>
+
 
   <p class="text-center">
     <a
@@ -155,46 +203,46 @@
     </a>
   </p>
 
-<div class="gallery">
-  <div class="mb-5">
-    <div class="row g-3 justify-content-center">
-      <div class="col-6 col-md-4 col-lg-2">
-        <img
-          src="../Images/Cruises/Cruises1.jpeg"
-          class="img-fluid rounded shadow-sm"
-        />
-      </div>
-      <div class="col-6 col-md-4 col-lg-2">
-        <img
-          src="../Images/Cruises/Cruises2.jpeg"
-          class="img-fluid rounded shadow-sm"
-        />
-      </div>
-      <div class="col-6 col-md-4 col-lg-2">
-        <img
-          src="../Images/Cruises/Cruises3.jpeg"
-          class="img-fluid rounded shadow-sm"
-        />
-      </div>
-      <div class="col-6 col-md-4 col-lg-2">
-        <img
-          src="../Images/Cruises/Cruises4.jpeg"
-          class="img-fluid rounded shadow-sm"
-        />
-      </div>
-      <div class="col-6 col-md-4 col-lg-2">
-        <img
-          src="../Images/Cruises/Cruises5.jpeg"
-          class="img-fluid rounded shadow-sm"
-        />
-      </div>
-      <div class="col-6 col-md-4 col-lg-2">
-        <img
-          src="../Images/18RiverCruise/18RiverCruise1.jpeg"
-          class="img-fluid rounded shadow-sm"
-        />
+  <div class="gallery">
+    <div class="mb-5">
+      <div class="row g-3 justify-content-center">
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/Cruises/Cruises1.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/Cruises/Cruises2.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/Cruises/Cruises3.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/Cruises/Cruises4.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/Cruises/Cruises5.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/18RiverCruise/18RiverCruise1.jpeg"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
       </div>
     </div>
   </div>
-</div>
 </div>
