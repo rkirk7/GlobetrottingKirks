@@ -1,0 +1,541 @@
+<head>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f7f7f7;
+      color: #333;
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    /* Typography scale */
+    h1 {
+      font-size: 2rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      color: #003d5b;
+    }
+    h2 {
+      font-size: 1.5rem;
+      margin-top: 2.2rem;
+      margin-bottom: 1rem;
+      color: #003d5b;
+    }
+    h3 {
+      font-size: 1.25rem;
+      margin-top: 1.8rem;
+      margin-bottom: 0.8rem;
+      color: #003d5b;
+    }
+    p,
+    li,
+    td,
+    th {
+      font-size: 1rem;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      background-color: #0077b6;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+    .btn:hover {
+      background-color: #005f8c;
+    }
+    .text-center {
+      text-align: center;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    /* ------------------------------ */
+    /* TABLE STYLING                 */
+    /* ------------------------------ */
+
+    .antarctica-page .suite-table {
+      width: 100%;
+      max-width: 900px;
+      border-collapse: collapse;
+      margin: 20px auto;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    .antarctica-page .suite-table th,
+    .antarctica-page .suite-table td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+
+    .antarctica-page .suite-table th {
+      background: #f0f4f7;
+      font-weight: bold;
+    }
+
+    /* ------------------------------ */
+    /* CALLOUT BOX                    */
+    /* ------------------------------ */
+
+    .antarctica-page .highlight {
+      background: #e6f4ff;
+      padding: 15px;
+      border-left: 4px solid #0077b6;
+      margin: 20px 0;
+      color: #333;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    /* ------------------------------ */
+    /* TABLE OF CONTENTS              */
+    /* ------------------------------ */
+
+    .toc {
+      background: #eef6fb;
+      border-left: 4px solid #0077b6;
+      padding: 15px 20px;
+      margin-bottom: 30px;
+      font-size: 1rem;
+    }
+
+    .toc h2 {
+      font-size: 1.25rem;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .toc ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    .toc li {
+      margin-bottom: 6px;
+    }
+    .toc a {
+      text-decoration: none;
+      color: #0077b6;
+    }
+    .toc a:hover {
+      text-decoration: underline;
+    }
+
+    /* Smooth scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .antarctica-container {
+      max-width: 600px;
+    }
+
+    /* Center the entire image block */
+    .image-placeholder {
+      width: 500px; /* consistent width */
+      margin: 25px auto; /* centers it */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Make the images exactly 500px wide */
+    .image-placeholder img {
+      max-width: 500px !important;
+      width: 500px;
+      height: auto;
+      display: block;
+    }
+
+    @media (max-width: 600px) {
+      .image-placeholder {
+        width: 100%;
+      }
+      .image-placeholder img {
+        width: 100%;
+      }
+    }
+
+    .antarctica-page img {
+      max-width: none !important;
+    }
+    .antarctica-page .image-placeholder img {
+      width: 500px !important;
+      max-width: 500px !important;
+      flex-shrink: 0 !important;
+    }
+
+    .hero img {
+      width: auto !important;
+      max-width: none !important;
+    }
+  </style>
+</head>
+
+<body class="antarctica-page">
+  <div class="container">
+    <div class="antarctica-container">
+      <div class="hero" data-hero="Images/QuarkGroup/hero.jpg">
+        <div class="hero-content text-center">
+          <h1 class="hero-title">
+            Discounted EXTREMELY Competitive Snow Hill Expedition with Quark in
+            November 2027
+          </h1>
+        </div>
+      </div>
+
+      <div id="toc" class="toc bg-light p-3 border rounded d-none d-md-block">
+        <button id="toc-toggle" class="btn btn-sm btn-primary d-md-none mb-2">
+          ☰ Table of Contents
+        </button>
+        <ul id="toc-list" class="list-unstyled mb-0"></ul>
+      </div>
+
+      <div class="card my-4">
+        <div class="card-body">
+          <p class="text-center">
+            <strong
+              >Have you dreamed of standing among emperor penguins ever since
+              watching <em>March of the Penguins</em>? They're tough to reach;
+              the vast majority of Antarctica expeditions will never see an
+              emperor penguin. The best way to reach them by ship is on an
+              expedition to Snow Hill island on the eastern side of the
+              Antarctic peninsula, traveling by helicopter from the ship to
+              within walking distance of the colony.</strong
+            >
+          </p>
+          <p>
+            This expedition isn't for the faint of heart. Success is not
+            guaranteed--it's possible we'll go all that way and be unable to
+            reach the island. But imagine being part of the tiny percentage of
+            people to ever stand among these majestic birds. There are only a
+            few sailings each year, across all of the expedition cruise lines,
+            that will attempt this landing. And we've got a discount on this
+            one, which is guaranteed to sell out!
+          </p>
+          <p>
+            This expedition is recommended for: 1. people who have already been
+            to Antarctica and now wish to experience the even more exclusive
+            expedition to see the emperors, or 2. people who are passionate
+            about emperor penguins and prioritize seeing them over everything
+            else. If you don't fall into one of these categories, you may wish
+            to consider<a
+              href="https://www.globetrottingkirks.com/#antarcticaspecials"
+              >one of our other Antarctica specials.</a
+            >
+          </p>
+
+          <p>
+            <a
+              href="https://www.quarkexpeditions.com/blog/an-unforgettable-snow-hill-island-tour"
+              target="_blank"
+              >Hear directly from Quark about Snow Hill</a
+            >
+          </p>
+
+          <p class="text-center">
+            <a
+              href="mailto:regan.kirk@fora.travel,meimei.kirk@fora.travel?subject=Snow%20Hill%20special"
+              class="btn btn-primary"
+            >
+              Reach Out with Questions or to Book!
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <div class="card my-4">
+        <div class="card-body">
+          <p>
+            <strong
+              >Looking for a more traditional Antarctica expedition?</strong
+            >
+            We've secured amazing group discounts on the ultra-luxury Scenic
+            Eclipse II in December 2026 (exploring Antarctica and the remote
+            Weddell Sea) and both January and February 2028 (going to the
+            Falklands, South Georgia, and Antarctica). We are also offering
+            group rates for Atlas's January 2027 sailing to the Falklands, South
+            Georgia, and Antarctica.
+            <a href="https://www.globetrottingkirks.com/#antarcticaspecials"
+              >Check them out!</a
+            >
+          </p>
+        </div>
+      </div>
+
+      <div class="card my-4">
+        <div class="card-body">
+          <h2>Solo Travelers</h2>
+          <p class="text-center">
+            Quark is wonderful for solo travelers! There are a couple of solo
+            rooms available. Alternately, you can sign up as a solo passenger to
+            be paired with another passenger of the same gender. Otherwise, the
+            solo supplement is 100%. We can also work with you to find a travel
+            companion.
+          </p>
+        </div>
+      </div>
+
+      <div class="card my-4">
+        <div class="card-body">
+          <!-- SECTION: Discount -->
+          <div class="travel-section">
+            <h2 id="exclusiveantarctica&discount">What's the discount?</h2>
+            <p>
+              We secured our group discount at 5% off of Quark's Wave season
+              prices. Our rate starts at <strong>$25,261 per person</strong>.
+              Meanwhile, the public, discounted rate for the same room starts
+              <strong>$26,697 per person</strong>. (These prices are inclusive
+              of the required $1,295 transfer package.) If you've sailed with
+              Quark before, the $750 Shackleton Club discount applies as well.
+              You'll also receive $250 onboard credit.
+            </p>
+
+            <div class="image-placeholder">
+              <p class="text-center">
+                <img
+                  src="Images/QuarkGroup/Helicoptor Operation Snow Hill (2)_David-Merron.jpg"
+                />
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card my-4">
+        <div class="card-body">
+          <!-- SECTION: Sailing Info -->
+          <div class="travel-section">
+            <h2 id="exclusiveantarctica&sailing-info">Sailing Information</h2>
+            <p>
+              <strong>Departure:</strong> November 16 – 29, 2027 (roundtrip from
+              Buenos Aires) on board Quark's Ultramarine.
+            </p>
+            <p>
+              See the detailed itinerary
+              <a
+                href="https://www.quarkexpeditions.com/expeditions/emperor-penguin-quest-expedition-to-snow-hill"
+                target="_blank"
+                >here</a
+              >.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card my-4">
+        <div class="card-body">
+          <!-- SECTION: Rooms -->
+
+          <div class="travel-section">
+            <div class="image-placeholder">
+              <p class="text-center">
+                <img
+                  src="Images/QuarkGroup/QuarkExpeditions_Ultramarine_Hero_Sea-Trials_Feb-18-2021_3.jpg"
+                />
+              </p>
+            </div>
+
+            <h2 id="exclusiveantarctica&rooms">Room Types & Pricing</h2>
+            Pricing per person, based on double occupancy (except for the solo
+            rooms). Room availability and pricing are subject to change; pricing
+            is not guaranteed until a deposited booking has been made. These
+            prices <strong>include</strong> the mandatory $1,295 transfer
+            package--when looking at the pricing on Quark's website, the price
+            you see does not yet include that package.
+            <p></p>
+
+            <table class="suite-table">
+              <tr>
+                <th>Room Type</th>
+                <th>Size (square feet)</th>
+                <th>Our Price (per person)</th>
+                <th>Public Price (per person)</th>
+                <th>Availability</th>
+              </tr>
+              <tr>
+                <td>Explorer Suite</td>
+                <td>285</td>
+                <td>$25,261</td>
+                <td>$26,671</td>
+                <td>5+ cabins</td>
+              </tr>
+              <tr>
+                <td>Balcony Suite</td>
+                <td>226</td>
+                <td>$27,726</td>
+                <td>$29,281</td>
+                <td>5+ cabins</td>
+              </tr>
+              <tr>
+                <td>Deluxe Balcony Suite</td>
+                <td>299</td>
+                <td>$32,741</td>
+                <td>$34,591</td>
+                <td>4 cabins</td>
+              </tr>
+              <tr>
+                <td>Solo Panorama Suite</td>
+                <td>132</td>
+                <td>$35,206</td>
+                <td>$37,201</td>
+                <td>5 cabins</td>
+              </tr>
+              <tr>
+                <td>Terrace Suite</td>
+                <td>350</td>
+                <td>$33,931</td>
+                <td>$35,851</td>
+                <td>1 cabin</td>
+              </tr>
+
+              <tr>
+                <td>Penthouse Suite</td>
+                <td>369</td>
+                <td>$36,481</td>
+                <td>$38,551</td>
+                <td>5+ cabins</td>
+              </tr>
+              <tr>
+                <td>Owner's Suite</td>
+                <td>446</td>
+                <td>$45,151</td>
+                <td>$47,731</td>
+                <td>1 cabin</td>
+              </tr>
+              <tr>
+                <td>Ultra Suite</td>
+                <td>563</td>
+                <td>$50,081</td>
+                <td>$52,951</td>
+                <td>1 cabin</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="card my-4">
+        <div class="card-body">
+          <div class="travel-section">
+            <h2 id="exclusiveantarctica&whatsincluded">What's Included?</h2>
+            <ul>
+              <li>One night in a Buenos Aires hotel pre-cruise</li>
+              <li>Charter flight roundtrip Buenos Aires-Ushuaia</li>
+              <li>Zodiac safaris</li>
+              <li>Polar plunge</li>
+              <li>Shore landings</li>
+              <li>
+                Flightseeing, including the helicopter rides to and from Snow
+                Hill
+              </li>
+              <li>Gourmet meals</li>
+              <li>Alcohol</li>
+              <li>Quark parka to keep</li>
+              <li>$250 Virtuoso onboard credit per person</li>
+            </ul>
+
+            <div class="image-placeholder">
+              <p class="text-center">
+                <img
+                  src="Images/QuarkGroup/Emperor Penguins Snow Hill (75)_David-Merron.jpg"
+                />
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card my-4">
+        <div class="card-body">
+          <div class="travel-section">
+            <h2 id="exclusiveantarctica&whatsnotincluded">
+              What's Not Included?
+            </h2>
+            <ul>
+              <li>Gratuities</li>
+              <li>Mandatory waterproof pants</li>
+              <li>International flights</li>
+              <li>Paddling excursions</li>
+              <li>Stand up paddleboarding excursions</li>
+              <li>Travel insurance</li>
+              <li>Spa treatments</li>
+              <li>Personal purchases</li>
+              <li>Any other items not listed above</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card my-4">
+        <div class="card-body">
+          <!-- SECTION: Payments -->
+          <div class="travel-section">
+            <h2 id="exclusiveantarctica&payments">Deposit & Payment Details</h2>
+            <ul>
+              <li>
+                <strong>A nonrefundable 25% deposit</strong>
+                is required upon booking.
+              </li>
+              <li><strong>Final payment:</strong> 150 days before sailing.</li>
+              <li>
+                <strong>Travel insurance:</strong> We advise purchasing within
+                14 days of deposit. We can help with generating quotes to find
+                the best coverage.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card my-4">
+          <div class="card-body">
+            <h2>
+              This is going to be an incredible adventure and it will sell out
+              long in advance--take advantage of this better-than-public pricing
+              while there is space available!
+            </h2>
+
+            <div class="image-placeholder">
+              <p class="text-center">
+                <img
+                  src="Images/QuarkGroup/Helicoptor Operation Snow Hill (2)_David-Merron.jpg"
+                />
+              </p>
+            </div>
+
+            <p class="text-center">
+              <a
+                href="mailto:regan.kirk@fora.travel,meimei.kirk@fora.travel?subject=Snow%20Hill%20special"
+                class="btn btn-primary"
+              >
+                Reach Out with Questions or to Book!
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
