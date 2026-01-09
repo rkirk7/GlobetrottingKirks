@@ -494,29 +494,21 @@ a[role="button"]:hover {
 </div>
 
 <script>
-  document.addEventListener(
-    "click",
-    function (e) {
-      const link = e.target.closest(".scroll-link");
-      if (!link) return;
-
-      // STOP SPA ROUTER DEAD
-      e.preventDefault();
-      e.stopPropagation();
-      e.stopImmediatePropagation();
-
-      const id = link.getAttribute("data-target");
-      const el = document.getElementById(id);
-
-      if (el) {
-        el.scrollIntoView({
+  // Smooth scroll for internal links
+  document.querySelectorAll(".scroll-link").forEach(link => {
+    link.addEventListener("click", function(e) {
+      e.preventDefault(); // stop default jump
+      const targetId = this.getAttribute("data-target");
+      const targetEl = document.getElementById(targetId);
+      if (targetEl) {
+        targetEl.scrollIntoView({
           behavior: "smooth",
           block: "start"
         });
       }
-    },
-    true // 👈 CAPTURE PHASE (critical)
-  );
+    });
+  });
 </script>
+
 
 
