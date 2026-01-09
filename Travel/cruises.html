@@ -5,6 +5,49 @@
   }
 </style>
 
+<style>
+  .cruise-card {
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .cruise-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
+  }
+
+  .cruise-card img {
+    height: 160px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .cruise-card .card-body {
+    padding: 1rem;
+  }
+
+  .cruise-card h5 {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #003d5b;
+  }
+
+  .cruise-card p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 0;
+  }
+
+  .cruise-card a {
+    text-decoration: none;
+    color: inherit;
+  }
+</style>
+
 <div class="container my-5">
   <div class="hero" data-hero="../Images/HeroImages/cruise-hero.jpeg">
     <div class="hero-content text-center">
@@ -13,44 +56,94 @@
   </div>
 
   <div class="travel-section">
-  <p class="intro-text">
-    With everything you need for a vacation neatly contained on a luxurious
-    ship, who doesn't love a cruise? Mei-Mei has traveled extensively in Europe
-    with both ocean cruises and river cruises. Regan is a Diamond member with
-    Royal Caribbean--living just an hour from Port Canaveral, she delights in
-    hopping on a ship and escaping for a weekend, or taking a week to soak in
-    the Caribbean sun.
-  </p>
-  <p class="intro-text">
-    Between the two of us, we've cruised with most major cruise lines. We can
-    advise on the best ships, itineraries, and ports that meet your specific
-    interests.
-  </p>
-  <p class="intro-text">
-    We'll help look for the best deals and cabins that best suit you, ensure a
-    smooth sailing from start to finish, recommend and help book excursions, and
-    perhaps offer perks such as onboard credit.
-  </p>
+    <p class="intro-text">
+      With everything you need for a vacation neatly contained on a luxurious
+      ship, who doesn't love a cruise? Mei-Mei has traveled extensively in
+      Europe with both ocean cruises and river cruises. Regan is a Diamond
+      member with Royal Caribbean--living just an hour from Port Canaveral, she
+      delights in hopping on a ship and escaping for a weekend, or taking a week
+      to soak in the Caribbean sun.
+    </p>
+    <p class="intro-text">
+      Between the two of us, we've cruised with most major cruise lines. We can
+      advise on the best ships, itineraries, and ports that meet your specific
+      interests.
+    </p>
+    <p class="intro-text">
+      We'll help look for the best deals and cabins that best suit you, ensure a
+      smooth sailing from start to finish, recommend and help book excursions,
+      and perhaps offer perks such as onboard credit.
+    </p>
 
-    <p class="text-center">
-    <a
-      href="https://www.vikingcruises.com/oceans/myagent/regankirk"
-      target="_blank"
-      class="btn btn-primary"
-    >
-      Browse Viking Cruises
-    </a>
-  </p>
+    <h2 class="text-center mb-4">Cruise Lines We Love</h2>
 
-     <p class="text-center">
-    <a
-      href="https://www.rssc.com/?insider=e2ol0-regan-kirk"
-      target="_blank"
-      class="btn btn-primary"
-    >
-      Browse Regent Cruises
-    </a>
-  </p>
+    <div class="row g-4">
+      <!-- Viking -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card cruise-card">
+          <a
+            href="https://www.vikingcruises.com/oceans/myagent/regankirk"
+            target="_blank"
+          >
+            <img src="../Images/Cruises/Cruises1.jpeg" alt="Viking Cruises" />
+            <div class="card-body">
+              <h5>Viking</h5>
+              <p>Refined ocean and river cruises with cultural immersion.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Regent Seven Seas -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card cruise-card">
+          <a
+            href="https://www.rssc.com/?insider=e2ol0-regan-kirk"
+            target="_blank"
+          >
+            <img
+              src="../Images/Cruises/Cruises2.jpeg"
+              alt="Regent Seven Seas"
+            />
+            <div class="card-body">
+              <h5>Regent Seven Seas</h5>
+              <p>Ultra-luxury, all-inclusive cruising at its finest.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Royal Caribbean -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card cruise-card">
+          <a href="https://www.royalcaribbean.com" target="_blank">
+            <img src="../Images/Cruises/Cruises3.jpeg" alt="Royal Caribbean" />
+            <div class="card-body">
+              <h5>Royal Caribbean</h5>
+              <p>
+                Innovative ships and unforgettable family-friendly adventures.
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Celebrity -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card cruise-card">
+          <a href="https://www.celebritycruises.com" target="_blank">
+            <img
+              src="../Images/Cruises/Cruises4.jpeg"
+              alt="Celebrity Cruises"
+            />
+            <div class="card-body">
+              <h5>Celebrity Cruises</h5>
+              <p>Modern luxury with exceptional dining and design.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 
   <p class="text-center">
@@ -61,48 +154,47 @@
       Tell Me More About Cruise Deals
     </a>
   </p>
-  </div>
 
-  <div class="gallery">
-    <div class="mb-5">
-      <div class="row g-3 justify-content-center">
-        <div class="col-6 col-md-4 col-lg-2">
-          <img
-            src="../Images/Cruises/Cruises1.jpeg"
-            class="img-fluid rounded shadow-sm"
-          />
-        </div>
-        <div class="col-6 col-md-4 col-lg-2">
-          <img
-            src="../Images/Cruises/Cruises2.jpeg"
-            class="img-fluid rounded shadow-sm"
-          />
-        </div>
-        <div class="col-6 col-md-4 col-lg-2">
-          <img
-            src="../Images/Cruises/Cruises3.jpeg"
-            class="img-fluid rounded shadow-sm"
-          />
-        </div>
-        <div class="col-6 col-md-4 col-lg-2">
-          <img
-            src="../Images/Cruises/Cruises4.jpeg"
-            class="img-fluid rounded shadow-sm"
-          />
-        </div>
-        <div class="col-6 col-md-4 col-lg-2">
-          <img
-            src="../Images/Cruises/Cruises5.jpeg"
-            class="img-fluid rounded shadow-sm"
-          />
-        </div>
-        <div class="col-6 col-md-4 col-lg-2">
-          <img
-            src="../Images/18RiverCruise/18RiverCruise1.jpeg"
-            class="img-fluid rounded shadow-sm"
-          />
-        </div>
+<div class="gallery">
+  <div class="mb-5">
+    <div class="row g-3 justify-content-center">
+      <div class="col-6 col-md-4 col-lg-2">
+        <img
+          src="../Images/Cruises/Cruises1.jpeg"
+          class="img-fluid rounded shadow-sm"
+        />
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <img
+          src="../Images/Cruises/Cruises2.jpeg"
+          class="img-fluid rounded shadow-sm"
+        />
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <img
+          src="../Images/Cruises/Cruises3.jpeg"
+          class="img-fluid rounded shadow-sm"
+        />
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <img
+          src="../Images/Cruises/Cruises4.jpeg"
+          class="img-fluid rounded shadow-sm"
+        />
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <img
+          src="../Images/Cruises/Cruises5.jpeg"
+          class="img-fluid rounded shadow-sm"
+        />
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <img
+          src="../Images/18RiverCruise/18RiverCruise1.jpeg"
+          class="img-fluid rounded shadow-sm"
+        />
       </div>
     </div>
   </div>
+</div>
 </div>
