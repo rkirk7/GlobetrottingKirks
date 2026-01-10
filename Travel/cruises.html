@@ -1,214 +1,215 @@
-<style>
-  /* Container width */
-  #content .container {
-    max-width: 900px;
-  }
+<head>
+  <style>
+    /* Container width */
+    #content .container {
+      max-width: 900px;
+    }
 
-  /* Hero Section */
-  .hero {
-    position: relative;
-    background: url("../Images/HeroImages/cruise-hero.jpeg") center/cover
-      no-repeat;
-    border-radius: 10px;
-    margin-bottom: 3rem;
-    padding: 4rem 2rem;
-    color: white;
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
-  }
+    /* Hero Section */
+    .hero {
+      position: relative;
+      background: url("../Images/HeroImages/cruise-hero.jpeg") center/cover
+        no-repeat;
+      border-radius: 10px;
+      margin-bottom: 3rem;
+      padding: 4rem 2rem;
+      color: white;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    }
 
-  .hero-title {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-  }
+    .hero-title {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
 
-  .hero-subtitle {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    color: #fff;
-  }
+    .hero-subtitle {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      color: #fff;
+    }
 
-  .hero .btn {
-    font-weight: 600;
-    padding: 0.6rem 1.2rem;
-  }
+    .hero .btn {
+      font-weight: 600;
+      padding: 0.6rem 1.2rem;
+    }
 
-  /* Cruise Cards */
-  .cruise-card {
-    height: 100%;
-    border: none;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-    display: flex;
-    flex-direction: column;
-  }
+    /* Cruise Cards */
+    .cruise-card {
+      height: 100%;
+      border: none;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      display: flex;
+      flex-direction: column;
+    }
 
-  .cruise-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
-  }
+    .cruise-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
+    }
 
-  .cruise-card img {
-    height: 160px;
-    width: 100%;
-    object-fit: cover;
-    transition: transform 0.25s ease;
-  }
+    .cruise-card img {
+      height: 160px;
+      width: 100%;
+      object-fit: cover;
+      transition: transform 0.25s ease;
+    }
 
-  .cruise-card:hover img {
-    transform: scale(1.05);
-  }
+    .cruise-card:hover img {
+      transform: scale(1.05);
+    }
 
-  .cruise-card .card-body {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-  }
+    .cruise-card .card-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+    }
 
-  .cruise-card h5 {
-    min-height: 2.6em;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-    color: #003d5b;
-  }
+    .cruise-card h5 {
+      min-height: 2.6em;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: #003d5b;
+    }
 
-  .cruise-card p {
-    flex-grow: 1;
-    font-size: 0.9rem;
-    color: #555;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
+    .cruise-card p {
+      flex-grow: 1;
+      font-size: 0.9rem;
+      color: #555;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
 
-  .cruise-card a {
-    text-decoration: none;
-    color: inherit;
-    margin-top: 0.5rem;
-  }
+    .cruise-card a {
+      text-decoration: none;
+      color: inherit;
+      margin-top: 0.5rem;
+    }
 
-  .cruise-card .btn + .btn {
-    margin-top: 0.5rem;
-  }
+    .cruise-card .btn + .btn {
+      margin-top: 0.5rem;
+    }
 
-  /* Row spacing */
-  .row.g-4 {
-    row-gap: 1.5rem;
-  }
+    /* Row spacing */
+    .row.g-4 {
+      row-gap: 1.5rem;
+    }
 
-  /* Intro text */
-  .intro-text {
-    margin-bottom: 2rem;
-    color: #333;
-    font-size: 1rem;
-    line-height: 1.6;
-  }
+    /* Intro text */
+    .intro-text {
+      margin-bottom: 2rem;
+      color: #333;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
 
-  /* Gallery */
-  .gallery img {
-    transition: transform 0.25s ease;
-  }
+    /* Gallery */
+    .gallery img {
+      transition: transform 0.25s ease;
+    }
 
-  .gallery img:hover {
-    transform: scale(1.05);
-  }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
 
-  .text-center .btn {
-    margin-top: 2rem;
-  }
+    .text-center .btn {
+      margin-top: 2rem;
+    }
 
-  .filter-btn.active {
-    background-color: #003d5b;
-    color: #fff;
-    border-color: #003d5b;
-  }
-</style>
+    .filter-btn.active {
+      background-color: #003d5b;
+      color: #fff;
+      border-color: #003d5b;
+    }
+  </style>
+</head>
 
-<div class="container my-5">
-  <!-- Hero -->
-  <div class="hero">
-    <div class="hero-content text-center">
-      <h1 class="hero-title">Cruises</h1>
-      <p class="hero-subtitle">
-        Luxury, river, and expedition experiences around the globe
-      </p>
-      <a href="#contact" class="btn btn-primary mt-3">Plan Your Cruise</a>
+<body>
+  <div class="container my-5">
+    <!-- Hero -->
+    <div class="hero">
+      <div class="hero-content text-center">
+        <h1 class="hero-title">Cruises</h1>
+        <p class="hero-subtitle">
+          Luxury, river, and expedition experiences around the globe
+        </p>
+        <a href="#contact" class="btn btn-primary mt-3">Plan Your Cruise</a>
+      </div>
     </div>
-  </div>
 
-  <!-- Intro -->
-  <div class="travel-section">
-    <div
-      class="top-cruise-card mb-5 p-4 rounded shadow-sm text-center bg-light"
-    >
-      <h2 class="card-title mb-3" style="color: #003d5b">
-        Why Book Through Us?
-      </h2>
+    <!-- Intro -->
+    <div class="travel-section">
+      <div
+        class="top-cruise-card mb-5 p-4 rounded shadow-sm text-center bg-light"
+      >
+        <h2 class="card-title mb-3" style="color: #003d5b">
+          Why Book Through Us?
+        </h2>
 
-      <p class="card-text mb-4" style="font-size: 1rem; color: #555">
-        Get personalized guidance to find the perfect cruise, secure the best
-        rates, enjoy onboard perks like credit and upgrades, and experience
-        concierge-level service from start to finish. Booking through us comes
-        at <strong>no extra cost</strong> to you!
-      </p>
+        <p class="card-text mb-4" style="font-size: 1rem; color: #555">
+          Get personalized guidance to find the perfect cruise, secure the best
+          rates, enjoy onboard perks like credit and upgrades, and experience
+          concierge-level service from start to finish. Booking through us comes
+          at <strong>no extra cost</strong> to you!
+        </p>
 
-      <div class="d-flex justify-content-center flex-wrap gap-2">
-        <div class="feature">
-          <div>Expert Guidance</div>
+        <div class="d-flex justify-content-center flex-wrap gap-2">
+          <div class="feature">
+            <div>Expert Guidance</div>
+          </div>
+          <div class="feature">
+            <div>Best Value</div>
+          </div>
+          <div class="feature">
+            <div>Onboard Perks</div>
+          </div>
+          <div class="feature">
+            <div>Concierge Service</div>
+          </div>
+          <div class="feature">
+            <div>...All this at no extra cost to you!</div>
+          </div>
+
+          <a
+            href="mailto:regan.kirk@fora.travel,meimei.kirk@fora.travel?subject=I'm%20interested%20in%20booking%20a%20cruise"
+            class="btn btn-primary btn-lg mt-4"
+          >
+            Let's Plan Your Cruise
+          </a>
         </div>
-        <div class="feature">
-          <div>Best Value</div>
-        </div>
-        <div class="feature">
-          <div>Onboard Perks</div>
-        </div>
-        <div class="feature">
-          <div>Concierge Service</div>
-        </div>
-        <div class="feature">
-          <div>...All this at no extra cost to you!/div></div>
+
+        <div class="text-center mb-4 cruise-filter">
+          <button
+            class="btn btn-outline-primary btn-sm filter-btn active"
+            data-filter="all"
+          >
+            All
+          </button>
+          <button
+            class="btn btn-outline-primary btn-sm filter-btn"
+            data-filter="river"
+          >
+            River
+          </button>
+          <button
+            class="btn btn-outline-primary btn-sm filter-btn"
+            data-filter="ocean"
+          >
+            Ocean
+          </button>
+          <button
+            class="btn btn-outline-primary btn-sm filter-btn"
+            data-filter="expedition"
+          >
+            Expedition
+          </button>
         </div>
 
-        <a
-          href="mailto:regan.kirk@fora.travel,meimei.kirk@fora.travel?subject=I'm%20interested%20in%20booking%20a%20cruise"
-          class="btn btn-primary btn-lg mt-4"
-        >
-          Let's Plan Your Cruise
-        </a>
-      </div>
-
-      <div class="text-center mb-4 cruise-filter">
-        <button
-          class="btn btn-outline-primary btn-sm filter-btn active"
-          data-filter="all"
-        >
-          All
-        </button>
-        <button
-          class="btn btn-outline-primary btn-sm filter-btn"
-          data-filter="river"
-        >
-          River
-        </button>
-        <button
-          class="btn btn-outline-primary btn-sm filter-btn"
-          data-filter="ocean"
-        >
-          Ocean
-        </button>
-        <button
-          class="btn btn-outline-primary btn-sm filter-btn"
-          data-filter="expedition"
-        >
-          Expedition
-        </button>
-      </div>
-
-      <!-- Cruise Cards -->
-      <div class="row g-4">
-        <!-- Example card -->
+        <!-- Cruise Cards -->
         <div class="row g-4">
           <!-- Viking -->
           <div
@@ -779,25 +780,24 @@
   </div>
 
   <script>
-    const filterButtons = document.querySelectorAll(".filter-btn");
-    const cruiseItems = document.querySelectorAll(".cruise-item");
+    document.addEventListener("DOMContentLoaded", () => {
+      const filterButtons = document.querySelectorAll(".filter-btn");
+      const cruiseItems = document.querySelectorAll(".cruise-item");
 
-    filterButtons.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        filterButtons.forEach((b) => b.classList.remove("active"));
-        btn.classList.add("active");
+      filterButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          filterButtons.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
 
-        const filter = btn.getAttribute("data-filter");
+          const filter = btn.dataset.filter;
 
-        cruiseItems.forEach((item) => {
-          const types = item.getAttribute("data-type").split(" "); // split into array
-          if (filter === "all" || types.includes(filter)) {
-            item.style.display = "flex";
-          } else {
-            item.style.display = "none";
-          }
+          cruiseItems.forEach((item) => {
+            const types = item.dataset.type.split(" ");
+            item.style.display =
+              filter === "all" || types.includes(filter) ? "flex" : "none";
+          });
         });
       });
     });
   </script>
-</div>
+</body>
