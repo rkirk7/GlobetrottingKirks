@@ -436,8 +436,11 @@ document.addEventListener("click", function (e) {
 
   cruiseItems.forEach((item) => {
     const types = item.dataset.type?.split(" ") || [];
-    item.style.display =
-      filter === "all" || types.includes(filter) ? "flex" : "none";
+  if (filter === "all" || types.includes(filter)) {
+  item.classList.remove("is-hidden");
+} else {
+  item.classList.add("is-hidden");
+}
   });
 });
 

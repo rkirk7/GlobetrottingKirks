@@ -136,6 +136,19 @@
       color: #003d5b;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
     }
+    .cruise-item.is-hidden {
+      display: none !important;
+    }
+
+    .cruise-item {
+      transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+
+    .cruise-item.is-hidden {
+      opacity: 0;
+      transform: scale(0.98);
+      pointer-events: none;
+    }
   </style>
 </head>
 
@@ -162,7 +175,13 @@
         </h2>
 
         <p class="card-text mb-4" style="font-size: 1rem; color: #555">
-          We love cruises for the ease of travel they offer. You can see polar bears, leap into the waters of Antarctica, circumnavigate Oceania, journey from European Christmas market to Christmas market, and so much more. We truly believe that cruises are for anyone: active travelers can challenge themselves on expeditions, and those who prefer to relax and be pampered have their choice of cruise lines whose speciality is just that. And some cruise lines do both!
+          We love cruises for the ease of travel they offer. You can see polar
+          bears, leap into the waters of Antarctica, circumnavigate Oceania,
+          journey from European Christmas market to Christmas market, and so
+          much more. We truly believe that cruises are for anyone: active
+          travelers can challenge themselves on expeditions, and those who
+          prefer to relax and be pampered have their choice of cruise lines
+          whose speciality is just that. And some cruise lines do both!
         </p>
       </div>
 
@@ -705,7 +724,9 @@
             <div class="card-body">
               <h5 class="card-title">SeaDream Yacht Club</h5>
               <p class="card-text">
-                A true yachting lifestyle at sea — SeaDream combines relaxed luxury, world-class cuisine, marina-style water sports, and bespoke itineraries to hidden harbors and glamorous ports.
+                A true yachting lifestyle at sea — SeaDream combines relaxed
+                luxury, world-class cuisine, marina-style water sports, and
+                bespoke itineraries to hidden harbors and glamorous ports.
               </p>
               <a
                 href="https://seadream.com/"
@@ -788,26 +809,25 @@
     </div>
   </div>
 
-<script>
-  document.addEventListener("click", function (e) {
-    const btn = e.target.closest(".filter-btn");
-    if (!btn) return;
+  <script>
+    document.addEventListener("click", function (e) {
+      const btn = e.target.closest(".filter-btn");
+      if (!btn) return;
 
-    console.log("Filter clicked:", btn.dataset.filter);
+      console.log("Filter clicked:", btn.dataset.filter);
 
-    const filter = btn.dataset.filter;
-    const filterButtons = document.querySelectorAll(".filter-btn");
-    const cruiseItems = document.querySelectorAll(".cruise-item");
+      const filter = btn.dataset.filter;
+      const filterButtons = document.querySelectorAll(".filter-btn");
+      const cruiseItems = document.querySelectorAll(".cruise-item");
 
-    filterButtons.forEach((b) => b.classList.remove("active"));
-    btn.classList.add("active");
+      filterButtons.forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
 
-    cruiseItems.forEach((item) => {
-      const types = item.dataset.type.split(" ");
-      item.style.display =
-        filter === "all" || types.includes(filter) ? "flex" : "none";
+      cruiseItems.forEach((item) => {
+        const types = item.dataset.type.split(" ");
+        item.style.display =
+          filter === "all" || types.includes(filter) ? "flex" : "none";
+      });
     });
-  });
-</script>
-
+  </script>
 </body>
