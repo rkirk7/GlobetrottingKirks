@@ -417,6 +417,31 @@ function removeActive(items) {
     });
 }
 
+// -------------------- Cruise Filter (Global / SPA-safe) --------------------
+document.addEventListener("click", function (e) {
+  const btn = e.target.closest(".filter-btn");
+  if (!btn) return;
+
+  console.log("Filter clicked:", btn.dataset.filter);
+
+  const filter = btn.dataset.filter;
+  const content = document.getElementById("content");
+  if (!content) return;
+
+  const cruiseItems = content.querySelectorAll(".cruise-item");
+  const filterButtons = content.querySelectorAll(".filter-btn");
+
+  filterButtons.forEach((b) => b.classList.remove("active"));
+  btn.classList.add("active");
+
+  cruiseItems.forEach((item) => {
+    const types = item.dataset.type?.split(" ") || [];
+    item.style.display =
+      filter === "all" || types.includes(filter) ? "flex" : "none";
+  });
+});
+
+
 
 // -------------------- SPA Router (Hash-based) --------------------
 function handleHashChange() {
