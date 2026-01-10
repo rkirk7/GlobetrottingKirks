@@ -165,10 +165,7 @@
           We love cruises for the ease of travel they offer. You can see polar bears, leap into the waters of Antarctica, circumnavigate Oceania, journey from European Christmas market to Christmas market, and so much more. We truly believe that cruises are for anyone: active travelers can challenge themselves on expeditions, and those who prefer to relax and be pampered have their choice of cruise lines whose speciality is just that. And some cruise lines do both!
         </p>
       </div>
-    </div>
 
-    <!-- Intro -->
-    <div class="travel-section">
       <div
         class="top-cruise-card mb-5 p-4 rounded shadow-sm text-center bg-light"
       >
@@ -805,25 +802,26 @@
     </div>
   </div>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const filterButtons = document.querySelectorAll(".filter-btn");
-      const cruiseItems = document.querySelectorAll(".cruise-item");
+<script>
+  document.addEventListener("click", function (e) {
+    const btn = e.target.closest(".filter-btn");
+    if (!btn) return;
 
-      filterButtons.forEach((btn) => {
-        btn.addEventListener("click", () => {
-          filterButtons.forEach((b) => b.classList.remove("active"));
-          btn.classList.add("active");
+    console.log("Filter clicked:", btn.dataset.filter);
 
-          const filter = btn.dataset.filter;
+    const filter = btn.dataset.filter;
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const cruiseItems = document.querySelectorAll(".cruise-item");
 
-          cruiseItems.forEach((item) => {
-            const types = item.dataset.type.split(" ");
-            item.style.display =
-              filter === "all" || types.includes(filter) ? "flex" : "none";
-          });
-        });
-      });
+    filterButtons.forEach((b) => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    cruiseItems.forEach((item) => {
+      const types = item.dataset.type.split(" ");
+      item.style.display =
+        filter === "all" || types.includes(filter) ? "flex" : "none";
     });
-  </script>
+  });
+</script>
+
 </body>
