@@ -761,7 +761,7 @@
 
       <div class="travel-section">
         <h2>
-          Scenic Flyer - Made for the January 15, 2028 sailing, but the details
+          Scenic Flyer - Made for the January 15, 2028 sailing, but most details
           are the same!
         </h2>
         <p class="text-center">
@@ -775,4 +775,21 @@
       </div>
     </div>
   </div>
+
+    <script>
+  // Smooth scroll for internal links
+  document.querySelectorAll(".scroll-link").forEach((link) => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault(); // stop default jump
+      const targetId = this.getAttribute("data-target");
+      const targetEl = document.getElementById(targetId);
+      if (targetEl) {
+        targetEl.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    });
+  });
+</script>
 </body>

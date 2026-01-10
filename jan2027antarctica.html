@@ -697,4 +697,21 @@
       </div>
     </div>
   </div>
+
+  <script>
+  // Smooth scroll for internal links
+  document.querySelectorAll(".scroll-link").forEach((link) => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault(); // stop default jump
+      const targetId = this.getAttribute("data-target");
+      const targetEl = document.getElementById(targetId);
+      if (targetEl) {
+        targetEl.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    });
+  });
+</script>
 </body>
