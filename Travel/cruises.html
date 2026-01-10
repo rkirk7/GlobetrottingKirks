@@ -125,6 +125,17 @@
       color: #fff;
       border-color: #003d5b;
     }
+
+    .feature {
+      background: #ffffff;
+      border: 1px solid #e0e0e0;
+      border-radius: 999px;
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #003d5b;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
   </style>
 </head>
 
@@ -173,609 +184,607 @@
           <div class="feature">
             <div>...All this at no extra cost to you!</div>
           </div>
-          </div>
+        </div>
 
-          <p class="text-center">
+        <p class="text-center">
           <a
             href="mailto:regan.kirk@fora.travel,meimei.kirk@fora.travel?subject=I'm%20interested%20in%20booking%20a%20cruise"
             class="btn btn-primary btn-lg mt-4"
           >
             Let's Plan Your Cruise
           </a>
-          </p>
+        </p>
+      </div>
 
-        <div class="text-center mb-4 cruise-filter">
-          <button
-            class="btn btn-outline-primary btn-sm filter-btn active"
-            data-filter="all"
-          >
-            All
-          </button>
-          <button
-            class="btn btn-outline-primary btn-sm filter-btn"
-            data-filter="river"
-          >
-            River
-          </button>
-          <button
-            class="btn btn-outline-primary btn-sm filter-btn"
-            data-filter="ocean"
-          >
-            Ocean
-          </button>
-          <button
-            class="btn btn-outline-primary btn-sm filter-btn"
-            data-filter="expedition"
-          >
-            Expedition
-          </button>
+      <div class="text-center mb-4 cruise-filter">
+        <button
+          class="btn btn-outline-primary btn-sm filter-btn active"
+          data-filter="all"
+        >
+          All
+        </button>
+        <button
+          class="btn btn-outline-primary btn-sm filter-btn"
+          data-filter="river"
+        >
+          River
+        </button>
+        <button
+          class="btn btn-outline-primary btn-sm filter-btn"
+          data-filter="ocean"
+        >
+          Ocean
+        </button>
+        <button
+          class="btn btn-outline-primary btn-sm filter-btn"
+          data-filter="expedition"
+        >
+          Expedition
+        </button>
+      </div>
+
+      <!-- Cruise Cards -->
+      <div class="row g-4">
+        <!-- Viking -->
+        <div
+          class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex cruise-item"
+          data-type="ocean river expedition"
+        >
+          <div class="card cruise-card w-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Viking</h5>
+              <p class="card-text">
+                Refined ocean and river cruises with immersive cultural
+                experiences and destination-focused itineraries.
+              </p>
+              <a
+                href="https://www.vikingcruises.com/oceans/myagent/regankirk"
+                target="_blank"
+                class="btn btn-outline-primary btn-sm"
+                >Learn more →</a
+              >
+            </div>
+          </div>
         </div>
 
-        <!-- Cruise Cards -->
-        <div class="row g-4">
-          <!-- Viking -->
-          <div
-            class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex cruise-item"
-            data-type="ocean river expedition"
-          >
-            <div class="card cruise-card w-100 shadow-sm">
-              <div class="card-body">
-                <h5 class="card-title">Viking</h5>
-                <p class="card-text">
-                  Refined ocean and river cruises with immersive cultural
-                  experiences and destination-focused itineraries.
-                </p>
-                <a
-                  href="https://www.vikingcruises.com/oceans/myagent/regankirk"
-                  target="_blank"
-                  class="btn btn-outline-primary btn-sm"
-                  >Learn more →</a
-                >
-              </div>
+        <!-- Regent Seven Seas -->
+        <div
+          class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex cruise-item"
+          data-type="ocean"
+        >
+          <div class="card cruise-card w-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Regent Seven Seas</h5>
+              <p class="card-text">
+                Ultra-luxury, all-inclusive cruising at its finest.
+              </p>
+              <a
+                href="https://www.rssc.com/?insider=e2ol0-regan-kirk"
+                target="_blank"
+                class="btn btn-outline-primary btn-sm"
+                >Learn more →</a
+              >
             </div>
           </div>
+        </div>
 
-          <!-- Regent Seven Seas -->
-          <div
-            class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex cruise-item"
-            data-type="ocean"
-          >
-            <div class="card cruise-card w-100 shadow-sm">
-              <div class="card-body">
-                <h5 class="card-title">Regent Seven Seas</h5>
-                <p class="card-text">
-                  Ultra-luxury, all-inclusive cruising at its finest.
-                </p>
-                <a
-                  href="https://www.rssc.com/?insider=e2ol0-regan-kirk"
-                  target="_blank"
-                  class="btn btn-outline-primary btn-sm"
-                  >Learn more →</a
-                >
-              </div>
+        <!-- National Geographic-Lindblad -->
+        <div
+          class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex cruise-item"
+          data-type="expedition"
+        >
+          <div class="card cruise-card w-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">National Geographic-Lindblad</h5>
+              <p class="card-text">
+                Perfect for photographers, science enthusiasts, and families
+                seeking immersive expedition experiences.
+              </p>
+              <a
+                href="https://inspires.to/experiences/antarctica-expeditions-vw1w4"
+                target="_blank"
+                class="btn btn-outline-primary btn-sm"
+                >Learn more →</a
+              >
             </div>
           </div>
+        </div>
 
-          <!-- National Geographic-Lindblad -->
-          <div
-            class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex cruise-item"
-            data-type="expedition"
-          >
-            <div class="card cruise-card w-100 shadow-sm">
-              <div class="card-body">
-                <h5 class="card-title">National Geographic-Lindblad</h5>
-                <p class="card-text">
-                  Perfect for photographers, science enthusiasts, and families
-                  seeking immersive expedition experiences.
-                </p>
-                <a
-                  href="https://inspires.to/experiences/antarctica-expeditions-vw1w4"
-                  target="_blank"
-                  class="btn btn-outline-primary btn-sm"
-                  >Learn more →</a
-                >
-              </div>
+        <!-- Seabourn -->
+        <div
+          class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex cruise-item"
+          data-type="ocean expedition"
+        >
+          <div class="card cruise-card w-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Seabourn</h5>
+              <p class="card-text">
+                Intimate, yacht-like ships offering exceptional service,
+                all-suite accommodations, and thoughtfully curated itineraries.
+              </p>
+              <a
+                href="https://digital.kwglobal.com/publication/?i=821676&p=0&view=issueViewer"
+                target="_blank"
+                class="btn btn-outline-primary btn-sm"
+                >Learn more →</a
+              >
             </div>
           </div>
+        </div>
 
-          <!-- Seabourn -->
-          <div
-            class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex cruise-item"
-            data-type="ocean expedition"
-          >
-            <div class="card cruise-card w-100 shadow-sm">
-              <div class="card-body">
-                <h5 class="card-title">Seabourn</h5>
-                <p class="card-text">
-                  Intimate, yacht-like ships offering exceptional service,
-                  all-suite accommodations, and thoughtfully curated
-                  itineraries.
-                </p>
-                <a
-                  href="https://digital.kwglobal.com/publication/?i=821676&p=0&view=issueViewer"
-                  target="_blank"
-                  class="btn btn-outline-primary btn-sm"
-                  >Learn more →</a
-                >
-              </div>
+        <!-- Aurora Expeditions -->
+        <div
+          class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex cruise-item"
+          data-type="expedition"
+        >
+          <div class="card cruise-card w-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Aurora Expeditions</h5>
+              <p class="card-text">
+                Purpose-built expedition ships designed for adventure seekers,
+                with expert-led excursions and meaningful encounters with
+                nature.
+              </p>
+              <a
+                href="https://inspires.to/experiences/antarctica-with-aurora-expeditions-falklands-south-georgia-antarctic-peninsula-0yx0z"
+                target="_blank"
+                class="btn btn-outline-primary btn-sm"
+                >Learn more →</a
+              >
             </div>
           </div>
+        </div>
 
-          <!-- Aurora Expeditions -->
-          <div
-            class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex cruise-item"
-            data-type="expedition"
-          >
-            <div class="card cruise-card w-100 shadow-sm">
-              <div class="card-body">
-                <h5 class="card-title">Aurora Expeditions</h5>
-                <p class="card-text">
-                  Purpose-built expedition ships designed for adventure seekers,
-                  with expert-led excursions and meaningful encounters with
-                  nature.
-                </p>
-                <a
-                  href="https://inspires.to/experiences/antarctica-with-aurora-expeditions-falklands-south-georgia-antarctic-peninsula-0yx0z"
-                  target="_blank"
-                  class="btn btn-outline-primary btn-sm"
-                  >Learn more →</a
-                >
-              </div>
+        <!-- Quark Expeditions -->
+        <div
+          class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex cruise-item"
+          data-type="expedition"
+        >
+          <div class="card cruise-card w-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Quark Expeditions</h5>
+              <p class="card-text">
+                One of the top expedition cruise lines, providing excellent
+                adventure experiences aboard beautiful ships.
+              </p>
+              <a
+                href="https://www.quarkexpeditions.com/expeditions#antarctic"
+                target="_blank"
+                class="btn btn-outline-primary btn-sm"
+                >Learn more →</a
+              >
             </div>
           </div>
+        </div>
 
-          <!-- Quark Expeditions -->
-          <div
-            class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex cruise-item"
-            data-type="expedition"
-          >
-            <div class="card cruise-card w-100 shadow-sm">
-              <div class="card-body">
-                <h5 class="card-title">Quark Expeditions</h5>
-                <p class="card-text">
-                  One of the top expedition cruise lines, providing excellent
-                  adventure experiences aboard beautiful ships.
-                </p>
-                <a
-                  href="https://www.quarkexpeditions.com/expeditions#antarctic"
-                  target="_blank"
-                  class="btn btn-outline-primary btn-sm"
-                  >Learn more →</a
-                >
-              </div>
+        <!-- Atlas Ocean Voyages -->
+        <div
+          class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex cruise-item"
+          data-type="expedition"
+        >
+          <div class="card cruise-card w-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Atlas Ocean Voyages</h5>
+              <p class="card-text">
+                Small-ship ocean cruising focused on immersive exploration,
+                personalized service, and unique itineraries to hidden
+                destinations.
+              </p>
+              <a
+                href="https://atlasoceanvoyages.com?insider=e2ol0-regan-kirk"
+                target="_blank"
+                class="btn btn-outline-primary btn-sm"
+                >Learn more →</a
+              >
             </div>
           </div>
+        </div>
 
-          <!-- Atlas Ocean Voyages -->
-          <div
-            class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex cruise-item"
-            data-type="expedition"
-          >
-            <div class="card cruise-card w-100 shadow-sm">
-              <div class="card-body">
-                <h5 class="card-title">Atlas Ocean Voyages</h5>
-                <p class="card-text">
-                  Small-ship ocean cruising focused on immersive exploration,
-                  personalized service, and unique itineraries to hidden
-                  destinations.
-                </p>
-                <a
-                  href="https://atlasoceanvoyages.com?insider=e2ol0-regan-kirk"
-                  target="_blank"
-                  class="btn btn-outline-primary btn-sm"
-                  >Learn more →</a
-                >
-              </div>
+        <!-- Explora -->
+        <div
+          class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex cruise-item"
+          data-type="ocean"
+        >
+          <div class="card cruise-card w-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Explora</h5>
+              <p class="card-text">
+                A new vision of ocean travel blending European luxury, expansive
+                suites, world-class dining, and a relaxed, resort-at-sea
+                atmosphere.
+              </p>
+              <a
+                href="https://explorajourneys.com?insider=e2ol0-regan-kirk"
+                target="_blank"
+                class="btn btn-outline-primary btn-sm"
+                >Learn more →</a
+              >
+              <a
+                href="https://drive.google.com/file/d/1lPLDf4H2gWXlYc9rBfKFEs9hSmBqOR5i/view?usp=sharing"
+                target="_blank"
+                class="btn btn-outline-primary btn-sm"
+                >Wave Sale</a
+              >
             </div>
           </div>
+        </div>
 
-          <!-- Explora -->
-          <div
-            class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex cruise-item"
-            data-type="ocean"
-          >
-            <div class="card cruise-card w-100 shadow-sm">
-              <div class="card-body">
-                <h5 class="card-title">Explora</h5>
-                <p class="card-text">
-                  A new vision of ocean travel blending European luxury,
-                  expansive suites, world-class dining, and a relaxed,
-                  resort-at-sea atmosphere.
-                </p>
-                <a
-                  href="https://explorajourneys.com?insider=e2ol0-regan-kirk"
-                  target="_blank"
-                  class="btn btn-outline-primary btn-sm"
-                  >Learn more →</a
-                >
-                <a
-                  href="https://drive.google.com/file/d/1lPLDf4H2gWXlYc9rBfKFEs9hSmBqOR5i/view?usp=sharing"
-                  target="_blank"
-                  class="btn btn-outline-primary btn-sm"
-                  >Wave Sale</a
-                >
-              </div>
+        <!-- Silversea -->
+        <div
+          class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex cruise-item"
+          data-type="ocean expedition"
+        >
+          <div class="card cruise-card w-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Silversea</h5>
+              <p class="card-text">
+                Ultra-luxury voyages with butler-serviced suites, enriching
+                shore excursions, and access to iconic and off-the-beaten-path
+                destinations.
+              </p>
+              <a
+                href="https://inspires.to/experiences/antarctica-venture-further-experience-more-2vo08"
+                target="_blank"
+                class="btn btn-outline-primary btn-sm"
+                >Learn more →</a
+              >
             </div>
           </div>
+        </div>
 
-          <!-- Silversea -->
-          <div
-            class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex cruise-item"
-            data-type="ocean expedition"
-          >
-            <div class="card cruise-card w-100 shadow-sm">
-              <div class="card-body">
-                <h5 class="card-title">Silversea</h5>
-                <p class="card-text">
-                  Ultra-luxury voyages with butler-serviced suites, enriching
-                  shore excursions, and access to iconic and off-the-beaten-path
-                  destinations.
-                </p>
-                <a
-                  href="https://inspires.to/experiences/antarctica-venture-further-experience-more-2vo08"
-                  target="_blank"
-                  class="btn btn-outline-primary btn-sm"
-                  >Learn more →</a
-                >
-              </div>
+        <!-- Scenic -->
+        <div
+          class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex cruise-item"
+          data-type="ocean river expedition"
+        >
+          <div class="card cruise-card w-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Scenic</h5>
+              <p class="card-text">
+                A discovery yacht experience with all-inclusive ultra-luxury,
+                onboard helicopters and submarines, and seamless exploration
+                from pole to tropics.
+              </p>
+              <a
+                href="https://www.scenicusa.com/"
+                target="_blank"
+                class="btn btn-outline-primary btn-sm"
+                >Learn more →</a
+              >
             </div>
           </div>
+        </div>
 
-          <!-- Scenic -->
-          <div
-            class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex cruise-item"
-            data-type="ocean river expedition"
-          >
-            <div class="card cruise-card w-100 shadow-sm">
-              <div class="card-body">
-                <h5 class="card-title">Scenic</h5>
-                <p class="card-text">
-                  A discovery yacht experience with all-inclusive ultra-luxury,
-                  onboard helicopters and submarines, and seamless exploration
-                  from pole to tropics.
-                </p>
-                <a
-                  href="https://www.scenicusa.com/"
-                  target="_blank"
-                  class="btn btn-outline-primary btn-sm"
-                  >Learn more →</a
-                >
-              </div>
+        <!-- Windstar -->
+        <div
+          class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex cruise-item"
+          data-type="ocean"
+        >
+          <div class="card cruise-card w-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Windstar</h5>
+              <p class="card-text">
+                Elegant staterooms, gourmet dining, immersive shore excursions,
+                and personalized service along Europe’s most iconic waterways.
+              </p>
+              <a
+                href="https://www.windstarcruises.com/"
+                target="_blank"
+                class="btn btn-outline-primary btn-sm"
+                >Learn more →</a
+              >
             </div>
           </div>
+        </div>
 
-          <!-- Windstar -->
-          <div
-            class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex cruise-item"
-            data-type="ocean"
-          >
-            <div class="card cruise-card w-100 shadow-sm">
-              <div class="card-body">
-                <h5 class="card-title">Windstar</h5>
-                <p class="card-text">
-                  Elegant staterooms, gourmet dining, immersive shore
-                  excursions, and personalized service along Europe’s most
-                  iconic waterways.
-                </p>
-                <a
-                  href="https://www.windstarcruises.com/"
-                  target="_blank"
-                  class="btn btn-outline-primary btn-sm"
-                  >Learn more →</a
-                >
-              </div>
+        <!-- Ponant -->
+        <div
+          class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex cruise-item"
+          data-type="ocean expedition"
+        >
+          <div class="card cruise-card w-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Ponant</h5>
+              <p class="card-text">
+                French luxury meets expedition cruising, with sleek ships,
+                refined cuisine, and unparalleled polar and remote-region
+                access.
+              </p>
+              <a
+                href="https://inspires.to/experiences/curated-voyages-to-indulge-your-inner-explorer-570517"
+                target="_blank"
+                class="btn btn-outline-primary btn-sm"
+                >Learn more →</a
+              >
             </div>
           </div>
+        </div>
 
-          <!-- Ponant -->
-          <div
-            class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex cruise-item"
-            data-type="ocean expedition"
-          >
-            <div class="card cruise-card w-100 shadow-sm">
-              <div class="card-body">
-                <h5 class="card-title">Ponant</h5>
-                <p class="card-text">
-                  French luxury meets expedition cruising, with sleek ships,
-                  refined cuisine, and unparalleled polar and remote-region
-                  access.
-                </p>
-                <a
-                  href="https://inspires.to/experiences/curated-voyages-to-indulge-your-inner-explorer-570517"
-                  target="_blank"
-                  class="btn btn-outline-primary btn-sm"
-                  >Learn more →</a
-                >
-              </div>
+        <!-- Oceania -->
+        <div
+          class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex cruise-item"
+          data-type="ocean"
+        >
+          <div class="card cruise-card w-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Oceania</h5>
+              <p class="card-text">
+                Renowned for exceptional cuisine, refined mid-sized ships, and
+                destination-rich itineraries blending luxury with a relaxed
+                atmosphere.
+              </p>
+              <a
+                href="https://www.oceaniacruises.com?insider=e2ol0-regan-kirk"
+                target="_blank"
+                class="btn btn-outline-primary btn-sm"
+                >Learn more →</a
+              >
             </div>
           </div>
+        </div>
 
-          <!-- Oceania -->
-          <div
-            class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex cruise-item"
-            data-type="ocean"
-          >
-            <div class="card cruise-card w-100 shadow-sm">
-              <div class="card-body">
-                <h5 class="card-title">Oceania</h5>
-                <p class="card-text">
-                  Renowned for exceptional cuisine, refined mid-sized ships, and
-                  destination-rich itineraries blending luxury with a relaxed
-                  atmosphere.
-                </p>
-                <a
-                  href="https://www.oceaniacruises.com?insider=e2ol0-regan-kirk"
-                  target="_blank"
-                  class="btn btn-outline-primary btn-sm"
-                  >Learn more →</a
-                >
-              </div>
+        <!-- AmaWaterways -->
+        <div
+          class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex cruise-item"
+          data-type="river"
+        >
+          <div class="card cruise-card w-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">AmaWaterways</h5>
+              <p class="card-text">
+                Award-winning river cruises with elegant staterooms, gourmet
+                dining, immersive excursions, and personalized service along
+                Europe’s waterways.
+              </p>
+              <a
+                href="https://www.amawaterways.com/"
+                target="_blank"
+                class="btn btn-outline-primary btn-sm"
+                >Learn more →</a
+              >
             </div>
           </div>
+        </div>
 
-          <!-- AmaWaterways -->
-          <div
-            class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex cruise-item"
-            data-type="river"
-          >
-            <div class="card cruise-card w-100 shadow-sm">
-              <div class="card-body">
-                <h5 class="card-title">AmaWaterways</h5>
-                <p class="card-text">
-                  Award-winning river cruises with elegant staterooms, gourmet
-                  dining, immersive excursions, and personalized service along
-                  Europe’s waterways.
-                </p>
-                <a
-                  href="https://www.amawaterways.com/"
-                  target="_blank"
-                  class="btn btn-outline-primary btn-sm"
-                  >Learn more →</a
-                >
-              </div>
+        <!-- Uniworld -->
+        <div
+          class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex cruise-item"
+          data-type="river"
+        >
+          <div class="card cruise-card w-100 shadow-sm">
+            <img
+              src="../Images/Cruises/Uniworld.jpg"
+              alt="Uniworld Boutique River Cruises"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Uniworld Boutique River Cruises</h5>
+              <p class="card-text">
+                Ultra-luxury river cruising with meticulously designed ships,
+                all-inclusive gourmet dining, immersive excursions, and
+                art-filled staterooms.
+              </p>
+              <a
+                href="https://www.uniworld.com/"
+                target="_blank"
+                class="btn btn-outline-primary btn-sm"
+                >Learn more →</a
+              >
             </div>
           </div>
+        </div>
 
-          <!-- Uniworld -->
-          <div
-            class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex cruise-item"
-            data-type="river"
-          >
-            <div class="card cruise-card w-100 shadow-sm">
-              <img
-                src="../Images/Cruises/Uniworld.jpg"
-                alt="Uniworld Boutique River Cruises"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Uniworld Boutique River Cruises</h5>
-                <p class="card-text">
-                  Ultra-luxury river cruising with meticulously designed ships,
-                  all-inclusive gourmet dining, immersive excursions, and
-                  art-filled staterooms.
-                </p>
-                <a
-                  href="https://www.uniworld.com/"
-                  target="_blank"
-                  class="btn btn-outline-primary btn-sm"
-                  >Learn more →</a
-                >
-              </div>
+        <!-- Tauck -->
+        <div
+          class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex cruise-item"
+          data-type="river"
+        >
+          <div class="card cruise-card w-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Tauck River Cruises</h5>
+              <p class="card-text">
+                Expertly guided river and small-ship cruises with immersive
+                cultural experiences, all-inclusive luxury, and exceptional
+                service.
+              </p>
+              <a
+                href="https://www.tauck.com?insider=e2ol0-regan-kirk"
+                target="_blank"
+                class="btn btn-outline-primary btn-sm"
+                >Learn more →</a
+              >
             </div>
           </div>
+        </div>
 
-          <!-- Tauck -->
-          <div
-            class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex cruise-item"
-            data-type="river"
-          >
-            <div class="card cruise-card w-100 shadow-sm">
-              <div class="card-body">
-                <h5 class="card-title">Tauck River Cruises</h5>
-                <p class="card-text">
-                  Expertly guided river and small-ship cruises with immersive
-                  cultural experiences, all-inclusive luxury, and exceptional
-                  service.
-                </p>
-                <a
-                  href="https://www.tauck.com?insider=e2ol0-regan-kirk"
-                  target="_blank"
-                  class="btn btn-outline-primary btn-sm"
-                  >Learn more →</a
-                >
-              </div>
+        <!-- Emerald Cruises -->
+        <div
+          class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex cruise-item"
+          data-type="ocean river"
+        >
+          <div class="card cruise-card w-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Emerald Cruises</h5>
+              <p class="card-text">
+                Modern, all-inclusive river and yacht-style cruising with
+                stylish ships, spacious staterooms, immersive excursions, and
+                exceptional service.
+              </p>
+              <a
+                href="https://www.emeraldcruises.com/"
+                target="_blank"
+                class="btn btn-outline-primary btn-sm"
+                >Learn more →</a
+              >
             </div>
           </div>
+        </div>
 
-          <!-- Emerald Cruises -->
-          <div
-            class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex cruise-item"
-            data-type="ocean river"
-          >
-            <div class="card cruise-card w-100 shadow-sm">
-              <div class="card-body">
-                <h5 class="card-title">Emerald Cruises</h5>
-                <p class="card-text">
-                  Modern, all-inclusive river and yacht-style cruising with
-                  stylish ships, spacious staterooms, immersive excursions, and
-                  exceptional service.
-                </p>
-                <a
-                  href="https://www.emeraldcruises.com/"
-                  target="_blank"
-                  class="btn btn-outline-primary btn-sm"
-                  >Learn more →</a
-                >
-              </div>
+        <!-- Crystal Cruises -->
+        <div
+          class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex cruise-item"
+          data-type="ocean"
+        >
+          <div class="card cruise-card w-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Crystal Cruises</h5>
+              <p class="card-text">
+                Legendary ultra-luxury cruises with elegant ships, exceptional
+                service, award-winning dining, and thoughtfully curated
+                itineraries worldwide.
+              </p>
+              <a
+                href="https://www.crystalcruises.com/"
+                target="_blank"
+                class="btn btn-outline-primary btn-sm"
+                >Learn more →</a
+              >
             </div>
           </div>
+        </div>
 
-          <!-- Crystal Cruises -->
-          <div
-            class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex cruise-item"
-            data-type="ocean"
-          >
-            <div class="card cruise-card w-100 shadow-sm">
-              <div class="card-body">
-                <h5 class="card-title">Crystal Cruises</h5>
-                <p class="card-text">
-                  Legendary ultra-luxury cruises with elegant ships, exceptional
-                  service, award-winning dining, and thoughtfully curated
-                  itineraries worldwide.
-                </p>
-                <a
-                  href="https://www.crystalcruises.com/"
-                  target="_blank"
-                  class="btn btn-outline-primary btn-sm"
-                  >Learn more →</a
-                >
-              </div>
+        <!-- UnCruise Adventures -->
+        <div
+          class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex cruise-item"
+          data-type="expedition"
+        >
+          <div class="card cruise-card w-100 shadow-sm">
+            <img
+              src="../Images/Cruises/UnCruise.jpg"
+              alt="UnCruise Adventures"
+            />
+            <div class="card-body">
+              <h5 class="card-title">UnCruise Adventures</h5>
+              <p class="card-text">
+                Small-ship expedition cruising combining adventure, comfort, and
+                personalized service with itineraries focused on wildlife and
+                remote destinations.
+              </p>
+              <a
+                href="https://uncruise.com/"
+                target="_blank"
+                class="btn btn-outline-primary btn-sm"
+                >Learn more →</a
+              >
             </div>
           </div>
+        </div>
 
-          <!-- UnCruise Adventures -->
-          <div
-            class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex cruise-item"
-            data-type="expedition"
-          >
-            <div class="card cruise-card w-100 shadow-sm">
-              <img
-                src="../Images/Cruises/UnCruise.jpg"
-                alt="UnCruise Adventures"
-              />
-              <div class="card-body">
-                <h5 class="card-title">UnCruise Adventures</h5>
-                <p class="card-text">
-                  Small-ship expedition cruising combining adventure, comfort,
-                  and personalized service with itineraries focused on wildlife
-                  and remote destinations.
-                </p>
-                <a
-                  href="https://uncruise.com/"
-                  target="_blank"
-                  class="btn btn-outline-primary btn-sm"
-                  >Learn more →</a
-                >
-              </div>
+        <!-- Swan Hellenic -->
+        <div
+          class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex cruise-item"
+          data-type="expedition"
+        >
+          <div class="card cruise-card w-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Swan Hellenic</h5>
+              <p class="card-text">
+                Small-ship expedition cruising blending adventure, comfort, and
+                immersive itineraries focused on wildlife, culture, and remote
+                destinations.
+              </p>
+              <a
+                href="https://inspires.to/experiences/elevated-expeditions-offer-2qp87o"
+                target="_blank"
+                class="btn btn-outline-primary btn-sm"
+                >Learn more →</a
+              >
             </div>
           </div>
+        </div>
 
-          <!-- Swan Hellenic -->
-          <div
-            class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex cruise-item"
-            data-type="expedition"
-          >
-            <div class="card cruise-card w-100 shadow-sm">
-              <div class="card-body">
-                <h5 class="card-title">Swan Hellenic</h5>
-                <p class="card-text">
-                  Small-ship expedition cruising blending adventure, comfort,
-                  and immersive itineraries focused on wildlife, culture, and
-                  remote destinations.
-                </p>
-                <a
-                  href="https://inspires.to/experiences/elevated-expeditions-offer-2qp87o"
-                  target="_blank"
-                  class="btn btn-outline-primary btn-sm"
-                  >Learn more →</a
-                >
-              </div>
+        <!-- SeaDream Yacht Club -->
+        <div
+          class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex cruise-item"
+          data-type="ocean"
+        >
+          <div class="card cruise-card w-100 shadow-sm">
+            <img
+              src="../Images/Cruises/SeaDream.jpg"
+              alt="SeaDream Yacht Club"
+            />
+            <div class="card-body">
+              <h5 class="card-title">SeaDream Yacht Club</h5>
+              <p class="card-text">
+                A floating Ritz-Carlton experience: elegant yachts, spacious
+                suites, world-class service, and curated itineraries to
+                exclusive ports.
+              </p>
+              <a
+                href="https://seadream.com/"
+                target="_blank"
+                class="btn btn-outline-primary btn-sm"
+                >Learn more →</a
+              >
             </div>
           </div>
+        </div>
 
-          <!-- SeaDream Yacht Club -->
-          <div
-            class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex cruise-item"
-            data-type="ocean"
-          >
-            <div class="card cruise-card w-100 shadow-sm">
-              <img
-                src="../Images/Cruises/SeaDream.jpg"
-                alt="SeaDream Yacht Club"
-              />
-              <div class="card-body">
-                <h5 class="card-title">SeaDream Yacht Club</h5>
-                <p class="card-text">
-                  A floating Ritz-Carlton experience: elegant yachts, spacious
-                  suites, world-class service, and curated itineraries to
-                  exclusive ports.
-                </p>
-                <a
-                  href="https://seadream.com/"
-                  target="_blank"
-                  class="btn btn-outline-primary btn-sm"
-                  >Learn more →</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- Ritz-Carlton Yacht Collection -->
-          <div
-            class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex cruise-item"
-            data-type="ocean"
-          >
-            <div class="card cruise-card w-100 shadow-sm">
-              <img
-                src="../Images/Cruises/RitzCarlton.jpg"
-                alt="Ritz-Carlton Yacht Collection"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Ritz-Carlton Yacht Collection</h5>
-                <p class="card-text">
-                  A floating Ritz-Carlton experience: elegant yachts, spacious
-                  suites, world-class service, and curated itineraries to
-                  exclusive ports and private harbors.
-                </p>
-                <a
-                  href="https://www.ritzcarltonyachtcollection.com/"
-                  target="_blank"
-                  class="btn btn-outline-primary btn-sm"
-                  >Learn more →</a
-                >
-              </div>
+        <!-- Ritz-Carlton Yacht Collection -->
+        <div
+          class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex cruise-item"
+          data-type="ocean"
+        >
+          <div class="card cruise-card w-100 shadow-sm">
+            <img
+              src="../Images/Cruises/RitzCarlton.jpg"
+              alt="Ritz-Carlton Yacht Collection"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Ritz-Carlton Yacht Collection</h5>
+              <p class="card-text">
+                A floating Ritz-Carlton experience: elegant yachts, spacious
+                suites, world-class service, and curated itineraries to
+                exclusive ports and private harbors.
+              </p>
+              <a
+                href="https://www.ritzcarltonyachtcollection.com/"
+                target="_blank"
+                class="btn btn-outline-primary btn-sm"
+                >Learn more →</a
+              >
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- Gallery -->
-      <div class="gallery mb-5">
-        <div class="row g-3 justify-content-center">
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/Cruises/Cruises1.jpeg"
-              class="img-fluid rounded shadow-sm"
-              alt="Cruise Image 1"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/Cruises/Cruises2.jpeg"
-              class="img-fluid rounded shadow-sm"
-              alt="Cruise Image 2"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/Cruises/Cruises3.jpeg"
-              class="img-fluid rounded shadow-sm"
-              alt="Cruise Image 3"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/Cruises/Cruises4.jpeg"
-              class="img-fluid rounded shadow-sm"
-              alt="Cruise Image 4"
-            />
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <img
-              src="../Images/Cruises/Cruises5.jpeg"
-              class="img-fluid rounded shadow-sm"
-              alt="Cruise Image 5"
-            />
-          </div>
+    <!-- Gallery -->
+    <div class="gallery mb-5">
+      <div class="row g-3 justify-content-center">
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/Cruises/Cruises1.jpeg"
+            class="img-fluid rounded shadow-sm"
+            alt="Cruise Image 1"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/Cruises/Cruises2.jpeg"
+            class="img-fluid rounded shadow-sm"
+            alt="Cruise Image 2"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/Cruises/Cruises3.jpeg"
+            class="img-fluid rounded shadow-sm"
+            alt="Cruise Image 3"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/Cruises/Cruises4.jpeg"
+            class="img-fluid rounded shadow-sm"
+            alt="Cruise Image 4"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <img
+            src="../Images/Cruises/Cruises5.jpeg"
+            class="img-fluid rounded shadow-sm"
+            alt="Cruise Image 5"
+          />
         </div>
       </div>
     </div>
