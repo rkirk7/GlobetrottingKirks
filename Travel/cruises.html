@@ -144,12 +144,6 @@
       transition: opacity 0.25s ease, transform 0.25s ease;
     }
 
-    .cruise-item.is-hidden {
-      opacity: 0;
-      transform: scale(0.98);
-      pointer-events: none;
-    }
-
     .why-book-list {
       display: flex;
       flex-wrap: wrap;
@@ -829,26 +823,4 @@
       </div>
     </div>
   </div>
-
-  <script>
-    document.addEventListener("click", function (e) {
-      const btn = e.target.closest(".filter-btn");
-      if (!btn) return;
-
-      console.log("Filter clicked:", btn.dataset.filter);
-
-      const filter = btn.dataset.filter;
-      const filterButtons = document.querySelectorAll(".filter-btn");
-      const cruiseItems = document.querySelectorAll(".cruise-item");
-
-      filterButtons.forEach((b) => b.classList.remove("active"));
-      btn.classList.add("active");
-
-      cruiseItems.forEach((item) => {
-        const types = item.dataset.type.split(" ");
-        item.style.display =
-          filter === "all" || types.includes(filter) ? "flex" : "none";
-      });
-    });
-  </script>
 </body>
