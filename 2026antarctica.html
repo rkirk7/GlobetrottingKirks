@@ -235,32 +235,38 @@
         display: none !important;
       }
     }
+    .hero-callout {
+      font-size: 1.75rem; /* visually similar to h2 */
+      line-height: 1.4;
+      margin: 2.5rem auto;
+      max-width: 650px;
+      color: #003d5b;
+    }
 
     /* ================================
    Desktop layout fix for TOC overlap
    ================================ */
 
-@media (min-width: 992px) {
-  .antarctica-layout {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 260px;
-    gap: 2rem;
-    align-items: start;
-  }
+    @media (min-width: 992px) {
+      .antarctica-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 260px;
+        gap: 2rem;
+        align-items: start;
+      }
 
-  #toc {
-    position: sticky;
-    top: 100px;
-    margin-bottom: 0;
-  }
-}
-
+      #toc {
+        position: sticky;
+        top: 100px;
+        margin-bottom: 0;
+      }
+    }
   </style>
 </head>
 
 <body class="antarctica-page">
-<div class="container antarctica-layout">
-      <div
+  <div class="container antarctica-layout">
+    <div
       class="hero"
       data-hero="Images/ScenicGroup/SE_Eclipse_Exterior_Pensisula_SR_001_hero.jpg"
     >
@@ -280,13 +286,13 @@
 
     <div class="card my-4">
       <div class="card-body">
-        <h2 class="text-center">
-          <strong
-            >If you've ever considered going to Antarctica, this special group
+        <p class="hero-callout text-center">
+          <strong>
+            If you've ever considered going to Antarctica, this special group
             rate we've secured offers an ultra-luxury expedition at budget
-            pricing.</strong
-          >
-        </h2>
+            pricing.
+          </strong>
+        </p>
 
         <p class="text-center">
           <img
@@ -649,9 +655,9 @@
             <li><strong>20% nonrefundable deposit</strong> required.</li>
             <li><strong>Final payment:</strong> 120 days before sailing.</li>
             <li>
-              <strong>Travel insurance:</strong> We recommended
-              purchasing within 14 days of deposit. We can help with generating
-              quotes to find the best coverage.
+              <strong>Travel insurance:</strong> We recommended purchasing
+              within 14 days of deposit. We can help with generating quotes to
+              find the best coverage.
             </li>
           </ul>
         </div>
@@ -721,20 +727,20 @@
       });
   </script>
 
-    <script>
-  // Smooth scroll for internal links
-  document.querySelectorAll(".scroll-link").forEach((link) => {
-    link.addEventListener("click", function (e) {
-      e.preventDefault(); // stop default jump
-      const targetId = this.getAttribute("data-target");
-      const targetEl = document.getElementById(targetId);
-      if (targetEl) {
-        targetEl.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
-      }
+  <script>
+    // Smooth scroll for internal links
+    document.querySelectorAll(".scroll-link").forEach((link) => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault(); // stop default jump
+        const targetId = this.getAttribute("data-target");
+        const targetEl = document.getElementById(targetId);
+        if (targetEl) {
+          targetEl.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      });
     });
-  });
-</script>
+  </script>
 </body>
