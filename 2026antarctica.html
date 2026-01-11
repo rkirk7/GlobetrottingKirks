@@ -261,10 +261,41 @@
         margin-bottom: 0;
       }
     }
+
+    @media (min-width: 992px) {
+  .antarctica-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 260px;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .antarctica-content {
+    grid-column: 1;
+  }
+
+  #toc {
+    grid-column: 2;
+    position: sticky;
+    top: 100px;
+  }
+}
+
   </style>
 </head>
 
+
+
+
 <body class="antarctica-page">
+
+     <div id="toc" class="toc bg-light p-3 border rounded d-none d-md-block">
+      <button id="toc-toggle" class="btn btn-sm btn-primary d-md-none mb-2">
+        ☰ Table of Contents
+      </button>
+      <ul id="toc-list" class="list-unstyled mb-0"></ul>
+    </div>
+
   <div class="container antarctica-layout">
     <div
       class="hero"
@@ -275,13 +306,6 @@
           December 22, 2026: An Adventure to Antarctica and the Weddell Sea
         </h1>
       </div>
-    </div>
-
-    <div id="toc" class="toc bg-light p-3 border rounded d-none d-md-block">
-      <button id="toc-toggle" class="btn btn-sm btn-primary d-md-none mb-2">
-        ☰ Table of Contents
-      </button>
-      <ul id="toc-list" class="list-unstyled mb-0"></ul>
     </div>
 
     <div class="card my-4">
