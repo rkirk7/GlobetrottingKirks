@@ -508,13 +508,42 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 1;
 }
 
+
+   /* Filter bar container */
+    /* Modern Filter Buttons */
+    .filter-bar {
+      display: inline-flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.5rem 0.75rem;
+      background: #f1f5f9;
+      border-radius: 999px;
+      box-shadow: inset 0 0 0 1px #d1d5db;
+    }
+
+    .filter-btn {
+      border: none;
+      background: #fff;
+      color: #003d5b;
+      font-weight: 600;
+      padding: 0.55rem 1.2rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .filter-btn:hover {
+      transform: translateY(-2px);
+      background: #e0f0ff;
+    }
+
+    .filter-btn.active {
+      background: linear-gradient(135deg, #003d5b, #0077a8);
+      color: #fff;
+    }
+
 .filter-item.is-hidden {
   display: none !important;
-}
-
-.filter-btn.active {
-  background-color: #0d6efd;
-  color: #fff;
 }
 
 
