@@ -235,12 +235,32 @@
         display: none !important;
       }
     }
+
+    /* ================================
+   Desktop layout fix for TOC overlap
+   ================================ */
+
+@media (min-width: 992px) {
+  .antarctica-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 260px;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  #toc {
+    position: sticky;
+    top: 100px;
+    margin-bottom: 0;
+  }
+}
+
   </style>
 </head>
 
 <body class="antarctica-page">
-  <div class="container">
-    <div
+<div class="container antarctica-layout">
+      <div
       class="hero"
       data-hero="Images/ScenicGroup/SE_Eclipse_Exterior_Pensisula_SR_001_hero.jpg"
     >
