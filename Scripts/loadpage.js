@@ -74,9 +74,7 @@ async function initializePageScripts(page, loadId) {
   if (page === "albums.html" && typeof initAlbums === "function") initAlbums();
   if (page === "blog.html" && typeof initBlog === "function") initBlog();
     if (page === "featureddeal.html") loadPage('antarcticaspecials.html');
-if (page === "cruises.html") {
-  initCruiseFilters(content);
-}
+
 
   // if (page === "Travel/europe.html" && typeof initCountryDropdown === "function") {
   //   initCountryDropdown();
@@ -448,22 +446,7 @@ document.addEventListener("click", function (e) {
   });
 });
 
-function initCruiseFilters(container) {
-  container.querySelectorAll('.filter-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const filter = btn.dataset.filter;
-      const cruiseItems = container.querySelectorAll('.cruise-item');
 
-      container.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      cruiseItems.forEach(item => {
-        const types = item.dataset.type.split(" ");
-        item.style.display = filter === 'all' || types.includes(filter) ? 'flex' : 'none';
-      });
-    });
-  });
-}
 
 
 
@@ -482,3 +465,5 @@ window.addEventListener("hashchange", handleHashChange);
 document.addEventListener("DOMContentLoaded", () => {
   handleHashChange();
 });
+
+
