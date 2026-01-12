@@ -1,33 +1,36 @@
-<style>
-  .canva-embed {
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
-    height: 90%;
-/* Canva document ratio */
-    margin: 3rem auto;
-    overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(63, 69, 81, 0.18);
-  }
-
-  .canva-embed iframe {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-  }
-</style>
-
 <div class="container">
-  <div class="canva-embed">
+  <div
+    style="
+      position: relative;
+      width: 90%;
+      height: 0;
+      padding-top: 100%;
+      padding-bottom: 0;
+      box-shadow: 0 2px 8px 0 rgba(63, 69, 81, 0.16);
+      margin-top: 1.6em;
+      margin-bottom: 0.9em;
+      overflow: hidden;
+      border-radius: 8px;
+      will-change: transform;
+    "
+  >
     <iframe
       loading="lazy"
+      style="
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        border: none;
+        padding: 0;
+        margin: 0;
+      "
       src="https://www.canva.com/design/DAG98B60Dsg/dQCMeoHdGEZQTfn_5Jk_Uw/view?embed"
-      allowfullscreen
+      allowfullscreen="allowfullscreen"
       allow="fullscreen"
-    ></iframe>
+    >
+    </iframe>
   </div>
 
   <h2 class="text-center embed-caption">
