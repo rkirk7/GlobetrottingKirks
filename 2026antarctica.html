@@ -10,37 +10,13 @@
       font-size: 16px;
     }
 
-    /* Typography scale */
-    h1 {
-      font-size: 2rem;
-      margin-top: 0;
-      margin-bottom: 1rem;
-      color: #003d5b;
-    }
-    h2 {
-      font-size: 1.5rem;
-      margin-top: 2.2rem;
-      margin-bottom: 1rem;
-      color: #003d5b;
-    }
-    h3 {
-      font-size: 1.25rem;
-      margin-top: 1.8rem;
-      margin-bottom: 0.8rem;
-      color: #003d5b;
-    }
-    p,
-    li,
-    td,
-    th {
-      font-size: 1rem;
-    }
+    /* Typography */
+    h1 { font-size: 2rem; margin-top: 0; margin-bottom: 1rem; color: #003d5b; }
+    h2 { font-size: 1.5rem; margin-top: 2.2rem; margin-bottom: 1rem; color: #003d5b; }
+    h3 { font-size: 1.25rem; margin-top: 1.8rem; margin-bottom: 0.8rem; color: #003d5b; }
+    p, li, td, th { font-size: 1rem; }
 
-    .container {
-      margin: auto;
-      background: #fff;
-      padding: 30px;
-    }
+    .container { margin: auto; background: #fff; padding: 30px; }
     .btn {
       display: inline-block;
       padding: 12px 20px;
@@ -51,218 +27,73 @@
       font-weight: bold;
       font-size: 1rem;
     }
-    .btn:hover {
-      background-color: #005f8c;
-    }
-    .text-center {
-      text-align: center;
-    }
+    .btn:hover { background-color: #005f8c; }
+    .text-center { text-align: center; }
+    img { max-width: 100%; height: auto; display: block; }
+    ul { margin-left: 20px; }
 
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
+    /* Table styling */
+    .suite-table { width: 100%; max-width: 900px; border-collapse: collapse; margin: 20px auto; border: 1px solid #ccc; font-size: 1rem; }
+    .suite-table th, .suite-table td { border: 1px solid #ccc; padding: 10px; text-align: left; }
+    .suite-table th { background: #f0f4f7; font-weight: bold; }
 
-    ul {
-      margin-left: 20px;
-    }
+    /* Highlight box */
+    .highlight { background: #e6f4ff; padding: 15px; border-left: 4px solid #0077b6; margin: 20px 0; color: #333; font-size: 1rem; line-height: 1.5; }
 
-    /* ------------------------------ */
-    /* TABLE STYLING                 */
-    /* ------------------------------ */
-
-    .antarctica-page .suite-table {
-      width: 100%;
-      max-width: 900px;
-      border-collapse: collapse;
-      margin: 20px auto;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-    }
-
-    .antarctica-page .suite-table th,
-    .antarctica-page .suite-table td {
-      border: 1px solid #ccc;
-      padding: 10px;
-      text-align: left;
-    }
-
-    .antarctica-page .suite-table th {
-      background: #f0f4f7;
-      font-weight: bold;
-    }
-
-    /* ------------------------------ */
-    /* CALLOUT BOX                    */
-    /* ------------------------------ */
-
-    .antarctica-page .highlight {
-      background: #e6f4ff;
-      padding: 15px;
-      border-left: 4px solid #0077b6;
-      margin: 20px 0;
-      color: #333;
-      font-size: 1rem;
-      line-height: 1.5;
-    }
-
-    /* ------------------------------ */
-    /* TABLE OF CONTENTS              */
-    /* ------------------------------ */
-
+    /* TOC styling */
     .toc {
       background: #eef6fb;
       border-left: 4px solid #0077b6;
       padding: 15px 20px;
-      margin-bottom: 30px;
       font-size: 1rem;
     }
+    .toc h2 { font-size: 1.25rem; margin-top: 0; margin-bottom: 10px; }
+    .toc ul { list-style: none; margin: 0; padding: 0; display: none; }
+    .toc li { margin-bottom: 6px; }
+    .toc a { text-decoration: none; color: #0077b6; }
+    .toc a:hover { text-decoration: underline; }
+    #toc[open] ul { display: block; } /* show list when details is open */
 
-    .toc h2 {
-      font-size: 1.25rem;
-      margin-top: 0;
-      margin-bottom: 10px;
-    }
+    html { scroll-behavior: smooth; }
 
-    .toc ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
-    .toc li {
-      margin-bottom: 6px;
-    }
-    .toc a {
-      text-decoration: none;
-      color: #0077b6;
-    }
-    .toc a:hover {
-      text-decoration: underline;
-    }
-
-    /* Smooth scroll */
-    html {
-      scroll-behavior: smooth;
-    }
-
-    /* Center the entire image block */
-    .image-placeholder {
-      width: 500px; /* consistent width */
-      margin: 25px auto; /* centers it */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .antarctica-layout {
-      max-width: 1000px;
-    }
-
-    /* Make the images exactly 500px wide */
-    .image-placeholder img {
-      max-width: 500px !important;
-      width: 500px;
-      height: auto;
-      display: block;
-    }
-
+    /* Image placeholders */
+    .image-placeholder { width: 500px; margin: 25px auto; display: flex; justify-content: center; align-items: center; }
+    .image-placeholder img { max-width: 500px !important; width: 500px; height: auto; display: block; }
     @media (max-width: 600px) {
-      .image-placeholder {
-        width: 100%;
-      }
-      .image-placeholder img {
-        width: 100%;
-      }
+      .image-placeholder { width: 100%; }
+      .image-placeholder img { width: 100%; }
     }
 
-    .antarctica-page img {
-      max-width: none !important;
-    }
-    .antarctica-page .image-placeholder img {
-      width: 500px !important;
-      max-width: 500px !important;
-      flex-shrink: 0 !important;
-    }
+    /* Hero callout */
+    .hero-callout { font-size: 1.75rem; line-height: 1.4; margin: 2.5rem auto; max-width: 650px; color: #003d5b; }
 
-    .hero img {
-      width: auto !important;
-      max-width: none !important;
-    }
-
-    /*collapse*/
-
-    #toc {
-  grid-column: 2;
-  position: sticky;
-  top: 100px;
-  max-height: calc(100vh - 120px);
-  overflow-y: auto;
-}
-
-
-    /* Hide TOC list on mobile by default
-    #toc-list {
-      display: none;
-    }
-
-    #toc.open #toc-list {
-      display: block;
-    } */
-
-    .hero-callout {
-      font-size: 1.75rem; /* visually similar to h2 */
-      line-height: 1.4;
-      margin: 2.5rem auto;
-      max-width: 650px;
-      color: #003d5b;
-    }
-
-    /* ================================
-   Desktop layout fix for TOC overlap
-   ================================ */
-
+    /* Layout */
+    .antarctica-layout { max-width: 1000px; }
     @media (min-width: 992px) {
-      .antarctica-layout {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr) 260px;
-        gap: 2rem;
-        align-items: start;
-      }
-
-      .antarctica-content {
-        grid-column: 1;
-        max-width: 700px;
-      }
-
-      #toc {
-        grid-column: 2;
-        position: sticky;
-        top: 100px;
-      }
+      .antarctica-layout { display: grid; grid-template-columns: 1fr 260px; gap: 2rem; align-items: start; }
+      .antarctica-content { grid-column: 1; max-width: 700px; }
+      #toc { grid-column: 2; position: sticky; top: 100px; max-height: calc(100vh - 120px); overflow-y: auto; }
     }
+    @media (max-width: 991px) {
+      .antarctica-layout { display: block; }
+      #toc { position: relative; top: auto; max-height: none; margin-bottom: 1.5em; }
+    }
+
   </style>
 </head>
 
 <body class="antarctica-page">
   <div class="container antarctica-layout">
-    <details id="toc" class="toc" open>
-      <summary>Table of Contents</summary>
-      <ul id="toc-list"></ul>
-    </details>
-
-    <div
-      class="hero"
-      data-hero="Images/ScenicGroup/SE_Eclipse_Exterior_Pensisula_SR_001_hero.jpg"
-    >
-      <div class="hero-content text-center">
-        <h1 class="hero-title">
-          December 22, 2026: An Adventure to Antarctica and the Weddell Sea
-        </h1>
-      </div>
-    </div>
-
     <div class="antarctica-content">
+      <div class="hero" data-hero="Images/ScenicGroup/SE_Eclipse_Exterior_Pensisula_SR_001_hero.jpg">
+        <div class="hero-content text-center">
+          <h1 class="hero-title">
+            December 22, 2026: An Adventure to Antarctica and the Weddell Sea
+          </h1>
+        </div>
+      </div>
+
+      <!-- All your cards and content here -->
       <div class="card my-4">
         <div class="card-body">
           <p class="hero-callout text-center">
@@ -272,19 +103,11 @@
               pricing.
             </strong>
           </p>
-
           <p class="text-center">
-            <img
-              src="Images/ScenicGroup/weddellitinerary.jpg"
-              class="img-fluid rounded"
-            />
+            <img src="Images/ScenicGroup/weddellitinerary.jpg" class="img-fluid rounded"/>
           </p>
-
           <p class="text-center">
-            <a
-              href="mailto:regan.kirk@fora.travel,meimei.kirk@fora.travel?subject=I%20want%20to%20talk%20about%20the%202December%2020206%20Antarctica%20deal!"
-              class="btn btn-primary"
-            >
+            <a href="mailto:regan.kirk@fora.travel,meimei.kirk@fora.travel?subject=I%20want%20to%20talk%20about%20the%202December%2020206%20Antarctica%20deal!" class="btn btn-primary">
               Reach Out with Questions or to Book!
             </a>
           </p>
@@ -697,6 +520,11 @@
         </div>
       </div>
     </div>
+
+     <details id="toc" class="toc">
+      <summary>Table of Contents</summary>
+      <ul id="toc-list"></ul>
+    </details>
   </div>
 
   <!-- <script>
