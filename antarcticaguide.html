@@ -1,31 +1,7 @@
-<div class="container">
-  <div class="iframe-wrapper">
-    <iframe
-      loading="lazy"
-      src="https://www.canva.com/design/DAG98B60Dsg/dQCMeoHdGEZQTfn_5Jk_Uw/view?embed"
-      allowfullscreen
-      allow="fullscreen"
-    ></iframe>
-  </div>
-
-  <h2 class="text-center">
-    This guide is an evolving document; if you think of something we've missed, let us know! If you'd like a downloadable copy, send us a message and we'll email one to you. Or, if you're ready to talk through your options, reach out today!
-  </h2>
-
-  <p class="text-center">
-    <a
-      href="mailto:regan.kirk@fora.travel,meimei.kirk@fora.travel?subject=Antarctica%20guide"
-      class="btn btn-primary"
-    >
-      Contact Us
-    </a>
-  </p>
-</div>
-
 <style>
-/* Basic container styling */
+/* Container styling */
 .container {
-  max-width: 900px;
+  max-width: 1200px; /* allow bigger iframe on large screens */
   margin: 0 auto;
   padding: 20px;
 }
@@ -56,15 +32,14 @@
 .iframe-wrapper {
   position: relative;
   width: 100%;
-  max-width: 700px;       /* limit width on desktop */
-  margin: 1.5em auto;     /* center the iframe */
+  max-width: 1000px;      /* allow large width on desktop */
+  margin: 2em auto;       /* center the iframe */
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(63, 69, 81, 0.16);
   overflow: hidden;
-  will-change: transform;
-  
-  /* Default aspect ratio: square (1:1) for desktop */
-  padding-top: 90%;
+
+  /* 16:9 aspect ratio */
+  padding-top: 56.25%;    /* height / width = 9 / 16 */
 }
 
 .iframe-wrapper iframe {
@@ -79,10 +54,10 @@
 /* ------------------------------ */
 /* Mobile adjustments             */
 /* ------------------------------ */
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .iframe-wrapper {
-    padding-top: 56.25%; /* 16:9 aspect ratio for mobile */
-    max-width: 100%;      /* full width on mobile */
+    max-width: 100%;       /* full width on smaller screens */
+    padding-top: 56.25%;  /* keep 16:9 ratio */
   }
 }
 </style>
