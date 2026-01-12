@@ -36,13 +36,11 @@
       font-size: 1rem;
     }
 
-    .container {
-      max-width: 700px;
-      margin: auto;
-      background: #fff;
-      padding: 30px;
-    }
-
+   .container {
+  margin: auto;
+  background: #fff;
+  padding: 30px;
+}
     .btn {
       display: inline-block;
       padding: 12px 20px;
@@ -261,7 +259,9 @@
 
       .antarctica-content {
         grid-column: 1;
+          max-width: 700px;
       }
+      
 
       #toc {
         grid-column: 2;
@@ -283,13 +283,6 @@
           December 22, 2026: An Adventure to Antarctica and the Weddell Sea
         </h1>
       </div>
-    </div>
-
-    <div id="toc" class="toc bg-light p-3 border rounded d-none d-md-block">
-      <button id="toc-toggle" class="btn btn-sm btn-primary d-md-none mb-2">
-        ☰ Table of Contents
-      </button>
-      <ul id="toc-list" class="list-unstyled mb-0"></ul>
     </div>
 
     <div class="antarctica-content">
@@ -727,6 +720,13 @@
         </div>
       </div>
     </div>
+        <div id="toc" class="toc bg-light p-3 border rounded d-none d-md-block">
+      <button id="toc-toggle" class="btn btn-sm btn-primary d-md-none mb-2">
+        ☰ Table of Contents
+      </button>
+      <ul id="toc-list" class="list-unstyled mb-0"></ul>
+    </div>
+
   </div>
 
   <script>
