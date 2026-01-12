@@ -36,11 +36,11 @@
       font-size: 1rem;
     }
 
-   .container {
-  margin: auto;
-  background: #fff;
-  padding: 30px;
-}
+    .container {
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+    }
     .btn {
       display: inline-block;
       padding: 12px 20px;
@@ -156,8 +156,8 @@
     }
 
     .antarctica-layout {
-  max-width: 1000px;
-}
+      max-width: 1000px;
+    }
 
     /* Make the images exactly 500px wide */
     .image-placeholder img {
@@ -197,46 +197,15 @@
       position: relative;
     }
 
-    /* Hide TOC list on mobile by default */
+    /* Hide TOC list on mobile by default
     #toc-list {
       display: none;
     }
 
     #toc.open #toc-list {
       display: block;
-    }
+    } */
 
-    /* TOC toggle button: visible only on small screens */
-    #toc-toggle {
-      display: none;
-    }
-
-    @media (max-width: 768px) {
-      #toc {
-        margin-bottom: 20px;
-      }
-
-      #toc-toggle {
-        display: inline-block;
-        margin-bottom: 10px;
-      }
-
-      /* Optional: make TOC look like a collapsible card */
-      #toc {
-        border: 1px solid #ccc;
-        border-radius: 6px;
-      }
-    }
-
-    /* Desktop: show TOC always, hide toggle button */
-    @media (min-width: 769px) {
-      #toc-list {
-        display: block !important;
-      }
-      #toc-toggle {
-        display: none !important;
-      }
-    }
     .hero-callout {
       font-size: 1.75rem; /* visually similar to h2 */
       line-height: 1.4;
@@ -259,9 +228,8 @@
 
       .antarctica-content {
         grid-column: 1;
-          max-width: 700px;
+        max-width: 700px;
       }
-      
 
       #toc {
         grid-column: 2;
@@ -720,16 +688,13 @@
         </div>
       </div>
     </div>
-        <div id="toc" class="toc bg-light p-3 border rounded d-none d-md-block">
-      <button id="toc-toggle" class="btn btn-sm btn-primary d-md-none mb-2">
-        ☰ Table of Contents
-      </button>
-      <ul id="toc-list" class="list-unstyled mb-0"></ul>
-    </div>
-
+    <details id="toc" class="toc" open>
+      <summary>Table of Contents</summary>
+      <ul id="toc-list"></ul>
+    </details>
   </div>
 
-  <script>
+  <!-- <script>
     document
       .getElementById("toc-toggle")
       .addEventListener("click", function () {
@@ -752,5 +717,5 @@
         }
       });
     });
-  </script>
+  </script> -->
 </body>

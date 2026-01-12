@@ -130,10 +130,10 @@ function loadTOC() {
   });
 
   // Toggle button for mobile
-  const toggleBtn = document.getElementById("toc-toggle");
-  toggleBtn.addEventListener("click", () => {
-    tocList.classList.toggle("d-none");
-  });
+  // const toggleBtn = document.getElementById("toc-toggle");
+  // toggleBtn.addEventListener("click", () => {
+  //   tocList.classList.toggle("d-none");
+  // });
 
   // Highlight current section while scrolling
   if (!tocScrollListenerAdded) {
