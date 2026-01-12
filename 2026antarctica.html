@@ -1,241 +1,240 @@
 <head>
-<style>
-  /* =========================
+  <style>
+    /* =========================
      Base Reset & Typography
      ========================= */
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f7f7f7;
-    color: #333;
-    line-height: 1.7;
-    font-size: 16px;
-  }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f7f7f7;
+      color: #333;
+      line-height: 1.7;
+      font-size: 16px;
+    }
 
-  h1 {
-    font-size: 2rem;
-    margin: 0 0 1rem;
-    color: #003d5b;
-  }
-  h2 {
-    font-size: 1.5rem;
-    margin: 2.2rem 0 1rem;
-    color: #003d5b;
-  }
-  h3 {
-    font-size: 1.25rem;
-    margin: 1.8rem 0 0.8rem;
-    color: #003d5b;
-  }
+    h1 {
+      font-size: 2rem;
+      margin: 0 0 1rem;
+      color: #003d5b;
+    }
+    h2 {
+      font-size: 1.5rem;
+      margin: 2.2rem 0 1rem;
+      color: #003d5b;
+    }
+    h3 {
+      font-size: 1.25rem;
+      margin: 1.8rem 0 0.8rem;
+      color: #003d5b;
+    }
 
-  p,
-  li,
-  td,
-  th {
-    font-size: 1rem;
-  }
+    p,
+    li,
+    td,
+    th {
+      font-size: 1rem;
+    }
 
-  html {
-    scroll-behavior: smooth;
-  }
+    html {
+      scroll-behavior: smooth;
+    }
 
-  /* =========================
+    /* =========================
      Layout Containers
      ========================= */
-  .container {
-    margin: auto;
-    background: #fff;
-    padding: 30px;
-  }
+    .container {
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+    }
 
-  .antarctica-layout {
-    max-width: 1100px;
-    margin: 0 auto;
-  }
+    .antarctica-layout {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
 
-  /* =========================
+    /* =========================
      Buttons & Helpers
      ========================= */
-  .btn {
-    display: inline-block;
-    padding: 12px 20px;
-    background-color: #0077b6;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-    font-size: 1rem;
-  }
-  .btn:hover {
-    background-color: #005f8c;
-  }
-
-  .text-center {
-    text-align: center;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  ul {
-    margin-left: 20px;
-  }
-
-  /* =========================
-     Tables
-     ========================= */
-  .suite-table {
-    width: 100%;
-    max-width: 900px;
-    border-collapse: collapse;
-    margin: 20px auto;
-    border: 1px solid #ccc;
-  }
-
-  .suite-table th,
-  .suite-table td {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: left;
-  }
-
-  .suite-table th {
-    background: #f0f4f7;
-    font-weight: bold;
-  }
-
-  /* =========================
-     Highlight & Hero Callout
-     ========================= */
-  .highlight {
-    background: #e6f4ff;
-    padding: 15px;
-    border-left: 4px solid #0077b6;
-    margin: 20px 0;
-  }
-
-  .hero-callout {
-    font-size: 1.75rem;
-    line-height: 1.4;
-    margin: 2.5rem auto;
-    max-width: 650px;
-    color: #003d5b;
-  }
-
-  /* =========================
-     Image Placeholders
-     ========================= */
-  .image-placeholder {
-    width: 500px;
-    margin: 25px auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .image-placeholder img {
-    width: 500px;
-    max-width: 100%;
-    height: auto;
-  }
-
-  @media (max-width: 600px) {
-    .image-placeholder,
-    .image-placeholder img {
-      width: 100%;
+    .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      background-color: #0077b6;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 1rem;
     }
-  }
-
-  /* =========================
-     TOC (Details-based)
-     ========================= */
-  .toc {
-    background: #eef6fb;
-    border-left: 4px solid #0077b6;
-    padding: 15px 20px;
-    font-size: 1rem;
-  }
-
-  .toc summary {
-    font-weight: bold;
-    cursor: pointer;
-    list-style: none;
-  }
-
-  .toc summary::marker {
-    display: none;
-  }
-
-  .toc ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: none;
-  }
-
-  .toc li {
-    margin-bottom: 6px;
-  }
-
-  .toc a {
-    text-decoration: none;
-    color: #0077b6;
-  }
-
-  .toc a:hover {
-    text-decoration: underline;
-  }
-
-  #toc[open] ul {
-    display: block;
-  }
-
-  /* =========================
-     Responsive Grid Layout
-     ========================= */
-
-  /* Desktop */
-  @media (min-width: 992px) {
-    .antarctica-layout {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) 260px;
-      grid-template-areas: "content toc";
-      gap: 2rem;
-      align-items: start;
+    .btn:hover {
+      background-color: #005f8c;
     }
 
-    .antarctica-content {
-      grid-area: content;
-      max-width: 700px;
+    .text-center {
+      text-align: center;
     }
 
-    #toc {
-      grid-area: toc;
-      position: sticky;
-      top: 100px;
-      max-height: calc(100vh - 120px);
-      overflow-y: auto;
-    }
-  }
-
-  /* Mobile */
-  @media (max-width: 991px) {
-    .antarctica-layout {
+    img {
+      max-width: 100%;
+      height: auto;
       display: block;
     }
 
-    #toc {
-      position: relative;
-      margin-bottom: 1.5em;
-      max-height: none;
+    ul {
+      margin-left: 20px;
     }
-  }
-</style>
 
+    /* =========================
+     Tables
+     ========================= */
+    .suite-table {
+      width: 100%;
+      max-width: 900px;
+      border-collapse: collapse;
+      margin: 20px auto;
+      border: 1px solid #ccc;
+    }
+
+    .suite-table th,
+    .suite-table td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+
+    .suite-table th {
+      background: #f0f4f7;
+      font-weight: bold;
+    }
+
+    /* =========================
+     Highlight & Hero Callout
+     ========================= */
+    .highlight {
+      background: #e6f4ff;
+      padding: 15px;
+      border-left: 4px solid #0077b6;
+      margin: 20px 0;
+    }
+
+    .hero-callout {
+      font-size: 1.75rem;
+      line-height: 1.4;
+      margin: 2.5rem auto;
+      max-width: 650px;
+      color: #003d5b;
+    }
+
+    /* =========================
+     Image Placeholders
+     ========================= */
+    .image-placeholder {
+      width: 500px;
+      margin: 25px auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .image-placeholder img {
+      width: 500px;
+      max-width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 600px) {
+      .image-placeholder,
+      .image-placeholder img {
+        width: 100%;
+      }
+    }
+
+    /* =========================
+     TOC (Details-based)
+     ========================= */
+    .toc {
+      background: #eef6fb;
+      border-left: 4px solid #0077b6;
+      padding: 15px 20px;
+      font-size: 1rem;
+    }
+
+    .toc summary {
+      font-weight: bold;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .toc summary::marker {
+      display: none;
+    }
+
+    .toc ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: none;
+    }
+
+    .toc li {
+      margin-bottom: 6px;
+    }
+
+    .toc a {
+      text-decoration: none;
+      color: #0077b6;
+    }
+
+    .toc a:hover {
+      text-decoration: underline;
+    }
+
+    #toc[open] ul {
+      display: block;
+    }
+
+    /* =========================
+     Responsive Grid Layout
+     ========================= */
+
+    /* Desktop */
+    @media (min-width: 992px) {
+      .antarctica-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 260px;
+        grid-template-areas: "content toc";
+        gap: 2rem;
+        align-items: start;
+      }
+
+      .antarctica-content {
+        grid-area: content;
+        max-width: 700px;
+      }
+
+      #toc {
+        grid-area: toc;
+        position: sticky;
+        top: 100px;
+        max-height: calc(100vh - 120px);
+        overflow-y: auto;
+      }
+    }
+
+    /* Mobile */
+    @media (max-width: 991px) {
+      .antarctica-layout {
+        display: block;
+      }
+
+      #toc {
+        position: relative;
+        margin-bottom: 1.5em;
+        max-height: none;
+      }
+    }
+  </style>
 </head>
 
 <body class="antarctica-page">
@@ -307,6 +306,11 @@
               <img src="Images/ScenicGroup/weddellsea.jpeg" />
             </p>
           </div>
+
+          <details id="toc" class="toc">
+            <summary>Table of Contents</summary>
+            <ul id="toc-list"></ul>
+          </details>
 
           <!-- SECTION: Important Notes -->
           <div class="travel-section">
@@ -685,11 +689,6 @@
         </div>
       </div>
     </div>
-
-    <details id="toc" class="toc">
-      <summary>Table of Contents</summary>
-      <ul id="toc-list"></ul>
-    </details>
   </div>
 
   <!-- <script>
