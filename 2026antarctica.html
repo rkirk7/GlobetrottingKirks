@@ -192,10 +192,14 @@
 
     /*collapse*/
 
-    /* TOC collapsible behaviour */
     #toc {
-      position: relative;
-    }
+  grid-column: 2;
+  position: sticky;
+  top: 100px;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+}
+
 
     /* Hide TOC list on mobile by default
     #toc-list {
