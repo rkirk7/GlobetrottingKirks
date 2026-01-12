@@ -1,12 +1,16 @@
 <style>
-/* Container styling */
+/* -------------------------------- */
+/* Page container                   */
+/* -------------------------------- */
 .container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 20px;
 }
 
-/* Buttons */
+/* -------------------------------- */
+/* Buttons                          */
+/* -------------------------------- */
 .btn {
   display: inline-block;
   padding: 12px 20px;
@@ -21,25 +25,23 @@
   background-color: #005f8c;
 }
 
-/* Text center helper */
 .text-center {
   text-align: center;
 }
 
-/* ------------------------------ */
-/* Responsive iframe wrapper      */
-/* ------------------------------ */
+/* -------------------------------- */
+/* Responsive iframe wrapper        */
+/* -------------------------------- */
 .iframe-wrapper {
   position: relative;
-  width: 100%;
-  max-width: 820px;              /* ⬅ calmer desktop size */
+  width: 100%;          /* ✅ take full container width */
   margin: 2.5em auto;
-  border-radius: 10px;
+  border-radius: 12px;
   box-shadow: 0 4px 14px rgba(63, 69, 81, 0.18);
   overflow: hidden;
 
-  /* Slightly taller than 16:9 — better for documents */
-  padding-top: 62%;              /* ⬅ key change */
+  /* Document-friendly aspect ratio */
+  padding-top: 62%;
 }
 
 .iframe-wrapper iframe {
@@ -50,57 +52,52 @@
   border: none;
 }
 
-/* ------------------------------ */
-/* Text block under iframe        */
-/* ------------------------------ */
+/* -------------------------------- */
+/* Caption text                     */
+/* -------------------------------- */
 .embed-caption {
-  max-width: 720px;              /* ⬅ readable line length */
+  max-width: 800px;
   margin: 2rem auto 1.5rem;
   font-size: 1.05rem;
   line-height: 1.6;
 }
 
-/* ------------------------------ */
-/* Mobile adjustments             */
-/* ------------------------------ */
+/* -------------------------------- */
+/* Mobile tweaks                    */
+/* -------------------------------- */
 @media (max-width: 768px) {
   .iframe-wrapper {
-    max-width: 100%;
+    padding-top: 72%;   /* taller on phones */
     margin: 1.5em auto;
-    padding-top: 70%;             /* ⬅ taller on phones */
   }
 
   .embed-caption {
-    padding: 0 10px;
+    padding: 0 12px;
     font-size: 1rem;
   }
 }
-
 </style>
 
 <div class="container">
-  <div
-    class="iframe-wrapper"
-  >
+  <div class="iframe-wrapper">
     <iframe
       loading="lazy"
       src="https://www.canva.com/design/DAG98B60Dsg/dQCMeoHdGEZQTfn_5Jk_Uw/view?embed"
-      allowfullscreen="allowfullscreen"
-      allow="fullscreen"
-    >
-    </iframe>
+      allowfullscreen
+    ></iframe>
   </div>
 
-  <h2 class="text-center">
+  <h2 class="text-center embed-caption">
     This guide is an evolving document; if you think of something we've missed,
     let us know! If you'd like a downloadable copy, send us a message and we'll
     email one to you. Or, if you're ready to talk through your options, reach
     out today!
   </h2>
+
   <p class="text-center">
     <a
       href="mailto:regan.kirk@fora.travel,meimei.kirk@fora.travel?subject=Antarctica%20guide"
-      class="btn btn-primary"
+      class="btn"
     >
       Contact Us
     </a>
