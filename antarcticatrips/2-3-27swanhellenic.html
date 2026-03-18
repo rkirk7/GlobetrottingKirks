@@ -1,0 +1,594 @@
+<head>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f7f7f7;
+      color: #333;
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    /* Typography scale */
+    h1 {
+      font-size: 2rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      color: #003d5b;
+    }
+    h2 {
+      font-size: 1.5rem;
+      margin-top: 2.2rem;
+      margin-bottom: 1rem;
+      color: #003d5b;
+    }
+    h3 {
+      font-size: 1.25rem;
+      margin-top: 1.8rem;
+      margin-bottom: 0.8rem;
+      color: #003d5b;
+    }
+    p,
+    li,
+    td,
+    th {
+      font-size: 1rem;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      background-color: #0077b6;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+    .btn:hover {
+      background-color: #005f8c;
+    }
+    .text-center {
+      text-align: center;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    /* ------------------------------ */
+    /* TABLE STYLING                 */
+    /* ------------------------------ */
+
+    .antarctica-page .suite-table {
+      width: 100%;
+      max-width: 900px;
+      border-collapse: collapse;
+      margin: 20px auto;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    .antarctica-page .suite-table th,
+    .antarctica-page .suite-table td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+
+    .antarctica-page .suite-table th {
+      background: #f0f4f7;
+      font-weight: bold;
+    }
+
+    /* ------------------------------ */
+    /* CALLOUT BOX                    */
+    /* ------------------------------ */
+
+    .antarctica-page .highlight {
+      background: #e6f4ff;
+      padding: 15px;
+      border-left: 4px solid #0077b6;
+      margin: 20px 0;
+      color: #333;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    /* ------------------------------ */
+    /* TABLE OF CONTENTS              */
+    /* ------------------------------ */
+
+    .toc {
+      background: #eef6fb;
+      border-left: 4px solid #0077b6;
+      padding: 15px 20px;
+      margin-bottom: 30px;
+      font-size: 1rem;
+    }
+
+    .toc h2 {
+      font-size: 1.25rem;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .toc ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    .toc li {
+      margin-bottom: 6px;
+    }
+    .toc a {
+      text-decoration: none;
+      color: #0077b6;
+    }
+    .toc a:hover {
+      text-decoration: underline;
+    }
+
+    /* Smooth scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .antarctica-container {
+      max-width: 600px;
+    }
+
+    /* Center the entire image block */
+    .image-placeholder {
+      width: 500px; /* consistent width */
+      margin: 25px auto; /* centers it */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Make the images exactly 500px wide */
+    .image-placeholder img {
+      max-width: 500px !important;
+      width: 500px;
+      height: auto;
+      display: block;
+    }
+
+    @media (max-width: 600px) {
+      .image-placeholder {
+        width: 100%;
+      }
+      .image-placeholder img {
+        width: 100%;
+      }
+    }
+
+    .antarctica-page img {
+      max-width: none !important;
+    }
+    .antarctica-page .image-placeholder img {
+      width: 500px !important;
+      max-width: 500px !important;
+      flex-shrink: 0 !important;
+    }
+
+    .hero img {
+      width: auto !important;
+      max-width: none !important;
+    }
+  </style>
+</head>
+
+<body class="antarctica-page">
+  <div class="container">
+    <div class="antarctica-container">
+      <div
+        class="hero"
+        data-hero="Images/SwanHellenicGroup/shvega.jpg"
+      >
+        <div class="hero-content text-center">
+          <h1 class="hero-title">
+            Swan Hellenic's Ultimate Antarctica Adventure from Ushuaia to Dunedin
+          </h1>
+          <h2>February 3 - March 8, 2027</h2>
+        </div>
+      </div>
+
+      <details id="toc" class="toc">
+            <summary>Table of Contents</summary>
+            <ul id="toc-list"></ul>
+          </details>
+
+           <div class="card my-4">
+        <div class="card-body">
+          <p class="text-center">
+            <strong
+              >This is an extraordinary and very rare itinerary with luxury Swan Hellenic on the SH Vega. Explore the Antarctic Continent and then go below the Antarctic Circle as you do a partial circumnavigation of the continent to reach the remote Ross Sea.</strong
+            >
+          </p>
+
+               <p class="text-center">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/watch?v=EO_8rZv4c5I"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </p>
+        </div>
+      </div>
+
+      <div class="card my-4">
+        <div class="card-body">
+          <p>
+            <strong
+              >Is this sailing not quite right for
+              you?</strong
+            >
+            We have a number of fantastic group rates secured with different lines, itineraries, and times of year. 
+            <a href="https://www.globetrottingkirks.com/#antarcticaspecials"
+              >Check them out!</a
+            >
+          </p>
+
+            <p>
+        <strong>None of these sailings quite right for you?</strong> Fill out our <a href="https://docs.google.com/forms/d/e/1FAIpQLScKYy0i6MMbPBjBoU2eah697RnAshYm0NZgOzbpPI9hqHewEw/viewform" target="_blank">Antarctica interest form</a> and we'll be happy to help you select the best option for your needs!
+      </p>
+        </div>
+      </div>
+
+      <div class="card my-4">
+        <div class="card-body">
+
+          <p class="text-center">
+            <a
+              href="mailto:regan.kirk@fora.travel,meimei.kirk@fora.travel?subject=Swan%Helenic%20Ultimate%20Itinerary"
+              class="btn btn-primary"
+            >
+              Reach Out with Questions or to Book!
+            </a>
+          </p>
+
+          <div class="image-placeholder">
+            <p class="text-center">
+              <img src="Images/SwanHellenicGroup/zodiac.jpg" />
+            </p>
+          </div>
+
+          <!-- SECTION: Important Notes -->
+          <div class="travel-section">
+            <h2 id="exclusiveantarctica&important-notes">
+              Important Notes About Antarctica
+            </h2>
+            <ul>
+              <li>February is a great time of year to visit, as you'll have warm (for Antarctica) weather, penguin chicks, and lots of marine mammals like whales.
+              </li>
+              <li>
+                <strong>Expedition cruising at its finest:</strong> Expedition
+                cruising is a very special kind of experience we love! The
+                itinerary is fluid and the expedition team works tirelessly to
+                ensure we get the best time on excursions, whether it’s kayaking
+                with whales or walking with penguins.
+              </li>
+              <li>
+                <strong>Smaller ships matter:</strong> Smaller ships like the
+                SH Vega are better; only 100 people can be on the ground
+                at a time, so a ship that holds 200 people or fewer is ideal to
+                maximize your time. This ship holds only 150 people.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card my-4">
+        <div class="card-body">
+          <!-- SECTION: Discount -->
+          <div class="travel-section">
+            <h2 id="exclusiveantarctica&discount">What's the discount?</h2>
+            <p>
+              Our rate starts at <strong>$24,750 per person</strong>. Meanwhile,
+              the public, discounted rate for the same room starts at
+              <strong>$26,295 per person</strong>. All rooms will receive the upgraded Wi-Fi package. Balconies and above will also receive a $500 per person onboard credit.
+            </p>
+
+            <div class="image-placeholder">
+              <p class="text-center">
+                <img
+                  src="Images/SwanHellenicGroup/kayak.jpg"
+                />
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card my-4">
+        <div class="card-body">
+          <!-- SECTION: Discount -->
+          <div class="travel-section">
+            <h2 id="itinerary">Itinerary</h2>
+            <p>
+              (Note: Subject to change based on conditions or at the captain's
+              discretion.)
+            </p>
+
+            <ul>
+              <li>
+                February 2, 2027: Arrive in Buenos Aires. 
+              </li>
+              <li>
+                February 3: Early morning transfer to the airport. Charter flight
+                to Ushuaia. Board the SH Vega and embark!
+              </li>
+              <li>
+                February 4: Sail across the Drake Passage, hoping for the "Drake
+                lake" but prepared for the 25% possibility of the "Drake shake".
+                Fortunately, your ship has the latest in modern technology in
+                terms of stabilization. Get to know your expedition team and
+                learn about what to expect in the upcoming days.
+              </li>
+              <li>
+                February 5: Day two of the Drake Passage. Arrive in Antarctica!
+              </li>
+              <li>
+                February 6-8: Explore the Antarctic Peninsula, with locations and
+                activities at the discretion of the captain and the expedition
+                team. Expect zodiac rides, walks on the continent, a polar
+                plunge, and the potential for kayaking and other activities. Sightings should include many whales and penguins
+                of several varieties, including gentoo, chinstrap, and Adelie.
+              </li>
+              <li>
+                February 9-10: At sea.
+              </li>
+              <li>
+                February 11: Peter Island, Bellinghausen Sea.
+              </li>
+              <li>February 12-14: At sea.</li>
+              <li>February 15: Shepard Island.</li>
+              <li>February 16: At sea.</li>
+              <li>February 17: Bay of Whales.</li>
+              <li>February 18: Cross the International Dateline.</li>
+              <li>February 19: At sea.</li>
+              <li>February 20-26: Explore the Ross Sea.</li>
+              <li>February 27-28: Explore the Balleny Islands.</li>
+              <li>March 1-3: At sea.</li>
+              <li>March 4: Cruising Campbell Island.</li>
+              <li>March 5: Cruising Auckland Islands.</li>
+              <li>March 6: Cruising Snares Island.</li>
+              <li>March 7-8: Dunedin.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card my-4">
+        <div class="card-body">
+          <!-- SECTION: Sailing Info -->
+          <div class="travel-section">
+            <h2 id="exclusiveantarctica&sailing-info">Sailing Information</h2>
+            <p>
+              <strong>Departure:</strong> February 3 – March 8, 2027, Ushuaia to Dunedin,
+              on board Swan Hellenic's SH Vega
+            </p>
+            <p>
+              See the itinerary
+              <a
+                href="https://www.swanhellenic.com/cruise/western-antarctica-semicircumnavigation"
+                target="_blank"
+                >here</a
+              >.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card my-4">
+        <div class="card-body">
+          <!-- SECTION: Rooms -->
+
+          <div class="travel-section">
+            <h2 id="exclusiveantarctica&rooms">Room Types & Pricing</h2>
+            <p>
+              Pricing is based on double occupancy. Room
+              availability and pricing are subject to change; pricing is not
+              guaranteed until a deposited booking has been made.
+            </p>
+
+            <p>
+              To see room descriptions, check out the
+              <a
+                href="https://www.swanhellenic.com/ship/vega-2"
+                target="_blank"
+                >SH Vega</a
+              >!
+            </p>
+
+            <table class="suite-table">
+              <tr>
+                <th>Room Type</th>
+                <th>Size (square meters)</th>
+                <th>Our Price (per person)</th>
+                <th>Public Price (per person)</th>
+              </tr>
+              <tr>
+                <td>Oceanview D4</td>
+                <td>20</td>
+                <td>$24,750</td>
+                <td>$26,295</td>
+              </tr>
+              <tr>
+                <td>Oceanview M4</td>
+                <td>20</td>
+                <td>$26,010</td>
+                <td>$27,695</td>
+              </tr>
+              <tr>
+                <td>Balcony D5</td>
+                <td>25</td>
+                <td>$27,240</td>
+                <td>$29,070</td>
+              </tr>
+              <tr>
+                <td>Balcony M5</td>
+                <td>25</td>
+                <td>$28,480</td>
+                <td>$30,445</td>
+              </tr>
+              <tr>
+                <td>Balcony D6</td>
+                <td>25</td>
+                <td>$29,700</td>
+                <td>$31,795</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="card my-4">
+        <div class="card-body">
+          <div class="travel-section">
+            <h2 id="exclusiveantarctica&whatsincluded">What's Included?</h2>
+
+            <div class="image-placeholder">
+              <p class="text-center">
+                <img src="Images/SwanHellenicGroup/zodiac.jpg" />
+              </p>
+            </div>
+            <ul>
+              <li>One night in a Buenos Aires hotel pre-cruise</li>
+              <li>Charter flight Buenos Aires</li>
+              <li>Zodiac safaris</li>
+              <li>Upgraded wi-fi</li>
+              <li>Shore landings</li>
+              <li>Gratuities</li>
+              <li>Wine, beer, and liquor</li>
+              <li>Polar plunge</li>
+              <li>Parka, dry bag backpack, and water bottle</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card my-4">
+        <div class="card-body">
+          <div class="travel-section">
+            <h2 id="exclusiveantarctica&whatsnotincluded">
+              What's Not Included?
+            </h2>
+            <ul>
+              <li>International flights</li>
+              <li>Travel insurance</li>
+              <li>Kayaking</li>
+              <li>Spa treatments</li>
+              <li>Personal purchases</li>
+              <li>Any other items not listed above</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card my-4">
+        <div class="card-body">
+          <!-- SECTION: Payments -->
+          <div class="travel-section">
+            <h2 id="exclusiveantarctica&payments">Deposit & Payment Details</h2>
+            <ul>
+              <li>
+                <strong
+                  >A 20% per person (for oceanview or balcony) or 30% (for suites)
+                  deposit</strong
+                >
+                is required to secure the booking.
+              </li>
+              <li><strong>Final payment:</strong> 120 days before sailing.</li>
+              <li>
+                <strong>Travel insurance:</strong> Strongly recommended. We
+                advise purchasing within 14 days of deposit. We can help with
+                generating quotes to find the best coverage.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card my-4">
+        <div class="card-body">
+          <h2>
+            This is going to be a great sailing and it will sell fast--take
+            advantage of this better-than-public pricing while there are rooms
+            available!
+          </h2>
+
+          <p class="text-center">
+            <a
+              href="mailto:regan.kirk@fora.travel,meimei.kirk@fora.travel?subject=Swan%Helenic%20Ultimate%20Itinerary"
+              class="btn btn-primary"
+            >
+              Reach Out with Questions or to Book!
+            </a>
+          </p>
+        </div>
+      </div>
+
+
+      <div class="card my-4">
+        <div class="card-body">
+          <h2>Solo Travelers</h2>
+          <p class="text-center">
+            Rooms are priced based on double occupancy. If you wish to sail solo
+            with a room to yourself, it will be with a 75% supplement for
+            staterooms and 100% for suites. However, if you're willing to
+            share, we're happy to help look for a roommate!
+          </p>
+
+          <p class="text-center">
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSe8eXNY3Tn8C7OIIhOemIHXtH7BjJAALQrB3ow1Zv0_8N6AIQ/viewform?usp=header"
+              target="_blank"
+              class="btn btn-primary"
+              >Fill Out the Solo Antarctica Traveler Interest Form</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  // Smooth scroll for internal links
+  document.querySelectorAll(".scroll-link").forEach((link) => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault(); // stop default jump
+      const targetId = this.getAttribute("data-target");
+      const targetEl = document.getElementById(targetId);
+      if (targetEl) {
+        targetEl.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    });
+  });
+</script>
+</body>
