@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -97,7 +97,10 @@
 
       #mc_embed_signup {
         background: #fff;
-        font: 14px Helvetica, Arial, sans-serif;
+        font:
+          14px Helvetica,
+          Arial,
+          sans-serif;
         max-width: 600px;
         margin: 0 auto;
         padding: 20px;
@@ -168,7 +171,7 @@
                 >2026 Group Safari</a
               >
             </li>
-              <li class="nav-item">
+            <li class="nav-item">
               <a
                 class="nav-link"
                 onclick="loadPage('galapagoscharter.html')"
@@ -253,7 +256,9 @@
                 <li>
                   <a
                     class="dropdown-item"
-                    onclick="loadPage('Travel/newzealandaustraliapolynesia.html')"
+                    onclick="
+                      loadPage('Travel/newzealandaustraliapolynesia.html')
+                    "
                     href="#Travel/newzealandaustraliapolynesia.html"
                     >New Zealand, Australia, and French Polynesia</a
                   >
@@ -449,7 +454,7 @@
           <div class="col-md-4">
             <h5 class="footer-heading">Antarctica Groups</h5>
             <ul class="list-unstyled footer-links">
-              <li>
+              <!-- <li>
                 <a
                   onclick="loadPage('2026antarctica.html')"
                   href="#antarcticatrips/12-22-26scenic.html"
@@ -458,7 +463,7 @@
                   Scenic Eclipse II: Antarctica and the Weddell Sea<br />
                   from <strong>$15,232 pp</strong> (~38% discount)
                 </a>
-              </li>
+              </li> -->
               <!-- <li>
                 <a
                   onclick="loadPage('jan2027antarctica.html')"
@@ -470,13 +475,14 @@
                   from <strong>$23,062 pp</strong> (~20% discount)
                 </a>
               </li> -->
-                    <li>
+              <li>
                 <a
                   onclick="loadPage('snowhillspecial.html')"
                   href="#antarcticatrips/2-3-27swanhellenic.html"
                 >
                   <strong>Feb 2 - March 8, 2027</strong><br />
-                  Swan Hellenic Minerva: Ultimate 32-day Antarctica Adventure from Ushuaia to Dunedin<br />
+                  Swan Hellenic Minerva: Ultimate 32-day Antarctica Adventure
+                  from Ushuaia to Dunedin<br />
                   from <strong>$24,750 pp</strong> (~8% discount)
                 </a>
               </li>
@@ -491,13 +497,14 @@
                   from <strong>$25,261 pp</strong> (~8% discount)
                 </a>
               </li>
-                                  <li>
+              <li>
                 <a
                   onclick="loadPage('snowhillspecial.html')"
                   href="#antarcticatrips/2-3-27swanhellenic.html"
                 >
                   <strong>Dec 4 - 13, 2027</strong><br />
-                  Swan Hellenic Vega: Standard Antarctica Itinerary, Roundtrip from Ushuaia<br />
+                  Swan Hellenic Vega: Standard Antarctica Itinerary, Roundtrip
+                  from Ushuaia<br />
                   from <strong>$9,950 pp</strong> (~5% discount)
                 </a>
               </li>
@@ -538,11 +545,13 @@
                   Nov 11-21, 2026, Luxury Group Safari to South Africa
                 </a>
               </li>
-              <a
+              <li>
+                <a
                   onclick="loadPage('galapagoscharter.html')"
                   href="#galapagoscharter.html"
                 >
-                  July 9-17, 2027, 16-Person Luxury Catamaran Charter in the Galapagos
+                  July 9-17, 2027, 16-Person Luxury Catamaran Charter in the
+                  Galapagos
                 </a>
               </li>
             </ul>
@@ -694,14 +703,14 @@
     <script>
       window.addEventListener("load", () => {
         !(function (c, h, i, m, p) {
-          (m = c.createElement(h)), (p = c.getElementsByTagName(h)[0]);
+          ((m = c.createElement(h)), (p = c.getElementsByTagName(h)[0]));
           m.async = 1;
           m.src = i;
           p.parentNode.insertBefore(m, p);
         })(
           document,
           "script",
-          "https://chimpstatic.com/mcjs-connected/js/users/9e4e0ffaef14115fa941069c0/e58b4bc534a7df2709d8339f9.js"
+          "https://chimpstatic.com/mcjs-connected/js/users/9e4e0ffaef14115fa941069c0/e58b4bc534a7df2709d8339f9.js",
         );
       });
     </script>
@@ -742,7 +751,7 @@
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const navLinks = document.querySelectorAll(
-          ".navbar-nav .nav-link, .navbar-nav .dropdown-item"
+          ".navbar-nav .nav-link, .navbar-nav .dropdown-item",
         );
         const navbarCollapse = document.getElementById("navbarCollapse");
 
