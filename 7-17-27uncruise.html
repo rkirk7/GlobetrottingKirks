@@ -1,0 +1,600 @@
+<head>
+  <style>
+    /* =========================
+     Base Reset & Typography
+     ========================= */
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f7f7f7;
+      color: #333;
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin: 0 0 1rem;
+      color: #003d5b;
+    }
+    h2 {
+      font-size: 1.5rem;
+      margin: 2.2rem 0 1rem;
+      color: #003d5b;
+    }
+    h3 {
+      font-size: 1.25rem;
+      margin: 1.8rem 0 0.8rem;
+      color: #003d5b;
+    }
+
+    p,
+    li,
+    td,
+    th {
+      font-size: 1rem;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* =========================
+     Layout Containers
+     ========================= */
+    .container {
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+    }
+
+    .antarctica-layout {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* =========================
+     Buttons & Helpers
+     ========================= */
+    .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      background-color: #0077b6;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+    .btn:hover {
+      background-color: #005f8c;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    /* =========================
+     Tables
+     ========================= */
+    .suite-table {
+      width: 100%;
+      max-width: 900px;
+      border-collapse: collapse;
+      margin: 20px auto;
+      border: 1px solid #ccc;
+    }
+
+    .suite-table th,
+    .suite-table td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+
+    .suite-table th {
+      background: #f0f4f7;
+      font-weight: bold;
+    }
+
+    /* =========================
+     Highlight & Hero Callout
+     ========================= */
+    .highlight {
+      background: #e6f4ff;
+      padding: 15px;
+      border-left: 4px solid #0077b6;
+      margin: 20px 0;
+    }
+
+    .hero-callout {
+      font-size: 1.75rem;
+      line-height: 1.4;
+      margin: 2.5rem auto;
+      max-width: 650px;
+      color: #003d5b;
+    }
+
+    /* =========================
+     Image Placeholders
+     ========================= */
+    .image-placeholder {
+      width: 500px;
+      margin: 25px auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .image-placeholder img {
+      width: 500px;
+      max-width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 600px) {
+      .image-placeholder,
+      .image-placeholder img {
+        width: 100%;
+      }
+    }
+
+    /* =========================
+     TOC (Details-based)
+     ========================= */
+    .toc {
+      background: #eef6fb;
+      border-left: 4px solid #0077b6;
+      padding: 15px 20px;
+      font-size: 1rem;
+    }
+
+    .toc summary {
+      font-weight: bold;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .toc summary::marker {
+      display: none;
+    }
+
+    .toc ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: none;
+    }
+
+    .toc li {
+      margin-bottom: 6px;
+    }
+
+    .toc a {
+      text-decoration: none;
+      color: #0077b6;
+    }
+
+    .toc a:hover {
+      text-decoration: underline;
+    }
+
+    #toc[open] ul {
+      display: block;
+    }
+
+    /* =========================
+     Responsive Grid Layout
+     ========================= */
+
+    /* Desktop */
+    @media (min-width: 992px) {
+      .antarctica-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 260px;
+        grid-template-areas: "content toc";
+        gap: 2rem;
+        align-items: start;
+      }
+
+      .antarctica-content {
+        grid-area: content;
+        max-width: 700px;
+      }
+
+      #toc {
+        grid-area: toc;
+        position: sticky;
+        top: 100px;
+        max-height: calc(100vh - 120px);
+        overflow-y: auto;
+      }
+    }
+
+    /* Mobile */
+    @media (max-width: 991px) {
+      .antarctica-layout {
+        display: block;
+      }
+
+      #toc {
+        position: relative;
+        margin-bottom: 1.5em;
+        max-height: none;
+      }
+    }
+  </style>
+</head>
+
+<body class="antarctica-page">
+  <div class="container antarctica-layout">
+    <div class="antarctica-content">
+      <div
+        class="hero"
+        data-hero="Images/ScenicGroup/SE_Eclipse_Exterior_Pensisula_SR_001_hero.jpg"
+      >
+        <div class="hero-content text-center">
+          <h1 class="hero-title">
+            July 17-24, 2027: UnCruise's Wild, Woolly, and Wow with Glacier Bay
+          </h1>
+        </div>
+      </div>
+
+      <!-- All your cards and content here -->
+      <div class="card my-4">
+        <div class="card-body">
+          <p class="hero-callout text-center">
+            <strong>
+             Join us for a peak season sailing of this phenomenal expedition itinerary with fabulous UnCruise Adventures. Take advantage of our great group rates!
+            </strong>
+          </p>
+          <p class="text-center">
+            <img
+              src="Images/26UnCruise/260519 - Eagle Catching Fish.jpg"
+              class="img-fluid rounded"
+            />
+          </p>
+
+          <p class="text-center">
+            <a
+              href="mailto:regan.kirk@fora.travel,meimei.kirk@fora.travel?subject=I%20want%20to%20talk%20about%20UnCruise!"
+              class="btn btn-primary"
+            >
+              Reach Out with Questions or to Book!
+            </a>
+          </p>
+        </div>
+      </div>
+      <div class="card my-4">
+        <div class="card-body">
+          <div class="image-placeholder">
+            <p class="text-center">
+              <img src="Images/26UnCruise/260518 - River Otters on Shore.jpg" />
+            </p>
+          </div>
+
+          <details id="toc" class="toc">
+            <summary>Table of Contents</summary>
+            <ul id="toc-list"></ul>
+          </details>
+
+                  <!-- SECTION: Important Notes -->
+          <div class="travel-section">
+            <h2 id="exclusiveantarctica&aboutuncruise">
+              Why UnCruise?
+            </h2>
+            <p>
+              Regan sailed this exact expedition in May 2026 and cannot say enough positive things about the experience. View her full trip report <a href="https://www.foratravel.com/trip-reports/F8ZBLQ/an-incredible-week-of-adventure-camaraderie-and-wildlife-in-alaska-with-uncruise-adventures-regan-kirk" target="_blank">here</a>.
+            </p>
+            <p>
+              During her week-long adventure, she saw numerous whales and bears from the ship, kayak, and skiff; enjoyed two different orca pods; bushwhacked through untamed forest; rode a skiff through icebergs near Dawes Glacier; and more! 
+            </p>
+            <p>
+              The expedition team was phenomenal, and we've done enough expeditions (Quark, HX, Lindblad, Viking) to know what we're talking about. They made every effort to get us out twice a day on the adventures of our choosing. There was something for everyone. A family with three generations loved the experience.
+            </p>
+          </div>
+        </div>
+      </div>
+
+          <!-- SECTION: Important Notes -->
+          <div class="travel-section">
+            <h2 id="exclusiveantarctica&important-notes">
+              Important Notes About Alaska
+            </h2>
+            <ul>
+              <li>
+                <strong>Wildlife:</strong> July is the start of peak season for wildlife sightings in Alaska, especially bears and humpback whales. In addition, we're likely to see bald eagles, sea lions, seals, sea otters, orcas, and more!
+              </li>
+              <li>
+                <strong>Expedition cruising at its finest:</strong> Expedition cruising is a very special kind of experience we love! The itinerary is fluid and the expedition team works tirelessly to ensure we get the best time on excursions.
+              </li>
+              <li>
+                <strong>Juneau roundtrip:</strong> Most Alaska cruises require a stop in Canada due to maritime law. UnCruise Adventures is one of only a few that can operate entirely within Alaska, maximizing your time.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card my-4">
+        <div class="card-body">
+          <!-- SECTION: Discount -->
+          <div class="travel-section">
+            <h2 id="exclusiveantarctica&discount">
+              About the Group
+            </h2>
+            <p>
+              The Globetrotting Kirks are returning for this sailing after Regan loved it in May 2026, and we'd love for you to join us! Our rates start as low as $7,380 pp vs. the public rate of $8,500. Families are welcome, but note that the minimum age for this sailing is <strong>8 years old</strong>.
+            </p>
+
+            <div class="image-placeholder">
+              <p class="text-center">
+                <img src="Images/26UnCruise/260521 - Two Whales Blowing in Front of Island and Mountains.jpg" />
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card my-4">
+        <div class="card-body">
+          <!-- SECTION: Sailing Info -->
+          <div class="travel-section">
+            <h2 id="exclusiveantarctica&sailing-info">Itinerary Information</h2>
+            <p>
+              <strong>Departure:</strong> July 17-24, 2027,
+              (roundtrip from Juneau) on board the Wilderness Legacy
+            </p>
+            <p>
+              See the sailing on UnCruise's site
+              <a
+                href="https://uncruise.com/products/wild-woolly-and-wow-with-glacier-bay"
+                target="_blank"
+                >here</a
+              >.
+            </p>
+
+            <p>
+              The Wilderness Legacy is a classic riverboat converted for expedition usage. Among her highlights are a comfortable lounge area, viewing opportunities around the ship on multiple decks, and the Sea Dragon, a custom platform designed for ease of getting in and out of kayaks and skiffs.
+            </p>
+            <p>
+              The ship holds at most <strong>86 guests</strong>, making it an intimate experience.
+            </p>
+
+            <div class="image-placeholder">
+              <p class="text-center">
+                <img
+                  src="Images/26UnCruise/260519 - Wilderness Legacy and Zodiac, Pavlof Harbor.jpg"
+                />
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card my-4">
+        <div class="card-body">
+          <!-- SECTION: Rooms -->
+
+          <div class="travel-section">
+            <h2 id="exclusiveantarctica&rooms">Room Types & Pricing</h2>
+
+            <p>
+              Rooms are limited and UnCruise can withdraw our group
+              pricing with short notice. Rooms and pricing are not guaranteed
+              until a deposit is put down. See details about each room type <a href="https://uncruise.com/blogs/our-ships/wilderness-legacy" target="_blank">here</a>.
+            </p>
+            <p>
+              Limited triple and quad rooms are available. Reach out for pricing. <strong>Otherwise, all pricing is based on double occupancy. A solo supplement is available for those who wish to have a room to themselves.</strong>
+            </p>
+
+            <table class="suite-table">
+              <tr>
+                <th>Stateroom Type</th>
+                <th>Description</th>
+                <th>Our Price (per person)</th>
+                <th>Public Price (per person)</th>
+              </tr>
+              <tr>
+                <td>
+                  Navigator Cabin
+                </td>
+                <td>Fixed double bed and window</td>
+                <td>$7,380</td>
+                <td>$8,500</td>
+              </tr>
+                            <tr>
+                <td>
+                  Trailblazer Cabin
+                </td>
+                <td>View window and several bed configurations available.</td>
+                <td>$8,190</td>
+                <td>$9,400</td>
+              </tr>
+                            <tr>
+                <td>
+                  Pathfinder Cabin
+                </td>
+                <td>View window and either fixed twins or fixed queen bed</td>
+                <td>$8,910</td>
+                <td>$10,200</td>
+              </tr>
+                            <tr>
+                <td>
+                 Admiral
+                </td>
+                <td>Larger cabins with a mini-fridge and varying bed configurations. Some of these cabins offer triple occupancy.</td>
+                <td>$9,720</td>
+                <td>$11,100</td>
+              </tr>
+                            <tr>
+                <td>
+                  Jr. Commodore Cabin
+                </td>
+                <td>A queen bed and wraparound window views, with a mini-fridge and more space.</td>
+                <td>$11,250</td>
+                <td>$12,800</td>
+              </tr>
+                            <tr>
+                <td>
+                  Commodore Suite
+                </td>
+                <td>There's only one of these onboard. It's a two-room quite with a king bed; optional quad configuration.</td>
+                <td>$13,500</td>
+                <td>$15,300</td>
+              </tr>
+            </table>
+
+            <div class="image-placeholder">
+              <p class="text-center">
+                <img
+                  src="Images/26UnCruise/260521 - Whale Tail in Front of Zodiac.jpg"
+                />
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card my-4">
+        <div class="card-body">
+          <!-- SECTION: Discount -->
+          <div class="travel-section">
+            <h2 id="exclusiveantarctica&whatsincluded">What's Included?</h2>
+
+    <ul>
+              <li>Transfer from airport to ship on departure day and ship to airport on return</li>
+              <li>All activities, including skiff rides, kayaking, paddleboarding, bushwhacks, meander walks, snorkeling, morning yoga, and polar plunge</li>
+              <li>All food and drink (except top shelf liquor)</li>
+              <li>Limited wi-fi (available roughly 8 p.m. - 8 a.m.)</li>
+              <li>The use of muck boots throughout the trip</li>
+            </ul>
+
+            <div class="image-placeholder">
+              <p class="text-center">
+                <img
+                  src="Images/26UnCruise/Breach.JPG"
+                />
+              </p>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card my-4">
+        <div class="card-body">
+          <div class="travel-section">
+            <h2 id="exclusiveantarctica&whatsnotincluded">
+              What's Not Included?
+            </h2>
+            <ul>
+              <li>Flights</li>
+              <li>Travel insurance</li>
+              <li>Personal purchases</li>
+              <li>Gratuities - recommended as $315 per person for the week</li>
+              <li>Any other items not listed above</li>
+            </ul>
+
+            <div class="image-placeholder">
+              <p class="text-center">
+                <img
+                  src="Images/26UnCruise/260521 - Sea Otter Paws Up.jpg"
+                />
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card my-4">
+        <div class="card-body">
+          <!-- SECTION: Payments -->
+          <div class="travel-section">
+            <h2 id="exclusiveantarctica&payments">Deposit & Payment Details</h2>
+            <ul>
+              <li><strong>20% nonrefundable deposit</strong> required to confirm the booking.</li>
+              <li><strong>Final payment:</strong> due March 18, 2027.</li>
+              <li>
+                <strong>Travel insurance:</strong> Required by Scenic. We recommended purchasing
+                within 14 days of deposit. We can help with generating quotes to
+                find the best coverage.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card my-4">
+          <div class="card-body">
+            <h2>Solo Travelers</h2>
+            <p class="text-center">
+              Rooms are priced based on double occupancy. If you wish to sail
+              solo with a room to yourself, it will be with a supplement.
+              However, if you're willing to share with someone of the same
+              gender, we're happy to help look for a roommate!
+            </p>
+
+          </div>
+        </div>
+
+        <div class="card my-4">
+          <div class="card-body">
+            <p><strong>We’d love to have you join us!</strong></p>
+
+            <p class="text-center">
+              <a
+                href="mailto:regan.kirk@fora.travel,meimei.kirk@fora.travel?subject=I%20want%20to%20talk%20about%20the%202UnCruise%20group!"
+                class="btn btn-primary"
+              >
+                Reach Out with Questions or to Book!
+              </a>
+            </p>
+
+            <div class="image-placeholder">
+              <p class="text-center">
+                <img src="Images/26UnCruise/260522 - Sunset.jpg" />
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <script>
+    document
+      .getElementById("toc-toggle")
+      .addEventListener("click", function () {
+        document.getElementById("toc").classList.toggle("open");
+      });
+  </script>
+
+  <script>
+    // Smooth scroll for internal links
+    document.querySelectorAll(".scroll-link").forEach((link) => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault(); // stop default jump
+        const targetId = this.getAttribute("data-target");
+        const targetEl = document.getElementById(targetId);
+        if (targetEl) {
+          targetEl.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      });
+    });
+  </script> -->
+</body>
