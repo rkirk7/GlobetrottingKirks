@@ -60,20 +60,6 @@
     font-size: clamp(1.2rem, 3vw, 1.7rem);
     line-height: 1.4;
   }
-  .croatia-page .suite-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-  }
-  .croatia-page .suite-table th,
-  .croatia-page .suite-table td {
-    padding: 10px;
-    border: 1px solid #ccc;
-    text-align: left;
-  }
-  .croatia-page .suite-table th {
-    background: #f0f4f7;
-  }
   .croatia-page iframe {
     display: block;
     width: 100%;
@@ -101,113 +87,6 @@
     }
     .croatia-page .travel-section p {
       font-size: 1rem;
-    }
-    .croatia-page .suite-table {
-      display: block;
-      border: 0;
-    }
-    .croatia-page .suite-table tbody {
-      display: block;
-    }
-    .croatia-page .suite-table tr:first-child {
-      display: none;
-    }
-    .croatia-page .suite-table tr {
-      display: block;
-      margin: 0 0 14px;
-      padding: 12px 14px;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      background: #fff;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
-    }
-    .croatia-page .suite-table td {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 12px;
-      width: 100%;
-      padding: 7px 0;
-      border: 0;
-      border-bottom: 1px solid #eee;
-      text-align: right;
-      overflow-wrap: anywhere;
-    }
-    .croatia-page .suite-table td:last-child {
-      border-bottom: 0;
-    }
-    .croatia-page .suite-table td::before {
-      content: attr(data-label);
-      font-weight: 600;
-      color: #555;
-      text-align: left;
-      flex: 0 0 43%;
-    }
-    .croatia-page .suite-table td:first-child {
-      font-weight: 700;
-      font-size: 1.05rem;
-      text-align: left;
-    }
-    .croatia-page .suite-table td:first-child::before {
-      display: none;
-    }
-  }
-
-  /* Separate mobile presentation: avoids Bootstrap/table display conflicts. */
-  .croatia-page .croatia-mobile-pricing {
-    display: none;
-  }
-  @media (max-width: 767px) {
-    .croatia-page table.suite-table {
-      display: none !important;
-    }
-    .croatia-page .croatia-mobile-pricing {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr);
-      gap: 14px;
-      margin: 18px 0;
-    }
-    .croatia-page .croatia-price-card {
-      min-width: 0;
-      padding: 17px;
-      background: #fff;
-      border: 1px solid #dce3e8;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    }
-    .croatia-page .croatia-price-card h3 {
-      margin: 0 0 6px;
-      font-size: 1.15rem;
-      line-height: 1.35;
-      color: #003d5b;
-    }
-    .croatia-page .croatia-status {
-      margin: 0 0 12px !important;
-      font-size: 0.88rem !important;
-      font-weight: 700;
-    }
-    .croatia-page .croatia-status.available {
-      color: #236342;
-    }
-    .croatia-page .croatia-status.sold-out {
-      color: #9a3939;
-    }
-    .croatia-page .croatia-price-line {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 12px;
-      padding: 9px 0;
-      border-top: 1px solid #eef0f2;
-      font-size: 0.93rem;
-    }
-    .croatia-page .croatia-price-line span {
-      color: #59636c;
-    }
-    .croatia-page .croatia-price-line strong {
-      text-align: right;
-      white-space: nowrap;
-      color: #20282f;
     }
   }
 </style>
@@ -318,176 +197,695 @@
             help match up solo travelers! The below information was up-to-date
             as of 8/11/26.
           </p>
-          <table class="suite-table">
-            <tr>
-              <th>Suite Type</th>
-              <th>Size (square feet)</th>
-              <th>Our Price (per person)</th>
-              <th>Public Price (per person)</th>
-              <th>Availability</th>
-            </tr>
-            <tr>
-              <td data-label="Suite Type">Oceanview Stateroom (D)</td>
-              <td data-label="Size (square feet)">340</td>
-              <td data-label="Our Price (per person)">NA</td>
-              <td data-label="Public Price (per person)">NA</td>
-              <td data-label="Availability">SOLD OUT</td>
-            </tr>
-            <tr>
-              <td data-label="Suite Type">Balcony Suite (B)</td>
-              <td data-label="Size (square feet)">340</td>
-              <td data-label="Our Price (per person)">$6,335</td>
-              <td data-label="Public Price (per person)">$8,693</td>
-              <td data-label="Availability">Available</td>
-            </tr>
-            <tr>
-              <td data-label="Suite Type">Balcony Suite (A)</td>
-              <td data-label="Size (square feet)">340</td>
-              <td data-label="Our Price (per person)">$6,335</td>
-              <td data-label="Public Price (per person)">$8,961</td>
-              <td data-label="Availability">Available</td>
-            </tr>
-            <tr>
-              <td data-label="Suite Type">Balcony Suite (AB)</td>
-              <td data-label="Size (square feet)">340</td>
-              <td data-label="Our Price (per person)">$7,175</td>
-              <td data-label="Public Price (per person)">$9,258</td>
-              <td data-label="Availability">Available</td>
-            </tr>
-            <tr>
-              <td data-label="Suite Type">Deluxe Balcony Suite (S)</td>
-              <td data-label="Size (square feet)"></td>
-              <td data-label="Our Price (per person)">NA</td>
-              <td data-label="Public Price (per person)">NA</td>
-              <td data-label="Availability">SOLD OUT</td>
-            </tr>
-            <tr>
-              <td data-label="Suite Type">Terrace Suite (T)</td>
-              <td data-label="Size (square feet)">830</td>
-              <td data-label="Our Price (per person)">NA</td>
-              <td data-label="Public Price (per person)">NA</td>
-              <td data-label="Availability">SOLD OUT</td>
-            </tr>
-            <tr>
-              <td data-label="Suite Type">Yacht Suite</td>
-              <td data-label="Size (square feet)">879</td>
-              <td data-label="Our Price (per person)">$10,825</td>
-              <td data-label="Public Price (per person)">$12,352</td>
-              <td data-label="Availability">Available</td>
-            </tr>
-            <tr>
-              <td data-label="Suite Type">Owner's Suite</td>
-              <td data-label="Size (square feet)">1,401</td>
-              <td data-label="Our Price (per person)">$15,015</td>
-              <td data-label="Public Price (per person)">$18,504</td>
-              <td data-label="Availability">Available</td>
-            </tr>
-          </table>
-          <div aria-label="Suite pricing" class="croatia-mobile-pricing">
-            <article class="croatia-price-card">
-              <h3>Oceanview Stateroom (D)</h3>
-              <p class="croatia-status sold-out">SOLD OUT</p>
-              <div class="croatia-price-line">
-                <span>Size</span><strong>340 sq. ft.</strong>
+          <div class="row g-3" aria-label="Suite pricing">
+            <div class="col-12 col-lg-6">
+              <div
+                class="card h-100"
+                style="
+                  width: 100%;
+                  max-width: 100%;
+                  border: 1px solid #d9e1e6;
+                  border-radius: 12px;
+                  overflow: hidden;
+                  background: #fff;
+                "
+              >
+                <div class="card-body" style="padding: 18px">
+                  <h3
+                    style="
+                      font-size: 1.2rem;
+                      line-height: 1.3;
+                      margin: 0 0 6px;
+                      color: #003d5b;
+                    "
+                  >
+                    Oceanview Stateroom (D)
+                  </h3>
+                  <p
+                    style="
+                      font-size: 0.9rem;
+                      font-weight: 700;
+                      color: #a23d3d;
+                      margin: 0 0 12px;
+                    "
+                  >
+                    SOLD OUT
+                  </p>
+                  <dl style="margin: 0; font-size: 1rem">
+                    <div
+                      style="
+                        display: flex;
+                        justify-content: space-between;
+                        gap: 12px;
+                        border-top: 1px solid #eee;
+                        padding: 9px 0;
+                      "
+                    >
+                      <dt style="font-weight: 400">Size</dt>
+                      <dd
+                        style="margin: 0; text-align: right; font-weight: 600"
+                      >
+                        340 sq. ft.
+                      </dd>
+                    </div>
+                    <div
+                      style="
+                        display: flex;
+                        justify-content: space-between;
+                        gap: 12px;
+                        border-top: 1px solid #eee;
+                        padding: 9px 0;
+                      "
+                    >
+                      <dt style="font-weight: 400">Our price / person</dt>
+                      <dd
+                        style="margin: 0; text-align: right; font-weight: 600"
+                      >
+                        NA
+                      </dd>
+                    </div>
+                    <div
+                      style="
+                        display: flex;
+                        justify-content: space-between;
+                        gap: 12px;
+                        border-top: 1px solid #eee;
+                        padding: 9px 0;
+                      "
+                    >
+                      <dt style="font-weight: 400">Public price / person</dt>
+                      <dd
+                        style="margin: 0; text-align: right; font-weight: 600"
+                      >
+                        NA
+                      </dd>
+                    </div>
+                  </dl>
+                </div>
               </div>
-              <div class="croatia-price-line">
-                <span>Our price / person</span><strong>NA</strong>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div
+                class="card h-100"
+                style="
+                  width: 100%;
+                  max-width: 100%;
+                  border: 1px solid #d9e1e6;
+                  border-radius: 12px;
+                  overflow: hidden;
+                  background: #fff;
+                "
+              >
+                <div class="card-body" style="padding: 18px">
+                  <h3
+                    style="
+                      font-size: 1.2rem;
+                      line-height: 1.3;
+                      margin: 0 0 6px;
+                      color: #003d5b;
+                    "
+                  >
+                    Balcony Suite (B)
+                  </h3>
+                  <p
+                    style="
+                      font-size: 0.9rem;
+                      font-weight: 700;
+                      color: #246b49;
+                      margin: 0 0 12px;
+                    "
+                  >
+                    Available
+                  </p>
+                  <dl style="margin: 0; font-size: 1rem">
+                    <div
+                      style="
+                        display: flex;
+                        justify-content: space-between;
+                        gap: 12px;
+                        border-top: 1px solid #eee;
+                        padding: 9px 0;
+                      "
+                    >
+                      <dt style="font-weight: 400">Size</dt>
+                      <dd
+                        style="margin: 0; text-align: right; font-weight: 600"
+                      >
+                        340 sq. ft.
+                      </dd>
+                    </div>
+                    <div
+                      style="
+                        display: flex;
+                        justify-content: space-between;
+                        gap: 12px;
+                        border-top: 1px solid #eee;
+                        padding: 9px 0;
+                      "
+                    >
+                      <dt style="font-weight: 400">Our price / person</dt>
+                      <dd
+                        style="margin: 0; text-align: right; font-weight: 600"
+                      >
+                        $6,335
+                      </dd>
+                    </div>
+                    <div
+                      style="
+                        display: flex;
+                        justify-content: space-between;
+                        gap: 12px;
+                        border-top: 1px solid #eee;
+                        padding: 9px 0;
+                      "
+                    >
+                      <dt style="font-weight: 400">Public price / person</dt>
+                      <dd
+                        style="margin: 0; text-align: right; font-weight: 600"
+                      >
+                        $8,693
+                      </dd>
+                    </div>
+                  </dl>
+                </div>
               </div>
-              <div class="croatia-price-line">
-                <span>Public price / person</span><strong>NA</strong>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div
+                class="card h-100"
+                style="
+                  width: 100%;
+                  max-width: 100%;
+                  border: 1px solid #d9e1e6;
+                  border-radius: 12px;
+                  overflow: hidden;
+                  background: #fff;
+                "
+              >
+                <div class="card-body" style="padding: 18px">
+                  <h3
+                    style="
+                      font-size: 1.2rem;
+                      line-height: 1.3;
+                      margin: 0 0 6px;
+                      color: #003d5b;
+                    "
+                  >
+                    Balcony Suite (A)
+                  </h3>
+                  <p
+                    style="
+                      font-size: 0.9rem;
+                      font-weight: 700;
+                      color: #246b49;
+                      margin: 0 0 12px;
+                    "
+                  >
+                    Available
+                  </p>
+                  <dl style="margin: 0; font-size: 1rem">
+                    <div
+                      style="
+                        display: flex;
+                        justify-content: space-between;
+                        gap: 12px;
+                        border-top: 1px solid #eee;
+                        padding: 9px 0;
+                      "
+                    >
+                      <dt style="font-weight: 400">Size</dt>
+                      <dd
+                        style="margin: 0; text-align: right; font-weight: 600"
+                      >
+                        340 sq. ft.
+                      </dd>
+                    </div>
+                    <div
+                      style="
+                        display: flex;
+                        justify-content: space-between;
+                        gap: 12px;
+                        border-top: 1px solid #eee;
+                        padding: 9px 0;
+                      "
+                    >
+                      <dt style="font-weight: 400">Our price / person</dt>
+                      <dd
+                        style="margin: 0; text-align: right; font-weight: 600"
+                      >
+                        $6,335
+                      </dd>
+                    </div>
+                    <div
+                      style="
+                        display: flex;
+                        justify-content: space-between;
+                        gap: 12px;
+                        border-top: 1px solid #eee;
+                        padding: 9px 0;
+                      "
+                    >
+                      <dt style="font-weight: 400">Public price / person</dt>
+                      <dd
+                        style="margin: 0; text-align: right; font-weight: 600"
+                      >
+                        $8,961
+                      </dd>
+                    </div>
+                  </dl>
+                </div>
               </div>
-            </article>
-            <article class="croatia-price-card">
-              <h3>Balcony Suite (B)</h3>
-              <p class="croatia-status available">Available</p>
-              <div class="croatia-price-line">
-                <span>Size</span><strong>340 sq. ft.</strong>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div
+                class="card h-100"
+                style="
+                  width: 100%;
+                  max-width: 100%;
+                  border: 1px solid #d9e1e6;
+                  border-radius: 12px;
+                  overflow: hidden;
+                  background: #fff;
+                "
+              >
+                <div class="card-body" style="padding: 18px">
+                  <h3
+                    style="
+                      font-size: 1.2rem;
+                      line-height: 1.3;
+                      margin: 0 0 6px;
+                      color: #003d5b;
+                    "
+                  >
+                    Balcony Suite (AB)
+                  </h3>
+                  <p
+                    style="
+                      font-size: 0.9rem;
+                      font-weight: 700;
+                      color: #246b49;
+                      margin: 0 0 12px;
+                    "
+                  >
+                    Available
+                  </p>
+                  <dl style="margin: 0; font-size: 1rem">
+                    <div
+                      style="
+                        display: flex;
+                        justify-content: space-between;
+                        gap: 12px;
+                        border-top: 1px solid #eee;
+                        padding: 9px 0;
+                      "
+                    >
+                      <dt style="font-weight: 400">Size</dt>
+                      <dd
+                        style="margin: 0; text-align: right; font-weight: 600"
+                      >
+                        340 sq. ft.
+                      </dd>
+                    </div>
+                    <div
+                      style="
+                        display: flex;
+                        justify-content: space-between;
+                        gap: 12px;
+                        border-top: 1px solid #eee;
+                        padding: 9px 0;
+                      "
+                    >
+                      <dt style="font-weight: 400">Our price / person</dt>
+                      <dd
+                        style="margin: 0; text-align: right; font-weight: 600"
+                      >
+                        $7,175
+                      </dd>
+                    </div>
+                    <div
+                      style="
+                        display: flex;
+                        justify-content: space-between;
+                        gap: 12px;
+                        border-top: 1px solid #eee;
+                        padding: 9px 0;
+                      "
+                    >
+                      <dt style="font-weight: 400">Public price / person</dt>
+                      <dd
+                        style="margin: 0; text-align: right; font-weight: 600"
+                      >
+                        $9,258
+                      </dd>
+                    </div>
+                  </dl>
+                </div>
               </div>
-              <div class="croatia-price-line">
-                <span>Our price / person</span><strong>$6,335</strong>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div
+                class="card h-100"
+                style="
+                  width: 100%;
+                  max-width: 100%;
+                  border: 1px solid #d9e1e6;
+                  border-radius: 12px;
+                  overflow: hidden;
+                  background: #fff;
+                "
+              >
+                <div class="card-body" style="padding: 18px">
+                  <h3
+                    style="
+                      font-size: 1.2rem;
+                      line-height: 1.3;
+                      margin: 0 0 6px;
+                      color: #003d5b;
+                    "
+                  >
+                    Deluxe Balcony Suite (S)
+                  </h3>
+                  <p
+                    style="
+                      font-size: 0.9rem;
+                      font-weight: 700;
+                      color: #a23d3d;
+                      margin: 0 0 12px;
+                    "
+                  >
+                    SOLD OUT
+                  </p>
+                  <dl style="margin: 0; font-size: 1rem">
+                    <div
+                      style="
+                        display: flex;
+                        justify-content: space-between;
+                        gap: 12px;
+                        border-top: 1px solid #eee;
+                        padding: 9px 0;
+                      "
+                    >
+                      <dt style="font-weight: 400">Size</dt>
+                      <dd
+                        style="margin: 0; text-align: right; font-weight: 600"
+                      >
+                        — sq. ft.
+                      </dd>
+                    </div>
+                    <div
+                      style="
+                        display: flex;
+                        justify-content: space-between;
+                        gap: 12px;
+                        border-top: 1px solid #eee;
+                        padding: 9px 0;
+                      "
+                    >
+                      <dt style="font-weight: 400">Our price / person</dt>
+                      <dd
+                        style="margin: 0; text-align: right; font-weight: 600"
+                      >
+                        NA
+                      </dd>
+                    </div>
+                    <div
+                      style="
+                        display: flex;
+                        justify-content: space-between;
+                        gap: 12px;
+                        border-top: 1px solid #eee;
+                        padding: 9px 0;
+                      "
+                    >
+                      <dt style="font-weight: 400">Public price / person</dt>
+                      <dd
+                        style="margin: 0; text-align: right; font-weight: 600"
+                      >
+                        NA
+                      </dd>
+                    </div>
+                  </dl>
+                </div>
               </div>
-              <div class="croatia-price-line">
-                <span>Public price / person</span><strong>$8,693</strong>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div
+                class="card h-100"
+                style="
+                  width: 100%;
+                  max-width: 100%;
+                  border: 1px solid #d9e1e6;
+                  border-radius: 12px;
+                  overflow: hidden;
+                  background: #fff;
+                "
+              >
+                <div class="card-body" style="padding: 18px">
+                  <h3
+                    style="
+                      font-size: 1.2rem;
+                      line-height: 1.3;
+                      margin: 0 0 6px;
+                      color: #003d5b;
+                    "
+                  >
+                    Terrace Suite (T)
+                  </h3>
+                  <p
+                    style="
+                      font-size: 0.9rem;
+                      font-weight: 700;
+                      color: #a23d3d;
+                      margin: 0 0 12px;
+                    "
+                  >
+                    SOLD OUT
+                  </p>
+                  <dl style="margin: 0; font-size: 1rem">
+                    <div
+                      style="
+                        display: flex;
+                        justify-content: space-between;
+                        gap: 12px;
+                        border-top: 1px solid #eee;
+                        padding: 9px 0;
+                      "
+                    >
+                      <dt style="font-weight: 400">Size</dt>
+                      <dd
+                        style="margin: 0; text-align: right; font-weight: 600"
+                      >
+                        830 sq. ft.
+                      </dd>
+                    </div>
+                    <div
+                      style="
+                        display: flex;
+                        justify-content: space-between;
+                        gap: 12px;
+                        border-top: 1px solid #eee;
+                        padding: 9px 0;
+                      "
+                    >
+                      <dt style="font-weight: 400">Our price / person</dt>
+                      <dd
+                        style="margin: 0; text-align: right; font-weight: 600"
+                      >
+                        NA
+                      </dd>
+                    </div>
+                    <div
+                      style="
+                        display: flex;
+                        justify-content: space-between;
+                        gap: 12px;
+                        border-top: 1px solid #eee;
+                        padding: 9px 0;
+                      "
+                    >
+                      <dt style="font-weight: 400">Public price / person</dt>
+                      <dd
+                        style="margin: 0; text-align: right; font-weight: 600"
+                      >
+                        NA
+                      </dd>
+                    </div>
+                  </dl>
+                </div>
               </div>
-            </article>
-            <article class="croatia-price-card">
-              <h3>Balcony Suite (A)</h3>
-              <p class="croatia-status available">Available</p>
-              <div class="croatia-price-line">
-                <span>Size</span><strong>340 sq. ft.</strong>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div
+                class="card h-100"
+                style="
+                  width: 100%;
+                  max-width: 100%;
+                  border: 1px solid #d9e1e6;
+                  border-radius: 12px;
+                  overflow: hidden;
+                  background: #fff;
+                "
+              >
+                <div class="card-body" style="padding: 18px">
+                  <h3
+                    style="
+                      font-size: 1.2rem;
+                      line-height: 1.3;
+                      margin: 0 0 6px;
+                      color: #003d5b;
+                    "
+                  >
+                    Yacht Suite
+                  </h3>
+                  <p
+                    style="
+                      font-size: 0.9rem;
+                      font-weight: 700;
+                      color: #246b49;
+                      margin: 0 0 12px;
+                    "
+                  >
+                    Available
+                  </p>
+                  <dl style="margin: 0; font-size: 1rem">
+                    <div
+                      style="
+                        display: flex;
+                        justify-content: space-between;
+                        gap: 12px;
+                        border-top: 1px solid #eee;
+                        padding: 9px 0;
+                      "
+                    >
+                      <dt style="font-weight: 400">Size</dt>
+                      <dd
+                        style="margin: 0; text-align: right; font-weight: 600"
+                      >
+                        879 sq. ft.
+                      </dd>
+                    </div>
+                    <div
+                      style="
+                        display: flex;
+                        justify-content: space-between;
+                        gap: 12px;
+                        border-top: 1px solid #eee;
+                        padding: 9px 0;
+                      "
+                    >
+                      <dt style="font-weight: 400">Our price / person</dt>
+                      <dd
+                        style="margin: 0; text-align: right; font-weight: 600"
+                      >
+                        $10,825
+                      </dd>
+                    </div>
+                    <div
+                      style="
+                        display: flex;
+                        justify-content: space-between;
+                        gap: 12px;
+                        border-top: 1px solid #eee;
+                        padding: 9px 0;
+                      "
+                    >
+                      <dt style="font-weight: 400">Public price / person</dt>
+                      <dd
+                        style="margin: 0; text-align: right; font-weight: 600"
+                      >
+                        $12,352
+                      </dd>
+                    </div>
+                  </dl>
+                </div>
               </div>
-              <div class="croatia-price-line">
-                <span>Our price / person</span><strong>$6,335</strong>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div
+                class="card h-100"
+                style="
+                  width: 100%;
+                  max-width: 100%;
+                  border: 1px solid #d9e1e6;
+                  border-radius: 12px;
+                  overflow: hidden;
+                  background: #fff;
+                "
+              >
+                <div class="card-body" style="padding: 18px">
+                  <h3
+                    style="
+                      font-size: 1.2rem;
+                      line-height: 1.3;
+                      margin: 0 0 6px;
+                      color: #003d5b;
+                    "
+                  >
+                    Owner's Suite
+                  </h3>
+                  <p
+                    style="
+                      font-size: 0.9rem;
+                      font-weight: 700;
+                      color: #246b49;
+                      margin: 0 0 12px;
+                    "
+                  >
+                    Available
+                  </p>
+                  <dl style="margin: 0; font-size: 1rem">
+                    <div
+                      style="
+                        display: flex;
+                        justify-content: space-between;
+                        gap: 12px;
+                        border-top: 1px solid #eee;
+                        padding: 9px 0;
+                      "
+                    >
+                      <dt style="font-weight: 400">Size</dt>
+                      <dd
+                        style="margin: 0; text-align: right; font-weight: 600"
+                      >
+                        1,401 sq. ft.
+                      </dd>
+                    </div>
+                    <div
+                      style="
+                        display: flex;
+                        justify-content: space-between;
+                        gap: 12px;
+                        border-top: 1px solid #eee;
+                        padding: 9px 0;
+                      "
+                    >
+                      <dt style="font-weight: 400">Our price / person</dt>
+                      <dd
+                        style="margin: 0; text-align: right; font-weight: 600"
+                      >
+                        $15,015
+                      </dd>
+                    </div>
+                    <div
+                      style="
+                        display: flex;
+                        justify-content: space-between;
+                        gap: 12px;
+                        border-top: 1px solid #eee;
+                        padding: 9px 0;
+                      "
+                    >
+                      <dt style="font-weight: 400">Public price / person</dt>
+                      <dd
+                        style="margin: 0; text-align: right; font-weight: 600"
+                      >
+                        $18,504
+                      </dd>
+                    </div>
+                  </dl>
+                </div>
               </div>
-              <div class="croatia-price-line">
-                <span>Public price / person</span><strong>$8,961</strong>
-              </div>
-            </article>
-            <article class="croatia-price-card">
-              <h3>Balcony Suite (AB)</h3>
-              <p class="croatia-status available">Available</p>
-              <div class="croatia-price-line">
-                <span>Size</span><strong>340 sq. ft.</strong>
-              </div>
-              <div class="croatia-price-line">
-                <span>Our price / person</span><strong>$7,175</strong>
-              </div>
-              <div class="croatia-price-line">
-                <span>Public price / person</span><strong>$9,258</strong>
-              </div>
-            </article>
-            <article class="croatia-price-card">
-              <h3>Deluxe Balcony Suite (S)</h3>
-              <p class="croatia-status sold-out">SOLD OUT</p>
-              <div class="croatia-price-line">
-                <span>Size</span><strong>—</strong>
-              </div>
-              <div class="croatia-price-line">
-                <span>Our price / person</span><strong>NA</strong>
-              </div>
-              <div class="croatia-price-line">
-                <span>Public price / person</span><strong>NA</strong>
-              </div>
-            </article>
-            <article class="croatia-price-card">
-              <h3>Terrace Suite (T)</h3>
-              <p class="croatia-status sold-out">SOLD OUT</p>
-              <div class="croatia-price-line">
-                <span>Size</span><strong>830 sq. ft.</strong>
-              </div>
-              <div class="croatia-price-line">
-                <span>Our price / person</span><strong>NA</strong>
-              </div>
-              <div class="croatia-price-line">
-                <span>Public price / person</span><strong>NA</strong>
-              </div>
-            </article>
-            <article class="croatia-price-card">
-              <h3>Yacht Suite</h3>
-              <p class="croatia-status available">Available</p>
-              <div class="croatia-price-line">
-                <span>Size</span><strong>879 sq. ft.</strong>
-              </div>
-              <div class="croatia-price-line">
-                <span>Our price / person</span><strong>$10,825</strong>
-              </div>
-              <div class="croatia-price-line">
-                <span>Public price / person</span><strong>$12,352</strong>
-              </div>
-            </article>
-            <article class="croatia-price-card">
-              <h3>Owner's Suite</h3>
-              <p class="croatia-status available">Available</p>
-              <div class="croatia-price-line">
-                <span>Size</span><strong>1,401 sq. ft.</strong>
-              </div>
-              <div class="croatia-price-line">
-                <span>Our price / person</span><strong>$15,015</strong>
-              </div>
-              <div class="croatia-price-line">
-                <span>Public price / person</span><strong>$18,504</strong>
-              </div>
-            </article>
+            </div>
           </div>
           <div class="image-placeholder">
             <p class="text-center">
