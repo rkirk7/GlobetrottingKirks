@@ -152,6 +152,64 @@
       display: none;
     }
   }
+
+  /* Separate mobile presentation: avoids Bootstrap/table display conflicts. */
+  .croatia-page .croatia-mobile-pricing {
+    display: none;
+  }
+  @media (max-width: 767px) {
+    .croatia-page table.suite-table {
+      display: none !important;
+    }
+    .croatia-page .croatia-mobile-pricing {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 14px;
+      margin: 18px 0;
+    }
+    .croatia-page .croatia-price-card {
+      min-width: 0;
+      padding: 17px;
+      background: #fff;
+      border: 1px solid #dce3e8;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+    .croatia-page .croatia-price-card h3 {
+      margin: 0 0 6px;
+      font-size: 1.15rem;
+      line-height: 1.35;
+      color: #003d5b;
+    }
+    .croatia-page .croatia-status {
+      margin: 0 0 12px !important;
+      font-size: 0.88rem !important;
+      font-weight: 700;
+    }
+    .croatia-page .croatia-status.available {
+      color: #236342;
+    }
+    .croatia-page .croatia-status.sold-out {
+      color: #9a3939;
+    }
+    .croatia-page .croatia-price-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      padding: 9px 0;
+      border-top: 1px solid #eef0f2;
+      font-size: 0.93rem;
+    }
+    .croatia-page .croatia-price-line span {
+      color: #59636c;
+    }
+    .croatia-page .croatia-price-line strong {
+      text-align: right;
+      white-space: nowrap;
+      color: #20282f;
+    }
+  }
 </style>
 <div class="container croatia-page">
   <div class="croatia-content">
@@ -325,6 +383,112 @@
               <td data-label="Availability">Available</td>
             </tr>
           </table>
+          <div aria-label="Suite pricing" class="croatia-mobile-pricing">
+            <article class="croatia-price-card">
+              <h3>Oceanview Stateroom (D)</h3>
+              <p class="croatia-status sold-out">SOLD OUT</p>
+              <div class="croatia-price-line">
+                <span>Size</span><strong>340 sq. ft.</strong>
+              </div>
+              <div class="croatia-price-line">
+                <span>Our price / person</span><strong>NA</strong>
+              </div>
+              <div class="croatia-price-line">
+                <span>Public price / person</span><strong>NA</strong>
+              </div>
+            </article>
+            <article class="croatia-price-card">
+              <h3>Balcony Suite (B)</h3>
+              <p class="croatia-status available">Available</p>
+              <div class="croatia-price-line">
+                <span>Size</span><strong>340 sq. ft.</strong>
+              </div>
+              <div class="croatia-price-line">
+                <span>Our price / person</span><strong>$6,335</strong>
+              </div>
+              <div class="croatia-price-line">
+                <span>Public price / person</span><strong>$8,693</strong>
+              </div>
+            </article>
+            <article class="croatia-price-card">
+              <h3>Balcony Suite (A)</h3>
+              <p class="croatia-status available">Available</p>
+              <div class="croatia-price-line">
+                <span>Size</span><strong>340 sq. ft.</strong>
+              </div>
+              <div class="croatia-price-line">
+                <span>Our price / person</span><strong>$6,335</strong>
+              </div>
+              <div class="croatia-price-line">
+                <span>Public price / person</span><strong>$8,961</strong>
+              </div>
+            </article>
+            <article class="croatia-price-card">
+              <h3>Balcony Suite (AB)</h3>
+              <p class="croatia-status available">Available</p>
+              <div class="croatia-price-line">
+                <span>Size</span><strong>340 sq. ft.</strong>
+              </div>
+              <div class="croatia-price-line">
+                <span>Our price / person</span><strong>$7,175</strong>
+              </div>
+              <div class="croatia-price-line">
+                <span>Public price / person</span><strong>$9,258</strong>
+              </div>
+            </article>
+            <article class="croatia-price-card">
+              <h3>Deluxe Balcony Suite (S)</h3>
+              <p class="croatia-status sold-out">SOLD OUT</p>
+              <div class="croatia-price-line">
+                <span>Size</span><strong>—</strong>
+              </div>
+              <div class="croatia-price-line">
+                <span>Our price / person</span><strong>NA</strong>
+              </div>
+              <div class="croatia-price-line">
+                <span>Public price / person</span><strong>NA</strong>
+              </div>
+            </article>
+            <article class="croatia-price-card">
+              <h3>Terrace Suite (T)</h3>
+              <p class="croatia-status sold-out">SOLD OUT</p>
+              <div class="croatia-price-line">
+                <span>Size</span><strong>830 sq. ft.</strong>
+              </div>
+              <div class="croatia-price-line">
+                <span>Our price / person</span><strong>NA</strong>
+              </div>
+              <div class="croatia-price-line">
+                <span>Public price / person</span><strong>NA</strong>
+              </div>
+            </article>
+            <article class="croatia-price-card">
+              <h3>Yacht Suite</h3>
+              <p class="croatia-status available">Available</p>
+              <div class="croatia-price-line">
+                <span>Size</span><strong>879 sq. ft.</strong>
+              </div>
+              <div class="croatia-price-line">
+                <span>Our price / person</span><strong>$10,825</strong>
+              </div>
+              <div class="croatia-price-line">
+                <span>Public price / person</span><strong>$12,352</strong>
+              </div>
+            </article>
+            <article class="croatia-price-card">
+              <h3>Owner's Suite</h3>
+              <p class="croatia-status available">Available</p>
+              <div class="croatia-price-line">
+                <span>Size</span><strong>1,401 sq. ft.</strong>
+              </div>
+              <div class="croatia-price-line">
+                <span>Our price / person</span><strong>$15,015</strong>
+              </div>
+              <div class="croatia-price-line">
+                <span>Public price / person</span><strong>$18,504</strong>
+              </div>
+            </article>
+          </div>
           <div class="image-placeholder">
             <p class="text-center">
               <img src="Images/CroatiaGroup/KAIA - BALCONY SUITE nacho.jpg" />
