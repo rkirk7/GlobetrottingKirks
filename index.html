@@ -107,6 +107,13 @@
         border-radius: 8px;
         text-align: center;
       }
+      /* Mobile site shell: compact navigation and no forced horizontal overflow */
+      @media (max-width: 767.98px) {
+        .navbar { padding: .35rem .75rem; }
+        .navbar-brand img { max-height: 48px; width: auto; }
+        .navbar-toggler { padding: .25rem .5rem; }
+        #content.container { width:100%; max-width:100%; min-width:0; padding-left:10px; padding-right:10px; }
+      }
     </style>
 
     <meta property="og:title" content="Globetrotting Kirks" />

@@ -690,3 +690,9 @@ img, video, iframe { max-width: 100%; }
   .antarctica-content .hero { min-height: 260px; }
   .antarctica-content .card-body { padding: 1rem; }
 }
+
+/* Shared mobile navigation and content improvements */
+@media (max-width: 767.98px) {
+ .navbar-brand img { max-height:48px; width:auto; }
+ #content.container { max-width:100%; min-width:0; padding-left:10px; padding-right:10px; }
+}
