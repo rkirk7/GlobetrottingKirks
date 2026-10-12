@@ -1,4 +1,5 @@
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     /* =========================
      Base Reset & Typography
@@ -234,6 +235,14 @@
         max-height: none;
       }
     }
+
+    @media (max-width: 991.98px) {
+      .container.antarctica-layout { display:block !important; width:100% !important; max-width:100% !important; padding:12px !important; }
+      .antarctica-layout > .antarctica-content { display:block !important; width:100% !important; max-width:100% !important; min-width:0 !important; grid-area:auto !important; }
+      .antarctica-content .hero, .antarctica-content .card, .antarctica-content .travel-section { width:100% !important; max-width:100% !important; min-width:0 !important; }
+      .antarctica-content .hero-title { font-size:clamp(1.6rem, 6vw, 2.2rem) !important; overflow-wrap:break-word; }
+      .antarctica-content .card-body { padding:1rem; }
+    }
   </style>
 </head>
 
@@ -352,7 +361,7 @@
               up-to-date as of 8/11/26.
             </p>
 
-            <table class="suite-table">
+            <div class="table-scroll"><table class="suite-table">
               <tr>
                 <th>Suite Type</th>
                 <th>Size (square feet)</th>
@@ -417,7 +426,7 @@
                 <td>$18,504</td>
                 <td>Available</td>
               </tr>
-            </table>
+            </table></div>
 
             <div class="image-placeholder">
               <p class="text-center">
@@ -558,6 +567,7 @@
               src="https://drive.google.com/file/d/1OliTve8Rvp1ndtfeHDNqV45ccweMV3HX/preview"
               width="640"
               height="480"
+              style="width:100%;max-width:640px;"
             ></iframe>
           </p>
         </div>

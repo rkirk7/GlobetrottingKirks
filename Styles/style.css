@@ -641,3 +641,52 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(-4px);
   box-shadow: 0 6px 18px rgba(0,0,0,0.18);
 }
+
+
+/* Mobile layout safeguards */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { max-width: 100%; }
+img, video, iframe { max-width: 100%; }
+.blog-container, #post-container, .blog-post-content,
+.travel-section, .card, .card-body { min-width: 0; }
+.table-scroll { width: 100%; max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.table-scroll > table { margin-top: 0; }
+@media (max-width: 600px) {
+  .blog-container, #post-container { padding-left: 12px; padding-right: 12px; }
+  .blog-post-content { padding: 1rem; }
+  .travel-section { padding: 1rem; margin-bottom: 1.5rem; }
+  .travel-section h2 { font-size: 1.5rem; }
+  .travel-section p { font-size: 1rem; }
+  .table-scroll .suite-table { min-width: 650px; }
+}
+
+/* Croatia / Antarctica shared article: force a full-width mobile column */
+@media (max-width: 991.98px) {
+  .container.antarctica-layout {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding: 12px !important;
+  }
+  .antarctica-layout > .antarctica-content {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    grid-area: auto !important;
+  }
+  .antarctica-content .hero,
+  .antarctica-content .card,
+  .antarctica-content .travel-section {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+  .antarctica-content .hero-title {
+    font-size: clamp(1.6rem, 6vw, 2.2rem) !important;
+    overflow-wrap: break-word;
+  }
+  .antarctica-content .hero { min-height: 260px; }
+  .antarctica-content .card-body { padding: 1rem; }
+}
