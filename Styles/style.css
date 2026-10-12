@@ -696,3 +696,30 @@ img, video, iframe { max-width: 100%; }
  .navbar-brand img { max-height:48px; width:auto; }
  #content.container { max-width:100%; min-width:0; padding-left:10px; padding-right:10px; }
 }
+
+/* Article layout: eliminate the 260px grid column at every screen width. */
+#content .antarctica-layout,
+#content .container.antarctica-layout {
+  display: block !important;
+  width: 100% !important;
+  max-width: 1100px !important;
+  min-width: 0 !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+#content .antarctica-layout > .antarctica-content {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+}
+#content .antarctica-content .hero,
+#content .antarctica-content > .card { width: 100% !important; max-width: 100% !important; }
+#content .antarctica-content .table-scroll { max-width:100%; overflow-x:auto; }
+@media (max-width: 767.98px) {
+  #content .antarctica-layout { padding: 8px !important; }
+  #content .antarctica-content .hero-title { font-size: clamp(1.45rem, 6vw, 2rem) !important; line-height:1.25; }
+  #content .antarctica-content .hero { min-height:220px; }
+  #content .antarctica-content .table-scroll { display:none !important; }
+  #content .antarctica-content .suite-mobile-cards { display:grid !important; grid-template-columns:minmax(0,1fr); }
+}
