@@ -1,562 +1,484 @@
-<head>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<!-- Croatia article fragment, dynamically loaded by index.html -->
 <style>
-    /* =========================
-     Base Reset & Typography
-     ========================= */
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f7f7f7;
-      color: #333;
-      line-height: 1.7;
-      font-size: 16px;
+  /* Scoped to the Croatia article; no grid or fixed-width columns. */
+  .croatia-page {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 16px;
+  }
+  .croatia-page,
+  .croatia-page * {
+    box-sizing: border-box;
+  }
+  .croatia-content {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+  .croatia-page .hero {
+    width: 100%;
+    min-width: 0;
+    min-height: 260px;
+    padding: 36px 18px;
+    background-size: cover;
+    background-position: center;
+  }
+  .croatia-page .hero-title {
+    font-size: clamp(1.65rem, 4vw, 2.5rem);
+    line-height: 1.2;
+    overflow-wrap: break-word;
+  }
+  .croatia-page .card,
+  .croatia-page .card-body,
+  .croatia-page .travel-section {
+    min-width: 0;
+    max-width: 100%;
+  }
+  .croatia-page .card-body {
+    padding: clamp(12px, 3vw, 24px);
+  }
+  .croatia-page .travel-section {
+    padding: clamp(12px, 3vw, 28px);
+    margin-bottom: 1.5rem;
+  }
+  .croatia-page img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  .croatia-page .image-placeholder {
+    width: 100%;
+    max-width: 500px;
+    margin: 24px auto;
+  }
+  .croatia-page .image-placeholder img {
+    width: 100%;
+  }
+  .croatia-page .hero-callout {
+    font-size: clamp(1.2rem, 3vw, 1.7rem);
+    line-height: 1.4;
+  }
+  .croatia-page .suite-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  .croatia-page .suite-table th,
+  .croatia-page .suite-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+  }
+  .croatia-page .suite-table th {
+    background: #f0f4f7;
+  }
+  .croatia-page iframe {
+    display: block;
+    width: 100%;
+    max-width: 640px;
+    border: 0;
+  }
+  .croatia-page .toc {
+    background: #eef6fb;
+    padding: 15px;
+    border-left: 4px solid #0077b6;
+  }
+  @media (max-width: 767px) {
+    .croatia-page {
+      padding: 10px 4px;
     }
-
-    h1 {
-      font-size: 2rem;
-      margin: 0 0 1rem;
-      color: #003d5b;
+    .croatia-page .hero {
+      min-height: 220px;
+      padding: 28px 14px;
     }
-    h2 {
-      font-size: 1.5rem;
-      margin: 2.2rem 0 1rem;
-      color: #003d5b;
+    .croatia-page .hero-title {
+      font-size: 1.6rem;
     }
-    h3 {
-      font-size: 1.25rem;
-      margin: 1.8rem 0 0.8rem;
-      color: #003d5b;
+    .croatia-page .travel-section h2 {
+      font-size: 1.45rem;
     }
-
-    p,
-    li,
-    td,
-    th {
+    .croatia-page .travel-section p {
       font-size: 1rem;
     }
-
-    html {
-      scroll-behavior: smooth;
+    .croatia-page .suite-table {
+      display: block;
+      border: 0;
     }
-
-    /* =========================
-     Layout Containers
-     ========================= */
-    .container {
-      margin: auto;
-      background: #fff;
-      padding: 30px;
-    }
-
-    .antarctica-layout {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    /* =========================
-     Buttons & Helpers
-     ========================= */
-    .btn {
-      display: inline-block;
-      padding: 12px 20px;
-      background-color: #0077b6;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-      font-size: 1rem;
-    }
-    .btn:hover {
-      background-color: #005f8c;
-    }
-
-    .text-center {
-      text-align: center;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
+    .croatia-page .suite-table tbody {
       display: block;
     }
-
-    ul {
-      margin-left: 20px;
+    .croatia-page .suite-table tr:first-child {
+      display: none;
     }
-
-    /* =========================
-     Tables
-     ========================= */
-    .suite-table {
+    .croatia-page .suite-table tr {
+      display: block;
+      margin: 0 0 14px;
+      padding: 12px 14px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    }
+    .croatia-page .suite-table td {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
       width: 100%;
-      max-width: 900px;
-      border-collapse: collapse;
-      margin: 20px auto;
-      border: 1px solid #ccc;
+      padding: 7px 0;
+      border: 0;
+      border-bottom: 1px solid #eee;
+      text-align: right;
+      overflow-wrap: anywhere;
     }
-
-    .suite-table th,
-    .suite-table td {
-      border: 1px solid #ccc;
-      padding: 10px;
+    .croatia-page .suite-table td:last-child {
+      border-bottom: 0;
+    }
+    .croatia-page .suite-table td::before {
+      content: attr(data-label);
+      font-weight: 600;
+      color: #555;
+      text-align: left;
+      flex: 0 0 43%;
+    }
+    .croatia-page .suite-table td:first-child {
+      font-weight: 700;
+      font-size: 1.05rem;
       text-align: left;
     }
-
-    .suite-table th {
-      background: #f0f4f7;
-      font-weight: bold;
-    }
-
-    /* =========================
-     Highlight & Hero Callout
-     ========================= */
-    .highlight {
-      background: #e6f4ff;
-      padding: 15px;
-      border-left: 4px solid #0077b6;
-      margin: 20px 0;
-    }
-
-    .hero-callout {
-      font-size: 1.75rem;
-      line-height: 1.4;
-      margin: 2.5rem auto;
-      max-width: 650px;
-      color: #003d5b;
-    }
-
-    /* =========================
-     Image Placeholders
-     ========================= */
-    .image-placeholder {
-      width: 500px;
-      margin: 25px auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .image-placeholder img {
-      width: 500px;
-      max-width: 100%;
-      height: auto;
-    }
-
-    @media (max-width: 600px) {
-      .image-placeholder,
-      .image-placeholder img {
-        width: 100%;
-      }
-    }
-
-    /* =========================
-     TOC (Details-based)
-     ========================= */
-    .toc {
-      background: #eef6fb;
-      border-left: 4px solid #0077b6;
-      padding: 15px 20px;
-      font-size: 1rem;
-    }
-
-    .toc summary {
-      font-weight: bold;
-      cursor: pointer;
-      list-style: none;
-    }
-
-    .toc summary::marker {
+    .croatia-page .suite-table td:first-child::before {
       display: none;
     }
-
-    .toc ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: none;
-    }
-
-    .toc li {
-      margin-bottom: 6px;
-    }
-
-    .toc a {
-      text-decoration: none;
-      color: #0077b6;
-    }
-
-    .toc a:hover {
-      text-decoration: underline;
-    }
-
-    #toc[open] ul {
-      display: block;
-    }
-
-    /* =========================
-     Responsive Grid Layout
-     ========================= */
-
-    /* Single readable article column at every viewport size. */
-    .antarctica-layout { display: block !important; width: 100%; max-width: 1100px; }
-    .antarctica-content { display: block !important; width: 100%; max-width: 100%; min-width: 0; }
-    #toc { position: static; max-height: none; }
-
-    /* Mobile */
-    @media (max-width: 991px) {
-      .antarctica-layout {
-        display: block;
-      }
-
-      #toc {
-        position: relative;
-        margin-bottom: 1.5em;
-        max-height: none;
-      }
-    }
-
-    @media (max-width: 991.98px) {
-      .container.antarctica-layout { display:block !important; width:100% !important; max-width:100% !important; padding:12px !important; }
-      .antarctica-layout > .antarctica-content { display:block !important; width:100% !important; max-width:100% !important; min-width:0 !important; grid-area:auto !important; }
-      .antarctica-content .hero, .antarctica-content .card, .antarctica-content .travel-section { width:100% !important; max-width:100% !important; min-width:0 !important; }
-      .antarctica-content .hero-title { font-size:clamp(1.6rem, 6vw, 2.2rem) !important; overflow-wrap:break-word; }
-      .antarctica-content .card-body { padding:1rem; }
-    }
-  
-/* Croatia suite prices: readable mobile cards; desktop retains table */
-.suite-mobile-cards { display: none; }
-@media (max-width: 767.98px) {
- .antarctica-content .table-scroll { display:none; }
- .suite-mobile-cards { display:grid; grid-template-columns:minmax(0,1fr); gap:14px; margin:16px 0 24px; }
- .suite-mobile-card { background:#fff; border:1px solid #dce4e8; border-radius:12px; padding:16px; box-shadow:0 2px 7px rgba(0,0,0,.04); min-width:0; }
- .suite-mobile-card h3 { font-size:1.12rem; line-height:1.35; margin:0 0 12px; color:#003d5b; }
- .suite-detail { display:flex; align-items:baseline; justify-content:space-between; gap:12px; border-top:1px solid #edf0f2; padding:9px 0; font-size:.94rem; }
- .suite-detail-label { color:#52616a; flex:1; }
- .suite-detail strong { text-align:right; white-space:nowrap; }
- .antarctica-content .hero { padding:1.5rem 1rem; min-height:220px; }
- .antarctica-content .hero-title { font-size:clamp(1.4rem,5.4vw,1.9rem)!important; line-height:1.25; }
- .antarctica-content .hero-callout { font-size:1.25rem; margin:1.2rem auto; }
- .antarctica-content .card { margin-bottom:1rem; }
- .antarctica-content .travel-section { padding:1rem; }
-}
+  }
 </style>
-</head>
-<body class="antarctica-page">
-<div class="container antarctica-layout" style="display:block;width:100%;max-width:1100px;min-width:0">
-<div class="antarctica-content" style="display:block;width:100%;max-width:100%;min-width:0">
-<div class="hero" data-hero="Images/CroatiaGroup/Emerald Kaia Exterior Apr 2026-0014.jpg">
-<div class="hero-content text-center">
-<h1 class="hero-title">
-            August 28, 2027: Hidden Gems of the Croatian Riviera Aboard an
-            Emerald Luxury Yacht
-          </h1>
-</div>
-</div>
-<!-- All your cards and content here -->
-<div class="card my-4">
-<div class="card-body">
-<p class="hero-callout text-center">
-<strong>
-              Join us in experiencing the wonders of the Dalmatian coast on the
-              stunning new Emerald Kaia yacht.</strong>
-</p>
-<p class="text-center">
-<img class="img-fluid rounded" src="Images/CroatiaGroup/Emerald Kaia Exterior Apr 2026-002.jpg"/>
-</p>
-<p class="text-center">
-<a class="btn btn-primary" href="mailto:regan.kirk@fora.travel,meimei.kirk@fora.travel?subject=I%20want%20to%20talk%20about%20the%20Croatia%20deal!">
+<div class="container croatia-page">
+  <div class="croatia-content">
+    <div
+      class="hero"
+      data-hero="Images/CroatiaGroup/Emerald Kaia Exterior Apr 2026-0014.jpg"
+    >
+      <div class="hero-content text-center">
+        <h1 class="hero-title">
+          August 28, 2027: Hidden Gems of the Croatian Riviera Aboard an Emerald
+          Luxury Yacht
+        </h1>
+      </div>
+    </div>
+    <!-- All your cards and content here -->
+    <div class="card my-4">
+      <div class="card-body">
+        <p class="hero-callout text-center">
+          <strong>
+            Join us in experiencing the wonders of the Dalmatian coast on the
+            stunning new Emerald Kaia yacht.</strong
+          >
+        </p>
+        <p class="text-center">
+          <img
+            class="img-fluid rounded"
+            src="Images/CroatiaGroup/Emerald Kaia Exterior Apr 2026-002.jpg"
+          />
+        </p>
+        <p class="text-center">
+          <a
+            class="btn btn-primary"
+            href="mailto:regan.kirk@fora.travel,meimei.kirk@fora.travel?subject=I%20want%20to%20talk%20about%20the%20Croatia%20deal!"
+          >
+            Reach Out with Questions or to Book!
+          </a>
+        </p>
+      </div>
+    </div>
+    <div class="card my-4">
+      <div class="card-body">
+        <details class="toc" id="toc">
+          <summary>Table of Contents</summary>
+          <ul id="toc-list"></ul>
+        </details>
+      </div>
+    </div>
+    <div class="card my-4">
+      <div class="card-body">
+        <!-- SECTION: Sailing Info -->
+        <div class="travel-section">
+          <h2 id="exclusiveantarctica&amp;sailing-info">
+            Itinerary Information
+          </h2>
+          <p>
+            August 28, 2027 - September 4, 2027 Dubrovnik to Venice On board the
+            Emerald Kaia
+          </p>
+          <p><strong>Stops include:</strong></p>
+          <ul>
+            <li>Dubrovnik, Croatia</li>
+            <li>Split, Croatia</li>
+            <li>Zadar, Croatia</li>
+            <li>Opatija, Croatia</li>
+            <li>Piran, Slovenia</li>
+            <li>Venice, Italy</li>
+          </ul>
+          <p>
+            See the detailed itinerary
+            <a
+              href="https://emerald.cruises/US/en-US/tours/e03d?d=E03D280827.2"
+              target="_blank"
+              >here</a
+            >.
+          </p>
+          <p>
+            This stunning ship debuted in 2026 and will carry only 128
+            passengers.
+          </p>
+          <p>
+            <strong
+              >Want to add travel by land at the beginning or end? We've got you
+              covered!</strong
+            >
+          </p>
+          <div class="image-placeholder">
+            <p class="text-center">
+              <img
+                src="Images/CroatiaGroup/Aqua Pool, Pool Deck - Emerald Kaia Apr 2026-001.jpg"
+              />
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card my-4">
+      <div class="card-body">
+        <!-- SECTION: Rooms -->
+        <div class="travel-section">
+          <h2 id="exclusiveantarctica&amp;rooms">Room Types &amp; Pricing</h2>
+          <p>
+            Rooms are limited and Emerald can withdraw our group pricing with
+            short notice. Rooms and pricing are not guaranteed until a deposit
+            is put down. Prices are per person, based on double occupancy; solo
+            travelers will pay a 100% solo supplement. However, we're happy to
+            help match up solo travelers! The below information was up-to-date
+            as of 8/11/26.
+          </p>
+          <table class="suite-table">
+            <tr>
+              <th>Suite Type</th>
+              <th>Size (square feet)</th>
+              <th>Our Price (per person)</th>
+              <th>Public Price (per person)</th>
+              <th>Availability</th>
+            </tr>
+            <tr>
+              <td data-label="Suite Type">Oceanview Stateroom (D)</td>
+              <td data-label="Size (square feet)">340</td>
+              <td data-label="Our Price (per person)">NA</td>
+              <td data-label="Public Price (per person)">NA</td>
+              <td data-label="Availability">SOLD OUT</td>
+            </tr>
+            <tr>
+              <td data-label="Suite Type">Balcony Suite (B)</td>
+              <td data-label="Size (square feet)">340</td>
+              <td data-label="Our Price (per person)">$6,335</td>
+              <td data-label="Public Price (per person)">$8,693</td>
+              <td data-label="Availability">Available</td>
+            </tr>
+            <tr>
+              <td data-label="Suite Type">Balcony Suite (A)</td>
+              <td data-label="Size (square feet)">340</td>
+              <td data-label="Our Price (per person)">$6,335</td>
+              <td data-label="Public Price (per person)">$8,961</td>
+              <td data-label="Availability">Available</td>
+            </tr>
+            <tr>
+              <td data-label="Suite Type">Balcony Suite (AB)</td>
+              <td data-label="Size (square feet)">340</td>
+              <td data-label="Our Price (per person)">$7,175</td>
+              <td data-label="Public Price (per person)">$9,258</td>
+              <td data-label="Availability">Available</td>
+            </tr>
+            <tr>
+              <td data-label="Suite Type">Deluxe Balcony Suite (S)</td>
+              <td data-label="Size (square feet)"></td>
+              <td data-label="Our Price (per person)">NA</td>
+              <td data-label="Public Price (per person)">NA</td>
+              <td data-label="Availability">SOLD OUT</td>
+            </tr>
+            <tr>
+              <td data-label="Suite Type">Terrace Suite (T)</td>
+              <td data-label="Size (square feet)">830</td>
+              <td data-label="Our Price (per person)">NA</td>
+              <td data-label="Public Price (per person)">NA</td>
+              <td data-label="Availability">SOLD OUT</td>
+            </tr>
+            <tr>
+              <td data-label="Suite Type">Yacht Suite</td>
+              <td data-label="Size (square feet)">879</td>
+              <td data-label="Our Price (per person)">$10,825</td>
+              <td data-label="Public Price (per person)">$12,352</td>
+              <td data-label="Availability">Available</td>
+            </tr>
+            <tr>
+              <td data-label="Suite Type">Owner's Suite</td>
+              <td data-label="Size (square feet)">1,401</td>
+              <td data-label="Our Price (per person)">$15,015</td>
+              <td data-label="Public Price (per person)">$18,504</td>
+              <td data-label="Availability">Available</td>
+            </tr>
+          </table>
+          <div class="image-placeholder">
+            <p class="text-center">
+              <img src="Images/CroatiaGroup/KAIA - BALCONY SUITE nacho.jpg" />
+            </p>
+          </div>
+          <div class="image-placeholder">
+            <p class="text-center">
+              <img src="Images/CroatiaGroup/KAIA - STATEROOM - 3 NACHO.jpg" />
+            </p>
+          </div>
+          <div class="image-placeholder">
+            <p class="text-center">
+              <img src="Images/CroatiaGroup/KAIA - YACHT SUITE - 5 NACHO.jpg" />
+            </p>
+          </div>
+          <div class="image-placeholder">
+            <p class="text-center">
+              <img
+                src="Images/CroatiaGroup/Terrace Suite Emerald Kaia - Apr 2026_1.jpg"
+              />
+            </p>
+          </div>
+          <div class="image-placeholder">
+            <p class="text-center">
+              <img
+                src="Images/CroatiaGroup/Emerald Kaia Owner's Suite Apr 2026-002.jpg"
+              />
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card my-4">
+      <div class="card-body">
+        <!-- SECTION: Discount -->
+        <div class="travel-section">
+          <h2 id="exclusiveantarctica&amp;whatsincluded">What's Included?</h2>
+          <ul>
+            <li>Airport transfers to and from the yacht</li>
+            <li>Luxury accommodations</li>
+            <li>All meals</li>
+            <li>
+              Wine, beer, soft drinks, and select cocktails throughout the day
+            </li>
+            <li>State-of-the-art coffee machines and tea stations</li>
+            <li>Included excursions with knowledgeable local guides</li>
+            <li>Gocycle electric bicycles on board</li>
+            <li>Wi-fi</li>
+            <li>Gratuities</li>
+          </ul>
+          <div class="image-placeholder">
+            <p class="text-center">
+              <img
+                src="Images/CroatiaGroup/Gym, Greece, Emerald Kaia Apr 2026-003A.jpg"
+              />
+            </p>
+          </div>
+          <div class="image-placeholder">
+            <p class="text-center">
+              <img
+                src="Images/CroatiaGroup/E-Bikes - Emerald Kaia Apr 2026-001.jpg"
+              />
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card my-4">
+      <div class="card-body">
+        <div class="travel-section">
+          <h2 id="exclusiveantarctica&amp;whatsnotincluded">
+            What's Not Included?
+          </h2>
+          <ul>
+            <li>International flights</li>
+            <li>Travel insurance</li>
+            <li>Spa treatments</li>
+            <li>Premium beverages</li>
+            <li>Personal purchases</li>
+            <li>Any other items not listed above</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="card my-4">
+      <div class="card-body">
+        <!-- SECTION: Payments -->
+        <div class="travel-section">
+          <h2 id="exclusiveantarctica&amp;payments">
+            Deposit &amp; Payment Details
+          </h2>
+          <ul>
+            <li>
+              <strong>20% nonrefundable deposit</strong> required within 48
+              hours of booking.
+            </li>
+            <li><strong>Final payment:</strong> 120 days before sailing.</li>
+            <li>
+              <strong>Travel insurance:</strong> Strongly recommended. We
+              recommended purchasing within 14 days of deposit. We can help with
+              generating quotes to find the best coverage.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="card my-4">
+        <div class="card-body">
+          <h2>Solo Travelers</h2>
+          <p class="text-center">
+            Rooms are priced based on double occupancy. If you wish to sail solo
+            with a room to yourself, it will be with a 100% supplement. However,
+            if you're willing to share, we're happy to help look for a roommate!
+          </p>
+        </div>
+      </div>
+      <div class="card my-4">
+        <div class="card-body">
+          <h2>International Travelers</h2>
+          <p class="text-center">
+            <strong>International travelers:</strong> Unfortunately, this offer
+            is only available to U.S. residents.
+          </p>
+        </div>
+      </div>
+      <div class="travel-section">
+        <h2>View the flyer with more details from Emerald</h2>
+        <p class="text-center">
+          <iframe
+            height="480"
+            src="https://drive.google.com/file/d/1OliTve8Rvp1ndtfeHDNqV45ccweMV3HX/preview"
+            width="640"
+          ></iframe>
+        </p>
+      </div>
+      <div class="card my-4">
+        <div class="card-body">
+          <p><strong>We’d love to have you join us!</strong></p>
+          <p class="text-center">
+            <a
+              class="btn btn-primary"
+              href="mailto:regan.kirk@fora.travel,meimei.kirk@fora.travel?subject=I%20want%20to%20talk%20about%20the%20Croatia%20deal!"
+            >
               Reach Out with Questions or to Book!
             </a>
-</p>
-</div>
-</div>
-<div class="card my-4">
-<div class="card-body">
-<details class="toc" id="toc">
-<summary>Table of Contents</summary>
-<ul id="toc-list"></ul>
-</details>
-</div>
-</div>
-<div class="card my-4">
-<div class="card-body">
-<!-- SECTION: Sailing Info -->
-<div class="travel-section">
-<h2 id="exclusiveantarctica&amp;sailing-info">Itinerary Information</h2>
-<p>
-              August 28, 2027 - September 4, 2027 Dubrovnik to Venice On board
-              the Emerald Kaia
+          </p>
+          <div class="image-placeholder">
+            <p class="text-center">
+              <img
+                src="Images/CroatiaGroup/Sky Pool, Sky Deck, Emerald Kaia Apr 2026-002.jpg"
+              />
             </p>
-<p><strong>Stops include:</strong></p>
-<ul>
-<li>Dubrovnik, Croatia</li>
-<li>Split, Croatia</li>
-<li>Zadar, Croatia</li>
-<li>Opatija, Croatia</li>
-<li>Piran, Slovenia</li>
-<li>Venice, Italy</li>
-</ul>
-<p>
-              See the detailed itinerary
-              <a href="https://emerald.cruises/US/en-US/tours/e03d?d=E03D280827.2" target="_blank">here</a>.
-            </p>
-<p>
-              This stunning ship debuted in 2026 and will carry only 128
-              passengers.
-            </p>
-<p>
-<strong>Want to add travel by land at the beginning or end? We've got
-                you covered!</strong>
-</p>
-<div class="image-placeholder">
-<p class="text-center">
-<img src="Images/CroatiaGroup/Aqua Pool, Pool Deck - Emerald Kaia Apr 2026-001.jpg"/>
-</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-</div>
-</div>
-</div>
-<div class="card my-4">
-<div class="card-body">
-<!-- SECTION: Rooms -->
-<div class="travel-section">
-<h2 id="exclusiveantarctica&amp;rooms">Room Types &amp; Pricing</h2>
-<p>
-              Rooms are limited and Emerald can withdraw our group pricing with
-              short notice. Rooms and pricing are not guaranteed until a deposit
-              is put down. Prices are per person, based on double occupancy;
-              solo travelers will pay a 100% solo supplement. However, we're
-              happy to help match up solo travelers! The below information was
-              up-to-date as of 8/11/26.
-            </p>
-<div class="table-scroll" style="max-width:100%;overflow-x:auto"><table class="suite-table">
-<tr>
-<th>Suite Type</th>
-<th>Size (square feet)</th>
-<th>Our Price (per person)</th>
-<th>Public Price (per person)</th>
-<th>Availability</th>
-</tr>
-<tr>
-<td>Oceanview Stateroom (D)</td>
-<td>340</td>
-<td>NA</td>
-<td>NA</td>
-<td>SOLD OUT</td>
-</tr>
-<tr>
-<td>Balcony Suite (B)</td>
-<td>340</td>
-<td>$6,335</td>
-<td>$8,693</td>
-<td>Available</td>
-</tr>
-<tr>
-<td>Balcony Suite (A)</td>
-<td>340</td>
-<td>$6,335</td>
-<td>$8,961</td>
-<td>Available</td>
-</tr>
-<tr>
-<td>Balcony Suite (AB)</td>
-<td>340</td>
-<td>$7,175</td>
-<td>$9,258</td>
-<td>Available</td>
-</tr>
-<tr>
-<td>Deluxe Balcony Suite (S)</td>
-<td></td>
-<td>NA</td>
-<td>NA</td>
-<td>SOLD OUT</td>
-</tr>
-<tr>
-<td>Terrace Suite (T)</td>
-<td>830</td>
-<td>NA</td>
-<td>NA</td>
-<td>SOLD OUT</td>
-</tr>
-<tr>
-<td>Yacht Suite</td>
-<td>879</td>
-<td>$10,825</td>
-<td>$12,352</td>
-<td>Available</td>
-</tr>
-<tr>
-<td>Owner's Suite</td>
-<td>1,401</td>
-<td>$15,015</td>
-<td>$18,504</td>
-<td>Available</td>
-</tr>
-</table></div><div class="suite-mobile-cards"><article class="suite-mobile-card"><h3>Oceanview Stateroom (D)</h3><div class="suite-detail"><span class="suite-detail-label">Size (square feet)</span><strong>340</strong></div><div class="suite-detail"><span class="suite-detail-label">Our Price (per person)</span><strong>NA</strong></div><div class="suite-detail"><span class="suite-detail-label">Public Price (per person)</span><strong>NA</strong></div><div class="suite-detail"><span class="suite-detail-label">Availability</span><strong>SOLD OUT</strong></div></article><article class="suite-mobile-card"><h3>Balcony Suite (B)</h3><div class="suite-detail"><span class="suite-detail-label">Size (square feet)</span><strong>340</strong></div><div class="suite-detail"><span class="suite-detail-label">Our Price (per person)</span><strong>$6,335</strong></div><div class="suite-detail"><span class="suite-detail-label">Public Price (per person)</span><strong>$8,693</strong></div><div class="suite-detail"><span class="suite-detail-label">Availability</span><strong>Available</strong></div></article><article class="suite-mobile-card"><h3>Balcony Suite (A)</h3><div class="suite-detail"><span class="suite-detail-label">Size (square feet)</span><strong>340</strong></div><div class="suite-detail"><span class="suite-detail-label">Our Price (per person)</span><strong>$6,335</strong></div><div class="suite-detail"><span class="suite-detail-label">Public Price (per person)</span><strong>$8,961</strong></div><div class="suite-detail"><span class="suite-detail-label">Availability</span><strong>Available</strong></div></article><article class="suite-mobile-card"><h3>Balcony Suite (AB)</h3><div class="suite-detail"><span class="suite-detail-label">Size (square feet)</span><strong>340</strong></div><div class="suite-detail"><span class="suite-detail-label">Our Price (per person)</span><strong>$7,175</strong></div><div class="suite-detail"><span class="suite-detail-label">Public Price (per person)</span><strong>$9,258</strong></div><div class="suite-detail"><span class="suite-detail-label">Availability</span><strong>Available</strong></div></article><article class="suite-mobile-card"><h3>Deluxe Balcony Suite (S)</h3><div class="suite-detail"><span class="suite-detail-label">Size (square feet)</span><strong>—</strong></div><div class="suite-detail"><span class="suite-detail-label">Our Price (per person)</span><strong>NA</strong></div><div class="suite-detail"><span class="suite-detail-label">Public Price (per person)</span><strong>NA</strong></div><div class="suite-detail"><span class="suite-detail-label">Availability</span><strong>SOLD OUT</strong></div></article><article class="suite-mobile-card"><h3>Terrace Suite (T)</h3><div class="suite-detail"><span class="suite-detail-label">Size (square feet)</span><strong>830</strong></div><div class="suite-detail"><span class="suite-detail-label">Our Price (per person)</span><strong>NA</strong></div><div class="suite-detail"><span class="suite-detail-label">Public Price (per person)</span><strong>NA</strong></div><div class="suite-detail"><span class="suite-detail-label">Availability</span><strong>SOLD OUT</strong></div></article><article class="suite-mobile-card"><h3>Yacht Suite</h3><div class="suite-detail"><span class="suite-detail-label">Size (square feet)</span><strong>879</strong></div><div class="suite-detail"><span class="suite-detail-label">Our Price (per person)</span><strong>$10,825</strong></div><div class="suite-detail"><span class="suite-detail-label">Public Price (per person)</span><strong>$12,352</strong></div><div class="suite-detail"><span class="suite-detail-label">Availability</span><strong>Available</strong></div></article><article class="suite-mobile-card"><h3>Owner's Suite</h3><div class="suite-detail"><span class="suite-detail-label">Size (square feet)</span><strong>1,401</strong></div><div class="suite-detail"><span class="suite-detail-label">Our Price (per person)</span><strong>$15,015</strong></div><div class="suite-detail"><span class="suite-detail-label">Public Price (per person)</span><strong>$18,504</strong></div><div class="suite-detail"><span class="suite-detail-label">Availability</span><strong>Available</strong></div></article></div>
-<div class="image-placeholder">
-<p class="text-center">
-<img src="Images/CroatiaGroup/KAIA - BALCONY SUITE nacho.jpg"/>
-</p>
-</div>
-<div class="image-placeholder">
-<p class="text-center">
-<img src="Images/CroatiaGroup/KAIA - STATEROOM - 3 NACHO.jpg"/>
-</p>
-</div>
-<div class="image-placeholder">
-<p class="text-center">
-<img src="Images/CroatiaGroup/KAIA - YACHT SUITE - 5 NACHO.jpg"/>
-</p>
-</div>
-<div class="image-placeholder">
-<p class="text-center">
-<img src="Images/CroatiaGroup/Terrace Suite Emerald Kaia - Apr 2026_1.jpg"/>
-</p>
-</div>
-<div class="image-placeholder">
-<p class="text-center">
-<img src="Images/CroatiaGroup/Emerald Kaia Owner's Suite Apr 2026-002.jpg"/>
-</p>
-</div>
-</div>
-</div>
-</div>
-<div class="card my-4">
-<div class="card-body">
-<!-- SECTION: Discount -->
-<div class="travel-section">
-<h2 id="exclusiveantarctica&amp;whatsincluded">What's Included?</h2>
-<ul>
-<li>Airport transfers to and from the yacht</li>
-<li>Luxury accommodations</li>
-<li>All meals</li>
-<li>
-                Wine, beer, soft drinks, and select cocktails throughout the day
-              </li>
-<li>State-of-the-art coffee machines and tea stations</li>
-<li>Included excursions with knowledgeable local guides</li>
-<li>Gocycle electric bicycles on board</li>
-<li>Wi-fi</li>
-<li>Gratuities</li>
-</ul>
-<div class="image-placeholder">
-<p class="text-center">
-<img src="Images/CroatiaGroup/Gym, Greece, Emerald Kaia Apr 2026-003A.jpg"/>
-</p>
-</div>
-<div class="image-placeholder">
-<p class="text-center">
-<img src="Images/CroatiaGroup/E-Bikes - Emerald Kaia Apr 2026-001.jpg"/>
-</p>
-</div>
-</div>
-</div>
-</div>
-<div class="card my-4">
-<div class="card-body">
-<div class="travel-section">
-<h2 id="exclusiveantarctica&amp;whatsnotincluded">
-              What's Not Included?
-            </h2>
-<ul>
-<li>International flights</li>
-<li>Travel insurance</li>
-<li>Spa treatments</li>
-<li>Premium beverages</li>
-<li>Personal purchases</li>
-<li>Any other items not listed above</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="card my-4">
-<div class="card-body">
-<!-- SECTION: Payments -->
-<div class="travel-section">
-<h2 id="exclusiveantarctica&amp;payments">Deposit &amp; Payment Details</h2>
-<ul>
-<li>
-<strong>20% nonrefundable deposit</strong> required within 48
-                hours of booking.
-              </li>
-<li><strong>Final payment:</strong> 120 days before sailing.</li>
-<li>
-<strong>Travel insurance:</strong> Strongly recommended. We
-                recommended purchasing within 14 days of deposit. We can help
-                with generating quotes to find the best coverage.
-              </li>
-</ul>
-</div>
-</div>
-<div class="card my-4">
-<div class="card-body">
-<h2>Solo Travelers</h2>
-<p class="text-center">
-              Rooms are priced based on double occupancy. If you wish to sail
-              solo with a room to yourself, it will be with a 100% supplement.
-              However, if you're willing to share, we're happy to help look for
-              a roommate!
-            </p>
-</div>
-</div>
-<div class="card my-4">
-<div class="card-body">
-<h2>International Travelers</h2>
-<p class="text-center">
-<strong>International travelers:</strong> Unfortunately, this
-              offer is only available to U.S. residents.
-            </p>
-</div>
-</div>
-<div class="travel-section">
-<h2>View the flyer with more details from Emerald</h2>
-<p class="text-center">
-<iframe height="480" src="https://drive.google.com/file/d/1OliTve8Rvp1ndtfeHDNqV45ccweMV3HX/preview" style="width:100%;max-width:640px;" width="640"></iframe>
-</p>
-</div>
-<div class="card my-4">
-<div class="card-body">
-<p><strong>We’d love to have you join us!</strong></p>
-<p class="text-center">
-<a class="btn btn-primary" href="mailto:regan.kirk@fora.travel,meimei.kirk@fora.travel?subject=I%20want%20to%20talk%20about%20the%20Croatia%20deal!">
-                Reach Out with Questions or to Book!
-              </a>
-</p>
-<div class="image-placeholder">
-<p class="text-center">
-<img src="Images/CroatiaGroup/Sky Pool, Sky Deck, Emerald Kaia Apr 2026-002.jpg"/>
-</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- <script>
-    document
-      .getElementById("toc-toggle")
-      .addEventListener("click", function () {
-        document.getElementById("toc").classList.toggle("open");
-      });
-  </script>
-
-  <script>
-    // Smooth scroll for internal links
-    document.querySelectorAll(".scroll-link").forEach((link) => {
-      link.addEventListener("click", function (e) {
-        e.preventDefault(); // stop default jump
-        const targetId = this.getAttribute("data-target");
-        const targetEl = document.getElementById(targetId);
-        if (targetEl) {
-          targetEl.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-          });
-        }
-      });
-    });
-  </script> -->
-</body>
